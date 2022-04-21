@@ -169,7 +169,7 @@ jobs:
   providers:
     needs: prerequisites
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -284,7 +284,7 @@ jobs:
   providers2:
     needs: providers
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
