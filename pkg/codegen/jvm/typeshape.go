@@ -60,6 +60,29 @@ func (ts TypeShape) ToCode(imports *names.Imports) string {
 	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{})
 }
 
+// ToCodeErased converts to Java code with erased generics, may add imports to use short names.
+func (ts TypeShape) ToCodeErased(imports *names.Imports) string {
+	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
+		GenericErasure:  true,
+		SkipAnnotations: true,
+	})
+}
+
+// ToCodeClassLiteral converts to Java class literal, may add imports to use short names.
+func (ts TypeShape) ToCodeClassLiteral(imports *names.Imports) string {
+	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
+		GenericErasure:     true,
+		SkipAnnotations:    true,
+		AppendClassLiteral: true,
+	})
+}
+
+func (ts TypeShape) ToCodeCommentedAnnotations(imports *names.Imports) string {
+	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
+		CommentOutAnnotations: true,
+	})
+}
+
 func (ts TypeShape) ToCodeWithOptions(imports *names.Imports, opts TypeShapeStringOptions) string {
 	var annotationsString string
 	if !opts.SkipAnnotations {
@@ -128,26 +151,15 @@ func (ts TypeShape) ListType(ctx *classFileContext) string {
 func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	shape := fmt.Sprintf("%s.<%s>builder(%s)",
 		imports.Ref(names.TypeShape),
-		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
-			CommentOutAnnotations: true,
-			GenericErasure:        false,
-		}),
-		ts.ToCodeWithOptions(imports, TypeShapeStringOptions{
-			CommentOutAnnotations: true,
-			GenericErasure:        true,
-			AppendClassLiteral:    true,
-		}),
+		ts.ToCodeCommentedAnnotations(imports),
+		ts.ToCodeClassLiteral(imports),
 	)
 
 	for _, parameter := range ts.Parameters {
 		if len(parameter.Parameters) > 0 {
 			shape += fmt.Sprintf(".addParameter(%s)", parameter.StringJavaTypeShape(imports))
 		} else {
-			shape += fmt.Sprintf(".addParameter(%s)", parameter.ToCodeWithOptions(imports, TypeShapeStringOptions{
-				CommentOutAnnotations: true,
-				GenericErasure:        true,
-				AppendClassLiteral:    true,
-			}))
+			shape += fmt.Sprintf(".addParameter(%s)", parameter.ToCodeClassLiteral(imports))
 		}
 	}
 	shape += ".build()"
