@@ -24,7 +24,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final Output<String> authorizationType;
+    private Output<String> authorizationType;
 
     public Output<String> authorizationType() {
         return this.authorizationType;
@@ -35,63 +35,60 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends com.pul
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public LinkedIntegrationRuntimeRbacAuthorizationArgs(
-        Output<String> authorizationType,
-        Output<String> resourceId) {
-        this.authorizationType = Codegen.stringProp("authorizationType").output().arg(authorizationType).require();
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private LinkedIntegrationRuntimeRbacAuthorizationArgs() {}
 
-    private LinkedIntegrationRuntimeRbacAuthorizationArgs() {
-        this.authorizationType = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private LinkedIntegrationRuntimeRbacAuthorizationArgs(LinkedIntegrationRuntimeRbacAuthorizationArgs $) {
+        this.authorizationType = $.authorizationType;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedIntegrationRuntimeRbacAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authorizationType;
-        private Output<String> resourceId;
+        private LinkedIntegrationRuntimeRbacAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedIntegrationRuntimeRbacAuthorizationArgs();
         }
 
         public Builder(LinkedIntegrationRuntimeRbacAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.resourceId = defaults.resourceId;
+            $ = new LinkedIntegrationRuntimeRbacAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationType(Output<String> authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Output.of(Objects.requireNonNull(authorizationType));
-            return this;
+            return authorizationType(Output.of(authorizationType));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {
-            return new LinkedIntegrationRuntimeRbacAuthorizationArgs(authorizationType, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public LinkedIntegrationRuntimeRbacAuthorizationArgs build() {
+            $.authorizationType = Codegen.stringProp("authorizationType").output().arg($.authorizationType).require();
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.gcp.healthcare.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigBigqueryDestinationGetArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class DicomStoreStreamConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bigqueryDestination", required=true)
-      private final Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+    private Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
 
     public Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
-    public DicomStoreStreamConfigGetArgs(Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
-    }
+    private DicomStoreStreamConfigGetArgs() {}
 
-    private DicomStoreStreamConfigGetArgs() {
-        this.bigqueryDestination = Codegen.empty();
+    private DicomStoreStreamConfigGetArgs(DicomStoreStreamConfigGetArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DicomStoreStreamConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination;
+        private DicomStoreStreamConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DicomStoreStreamConfigGetArgs();
         }
 
         public Builder(DicomStoreStreamConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
+            $ = new DicomStoreStreamConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(Output<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
-            this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
+
         public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
-            this.bigqueryDestination = Output.of(Objects.requireNonNull(bigqueryDestination));
-            return this;
-        }        public DicomStoreStreamConfigGetArgs build() {
-            return new DicomStoreStreamConfigGetArgs(bigqueryDestination);
+            return bigqueryDestination(Output.of(bigqueryDestination));
+        }
+
+        public DicomStoreStreamConfigGetArgs build() {
+            $.bigqueryDestination = Objects.requireNonNull($.bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
+            return $;
         }
     }
+
 }

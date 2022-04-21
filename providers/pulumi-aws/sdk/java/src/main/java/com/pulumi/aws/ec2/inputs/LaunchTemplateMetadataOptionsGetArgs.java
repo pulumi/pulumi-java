@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="httpEndpoint")
-      private final @Nullable Output<String> httpEndpoint;
+    private @Nullable Output<String> httpEndpoint;
 
-    public Output<String> httpEndpoint() {
-        return this.httpEndpoint == null ? Codegen.empty() : this.httpEndpoint;
+    public Optional<Output<String>> httpEndpoint() {
+        return Optional.ofNullable(this.httpEndpoint);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="httpProtocolIpv6")
-      private final @Nullable Output<String> httpProtocolIpv6;
+    private @Nullable Output<String> httpProtocolIpv6;
 
-    public Output<String> httpProtocolIpv6() {
-        return this.httpProtocolIpv6 == null ? Codegen.empty() : this.httpProtocolIpv6;
+    public Optional<Output<String>> httpProtocolIpv6() {
+        return Optional.ofNullable(this.httpProtocolIpv6);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="httpPutResponseHopLimit")
-      private final @Nullable Output<Integer> httpPutResponseHopLimit;
+    private @Nullable Output<Integer> httpPutResponseHopLimit;
 
-    public Output<Integer> httpPutResponseHopLimit() {
-        return this.httpPutResponseHopLimit == null ? Codegen.empty() : this.httpPutResponseHopLimit;
+    public Optional<Output<Integer>> httpPutResponseHopLimit() {
+        return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="httpTokens")
-      private final @Nullable Output<String> httpTokens;
+    private @Nullable Output<String> httpTokens;
 
-    public Output<String> httpTokens() {
-        return this.httpTokens == null ? Codegen.empty() : this.httpTokens;
+    public Optional<Output<String>> httpTokens() {
+        return Optional.ofNullable(this.httpTokens);
     }
 
     /**
@@ -65,102 +65,88 @@ public final class LaunchTemplateMetadataOptionsGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="instanceMetadataTags")
-      private final @Nullable Output<String> instanceMetadataTags;
+    private @Nullable Output<String> instanceMetadataTags;
 
-    public Output<String> instanceMetadataTags() {
-        return this.instanceMetadataTags == null ? Codegen.empty() : this.instanceMetadataTags;
+    public Optional<Output<String>> instanceMetadataTags() {
+        return Optional.ofNullable(this.instanceMetadataTags);
     }
 
-    public LaunchTemplateMetadataOptionsGetArgs(
-        @Nullable Output<String> httpEndpoint,
-        @Nullable Output<String> httpProtocolIpv6,
-        @Nullable Output<Integer> httpPutResponseHopLimit,
-        @Nullable Output<String> httpTokens,
-        @Nullable Output<String> instanceMetadataTags) {
-        this.httpEndpoint = httpEndpoint;
-        this.httpProtocolIpv6 = httpProtocolIpv6;
-        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
-        this.httpTokens = httpTokens;
-        this.instanceMetadataTags = instanceMetadataTags;
-    }
+    private LaunchTemplateMetadataOptionsGetArgs() {}
 
-    private LaunchTemplateMetadataOptionsGetArgs() {
-        this.httpEndpoint = Codegen.empty();
-        this.httpProtocolIpv6 = Codegen.empty();
-        this.httpPutResponseHopLimit = Codegen.empty();
-        this.httpTokens = Codegen.empty();
-        this.instanceMetadataTags = Codegen.empty();
+    private LaunchTemplateMetadataOptionsGetArgs(LaunchTemplateMetadataOptionsGetArgs $) {
+        this.httpEndpoint = $.httpEndpoint;
+        this.httpProtocolIpv6 = $.httpProtocolIpv6;
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
+        this.instanceMetadataTags = $.instanceMetadataTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateMetadataOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpEndpoint;
-        private @Nullable Output<String> httpProtocolIpv6;
-        private @Nullable Output<Integer> httpPutResponseHopLimit;
-        private @Nullable Output<String> httpTokens;
-        private @Nullable Output<String> instanceMetadataTags;
+        private LaunchTemplateMetadataOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateMetadataOptionsGetArgs();
         }
 
         public Builder(LaunchTemplateMetadataOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpoint = defaults.httpEndpoint;
-    	      this.httpProtocolIpv6 = defaults.httpProtocolIpv6;
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
-    	      this.instanceMetadataTags = defaults.instanceMetadataTags;
+            $ = new LaunchTemplateMetadataOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpoint(@Nullable Output<String> httpEndpoint) {
-            this.httpEndpoint = httpEndpoint;
+            $.httpEndpoint = httpEndpoint;
             return this;
         }
-        public Builder httpEndpoint(@Nullable String httpEndpoint) {
-            this.httpEndpoint = Codegen.ofNullable(httpEndpoint);
-            return this;
+
+        public Builder httpEndpoint(String httpEndpoint) {
+            return httpEndpoint(Output.of(httpEndpoint));
         }
+
         public Builder httpProtocolIpv6(@Nullable Output<String> httpProtocolIpv6) {
-            this.httpProtocolIpv6 = httpProtocolIpv6;
+            $.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
-        public Builder httpProtocolIpv6(@Nullable String httpProtocolIpv6) {
-            this.httpProtocolIpv6 = Codegen.ofNullable(httpProtocolIpv6);
-            return this;
+
+        public Builder httpProtocolIpv6(String httpProtocolIpv6) {
+            return httpProtocolIpv6(Output.of(httpProtocolIpv6));
         }
+
         public Builder httpPutResponseHopLimit(@Nullable Output<Integer> httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
-        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Codegen.ofNullable(httpPutResponseHopLimit);
-            return this;
+
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+            return httpPutResponseHopLimit(Output.of(httpPutResponseHopLimit));
         }
+
         public Builder httpTokens(@Nullable Output<String> httpTokens) {
-            this.httpTokens = httpTokens;
+            $.httpTokens = httpTokens;
             return this;
         }
-        public Builder httpTokens(@Nullable String httpTokens) {
-            this.httpTokens = Codegen.ofNullable(httpTokens);
-            return this;
+
+        public Builder httpTokens(String httpTokens) {
+            return httpTokens(Output.of(httpTokens));
         }
+
         public Builder instanceMetadataTags(@Nullable Output<String> instanceMetadataTags) {
-            this.instanceMetadataTags = instanceMetadataTags;
+            $.instanceMetadataTags = instanceMetadataTags;
             return this;
         }
-        public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
-            this.instanceMetadataTags = Codegen.ofNullable(instanceMetadataTags);
-            return this;
-        }        public LaunchTemplateMetadataOptionsGetArgs build() {
-            return new LaunchTemplateMetadataOptionsGetArgs(httpEndpoint, httpProtocolIpv6, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
+
+        public Builder instanceMetadataTags(String instanceMetadataTags) {
+            return instanceMetadataTags(Output.of(instanceMetadataTags));
+        }
+
+        public LaunchTemplateMetadataOptionsGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cancellationReason", required=true)
-      private final String cancellationReason;
+    private String cancellationReason;
 
     public String cancellationReason() {
         return this.cancellationReason;
@@ -42,7 +42,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cancellationStatus", required=true)
-      private final String cancellationStatus;
+    private String cancellationStatus;
 
     public String cancellationStatus() {
         return this.cancellationStatus;
@@ -53,7 +53,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="currentStage", required=true)
-      private final StageDetailsResponse currentStage;
+    private StageDetailsResponse currentStage;
 
     public StageDetailsResponse currentStage() {
         return this.currentStage;
@@ -64,7 +64,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="deletionStatus", required=true)
-      private final String deletionStatus;
+    private String deletionStatus;
 
     public String deletionStatus() {
         return this.deletionStatus;
@@ -75,7 +75,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="error", required=true)
-      private final ErrorDetailResponse error;
+    private ErrorDetailResponse error;
 
     public ErrorDetailResponse error() {
         return this.error;
@@ -86,7 +86,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="forwardShippingDetails", required=true)
-      private final ForwardShippingDetailsResponse forwardShippingDetails;
+    private ForwardShippingDetailsResponse forwardShippingDetails;
 
     public ForwardShippingDetailsResponse forwardShippingDetails() {
         return this.forwardShippingDetails;
@@ -97,7 +97,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="managementRpDetails", required=true)
-      private final ResourceProviderDetailsResponse managementRpDetails;
+    private ResourceProviderDetailsResponse managementRpDetails;
 
     public ResourceProviderDetailsResponse managementRpDetails() {
         return this.managementRpDetails;
@@ -108,7 +108,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="managementRpDetailsList", required=true)
-      private final List<ResourceProviderDetailsResponse> managementRpDetailsList;
+    private List<ResourceProviderDetailsResponse> managementRpDetailsList;
 
     public List<ResourceProviderDetailsResponse> managementRpDetailsList() {
         return this.managementRpDetailsList;
@@ -119,10 +119,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="notificationEmailList")
-      private final @Nullable List<String> notificationEmailList;
+    private @Nullable List<String> notificationEmailList;
 
-    public List<String> notificationEmailList() {
-        return this.notificationEmailList == null ? List.of() : this.notificationEmailList;
+    public Optional<List<String>> notificationEmailList() {
+        return Optional.ofNullable(this.notificationEmailList);
     }
 
     /**
@@ -130,7 +130,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="orderItemStageHistory", required=true)
-      private final List<StageDetailsResponse> orderItemStageHistory;
+    private List<StageDetailsResponse> orderItemStageHistory;
 
     public List<StageDetailsResponse> orderItemStageHistory() {
         return this.orderItemStageHistory;
@@ -141,7 +141,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="orderItemType", required=true)
-      private final String orderItemType;
+    private String orderItemType;
 
     public String orderItemType() {
         return this.orderItemType;
@@ -152,10 +152,10 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="preferences")
-      private final @Nullable PreferencesResponse preferences;
+    private @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> preferences() {
-        return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
+        return Optional.ofNullable(this.preferences);
     }
 
     /**
@@ -163,7 +163,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="productDetails", required=true)
-      private final ProductDetailsResponse productDetails;
+    private ProductDetailsResponse productDetails;
 
     public ProductDetailsResponse productDetails() {
         return this.productDetails;
@@ -174,7 +174,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="returnReason", required=true)
-      private final String returnReason;
+    private String returnReason;
 
     public String returnReason() {
         return this.returnReason;
@@ -185,7 +185,7 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="returnStatus", required=true)
-      private final String returnStatus;
+    private String returnStatus;
 
     public String returnStatus() {
         return this.returnStatus;
@@ -196,190 +196,160 @@ public final class OrderItemDetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reverseShippingDetails", required=true)
-      private final ReverseShippingDetailsResponse reverseShippingDetails;
+    private ReverseShippingDetailsResponse reverseShippingDetails;
 
     public ReverseShippingDetailsResponse reverseShippingDetails() {
         return this.reverseShippingDetails;
     }
 
-    public OrderItemDetailsResponse(
-        String cancellationReason,
-        String cancellationStatus,
-        StageDetailsResponse currentStage,
-        String deletionStatus,
-        ErrorDetailResponse error,
-        ForwardShippingDetailsResponse forwardShippingDetails,
-        ResourceProviderDetailsResponse managementRpDetails,
-        List<ResourceProviderDetailsResponse> managementRpDetailsList,
-        @Nullable List<String> notificationEmailList,
-        List<StageDetailsResponse> orderItemStageHistory,
-        String orderItemType,
-        @Nullable PreferencesResponse preferences,
-        ProductDetailsResponse productDetails,
-        String returnReason,
-        String returnStatus,
-        ReverseShippingDetailsResponse reverseShippingDetails) {
-        this.cancellationReason = Objects.requireNonNull(cancellationReason, "expected parameter 'cancellationReason' to be non-null");
-        this.cancellationStatus = Objects.requireNonNull(cancellationStatus, "expected parameter 'cancellationStatus' to be non-null");
-        this.currentStage = Objects.requireNonNull(currentStage, "expected parameter 'currentStage' to be non-null");
-        this.deletionStatus = Objects.requireNonNull(deletionStatus, "expected parameter 'deletionStatus' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.forwardShippingDetails = Objects.requireNonNull(forwardShippingDetails, "expected parameter 'forwardShippingDetails' to be non-null");
-        this.managementRpDetails = Objects.requireNonNull(managementRpDetails, "expected parameter 'managementRpDetails' to be non-null");
-        this.managementRpDetailsList = Objects.requireNonNull(managementRpDetailsList, "expected parameter 'managementRpDetailsList' to be non-null");
-        this.notificationEmailList = notificationEmailList;
-        this.orderItemStageHistory = Objects.requireNonNull(orderItemStageHistory, "expected parameter 'orderItemStageHistory' to be non-null");
-        this.orderItemType = Objects.requireNonNull(orderItemType, "expected parameter 'orderItemType' to be non-null");
-        this.preferences = preferences;
-        this.productDetails = Objects.requireNonNull(productDetails, "expected parameter 'productDetails' to be non-null");
-        this.returnReason = Objects.requireNonNull(returnReason, "expected parameter 'returnReason' to be non-null");
-        this.returnStatus = Objects.requireNonNull(returnStatus, "expected parameter 'returnStatus' to be non-null");
-        this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails, "expected parameter 'reverseShippingDetails' to be non-null");
-    }
+    private OrderItemDetailsResponse() {}
 
-    private OrderItemDetailsResponse() {
-        this.cancellationReason = null;
-        this.cancellationStatus = null;
-        this.currentStage = null;
-        this.deletionStatus = null;
-        this.error = null;
-        this.forwardShippingDetails = null;
-        this.managementRpDetails = null;
-        this.managementRpDetailsList = List.of();
-        this.notificationEmailList = List.of();
-        this.orderItemStageHistory = List.of();
-        this.orderItemType = null;
-        this.preferences = null;
-        this.productDetails = null;
-        this.returnReason = null;
-        this.returnStatus = null;
-        this.reverseShippingDetails = null;
+    private OrderItemDetailsResponse(OrderItemDetailsResponse $) {
+        this.cancellationReason = $.cancellationReason;
+        this.cancellationStatus = $.cancellationStatus;
+        this.currentStage = $.currentStage;
+        this.deletionStatus = $.deletionStatus;
+        this.error = $.error;
+        this.forwardShippingDetails = $.forwardShippingDetails;
+        this.managementRpDetails = $.managementRpDetails;
+        this.managementRpDetailsList = $.managementRpDetailsList;
+        this.notificationEmailList = $.notificationEmailList;
+        this.orderItemStageHistory = $.orderItemStageHistory;
+        this.orderItemType = $.orderItemType;
+        this.preferences = $.preferences;
+        this.productDetails = $.productDetails;
+        this.returnReason = $.returnReason;
+        this.returnStatus = $.returnStatus;
+        this.reverseShippingDetails = $.reverseShippingDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrderItemDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cancellationReason;
-        private String cancellationStatus;
-        private StageDetailsResponse currentStage;
-        private String deletionStatus;
-        private ErrorDetailResponse error;
-        private ForwardShippingDetailsResponse forwardShippingDetails;
-        private ResourceProviderDetailsResponse managementRpDetails;
-        private List<ResourceProviderDetailsResponse> managementRpDetailsList;
-        private @Nullable List<String> notificationEmailList;
-        private List<StageDetailsResponse> orderItemStageHistory;
-        private String orderItemType;
-        private @Nullable PreferencesResponse preferences;
-        private ProductDetailsResponse productDetails;
-        private String returnReason;
-        private String returnStatus;
-        private ReverseShippingDetailsResponse reverseShippingDetails;
+        private OrderItemDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrderItemDetailsResponse();
         }
 
         public Builder(OrderItemDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cancellationReason = defaults.cancellationReason;
-    	      this.cancellationStatus = defaults.cancellationStatus;
-    	      this.currentStage = defaults.currentStage;
-    	      this.deletionStatus = defaults.deletionStatus;
-    	      this.error = defaults.error;
-    	      this.forwardShippingDetails = defaults.forwardShippingDetails;
-    	      this.managementRpDetails = defaults.managementRpDetails;
-    	      this.managementRpDetailsList = defaults.managementRpDetailsList;
-    	      this.notificationEmailList = defaults.notificationEmailList;
-    	      this.orderItemStageHistory = defaults.orderItemStageHistory;
-    	      this.orderItemType = defaults.orderItemType;
-    	      this.preferences = defaults.preferences;
-    	      this.productDetails = defaults.productDetails;
-    	      this.returnReason = defaults.returnReason;
-    	      this.returnStatus = defaults.returnStatus;
-    	      this.reverseShippingDetails = defaults.reverseShippingDetails;
+            $ = new OrderItemDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cancellationReason(String cancellationReason) {
-            this.cancellationReason = Objects.requireNonNull(cancellationReason);
+            $.cancellationReason = cancellationReason;
             return this;
         }
+
         public Builder cancellationStatus(String cancellationStatus) {
-            this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
+            $.cancellationStatus = cancellationStatus;
             return this;
         }
+
         public Builder currentStage(StageDetailsResponse currentStage) {
-            this.currentStage = Objects.requireNonNull(currentStage);
+            $.currentStage = currentStage;
             return this;
         }
+
         public Builder deletionStatus(String deletionStatus) {
-            this.deletionStatus = Objects.requireNonNull(deletionStatus);
+            $.deletionStatus = deletionStatus;
             return this;
         }
+
         public Builder error(ErrorDetailResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder forwardShippingDetails(ForwardShippingDetailsResponse forwardShippingDetails) {
-            this.forwardShippingDetails = Objects.requireNonNull(forwardShippingDetails);
+            $.forwardShippingDetails = forwardShippingDetails;
             return this;
         }
+
         public Builder managementRpDetails(ResourceProviderDetailsResponse managementRpDetails) {
-            this.managementRpDetails = Objects.requireNonNull(managementRpDetails);
+            $.managementRpDetails = managementRpDetails;
             return this;
         }
+
         public Builder managementRpDetailsList(List<ResourceProviderDetailsResponse> managementRpDetailsList) {
-            this.managementRpDetailsList = Objects.requireNonNull(managementRpDetailsList);
+            $.managementRpDetailsList = managementRpDetailsList;
             return this;
         }
+
         public Builder managementRpDetailsList(ResourceProviderDetailsResponse... managementRpDetailsList) {
             return managementRpDetailsList(List.of(managementRpDetailsList));
         }
+
         public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
-            this.notificationEmailList = notificationEmailList;
+            $.notificationEmailList = notificationEmailList;
             return this;
         }
+
         public Builder notificationEmailList(String... notificationEmailList) {
             return notificationEmailList(List.of(notificationEmailList));
         }
+
         public Builder orderItemStageHistory(List<StageDetailsResponse> orderItemStageHistory) {
-            this.orderItemStageHistory = Objects.requireNonNull(orderItemStageHistory);
+            $.orderItemStageHistory = orderItemStageHistory;
             return this;
         }
+
         public Builder orderItemStageHistory(StageDetailsResponse... orderItemStageHistory) {
             return orderItemStageHistory(List.of(orderItemStageHistory));
         }
+
         public Builder orderItemType(String orderItemType) {
-            this.orderItemType = Objects.requireNonNull(orderItemType);
+            $.orderItemType = orderItemType;
             return this;
         }
+
         public Builder preferences(@Nullable PreferencesResponse preferences) {
-            this.preferences = preferences;
+            $.preferences = preferences;
             return this;
         }
+
         public Builder productDetails(ProductDetailsResponse productDetails) {
-            this.productDetails = Objects.requireNonNull(productDetails);
+            $.productDetails = productDetails;
             return this;
         }
+
         public Builder returnReason(String returnReason) {
-            this.returnReason = Objects.requireNonNull(returnReason);
+            $.returnReason = returnReason;
             return this;
         }
+
         public Builder returnStatus(String returnStatus) {
-            this.returnStatus = Objects.requireNonNull(returnStatus);
+            $.returnStatus = returnStatus;
             return this;
         }
+
         public Builder reverseShippingDetails(ReverseShippingDetailsResponse reverseShippingDetails) {
-            this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
+            $.reverseShippingDetails = reverseShippingDetails;
             return this;
-        }        public OrderItemDetailsResponse build() {
-            return new OrderItemDetailsResponse(cancellationReason, cancellationStatus, currentStage, deletionStatus, error, forwardShippingDetails, managementRpDetails, managementRpDetailsList, notificationEmailList, orderItemStageHistory, orderItemType, preferences, productDetails, returnReason, returnStatus, reverseShippingDetails);
+        }
+
+        public OrderItemDetailsResponse build() {
+            $.cancellationReason = Objects.requireNonNull($.cancellationReason, "expected parameter 'cancellationReason' to be non-null");
+            $.cancellationStatus = Objects.requireNonNull($.cancellationStatus, "expected parameter 'cancellationStatus' to be non-null");
+            $.currentStage = Objects.requireNonNull($.currentStage, "expected parameter 'currentStage' to be non-null");
+            $.deletionStatus = Objects.requireNonNull($.deletionStatus, "expected parameter 'deletionStatus' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.forwardShippingDetails = Objects.requireNonNull($.forwardShippingDetails, "expected parameter 'forwardShippingDetails' to be non-null");
+            $.managementRpDetails = Objects.requireNonNull($.managementRpDetails, "expected parameter 'managementRpDetails' to be non-null");
+            $.managementRpDetailsList = Objects.requireNonNull($.managementRpDetailsList, "expected parameter 'managementRpDetailsList' to be non-null");
+            $.orderItemStageHistory = Objects.requireNonNull($.orderItemStageHistory, "expected parameter 'orderItemStageHistory' to be non-null");
+            $.orderItemType = Objects.requireNonNull($.orderItemType, "expected parameter 'orderItemType' to be non-null");
+            $.productDetails = Objects.requireNonNull($.productDetails, "expected parameter 'productDetails' to be non-null");
+            $.returnReason = Objects.requireNonNull($.returnReason, "expected parameter 'returnReason' to be non-null");
+            $.returnStatus = Objects.requireNonNull($.returnStatus, "expected parameter 'returnStatus' to be non-null");
+            $.reverseShippingDetails = Objects.requireNonNull($.reverseShippingDetails, "expected parameter 'reverseShippingDetails' to be non-null");
+            return $;
         }
     }
+
 }

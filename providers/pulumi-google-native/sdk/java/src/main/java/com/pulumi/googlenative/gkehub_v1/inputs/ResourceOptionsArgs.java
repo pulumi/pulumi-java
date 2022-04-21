@@ -5,10 +5,10 @@ package com.pulumi.googlenative.gkehub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="connectVersion")
-      private final @Nullable Output<String> connectVersion;
+    private @Nullable Output<String> connectVersion;
 
-    public Output<String> connectVersion() {
-        return this.connectVersion == null ? Codegen.empty() : this.connectVersion;
+    public Optional<Output<String>> connectVersion() {
+        return Optional.ofNullable(this.connectVersion);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="k8sVersion")
-      private final @Nullable Output<String> k8sVersion;
+    private @Nullable Output<String> k8sVersion;
 
-    public Output<String> k8sVersion() {
-        return this.k8sVersion == null ? Codegen.empty() : this.k8sVersion;
+    public Optional<Output<String>> k8sVersion() {
+        return Optional.ofNullable(this.k8sVersion);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ResourceOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="v1beta1Crd")
-      private final @Nullable Output<Boolean> v1beta1Crd;
+    private @Nullable Output<Boolean> v1beta1Crd;
 
-    public Output<Boolean> v1beta1Crd() {
-        return this.v1beta1Crd == null ? Codegen.empty() : this.v1beta1Crd;
+    public Optional<Output<Boolean>> v1beta1Crd() {
+        return Optional.ofNullable(this.v1beta1Crd);
     }
 
-    public ResourceOptionsArgs(
-        @Nullable Output<String> connectVersion,
-        @Nullable Output<String> k8sVersion,
-        @Nullable Output<Boolean> v1beta1Crd) {
-        this.connectVersion = connectVersion;
-        this.k8sVersion = k8sVersion;
-        this.v1beta1Crd = v1beta1Crd;
-    }
+    private ResourceOptionsArgs() {}
 
-    private ResourceOptionsArgs() {
-        this.connectVersion = Codegen.empty();
-        this.k8sVersion = Codegen.empty();
-        this.v1beta1Crd = Codegen.empty();
+    private ResourceOptionsArgs(ResourceOptionsArgs $) {
+        this.connectVersion = $.connectVersion;
+        this.k8sVersion = $.k8sVersion;
+        this.v1beta1Crd = $.v1beta1Crd;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectVersion;
-        private @Nullable Output<String> k8sVersion;
-        private @Nullable Output<Boolean> v1beta1Crd;
+        private ResourceOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceOptionsArgs();
         }
 
         public Builder(ResourceOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectVersion = defaults.connectVersion;
-    	      this.k8sVersion = defaults.k8sVersion;
-    	      this.v1beta1Crd = defaults.v1beta1Crd;
+            $ = new ResourceOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectVersion(@Nullable Output<String> connectVersion) {
-            this.connectVersion = connectVersion;
+            $.connectVersion = connectVersion;
             return this;
         }
-        public Builder connectVersion(@Nullable String connectVersion) {
-            this.connectVersion = Codegen.ofNullable(connectVersion);
-            return this;
+
+        public Builder connectVersion(String connectVersion) {
+            return connectVersion(Output.of(connectVersion));
         }
+
         public Builder k8sVersion(@Nullable Output<String> k8sVersion) {
-            this.k8sVersion = k8sVersion;
+            $.k8sVersion = k8sVersion;
             return this;
         }
-        public Builder k8sVersion(@Nullable String k8sVersion) {
-            this.k8sVersion = Codegen.ofNullable(k8sVersion);
-            return this;
+
+        public Builder k8sVersion(String k8sVersion) {
+            return k8sVersion(Output.of(k8sVersion));
         }
+
         public Builder v1beta1Crd(@Nullable Output<Boolean> v1beta1Crd) {
-            this.v1beta1Crd = v1beta1Crd;
+            $.v1beta1Crd = v1beta1Crd;
             return this;
         }
-        public Builder v1beta1Crd(@Nullable Boolean v1beta1Crd) {
-            this.v1beta1Crd = Codegen.ofNullable(v1beta1Crd);
-            return this;
-        }        public ResourceOptionsArgs build() {
-            return new ResourceOptionsArgs(connectVersion, k8sVersion, v1beta1Crd);
+
+        public Builder v1beta1Crd(Boolean v1beta1Crd) {
+            return v1beta1Crd(Output.of(v1beta1Crd));
+        }
+
+        public ResourceOptionsArgs build() {
+            return $;
         }
     }
+
 }

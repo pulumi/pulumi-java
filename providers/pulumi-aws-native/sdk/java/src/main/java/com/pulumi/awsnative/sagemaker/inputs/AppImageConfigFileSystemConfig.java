@@ -24,10 +24,10 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
      * 
      */
     @Import(name="defaultGid")
-      private final @Nullable Integer defaultGid;
+    private @Nullable Integer defaultGid;
 
     public Optional<Integer> defaultGid() {
-        return this.defaultGid == null ? Optional.empty() : Optional.ofNullable(this.defaultGid);
+        return Optional.ofNullable(this.defaultGid);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
      * 
      */
     @Import(name="defaultUid")
-      private final @Nullable Integer defaultUid;
+    private @Nullable Integer defaultUid;
 
     public Optional<Integer> defaultUid() {
-        return this.defaultUid == null ? Optional.empty() : Optional.ofNullable(this.defaultUid);
+        return Optional.ofNullable(this.defaultUid);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class AppImageConfigFileSystemConfig extends com.pulumi.resources.I
      * 
      */
     @Import(name="mountPath")
-      private final @Nullable String mountPath;
+    private @Nullable String mountPath;
 
     public Optional<String> mountPath() {
-        return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
+        return Optional.ofNullable(this.mountPath);
     }
 
-    public AppImageConfigFileSystemConfig(
-        @Nullable Integer defaultGid,
-        @Nullable Integer defaultUid,
-        @Nullable String mountPath) {
-        this.defaultGid = defaultGid;
-        this.defaultUid = defaultUid;
-        this.mountPath = mountPath;
-    }
+    private AppImageConfigFileSystemConfig() {}
 
-    private AppImageConfigFileSystemConfig() {
-        this.defaultGid = null;
-        this.defaultUid = null;
-        this.mountPath = null;
+    private AppImageConfigFileSystemConfig(AppImageConfigFileSystemConfig $) {
+        this.defaultGid = $.defaultGid;
+        this.defaultUid = $.defaultUid;
+        this.mountPath = $.mountPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppImageConfigFileSystemConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer defaultGid;
-        private @Nullable Integer defaultUid;
-        private @Nullable String mountPath;
+        private AppImageConfigFileSystemConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppImageConfigFileSystemConfig();
         }
 
         public Builder(AppImageConfigFileSystemConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultGid = defaults.defaultGid;
-    	      this.defaultUid = defaults.defaultUid;
-    	      this.mountPath = defaults.mountPath;
+            $ = new AppImageConfigFileSystemConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultGid(@Nullable Integer defaultGid) {
-            this.defaultGid = defaultGid;
+            $.defaultGid = defaultGid;
             return this;
         }
+
         public Builder defaultUid(@Nullable Integer defaultUid) {
-            this.defaultUid = defaultUid;
+            $.defaultUid = defaultUid;
             return this;
         }
+
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = mountPath;
+            $.mountPath = mountPath;
             return this;
-        }        public AppImageConfigFileSystemConfig build() {
-            return new AppImageConfigFileSystemConfig(defaultGid, defaultUid, mountPath);
+        }
+
+        public AppImageConfigFileSystemConfig build() {
+            return $;
         }
     }
+
 }

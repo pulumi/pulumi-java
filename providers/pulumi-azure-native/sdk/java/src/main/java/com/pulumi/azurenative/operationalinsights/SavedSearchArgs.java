@@ -6,11 +6,11 @@ package com.pulumi.azurenative.operationalinsights;
 import com.pulumi.azurenative.operationalinsights.inputs.TagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final Output<String> category;
+    private Output<String> category;
 
     public Output<String> category() {
         return this.category;
@@ -34,7 +34,7 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -45,10 +45,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionAlias")
-      private final @Nullable Output<String> functionAlias;
+    private @Nullable Output<String> functionAlias;
 
-    public Output<String> functionAlias() {
-        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
+    public Optional<Output<String>> functionAlias() {
+        return Optional.ofNullable(this.functionAlias);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="functionParameters")
-      private final @Nullable Output<String> functionParameters;
+    private @Nullable Output<String> functionParameters;
 
-    public Output<String> functionParameters() {
-        return this.functionParameters == null ? Codegen.empty() : this.functionParameters;
+    public Optional<Output<String>> functionParameters() {
+        return Optional.ofNullable(this.functionParameters);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -78,7 +78,7 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,10 +89,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="savedSearchId")
-      private final @Nullable Output<String> savedSearchId;
+    private @Nullable Output<String> savedSearchId;
 
-    public Output<String> savedSearchId() {
-        return this.savedSearchId == null ? Codegen.empty() : this.savedSearchId;
+    public Optional<Output<String>> savedSearchId() {
+        return Optional.ofNullable(this.savedSearchId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TagArgs>> tags;
+    private @Nullable Output<List<TagArgs>> tags;
 
-    public Output<List<TagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Double> version;
+    private @Nullable Output<Double> version;
 
-    public Output<Double> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Double>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -122,170 +122,147 @@ public final class SavedSearchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SavedSearchArgs(
-        Output<String> category,
-        Output<String> displayName,
-        @Nullable Output<String> functionAlias,
-        @Nullable Output<String> functionParameters,
-        Output<String> query,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> savedSearchId,
-        @Nullable Output<List<TagArgs>> tags,
-        @Nullable Output<Double> version,
-        Output<String> workspaceName) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.functionAlias = functionAlias;
-        this.functionParameters = functionParameters;
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.savedSearchId = savedSearchId;
-        this.tags = tags;
-        this.version = version;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SavedSearchArgs() {}
 
-    private SavedSearchArgs() {
-        this.category = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.functionAlias = Codegen.empty();
-        this.functionParameters = Codegen.empty();
-        this.query = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.savedSearchId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.version = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SavedSearchArgs(SavedSearchArgs $) {
+        this.category = $.category;
+        this.displayName = $.displayName;
+        this.functionAlias = $.functionAlias;
+        this.functionParameters = $.functionParameters;
+        this.query = $.query;
+        this.resourceGroupName = $.resourceGroupName;
+        this.savedSearchId = $.savedSearchId;
+        this.tags = $.tags;
+        this.version = $.version;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SavedSearchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> category;
-        private Output<String> displayName;
-        private @Nullable Output<String> functionAlias;
-        private @Nullable Output<String> functionParameters;
-        private Output<String> query;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> savedSearchId;
-        private @Nullable Output<List<TagArgs>> tags;
-        private @Nullable Output<Double> version;
-        private Output<String> workspaceName;
+        private SavedSearchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SavedSearchArgs();
         }
 
         public Builder(SavedSearchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.displayName = defaults.displayName;
-    	      this.functionAlias = defaults.functionAlias;
-    	      this.functionParameters = defaults.functionParameters;
-    	      this.query = defaults.query;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.savedSearchId = defaults.savedSearchId;
-    	      this.tags = defaults.tags;
-    	      this.version = defaults.version;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SavedSearchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(Output<String> category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder category(String category) {
-            this.category = Output.of(Objects.requireNonNull(category));
-            return this;
+            return category(Output.of(category));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder functionAlias(@Nullable Output<String> functionAlias) {
-            this.functionAlias = functionAlias;
+            $.functionAlias = functionAlias;
             return this;
         }
-        public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Codegen.ofNullable(functionAlias);
-            return this;
+
+        public Builder functionAlias(String functionAlias) {
+            return functionAlias(Output.of(functionAlias));
         }
+
         public Builder functionParameters(@Nullable Output<String> functionParameters) {
-            this.functionParameters = functionParameters;
+            $.functionParameters = functionParameters;
             return this;
         }
-        public Builder functionParameters(@Nullable String functionParameters) {
-            this.functionParameters = Codegen.ofNullable(functionParameters);
-            return this;
+
+        public Builder functionParameters(String functionParameters) {
+            return functionParameters(Output.of(functionParameters));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder savedSearchId(@Nullable Output<String> savedSearchId) {
-            this.savedSearchId = savedSearchId;
+            $.savedSearchId = savedSearchId;
             return this;
         }
-        public Builder savedSearchId(@Nullable String savedSearchId) {
-            this.savedSearchId = Codegen.ofNullable(savedSearchId);
-            return this;
+
+        public Builder savedSearchId(String savedSearchId) {
+            return savedSearchId(Output.of(savedSearchId));
         }
+
         public Builder tags(@Nullable Output<List<TagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder version(@Nullable Output<Double> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Double version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(Double version) {
+            return version(Output.of(version));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SavedSearchArgs build() {
-            return new SavedSearchArgs(category, displayName, functionAlias, functionParameters, query, resourceGroupName, savedSearchId, tags, version, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SavedSearchArgs build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

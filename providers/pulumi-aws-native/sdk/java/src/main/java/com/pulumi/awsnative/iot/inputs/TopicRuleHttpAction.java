@@ -18,97 +18,88 @@ public final class TopicRuleHttpAction extends com.pulumi.resources.InvokeArgs {
     public static final TopicRuleHttpAction Empty = new TopicRuleHttpAction();
 
     @Import(name="auth")
-      private final @Nullable TopicRuleHttpAuthorization auth;
+    private @Nullable TopicRuleHttpAuthorization auth;
 
     public Optional<TopicRuleHttpAuthorization> auth() {
-        return this.auth == null ? Optional.empty() : Optional.ofNullable(this.auth);
+        return Optional.ofNullable(this.auth);
     }
 
     @Import(name="confirmationUrl")
-      private final @Nullable String confirmationUrl;
+    private @Nullable String confirmationUrl;
 
     public Optional<String> confirmationUrl() {
-        return this.confirmationUrl == null ? Optional.empty() : Optional.ofNullable(this.confirmationUrl);
+        return Optional.ofNullable(this.confirmationUrl);
     }
 
     @Import(name="headers")
-      private final @Nullable List<TopicRuleHttpActionHeader> headers;
+    private @Nullable List<TopicRuleHttpActionHeader> headers;
 
-    public List<TopicRuleHttpActionHeader> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<TopicRuleHttpActionHeader>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public TopicRuleHttpAction(
-        @Nullable TopicRuleHttpAuthorization auth,
-        @Nullable String confirmationUrl,
-        @Nullable List<TopicRuleHttpActionHeader> headers,
-        String url) {
-        this.auth = auth;
-        this.confirmationUrl = confirmationUrl;
-        this.headers = headers;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private TopicRuleHttpAction() {}
 
-    private TopicRuleHttpAction() {
-        this.auth = null;
-        this.confirmationUrl = null;
-        this.headers = List.of();
-        this.url = null;
+    private TopicRuleHttpAction(TopicRuleHttpAction $) {
+        this.auth = $.auth;
+        this.confirmationUrl = $.confirmationUrl;
+        this.headers = $.headers;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleHttpAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable TopicRuleHttpAuthorization auth;
-        private @Nullable String confirmationUrl;
-        private @Nullable List<TopicRuleHttpActionHeader> headers;
-        private String url;
+        private TopicRuleHttpAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleHttpAction();
         }
 
         public Builder(TopicRuleHttpAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.confirmationUrl = defaults.confirmationUrl;
-    	      this.headers = defaults.headers;
-    	      this.url = defaults.url;
+            $ = new TopicRuleHttpAction(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable TopicRuleHttpAuthorization auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
+
         public Builder confirmationUrl(@Nullable String confirmationUrl) {
-            this.confirmationUrl = confirmationUrl;
+            $.confirmationUrl = confirmationUrl;
             return this;
         }
+
         public Builder headers(@Nullable List<TopicRuleHttpActionHeader> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(TopicRuleHttpActionHeader... headers) {
             return headers(List.of(headers));
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public TopicRuleHttpAction build() {
-            return new TopicRuleHttpAction(auth, confirmationUrl, headers, url);
+        }
+
+        public TopicRuleHttpAction build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

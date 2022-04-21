@@ -11,6 +11,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<Object>> inputs;
+    private @Nullable Output<List<Object>> inputs;
 
-    public Output<List<Object>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<Object>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
+    private @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
 
-    public Output<MarkdownPartMetadataSettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<MarkdownPartMetadataSettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -50,79 +51,73 @@ public final class MarkdownPartMetadataArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MarkdownPartMetadataArgs(
-        @Nullable Output<List<Object>> inputs,
-        @Nullable Output<MarkdownPartMetadataSettingsArgs> settings,
-        Output<String> type) {
-        this.inputs = inputs;
-        this.settings = settings;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-    }
+    private MarkdownPartMetadataArgs() {}
 
-    private MarkdownPartMetadataArgs() {
-        this.inputs = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.type = Codegen.empty();
+    private MarkdownPartMetadataArgs(MarkdownPartMetadataArgs $) {
+        this.inputs = $.inputs;
+        this.settings = $.settings;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MarkdownPartMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> inputs;
-        private @Nullable Output<MarkdownPartMetadataSettingsArgs> settings;
-        private Output<String> type;
+        private MarkdownPartMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MarkdownPartMetadataArgs();
         }
 
         public Builder(MarkdownPartMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.settings = defaults.settings;
-    	      this.type = defaults.type;
+            $ = new MarkdownPartMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(@Nullable Output<List<Object>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<Object> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<Object> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(Object... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder settings(@Nullable Output<MarkdownPartMetadataSettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable MarkdownPartMetadataSettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(MarkdownPartMetadataSettingsArgs settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MarkdownPartMetadataArgs build() {
-            return new MarkdownPartMetadataArgs(inputs, settings, type);
+            return type(Output.of(type));
+        }
+
+        public MarkdownPartMetadataArgs build() {
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="functionArn", required=true)
-      private final String functionArn;
+    private String functionArn;
 
     public String functionArn() {
         return this.functionArn;
@@ -28,55 +28,52 @@ public final class GetLambdaFunctionAssociationArgs extends com.pulumi.resources
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
-    public GetLambdaFunctionAssociationArgs(
-        String functionArn,
-        String instanceId) {
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-    }
+    private GetLambdaFunctionAssociationArgs() {}
 
-    private GetLambdaFunctionAssociationArgs() {
-        this.functionArn = null;
-        this.instanceId = null;
+    private GetLambdaFunctionAssociationArgs(GetLambdaFunctionAssociationArgs $) {
+        this.functionArn = $.functionArn;
+        this.instanceId = $.instanceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLambdaFunctionAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionArn;
-        private String instanceId;
+        private GetLambdaFunctionAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLambdaFunctionAssociationArgs();
         }
 
         public Builder(GetLambdaFunctionAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
-    	      this.instanceId = defaults.instanceId;
+            $ = new GetLambdaFunctionAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(String functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
-        }        public GetLambdaFunctionAssociationArgs build() {
-            return new GetLambdaFunctionAssociationArgs(functionArn, instanceId);
+        }
+
+        public GetLambdaFunctionAssociationArgs build() {
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

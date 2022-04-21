@@ -23,10 +23,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ColumnResponse(
-        @Nullable String name,
-        @Nullable String type) {
-        this.name = name;
-        this.type = type;
-    }
+    private ColumnResponse() {}
 
-    private ColumnResponse() {
-        this.name = null;
-        this.type = null;
+    private ColumnResponse(ColumnResponse $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String name;
-        private @Nullable String type;
+        private ColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnResponse();
         }
 
         public Builder(ColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ColumnResponse build() {
-            return new ColumnResponse(name, type);
+        }
+
+        public ColumnResponse build() {
+            return $;
         }
     }
+
 }

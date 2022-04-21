@@ -5,9 +5,9 @@ package com.pulumi.gcp.oslogin;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expirationTimeUsec")
-      private final @Nullable Output<String> expirationTimeUsec;
+    private @Nullable Output<String> expirationTimeUsec;
 
-    public Output<String> expirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
+    public Optional<Output<String>> expirationTimeUsec() {
+        return Optional.ofNullable(this.expirationTimeUsec);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -42,10 +42,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -53,89 +53,80 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public SshPublicKeyArgs(
-        @Nullable Output<String> expirationTimeUsec,
-        Output<String> key,
-        @Nullable Output<String> project,
-        Output<String> user) {
-        this.expirationTimeUsec = expirationTimeUsec;
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.project = project;
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private SshPublicKeyArgs() {}
 
-    private SshPublicKeyArgs() {
-        this.expirationTimeUsec = Codegen.empty();
-        this.key = Codegen.empty();
-        this.project = Codegen.empty();
-        this.user = Codegen.empty();
+    private SshPublicKeyArgs(SshPublicKeyArgs $) {
+        this.expirationTimeUsec = $.expirationTimeUsec;
+        this.key = $.key;
+        this.project = $.project;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshPublicKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTimeUsec;
-        private Output<String> key;
-        private @Nullable Output<String> project;
-        private Output<String> user;
+        private SshPublicKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshPublicKeyArgs();
         }
 
         public Builder(SshPublicKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTimeUsec = defaults.expirationTimeUsec;
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.user = defaults.user;
+            $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTimeUsec(@Nullable Output<String> expirationTimeUsec) {
-            this.expirationTimeUsec = expirationTimeUsec;
+            $.expirationTimeUsec = expirationTimeUsec;
             return this;
         }
-        public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Codegen.ofNullable(expirationTimeUsec);
-            return this;
+
+        public Builder expirationTimeUsec(String expirationTimeUsec) {
+            return expirationTimeUsec(Output.of(expirationTimeUsec));
         }
+
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public SshPublicKeyArgs build() {
-            return new SshPublicKeyArgs(expirationTimeUsec, key, project, user);
+            return user(Output.of(user));
+        }
+
+        public SshPublicKeyArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

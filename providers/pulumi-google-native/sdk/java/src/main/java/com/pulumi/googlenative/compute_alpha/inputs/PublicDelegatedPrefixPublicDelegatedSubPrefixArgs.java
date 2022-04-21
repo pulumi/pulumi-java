@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
      * 
      */
     @Import(name="delegateeProject")
-      private final @Nullable Output<String> delegateeProject;
+    private @Nullable Output<String> delegateeProject;
 
-    public Output<String> delegateeProject() {
-        return this.delegateeProject == null ? Codegen.empty() : this.delegateeProject;
+    public Optional<Output<String>> delegateeProject() {
+        return Optional.ofNullable(this.delegateeProject);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
      * 
      */
     @Import(name="ipCidrRange")
-      private final @Nullable Output<String> ipCidrRange;
+    private @Nullable Output<String> ipCidrRange;
 
-    public Output<String> ipCidrRange() {
-        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
+    public Optional<Output<String>> ipCidrRange() {
+        return Optional.ofNullable(this.ipCidrRange);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
      * 
      */
     @Import(name="isAddress")
-      private final @Nullable Output<Boolean> isAddress;
+    private @Nullable Output<Boolean> isAddress;
 
-    public Output<Boolean> isAddress() {
-        return this.isAddress == null ? Codegen.empty() : this.isAddress;
+    public Optional<Output<Boolean>> isAddress() {
+        return Optional.ofNullable(this.isAddress);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends com
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(
-        @Nullable Output<String> delegateeProject,
-        @Nullable Output<String> description,
-        @Nullable Output<String> ipCidrRange,
-        @Nullable Output<Boolean> isAddress,
-        @Nullable Output<String> name) {
-        this.delegateeProject = delegateeProject;
-        this.description = description;
-        this.ipCidrRange = ipCidrRange;
-        this.isAddress = isAddress;
-        this.name = name;
-    }
+    private PublicDelegatedPrefixPublicDelegatedSubPrefixArgs() {}
 
-    private PublicDelegatedPrefixPublicDelegatedSubPrefixArgs() {
-        this.delegateeProject = Codegen.empty();
-        this.description = Codegen.empty();
-        this.ipCidrRange = Codegen.empty();
-        this.isAddress = Codegen.empty();
-        this.name = Codegen.empty();
+    private PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs $) {
+        this.delegateeProject = $.delegateeProject;
+        this.description = $.description;
+        this.ipCidrRange = $.ipCidrRange;
+        this.isAddress = $.isAddress;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delegateeProject;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> ipCidrRange;
-        private @Nullable Output<Boolean> isAddress;
-        private @Nullable Output<String> name;
+        private PublicDelegatedPrefixPublicDelegatedSubPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs();
         }
 
         public Builder(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delegateeProject = defaults.delegateeProject;
-    	      this.description = defaults.description;
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.isAddress = defaults.isAddress;
-    	      this.name = defaults.name;
+            $ = new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delegateeProject(@Nullable Output<String> delegateeProject) {
-            this.delegateeProject = delegateeProject;
+            $.delegateeProject = delegateeProject;
             return this;
         }
-        public Builder delegateeProject(@Nullable String delegateeProject) {
-            this.delegateeProject = Codegen.ofNullable(delegateeProject);
-            return this;
+
+        public Builder delegateeProject(String delegateeProject) {
+            return delegateeProject(Output.of(delegateeProject));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
-            this.ipCidrRange = ipCidrRange;
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
-        public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
-            return this;
+
+        public Builder ipCidrRange(String ipCidrRange) {
+            return ipCidrRange(Output.of(ipCidrRange));
         }
+
         public Builder isAddress(@Nullable Output<Boolean> isAddress) {
-            this.isAddress = isAddress;
+            $.isAddress = isAddress;
             return this;
         }
-        public Builder isAddress(@Nullable Boolean isAddress) {
-            this.isAddress = Codegen.ofNullable(isAddress);
-            return this;
+
+        public Builder isAddress(Boolean isAddress) {
+            return isAddress(Output.of(isAddress));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {
-            return new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(delegateeProject, description, ipCidrRange, isAddress, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {
+            return $;
         }
     }
+
 }

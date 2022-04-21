@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class EC2FleetFleetLaunchTemplateSpecificationRequestArgs extends c
     public static final EC2FleetFleetLaunchTemplateSpecificationRequestArgs Empty = new EC2FleetFleetLaunchTemplateSpecificationRequestArgs();
 
     @Import(name="launchTemplateId")
-      private final @Nullable Output<String> launchTemplateId;
+    private @Nullable Output<String> launchTemplateId;
 
-    public Output<String> launchTemplateId() {
-        return this.launchTemplateId == null ? Codegen.empty() : this.launchTemplateId;
+    public Optional<Output<String>> launchTemplateId() {
+        return Optional.ofNullable(this.launchTemplateId);
     }
 
     @Import(name="launchTemplateName")
-      private final @Nullable Output<String> launchTemplateName;
+    private @Nullable Output<String> launchTemplateName;
 
-    public Output<String> launchTemplateName() {
-        return this.launchTemplateName == null ? Codegen.empty() : this.launchTemplateName;
+    public Optional<Output<String>> launchTemplateName() {
+        return Optional.ofNullable(this.launchTemplateName);
     }
 
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public EC2FleetFleetLaunchTemplateSpecificationRequestArgs(
-        @Nullable Output<String> launchTemplateId,
-        @Nullable Output<String> launchTemplateName,
-        @Nullable Output<String> version) {
-        this.launchTemplateId = launchTemplateId;
-        this.launchTemplateName = launchTemplateName;
-        this.version = version;
-    }
+    private EC2FleetFleetLaunchTemplateSpecificationRequestArgs() {}
 
-    private EC2FleetFleetLaunchTemplateSpecificationRequestArgs() {
-        this.launchTemplateId = Codegen.empty();
-        this.launchTemplateName = Codegen.empty();
-        this.version = Codegen.empty();
+    private EC2FleetFleetLaunchTemplateSpecificationRequestArgs(EC2FleetFleetLaunchTemplateSpecificationRequestArgs $) {
+        this.launchTemplateId = $.launchTemplateId;
+        this.launchTemplateName = $.launchTemplateName;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EC2FleetFleetLaunchTemplateSpecificationRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> launchTemplateId;
-        private @Nullable Output<String> launchTemplateName;
-        private @Nullable Output<String> version;
+        private EC2FleetFleetLaunchTemplateSpecificationRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EC2FleetFleetLaunchTemplateSpecificationRequestArgs();
         }
 
         public Builder(EC2FleetFleetLaunchTemplateSpecificationRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchTemplateId = defaults.launchTemplateId;
-    	      this.launchTemplateName = defaults.launchTemplateName;
-    	      this.version = defaults.version;
+            $ = new EC2FleetFleetLaunchTemplateSpecificationRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder launchTemplateId(@Nullable Output<String> launchTemplateId) {
-            this.launchTemplateId = launchTemplateId;
+            $.launchTemplateId = launchTemplateId;
             return this;
         }
-        public Builder launchTemplateId(@Nullable String launchTemplateId) {
-            this.launchTemplateId = Codegen.ofNullable(launchTemplateId);
-            return this;
+
+        public Builder launchTemplateId(String launchTemplateId) {
+            return launchTemplateId(Output.of(launchTemplateId));
         }
+
         public Builder launchTemplateName(@Nullable Output<String> launchTemplateName) {
-            this.launchTemplateName = launchTemplateName;
+            $.launchTemplateName = launchTemplateName;
             return this;
         }
-        public Builder launchTemplateName(@Nullable String launchTemplateName) {
-            this.launchTemplateName = Codegen.ofNullable(launchTemplateName);
-            return this;
+
+        public Builder launchTemplateName(String launchTemplateName) {
+            return launchTemplateName(Output.of(launchTemplateName));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public EC2FleetFleetLaunchTemplateSpecificationRequestArgs build() {
-            return new EC2FleetFleetLaunchTemplateSpecificationRequestArgs(launchTemplateId, launchTemplateName, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public EC2FleetFleetLaunchTemplateSpecificationRequestArgs build() {
+            return $;
         }
     }
+
 }

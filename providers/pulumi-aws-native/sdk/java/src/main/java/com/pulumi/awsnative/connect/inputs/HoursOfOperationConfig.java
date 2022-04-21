@@ -22,7 +22,7 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="day", required=true)
-      private final HoursOfOperationConfigDay day;
+    private HoursOfOperationConfigDay day;
 
     public HoursOfOperationConfigDay day() {
         return this.day;
@@ -33,7 +33,7 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="endTime", required=true)
-      private final HoursOfOperationTimeSlice endTime;
+    private HoursOfOperationTimeSlice endTime;
 
     public HoursOfOperationTimeSlice endTime() {
         return this.endTime;
@@ -44,64 +44,59 @@ public final class HoursOfOperationConfig extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="startTime", required=true)
-      private final HoursOfOperationTimeSlice startTime;
+    private HoursOfOperationTimeSlice startTime;
 
     public HoursOfOperationTimeSlice startTime() {
         return this.startTime;
     }
 
-    public HoursOfOperationConfig(
-        HoursOfOperationConfigDay day,
-        HoursOfOperationTimeSlice endTime,
-        HoursOfOperationTimeSlice startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private HoursOfOperationConfig() {}
 
-    private HoursOfOperationConfig() {
-        this.day = null;
-        this.endTime = null;
-        this.startTime = null;
+    private HoursOfOperationConfig(HoursOfOperationConfig $) {
+        this.day = $.day;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HoursOfOperationConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HoursOfOperationConfigDay day;
-        private HoursOfOperationTimeSlice endTime;
-        private HoursOfOperationTimeSlice startTime;
+        private HoursOfOperationConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new HoursOfOperationConfig();
         }
 
         public Builder(HoursOfOperationConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new HoursOfOperationConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder day(HoursOfOperationConfigDay day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder endTime(HoursOfOperationTimeSlice endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(HoursOfOperationTimeSlice startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public HoursOfOperationConfig build() {
-            return new HoursOfOperationConfig(day, endTime, startTime);
+        }
+
+        public HoursOfOperationConfig build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

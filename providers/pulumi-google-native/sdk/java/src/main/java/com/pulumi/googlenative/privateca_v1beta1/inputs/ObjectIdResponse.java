@@ -22,48 +22,49 @@ public final class ObjectIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="objectIdPath", required=true)
-      private final List<Integer> objectIdPath;
+    private List<Integer> objectIdPath;
 
     public List<Integer> objectIdPath() {
         return this.objectIdPath;
     }
 
-    public ObjectIdResponse(List<Integer> objectIdPath) {
-        this.objectIdPath = Objects.requireNonNull(objectIdPath, "expected parameter 'objectIdPath' to be non-null");
-    }
+    private ObjectIdResponse() {}
 
-    private ObjectIdResponse() {
-        this.objectIdPath = List.of();
+    private ObjectIdResponse(ObjectIdResponse $) {
+        this.objectIdPath = $.objectIdPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> objectIdPath;
+        private ObjectIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectIdResponse();
         }
 
         public Builder(ObjectIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPath = defaults.objectIdPath;
+            $ = new ObjectIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPath(List<Integer> objectIdPath) {
-            this.objectIdPath = Objects.requireNonNull(objectIdPath);
+            $.objectIdPath = objectIdPath;
             return this;
         }
+
         public Builder objectIdPath(Integer... objectIdPath) {
             return objectIdPath(List.of(objectIdPath));
-        }        public ObjectIdResponse build() {
-            return new ObjectIdResponse(objectIdPath);
+        }
+
+        public ObjectIdResponse build() {
+            $.objectIdPath = Objects.requireNonNull($.objectIdPath, "expected parameter 'objectIdPath' to be non-null");
+            return $;
         }
     }
+
 }

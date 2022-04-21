@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetSpec")
-      private final @Nullable Output<String> fleetSpec;
+    private @Nullable Output<String> fleetSpec;
 
-    public Output<String> fleetSpec() {
-        return this.fleetSpec == null ? Codegen.empty() : this.fleetSpec;
+    public Optional<Output<String>> fleetSpec() {
+        return Optional.ofNullable(this.fleetSpec);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class FleetConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public FleetConfigArgs(
-        @Nullable Output<String> fleetSpec,
-        @Nullable Output<String> name) {
-        this.fleetSpec = fleetSpec;
-        this.name = name;
-    }
+    private FleetConfigArgs() {}
 
-    private FleetConfigArgs() {
-        this.fleetSpec = Codegen.empty();
-        this.name = Codegen.empty();
+    private FleetConfigArgs(FleetConfigArgs $) {
+        this.fleetSpec = $.fleetSpec;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fleetSpec;
-        private @Nullable Output<String> name;
+        private FleetConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetConfigArgs();
         }
 
         public Builder(FleetConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetSpec = defaults.fleetSpec;
-    	      this.name = defaults.name;
+            $ = new FleetConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetSpec(@Nullable Output<String> fleetSpec) {
-            this.fleetSpec = fleetSpec;
+            $.fleetSpec = fleetSpec;
             return this;
         }
-        public Builder fleetSpec(@Nullable String fleetSpec) {
-            this.fleetSpec = Codegen.ofNullable(fleetSpec);
-            return this;
+
+        public Builder fleetSpec(String fleetSpec) {
+            return fleetSpec(Output.of(fleetSpec));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public FleetConfigArgs build() {
-            return new FleetConfigArgs(fleetSpec, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public FleetConfigArgs build() {
+            return $;
         }
     }
+
 }

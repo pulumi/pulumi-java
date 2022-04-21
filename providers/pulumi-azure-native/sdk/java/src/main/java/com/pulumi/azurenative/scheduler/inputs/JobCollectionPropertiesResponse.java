@@ -21,10 +21,10 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="quota")
-      private final @Nullable JobCollectionQuotaResponse quota;
+    private @Nullable JobCollectionQuotaResponse quota;
 
     public Optional<JobCollectionQuotaResponse> quota() {
-        return this.quota == null ? Optional.empty() : Optional.ofNullable(this.quota);
+        return Optional.ofNullable(this.quota);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sku")
-      private final @Nullable SkuResponse sku;
+    private @Nullable SkuResponse sku;
 
     public Optional<SkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -43,64 +43,56 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="state")
-      private final @Nullable String state;
+    private @Nullable String state;
 
     public Optional<String> state() {
-        return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
+        return Optional.ofNullable(this.state);
     }
 
-    public JobCollectionPropertiesResponse(
-        @Nullable JobCollectionQuotaResponse quota,
-        @Nullable SkuResponse sku,
-        @Nullable String state) {
-        this.quota = quota;
-        this.sku = sku;
-        this.state = state;
-    }
+    private JobCollectionPropertiesResponse() {}
 
-    private JobCollectionPropertiesResponse() {
-        this.quota = null;
-        this.sku = null;
-        this.state = null;
+    private JobCollectionPropertiesResponse(JobCollectionPropertiesResponse $) {
+        this.quota = $.quota;
+        this.sku = $.sku;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobCollectionPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable JobCollectionQuotaResponse quota;
-        private @Nullable SkuResponse sku;
-        private @Nullable String state;
+        private JobCollectionPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobCollectionPropertiesResponse();
         }
 
         public Builder(JobCollectionPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quota = defaults.quota;
-    	      this.sku = defaults.sku;
-    	      this.state = defaults.state;
+            $ = new JobCollectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder quota(@Nullable JobCollectionQuotaResponse quota) {
-            this.quota = quota;
+            $.quota = quota;
             return this;
         }
+
         public Builder sku(@Nullable SkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
+
         public Builder state(@Nullable String state) {
-            this.state = state;
+            $.state = state;
             return this;
-        }        public JobCollectionPropertiesResponse build() {
-            return new JobCollectionPropertiesResponse(quota, sku, state);
+        }
+
+        public JobCollectionPropertiesResponse build() {
+            return $;
         }
     }
+
 }

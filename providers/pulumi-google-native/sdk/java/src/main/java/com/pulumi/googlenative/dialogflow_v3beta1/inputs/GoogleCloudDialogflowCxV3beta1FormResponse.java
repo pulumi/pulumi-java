@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse extends com.pulumi
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
+    private List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
 
     public List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters() {
         return this.parameters;
     }
 
-    public GoogleCloudDialogflowCxV3beta1FormResponse(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1FormResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1FormResponse() {
-        this.parameters = List.of();
+    private GoogleCloudDialogflowCxV3beta1FormResponse(GoogleCloudDialogflowCxV3beta1FormResponse $) {
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FormResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
+        private GoogleCloudDialogflowCxV3beta1FormResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FormResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FormResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudDialogflowCxV3beta1FormResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(GoogleCloudDialogflowCxV3beta1FormParameterResponse... parameters) {
             return parameters(List.of(parameters));
-        }        public GoogleCloudDialogflowCxV3beta1FormResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1FormResponse(parameters);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FormResponse build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

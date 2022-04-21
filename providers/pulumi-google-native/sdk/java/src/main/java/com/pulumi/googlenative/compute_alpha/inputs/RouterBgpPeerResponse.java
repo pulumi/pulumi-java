@@ -22,7 +22,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="advertiseMode", required=true)
-      private final String advertiseMode;
+    private String advertiseMode;
 
     public String advertiseMode() {
         return this.advertiseMode;
@@ -33,7 +33,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="advertisedGroups", required=true)
-      private final List<String> advertisedGroups;
+    private List<String> advertisedGroups;
 
     public List<String> advertisedGroups() {
         return this.advertisedGroups;
@@ -44,7 +44,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="advertisedIpRanges", required=true)
-      private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
+    private List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
     public List<RouterAdvertisedIpRangeResponse> advertisedIpRanges() {
         return this.advertisedIpRanges;
@@ -55,7 +55,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="advertisedRoutePriority", required=true)
-      private final Integer advertisedRoutePriority;
+    private Integer advertisedRoutePriority;
 
     public Integer advertisedRoutePriority() {
         return this.advertisedRoutePriority;
@@ -66,7 +66,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bfd", required=true)
-      private final RouterBgpPeerBfdResponse bfd;
+    private RouterBgpPeerBfdResponse bfd;
 
     public RouterBgpPeerBfdResponse bfd() {
         return this.bfd;
@@ -77,7 +77,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enable", required=true)
-      private final String enable;
+    private String enable;
 
     public String enable() {
         return this.enable;
@@ -88,7 +88,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enableIpv6", required=true)
-      private final Boolean enableIpv6;
+    private Boolean enableIpv6;
 
     public Boolean enableIpv6() {
         return this.enableIpv6;
@@ -99,7 +99,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="interfaceName", required=true)
-      private final String interfaceName;
+    private String interfaceName;
 
     public String interfaceName() {
         return this.interfaceName;
@@ -110,7 +110,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -121,7 +121,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ipv6NexthopAddress", required=true)
-      private final String ipv6NexthopAddress;
+    private String ipv6NexthopAddress;
 
     public String ipv6NexthopAddress() {
         return this.ipv6NexthopAddress;
@@ -132,7 +132,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="managementType", required=true)
-      private final String managementType;
+    private String managementType;
 
     public String managementType() {
         return this.managementType;
@@ -143,7 +143,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="md5AuthenticationKeyName", required=true)
-      private final String md5AuthenticationKeyName;
+    private String md5AuthenticationKeyName;
 
     public String md5AuthenticationKeyName() {
         return this.md5AuthenticationKeyName;
@@ -154,7 +154,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -165,7 +165,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peerAsn", required=true)
-      private final Integer peerAsn;
+    private Integer peerAsn;
 
     public Integer peerAsn() {
         return this.peerAsn;
@@ -176,7 +176,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peerIpAddress", required=true)
-      private final String peerIpAddress;
+    private String peerIpAddress;
 
     public String peerIpAddress() {
         return this.peerIpAddress;
@@ -187,7 +187,7 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="peerIpv6NexthopAddress", required=true)
-      private final String peerIpv6NexthopAddress;
+    private String peerIpv6NexthopAddress;
 
     public String peerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress;
@@ -198,196 +198,165 @@ public final class RouterBgpPeerResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routerApplianceInstance", required=true)
-      private final String routerApplianceInstance;
+    private String routerApplianceInstance;
 
     public String routerApplianceInstance() {
         return this.routerApplianceInstance;
     }
 
-    public RouterBgpPeerResponse(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        Integer advertisedRoutePriority,
-        RouterBgpPeerBfdResponse bfd,
-        String enable,
-        Boolean enableIpv6,
-        String interfaceName,
-        String ipAddress,
-        String ipv6NexthopAddress,
-        String managementType,
-        String md5AuthenticationKeyName,
-        String name,
-        Integer peerAsn,
-        String peerIpAddress,
-        String peerIpv6NexthopAddress,
-        String routerApplianceInstance) {
-        this.advertiseMode = Objects.requireNonNull(advertiseMode, "expected parameter 'advertiseMode' to be non-null");
-        this.advertisedGroups = Objects.requireNonNull(advertisedGroups, "expected parameter 'advertisedGroups' to be non-null");
-        this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges, "expected parameter 'advertisedIpRanges' to be non-null");
-        this.advertisedRoutePriority = Objects.requireNonNull(advertisedRoutePriority, "expected parameter 'advertisedRoutePriority' to be non-null");
-        this.bfd = Objects.requireNonNull(bfd, "expected parameter 'bfd' to be non-null");
-        this.enable = Objects.requireNonNull(enable, "expected parameter 'enable' to be non-null");
-        this.enableIpv6 = Objects.requireNonNull(enableIpv6, "expected parameter 'enableIpv6' to be non-null");
-        this.interfaceName = Objects.requireNonNull(interfaceName, "expected parameter 'interfaceName' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.ipv6NexthopAddress = Objects.requireNonNull(ipv6NexthopAddress, "expected parameter 'ipv6NexthopAddress' to be non-null");
-        this.managementType = Objects.requireNonNull(managementType, "expected parameter 'managementType' to be non-null");
-        this.md5AuthenticationKeyName = Objects.requireNonNull(md5AuthenticationKeyName, "expected parameter 'md5AuthenticationKeyName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.peerAsn = Objects.requireNonNull(peerAsn, "expected parameter 'peerAsn' to be non-null");
-        this.peerIpAddress = Objects.requireNonNull(peerIpAddress, "expected parameter 'peerIpAddress' to be non-null");
-        this.peerIpv6NexthopAddress = Objects.requireNonNull(peerIpv6NexthopAddress, "expected parameter 'peerIpv6NexthopAddress' to be non-null");
-        this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance, "expected parameter 'routerApplianceInstance' to be non-null");
-    }
+    private RouterBgpPeerResponse() {}
 
-    private RouterBgpPeerResponse() {
-        this.advertiseMode = null;
-        this.advertisedGroups = List.of();
-        this.advertisedIpRanges = List.of();
-        this.advertisedRoutePriority = null;
-        this.bfd = null;
-        this.enable = null;
-        this.enableIpv6 = null;
-        this.interfaceName = null;
-        this.ipAddress = null;
-        this.ipv6NexthopAddress = null;
-        this.managementType = null;
-        this.md5AuthenticationKeyName = null;
-        this.name = null;
-        this.peerAsn = null;
-        this.peerIpAddress = null;
-        this.peerIpv6NexthopAddress = null;
-        this.routerApplianceInstance = null;
+    private RouterBgpPeerResponse(RouterBgpPeerResponse $) {
+        this.advertiseMode = $.advertiseMode;
+        this.advertisedGroups = $.advertisedGroups;
+        this.advertisedIpRanges = $.advertisedIpRanges;
+        this.advertisedRoutePriority = $.advertisedRoutePriority;
+        this.bfd = $.bfd;
+        this.enable = $.enable;
+        this.enableIpv6 = $.enableIpv6;
+        this.interfaceName = $.interfaceName;
+        this.ipAddress = $.ipAddress;
+        this.ipv6NexthopAddress = $.ipv6NexthopAddress;
+        this.managementType = $.managementType;
+        this.md5AuthenticationKeyName = $.md5AuthenticationKeyName;
+        this.name = $.name;
+        this.peerAsn = $.peerAsn;
+        this.peerIpAddress = $.peerIpAddress;
+        this.peerIpv6NexthopAddress = $.peerIpv6NexthopAddress;
+        this.routerApplianceInstance = $.routerApplianceInstance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterBgpPeerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String advertiseMode;
-        private List<String> advertisedGroups;
-        private List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
-        private Integer advertisedRoutePriority;
-        private RouterBgpPeerBfdResponse bfd;
-        private String enable;
-        private Boolean enableIpv6;
-        private String interfaceName;
-        private String ipAddress;
-        private String ipv6NexthopAddress;
-        private String managementType;
-        private String md5AuthenticationKeyName;
-        private String name;
-        private Integer peerAsn;
-        private String peerIpAddress;
-        private String peerIpv6NexthopAddress;
-        private String routerApplianceInstance;
+        private RouterBgpPeerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterBgpPeerResponse();
         }
 
         public Builder(RouterBgpPeerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advertiseMode = defaults.advertiseMode;
-    	      this.advertisedGroups = defaults.advertisedGroups;
-    	      this.advertisedIpRanges = defaults.advertisedIpRanges;
-    	      this.advertisedRoutePriority = defaults.advertisedRoutePriority;
-    	      this.bfd = defaults.bfd;
-    	      this.enable = defaults.enable;
-    	      this.enableIpv6 = defaults.enableIpv6;
-    	      this.interfaceName = defaults.interfaceName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.ipv6NexthopAddress = defaults.ipv6NexthopAddress;
-    	      this.managementType = defaults.managementType;
-    	      this.md5AuthenticationKeyName = defaults.md5AuthenticationKeyName;
-    	      this.name = defaults.name;
-    	      this.peerAsn = defaults.peerAsn;
-    	      this.peerIpAddress = defaults.peerIpAddress;
-    	      this.peerIpv6NexthopAddress = defaults.peerIpv6NexthopAddress;
-    	      this.routerApplianceInstance = defaults.routerApplianceInstance;
+            $ = new RouterBgpPeerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder advertiseMode(String advertiseMode) {
-            this.advertiseMode = Objects.requireNonNull(advertiseMode);
+            $.advertiseMode = advertiseMode;
             return this;
         }
+
         public Builder advertisedGroups(List<String> advertisedGroups) {
-            this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
+            $.advertisedGroups = advertisedGroups;
             return this;
         }
+
         public Builder advertisedGroups(String... advertisedGroups) {
             return advertisedGroups(List.of(advertisedGroups));
         }
+
         public Builder advertisedIpRanges(List<RouterAdvertisedIpRangeResponse> advertisedIpRanges) {
-            this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
+            $.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
+
         public Builder advertisedIpRanges(RouterAdvertisedIpRangeResponse... advertisedIpRanges) {
             return advertisedIpRanges(List.of(advertisedIpRanges));
         }
+
         public Builder advertisedRoutePriority(Integer advertisedRoutePriority) {
-            this.advertisedRoutePriority = Objects.requireNonNull(advertisedRoutePriority);
+            $.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
+
         public Builder bfd(RouterBgpPeerBfdResponse bfd) {
-            this.bfd = Objects.requireNonNull(bfd);
+            $.bfd = bfd;
             return this;
         }
+
         public Builder enable(String enable) {
-            this.enable = Objects.requireNonNull(enable);
+            $.enable = enable;
             return this;
         }
+
         public Builder enableIpv6(Boolean enableIpv6) {
-            this.enableIpv6 = Objects.requireNonNull(enableIpv6);
+            $.enableIpv6 = enableIpv6;
             return this;
         }
+
         public Builder interfaceName(String interfaceName) {
-            this.interfaceName = Objects.requireNonNull(interfaceName);
+            $.interfaceName = interfaceName;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder ipv6NexthopAddress(String ipv6NexthopAddress) {
-            this.ipv6NexthopAddress = Objects.requireNonNull(ipv6NexthopAddress);
+            $.ipv6NexthopAddress = ipv6NexthopAddress;
             return this;
         }
+
         public Builder managementType(String managementType) {
-            this.managementType = Objects.requireNonNull(managementType);
+            $.managementType = managementType;
             return this;
         }
+
         public Builder md5AuthenticationKeyName(String md5AuthenticationKeyName) {
-            this.md5AuthenticationKeyName = Objects.requireNonNull(md5AuthenticationKeyName);
+            $.md5AuthenticationKeyName = md5AuthenticationKeyName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder peerAsn(Integer peerAsn) {
-            this.peerAsn = Objects.requireNonNull(peerAsn);
+            $.peerAsn = peerAsn;
             return this;
         }
+
         public Builder peerIpAddress(String peerIpAddress) {
-            this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
+            $.peerIpAddress = peerIpAddress;
             return this;
         }
+
         public Builder peerIpv6NexthopAddress(String peerIpv6NexthopAddress) {
-            this.peerIpv6NexthopAddress = Objects.requireNonNull(peerIpv6NexthopAddress);
+            $.peerIpv6NexthopAddress = peerIpv6NexthopAddress;
             return this;
         }
+
         public Builder routerApplianceInstance(String routerApplianceInstance) {
-            this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
+            $.routerApplianceInstance = routerApplianceInstance;
             return this;
-        }        public RouterBgpPeerResponse build() {
-            return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, md5AuthenticationKeyName, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
+        }
+
+        public RouterBgpPeerResponse build() {
+            $.advertiseMode = Objects.requireNonNull($.advertiseMode, "expected parameter 'advertiseMode' to be non-null");
+            $.advertisedGroups = Objects.requireNonNull($.advertisedGroups, "expected parameter 'advertisedGroups' to be non-null");
+            $.advertisedIpRanges = Objects.requireNonNull($.advertisedIpRanges, "expected parameter 'advertisedIpRanges' to be non-null");
+            $.advertisedRoutePriority = Objects.requireNonNull($.advertisedRoutePriority, "expected parameter 'advertisedRoutePriority' to be non-null");
+            $.bfd = Objects.requireNonNull($.bfd, "expected parameter 'bfd' to be non-null");
+            $.enable = Objects.requireNonNull($.enable, "expected parameter 'enable' to be non-null");
+            $.enableIpv6 = Objects.requireNonNull($.enableIpv6, "expected parameter 'enableIpv6' to be non-null");
+            $.interfaceName = Objects.requireNonNull($.interfaceName, "expected parameter 'interfaceName' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.ipv6NexthopAddress = Objects.requireNonNull($.ipv6NexthopAddress, "expected parameter 'ipv6NexthopAddress' to be non-null");
+            $.managementType = Objects.requireNonNull($.managementType, "expected parameter 'managementType' to be non-null");
+            $.md5AuthenticationKeyName = Objects.requireNonNull($.md5AuthenticationKeyName, "expected parameter 'md5AuthenticationKeyName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.peerAsn = Objects.requireNonNull($.peerAsn, "expected parameter 'peerAsn' to be non-null");
+            $.peerIpAddress = Objects.requireNonNull($.peerIpAddress, "expected parameter 'peerIpAddress' to be non-null");
+            $.peerIpv6NexthopAddress = Objects.requireNonNull($.peerIpv6NexthopAddress, "expected parameter 'peerIpv6NexthopAddress' to be non-null");
+            $.routerApplianceInstance = Objects.requireNonNull($.routerApplianceInstance, "expected parameter 'routerApplianceInstance' to be non-null");
+            return $;
         }
     }
+
 }

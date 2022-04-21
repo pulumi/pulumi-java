@@ -19,10 +19,10 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -30,7 +30,7 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -41,64 +41,58 @@ public final class GetServiceEndpointPolicyArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="serviceEndpointPolicyName", required=true)
-      private final String serviceEndpointPolicyName;
+    private String serviceEndpointPolicyName;
 
     public String serviceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
     }
 
-    public GetServiceEndpointPolicyArgs(
-        @Nullable String expand,
-        String resourceGroupName,
-        String serviceEndpointPolicyName) {
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName, "expected parameter 'serviceEndpointPolicyName' to be non-null");
-    }
+    private GetServiceEndpointPolicyArgs() {}
 
-    private GetServiceEndpointPolicyArgs() {
-        this.expand = null;
-        this.resourceGroupName = null;
-        this.serviceEndpointPolicyName = null;
+    private GetServiceEndpointPolicyArgs(GetServiceEndpointPolicyArgs $) {
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serviceEndpointPolicyName = $.serviceEndpointPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceEndpointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String expand;
-        private String resourceGroupName;
-        private String serviceEndpointPolicyName;
+        private GetServiceEndpointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceEndpointPolicyArgs();
         }
 
         public Builder(GetServiceEndpointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serviceEndpointPolicyName = defaults.serviceEndpointPolicyName;
+            $ = new GetServiceEndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serviceEndpointPolicyName(String serviceEndpointPolicyName) {
-            this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName);
+            $.serviceEndpointPolicyName = serviceEndpointPolicyName;
             return this;
-        }        public GetServiceEndpointPolicyArgs build() {
-            return new GetServiceEndpointPolicyArgs(expand, resourceGroupName, serviceEndpointPolicyName);
+        }
+
+        public GetServiceEndpointPolicyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serviceEndpointPolicyName = Objects.requireNonNull($.serviceEndpointPolicyName, "expected parameter 'serviceEndpointPolicyName' to be non-null");
+            return $;
         }
     }
+
 }

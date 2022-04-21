@@ -29,10 +29,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdTime")
-      private final @Nullable String createdTime;
+    private @Nullable String createdTime;
 
     public Optional<String> createdTime() {
-        return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
+        return Optional.ofNullable(this.createdTime);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datasets")
-      private final @Nullable List<DatasetReferenceResponse> datasets;
+    private @Nullable List<DatasetReferenceResponse> datasets;
 
-    public List<DatasetReferenceResponse> datasets() {
-        return this.datasets == null ? List.of() : this.datasets;
+    public Optional<List<DatasetReferenceResponse>> datasets() {
+        return Optional.ofNullable(this.datasets);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="derivedModelIds")
-      private final @Nullable List<String> derivedModelIds;
+    private @Nullable List<String> derivedModelIds;
 
-    public List<String> derivedModelIds() {
-        return this.derivedModelIds == null ? List.of() : this.derivedModelIds;
+    public Optional<List<String>> derivedModelIds() {
+        return Optional.ofNullable(this.derivedModelIds);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="experimentName")
-      private final @Nullable String experimentName;
+    private @Nullable String experimentName;
 
     public Optional<String> experimentName() {
-        return this.experimentName == null ? Optional.empty() : Optional.ofNullable(this.experimentName);
+        return Optional.ofNullable(this.experimentName);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="framework")
-      private final @Nullable String framework;
+    private @Nullable String framework;
 
     public Optional<String> framework() {
-        return this.framework == null ? Optional.empty() : Optional.ofNullable(this.framework);
+        return Optional.ofNullable(this.framework);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="frameworkVersion")
-      private final @Nullable String frameworkVersion;
+    private @Nullable String frameworkVersion;
 
     public Optional<String> frameworkVersion() {
-        return this.frameworkVersion == null ? Optional.empty() : Optional.ofNullable(this.frameworkVersion);
+        return Optional.ofNullable(this.frameworkVersion);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kvTags")
-      private final @Nullable Map<String,String> kvTags;
+    private @Nullable Map<String,String> kvTags;
 
-    public Map<String,String> kvTags() {
-        return this.kvTags == null ? Map.of() : this.kvTags;
+    public Optional<Map<String,String>> kvTags() {
+        return Optional.ofNullable(this.kvTags);
     }
 
     /**
@@ -128,7 +128,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mimeType", required=true)
-      private final String mimeType;
+    private String mimeType;
 
     public String mimeType() {
         return this.mimeType;
@@ -139,10 +139,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="modifiedTime")
-      private final @Nullable String modifiedTime;
+    private @Nullable String modifiedTime;
 
     public Optional<String> modifiedTime() {
-        return this.modifiedTime == null ? Optional.empty() : Optional.ofNullable(this.modifiedTime);
+        return Optional.ofNullable(this.modifiedTime);
     }
 
     /**
@@ -150,7 +150,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -161,10 +161,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentModelId")
-      private final @Nullable String parentModelId;
+    private @Nullable String parentModelId;
 
     public Optional<String> parentModelId() {
-        return this.parentModelId == null ? Optional.empty() : Optional.ofNullable(this.parentModelId);
+        return Optional.ofNullable(this.parentModelId);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Map<String,String> properties;
+    private @Nullable Map<String,String> properties;
 
-    public Map<String,String> properties() {
-        return this.properties == null ? Map.of() : this.properties;
+    public Optional<Map<String,String>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceRequirements")
-      private final @Nullable ContainerResourceRequirementsResponse resourceRequirements;
+    private @Nullable ContainerResourceRequirementsResponse resourceRequirements;
 
     public Optional<ContainerResourceRequirementsResponse> resourceRequirements() {
-        return this.resourceRequirements == null ? Optional.empty() : Optional.ofNullable(this.resourceRequirements);
+        return Optional.ofNullable(this.resourceRequirements);
     }
 
     /**
@@ -194,10 +194,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="runId")
-      private final @Nullable String runId;
+    private @Nullable String runId;
 
     public Optional<String> runId() {
-        return this.runId == null ? Optional.empty() : Optional.ofNullable(this.runId);
+        return Optional.ofNullable(this.runId);
     }
 
     /**
@@ -205,10 +205,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sampleInputData")
-      private final @Nullable String sampleInputData;
+    private @Nullable String sampleInputData;
 
     public Optional<String> sampleInputData() {
-        return this.sampleInputData == null ? Optional.empty() : Optional.ofNullable(this.sampleInputData);
+        return Optional.ofNullable(this.sampleInputData);
     }
 
     /**
@@ -216,10 +216,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sampleOutputData")
-      private final @Nullable String sampleOutputData;
+    private @Nullable String sampleOutputData;
 
     public Optional<String> sampleOutputData() {
-        return this.sampleOutputData == null ? Optional.empty() : Optional.ofNullable(this.sampleOutputData);
+        return Optional.ofNullable(this.sampleOutputData);
     }
 
     /**
@@ -227,10 +227,10 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unpack")
-      private final @Nullable Boolean unpack;
+    private @Nullable Boolean unpack;
 
     public Optional<Boolean> unpack() {
-        return this.unpack == null ? Optional.empty() : Optional.ofNullable(this.unpack);
+        return Optional.ofNullable(this.unpack);
     }
 
     /**
@@ -238,7 +238,7 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -249,232 +249,175 @@ public final class ModelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Double version;
+    private @Nullable Double version;
 
     public Optional<Double> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public ModelResponse(
-        @Nullable String createdTime,
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<String> derivedModelIds,
-        @Nullable String description,
-        @Nullable String experimentName,
-        @Nullable String framework,
-        @Nullable String frameworkVersion,
-        @Nullable String id,
-        @Nullable Map<String,String> kvTags,
-        String mimeType,
-        @Nullable String modifiedTime,
-        String name,
-        @Nullable String parentModelId,
-        @Nullable Map<String,String> properties,
-        @Nullable ContainerResourceRequirementsResponse resourceRequirements,
-        @Nullable String runId,
-        @Nullable String sampleInputData,
-        @Nullable String sampleOutputData,
-        @Nullable Boolean unpack,
-        String url,
-        @Nullable Double version) {
-        this.createdTime = createdTime;
-        this.datasets = datasets;
-        this.derivedModelIds = derivedModelIds;
-        this.description = description;
-        this.experimentName = experimentName;
-        this.framework = framework;
-        this.frameworkVersion = frameworkVersion;
-        this.id = id;
-        this.kvTags = kvTags;
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-        this.modifiedTime = modifiedTime;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parentModelId = parentModelId;
-        this.properties = properties;
-        this.resourceRequirements = resourceRequirements;
-        this.runId = runId;
-        this.sampleInputData = sampleInputData;
-        this.sampleOutputData = sampleOutputData;
-        this.unpack = unpack;
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.version = version;
-    }
+    private ModelResponse() {}
 
-    private ModelResponse() {
-        this.createdTime = null;
-        this.datasets = List.of();
-        this.derivedModelIds = List.of();
-        this.description = null;
-        this.experimentName = null;
-        this.framework = null;
-        this.frameworkVersion = null;
-        this.id = null;
-        this.kvTags = Map.of();
-        this.mimeType = null;
-        this.modifiedTime = null;
-        this.name = null;
-        this.parentModelId = null;
-        this.properties = Map.of();
-        this.resourceRequirements = null;
-        this.runId = null;
-        this.sampleInputData = null;
-        this.sampleOutputData = null;
-        this.unpack = null;
-        this.url = null;
-        this.version = null;
+    private ModelResponse(ModelResponse $) {
+        this.createdTime = $.createdTime;
+        this.datasets = $.datasets;
+        this.derivedModelIds = $.derivedModelIds;
+        this.description = $.description;
+        this.experimentName = $.experimentName;
+        this.framework = $.framework;
+        this.frameworkVersion = $.frameworkVersion;
+        this.id = $.id;
+        this.kvTags = $.kvTags;
+        this.mimeType = $.mimeType;
+        this.modifiedTime = $.modifiedTime;
+        this.name = $.name;
+        this.parentModelId = $.parentModelId;
+        this.properties = $.properties;
+        this.resourceRequirements = $.resourceRequirements;
+        this.runId = $.runId;
+        this.sampleInputData = $.sampleInputData;
+        this.sampleOutputData = $.sampleOutputData;
+        this.unpack = $.unpack;
+        this.url = $.url;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String createdTime;
-        private @Nullable List<DatasetReferenceResponse> datasets;
-        private @Nullable List<String> derivedModelIds;
-        private @Nullable String description;
-        private @Nullable String experimentName;
-        private @Nullable String framework;
-        private @Nullable String frameworkVersion;
-        private @Nullable String id;
-        private @Nullable Map<String,String> kvTags;
-        private String mimeType;
-        private @Nullable String modifiedTime;
-        private String name;
-        private @Nullable String parentModelId;
-        private @Nullable Map<String,String> properties;
-        private @Nullable ContainerResourceRequirementsResponse resourceRequirements;
-        private @Nullable String runId;
-        private @Nullable String sampleInputData;
-        private @Nullable String sampleOutputData;
-        private @Nullable Boolean unpack;
-        private String url;
-        private @Nullable Double version;
+        private ModelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelResponse();
         }
 
         public Builder(ModelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdTime = defaults.createdTime;
-    	      this.datasets = defaults.datasets;
-    	      this.derivedModelIds = defaults.derivedModelIds;
-    	      this.description = defaults.description;
-    	      this.experimentName = defaults.experimentName;
-    	      this.framework = defaults.framework;
-    	      this.frameworkVersion = defaults.frameworkVersion;
-    	      this.id = defaults.id;
-    	      this.kvTags = defaults.kvTags;
-    	      this.mimeType = defaults.mimeType;
-    	      this.modifiedTime = defaults.modifiedTime;
-    	      this.name = defaults.name;
-    	      this.parentModelId = defaults.parentModelId;
-    	      this.properties = defaults.properties;
-    	      this.resourceRequirements = defaults.resourceRequirements;
-    	      this.runId = defaults.runId;
-    	      this.sampleInputData = defaults.sampleInputData;
-    	      this.sampleOutputData = defaults.sampleOutputData;
-    	      this.unpack = defaults.unpack;
-    	      this.url = defaults.url;
-    	      this.version = defaults.version;
+            $ = new ModelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = createdTime;
+            $.createdTime = createdTime;
             return this;
         }
+
         public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
-            this.datasets = datasets;
+            $.datasets = datasets;
             return this;
         }
+
         public Builder datasets(DatasetReferenceResponse... datasets) {
             return datasets(List.of(datasets));
         }
+
         public Builder derivedModelIds(@Nullable List<String> derivedModelIds) {
-            this.derivedModelIds = derivedModelIds;
+            $.derivedModelIds = derivedModelIds;
             return this;
         }
+
         public Builder derivedModelIds(String... derivedModelIds) {
             return derivedModelIds(List.of(derivedModelIds));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = experimentName;
+            $.experimentName = experimentName;
             return this;
         }
+
         public Builder framework(@Nullable String framework) {
-            this.framework = framework;
+            $.framework = framework;
             return this;
         }
+
         public Builder frameworkVersion(@Nullable String frameworkVersion) {
-            this.frameworkVersion = frameworkVersion;
+            $.frameworkVersion = frameworkVersion;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder kvTags(@Nullable Map<String,String> kvTags) {
-            this.kvTags = kvTags;
+            $.kvTags = kvTags;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder modifiedTime(@Nullable String modifiedTime) {
-            this.modifiedTime = modifiedTime;
+            $.modifiedTime = modifiedTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parentModelId(@Nullable String parentModelId) {
-            this.parentModelId = parentModelId;
+            $.parentModelId = parentModelId;
             return this;
         }
+
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
+
         public Builder resourceRequirements(@Nullable ContainerResourceRequirementsResponse resourceRequirements) {
-            this.resourceRequirements = resourceRequirements;
+            $.resourceRequirements = resourceRequirements;
             return this;
         }
+
         public Builder runId(@Nullable String runId) {
-            this.runId = runId;
+            $.runId = runId;
             return this;
         }
+
         public Builder sampleInputData(@Nullable String sampleInputData) {
-            this.sampleInputData = sampleInputData;
+            $.sampleInputData = sampleInputData;
             return this;
         }
+
         public Builder sampleOutputData(@Nullable String sampleOutputData) {
-            this.sampleOutputData = sampleOutputData;
+            $.sampleOutputData = sampleOutputData;
             return this;
         }
+
         public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = unpack;
+            $.unpack = unpack;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder version(@Nullable Double version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public ModelResponse build() {
-            return new ModelResponse(createdTime, datasets, derivedModelIds, description, experimentName, framework, frameworkVersion, id, kvTags, mimeType, modifiedTime, name, parentModelId, properties, resourceRequirements, runId, sampleInputData, sampleOutputData, unpack, url, version);
+        }
+
+        public ModelResponse build() {
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

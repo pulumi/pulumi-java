@@ -17,7 +17,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="carrierGatewayId", required=true)
-      private final String carrierGatewayId;
+    private String carrierGatewayId;
 
     public String carrierGatewayId() {
         return this.carrierGatewayId;
@@ -28,7 +28,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cidrBlock", required=true)
-      private final String cidrBlock;
+    private String cidrBlock;
 
     public String cidrBlock() {
         return this.cidrBlock;
@@ -39,7 +39,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destinationPrefixListId", required=true)
-      private final String destinationPrefixListId;
+    private String destinationPrefixListId;
 
     public String destinationPrefixListId() {
         return this.destinationPrefixListId;
@@ -50,7 +50,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="egressOnlyGatewayId", required=true)
-      private final String egressOnlyGatewayId;
+    private String egressOnlyGatewayId;
 
     public String egressOnlyGatewayId() {
         return this.egressOnlyGatewayId;
@@ -61,7 +61,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gatewayId", required=true)
-      private final String gatewayId;
+    private String gatewayId;
 
     public String gatewayId() {
         return this.gatewayId;
@@ -72,7 +72,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -83,7 +83,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6CidrBlock", required=true)
-      private final String ipv6CidrBlock;
+    private String ipv6CidrBlock;
 
     public String ipv6CidrBlock() {
         return this.ipv6CidrBlock;
@@ -94,7 +94,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localGatewayId", required=true)
-      private final String localGatewayId;
+    private String localGatewayId;
 
     public String localGatewayId() {
         return this.localGatewayId;
@@ -105,7 +105,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="natGatewayId", required=true)
-      private final String natGatewayId;
+    private String natGatewayId;
 
     public String natGatewayId() {
         return this.natGatewayId;
@@ -116,7 +116,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkInterfaceId", required=true)
-      private final String networkInterfaceId;
+    private String networkInterfaceId;
 
     public String networkInterfaceId() {
         return this.networkInterfaceId;
@@ -127,7 +127,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="transitGatewayId", required=true)
-      private final String transitGatewayId;
+    private String transitGatewayId;
 
     public String transitGatewayId() {
         return this.transitGatewayId;
@@ -138,7 +138,7 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcEndpointId", required=true)
-      private final String vpcEndpointId;
+    private String vpcEndpointId;
 
     public String vpcEndpointId() {
         return this.vpcEndpointId;
@@ -149,154 +149,129 @@ public final class GetRouteTableRoute extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpcPeeringConnectionId", required=true)
-      private final String vpcPeeringConnectionId;
+    private String vpcPeeringConnectionId;
 
     public String vpcPeeringConnectionId() {
         return this.vpcPeeringConnectionId;
     }
 
-    public GetRouteTableRoute(
-        String carrierGatewayId,
-        String cidrBlock,
-        String destinationPrefixListId,
-        String egressOnlyGatewayId,
-        String gatewayId,
-        String instanceId,
-        String ipv6CidrBlock,
-        String localGatewayId,
-        String natGatewayId,
-        String networkInterfaceId,
-        String transitGatewayId,
-        String vpcEndpointId,
-        String vpcPeeringConnectionId) {
-        this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId, "expected parameter 'carrierGatewayId' to be non-null");
-        this.cidrBlock = Objects.requireNonNull(cidrBlock, "expected parameter 'cidrBlock' to be non-null");
-        this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId, "expected parameter 'destinationPrefixListId' to be non-null");
-        this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId, "expected parameter 'egressOnlyGatewayId' to be non-null");
-        this.gatewayId = Objects.requireNonNull(gatewayId, "expected parameter 'gatewayId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock, "expected parameter 'ipv6CidrBlock' to be non-null");
-        this.localGatewayId = Objects.requireNonNull(localGatewayId, "expected parameter 'localGatewayId' to be non-null");
-        this.natGatewayId = Objects.requireNonNull(natGatewayId, "expected parameter 'natGatewayId' to be non-null");
-        this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
-        this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
-        this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId, "expected parameter 'vpcPeeringConnectionId' to be non-null");
-    }
+    private GetRouteTableRoute() {}
 
-    private GetRouteTableRoute() {
-        this.carrierGatewayId = null;
-        this.cidrBlock = null;
-        this.destinationPrefixListId = null;
-        this.egressOnlyGatewayId = null;
-        this.gatewayId = null;
-        this.instanceId = null;
-        this.ipv6CidrBlock = null;
-        this.localGatewayId = null;
-        this.natGatewayId = null;
-        this.networkInterfaceId = null;
-        this.transitGatewayId = null;
-        this.vpcEndpointId = null;
-        this.vpcPeeringConnectionId = null;
+    private GetRouteTableRoute(GetRouteTableRoute $) {
+        this.carrierGatewayId = $.carrierGatewayId;
+        this.cidrBlock = $.cidrBlock;
+        this.destinationPrefixListId = $.destinationPrefixListId;
+        this.egressOnlyGatewayId = $.egressOnlyGatewayId;
+        this.gatewayId = $.gatewayId;
+        this.instanceId = $.instanceId;
+        this.ipv6CidrBlock = $.ipv6CidrBlock;
+        this.localGatewayId = $.localGatewayId;
+        this.natGatewayId = $.natGatewayId;
+        this.networkInterfaceId = $.networkInterfaceId;
+        this.transitGatewayId = $.transitGatewayId;
+        this.vpcEndpointId = $.vpcEndpointId;
+        this.vpcPeeringConnectionId = $.vpcPeeringConnectionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteTableRoute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String carrierGatewayId;
-        private String cidrBlock;
-        private String destinationPrefixListId;
-        private String egressOnlyGatewayId;
-        private String gatewayId;
-        private String instanceId;
-        private String ipv6CidrBlock;
-        private String localGatewayId;
-        private String natGatewayId;
-        private String networkInterfaceId;
-        private String transitGatewayId;
-        private String vpcEndpointId;
-        private String vpcPeeringConnectionId;
+        private GetRouteTableRoute $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteTableRoute();
         }
 
         public Builder(GetRouteTableRoute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierGatewayId = defaults.carrierGatewayId;
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.destinationPrefixListId = defaults.destinationPrefixListId;
-    	      this.egressOnlyGatewayId = defaults.egressOnlyGatewayId;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.ipv6CidrBlock = defaults.ipv6CidrBlock;
-    	      this.localGatewayId = defaults.localGatewayId;
-    	      this.natGatewayId = defaults.natGatewayId;
-    	      this.networkInterfaceId = defaults.networkInterfaceId;
-    	      this.transitGatewayId = defaults.transitGatewayId;
-    	      this.vpcEndpointId = defaults.vpcEndpointId;
-    	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
+            $ = new GetRouteTableRoute(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierGatewayId(String carrierGatewayId) {
-            this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
+            $.carrierGatewayId = carrierGatewayId;
             return this;
         }
+
         public Builder cidrBlock(String cidrBlock) {
-            this.cidrBlock = Objects.requireNonNull(cidrBlock);
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder destinationPrefixListId(String destinationPrefixListId) {
-            this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId);
+            $.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
+
         public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
-            this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId);
+            $.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
+
         public Builder gatewayId(String gatewayId) {
-            this.gatewayId = Objects.requireNonNull(gatewayId);
+            $.gatewayId = gatewayId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder ipv6CidrBlock(String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
+            $.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
+
         public Builder localGatewayId(String localGatewayId) {
-            this.localGatewayId = Objects.requireNonNull(localGatewayId);
+            $.localGatewayId = localGatewayId;
             return this;
         }
+
         public Builder natGatewayId(String natGatewayId) {
-            this.natGatewayId = Objects.requireNonNull(natGatewayId);
+            $.natGatewayId = natGatewayId;
             return this;
         }
+
         public Builder networkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
+            $.networkInterfaceId = networkInterfaceId;
             return this;
         }
+
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder vpcEndpointId(String vpcEndpointId) {
-            this.vpcEndpointId = Objects.requireNonNull(vpcEndpointId);
+            $.vpcEndpointId = vpcEndpointId;
             return this;
         }
+
         public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
-            this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
+            $.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
-        }        public GetRouteTableRoute build() {
-            return new GetRouteTableRoute(carrierGatewayId, cidrBlock, destinationPrefixListId, egressOnlyGatewayId, gatewayId, instanceId, ipv6CidrBlock, localGatewayId, natGatewayId, networkInterfaceId, transitGatewayId, vpcEndpointId, vpcPeeringConnectionId);
+        }
+
+        public GetRouteTableRoute build() {
+            $.carrierGatewayId = Objects.requireNonNull($.carrierGatewayId, "expected parameter 'carrierGatewayId' to be non-null");
+            $.cidrBlock = Objects.requireNonNull($.cidrBlock, "expected parameter 'cidrBlock' to be non-null");
+            $.destinationPrefixListId = Objects.requireNonNull($.destinationPrefixListId, "expected parameter 'destinationPrefixListId' to be non-null");
+            $.egressOnlyGatewayId = Objects.requireNonNull($.egressOnlyGatewayId, "expected parameter 'egressOnlyGatewayId' to be non-null");
+            $.gatewayId = Objects.requireNonNull($.gatewayId, "expected parameter 'gatewayId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.ipv6CidrBlock = Objects.requireNonNull($.ipv6CidrBlock, "expected parameter 'ipv6CidrBlock' to be non-null");
+            $.localGatewayId = Objects.requireNonNull($.localGatewayId, "expected parameter 'localGatewayId' to be non-null");
+            $.natGatewayId = Objects.requireNonNull($.natGatewayId, "expected parameter 'natGatewayId' to be non-null");
+            $.networkInterfaceId = Objects.requireNonNull($.networkInterfaceId, "expected parameter 'networkInterfaceId' to be non-null");
+            $.transitGatewayId = Objects.requireNonNull($.transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
+            $.vpcEndpointId = Objects.requireNonNull($.vpcEndpointId, "expected parameter 'vpcEndpointId' to be non-null");
+            $.vpcPeeringConnectionId = Objects.requireNonNull($.vpcPeeringConnectionId, "expected parameter 'vpcPeeringConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

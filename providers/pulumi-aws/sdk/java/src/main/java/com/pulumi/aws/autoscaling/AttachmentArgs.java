@@ -5,9 +5,9 @@ package com.pulumi.aws.autoscaling;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="albTargetGroupArn")
-      private final @Nullable Output<String> albTargetGroupArn;
+    private @Nullable Output<String> albTargetGroupArn;
 
-    public Output<String> albTargetGroupArn() {
-        return this.albTargetGroupArn == null ? Codegen.empty() : this.albTargetGroupArn;
+    public Optional<Output<String>> albTargetGroupArn() {
+        return Optional.ofNullable(this.albTargetGroupArn);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingGroupName", required=true)
-      private final Output<String> autoscalingGroupName;
+    private Output<String> autoscalingGroupName;
 
     public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
@@ -42,76 +42,69 @@ public final class AttachmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elb")
-      private final @Nullable Output<String> elb;
+    private @Nullable Output<String> elb;
 
-    public Output<String> elb() {
-        return this.elb == null ? Codegen.empty() : this.elb;
+    public Optional<Output<String>> elb() {
+        return Optional.ofNullable(this.elb);
     }
 
-    public AttachmentArgs(
-        @Nullable Output<String> albTargetGroupArn,
-        Output<String> autoscalingGroupName,
-        @Nullable Output<String> elb) {
-        this.albTargetGroupArn = albTargetGroupArn;
-        this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName, "expected parameter 'autoscalingGroupName' to be non-null");
-        this.elb = elb;
-    }
+    private AttachmentArgs() {}
 
-    private AttachmentArgs() {
-        this.albTargetGroupArn = Codegen.empty();
-        this.autoscalingGroupName = Codegen.empty();
-        this.elb = Codegen.empty();
+    private AttachmentArgs(AttachmentArgs $) {
+        this.albTargetGroupArn = $.albTargetGroupArn;
+        this.autoscalingGroupName = $.autoscalingGroupName;
+        this.elb = $.elb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> albTargetGroupArn;
-        private Output<String> autoscalingGroupName;
-        private @Nullable Output<String> elb;
+        private AttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachmentArgs();
         }
 
         public Builder(AttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.albTargetGroupArn = defaults.albTargetGroupArn;
-    	      this.autoscalingGroupName = defaults.autoscalingGroupName;
-    	      this.elb = defaults.elb;
+            $ = new AttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder albTargetGroupArn(@Nullable Output<String> albTargetGroupArn) {
-            this.albTargetGroupArn = albTargetGroupArn;
+            $.albTargetGroupArn = albTargetGroupArn;
             return this;
         }
-        public Builder albTargetGroupArn(@Nullable String albTargetGroupArn) {
-            this.albTargetGroupArn = Codegen.ofNullable(albTargetGroupArn);
-            return this;
+
+        public Builder albTargetGroupArn(String albTargetGroupArn) {
+            return albTargetGroupArn(Output.of(albTargetGroupArn));
         }
+
         public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
-            this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
+            $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
+
         public Builder autoscalingGroupName(String autoscalingGroupName) {
-            this.autoscalingGroupName = Output.of(Objects.requireNonNull(autoscalingGroupName));
-            return this;
+            return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
+
         public Builder elb(@Nullable Output<String> elb) {
-            this.elb = elb;
+            $.elb = elb;
             return this;
         }
-        public Builder elb(@Nullable String elb) {
-            this.elb = Codegen.ofNullable(elb);
-            return this;
-        }        public AttachmentArgs build() {
-            return new AttachmentArgs(albTargetGroupArn, autoscalingGroupName, elb);
+
+        public Builder elb(String elb) {
+            return elb(Output.of(elb));
+        }
+
+        public AttachmentArgs build() {
+            $.autoscalingGroupName = Objects.requireNonNull($.autoscalingGroupName, "expected parameter 'autoscalingGroupName' to be non-null");
+            return $;
         }
     }
+
 }

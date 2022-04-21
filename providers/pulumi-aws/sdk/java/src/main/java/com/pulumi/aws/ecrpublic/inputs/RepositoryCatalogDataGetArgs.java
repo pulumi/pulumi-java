@@ -5,10 +5,10 @@ package com.pulumi.aws.ecrpublic.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="aboutText")
-      private final @Nullable Output<String> aboutText;
+    private @Nullable Output<String> aboutText;
 
-    public Output<String> aboutText() {
-        return this.aboutText == null ? Codegen.empty() : this.aboutText;
+    public Optional<Output<String>> aboutText() {
+        return Optional.ofNullable(this.aboutText);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="architectures")
-      private final @Nullable Output<List<String>> architectures;
+    private @Nullable Output<List<String>> architectures;
 
-    public Output<List<String>> architectures() {
-        return this.architectures == null ? Codegen.empty() : this.architectures;
+    public Optional<Output<List<String>>> architectures() {
+        return Optional.ofNullable(this.architectures);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="logoImageBlob")
-      private final @Nullable Output<String> logoImageBlob;
+    private @Nullable Output<String> logoImageBlob;
 
-    public Output<String> logoImageBlob() {
-        return this.logoImageBlob == null ? Codegen.empty() : this.logoImageBlob;
+    public Optional<Output<String>> logoImageBlob() {
+        return Optional.ofNullable(this.logoImageBlob);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="operatingSystems")
-      private final @Nullable Output<List<String>> operatingSystems;
+    private @Nullable Output<List<String>> operatingSystems;
 
-    public Output<List<String>> operatingSystems() {
-        return this.operatingSystems == null ? Codegen.empty() : this.operatingSystems;
+    public Optional<Output<List<String>>> operatingSystems() {
+        return Optional.ofNullable(this.operatingSystems);
     }
 
     /**
@@ -76,121 +76,106 @@ public final class RepositoryCatalogDataGetArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="usageText")
-      private final @Nullable Output<String> usageText;
+    private @Nullable Output<String> usageText;
 
-    public Output<String> usageText() {
-        return this.usageText == null ? Codegen.empty() : this.usageText;
+    public Optional<Output<String>> usageText() {
+        return Optional.ofNullable(this.usageText);
     }
 
-    public RepositoryCatalogDataGetArgs(
-        @Nullable Output<String> aboutText,
-        @Nullable Output<List<String>> architectures,
-        @Nullable Output<String> description,
-        @Nullable Output<String> logoImageBlob,
-        @Nullable Output<List<String>> operatingSystems,
-        @Nullable Output<String> usageText) {
-        this.aboutText = aboutText;
-        this.architectures = architectures;
-        this.description = description;
-        this.logoImageBlob = logoImageBlob;
-        this.operatingSystems = operatingSystems;
-        this.usageText = usageText;
-    }
+    private RepositoryCatalogDataGetArgs() {}
 
-    private RepositoryCatalogDataGetArgs() {
-        this.aboutText = Codegen.empty();
-        this.architectures = Codegen.empty();
-        this.description = Codegen.empty();
-        this.logoImageBlob = Codegen.empty();
-        this.operatingSystems = Codegen.empty();
-        this.usageText = Codegen.empty();
+    private RepositoryCatalogDataGetArgs(RepositoryCatalogDataGetArgs $) {
+        this.aboutText = $.aboutText;
+        this.architectures = $.architectures;
+        this.description = $.description;
+        this.logoImageBlob = $.logoImageBlob;
+        this.operatingSystems = $.operatingSystems;
+        this.usageText = $.usageText;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryCatalogDataGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aboutText;
-        private @Nullable Output<List<String>> architectures;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> logoImageBlob;
-        private @Nullable Output<List<String>> operatingSystems;
-        private @Nullable Output<String> usageText;
+        private RepositoryCatalogDataGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryCatalogDataGetArgs();
         }
 
         public Builder(RepositoryCatalogDataGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aboutText = defaults.aboutText;
-    	      this.architectures = defaults.architectures;
-    	      this.description = defaults.description;
-    	      this.logoImageBlob = defaults.logoImageBlob;
-    	      this.operatingSystems = defaults.operatingSystems;
-    	      this.usageText = defaults.usageText;
+            $ = new RepositoryCatalogDataGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aboutText(@Nullable Output<String> aboutText) {
-            this.aboutText = aboutText;
+            $.aboutText = aboutText;
             return this;
         }
-        public Builder aboutText(@Nullable String aboutText) {
-            this.aboutText = Codegen.ofNullable(aboutText);
-            return this;
+
+        public Builder aboutText(String aboutText) {
+            return aboutText(Output.of(aboutText));
         }
+
         public Builder architectures(@Nullable Output<List<String>> architectures) {
-            this.architectures = architectures;
+            $.architectures = architectures;
             return this;
         }
-        public Builder architectures(@Nullable List<String> architectures) {
-            this.architectures = Codegen.ofNullable(architectures);
-            return this;
+
+        public Builder architectures(List<String> architectures) {
+            return architectures(Output.of(architectures));
         }
+
         public Builder architectures(String... architectures) {
             return architectures(List.of(architectures));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder logoImageBlob(@Nullable Output<String> logoImageBlob) {
-            this.logoImageBlob = logoImageBlob;
+            $.logoImageBlob = logoImageBlob;
             return this;
         }
-        public Builder logoImageBlob(@Nullable String logoImageBlob) {
-            this.logoImageBlob = Codegen.ofNullable(logoImageBlob);
-            return this;
+
+        public Builder logoImageBlob(String logoImageBlob) {
+            return logoImageBlob(Output.of(logoImageBlob));
         }
+
         public Builder operatingSystems(@Nullable Output<List<String>> operatingSystems) {
-            this.operatingSystems = operatingSystems;
+            $.operatingSystems = operatingSystems;
             return this;
         }
-        public Builder operatingSystems(@Nullable List<String> operatingSystems) {
-            this.operatingSystems = Codegen.ofNullable(operatingSystems);
-            return this;
+
+        public Builder operatingSystems(List<String> operatingSystems) {
+            return operatingSystems(Output.of(operatingSystems));
         }
+
         public Builder operatingSystems(String... operatingSystems) {
             return operatingSystems(List.of(operatingSystems));
         }
+
         public Builder usageText(@Nullable Output<String> usageText) {
-            this.usageText = usageText;
+            $.usageText = usageText;
             return this;
         }
-        public Builder usageText(@Nullable String usageText) {
-            this.usageText = Codegen.ofNullable(usageText);
-            return this;
-        }        public RepositoryCatalogDataGetArgs build() {
-            return new RepositoryCatalogDataGetArgs(aboutText, architectures, description, logoImageBlob, operatingSystems, usageText);
+
+        public Builder usageText(String usageText) {
+            return usageText(Output.of(usageText));
+        }
+
+        public RepositoryCatalogDataGetArgs build() {
+            return $;
         }
     }
+
 }

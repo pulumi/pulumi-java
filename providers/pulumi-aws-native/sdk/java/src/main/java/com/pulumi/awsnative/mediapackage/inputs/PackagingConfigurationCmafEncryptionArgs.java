@@ -6,7 +6,6 @@ package com.pulumi.awsnative.mediapackage.inputs;
 import com.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class PackagingConfigurationCmafEncryptionArgs extends com.pulumi.r
     public static final PackagingConfigurationCmafEncryptionArgs Empty = new PackagingConfigurationCmafEncryptionArgs();
 
     @Import(name="spekeKeyProvider", required=true)
-      private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+    private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider() {
         return this.spekeKeyProvider;
     }
 
-    public PackagingConfigurationCmafEncryptionArgs(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
-        this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
-    }
+    private PackagingConfigurationCmafEncryptionArgs() {}
 
-    private PackagingConfigurationCmafEncryptionArgs() {
-        this.spekeKeyProvider = Codegen.empty();
+    private PackagingConfigurationCmafEncryptionArgs(PackagingConfigurationCmafEncryptionArgs $) {
+        this.spekeKeyProvider = $.spekeKeyProvider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackagingConfigurationCmafEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private PackagingConfigurationCmafEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackagingConfigurationCmafEncryptionArgs();
         }
 
         public Builder(PackagingConfigurationCmafEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spekeKeyProvider = defaults.spekeKeyProvider;
+            $ = new PackagingConfigurationCmafEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder spekeKeyProvider(Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider) {
-            this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
+            $.spekeKeyProvider = spekeKeyProvider;
             return this;
         }
+
         public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProviderArgs spekeKeyProvider) {
-            this.spekeKeyProvider = Output.of(Objects.requireNonNull(spekeKeyProvider));
-            return this;
-        }        public PackagingConfigurationCmafEncryptionArgs build() {
-            return new PackagingConfigurationCmafEncryptionArgs(spekeKeyProvider);
+            return spekeKeyProvider(Output.of(spekeKeyProvider));
+        }
+
+        public PackagingConfigurationCmafEncryptionArgs build() {
+            $.spekeKeyProvider = Objects.requireNonNull($.spekeKeyProvider, "expected parameter 'spekeKeyProvider' to be non-null");
+            return $;
         }
     }
+
 }

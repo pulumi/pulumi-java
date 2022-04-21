@@ -32,10 +32,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable List<ActivityDependencyResponse> dependsOn;
+    private @Nullable List<ActivityDependencyResponse> dependsOn;
 
-    public List<ActivityDependencyResponse> dependsOn() {
-        return this.dependsOn == null ? List.of() : this.dependsOn;
+    public Optional<List<ActivityDependencyResponse>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="globalParameters")
-      private final @Nullable Map<String,Object> globalParameters;
+    private @Nullable Map<String,Object> globalParameters;
 
-    public Map<String,Object> globalParameters() {
-        return this.globalParameters == null ? Map.of() : this.globalParameters;
+    public Optional<Map<String,Object>> globalParameters() {
+        return Optional.ofNullable(this.globalParameters);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+    private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
-        return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -87,10 +87,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="policy")
-      private final @Nullable ActivityPolicyResponse policy;
+    private @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> policy() {
-        return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -99,7 +99,7 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -110,10 +110,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable List<UserPropertyResponse> userProperties;
+    private @Nullable List<UserPropertyResponse> userProperties;
 
-    public List<UserPropertyResponse> userProperties() {
-        return this.userProperties == null ? List.of() : this.userProperties;
+    public Optional<List<UserPropertyResponse>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="webServiceInputs")
-      private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
+    private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
 
-    public Map<String,AzureMLWebServiceFileResponse> webServiceInputs() {
-        return this.webServiceInputs == null ? Map.of() : this.webServiceInputs;
+    public Optional<Map<String,AzureMLWebServiceFileResponse>> webServiceInputs() {
+        return Optional.ofNullable(this.webServiceInputs);
     }
 
     /**
@@ -132,133 +132,108 @@ public final class AzureMLBatchExecutionActivityResponse extends com.pulumi.reso
      * 
      */
     @Import(name="webServiceOutputs")
-      private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
+    private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
-    public Map<String,AzureMLWebServiceFileResponse> webServiceOutputs() {
-        return this.webServiceOutputs == null ? Map.of() : this.webServiceOutputs;
+    public Optional<Map<String,AzureMLWebServiceFileResponse>> webServiceOutputs() {
+        return Optional.ofNullable(this.webServiceOutputs);
     }
 
-    public AzureMLBatchExecutionActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Map<String,Object> globalParameters,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs,
-        @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.globalParameters = globalParameters;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userProperties = userProperties;
-        this.webServiceInputs = webServiceInputs;
-        this.webServiceOutputs = webServiceOutputs;
-    }
+    private AzureMLBatchExecutionActivityResponse() {}
 
-    private AzureMLBatchExecutionActivityResponse() {
-        this.dependsOn = List.of();
-        this.description = null;
-        this.globalParameters = Map.of();
-        this.linkedServiceName = null;
-        this.name = null;
-        this.policy = null;
-        this.type = null;
-        this.userProperties = List.of();
-        this.webServiceInputs = Map.of();
-        this.webServiceOutputs = Map.of();
+    private AzureMLBatchExecutionActivityResponse(AzureMLBatchExecutionActivityResponse $) {
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.globalParameters = $.globalParameters;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
+        this.webServiceInputs = $.webServiceInputs;
+        this.webServiceOutputs = $.webServiceOutputs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureMLBatchExecutionActivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ActivityDependencyResponse> dependsOn;
-        private @Nullable String description;
-        private @Nullable Map<String,Object> globalParameters;
-        private @Nullable LinkedServiceReferenceResponse linkedServiceName;
-        private String name;
-        private @Nullable ActivityPolicyResponse policy;
-        private String type;
-        private @Nullable List<UserPropertyResponse> userProperties;
-        private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
-        private @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
+        private AzureMLBatchExecutionActivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureMLBatchExecutionActivityResponse();
         }
 
         public Builder(AzureMLBatchExecutionActivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.globalParameters = defaults.globalParameters;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
-    	      this.webServiceInputs = defaults.webServiceInputs;
-    	      this.webServiceOutputs = defaults.webServiceOutputs;
+            $ = new AzureMLBatchExecutionActivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
+
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = globalParameters;
+            $.globalParameters = globalParameters;
             return this;
         }
+
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
+
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }
+
         public Builder webServiceInputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs) {
-            this.webServiceInputs = webServiceInputs;
+            $.webServiceInputs = webServiceInputs;
             return this;
         }
+
         public Builder webServiceOutputs(@Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs) {
-            this.webServiceOutputs = webServiceOutputs;
+            $.webServiceOutputs = webServiceOutputs;
             return this;
-        }        public AzureMLBatchExecutionActivityResponse build() {
-            return new AzureMLBatchExecutionActivityResponse(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
+        }
+
+        public AzureMLBatchExecutionActivityResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

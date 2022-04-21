@@ -26,10 +26,10 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="config")
-      private final @Nullable Map<String,String> config;
+    private @Nullable Map<String,String> config;
 
-    public Map<String,String> config() {
-        return this.config == null ? Map.of() : this.config;
+    public Optional<Map<String,String>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -48,64 +48,58 @@ public final class ManagedClusterAddonProfileResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="identity", required=true)
-      private final ManagedClusterAddonProfileResponseIdentity identity;
+    private ManagedClusterAddonProfileResponseIdentity identity;
 
     public ManagedClusterAddonProfileResponseIdentity identity() {
         return this.identity;
     }
 
-    public ManagedClusterAddonProfileResponse(
-        @Nullable Map<String,String> config,
-        Boolean enabled,
-        ManagedClusterAddonProfileResponseIdentity identity) {
-        this.config = config;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.identity = Objects.requireNonNull(identity, "expected parameter 'identity' to be non-null");
-    }
+    private ManagedClusterAddonProfileResponse() {}
 
-    private ManagedClusterAddonProfileResponse() {
-        this.config = Map.of();
-        this.enabled = null;
-        this.identity = null;
+    private ManagedClusterAddonProfileResponse(ManagedClusterAddonProfileResponse $) {
+        this.config = $.config;
+        this.enabled = $.enabled;
+        this.identity = $.identity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterAddonProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> config;
-        private Boolean enabled;
-        private ManagedClusterAddonProfileResponseIdentity identity;
+        private ManagedClusterAddonProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterAddonProfileResponse();
         }
 
         public Builder(ManagedClusterAddonProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.enabled = defaults.enabled;
-    	      this.identity = defaults.identity;
+            $ = new ManagedClusterAddonProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder config(@Nullable Map<String,String> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder identity(ManagedClusterAddonProfileResponseIdentity identity) {
-            this.identity = Objects.requireNonNull(identity);
+            $.identity = identity;
             return this;
-        }        public ManagedClusterAddonProfileResponse build() {
-            return new ManagedClusterAddonProfileResponse(config, enabled, identity);
+        }
+
+        public ManagedClusterAddonProfileResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.identity = Objects.requireNonNull($.identity, "expected parameter 'identity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
      * 
      */
     @Import(name="paramIndicator", required=true)
-      private final String paramIndicator;
+    private String paramIndicator;
 
     public String paramIndicator() {
         return this.paramIndicator;
@@ -32,55 +32,52 @@ public final class UrlSigningParamIdentifierResponse extends com.pulumi.resource
      * 
      */
     @Import(name="paramName", required=true)
-      private final String paramName;
+    private String paramName;
 
     public String paramName() {
         return this.paramName;
     }
 
-    public UrlSigningParamIdentifierResponse(
-        String paramIndicator,
-        String paramName) {
-        this.paramIndicator = Objects.requireNonNull(paramIndicator, "expected parameter 'paramIndicator' to be non-null");
-        this.paramName = Objects.requireNonNull(paramName, "expected parameter 'paramName' to be non-null");
-    }
+    private UrlSigningParamIdentifierResponse() {}
 
-    private UrlSigningParamIdentifierResponse() {
-        this.paramIndicator = null;
-        this.paramName = null;
+    private UrlSigningParamIdentifierResponse(UrlSigningParamIdentifierResponse $) {
+        this.paramIndicator = $.paramIndicator;
+        this.paramName = $.paramName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlSigningParamIdentifierResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String paramIndicator;
-        private String paramName;
+        private UrlSigningParamIdentifierResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlSigningParamIdentifierResponse();
         }
 
         public Builder(UrlSigningParamIdentifierResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.paramIndicator = defaults.paramIndicator;
-    	      this.paramName = defaults.paramName;
+            $ = new UrlSigningParamIdentifierResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder paramIndicator(String paramIndicator) {
-            this.paramIndicator = Objects.requireNonNull(paramIndicator);
+            $.paramIndicator = paramIndicator;
             return this;
         }
+
         public Builder paramName(String paramName) {
-            this.paramName = Objects.requireNonNull(paramName);
+            $.paramName = paramName;
             return this;
-        }        public UrlSigningParamIdentifierResponse build() {
-            return new UrlSigningParamIdentifierResponse(paramIndicator, paramName);
+        }
+
+        public UrlSigningParamIdentifierResponse build() {
+            $.paramIndicator = Objects.requireNonNull($.paramIndicator, "expected parameter 'paramIndicator' to be non-null");
+            $.paramName = Objects.requireNonNull($.paramName, "expected parameter 'paramName' to be non-null");
+            return $;
         }
     }
+
 }

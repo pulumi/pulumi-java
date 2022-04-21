@@ -15,45 +15,44 @@ public final class AssetModelAttribute extends com.pulumi.resources.InvokeArgs {
     public static final AssetModelAttribute Empty = new AssetModelAttribute();
 
     @Import(name="defaultValue")
-      private final @Nullable String defaultValue;
+    private @Nullable String defaultValue;
 
     public Optional<String> defaultValue() {
-        return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
+        return Optional.ofNullable(this.defaultValue);
     }
 
-    public AssetModelAttribute(@Nullable String defaultValue) {
-        this.defaultValue = defaultValue;
-    }
+    private AssetModelAttribute() {}
 
-    private AssetModelAttribute() {
-        this.defaultValue = null;
+    private AssetModelAttribute(AssetModelAttribute $) {
+        this.defaultValue = $.defaultValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetModelAttribute defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultValue;
+        private AssetModelAttribute $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetModelAttribute();
         }
 
         public Builder(AssetModelAttribute defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
+            $ = new AssetModelAttribute(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = defaultValue;
+            $.defaultValue = defaultValue;
             return this;
-        }        public AssetModelAttribute build() {
-            return new AssetModelAttribute(defaultValue);
+        }
+
+        public AssetModelAttribute build() {
+            return $;
         }
     }
+
 }

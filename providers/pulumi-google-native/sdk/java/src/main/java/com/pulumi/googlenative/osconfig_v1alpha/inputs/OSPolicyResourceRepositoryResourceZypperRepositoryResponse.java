@@ -22,7 +22,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @Import(name="baseUrl", required=true)
-      private final String baseUrl;
+    private String baseUrl;
 
     public String baseUrl() {
         return this.baseUrl;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -44,67 +44,63 @@ public final class OSPolicyResourceRepositoryResourceZypperRepositoryResponse ex
      * 
      */
     @Import(name="gpgKeys", required=true)
-      private final List<String> gpgKeys;
+    private List<String> gpgKeys;
 
     public List<String> gpgKeys() {
         return this.gpgKeys;
     }
 
-    public OSPolicyResourceRepositoryResourceZypperRepositoryResponse(
-        String baseUrl,
-        String displayName,
-        List<String> gpgKeys) {
-        this.baseUrl = Objects.requireNonNull(baseUrl, "expected parameter 'baseUrl' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.gpgKeys = Objects.requireNonNull(gpgKeys, "expected parameter 'gpgKeys' to be non-null");
-    }
+    private OSPolicyResourceRepositoryResourceZypperRepositoryResponse() {}
 
-    private OSPolicyResourceRepositoryResourceZypperRepositoryResponse() {
-        this.baseUrl = null;
-        this.displayName = null;
-        this.gpgKeys = List.of();
+    private OSPolicyResourceRepositoryResourceZypperRepositoryResponse(OSPolicyResourceRepositoryResourceZypperRepositoryResponse $) {
+        this.baseUrl = $.baseUrl;
+        this.displayName = $.displayName;
+        this.gpgKeys = $.gpgKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceRepositoryResourceZypperRepositoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseUrl;
-        private String displayName;
-        private List<String> gpgKeys;
+        private OSPolicyResourceRepositoryResourceZypperRepositoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceRepositoryResourceZypperRepositoryResponse();
         }
 
         public Builder(OSPolicyResourceRepositoryResourceZypperRepositoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseUrl = defaults.baseUrl;
-    	      this.displayName = defaults.displayName;
-    	      this.gpgKeys = defaults.gpgKeys;
+            $ = new OSPolicyResourceRepositoryResourceZypperRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseUrl(String baseUrl) {
-            this.baseUrl = Objects.requireNonNull(baseUrl);
+            $.baseUrl = baseUrl;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder gpgKeys(List<String> gpgKeys) {
-            this.gpgKeys = Objects.requireNonNull(gpgKeys);
+            $.gpgKeys = gpgKeys;
             return this;
         }
+
         public Builder gpgKeys(String... gpgKeys) {
             return gpgKeys(List.of(gpgKeys));
-        }        public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
-            return new OSPolicyResourceRepositoryResourceZypperRepositoryResponse(baseUrl, displayName, gpgKeys);
+        }
+
+        public OSPolicyResourceRepositoryResourceZypperRepositoryResponse build() {
+            $.baseUrl = Objects.requireNonNull($.baseUrl, "expected parameter 'baseUrl' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.gpgKeys = Objects.requireNonNull($.gpgKeys, "expected parameter 'gpgKeys' to be non-null");
+            return $;
         }
     }
+
 }

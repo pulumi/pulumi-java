@@ -5,7 +5,6 @@ package com.pulumi.aws.backup;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,49 +19,49 @@ public final class GlobalSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="globalSettings", required=true)
-      private final Output<Map<String,String>> globalSettings;
+    private Output<Map<String,String>> globalSettings;
 
     public Output<Map<String,String>> globalSettings() {
         return this.globalSettings;
     }
 
-    public GlobalSettingsArgs(Output<Map<String,String>> globalSettings) {
-        this.globalSettings = Objects.requireNonNull(globalSettings, "expected parameter 'globalSettings' to be non-null");
-    }
+    private GlobalSettingsArgs() {}
 
-    private GlobalSettingsArgs() {
-        this.globalSettings = Codegen.empty();
+    private GlobalSettingsArgs(GlobalSettingsArgs $) {
+        this.globalSettings = $.globalSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> globalSettings;
+        private GlobalSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalSettingsArgs();
         }
 
         public Builder(GlobalSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.globalSettings = defaults.globalSettings;
+            $ = new GlobalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder globalSettings(Output<Map<String,String>> globalSettings) {
-            this.globalSettings = Objects.requireNonNull(globalSettings);
+            $.globalSettings = globalSettings;
             return this;
         }
+
         public Builder globalSettings(Map<String,String> globalSettings) {
-            this.globalSettings = Output.of(Objects.requireNonNull(globalSettings));
-            return this;
-        }        public GlobalSettingsArgs build() {
-            return new GlobalSettingsArgs(globalSettings);
+            return globalSettings(Output.of(globalSettings));
+        }
+
+        public GlobalSettingsArgs build() {
+            $.globalSettings = Objects.requireNonNull($.globalSettings, "expected parameter 'globalSettings' to be non-null");
+            return $;
         }
     }
+
 }

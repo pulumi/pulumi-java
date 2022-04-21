@@ -6,10 +6,10 @@ package com.pulumi.awsnative.ec2;
 import com.pulumi.awsnative.ec2.inputs.RouteTableTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<RouteTableTagArgs>> tags;
+    private @Nullable Output<List<RouteTableTagArgs>> tags;
 
-    public Output<List<RouteTableTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<RouteTableTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -33,66 +33,63 @@ public final class RouteTableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId", required=true)
-      private final Output<String> vpcId;
+    private Output<String> vpcId;
 
     public Output<String> vpcId() {
         return this.vpcId;
     }
 
-    public RouteTableArgs(
-        @Nullable Output<List<RouteTableTagArgs>> tags,
-        Output<String> vpcId) {
-        this.tags = tags;
-        this.vpcId = Objects.requireNonNull(vpcId, "expected parameter 'vpcId' to be non-null");
-    }
+    private RouteTableArgs() {}
 
-    private RouteTableArgs() {
-        this.tags = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private RouteTableArgs(RouteTableArgs $) {
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RouteTableTagArgs>> tags;
-        private Output<String> vpcId;
+        private RouteTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteTableArgs();
         }
 
         public Builder(RouteTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new RouteTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Output<List<RouteTableTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<RouteTableTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<RouteTableTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(RouteTableTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder vpcId(Output<String> vpcId) {
-            this.vpcId = Objects.requireNonNull(vpcId);
+            $.vpcId = vpcId;
             return this;
         }
+
         public Builder vpcId(String vpcId) {
-            this.vpcId = Output.of(Objects.requireNonNull(vpcId));
-            return this;
-        }        public RouteTableArgs build() {
-            return new RouteTableArgs(tags, vpcId);
+            return vpcId(Output.of(vpcId));
+        }
+
+        public RouteTableArgs build() {
+            $.vpcId = Objects.requireNonNull($.vpcId, "expected parameter 'vpcId' to be non-null");
+            return $;
         }
     }
+
 }

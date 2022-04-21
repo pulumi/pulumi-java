@@ -21,45 +21,45 @@ public final class GoogleCloudChannelV1AssociationInfoResponse extends com.pulum
      * 
      */
     @Import(name="baseEntitlement", required=true)
-      private final String baseEntitlement;
+    private String baseEntitlement;
 
     public String baseEntitlement() {
         return this.baseEntitlement;
     }
 
-    public GoogleCloudChannelV1AssociationInfoResponse(String baseEntitlement) {
-        this.baseEntitlement = Objects.requireNonNull(baseEntitlement, "expected parameter 'baseEntitlement' to be non-null");
-    }
+    private GoogleCloudChannelV1AssociationInfoResponse() {}
 
-    private GoogleCloudChannelV1AssociationInfoResponse() {
-        this.baseEntitlement = null;
+    private GoogleCloudChannelV1AssociationInfoResponse(GoogleCloudChannelV1AssociationInfoResponse $) {
+        this.baseEntitlement = $.baseEntitlement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1AssociationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String baseEntitlement;
+        private GoogleCloudChannelV1AssociationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1AssociationInfoResponse();
         }
 
         public Builder(GoogleCloudChannelV1AssociationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEntitlement = defaults.baseEntitlement;
+            $ = new GoogleCloudChannelV1AssociationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEntitlement(String baseEntitlement) {
-            this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
+            $.baseEntitlement = baseEntitlement;
             return this;
-        }        public GoogleCloudChannelV1AssociationInfoResponse build() {
-            return new GoogleCloudChannelV1AssociationInfoResponse(baseEntitlement);
+        }
+
+        public GoogleCloudChannelV1AssociationInfoResponse build() {
+            $.baseEntitlement = Objects.requireNonNull($.baseEntitlement, "expected parameter 'baseEntitlement' to be non-null");
+            return $;
         }
     }
+
 }

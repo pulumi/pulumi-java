@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BotMultipleValuesSettingArgs extends com.pulumi.resources.Res
     public static final BotMultipleValuesSettingArgs Empty = new BotMultipleValuesSettingArgs();
 
     @Import(name="allowMultipleValues")
-      private final @Nullable Output<Boolean> allowMultipleValues;
+    private @Nullable Output<Boolean> allowMultipleValues;
 
-    public Output<Boolean> allowMultipleValues() {
-        return this.allowMultipleValues == null ? Codegen.empty() : this.allowMultipleValues;
+    public Optional<Output<Boolean>> allowMultipleValues() {
+        return Optional.ofNullable(this.allowMultipleValues);
     }
 
-    public BotMultipleValuesSettingArgs(@Nullable Output<Boolean> allowMultipleValues) {
-        this.allowMultipleValues = allowMultipleValues;
-    }
+    private BotMultipleValuesSettingArgs() {}
 
-    private BotMultipleValuesSettingArgs() {
-        this.allowMultipleValues = Codegen.empty();
+    private BotMultipleValuesSettingArgs(BotMultipleValuesSettingArgs $) {
+        this.allowMultipleValues = $.allowMultipleValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotMultipleValuesSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowMultipleValues;
+        private BotMultipleValuesSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotMultipleValuesSettingArgs();
         }
 
         public Builder(BotMultipleValuesSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowMultipleValues = defaults.allowMultipleValues;
+            $ = new BotMultipleValuesSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowMultipleValues(@Nullable Output<Boolean> allowMultipleValues) {
-            this.allowMultipleValues = allowMultipleValues;
+            $.allowMultipleValues = allowMultipleValues;
             return this;
         }
-        public Builder allowMultipleValues(@Nullable Boolean allowMultipleValues) {
-            this.allowMultipleValues = Codegen.ofNullable(allowMultipleValues);
-            return this;
-        }        public BotMultipleValuesSettingArgs build() {
-            return new BotMultipleValuesSettingArgs(allowMultipleValues);
+
+        public Builder allowMultipleValues(Boolean allowMultipleValues) {
+            return allowMultipleValues(Output.of(allowMultipleValues));
+        }
+
+        public BotMultipleValuesSettingArgs build() {
+            return $;
         }
     }
+
 }

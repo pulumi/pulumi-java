@@ -24,10 +24,10 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="conflictResolutionPath")
-      private final @Nullable String conflictResolutionPath;
+    private @Nullable String conflictResolutionPath;
 
     public Optional<String> conflictResolutionPath() {
-        return this.conflictResolutionPath == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPath);
+        return Optional.ofNullable(this.conflictResolutionPath);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="conflictResolutionProcedure")
-      private final @Nullable String conflictResolutionProcedure;
+    private @Nullable String conflictResolutionProcedure;
 
     public Optional<String> conflictResolutionProcedure() {
-        return this.conflictResolutionProcedure == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionProcedure);
+        return Optional.ofNullable(this.conflictResolutionProcedure);
     }
 
     /**
@@ -46,64 +46,57 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
-    public ConflictResolutionPolicyResponse(
-        @Nullable String conflictResolutionPath,
-        @Nullable String conflictResolutionProcedure,
-        @Nullable String mode) {
-        this.conflictResolutionPath = conflictResolutionPath;
-        this.conflictResolutionProcedure = conflictResolutionProcedure;
-        this.mode = Codegen.stringProp("mode").arg(mode).def("LastWriterWins").getNullable();
-    }
+    private ConflictResolutionPolicyResponse() {}
 
-    private ConflictResolutionPolicyResponse() {
-        this.conflictResolutionPath = null;
-        this.conflictResolutionProcedure = null;
-        this.mode = null;
+    private ConflictResolutionPolicyResponse(ConflictResolutionPolicyResponse $) {
+        this.conflictResolutionPath = $.conflictResolutionPath;
+        this.conflictResolutionProcedure = $.conflictResolutionProcedure;
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConflictResolutionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String conflictResolutionPath;
-        private @Nullable String conflictResolutionProcedure;
-        private @Nullable String mode;
+        private ConflictResolutionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConflictResolutionPolicyResponse();
         }
 
         public Builder(ConflictResolutionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conflictResolutionPath = defaults.conflictResolutionPath;
-    	      this.conflictResolutionProcedure = defaults.conflictResolutionProcedure;
-    	      this.mode = defaults.mode;
+            $ = new ConflictResolutionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
-            this.conflictResolutionPath = conflictResolutionPath;
+            $.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
+
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
-            this.conflictResolutionProcedure = conflictResolutionProcedure;
+            $.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
-        }        public ConflictResolutionPolicyResponse build() {
-            return new ConflictResolutionPolicyResponse(conflictResolutionPath, conflictResolutionProcedure, mode);
+        }
+
+        public ConflictResolutionPolicyResponse build() {
+            $.mode = Codegen.stringProp("mode").arg($.mode).def("LastWriterWins").getNullable();
+            return $;
         }
     }
+
 }

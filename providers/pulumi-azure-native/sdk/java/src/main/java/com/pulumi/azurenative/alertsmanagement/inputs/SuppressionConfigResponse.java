@@ -24,7 +24,7 @@ public final class SuppressionConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="recurrenceType", required=true)
-      private final String recurrenceType;
+    private String recurrenceType;
 
     public String recurrenceType() {
         return this.recurrenceType;
@@ -35,55 +35,51 @@ public final class SuppressionConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="schedule")
-      private final @Nullable SuppressionScheduleResponse schedule;
+    private @Nullable SuppressionScheduleResponse schedule;
 
     public Optional<SuppressionScheduleResponse> schedule() {
-        return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
+        return Optional.ofNullable(this.schedule);
     }
 
-    public SuppressionConfigResponse(
-        String recurrenceType,
-        @Nullable SuppressionScheduleResponse schedule) {
-        this.recurrenceType = Objects.requireNonNull(recurrenceType, "expected parameter 'recurrenceType' to be non-null");
-        this.schedule = schedule;
-    }
+    private SuppressionConfigResponse() {}
 
-    private SuppressionConfigResponse() {
-        this.recurrenceType = null;
-        this.schedule = null;
+    private SuppressionConfigResponse(SuppressionConfigResponse $) {
+        this.recurrenceType = $.recurrenceType;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String recurrenceType;
-        private @Nullable SuppressionScheduleResponse schedule;
+        private SuppressionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionConfigResponse();
         }
 
         public Builder(SuppressionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recurrenceType = defaults.recurrenceType;
-    	      this.schedule = defaults.schedule;
+            $ = new SuppressionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder recurrenceType(String recurrenceType) {
-            this.recurrenceType = Objects.requireNonNull(recurrenceType);
+            $.recurrenceType = recurrenceType;
             return this;
         }
+
         public Builder schedule(@Nullable SuppressionScheduleResponse schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
-        }        public SuppressionConfigResponse build() {
-            return new SuppressionConfigResponse(recurrenceType, schedule);
+        }
+
+        public SuppressionConfigResponse build() {
+            $.recurrenceType = Objects.requireNonNull($.recurrenceType, "expected parameter 'recurrenceType' to be non-null");
+            return $;
         }
     }
+
 }

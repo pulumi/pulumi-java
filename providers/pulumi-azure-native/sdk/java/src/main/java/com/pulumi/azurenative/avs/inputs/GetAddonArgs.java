@@ -17,7 +17,7 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="addonName", required=true)
-      private final String addonName;
+    private String addonName;
 
     public String addonName() {
         return this.addonName;
@@ -28,7 +28,7 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final String privateCloudName;
+    private String privateCloudName;
 
     public String privateCloudName() {
         return this.privateCloudName;
@@ -39,64 +39,59 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAddonArgs(
-        String addonName,
-        String privateCloudName,
-        String resourceGroupName) {
-        this.addonName = Objects.requireNonNull(addonName, "expected parameter 'addonName' to be non-null");
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAddonArgs() {}
 
-    private GetAddonArgs() {
-        this.addonName = null;
-        this.privateCloudName = null;
-        this.resourceGroupName = null;
+    private GetAddonArgs(GetAddonArgs $) {
+        this.addonName = $.addonName;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAddonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addonName;
-        private String privateCloudName;
-        private String resourceGroupName;
+        private GetAddonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAddonArgs();
         }
 
         public Builder(GetAddonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonName = defaults.addonName;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAddonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonName(String addonName) {
-            this.addonName = Objects.requireNonNull(addonName);
+            $.addonName = addonName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAddonArgs build() {
-            return new GetAddonArgs(addonName, privateCloudName, resourceGroupName);
+        }
+
+        public GetAddonArgs build() {
+            $.addonName = Objects.requireNonNull($.addonName, "expected parameter 'addonName' to be non-null");
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

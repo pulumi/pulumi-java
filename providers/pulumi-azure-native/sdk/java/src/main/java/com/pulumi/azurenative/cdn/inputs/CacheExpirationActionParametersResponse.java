@@ -23,7 +23,7 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="cacheBehavior", required=true)
-      private final String cacheBehavior;
+    private String cacheBehavior;
 
     public String cacheBehavior() {
         return this.cacheBehavior;
@@ -34,10 +34,10 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="cacheDuration")
-      private final @Nullable String cacheDuration;
+    private @Nullable String cacheDuration;
 
     public Optional<String> cacheDuration() {
-        return this.cacheDuration == null ? Optional.empty() : Optional.ofNullable(this.cacheDuration);
+        return Optional.ofNullable(this.cacheDuration);
     }
 
     /**
@@ -45,80 +45,72 @@ public final class CacheExpirationActionParametersResponse extends com.pulumi.re
      * 
      */
     @Import(name="cacheType", required=true)
-      private final String cacheType;
+    private String cacheType;
 
     public String cacheType() {
         return this.cacheType;
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
     }
 
-    public CacheExpirationActionParametersResponse(
-        String cacheBehavior,
-        @Nullable String cacheDuration,
-        String cacheType,
-        String odataType) {
-        this.cacheBehavior = Objects.requireNonNull(cacheBehavior, "expected parameter 'cacheBehavior' to be non-null");
-        this.cacheDuration = cacheDuration;
-        this.cacheType = Objects.requireNonNull(cacheType, "expected parameter 'cacheType' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-    }
+    private CacheExpirationActionParametersResponse() {}
 
-    private CacheExpirationActionParametersResponse() {
-        this.cacheBehavior = null;
-        this.cacheDuration = null;
-        this.cacheType = null;
-        this.odataType = null;
+    private CacheExpirationActionParametersResponse(CacheExpirationActionParametersResponse $) {
+        this.cacheBehavior = $.cacheBehavior;
+        this.cacheDuration = $.cacheDuration;
+        this.cacheType = $.cacheType;
+        this.odataType = $.odataType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheExpirationActionParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cacheBehavior;
-        private @Nullable String cacheDuration;
-        private String cacheType;
-        private String odataType;
+        private CacheExpirationActionParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheExpirationActionParametersResponse();
         }
 
         public Builder(CacheExpirationActionParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheBehavior = defaults.cacheBehavior;
-    	      this.cacheDuration = defaults.cacheDuration;
-    	      this.cacheType = defaults.cacheType;
-    	      this.odataType = defaults.odataType;
+            $ = new CacheExpirationActionParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheBehavior(String cacheBehavior) {
-            this.cacheBehavior = Objects.requireNonNull(cacheBehavior);
+            $.cacheBehavior = cacheBehavior;
             return this;
         }
+
         public Builder cacheDuration(@Nullable String cacheDuration) {
-            this.cacheDuration = cacheDuration;
+            $.cacheDuration = cacheDuration;
             return this;
         }
+
         public Builder cacheType(String cacheType) {
-            this.cacheType = Objects.requireNonNull(cacheType);
+            $.cacheType = cacheType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
-        }        public CacheExpirationActionParametersResponse build() {
-            return new CacheExpirationActionParametersResponse(cacheBehavior, cacheDuration, cacheType, odataType);
+        }
+
+        public CacheExpirationActionParametersResponse build() {
+            $.cacheBehavior = Objects.requireNonNull($.cacheBehavior, "expected parameter 'cacheBehavior' to be non-null");
+            $.cacheType = Objects.requireNonNull($.cacheType, "expected parameter 'cacheType' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            return $;
         }
     }
+
 }

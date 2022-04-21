@@ -13,45 +13,45 @@ public final class GetBranchArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBranchArgs Empty = new GetBranchArgs();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetBranchArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetBranchArgs() {}
 
-    private GetBranchArgs() {
-        this.arn = null;
+    private GetBranchArgs(GetBranchArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBranchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetBranchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBranchArgs();
         }
 
         public Builder(GetBranchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetBranchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetBranchArgs build() {
-            return new GetBranchArgs(arn);
+        }
+
+        public GetBranchArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

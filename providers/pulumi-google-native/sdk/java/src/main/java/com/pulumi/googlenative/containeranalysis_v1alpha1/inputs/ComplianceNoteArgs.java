@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CisBenchmarkArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ComplianceVersionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cisBenchmark")
-      private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
+    private @Nullable Output<CisBenchmarkArgs> cisBenchmark;
 
-    public Output<CisBenchmarkArgs> cisBenchmark() {
-        return this.cisBenchmark == null ? Codegen.empty() : this.cisBenchmark;
+    public Optional<Output<CisBenchmarkArgs>> cisBenchmark() {
+        return Optional.ofNullable(this.cisBenchmark);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rationale")
-      private final @Nullable Output<String> rationale;
+    private @Nullable Output<String> rationale;
 
-    public Output<String> rationale() {
-        return this.rationale == null ? Codegen.empty() : this.rationale;
+    public Optional<Output<String>> rationale() {
+        return Optional.ofNullable(this.rationale);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="remediation")
-      private final @Nullable Output<String> remediation;
+    private @Nullable Output<String> remediation;
 
-    public Output<String> remediation() {
-        return this.remediation == null ? Codegen.empty() : this.remediation;
+    public Optional<Output<String>> remediation() {
+        return Optional.ofNullable(this.remediation);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="scanInstructions")
-      private final @Nullable Output<String> scanInstructions;
+    private @Nullable Output<String> scanInstructions;
 
-    public Output<String> scanInstructions() {
-        return this.scanInstructions == null ? Codegen.empty() : this.scanInstructions;
+    public Optional<Output<String>> scanInstructions() {
+        return Optional.ofNullable(this.scanInstructions);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -93,131 +93,112 @@ public final class ComplianceNoteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<List<ComplianceVersionArgs>> version;
+    private @Nullable Output<List<ComplianceVersionArgs>> version;
 
-    public Output<List<ComplianceVersionArgs>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<List<ComplianceVersionArgs>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ComplianceNoteArgs(
-        @Nullable Output<CisBenchmarkArgs> cisBenchmark,
-        @Nullable Output<String> description,
-        @Nullable Output<String> rationale,
-        @Nullable Output<String> remediation,
-        @Nullable Output<String> scanInstructions,
-        @Nullable Output<String> title,
-        @Nullable Output<List<ComplianceVersionArgs>> version) {
-        this.cisBenchmark = cisBenchmark;
-        this.description = description;
-        this.rationale = rationale;
-        this.remediation = remediation;
-        this.scanInstructions = scanInstructions;
-        this.title = title;
-        this.version = version;
-    }
+    private ComplianceNoteArgs() {}
 
-    private ComplianceNoteArgs() {
-        this.cisBenchmark = Codegen.empty();
-        this.description = Codegen.empty();
-        this.rationale = Codegen.empty();
-        this.remediation = Codegen.empty();
-        this.scanInstructions = Codegen.empty();
-        this.title = Codegen.empty();
-        this.version = Codegen.empty();
+    private ComplianceNoteArgs(ComplianceNoteArgs $) {
+        this.cisBenchmark = $.cisBenchmark;
+        this.description = $.description;
+        this.rationale = $.rationale;
+        this.remediation = $.remediation;
+        this.scanInstructions = $.scanInstructions;
+        this.title = $.title;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CisBenchmarkArgs> cisBenchmark;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> rationale;
-        private @Nullable Output<String> remediation;
-        private @Nullable Output<String> scanInstructions;
-        private @Nullable Output<String> title;
-        private @Nullable Output<List<ComplianceVersionArgs>> version;
+        private ComplianceNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceNoteArgs();
         }
 
         public Builder(ComplianceNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cisBenchmark = defaults.cisBenchmark;
-    	      this.description = defaults.description;
-    	      this.rationale = defaults.rationale;
-    	      this.remediation = defaults.remediation;
-    	      this.scanInstructions = defaults.scanInstructions;
-    	      this.title = defaults.title;
-    	      this.version = defaults.version;
+            $ = new ComplianceNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cisBenchmark(@Nullable Output<CisBenchmarkArgs> cisBenchmark) {
-            this.cisBenchmark = cisBenchmark;
+            $.cisBenchmark = cisBenchmark;
             return this;
         }
-        public Builder cisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
-            this.cisBenchmark = Codegen.ofNullable(cisBenchmark);
-            return this;
+
+        public Builder cisBenchmark(CisBenchmarkArgs cisBenchmark) {
+            return cisBenchmark(Output.of(cisBenchmark));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder rationale(@Nullable Output<String> rationale) {
-            this.rationale = rationale;
+            $.rationale = rationale;
             return this;
         }
-        public Builder rationale(@Nullable String rationale) {
-            this.rationale = Codegen.ofNullable(rationale);
-            return this;
+
+        public Builder rationale(String rationale) {
+            return rationale(Output.of(rationale));
         }
+
         public Builder remediation(@Nullable Output<String> remediation) {
-            this.remediation = remediation;
+            $.remediation = remediation;
             return this;
         }
-        public Builder remediation(@Nullable String remediation) {
-            this.remediation = Codegen.ofNullable(remediation);
-            return this;
+
+        public Builder remediation(String remediation) {
+            return remediation(Output.of(remediation));
         }
+
         public Builder scanInstructions(@Nullable Output<String> scanInstructions) {
-            this.scanInstructions = scanInstructions;
+            $.scanInstructions = scanInstructions;
             return this;
         }
-        public Builder scanInstructions(@Nullable String scanInstructions) {
-            this.scanInstructions = Codegen.ofNullable(scanInstructions);
-            return this;
+
+        public Builder scanInstructions(String scanInstructions) {
+            return scanInstructions(Output.of(scanInstructions));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder version(@Nullable Output<List<ComplianceVersionArgs>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable List<ComplianceVersionArgs> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(List<ComplianceVersionArgs> version) {
+            return version(Output.of(version));
         }
+
         public Builder version(ComplianceVersionArgs... version) {
             return version(List.of(version));
-        }        public ComplianceNoteArgs build() {
-            return new ComplianceNoteArgs(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
+        }
+
+        public ComplianceNoteArgs build() {
+            return $;
         }
     }
+
 }

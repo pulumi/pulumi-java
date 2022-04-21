@@ -25,7 +25,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="analyzed", required=true)
-      private final Boolean analyzed;
+    private Boolean analyzed;
 
     public Boolean analyzed() {
         return this.analyzed;
@@ -36,7 +36,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="attribution", required=true)
-      private final String attribution;
+    private String attribution;
 
     public String attribution() {
         return this.attribution;
@@ -47,7 +47,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="checksum", required=true)
-      private final String checksum;
+    private String checksum;
 
     public String checksum() {
         return this.checksum;
@@ -58,7 +58,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="copyright", required=true)
-      private final String copyright;
+    private String copyright;
 
     public String copyright() {
         return this.copyright;
@@ -69,7 +69,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="detailedDescription", required=true)
-      private final String detailedDescription;
+    private String detailedDescription;
 
     public String detailedDescription() {
         return this.detailedDescription;
@@ -80,7 +80,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="downloadLocation", required=true)
-      private final String downloadLocation;
+    private String downloadLocation;
 
     public String downloadLocation() {
         return this.downloadLocation;
@@ -91,7 +91,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="externalRefs", required=true)
-      private final List<ExternalRefResponse> externalRefs;
+    private List<ExternalRefResponse> externalRefs;
 
     public List<ExternalRefResponse> externalRefs() {
         return this.externalRefs;
@@ -102,7 +102,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filesLicenseInfo", required=true)
-      private final List<String> filesLicenseInfo;
+    private List<String> filesLicenseInfo;
 
     public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
@@ -113,7 +113,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="homePage", required=true)
-      private final String homePage;
+    private String homePage;
 
     public String homePage() {
         return this.homePage;
@@ -124,7 +124,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="licenseDeclared", required=true)
-      private final LicenseResponse licenseDeclared;
+    private LicenseResponse licenseDeclared;
 
     public LicenseResponse licenseDeclared() {
         return this.licenseDeclared;
@@ -135,7 +135,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="originator", required=true)
-      private final String originator;
+    private String originator;
 
     public String originator() {
         return this.originator;
@@ -146,7 +146,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="packageType", required=true)
-      private final String packageType;
+    private String packageType;
 
     public String packageType() {
         return this.packageType;
@@ -157,7 +157,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="summaryDescription", required=true)
-      private final String summaryDescription;
+    private String summaryDescription;
 
     public String summaryDescription() {
         return this.summaryDescription;
@@ -168,7 +168,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="supplier", required=true)
-      private final String supplier;
+    private String supplier;
 
     public String supplier() {
         return this.supplier;
@@ -179,7 +179,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
@@ -190,7 +190,7 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="verificationCode", required=true)
-      private final String verificationCode;
+    private String verificationCode;
 
     public String verificationCode() {
         return this.verificationCode;
@@ -201,196 +201,165 @@ public final class PackageInfoNoteResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public PackageInfoNoteResponse(
-        Boolean analyzed,
-        String attribution,
-        String checksum,
-        String copyright,
-        String detailedDescription,
-        String downloadLocation,
-        List<ExternalRefResponse> externalRefs,
-        List<String> filesLicenseInfo,
-        String homePage,
-        LicenseResponse licenseDeclared,
-        String originator,
-        String packageType,
-        String summaryDescription,
-        String supplier,
-        String title,
-        String verificationCode,
-        String version) {
-        this.analyzed = Objects.requireNonNull(analyzed, "expected parameter 'analyzed' to be non-null");
-        this.attribution = Objects.requireNonNull(attribution, "expected parameter 'attribution' to be non-null");
-        this.checksum = Objects.requireNonNull(checksum, "expected parameter 'checksum' to be non-null");
-        this.copyright = Objects.requireNonNull(copyright, "expected parameter 'copyright' to be non-null");
-        this.detailedDescription = Objects.requireNonNull(detailedDescription, "expected parameter 'detailedDescription' to be non-null");
-        this.downloadLocation = Objects.requireNonNull(downloadLocation, "expected parameter 'downloadLocation' to be non-null");
-        this.externalRefs = Objects.requireNonNull(externalRefs, "expected parameter 'externalRefs' to be non-null");
-        this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo, "expected parameter 'filesLicenseInfo' to be non-null");
-        this.homePage = Objects.requireNonNull(homePage, "expected parameter 'homePage' to be non-null");
-        this.licenseDeclared = Objects.requireNonNull(licenseDeclared, "expected parameter 'licenseDeclared' to be non-null");
-        this.originator = Objects.requireNonNull(originator, "expected parameter 'originator' to be non-null");
-        this.packageType = Objects.requireNonNull(packageType, "expected parameter 'packageType' to be non-null");
-        this.summaryDescription = Objects.requireNonNull(summaryDescription, "expected parameter 'summaryDescription' to be non-null");
-        this.supplier = Objects.requireNonNull(supplier, "expected parameter 'supplier' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-        this.verificationCode = Objects.requireNonNull(verificationCode, "expected parameter 'verificationCode' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private PackageInfoNoteResponse() {}
 
-    private PackageInfoNoteResponse() {
-        this.analyzed = null;
-        this.attribution = null;
-        this.checksum = null;
-        this.copyright = null;
-        this.detailedDescription = null;
-        this.downloadLocation = null;
-        this.externalRefs = List.of();
-        this.filesLicenseInfo = List.of();
-        this.homePage = null;
-        this.licenseDeclared = null;
-        this.originator = null;
-        this.packageType = null;
-        this.summaryDescription = null;
-        this.supplier = null;
-        this.title = null;
-        this.verificationCode = null;
-        this.version = null;
+    private PackageInfoNoteResponse(PackageInfoNoteResponse $) {
+        this.analyzed = $.analyzed;
+        this.attribution = $.attribution;
+        this.checksum = $.checksum;
+        this.copyright = $.copyright;
+        this.detailedDescription = $.detailedDescription;
+        this.downloadLocation = $.downloadLocation;
+        this.externalRefs = $.externalRefs;
+        this.filesLicenseInfo = $.filesLicenseInfo;
+        this.homePage = $.homePage;
+        this.licenseDeclared = $.licenseDeclared;
+        this.originator = $.originator;
+        this.packageType = $.packageType;
+        this.summaryDescription = $.summaryDescription;
+        this.supplier = $.supplier;
+        this.title = $.title;
+        this.verificationCode = $.verificationCode;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageInfoNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean analyzed;
-        private String attribution;
-        private String checksum;
-        private String copyright;
-        private String detailedDescription;
-        private String downloadLocation;
-        private List<ExternalRefResponse> externalRefs;
-        private List<String> filesLicenseInfo;
-        private String homePage;
-        private LicenseResponse licenseDeclared;
-        private String originator;
-        private String packageType;
-        private String summaryDescription;
-        private String supplier;
-        private String title;
-        private String verificationCode;
-        private String version;
+        private PackageInfoNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageInfoNoteResponse();
         }
 
         public Builder(PackageInfoNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzed = defaults.analyzed;
-    	      this.attribution = defaults.attribution;
-    	      this.checksum = defaults.checksum;
-    	      this.copyright = defaults.copyright;
-    	      this.detailedDescription = defaults.detailedDescription;
-    	      this.downloadLocation = defaults.downloadLocation;
-    	      this.externalRefs = defaults.externalRefs;
-    	      this.filesLicenseInfo = defaults.filesLicenseInfo;
-    	      this.homePage = defaults.homePage;
-    	      this.licenseDeclared = defaults.licenseDeclared;
-    	      this.originator = defaults.originator;
-    	      this.packageType = defaults.packageType;
-    	      this.summaryDescription = defaults.summaryDescription;
-    	      this.supplier = defaults.supplier;
-    	      this.title = defaults.title;
-    	      this.verificationCode = defaults.verificationCode;
-    	      this.version = defaults.version;
+            $ = new PackageInfoNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzed(Boolean analyzed) {
-            this.analyzed = Objects.requireNonNull(analyzed);
+            $.analyzed = analyzed;
             return this;
         }
+
         public Builder attribution(String attribution) {
-            this.attribution = Objects.requireNonNull(attribution);
+            $.attribution = attribution;
             return this;
         }
+
         public Builder checksum(String checksum) {
-            this.checksum = Objects.requireNonNull(checksum);
+            $.checksum = checksum;
             return this;
         }
+
         public Builder copyright(String copyright) {
-            this.copyright = Objects.requireNonNull(copyright);
+            $.copyright = copyright;
             return this;
         }
+
         public Builder detailedDescription(String detailedDescription) {
-            this.detailedDescription = Objects.requireNonNull(detailedDescription);
+            $.detailedDescription = detailedDescription;
             return this;
         }
+
         public Builder downloadLocation(String downloadLocation) {
-            this.downloadLocation = Objects.requireNonNull(downloadLocation);
+            $.downloadLocation = downloadLocation;
             return this;
         }
+
         public Builder externalRefs(List<ExternalRefResponse> externalRefs) {
-            this.externalRefs = Objects.requireNonNull(externalRefs);
+            $.externalRefs = externalRefs;
             return this;
         }
+
         public Builder externalRefs(ExternalRefResponse... externalRefs) {
             return externalRefs(List.of(externalRefs));
         }
+
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
+            $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
+
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
+
         public Builder homePage(String homePage) {
-            this.homePage = Objects.requireNonNull(homePage);
+            $.homePage = homePage;
             return this;
         }
+
         public Builder licenseDeclared(LicenseResponse licenseDeclared) {
-            this.licenseDeclared = Objects.requireNonNull(licenseDeclared);
+            $.licenseDeclared = licenseDeclared;
             return this;
         }
+
         public Builder originator(String originator) {
-            this.originator = Objects.requireNonNull(originator);
+            $.originator = originator;
             return this;
         }
+
         public Builder packageType(String packageType) {
-            this.packageType = Objects.requireNonNull(packageType);
+            $.packageType = packageType;
             return this;
         }
+
         public Builder summaryDescription(String summaryDescription) {
-            this.summaryDescription = Objects.requireNonNull(summaryDescription);
+            $.summaryDescription = summaryDescription;
             return this;
         }
+
         public Builder supplier(String supplier) {
-            this.supplier = Objects.requireNonNull(supplier);
+            $.supplier = supplier;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder verificationCode(String verificationCode) {
-            this.verificationCode = Objects.requireNonNull(verificationCode);
+            $.verificationCode = verificationCode;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public PackageInfoNoteResponse build() {
-            return new PackageInfoNoteResponse(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
+        }
+
+        public PackageInfoNoteResponse build() {
+            $.analyzed = Objects.requireNonNull($.analyzed, "expected parameter 'analyzed' to be non-null");
+            $.attribution = Objects.requireNonNull($.attribution, "expected parameter 'attribution' to be non-null");
+            $.checksum = Objects.requireNonNull($.checksum, "expected parameter 'checksum' to be non-null");
+            $.copyright = Objects.requireNonNull($.copyright, "expected parameter 'copyright' to be non-null");
+            $.detailedDescription = Objects.requireNonNull($.detailedDescription, "expected parameter 'detailedDescription' to be non-null");
+            $.downloadLocation = Objects.requireNonNull($.downloadLocation, "expected parameter 'downloadLocation' to be non-null");
+            $.externalRefs = Objects.requireNonNull($.externalRefs, "expected parameter 'externalRefs' to be non-null");
+            $.filesLicenseInfo = Objects.requireNonNull($.filesLicenseInfo, "expected parameter 'filesLicenseInfo' to be non-null");
+            $.homePage = Objects.requireNonNull($.homePage, "expected parameter 'homePage' to be non-null");
+            $.licenseDeclared = Objects.requireNonNull($.licenseDeclared, "expected parameter 'licenseDeclared' to be non-null");
+            $.originator = Objects.requireNonNull($.originator, "expected parameter 'originator' to be non-null");
+            $.packageType = Objects.requireNonNull($.packageType, "expected parameter 'packageType' to be non-null");
+            $.summaryDescription = Objects.requireNonNull($.summaryDescription, "expected parameter 'summaryDescription' to be non-null");
+            $.supplier = Objects.requireNonNull($.supplier, "expected parameter 'supplier' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            $.verificationCode = Objects.requireNonNull($.verificationCode, "expected parameter 'verificationCode' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

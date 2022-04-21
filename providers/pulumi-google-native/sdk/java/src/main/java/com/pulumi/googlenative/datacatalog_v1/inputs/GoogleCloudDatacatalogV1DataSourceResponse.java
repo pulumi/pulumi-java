@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends com.pulumi
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
@@ -32,55 +32,52 @@ public final class GoogleCloudDatacatalogV1DataSourceResponse extends com.pulumi
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GoogleCloudDatacatalogV1DataSourceResponse(
-        String resource,
-        String service) {
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1DataSourceResponse() {}
 
-    private GoogleCloudDatacatalogV1DataSourceResponse() {
-        this.resource = null;
-        this.service = null;
+    private GoogleCloudDatacatalogV1DataSourceResponse(GoogleCloudDatacatalogV1DataSourceResponse $) {
+        this.resource = $.resource;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1DataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resource;
-        private String service;
+        private GoogleCloudDatacatalogV1DataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1DataSourceResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1DataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
-    	      this.service = defaults.service;
+            $ = new GoogleCloudDatacatalogV1DataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GoogleCloudDatacatalogV1DataSourceResponse build() {
-            return new GoogleCloudDatacatalogV1DataSourceResponse(resource, service);
+        }
+
+        public GoogleCloudDatacatalogV1DataSourceResponse build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

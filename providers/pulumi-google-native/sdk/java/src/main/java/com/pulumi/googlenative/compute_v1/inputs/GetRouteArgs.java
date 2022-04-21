@@ -15,62 +15,58 @@ public final class GetRouteArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="route", required=true)
-      private final String route;
+    private String route;
 
     public String route() {
         return this.route;
     }
 
-    public GetRouteArgs(
-        @Nullable String project,
-        String route) {
-        this.project = project;
-        this.route = Objects.requireNonNull(route, "expected parameter 'route' to be non-null");
-    }
+    private GetRouteArgs() {}
 
-    private GetRouteArgs() {
-        this.project = null;
-        this.route = null;
+    private GetRouteArgs(GetRouteArgs $) {
+        this.project = $.project;
+        this.route = $.route;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRouteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String route;
+        private GetRouteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRouteArgs();
         }
 
         public Builder(GetRouteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.route = defaults.route;
+            $ = new GetRouteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder route(String route) {
-            this.route = Objects.requireNonNull(route);
+            $.route = route;
             return this;
-        }        public GetRouteArgs build() {
-            return new GetRouteArgs(project, route);
+        }
+
+        public GetRouteArgs build() {
+            $.route = Objects.requireNonNull($.route, "expected parameter 'route' to be non-null");
+            return $;
         }
     }
+
 }

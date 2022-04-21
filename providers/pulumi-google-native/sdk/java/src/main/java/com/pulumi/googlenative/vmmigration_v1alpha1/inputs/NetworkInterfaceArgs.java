@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="externalIp")
-      private final @Nullable Output<String> externalIp;
+    private @Nullable Output<String> externalIp;
 
-    public Output<String> externalIp() {
-        return this.externalIp == null ? Codegen.empty() : this.externalIp;
+    public Optional<Output<String>> externalIp() {
+        return Optional.ofNullable(this.externalIp);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="internalIp")
-      private final @Nullable Output<String> internalIp;
+    private @Nullable Output<String> internalIp;
 
-    public Output<String> internalIp() {
-        return this.internalIp == null ? Codegen.empty() : this.internalIp;
+    public Optional<Output<String>> internalIp() {
+        return Optional.ofNullable(this.internalIp);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
-    public NetworkInterfaceArgs(
-        @Nullable Output<String> externalIp,
-        @Nullable Output<String> internalIp,
-        @Nullable Output<String> network,
-        @Nullable Output<String> subnetwork) {
-        this.externalIp = externalIp;
-        this.internalIp = internalIp;
-        this.network = network;
-        this.subnetwork = subnetwork;
-    }
+    private NetworkInterfaceArgs() {}
 
-    private NetworkInterfaceArgs() {
-        this.externalIp = Codegen.empty();
-        this.internalIp = Codegen.empty();
-        this.network = Codegen.empty();
-        this.subnetwork = Codegen.empty();
+    private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
+        this.externalIp = $.externalIp;
+        this.internalIp = $.internalIp;
+        this.network = $.network;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> externalIp;
-        private @Nullable Output<String> internalIp;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> subnetwork;
+        private NetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceArgs();
         }
 
         public Builder(NetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalIp = defaults.externalIp;
-    	      this.internalIp = defaults.internalIp;
-    	      this.network = defaults.network;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalIp(@Nullable Output<String> externalIp) {
-            this.externalIp = externalIp;
+            $.externalIp = externalIp;
             return this;
         }
-        public Builder externalIp(@Nullable String externalIp) {
-            this.externalIp = Codegen.ofNullable(externalIp);
-            return this;
+
+        public Builder externalIp(String externalIp) {
+            return externalIp(Output.of(externalIp));
         }
+
         public Builder internalIp(@Nullable Output<String> internalIp) {
-            this.internalIp = internalIp;
+            $.internalIp = internalIp;
             return this;
         }
-        public Builder internalIp(@Nullable String internalIp) {
-            this.internalIp = Codegen.ofNullable(internalIp);
-            return this;
+
+        public Builder internalIp(String internalIp) {
+            return internalIp(Output.of(internalIp));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
-        }        public NetworkInterfaceArgs build() {
-            return new NetworkInterfaceArgs(externalIp, internalIp, network, subnetwork);
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
+        }
+
+        public NetworkInterfaceArgs build() {
+            return $;
         }
     }
+
 }

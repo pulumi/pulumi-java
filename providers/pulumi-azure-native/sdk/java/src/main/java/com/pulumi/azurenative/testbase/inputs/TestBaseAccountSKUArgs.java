@@ -7,10 +7,10 @@ import com.pulumi.azurenative.testbase.enums.Tier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="locations")
-      private final @Nullable Output<List<String>> locations;
+    private @Nullable Output<List<String>> locations;
 
-    public Output<List<String>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<String>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -60,92 +60,84 @@ public final class TestBaseAccountSKUArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<Either<String,Tier>> tier;
+    private Output<Either<String,Tier>> tier;
 
     public Output<Either<String,Tier>> tier() {
         return this.tier;
     }
 
-    public TestBaseAccountSKUArgs(
-        @Nullable Output<List<String>> locations,
-        Output<String> name,
-        @Nullable Output<String> resourceType,
-        Output<Either<String,Tier>> tier) {
-        this.locations = locations;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceType = resourceType;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private TestBaseAccountSKUArgs() {}
 
-    private TestBaseAccountSKUArgs() {
-        this.locations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.tier = Codegen.empty();
+    private TestBaseAccountSKUArgs(TestBaseAccountSKUArgs $) {
+        this.locations = $.locations;
+        this.name = $.name;
+        this.resourceType = $.resourceType;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestBaseAccountSKUArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> locations;
-        private Output<String> name;
-        private @Nullable Output<String> resourceType;
-        private Output<Either<String,Tier>> tier;
+        private TestBaseAccountSKUArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestBaseAccountSKUArgs();
         }
 
         public Builder(TestBaseAccountSKUArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locations = defaults.locations;
-    	      this.name = defaults.name;
-    	      this.resourceType = defaults.resourceType;
-    	      this.tier = defaults.tier;
+            $ = new TestBaseAccountSKUArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locations(@Nullable Output<List<String>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<String> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder tier(Output<Either<String,Tier>> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(Either<String,Tier> tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public TestBaseAccountSKUArgs build() {
-            return new TestBaseAccountSKUArgs(locations, name, resourceType, tier);
+            return tier(Output.of(tier));
+        }
+
+        public TestBaseAccountSKUArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

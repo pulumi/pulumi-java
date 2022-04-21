@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2EntityIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="entityId")
-      private final @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
+    private @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
 
-    public Output<GooglePrivacyDlpV2EntityIdArgs> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<GooglePrivacyDlpV2EntityIdArgs>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GooglePrivacyDlpV2KAnonymityConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="quasiIds")
-      private final @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
+    private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
 
-    public Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds() {
-        return this.quasiIds == null ? Codegen.empty() : this.quasiIds;
+    public Optional<Output<List<GooglePrivacyDlpV2FieldIdArgs>>> quasiIds() {
+        return Optional.ofNullable(this.quasiIds);
     }
 
-    public GooglePrivacyDlpV2KAnonymityConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId,
-        @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
-        this.entityId = entityId;
-        this.quasiIds = quasiIds;
-    }
+    private GooglePrivacyDlpV2KAnonymityConfigArgs() {}
 
-    private GooglePrivacyDlpV2KAnonymityConfigArgs() {
-        this.entityId = Codegen.empty();
-        this.quasiIds = Codegen.empty();
+    private GooglePrivacyDlpV2KAnonymityConfigArgs(GooglePrivacyDlpV2KAnonymityConfigArgs $) {
+        this.entityId = $.entityId;
+        this.quasiIds = $.quasiIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KAnonymityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId;
-        private @Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds;
+        private GooglePrivacyDlpV2KAnonymityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KAnonymityConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2KAnonymityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityId = defaults.entityId;
-    	      this.quasiIds = defaults.quasiIds;
+            $ = new GooglePrivacyDlpV2KAnonymityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityId(@Nullable Output<GooglePrivacyDlpV2EntityIdArgs> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable GooglePrivacyDlpV2EntityIdArgs entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
+
+        public Builder entityId(GooglePrivacyDlpV2EntityIdArgs entityId) {
+            return entityId(Output.of(entityId));
         }
+
         public Builder quasiIds(@Nullable Output<List<GooglePrivacyDlpV2FieldIdArgs>> quasiIds) {
-            this.quasiIds = quasiIds;
+            $.quasiIds = quasiIds;
             return this;
         }
-        public Builder quasiIds(@Nullable List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
-            this.quasiIds = Codegen.ofNullable(quasiIds);
-            return this;
+
+        public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdArgs> quasiIds) {
+            return quasiIds(Output.of(quasiIds));
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2FieldIdArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
-        }        public GooglePrivacyDlpV2KAnonymityConfigArgs build() {
-            return new GooglePrivacyDlpV2KAnonymityConfigArgs(entityId, quasiIds);
+        }
+
+        public GooglePrivacyDlpV2KAnonymityConfigArgs build() {
+            return $;
         }
     }
+
 }

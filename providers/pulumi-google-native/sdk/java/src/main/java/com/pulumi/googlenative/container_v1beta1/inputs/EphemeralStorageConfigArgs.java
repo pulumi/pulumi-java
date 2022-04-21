@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EphemeralStorageConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="localSsdCount")
-      private final @Nullable Output<Integer> localSsdCount;
+    private @Nullable Output<Integer> localSsdCount;
 
-    public Output<Integer> localSsdCount() {
-        return this.localSsdCount == null ? Codegen.empty() : this.localSsdCount;
+    public Optional<Output<Integer>> localSsdCount() {
+        return Optional.ofNullable(this.localSsdCount);
     }
 
-    public EphemeralStorageConfigArgs(@Nullable Output<Integer> localSsdCount) {
-        this.localSsdCount = localSsdCount;
-    }
+    private EphemeralStorageConfigArgs() {}
 
-    private EphemeralStorageConfigArgs() {
-        this.localSsdCount = Codegen.empty();
+    private EphemeralStorageConfigArgs(EphemeralStorageConfigArgs $) {
+        this.localSsdCount = $.localSsdCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EphemeralStorageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> localSsdCount;
+        private EphemeralStorageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EphemeralStorageConfigArgs();
         }
 
         public Builder(EphemeralStorageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localSsdCount = defaults.localSsdCount;
+            $ = new EphemeralStorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder localSsdCount(@Nullable Output<Integer> localSsdCount) {
-            this.localSsdCount = localSsdCount;
+            $.localSsdCount = localSsdCount;
             return this;
         }
-        public Builder localSsdCount(@Nullable Integer localSsdCount) {
-            this.localSsdCount = Codegen.ofNullable(localSsdCount);
-            return this;
-        }        public EphemeralStorageConfigArgs build() {
-            return new EphemeralStorageConfigArgs(localSsdCount);
+
+        public Builder localSsdCount(Integer localSsdCount) {
+            return localSsdCount(Output.of(localSsdCount));
+        }
+
+        public EphemeralStorageConfigArgs build() {
+            return $;
         }
     }
+
 }

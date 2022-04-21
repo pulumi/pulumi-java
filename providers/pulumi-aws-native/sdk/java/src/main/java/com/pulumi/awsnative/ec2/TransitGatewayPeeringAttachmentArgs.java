@@ -7,10 +7,10 @@ import com.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentOptionsArg
 import com.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
+    private @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
-    public Output<TransitGatewayPeeringAttachmentOptionsArgs> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<TransitGatewayPeeringAttachmentOptionsArgs>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="peerAccountId", required=true)
-      private final Output<String> peerAccountId;
+    private Output<String> peerAccountId;
 
     public Output<String> peerAccountId() {
         return this.peerAccountId;
@@ -45,7 +45,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="peerRegion", required=true)
-      private final Output<String> peerRegion;
+    private Output<String> peerRegion;
 
     public Output<String> peerRegion() {
         return this.peerRegion;
@@ -56,7 +56,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="peerTransitGatewayId", required=true)
-      private final Output<String> peerTransitGatewayId;
+    private Output<String> peerTransitGatewayId;
 
     public Output<String> peerTransitGatewayId() {
         return this.peerTransitGatewayId;
@@ -67,10 +67,10 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
+    private @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
-    public Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<TransitGatewayPeeringAttachmentTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -78,118 +78,106 @@ public final class TransitGatewayPeeringAttachmentArgs extends com.pulumi.resour
      * 
      */
     @Import(name="transitGatewayId", required=true)
-      private final Output<String> transitGatewayId;
+    private Output<String> transitGatewayId;
 
     public Output<String> transitGatewayId() {
         return this.transitGatewayId;
     }
 
-    public TransitGatewayPeeringAttachmentArgs(
-        @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options,
-        Output<String> peerAccountId,
-        Output<String> peerRegion,
-        Output<String> peerTransitGatewayId,
-        @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags,
-        Output<String> transitGatewayId) {
-        this.options = options;
-        this.peerAccountId = Objects.requireNonNull(peerAccountId, "expected parameter 'peerAccountId' to be non-null");
-        this.peerRegion = Objects.requireNonNull(peerRegion, "expected parameter 'peerRegion' to be non-null");
-        this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId, "expected parameter 'peerTransitGatewayId' to be non-null");
-        this.tags = tags;
-        this.transitGatewayId = Objects.requireNonNull(transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
-    }
+    private TransitGatewayPeeringAttachmentArgs() {}
 
-    private TransitGatewayPeeringAttachmentArgs() {
-        this.options = Codegen.empty();
-        this.peerAccountId = Codegen.empty();
-        this.peerRegion = Codegen.empty();
-        this.peerTransitGatewayId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.transitGatewayId = Codegen.empty();
+    private TransitGatewayPeeringAttachmentArgs(TransitGatewayPeeringAttachmentArgs $) {
+        this.options = $.options;
+        this.peerAccountId = $.peerAccountId;
+        this.peerRegion = $.peerRegion;
+        this.peerTransitGatewayId = $.peerTransitGatewayId;
+        this.tags = $.tags;
+        this.transitGatewayId = $.transitGatewayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransitGatewayPeeringAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
-        private Output<String> peerAccountId;
-        private Output<String> peerRegion;
-        private Output<String> peerTransitGatewayId;
-        private @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
-        private Output<String> transitGatewayId;
+        private TransitGatewayPeeringAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransitGatewayPeeringAttachmentArgs();
         }
 
         public Builder(TransitGatewayPeeringAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.peerAccountId = defaults.peerAccountId;
-    	      this.peerRegion = defaults.peerRegion;
-    	      this.peerTransitGatewayId = defaults.peerTransitGatewayId;
-    	      this.tags = defaults.tags;
-    	      this.transitGatewayId = defaults.transitGatewayId;
+            $ = new TransitGatewayPeeringAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder options(@Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable TransitGatewayPeeringAttachmentOptionsArgs options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(TransitGatewayPeeringAttachmentOptionsArgs options) {
+            return options(Output.of(options));
         }
+
         public Builder peerAccountId(Output<String> peerAccountId) {
-            this.peerAccountId = Objects.requireNonNull(peerAccountId);
+            $.peerAccountId = peerAccountId;
             return this;
         }
+
         public Builder peerAccountId(String peerAccountId) {
-            this.peerAccountId = Output.of(Objects.requireNonNull(peerAccountId));
-            return this;
+            return peerAccountId(Output.of(peerAccountId));
         }
+
         public Builder peerRegion(Output<String> peerRegion) {
-            this.peerRegion = Objects.requireNonNull(peerRegion);
+            $.peerRegion = peerRegion;
             return this;
         }
+
         public Builder peerRegion(String peerRegion) {
-            this.peerRegion = Output.of(Objects.requireNonNull(peerRegion));
-            return this;
+            return peerRegion(Output.of(peerRegion));
         }
+
         public Builder peerTransitGatewayId(Output<String> peerTransitGatewayId) {
-            this.peerTransitGatewayId = Objects.requireNonNull(peerTransitGatewayId);
+            $.peerTransitGatewayId = peerTransitGatewayId;
             return this;
         }
+
         public Builder peerTransitGatewayId(String peerTransitGatewayId) {
-            this.peerTransitGatewayId = Output.of(Objects.requireNonNull(peerTransitGatewayId));
-            return this;
+            return peerTransitGatewayId(Output.of(peerTransitGatewayId));
         }
+
         public Builder tags(@Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<TransitGatewayPeeringAttachmentTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<TransitGatewayPeeringAttachmentTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(TransitGatewayPeeringAttachmentTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder transitGatewayId(Output<String> transitGatewayId) {
-            this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
+            $.transitGatewayId = transitGatewayId;
             return this;
         }
+
         public Builder transitGatewayId(String transitGatewayId) {
-            this.transitGatewayId = Output.of(Objects.requireNonNull(transitGatewayId));
-            return this;
-        }        public TransitGatewayPeeringAttachmentArgs build() {
-            return new TransitGatewayPeeringAttachmentArgs(options, peerAccountId, peerRegion, peerTransitGatewayId, tags, transitGatewayId);
+            return transitGatewayId(Output.of(transitGatewayId));
+        }
+
+        public TransitGatewayPeeringAttachmentArgs build() {
+            $.peerAccountId = Objects.requireNonNull($.peerAccountId, "expected parameter 'peerAccountId' to be non-null");
+            $.peerRegion = Objects.requireNonNull($.peerRegion, "expected parameter 'peerRegion' to be non-null");
+            $.peerTransitGatewayId = Objects.requireNonNull($.peerTransitGatewayId, "expected parameter 'peerTransitGatewayId' to be non-null");
+            $.transitGatewayId = Objects.requireNonNull($.transitGatewayId, "expected parameter 'transitGatewayId' to be non-null");
+            return $;
         }
     }
+
 }

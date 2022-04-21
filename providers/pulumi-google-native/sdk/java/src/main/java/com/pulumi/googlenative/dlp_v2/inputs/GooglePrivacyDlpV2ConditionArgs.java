@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ConditionOperator;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="field", required=true)
-      private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
+    private Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> field() {
         return this.field;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<GooglePrivacyDlpV2ConditionOperator> operator;
+    private Output<GooglePrivacyDlpV2ConditionOperator> operator;
 
     public Output<GooglePrivacyDlpV2ConditionOperator> operator() {
         return this.operator;
@@ -48,76 +48,70 @@ public final class GooglePrivacyDlpV2ConditionArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
+    private @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
 
-    public Output<GooglePrivacyDlpV2ValueArgs> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<GooglePrivacyDlpV2ValueArgs>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GooglePrivacyDlpV2ConditionArgs(
-        Output<GooglePrivacyDlpV2FieldIdArgs> field,
-        Output<GooglePrivacyDlpV2ConditionOperator> operator,
-        @Nullable Output<GooglePrivacyDlpV2ValueArgs> value) {
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.value = value;
-    }
+    private GooglePrivacyDlpV2ConditionArgs() {}
 
-    private GooglePrivacyDlpV2ConditionArgs() {
-        this.field = Codegen.empty();
-        this.operator = Codegen.empty();
-        this.value = Codegen.empty();
+    private GooglePrivacyDlpV2ConditionArgs(GooglePrivacyDlpV2ConditionArgs $) {
+        this.field = $.field;
+        this.operator = $.operator;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GooglePrivacyDlpV2FieldIdArgs> field;
-        private Output<GooglePrivacyDlpV2ConditionOperator> operator;
-        private @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
+        private GooglePrivacyDlpV2ConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ConditionArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.operator = defaults.operator;
-    	      this.value = defaults.value;
+            $ = new GooglePrivacyDlpV2ConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(Output<GooglePrivacyDlpV2FieldIdArgs> field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder field(GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Output.of(Objects.requireNonNull(field));
-            return this;
+            return field(Output.of(field));
         }
+
         public Builder operator(Output<GooglePrivacyDlpV2ConditionOperator> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(GooglePrivacyDlpV2ConditionOperator operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
+            return operator(Output.of(operator));
         }
+
         public Builder value(@Nullable Output<GooglePrivacyDlpV2ValueArgs> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable GooglePrivacyDlpV2ValueArgs value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public GooglePrivacyDlpV2ConditionArgs build() {
-            return new GooglePrivacyDlpV2ConditionArgs(field, operator, value);
+
+        public Builder value(GooglePrivacyDlpV2ValueArgs value) {
+            return value(Output.of(value));
+        }
+
+        public GooglePrivacyDlpV2ConditionArgs build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

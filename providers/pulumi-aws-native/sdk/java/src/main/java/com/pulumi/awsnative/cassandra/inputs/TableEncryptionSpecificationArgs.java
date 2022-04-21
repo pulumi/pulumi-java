@@ -6,9 +6,9 @@ package com.pulumi.awsnative.cassandra.inputs;
 import com.pulumi.awsnative.cassandra.enums.TableEncryptionType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class TableEncryptionSpecificationArgs extends com.pulumi.resources
     public static final TableEncryptionSpecificationArgs Empty = new TableEncryptionSpecificationArgs();
 
     @Import(name="encryptionType", required=true)
-      private final Output<TableEncryptionType> encryptionType;
+    private Output<TableEncryptionType> encryptionType;
 
     public Output<TableEncryptionType> encryptionType() {
         return this.encryptionType;
     }
 
     @Import(name="kmsKeyIdentifier")
-      private final @Nullable Output<String> kmsKeyIdentifier;
+    private @Nullable Output<String> kmsKeyIdentifier;
 
-    public Output<String> kmsKeyIdentifier() {
-        return this.kmsKeyIdentifier == null ? Codegen.empty() : this.kmsKeyIdentifier;
+    public Optional<Output<String>> kmsKeyIdentifier() {
+        return Optional.ofNullable(this.kmsKeyIdentifier);
     }
 
-    public TableEncryptionSpecificationArgs(
-        Output<TableEncryptionType> encryptionType,
-        @Nullable Output<String> kmsKeyIdentifier) {
-        this.encryptionType = Objects.requireNonNull(encryptionType, "expected parameter 'encryptionType' to be non-null");
-        this.kmsKeyIdentifier = kmsKeyIdentifier;
-    }
+    private TableEncryptionSpecificationArgs() {}
 
-    private TableEncryptionSpecificationArgs() {
-        this.encryptionType = Codegen.empty();
-        this.kmsKeyIdentifier = Codegen.empty();
+    private TableEncryptionSpecificationArgs(TableEncryptionSpecificationArgs $) {
+        this.encryptionType = $.encryptionType;
+        this.kmsKeyIdentifier = $.kmsKeyIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableEncryptionSpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<TableEncryptionType> encryptionType;
-        private @Nullable Output<String> kmsKeyIdentifier;
+        private TableEncryptionSpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableEncryptionSpecificationArgs();
         }
 
         public Builder(TableEncryptionSpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionType = defaults.encryptionType;
-    	      this.kmsKeyIdentifier = defaults.kmsKeyIdentifier;
+            $ = new TableEncryptionSpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionType(Output<TableEncryptionType> encryptionType) {
-            this.encryptionType = Objects.requireNonNull(encryptionType);
+            $.encryptionType = encryptionType;
             return this;
         }
+
         public Builder encryptionType(TableEncryptionType encryptionType) {
-            this.encryptionType = Output.of(Objects.requireNonNull(encryptionType));
-            return this;
+            return encryptionType(Output.of(encryptionType));
         }
+
         public Builder kmsKeyIdentifier(@Nullable Output<String> kmsKeyIdentifier) {
-            this.kmsKeyIdentifier = kmsKeyIdentifier;
+            $.kmsKeyIdentifier = kmsKeyIdentifier;
             return this;
         }
-        public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
-            this.kmsKeyIdentifier = Codegen.ofNullable(kmsKeyIdentifier);
-            return this;
-        }        public TableEncryptionSpecificationArgs build() {
-            return new TableEncryptionSpecificationArgs(encryptionType, kmsKeyIdentifier);
+
+        public Builder kmsKeyIdentifier(String kmsKeyIdentifier) {
+            return kmsKeyIdentifier(Output.of(kmsKeyIdentifier));
+        }
+
+        public TableEncryptionSpecificationArgs build() {
+            $.encryptionType = Objects.requireNonNull($.encryptionType, "expected parameter 'encryptionType' to be non-null");
+            return $;
         }
     }
+
 }

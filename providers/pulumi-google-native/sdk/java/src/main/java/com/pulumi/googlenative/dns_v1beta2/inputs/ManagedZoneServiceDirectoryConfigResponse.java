@@ -18,7 +18,7 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends com.pulumi.
     public static final ManagedZoneServiceDirectoryConfigResponse Empty = new ManagedZoneServiceDirectoryConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -29,55 +29,52 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends com.pulumi.
      * 
      */
     @Import(name="namespace", required=true)
-      private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
+    private ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
     public ManagedZoneServiceDirectoryConfigNamespaceResponse namespace() {
         return this.namespace;
     }
 
-    public ManagedZoneServiceDirectoryConfigResponse(
-        String kind,
-        ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private ManagedZoneServiceDirectoryConfigResponse() {}
 
-    private ManagedZoneServiceDirectoryConfigResponse() {
-        this.kind = null;
-        this.namespace = null;
+    private ManagedZoneServiceDirectoryConfigResponse(ManagedZoneServiceDirectoryConfigResponse $) {
+        this.kind = $.kind;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
+        private ManagedZoneServiceDirectoryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigResponse();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.namespace = defaults.namespace;
+            $ = new ManagedZoneServiceDirectoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public ManagedZoneServiceDirectoryConfigResponse build() {
-            return new ManagedZoneServiceDirectoryConfigResponse(kind, namespace);
+        }
+
+        public ManagedZoneServiceDirectoryConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

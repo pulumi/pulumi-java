@@ -15,62 +15,57 @@ public final class SpotFleetTotalLocalStorageGBRequest extends com.pulumi.resour
     public static final SpotFleetTotalLocalStorageGBRequest Empty = new SpotFleetTotalLocalStorageGBRequest();
 
     @Import(name="max")
-      private final @Nullable Double max;
+    private @Nullable Double max;
 
     public Optional<Double> max() {
-        return this.max == null ? Optional.empty() : Optional.ofNullable(this.max);
+        return Optional.ofNullable(this.max);
     }
 
     @Import(name="min")
-      private final @Nullable Double min;
+    private @Nullable Double min;
 
     public Optional<Double> min() {
-        return this.min == null ? Optional.empty() : Optional.ofNullable(this.min);
+        return Optional.ofNullable(this.min);
     }
 
-    public SpotFleetTotalLocalStorageGBRequest(
-        @Nullable Double max,
-        @Nullable Double min) {
-        this.max = max;
-        this.min = min;
-    }
+    private SpotFleetTotalLocalStorageGBRequest() {}
 
-    private SpotFleetTotalLocalStorageGBRequest() {
-        this.max = null;
-        this.min = null;
+    private SpotFleetTotalLocalStorageGBRequest(SpotFleetTotalLocalStorageGBRequest $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTotalLocalStorageGBRequest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double max;
-        private @Nullable Double min;
+        private SpotFleetTotalLocalStorageGBRequest $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTotalLocalStorageGBRequest();
         }
 
         public Builder(SpotFleetTotalLocalStorageGBRequest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new SpotFleetTotalLocalStorageGBRequest(Objects.requireNonNull(defaults));
         }
 
         public Builder max(@Nullable Double max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
+
         public Builder min(@Nullable Double min) {
-            this.min = min;
+            $.min = min;
             return this;
-        }        public SpotFleetTotalLocalStorageGBRequest build() {
-            return new SpotFleetTotalLocalStorageGBRequest(max, min);
+        }
+
+        public SpotFleetTotalLocalStorageGBRequest build() {
+            return $;
         }
     }
+
 }

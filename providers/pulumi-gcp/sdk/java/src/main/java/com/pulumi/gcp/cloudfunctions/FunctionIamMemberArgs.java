@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudfunctions;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,150 +17,136 @@ public final class FunctionIamMemberArgs extends com.pulumi.resources.ResourceAr
     public static final FunctionIamMemberArgs Empty = new FunctionIamMemberArgs();
 
     @Import(name="cloudFunction", required=true)
-      private final Output<String> cloudFunction;
+    private Output<String> cloudFunction;
 
     public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
 
     @Import(name="condition")
-      private final @Nullable Output<FunctionIamMemberConditionArgs> condition;
+    private @Nullable Output<FunctionIamMemberConditionArgs> condition;
 
-    public Output<FunctionIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<FunctionIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public FunctionIamMemberArgs(
-        Output<String> cloudFunction,
-        @Nullable Output<FunctionIamMemberConditionArgs> condition,
-        Output<String> member,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> role) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction, "expected parameter 'cloudFunction' to be non-null");
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.project = project;
-        this.region = region;
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private FunctionIamMemberArgs() {}
 
-    private FunctionIamMemberArgs() {
-        this.cloudFunction = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.role = Codegen.empty();
+    private FunctionIamMemberArgs(FunctionIamMemberArgs $) {
+        this.cloudFunction = $.cloudFunction;
+        this.condition = $.condition;
+        this.member = $.member;
+        this.project = $.project;
+        this.region = $.region;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudFunction;
-        private @Nullable Output<FunctionIamMemberConditionArgs> condition;
-        private Output<String> member;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> role;
+        private FunctionIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionIamMemberArgs();
         }
 
         public Builder(FunctionIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.role = defaults.role;
+            $ = new FunctionIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(Output<String> cloudFunction) {
-            this.cloudFunction = Objects.requireNonNull(cloudFunction);
+            $.cloudFunction = cloudFunction;
             return this;
         }
+
         public Builder cloudFunction(String cloudFunction) {
-            this.cloudFunction = Output.of(Objects.requireNonNull(cloudFunction));
-            return this;
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder condition(@Nullable Output<FunctionIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable FunctionIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(FunctionIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public FunctionIamMemberArgs build() {
-            return new FunctionIamMemberArgs(cloudFunction, condition, member, project, region, role);
+            return role(Output.of(role));
+        }
+
+        public FunctionIamMemberArgs build() {
+            $.cloudFunction = Objects.requireNonNull($.cloudFunction, "expected parameter 'cloudFunction' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

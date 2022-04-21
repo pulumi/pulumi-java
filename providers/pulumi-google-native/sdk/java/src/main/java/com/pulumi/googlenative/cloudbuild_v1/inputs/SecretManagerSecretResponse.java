@@ -21,7 +21,7 @@ public final class SecretManagerSecretResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="env", required=true)
-      private final String env;
+    private String env;
 
     public String env() {
         return this.env;
@@ -32,55 +32,52 @@ public final class SecretManagerSecretResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="versionName", required=true)
-      private final String versionName;
+    private String versionName;
 
     public String versionName() {
         return this.versionName;
     }
 
-    public SecretManagerSecretResponse(
-        String env,
-        String versionName) {
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
-    }
+    private SecretManagerSecretResponse() {}
 
-    private SecretManagerSecretResponse() {
-        this.env = null;
-        this.versionName = null;
+    private SecretManagerSecretResponse(SecretManagerSecretResponse $) {
+        this.env = $.env;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretManagerSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String env;
-        private String versionName;
+        private SecretManagerSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretManagerSecretResponse();
         }
 
         public Builder(SecretManagerSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.versionName = defaults.versionName;
+            $ = new SecretManagerSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder env(String env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder versionName(String versionName) {
-            this.versionName = Objects.requireNonNull(versionName);
+            $.versionName = versionName;
             return this;
-        }        public SecretManagerSecretResponse build() {
-            return new SecretManagerSecretResponse(env, versionName);
+        }
+
+        public SecretManagerSecretResponse build() {
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.versionName = Objects.requireNonNull($.versionName, "expected parameter 'versionName' to be non-null");
+            return $;
         }
     }
+
 }

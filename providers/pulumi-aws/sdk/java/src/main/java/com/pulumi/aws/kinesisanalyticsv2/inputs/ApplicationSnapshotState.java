@@ -5,10 +5,10 @@ package com.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ApplicationSnapshotState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="applicationName")
-      private final @Nullable Output<String> applicationName;
+    private @Nullable Output<String> applicationName;
 
-    public Output<String> applicationName() {
-        return this.applicationName == null ? Codegen.empty() : this.applicationName;
+    public Optional<Output<String>> applicationName() {
+        return Optional.ofNullable(this.applicationName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ApplicationSnapshotState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="applicationVersionId")
-      private final @Nullable Output<Integer> applicationVersionId;
+    private @Nullable Output<Integer> applicationVersionId;
 
-    public Output<Integer> applicationVersionId() {
-        return this.applicationVersionId == null ? Codegen.empty() : this.applicationVersionId;
+    public Optional<Output<Integer>> applicationVersionId() {
+        return Optional.ofNullable(this.applicationVersionId);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ApplicationSnapshotState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="snapshotCreationTimestamp")
-      private final @Nullable Output<String> snapshotCreationTimestamp;
+    private @Nullable Output<String> snapshotCreationTimestamp;
 
-    public Output<String> snapshotCreationTimestamp() {
-        return this.snapshotCreationTimestamp == null ? Codegen.empty() : this.snapshotCreationTimestamp;
+    public Optional<Output<String>> snapshotCreationTimestamp() {
+        return Optional.ofNullable(this.snapshotCreationTimestamp);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ApplicationSnapshotState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="snapshotName")
-      private final @Nullable Output<String> snapshotName;
+    private @Nullable Output<String> snapshotName;
 
-    public Output<String> snapshotName() {
-        return this.snapshotName == null ? Codegen.empty() : this.snapshotName;
+    public Optional<Output<String>> snapshotName() {
+        return Optional.ofNullable(this.snapshotName);
     }
 
-    public ApplicationSnapshotState(
-        @Nullable Output<String> applicationName,
-        @Nullable Output<Integer> applicationVersionId,
-        @Nullable Output<String> snapshotCreationTimestamp,
-        @Nullable Output<String> snapshotName) {
-        this.applicationName = applicationName;
-        this.applicationVersionId = applicationVersionId;
-        this.snapshotCreationTimestamp = snapshotCreationTimestamp;
-        this.snapshotName = snapshotName;
-    }
+    private ApplicationSnapshotState() {}
 
-    private ApplicationSnapshotState() {
-        this.applicationName = Codegen.empty();
-        this.applicationVersionId = Codegen.empty();
-        this.snapshotCreationTimestamp = Codegen.empty();
-        this.snapshotName = Codegen.empty();
+    private ApplicationSnapshotState(ApplicationSnapshotState $) {
+        this.applicationName = $.applicationName;
+        this.applicationVersionId = $.applicationVersionId;
+        this.snapshotCreationTimestamp = $.snapshotCreationTimestamp;
+        this.snapshotName = $.snapshotName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationSnapshotState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> applicationName;
-        private @Nullable Output<Integer> applicationVersionId;
-        private @Nullable Output<String> snapshotCreationTimestamp;
-        private @Nullable Output<String> snapshotName;
+        private ApplicationSnapshotState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationSnapshotState();
         }
 
         public Builder(ApplicationSnapshotState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationName = defaults.applicationName;
-    	      this.applicationVersionId = defaults.applicationVersionId;
-    	      this.snapshotCreationTimestamp = defaults.snapshotCreationTimestamp;
-    	      this.snapshotName = defaults.snapshotName;
+            $ = new ApplicationSnapshotState(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationName(@Nullable Output<String> applicationName) {
-            this.applicationName = applicationName;
+            $.applicationName = applicationName;
             return this;
         }
-        public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Codegen.ofNullable(applicationName);
-            return this;
+
+        public Builder applicationName(String applicationName) {
+            return applicationName(Output.of(applicationName));
         }
+
         public Builder applicationVersionId(@Nullable Output<Integer> applicationVersionId) {
-            this.applicationVersionId = applicationVersionId;
+            $.applicationVersionId = applicationVersionId;
             return this;
         }
-        public Builder applicationVersionId(@Nullable Integer applicationVersionId) {
-            this.applicationVersionId = Codegen.ofNullable(applicationVersionId);
-            return this;
+
+        public Builder applicationVersionId(Integer applicationVersionId) {
+            return applicationVersionId(Output.of(applicationVersionId));
         }
+
         public Builder snapshotCreationTimestamp(@Nullable Output<String> snapshotCreationTimestamp) {
-            this.snapshotCreationTimestamp = snapshotCreationTimestamp;
+            $.snapshotCreationTimestamp = snapshotCreationTimestamp;
             return this;
         }
-        public Builder snapshotCreationTimestamp(@Nullable String snapshotCreationTimestamp) {
-            this.snapshotCreationTimestamp = Codegen.ofNullable(snapshotCreationTimestamp);
-            return this;
+
+        public Builder snapshotCreationTimestamp(String snapshotCreationTimestamp) {
+            return snapshotCreationTimestamp(Output.of(snapshotCreationTimestamp));
         }
+
         public Builder snapshotName(@Nullable Output<String> snapshotName) {
-            this.snapshotName = snapshotName;
+            $.snapshotName = snapshotName;
             return this;
         }
-        public Builder snapshotName(@Nullable String snapshotName) {
-            this.snapshotName = Codegen.ofNullable(snapshotName);
-            return this;
-        }        public ApplicationSnapshotState build() {
-            return new ApplicationSnapshotState(applicationName, applicationVersionId, snapshotCreationTimestamp, snapshotName);
+
+        public Builder snapshotName(String snapshotName) {
+            return snapshotName(Output.of(snapshotName));
+        }
+
+        public ApplicationSnapshotState build() {
+            return $;
         }
     }
+
 }

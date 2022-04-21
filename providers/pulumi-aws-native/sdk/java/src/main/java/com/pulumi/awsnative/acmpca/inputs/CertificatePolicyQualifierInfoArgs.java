@@ -6,7 +6,6 @@ package com.pulumi.awsnative.acmpca.inputs;
 import com.pulumi.awsnative.acmpca.inputs.CertificateQualifierArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,70 +19,67 @@ public final class CertificatePolicyQualifierInfoArgs extends com.pulumi.resourc
     public static final CertificatePolicyQualifierInfoArgs Empty = new CertificatePolicyQualifierInfoArgs();
 
     @Import(name="policyQualifierId", required=true)
-      private final Output<String> policyQualifierId;
+    private Output<String> policyQualifierId;
 
     public Output<String> policyQualifierId() {
         return this.policyQualifierId;
     }
 
     @Import(name="qualifier", required=true)
-      private final Output<CertificateQualifierArgs> qualifier;
+    private Output<CertificateQualifierArgs> qualifier;
 
     public Output<CertificateQualifierArgs> qualifier() {
         return this.qualifier;
     }
 
-    public CertificatePolicyQualifierInfoArgs(
-        Output<String> policyQualifierId,
-        Output<CertificateQualifierArgs> qualifier) {
-        this.policyQualifierId = Objects.requireNonNull(policyQualifierId, "expected parameter 'policyQualifierId' to be non-null");
-        this.qualifier = Objects.requireNonNull(qualifier, "expected parameter 'qualifier' to be non-null");
-    }
+    private CertificatePolicyQualifierInfoArgs() {}
 
-    private CertificatePolicyQualifierInfoArgs() {
-        this.policyQualifierId = Codegen.empty();
-        this.qualifier = Codegen.empty();
+    private CertificatePolicyQualifierInfoArgs(CertificatePolicyQualifierInfoArgs $) {
+        this.policyQualifierId = $.policyQualifierId;
+        this.qualifier = $.qualifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificatePolicyQualifierInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> policyQualifierId;
-        private Output<CertificateQualifierArgs> qualifier;
+        private CertificatePolicyQualifierInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificatePolicyQualifierInfoArgs();
         }
 
         public Builder(CertificatePolicyQualifierInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyQualifierId = defaults.policyQualifierId;
-    	      this.qualifier = defaults.qualifier;
+            $ = new CertificatePolicyQualifierInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyQualifierId(Output<String> policyQualifierId) {
-            this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
+            $.policyQualifierId = policyQualifierId;
             return this;
         }
+
         public Builder policyQualifierId(String policyQualifierId) {
-            this.policyQualifierId = Output.of(Objects.requireNonNull(policyQualifierId));
-            return this;
+            return policyQualifierId(Output.of(policyQualifierId));
         }
+
         public Builder qualifier(Output<CertificateQualifierArgs> qualifier) {
-            this.qualifier = Objects.requireNonNull(qualifier);
+            $.qualifier = qualifier;
             return this;
         }
+
         public Builder qualifier(CertificateQualifierArgs qualifier) {
-            this.qualifier = Output.of(Objects.requireNonNull(qualifier));
-            return this;
-        }        public CertificatePolicyQualifierInfoArgs build() {
-            return new CertificatePolicyQualifierInfoArgs(policyQualifierId, qualifier);
+            return qualifier(Output.of(qualifier));
+        }
+
+        public CertificatePolicyQualifierInfoArgs build() {
+            $.policyQualifierId = Objects.requireNonNull($.policyQualifierId, "expected parameter 'policyQualifierId' to be non-null");
+            $.qualifier = Objects.requireNonNull($.qualifier, "expected parameter 'qualifier' to be non-null");
+            return $;
         }
     }
+
 }

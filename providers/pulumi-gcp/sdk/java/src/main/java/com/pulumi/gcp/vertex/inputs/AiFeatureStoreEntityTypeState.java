@@ -5,11 +5,11 @@ package com.pulumi.gcp.vertex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="featurestore")
-      private final @Nullable Output<String> featurestore;
+    private @Nullable Output<String> featurestore;
 
-    public Output<String> featurestore() {
-        return this.featurestore == null ? Codegen.empty() : this.featurestore;
+    public Optional<Output<String>> featurestore() {
+        return Optional.ofNullable(this.featurestore);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="monitoringConfig")
-      private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
+    private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
-    public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig() {
-        return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
+    public Optional<Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs>> monitoringConfig() {
+        return Optional.ofNullable(this.monitoringConfig);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -92,128 +92,108 @@ public final class AiFeatureStoreEntityTypeState extends com.pulumi.resources.Re
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public AiFeatureStoreEntityTypeState(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> featurestore,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.etag = etag;
-        this.featurestore = featurestore;
-        this.labels = labels;
-        this.monitoringConfig = monitoringConfig;
-        this.name = name;
-        this.updateTime = updateTime;
-    }
+    private AiFeatureStoreEntityTypeState() {}
 
-    private AiFeatureStoreEntityTypeState() {
-        this.createTime = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.featurestore = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.monitoringConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private AiFeatureStoreEntityTypeState(AiFeatureStoreEntityTypeState $) {
+        this.createTime = $.createTime;
+        this.etag = $.etag;
+        this.featurestore = $.featurestore;
+        this.labels = $.labels;
+        this.monitoringConfig = $.monitoringConfig;
+        this.name = $.name;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiFeatureStoreEntityTypeState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> featurestore;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> updateTime;
+        private AiFeatureStoreEntityTypeState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiFeatureStoreEntityTypeState();
         }
 
         public Builder(AiFeatureStoreEntityTypeState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.etag = defaults.etag;
-    	      this.featurestore = defaults.featurestore;
-    	      this.labels = defaults.labels;
-    	      this.monitoringConfig = defaults.monitoringConfig;
-    	      this.name = defaults.name;
-    	      this.updateTime = defaults.updateTime;
+            $ = new AiFeatureStoreEntityTypeState(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder featurestore(@Nullable Output<String> featurestore) {
-            this.featurestore = featurestore;
+            $.featurestore = featurestore;
             return this;
         }
-        public Builder featurestore(@Nullable String featurestore) {
-            this.featurestore = Codegen.ofNullable(featurestore);
-            return this;
+
+        public Builder featurestore(String featurestore) {
+            return featurestore(Output.of(featurestore));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
-            this.monitoringConfig = monitoringConfig;
+            $.monitoringConfig = monitoringConfig;
             return this;
         }
-        public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
-            this.monitoringConfig = Codegen.ofNullable(monitoringConfig);
-            return this;
+
+        public Builder monitoringConfig(AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
+            return monitoringConfig(Output.of(monitoringConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public AiFeatureStoreEntityTypeState build() {
-            return new AiFeatureStoreEntityTypeState(createTime, etag, featurestore, labels, monitoringConfig, name, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public AiFeatureStoreEntityTypeState build() {
+            return $;
         }
     }
+
 }

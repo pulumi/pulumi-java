@@ -24,10 +24,10 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Double capacity;
+    private @Nullable Double capacity;
 
     public Optional<Double> capacity() {
-        return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class CloudServiceRoleSkuResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tier")
-      private final @Nullable String tier;
+    private @Nullable String tier;
 
     public Optional<String> tier() {
-        return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
+        return Optional.ofNullable(this.tier);
     }
 
-    public CloudServiceRoleSkuResponse(
-        @Nullable Double capacity,
-        @Nullable String name,
-        @Nullable String tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = tier;
-    }
+    private CloudServiceRoleSkuResponse() {}
 
-    private CloudServiceRoleSkuResponse() {
-        this.capacity = null;
-        this.name = null;
-        this.tier = null;
+    private CloudServiceRoleSkuResponse(CloudServiceRoleSkuResponse $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceRoleSkuResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double capacity;
-        private @Nullable String name;
-        private @Nullable String tier;
+        private CloudServiceRoleSkuResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceRoleSkuResponse();
         }
 
         public Builder(CloudServiceRoleSkuResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new CloudServiceRoleSkuResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Double capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tier(@Nullable String tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
-        }        public CloudServiceRoleSkuResponse build() {
-            return new CloudServiceRoleSkuResponse(capacity, name, tier);
+        }
+
+        public CloudServiceRoleSkuResponse build() {
+            return $;
         }
     }
+
 }

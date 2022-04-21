@@ -7,8 +7,8 @@ import com.pulumi.awsnative.s3.inputs.StorageLensCloudWatchMetricsArgs;
 import com.pulumi.awsnative.s3.inputs.StorageLensS3BucketDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class StorageLensDataExportArgs extends com.pulumi.resources.Resour
     public static final StorageLensDataExportArgs Empty = new StorageLensDataExportArgs();
 
     @Import(name="cloudWatchMetrics")
-      private final @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
+    private @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
 
-    public Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics() {
-        return this.cloudWatchMetrics == null ? Codegen.empty() : this.cloudWatchMetrics;
+    public Optional<Output<StorageLensCloudWatchMetricsArgs>> cloudWatchMetrics() {
+        return Optional.ofNullable(this.cloudWatchMetrics);
     }
 
     @Import(name="s3BucketDestination")
-      private final @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
+    private @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
 
-    public Output<StorageLensS3BucketDestinationArgs> s3BucketDestination() {
-        return this.s3BucketDestination == null ? Codegen.empty() : this.s3BucketDestination;
+    public Optional<Output<StorageLensS3BucketDestinationArgs>> s3BucketDestination() {
+        return Optional.ofNullable(this.s3BucketDestination);
     }
 
-    public StorageLensDataExportArgs(
-        @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics,
-        @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination) {
-        this.cloudWatchMetrics = cloudWatchMetrics;
-        this.s3BucketDestination = s3BucketDestination;
-    }
+    private StorageLensDataExportArgs() {}
 
-    private StorageLensDataExportArgs() {
-        this.cloudWatchMetrics = Codegen.empty();
-        this.s3BucketDestination = Codegen.empty();
+    private StorageLensDataExportArgs(StorageLensDataExportArgs $) {
+        this.cloudWatchMetrics = $.cloudWatchMetrics;
+        this.s3BucketDestination = $.s3BucketDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensDataExportArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics;
-        private @Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination;
+        private StorageLensDataExportArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensDataExportArgs();
         }
 
         public Builder(StorageLensDataExportArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudWatchMetrics = defaults.cloudWatchMetrics;
-    	      this.s3BucketDestination = defaults.s3BucketDestination;
+            $ = new StorageLensDataExportArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudWatchMetrics(@Nullable Output<StorageLensCloudWatchMetricsArgs> cloudWatchMetrics) {
-            this.cloudWatchMetrics = cloudWatchMetrics;
+            $.cloudWatchMetrics = cloudWatchMetrics;
             return this;
         }
-        public Builder cloudWatchMetrics(@Nullable StorageLensCloudWatchMetricsArgs cloudWatchMetrics) {
-            this.cloudWatchMetrics = Codegen.ofNullable(cloudWatchMetrics);
-            return this;
+
+        public Builder cloudWatchMetrics(StorageLensCloudWatchMetricsArgs cloudWatchMetrics) {
+            return cloudWatchMetrics(Output.of(cloudWatchMetrics));
         }
+
         public Builder s3BucketDestination(@Nullable Output<StorageLensS3BucketDestinationArgs> s3BucketDestination) {
-            this.s3BucketDestination = s3BucketDestination;
+            $.s3BucketDestination = s3BucketDestination;
             return this;
         }
-        public Builder s3BucketDestination(@Nullable StorageLensS3BucketDestinationArgs s3BucketDestination) {
-            this.s3BucketDestination = Codegen.ofNullable(s3BucketDestination);
-            return this;
-        }        public StorageLensDataExportArgs build() {
-            return new StorageLensDataExportArgs(cloudWatchMetrics, s3BucketDestination);
+
+        public Builder s3BucketDestination(StorageLensS3BucketDestinationArgs s3BucketDestination) {
+            return s3BucketDestination(Output.of(s3BucketDestination));
+        }
+
+        public StorageLensDataExportArgs build() {
+            return $;
         }
     }
+
 }

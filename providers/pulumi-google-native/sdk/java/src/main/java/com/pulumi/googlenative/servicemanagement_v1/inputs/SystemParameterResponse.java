@@ -21,7 +21,7 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="httpHeader", required=true)
-      private final String httpHeader;
+    private String httpHeader;
 
     public String httpHeader() {
         return this.httpHeader;
@@ -32,7 +32,7 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -43,64 +43,59 @@ public final class SystemParameterResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="urlQueryParameter", required=true)
-      private final String urlQueryParameter;
+    private String urlQueryParameter;
 
     public String urlQueryParameter() {
         return this.urlQueryParameter;
     }
 
-    public SystemParameterResponse(
-        String httpHeader,
-        String name,
-        String urlQueryParameter) {
-        this.httpHeader = Objects.requireNonNull(httpHeader, "expected parameter 'httpHeader' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter, "expected parameter 'urlQueryParameter' to be non-null");
-    }
+    private SystemParameterResponse() {}
 
-    private SystemParameterResponse() {
-        this.httpHeader = null;
-        this.name = null;
-        this.urlQueryParameter = null;
+    private SystemParameterResponse(SystemParameterResponse $) {
+        this.httpHeader = $.httpHeader;
+        this.name = $.name;
+        this.urlQueryParameter = $.urlQueryParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpHeader;
-        private String name;
-        private String urlQueryParameter;
+        private SystemParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParameterResponse();
         }
 
         public Builder(SystemParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeader = defaults.httpHeader;
-    	      this.name = defaults.name;
-    	      this.urlQueryParameter = defaults.urlQueryParameter;
+            $ = new SystemParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeader(String httpHeader) {
-            this.httpHeader = Objects.requireNonNull(httpHeader);
+            $.httpHeader = httpHeader;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder urlQueryParameter(String urlQueryParameter) {
-            this.urlQueryParameter = Objects.requireNonNull(urlQueryParameter);
+            $.urlQueryParameter = urlQueryParameter;
             return this;
-        }        public SystemParameterResponse build() {
-            return new SystemParameterResponse(httpHeader, name, urlQueryParameter);
+        }
+
+        public SystemParameterResponse build() {
+            $.httpHeader = Objects.requireNonNull($.httpHeader, "expected parameter 'httpHeader' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.urlQueryParameter = Objects.requireNonNull($.urlQueryParameter, "expected parameter 'urlQueryParameter' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expressRouteGatewayName", required=true)
-      private final String expressRouteGatewayName;
+    private String expressRouteGatewayName;
 
     public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -28,55 +28,52 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExpressRouteGatewayArgs(
-        String expressRouteGatewayName,
-        String resourceGroupName) {
-        this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExpressRouteGatewayArgs() {}
 
-    private GetExpressRouteGatewayArgs() {
-        this.expressRouteGatewayName = null;
-        this.resourceGroupName = null;
+    private GetExpressRouteGatewayArgs(GetExpressRouteGatewayArgs $) {
+        this.expressRouteGatewayName = $.expressRouteGatewayName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExpressRouteGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expressRouteGatewayName;
-        private String resourceGroupName;
+        private GetExpressRouteGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExpressRouteGatewayArgs();
         }
 
         public Builder(GetExpressRouteGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expressRouteGatewayName = defaults.expressRouteGatewayName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExpressRouteGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
-            this.expressRouteGatewayName = Objects.requireNonNull(expressRouteGatewayName);
+            $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExpressRouteGatewayArgs build() {
-            return new GetExpressRouteGatewayArgs(expressRouteGatewayName, resourceGroupName);
+        }
+
+        public GetExpressRouteGatewayArgs build() {
+            $.expressRouteGatewayName = Objects.requireNonNull($.expressRouteGatewayName, "expected parameter 'expressRouteGatewayName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

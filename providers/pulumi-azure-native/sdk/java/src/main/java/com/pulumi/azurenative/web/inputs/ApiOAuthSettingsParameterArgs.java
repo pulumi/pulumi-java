@@ -5,10 +5,10 @@ package com.pulumi.azurenative.web.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<Object> options;
+    private @Nullable Output<Object> options;
 
-    public Output<Object> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Object>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="uiDefinition")
-      private final @Nullable Output<Object> uiDefinition;
+    private @Nullable Output<Object> uiDefinition;
 
-    public Output<Object> uiDefinition() {
-        return this.uiDefinition == null ? Codegen.empty() : this.uiDefinition;
+    public Optional<Output<Object>> uiDefinition() {
+        return Optional.ofNullable(this.uiDefinition);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ApiOAuthSettingsParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ApiOAuthSettingsParameterArgs(
-        @Nullable Output<Object> options,
-        @Nullable Output<Object> uiDefinition,
-        @Nullable Output<String> value) {
-        this.options = options;
-        this.uiDefinition = uiDefinition;
-        this.value = value;
-    }
+    private ApiOAuthSettingsParameterArgs() {}
 
-    private ApiOAuthSettingsParameterArgs() {
-        this.options = Codegen.empty();
-        this.uiDefinition = Codegen.empty();
-        this.value = Codegen.empty();
+    private ApiOAuthSettingsParameterArgs(ApiOAuthSettingsParameterArgs $) {
+        this.options = $.options;
+        this.uiDefinition = $.uiDefinition;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiOAuthSettingsParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> options;
-        private @Nullable Output<Object> uiDefinition;
-        private @Nullable Output<String> value;
+        private ApiOAuthSettingsParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiOAuthSettingsParameterArgs();
         }
 
         public Builder(ApiOAuthSettingsParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.options = defaults.options;
-    	      this.uiDefinition = defaults.uiDefinition;
-    	      this.value = defaults.value;
+            $ = new ApiOAuthSettingsParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder options(@Nullable Output<Object> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Object options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(Object options) {
+            return options(Output.of(options));
         }
+
         public Builder uiDefinition(@Nullable Output<Object> uiDefinition) {
-            this.uiDefinition = uiDefinition;
+            $.uiDefinition = uiDefinition;
             return this;
         }
-        public Builder uiDefinition(@Nullable Object uiDefinition) {
-            this.uiDefinition = Codegen.ofNullable(uiDefinition);
-            return this;
+
+        public Builder uiDefinition(Object uiDefinition) {
+            return uiDefinition(Output.of(uiDefinition));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ApiOAuthSettingsParameterArgs build() {
-            return new ApiOAuthSettingsParameterArgs(options, uiDefinition, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ApiOAuthSettingsParameterArgs build() {
+            return $;
         }
     }
+
 }

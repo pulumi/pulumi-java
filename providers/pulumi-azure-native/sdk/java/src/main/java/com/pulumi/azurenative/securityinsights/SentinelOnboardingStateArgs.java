@@ -5,10 +5,10 @@ package com.pulumi.azurenative.securityinsights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="customerManagedKey")
-      private final @Nullable Output<Boolean> customerManagedKey;
+    private @Nullable Output<Boolean> customerManagedKey;
 
-    public Output<Boolean> customerManagedKey() {
-        return this.customerManagedKey == null ? Codegen.empty() : this.customerManagedKey;
+    public Optional<Output<Boolean>> customerManagedKey() {
+        return Optional.ofNullable(this.customerManagedKey);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="operationalInsightsResourceProvider", required=true)
-      private final Output<String> operationalInsightsResourceProvider;
+    private Output<String> operationalInsightsResourceProvider;
 
     public Output<String> operationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -43,7 +43,7 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,10 +54,10 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="sentinelOnboardingStateName")
-      private final @Nullable Output<String> sentinelOnboardingStateName;
+    private @Nullable Output<String> sentinelOnboardingStateName;
 
-    public Output<String> sentinelOnboardingStateName() {
-        return this.sentinelOnboardingStateName == null ? Codegen.empty() : this.sentinelOnboardingStateName;
+    public Optional<Output<String>> sentinelOnboardingStateName() {
+        return Optional.ofNullable(this.sentinelOnboardingStateName);
     }
 
     /**
@@ -65,102 +65,91 @@ public final class SentinelOnboardingStateArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SentinelOnboardingStateArgs(
-        @Nullable Output<Boolean> customerManagedKey,
-        Output<String> operationalInsightsResourceProvider,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sentinelOnboardingStateName,
-        Output<String> workspaceName) {
-        this.customerManagedKey = customerManagedKey;
-        this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sentinelOnboardingStateName = sentinelOnboardingStateName;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SentinelOnboardingStateArgs() {}
 
-    private SentinelOnboardingStateArgs() {
-        this.customerManagedKey = Codegen.empty();
-        this.operationalInsightsResourceProvider = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sentinelOnboardingStateName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SentinelOnboardingStateArgs(SentinelOnboardingStateArgs $) {
+        this.customerManagedKey = $.customerManagedKey;
+        this.operationalInsightsResourceProvider = $.operationalInsightsResourceProvider;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sentinelOnboardingStateName = $.sentinelOnboardingStateName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SentinelOnboardingStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> customerManagedKey;
-        private Output<String> operationalInsightsResourceProvider;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sentinelOnboardingStateName;
-        private Output<String> workspaceName;
+        private SentinelOnboardingStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SentinelOnboardingStateArgs();
         }
 
         public Builder(SentinelOnboardingStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedKey = defaults.customerManagedKey;
-    	      this.operationalInsightsResourceProvider = defaults.operationalInsightsResourceProvider;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sentinelOnboardingStateName = defaults.sentinelOnboardingStateName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SentinelOnboardingStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedKey(@Nullable Output<Boolean> customerManagedKey) {
-            this.customerManagedKey = customerManagedKey;
+            $.customerManagedKey = customerManagedKey;
             return this;
         }
-        public Builder customerManagedKey(@Nullable Boolean customerManagedKey) {
-            this.customerManagedKey = Codegen.ofNullable(customerManagedKey);
-            return this;
+
+        public Builder customerManagedKey(Boolean customerManagedKey) {
+            return customerManagedKey(Output.of(customerManagedKey));
         }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
+            $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
         }
+
         public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
-            this.operationalInsightsResourceProvider = Output.of(Objects.requireNonNull(operationalInsightsResourceProvider));
-            return this;
+            return operationalInsightsResourceProvider(Output.of(operationalInsightsResourceProvider));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sentinelOnboardingStateName(@Nullable Output<String> sentinelOnboardingStateName) {
-            this.sentinelOnboardingStateName = sentinelOnboardingStateName;
+            $.sentinelOnboardingStateName = sentinelOnboardingStateName;
             return this;
         }
-        public Builder sentinelOnboardingStateName(@Nullable String sentinelOnboardingStateName) {
-            this.sentinelOnboardingStateName = Codegen.ofNullable(sentinelOnboardingStateName);
-            return this;
+
+        public Builder sentinelOnboardingStateName(String sentinelOnboardingStateName) {
+            return sentinelOnboardingStateName(Output.of(sentinelOnboardingStateName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SentinelOnboardingStateArgs build() {
-            return new SentinelOnboardingStateArgs(customerManagedKey, operationalInsightsResourceProvider, resourceGroupName, sentinelOnboardingStateName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SentinelOnboardingStateArgs build() {
+            $.operationalInsightsResourceProvider = Objects.requireNonNull($.operationalInsightsResourceProvider, "expected parameter 'operationalInsightsResourceProvider' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

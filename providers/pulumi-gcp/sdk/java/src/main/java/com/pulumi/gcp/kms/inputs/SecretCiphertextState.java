@@ -5,9 +5,9 @@ package com.pulumi.gcp.kms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecretCiphertextState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="additionalAuthenticatedData")
-      private final @Nullable Output<String> additionalAuthenticatedData;
+    private @Nullable Output<String> additionalAuthenticatedData;
 
-    public Output<String> additionalAuthenticatedData() {
-        return this.additionalAuthenticatedData == null ? Codegen.empty() : this.additionalAuthenticatedData;
+    public Optional<Output<String>> additionalAuthenticatedData() {
+        return Optional.ofNullable(this.additionalAuthenticatedData);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SecretCiphertextState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="ciphertext")
-      private final @Nullable Output<String> ciphertext;
+    private @Nullable Output<String> ciphertext;
 
-    public Output<String> ciphertext() {
-        return this.ciphertext == null ? Codegen.empty() : this.ciphertext;
+    public Optional<Output<String>> ciphertext() {
+        return Optional.ofNullable(this.ciphertext);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class SecretCiphertextState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cryptoKey")
-      private final @Nullable Output<String> cryptoKey;
+    private @Nullable Output<String> cryptoKey;
 
-    public Output<String> cryptoKey() {
-        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
+    public Optional<Output<String>> cryptoKey() {
+        return Optional.ofNullable(this.cryptoKey);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class SecretCiphertextState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="plaintext")
-      private final @Nullable Output<String> plaintext;
+    private @Nullable Output<String> plaintext;
 
-    public Output<String> plaintext() {
-        return this.plaintext == null ? Codegen.empty() : this.plaintext;
+    public Optional<Output<String>> plaintext() {
+        return Optional.ofNullable(this.plaintext);
     }
 
-    public SecretCiphertextState(
-        @Nullable Output<String> additionalAuthenticatedData,
-        @Nullable Output<String> ciphertext,
-        @Nullable Output<String> cryptoKey,
-        @Nullable Output<String> plaintext) {
-        this.additionalAuthenticatedData = additionalAuthenticatedData;
-        this.ciphertext = ciphertext;
-        this.cryptoKey = cryptoKey;
-        this.plaintext = plaintext;
-    }
+    private SecretCiphertextState() {}
 
-    private SecretCiphertextState() {
-        this.additionalAuthenticatedData = Codegen.empty();
-        this.ciphertext = Codegen.empty();
-        this.cryptoKey = Codegen.empty();
-        this.plaintext = Codegen.empty();
+    private SecretCiphertextState(SecretCiphertextState $) {
+        this.additionalAuthenticatedData = $.additionalAuthenticatedData;
+        this.ciphertext = $.ciphertext;
+        this.cryptoKey = $.cryptoKey;
+        this.plaintext = $.plaintext;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretCiphertextState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalAuthenticatedData;
-        private @Nullable Output<String> ciphertext;
-        private @Nullable Output<String> cryptoKey;
-        private @Nullable Output<String> plaintext;
+        private SecretCiphertextState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretCiphertextState();
         }
 
         public Builder(SecretCiphertextState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalAuthenticatedData = defaults.additionalAuthenticatedData;
-    	      this.ciphertext = defaults.ciphertext;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.plaintext = defaults.plaintext;
+            $ = new SecretCiphertextState(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalAuthenticatedData(@Nullable Output<String> additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = additionalAuthenticatedData;
+            $.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
-        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
-            this.additionalAuthenticatedData = Codegen.ofNullable(additionalAuthenticatedData);
-            return this;
+
+        public Builder additionalAuthenticatedData(String additionalAuthenticatedData) {
+            return additionalAuthenticatedData(Output.of(additionalAuthenticatedData));
         }
+
         public Builder ciphertext(@Nullable Output<String> ciphertext) {
-            this.ciphertext = ciphertext;
+            $.ciphertext = ciphertext;
             return this;
         }
-        public Builder ciphertext(@Nullable String ciphertext) {
-            this.ciphertext = Codegen.ofNullable(ciphertext);
-            return this;
+
+        public Builder ciphertext(String ciphertext) {
+            return ciphertext(Output.of(ciphertext));
         }
+
         public Builder cryptoKey(@Nullable Output<String> cryptoKey) {
-            this.cryptoKey = cryptoKey;
+            $.cryptoKey = cryptoKey;
             return this;
         }
-        public Builder cryptoKey(@Nullable String cryptoKey) {
-            this.cryptoKey = Codegen.ofNullable(cryptoKey);
-            return this;
+
+        public Builder cryptoKey(String cryptoKey) {
+            return cryptoKey(Output.of(cryptoKey));
         }
+
         public Builder plaintext(@Nullable Output<String> plaintext) {
-            this.plaintext = plaintext;
+            $.plaintext = plaintext;
             return this;
         }
-        public Builder plaintext(@Nullable String plaintext) {
-            this.plaintext = Codegen.ofNullable(plaintext);
-            return this;
-        }        public SecretCiphertextState build() {
-            return new SecretCiphertextState(additionalAuthenticatedData, ciphertext, cryptoKey, plaintext);
+
+        public Builder plaintext(String plaintext) {
+            return plaintext(Output.of(plaintext));
+        }
+
+        public SecretCiphertextState build() {
+            return $;
         }
     }
+
 }

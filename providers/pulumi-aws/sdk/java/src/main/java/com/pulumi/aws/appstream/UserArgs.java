@@ -5,10 +5,10 @@ package com.pulumi.aws.appstream;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authenticationType", required=true)
-      private final Output<String> authenticationType;
+    private Output<String> authenticationType;
 
     public Output<String> authenticationType() {
         return this.authenticationType;
@@ -32,10 +32,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="firstName")
-      private final @Nullable Output<String> firstName;
+    private @Nullable Output<String> firstName;
 
-    public Output<String> firstName() {
-        return this.firstName == null ? Codegen.empty() : this.firstName;
+    public Optional<Output<String>> firstName() {
+        return Optional.ofNullable(this.firstName);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastName")
-      private final @Nullable Output<String> lastName;
+    private @Nullable Output<String> lastName;
 
-    public Output<String> lastName() {
-        return this.lastName == null ? Codegen.empty() : this.lastName;
+    public Optional<Output<String>> lastName() {
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sendEmailNotification")
-      private final @Nullable Output<Boolean> sendEmailNotification;
+    private @Nullable Output<Boolean> sendEmailNotification;
 
-    public Output<Boolean> sendEmailNotification() {
-        return this.sendEmailNotification == null ? Codegen.empty() : this.sendEmailNotification;
+    public Optional<Output<Boolean>> sendEmailNotification() {
+        return Optional.ofNullable(this.sendEmailNotification);
     }
 
     /**
@@ -76,115 +76,100 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName", required=true)
-      private final Output<String> userName;
+    private Output<String> userName;
 
     public Output<String> userName() {
         return this.userName;
     }
 
-    public UserArgs(
-        Output<String> authenticationType,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> firstName,
-        @Nullable Output<String> lastName,
-        @Nullable Output<Boolean> sendEmailNotification,
-        Output<String> userName) {
-        this.authenticationType = Objects.requireNonNull(authenticationType, "expected parameter 'authenticationType' to be non-null");
-        this.enabled = enabled;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sendEmailNotification = sendEmailNotification;
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private UserArgs() {}
 
-    private UserArgs() {
-        this.authenticationType = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.firstName = Codegen.empty();
-        this.lastName = Codegen.empty();
-        this.sendEmailNotification = Codegen.empty();
-        this.userName = Codegen.empty();
+    private UserArgs(UserArgs $) {
+        this.authenticationType = $.authenticationType;
+        this.enabled = $.enabled;
+        this.firstName = $.firstName;
+        this.lastName = $.lastName;
+        this.sendEmailNotification = $.sendEmailNotification;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> authenticationType;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> firstName;
-        private @Nullable Output<String> lastName;
-        private @Nullable Output<Boolean> sendEmailNotification;
-        private Output<String> userName;
+        private UserArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserArgs();
         }
 
         public Builder(UserArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationType = defaults.authenticationType;
-    	      this.enabled = defaults.enabled;
-    	      this.firstName = defaults.firstName;
-    	      this.lastName = defaults.lastName;
-    	      this.sendEmailNotification = defaults.sendEmailNotification;
-    	      this.userName = defaults.userName;
+            $ = new UserArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationType(Output<String> authenticationType) {
-            this.authenticationType = Objects.requireNonNull(authenticationType);
+            $.authenticationType = authenticationType;
             return this;
         }
+
         public Builder authenticationType(String authenticationType) {
-            this.authenticationType = Output.of(Objects.requireNonNull(authenticationType));
-            return this;
+            return authenticationType(Output.of(authenticationType));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder firstName(@Nullable Output<String> firstName) {
-            this.firstName = firstName;
+            $.firstName = firstName;
             return this;
         }
-        public Builder firstName(@Nullable String firstName) {
-            this.firstName = Codegen.ofNullable(firstName);
-            return this;
+
+        public Builder firstName(String firstName) {
+            return firstName(Output.of(firstName));
         }
+
         public Builder lastName(@Nullable Output<String> lastName) {
-            this.lastName = lastName;
+            $.lastName = lastName;
             return this;
         }
-        public Builder lastName(@Nullable String lastName) {
-            this.lastName = Codegen.ofNullable(lastName);
-            return this;
+
+        public Builder lastName(String lastName) {
+            return lastName(Output.of(lastName));
         }
+
         public Builder sendEmailNotification(@Nullable Output<Boolean> sendEmailNotification) {
-            this.sendEmailNotification = sendEmailNotification;
+            $.sendEmailNotification = sendEmailNotification;
             return this;
         }
-        public Builder sendEmailNotification(@Nullable Boolean sendEmailNotification) {
-            this.sendEmailNotification = Codegen.ofNullable(sendEmailNotification);
-            return this;
+
+        public Builder sendEmailNotification(Boolean sendEmailNotification) {
+            return sendEmailNotification(Output.of(sendEmailNotification));
         }
+
         public Builder userName(Output<String> userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Output.of(Objects.requireNonNull(userName));
-            return this;
-        }        public UserArgs build() {
-            return new UserArgs(authenticationType, enabled, firstName, lastName, sendEmailNotification, userName);
+            return userName(Output.of(userName));
+        }
+
+        public UserArgs build() {
+            $.authenticationType = Objects.requireNonNull($.authenticationType, "expected parameter 'authenticationType' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

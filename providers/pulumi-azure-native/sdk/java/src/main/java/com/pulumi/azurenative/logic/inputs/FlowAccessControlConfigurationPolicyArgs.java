@@ -7,9 +7,9 @@ import com.pulumi.azurenative.logic.inputs.IpAddressRangeArgs;
 import com.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="allowedCallerIpAddresses")
-      private final @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
+    private @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
-    public Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses() {
-        return this.allowedCallerIpAddresses == null ? Codegen.empty() : this.allowedCallerIpAddresses;
+    public Optional<Output<List<IpAddressRangeArgs>>> allowedCallerIpAddresses() {
+        return Optional.ofNullable(this.allowedCallerIpAddresses);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class FlowAccessControlConfigurationPolicyArgs extends com.pulumi.r
      * 
      */
     @Import(name="openAuthenticationPolicies")
-      private final @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
+    private @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
-    public Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies() {
-        return this.openAuthenticationPolicies == null ? Codegen.empty() : this.openAuthenticationPolicies;
+    public Optional<Output<OpenAuthenticationAccessPoliciesArgs>> openAuthenticationPolicies() {
+        return Optional.ofNullable(this.openAuthenticationPolicies);
     }
 
-    public FlowAccessControlConfigurationPolicyArgs(
-        @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses,
-        @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
-        this.allowedCallerIpAddresses = allowedCallerIpAddresses;
-        this.openAuthenticationPolicies = openAuthenticationPolicies;
-    }
+    private FlowAccessControlConfigurationPolicyArgs() {}
 
-    private FlowAccessControlConfigurationPolicyArgs() {
-        this.allowedCallerIpAddresses = Codegen.empty();
-        this.openAuthenticationPolicies = Codegen.empty();
+    private FlowAccessControlConfigurationPolicyArgs(FlowAccessControlConfigurationPolicyArgs $) {
+        this.allowedCallerIpAddresses = $.allowedCallerIpAddresses;
+        this.openAuthenticationPolicies = $.openAuthenticationPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowAccessControlConfigurationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
-        private @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
+        private FlowAccessControlConfigurationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowAccessControlConfigurationPolicyArgs();
         }
 
         public Builder(FlowAccessControlConfigurationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCallerIpAddresses = defaults.allowedCallerIpAddresses;
-    	      this.openAuthenticationPolicies = defaults.openAuthenticationPolicies;
+            $ = new FlowAccessControlConfigurationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCallerIpAddresses(@Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses) {
-            this.allowedCallerIpAddresses = allowedCallerIpAddresses;
+            $.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
-        public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeArgs> allowedCallerIpAddresses) {
-            this.allowedCallerIpAddresses = Codegen.ofNullable(allowedCallerIpAddresses);
-            return this;
+
+        public Builder allowedCallerIpAddresses(List<IpAddressRangeArgs> allowedCallerIpAddresses) {
+            return allowedCallerIpAddresses(Output.of(allowedCallerIpAddresses));
         }
+
         public Builder allowedCallerIpAddresses(IpAddressRangeArgs... allowedCallerIpAddresses) {
             return allowedCallerIpAddresses(List.of(allowedCallerIpAddresses));
         }
+
         public Builder openAuthenticationPolicies(@Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies) {
-            this.openAuthenticationPolicies = openAuthenticationPolicies;
+            $.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
-        public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
-            this.openAuthenticationPolicies = Codegen.ofNullable(openAuthenticationPolicies);
-            return this;
-        }        public FlowAccessControlConfigurationPolicyArgs build() {
-            return new FlowAccessControlConfigurationPolicyArgs(allowedCallerIpAddresses, openAuthenticationPolicies);
+
+        public Builder openAuthenticationPolicies(OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
+            return openAuthenticationPolicies(Output.of(openAuthenticationPolicies));
+        }
+
+        public FlowAccessControlConfigurationPolicyArgs build() {
+            return $;
         }
     }
+
 }

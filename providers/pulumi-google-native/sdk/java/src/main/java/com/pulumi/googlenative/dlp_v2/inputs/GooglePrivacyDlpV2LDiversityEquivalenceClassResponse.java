@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="equivalenceClassSize", required=true)
-      private final String equivalenceClassSize;
+    private String equivalenceClassSize;
 
     public String equivalenceClassSize() {
         return this.equivalenceClassSize;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="numDistinctSensitiveValues", required=true)
-      private final String numDistinctSensitiveValues;
+    private String numDistinctSensitiveValues;
 
     public String numDistinctSensitiveValues() {
         return this.numDistinctSensitiveValues;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="quasiIdsValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
+    private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues() {
         return this.quasiIdsValues;
@@ -57,79 +57,74 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse extends 
      * 
      */
     @Import(name="topSensitiveValues", required=true)
-      private final List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
+    private List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
 
     public List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues() {
         return this.topSensitiveValues;
     }
 
-    public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(
-        String equivalenceClassSize,
-        String numDistinctSensitiveValues,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues,
-        List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
-        this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize, "expected parameter 'equivalenceClassSize' to be non-null");
-        this.numDistinctSensitiveValues = Objects.requireNonNull(numDistinctSensitiveValues, "expected parameter 'numDistinctSensitiveValues' to be non-null");
-        this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
-        this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues, "expected parameter 'topSensitiveValues' to be non-null");
-    }
+    private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse() {}
 
-    private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse() {
-        this.equivalenceClassSize = null;
-        this.numDistinctSensitiveValues = null;
-        this.quasiIdsValues = List.of();
-        this.topSensitiveValues = List.of();
+    private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse $) {
+        this.equivalenceClassSize = $.equivalenceClassSize;
+        this.numDistinctSensitiveValues = $.numDistinctSensitiveValues;
+        this.quasiIdsValues = $.quasiIdsValues;
+        this.topSensitiveValues = $.topSensitiveValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String equivalenceClassSize;
-        private String numDistinctSensitiveValues;
-        private List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
-        private List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues;
+        private GooglePrivacyDlpV2LDiversityEquivalenceClassResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse();
         }
 
         public Builder(GooglePrivacyDlpV2LDiversityEquivalenceClassResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.equivalenceClassSize = defaults.equivalenceClassSize;
-    	      this.numDistinctSensitiveValues = defaults.numDistinctSensitiveValues;
-    	      this.quasiIdsValues = defaults.quasiIdsValues;
-    	      this.topSensitiveValues = defaults.topSensitiveValues;
+            $ = new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder equivalenceClassSize(String equivalenceClassSize) {
-            this.equivalenceClassSize = Objects.requireNonNull(equivalenceClassSize);
+            $.equivalenceClassSize = equivalenceClassSize;
             return this;
         }
+
         public Builder numDistinctSensitiveValues(String numDistinctSensitiveValues) {
-            this.numDistinctSensitiveValues = Objects.requireNonNull(numDistinctSensitiveValues);
+            $.numDistinctSensitiveValues = numDistinctSensitiveValues;
             return this;
         }
+
         public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
-            this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
+            $.quasiIdsValues = quasiIdsValues;
             return this;
         }
+
         public Builder quasiIdsValues(GooglePrivacyDlpV2ValueResponse... quasiIdsValues) {
             return quasiIdsValues(List.of(quasiIdsValues));
         }
+
         public Builder topSensitiveValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> topSensitiveValues) {
-            this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
+            $.topSensitiveValues = topSensitiveValues;
             return this;
         }
+
         public Builder topSensitiveValues(GooglePrivacyDlpV2ValueFrequencyResponse... topSensitiveValues) {
             return topSensitiveValues(List.of(topSensitiveValues));
-        }        public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
-            return new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(equivalenceClassSize, numDistinctSensitiveValues, quasiIdsValues, topSensitiveValues);
+        }
+
+        public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
+            $.equivalenceClassSize = Objects.requireNonNull($.equivalenceClassSize, "expected parameter 'equivalenceClassSize' to be non-null");
+            $.numDistinctSensitiveValues = Objects.requireNonNull($.numDistinctSensitiveValues, "expected parameter 'numDistinctSensitiveValues' to be non-null");
+            $.quasiIdsValues = Objects.requireNonNull($.quasiIdsValues, "expected parameter 'quasiIdsValues' to be non-null");
+            $.topSensitiveValues = Objects.requireNonNull($.topSensitiveValues, "expected parameter 'topSensitiveValues' to be non-null");
+            return $;
         }
     }
+
 }

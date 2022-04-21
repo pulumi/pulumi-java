@@ -23,7 +23,7 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
      * 
      */
     @Import(name="encryptionAlgorithm", required=true)
-      private final String encryptionAlgorithm;
+    private String encryptionAlgorithm;
 
     public String encryptionAlgorithm() {
         return this.encryptionAlgorithm;
@@ -34,10 +34,10 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
      * 
      */
     @Import(name="encryptionCertThumbprint")
-      private final @Nullable String encryptionCertThumbprint;
+    private @Nullable String encryptionCertThumbprint;
 
     public Optional<String> encryptionCertThumbprint() {
-        return this.encryptionCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.encryptionCertThumbprint);
+        return Optional.ofNullable(this.encryptionCertThumbprint);
     }
 
     /**
@@ -45,64 +45,58 @@ public final class AsymmetricEncryptedSecretResponse extends com.pulumi.resource
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public AsymmetricEncryptedSecretResponse(
-        String encryptionAlgorithm,
-        @Nullable String encryptionCertThumbprint,
-        String value) {
-        this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
-        this.encryptionCertThumbprint = encryptionCertThumbprint;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AsymmetricEncryptedSecretResponse() {}
 
-    private AsymmetricEncryptedSecretResponse() {
-        this.encryptionAlgorithm = null;
-        this.encryptionCertThumbprint = null;
-        this.value = null;
+    private AsymmetricEncryptedSecretResponse(AsymmetricEncryptedSecretResponse $) {
+        this.encryptionAlgorithm = $.encryptionAlgorithm;
+        this.encryptionCertThumbprint = $.encryptionCertThumbprint;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AsymmetricEncryptedSecretResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encryptionAlgorithm;
-        private @Nullable String encryptionCertThumbprint;
-        private String value;
+        private AsymmetricEncryptedSecretResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AsymmetricEncryptedSecretResponse();
         }
 
         public Builder(AsymmetricEncryptedSecretResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryptionAlgorithm = defaults.encryptionAlgorithm;
-    	      this.encryptionCertThumbprint = defaults.encryptionCertThumbprint;
-    	      this.value = defaults.value;
+            $ = new AsymmetricEncryptedSecretResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
-            this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
+            $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
+
         public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
-            this.encryptionCertThumbprint = encryptionCertThumbprint;
+            $.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public AsymmetricEncryptedSecretResponse build() {
-            return new AsymmetricEncryptedSecretResponse(encryptionAlgorithm, encryptionCertThumbprint, value);
+        }
+
+        public AsymmetricEncryptedSecretResponse build() {
+            $.encryptionAlgorithm = Objects.requireNonNull($.encryptionAlgorithm, "expected parameter 'encryptionAlgorithm' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsBanThresholdArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="banDurationSec")
-      private final @Nullable Output<Integer> banDurationSec;
+    private @Nullable Output<Integer> banDurationSec;
 
-    public Output<Integer> banDurationSec() {
-        return this.banDurationSec == null ? Codegen.empty() : this.banDurationSec;
+    public Optional<Output<Integer>> banDurationSec() {
+        return Optional.ofNullable(this.banDurationSec);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="banThreshold")
-      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold;
+    private @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold() {
-        return this.banThreshold == null ? Codegen.empty() : this.banThreshold;
+    public Optional<Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs>> banThreshold() {
+        return Optional.ofNullable(this.banThreshold);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="conformAction", required=true)
-      private final Output<String> conformAction;
+    private Output<String> conformAction;
 
     public Output<String> conformAction() {
         return this.conformAction;
@@ -61,10 +61,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="enforceOnKey")
-      private final @Nullable Output<String> enforceOnKey;
+    private @Nullable Output<String> enforceOnKey;
 
-    public Output<String> enforceOnKey() {
-        return this.enforceOnKey == null ? Codegen.empty() : this.enforceOnKey;
+    public Optional<Output<String>> enforceOnKey() {
+        return Optional.ofNullable(this.enforceOnKey);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="enforceOnKeyName")
-      private final @Nullable Output<String> enforceOnKeyName;
+    private @Nullable Output<String> enforceOnKeyName;
 
-    public Output<String> enforceOnKeyName() {
-        return this.enforceOnKeyName == null ? Codegen.empty() : this.enforceOnKeyName;
+    public Optional<Output<String>> enforceOnKeyName() {
+        return Optional.ofNullable(this.enforceOnKeyName);
     }
 
     /**
@@ -84,17 +84,17 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="exceedAction", required=true)
-      private final Output<String> exceedAction;
+    private Output<String> exceedAction;
 
     public Output<String> exceedAction() {
         return this.exceedAction;
     }
 
     @Import(name="exceedRedirectOptions")
-      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions;
+    private @Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions() {
-        return this.exceedRedirectOptions == null ? Codegen.empty() : this.exceedRedirectOptions;
+    public Optional<Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs>> exceedRedirectOptions() {
+        return Optional.ofNullable(this.exceedRedirectOptions);
     }
 
     /**
@@ -102,141 +102,121 @@ public final class SecurityPolicyRuleRateLimitOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="rateLimitThreshold", required=true)
-      private final Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold;
+    private Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold;
 
     public Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold() {
         return this.rateLimitThreshold;
     }
 
-    public SecurityPolicyRuleRateLimitOptionsArgs(
-        @Nullable Output<Integer> banDurationSec,
-        @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold,
-        Output<String> conformAction,
-        @Nullable Output<String> enforceOnKey,
-        @Nullable Output<String> enforceOnKeyName,
-        Output<String> exceedAction,
-        @Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions,
-        Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold) {
-        this.banDurationSec = banDurationSec;
-        this.banThreshold = banThreshold;
-        this.conformAction = Objects.requireNonNull(conformAction, "expected parameter 'conformAction' to be non-null");
-        this.enforceOnKey = enforceOnKey;
-        this.enforceOnKeyName = enforceOnKeyName;
-        this.exceedAction = Objects.requireNonNull(exceedAction, "expected parameter 'exceedAction' to be non-null");
-        this.exceedRedirectOptions = exceedRedirectOptions;
-        this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
-    }
+    private SecurityPolicyRuleRateLimitOptionsArgs() {}
 
-    private SecurityPolicyRuleRateLimitOptionsArgs() {
-        this.banDurationSec = Codegen.empty();
-        this.banThreshold = Codegen.empty();
-        this.conformAction = Codegen.empty();
-        this.enforceOnKey = Codegen.empty();
-        this.enforceOnKeyName = Codegen.empty();
-        this.exceedAction = Codegen.empty();
-        this.exceedRedirectOptions = Codegen.empty();
-        this.rateLimitThreshold = Codegen.empty();
+    private SecurityPolicyRuleRateLimitOptionsArgs(SecurityPolicyRuleRateLimitOptionsArgs $) {
+        this.banDurationSec = $.banDurationSec;
+        this.banThreshold = $.banThreshold;
+        this.conformAction = $.conformAction;
+        this.enforceOnKey = $.enforceOnKey;
+        this.enforceOnKeyName = $.enforceOnKeyName;
+        this.exceedAction = $.exceedAction;
+        this.exceedRedirectOptions = $.exceedRedirectOptions;
+        this.rateLimitThreshold = $.rateLimitThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> banDurationSec;
-        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold;
-        private Output<String> conformAction;
-        private @Nullable Output<String> enforceOnKey;
-        private @Nullable Output<String> enforceOnKeyName;
-        private Output<String> exceedAction;
-        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions;
-        private Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold;
+        private SecurityPolicyRuleRateLimitOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsArgs();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.banDurationSec = defaults.banDurationSec;
-    	      this.banThreshold = defaults.banThreshold;
-    	      this.conformAction = defaults.conformAction;
-    	      this.enforceOnKey = defaults.enforceOnKey;
-    	      this.enforceOnKeyName = defaults.enforceOnKeyName;
-    	      this.exceedAction = defaults.exceedAction;
-    	      this.exceedRedirectOptions = defaults.exceedRedirectOptions;
-    	      this.rateLimitThreshold = defaults.rateLimitThreshold;
+            $ = new SecurityPolicyRuleRateLimitOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder banDurationSec(@Nullable Output<Integer> banDurationSec) {
-            this.banDurationSec = banDurationSec;
+            $.banDurationSec = banDurationSec;
             return this;
         }
-        public Builder banDurationSec(@Nullable Integer banDurationSec) {
-            this.banDurationSec = Codegen.ofNullable(banDurationSec);
-            return this;
+
+        public Builder banDurationSec(Integer banDurationSec) {
+            return banDurationSec(Output.of(banDurationSec));
         }
+
         public Builder banThreshold(@Nullable Output<SecurityPolicyRuleRateLimitOptionsBanThresholdArgs> banThreshold) {
-            this.banThreshold = banThreshold;
+            $.banThreshold = banThreshold;
             return this;
         }
-        public Builder banThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsBanThresholdArgs banThreshold) {
-            this.banThreshold = Codegen.ofNullable(banThreshold);
-            return this;
+
+        public Builder banThreshold(SecurityPolicyRuleRateLimitOptionsBanThresholdArgs banThreshold) {
+            return banThreshold(Output.of(banThreshold));
         }
+
         public Builder conformAction(Output<String> conformAction) {
-            this.conformAction = Objects.requireNonNull(conformAction);
+            $.conformAction = conformAction;
             return this;
         }
+
         public Builder conformAction(String conformAction) {
-            this.conformAction = Output.of(Objects.requireNonNull(conformAction));
-            return this;
+            return conformAction(Output.of(conformAction));
         }
+
         public Builder enforceOnKey(@Nullable Output<String> enforceOnKey) {
-            this.enforceOnKey = enforceOnKey;
+            $.enforceOnKey = enforceOnKey;
             return this;
         }
-        public Builder enforceOnKey(@Nullable String enforceOnKey) {
-            this.enforceOnKey = Codegen.ofNullable(enforceOnKey);
-            return this;
+
+        public Builder enforceOnKey(String enforceOnKey) {
+            return enforceOnKey(Output.of(enforceOnKey));
         }
+
         public Builder enforceOnKeyName(@Nullable Output<String> enforceOnKeyName) {
-            this.enforceOnKeyName = enforceOnKeyName;
+            $.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
-        public Builder enforceOnKeyName(@Nullable String enforceOnKeyName) {
-            this.enforceOnKeyName = Codegen.ofNullable(enforceOnKeyName);
-            return this;
+
+        public Builder enforceOnKeyName(String enforceOnKeyName) {
+            return enforceOnKeyName(Output.of(enforceOnKeyName));
         }
+
         public Builder exceedAction(Output<String> exceedAction) {
-            this.exceedAction = Objects.requireNonNull(exceedAction);
+            $.exceedAction = exceedAction;
             return this;
         }
+
         public Builder exceedAction(String exceedAction) {
-            this.exceedAction = Output.of(Objects.requireNonNull(exceedAction));
-            return this;
+            return exceedAction(Output.of(exceedAction));
         }
+
         public Builder exceedRedirectOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs> exceedRedirectOptions) {
-            this.exceedRedirectOptions = exceedRedirectOptions;
+            $.exceedRedirectOptions = exceedRedirectOptions;
             return this;
         }
-        public Builder exceedRedirectOptions(@Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs exceedRedirectOptions) {
-            this.exceedRedirectOptions = Codegen.ofNullable(exceedRedirectOptions);
-            return this;
+
+        public Builder exceedRedirectOptions(SecurityPolicyRuleRateLimitOptionsExceedRedirectOptionsArgs exceedRedirectOptions) {
+            return exceedRedirectOptions(Output.of(exceedRedirectOptions));
         }
+
         public Builder rateLimitThreshold(Output<SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs> rateLimitThreshold) {
-            this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
+            $.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
+
         public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsRateLimitThresholdArgs rateLimitThreshold) {
-            this.rateLimitThreshold = Output.of(Objects.requireNonNull(rateLimitThreshold));
-            return this;
-        }        public SecurityPolicyRuleRateLimitOptionsArgs build() {
-            return new SecurityPolicyRuleRateLimitOptionsArgs(banDurationSec, banThreshold, conformAction, enforceOnKey, enforceOnKeyName, exceedAction, exceedRedirectOptions, rateLimitThreshold);
+            return rateLimitThreshold(Output.of(rateLimitThreshold));
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsArgs build() {
+            $.conformAction = Objects.requireNonNull($.conformAction, "expected parameter 'conformAction' to be non-null");
+            $.exceedAction = Objects.requireNonNull($.exceedAction, "expected parameter 'exceedAction' to be non-null");
+            $.rateLimitThreshold = Objects.requireNonNull($.rateLimitThreshold, "expected parameter 'rateLimitThreshold' to be non-null");
+            return $;
         }
     }
+
 }

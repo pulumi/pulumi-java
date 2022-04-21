@@ -27,7 +27,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="builtInAlgorithmOutput", required=true)
-      private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
+    private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput() {
         return this.builtInAlgorithmOutput;
@@ -38,7 +38,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="completedTrialCount", required=true)
-      private final String completedTrialCount;
+    private String completedTrialCount;
 
     public String completedTrialCount() {
         return this.completedTrialCount;
@@ -49,7 +49,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="consumedMLUnits", required=true)
-      private final Double consumedMLUnits;
+    private Double consumedMLUnits;
 
     public Double consumedMLUnits() {
         return this.consumedMLUnits;
@@ -60,7 +60,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="hyperparameterMetricTag", required=true)
-      private final String hyperparameterMetricTag;
+    private String hyperparameterMetricTag;
 
     public String hyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
@@ -71,7 +71,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="isBuiltInAlgorithmJob", required=true)
-      private final Boolean isBuiltInAlgorithmJob;
+    private Boolean isBuiltInAlgorithmJob;
 
     public Boolean isBuiltInAlgorithmJob() {
         return this.isBuiltInAlgorithmJob;
@@ -82,7 +82,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="isHyperparameterTuningJob", required=true)
-      private final Boolean isHyperparameterTuningJob;
+    private Boolean isHyperparameterTuningJob;
 
     public Boolean isHyperparameterTuningJob() {
         return this.isHyperparameterTuningJob;
@@ -93,7 +93,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="trials", required=true)
-      private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
+    private List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
 
     public List<GoogleCloudMlV1__HyperparameterOutputResponse> trials() {
         return this.trials;
@@ -104,112 +104,98 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends com.pulumi.re
      * 
      */
     @Import(name="webAccessUris", required=true)
-      private final Map<String,String> webAccessUris;
+    private Map<String,String> webAccessUris;
 
     public Map<String,String> webAccessUris() {
         return this.webAccessUris;
     }
 
-    public GoogleCloudMlV1__TrainingOutputResponse(
-        GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        String completedTrialCount,
-        Double consumedMLUnits,
-        String hyperparameterMetricTag,
-        Boolean isBuiltInAlgorithmJob,
-        Boolean isHyperparameterTuningJob,
-        List<GoogleCloudMlV1__HyperparameterOutputResponse> trials,
-        Map<String,String> webAccessUris) {
-        this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput, "expected parameter 'builtInAlgorithmOutput' to be non-null");
-        this.completedTrialCount = Objects.requireNonNull(completedTrialCount, "expected parameter 'completedTrialCount' to be non-null");
-        this.consumedMLUnits = Objects.requireNonNull(consumedMLUnits, "expected parameter 'consumedMLUnits' to be non-null");
-        this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag, "expected parameter 'hyperparameterMetricTag' to be non-null");
-        this.isBuiltInAlgorithmJob = Objects.requireNonNull(isBuiltInAlgorithmJob, "expected parameter 'isBuiltInAlgorithmJob' to be non-null");
-        this.isHyperparameterTuningJob = Objects.requireNonNull(isHyperparameterTuningJob, "expected parameter 'isHyperparameterTuningJob' to be non-null");
-        this.trials = Objects.requireNonNull(trials, "expected parameter 'trials' to be non-null");
-        this.webAccessUris = Objects.requireNonNull(webAccessUris, "expected parameter 'webAccessUris' to be non-null");
-    }
+    private GoogleCloudMlV1__TrainingOutputResponse() {}
 
-    private GoogleCloudMlV1__TrainingOutputResponse() {
-        this.builtInAlgorithmOutput = null;
-        this.completedTrialCount = null;
-        this.consumedMLUnits = null;
-        this.hyperparameterMetricTag = null;
-        this.isBuiltInAlgorithmJob = null;
-        this.isHyperparameterTuningJob = null;
-        this.trials = List.of();
-        this.webAccessUris = Map.of();
+    private GoogleCloudMlV1__TrainingOutputResponse(GoogleCloudMlV1__TrainingOutputResponse $) {
+        this.builtInAlgorithmOutput = $.builtInAlgorithmOutput;
+        this.completedTrialCount = $.completedTrialCount;
+        this.consumedMLUnits = $.consumedMLUnits;
+        this.hyperparameterMetricTag = $.hyperparameterMetricTag;
+        this.isBuiltInAlgorithmJob = $.isBuiltInAlgorithmJob;
+        this.isHyperparameterTuningJob = $.isHyperparameterTuningJob;
+        this.trials = $.trials;
+        this.webAccessUris = $.webAccessUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__TrainingOutputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
-        private String completedTrialCount;
-        private Double consumedMLUnits;
-        private String hyperparameterMetricTag;
-        private Boolean isBuiltInAlgorithmJob;
-        private Boolean isHyperparameterTuningJob;
-        private List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
-        private Map<String,String> webAccessUris;
+        private GoogleCloudMlV1__TrainingOutputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__TrainingOutputResponse();
         }
 
         public Builder(GoogleCloudMlV1__TrainingOutputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builtInAlgorithmOutput = defaults.builtInAlgorithmOutput;
-    	      this.completedTrialCount = defaults.completedTrialCount;
-    	      this.consumedMLUnits = defaults.consumedMLUnits;
-    	      this.hyperparameterMetricTag = defaults.hyperparameterMetricTag;
-    	      this.isBuiltInAlgorithmJob = defaults.isBuiltInAlgorithmJob;
-    	      this.isHyperparameterTuningJob = defaults.isHyperparameterTuningJob;
-    	      this.trials = defaults.trials;
-    	      this.webAccessUris = defaults.webAccessUris;
+            $ = new GoogleCloudMlV1__TrainingOutputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
-            this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
+            $.builtInAlgorithmOutput = builtInAlgorithmOutput;
             return this;
         }
+
         public Builder completedTrialCount(String completedTrialCount) {
-            this.completedTrialCount = Objects.requireNonNull(completedTrialCount);
+            $.completedTrialCount = completedTrialCount;
             return this;
         }
+
         public Builder consumedMLUnits(Double consumedMLUnits) {
-            this.consumedMLUnits = Objects.requireNonNull(consumedMLUnits);
+            $.consumedMLUnits = consumedMLUnits;
             return this;
         }
+
         public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
-            this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
+            $.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
+
         public Builder isBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
-            this.isBuiltInAlgorithmJob = Objects.requireNonNull(isBuiltInAlgorithmJob);
+            $.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
             return this;
         }
+
         public Builder isHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
-            this.isHyperparameterTuningJob = Objects.requireNonNull(isHyperparameterTuningJob);
+            $.isHyperparameterTuningJob = isHyperparameterTuningJob;
             return this;
         }
+
         public Builder trials(List<GoogleCloudMlV1__HyperparameterOutputResponse> trials) {
-            this.trials = Objects.requireNonNull(trials);
+            $.trials = trials;
             return this;
         }
+
         public Builder trials(GoogleCloudMlV1__HyperparameterOutputResponse... trials) {
             return trials(List.of(trials));
         }
+
         public Builder webAccessUris(Map<String,String> webAccessUris) {
-            this.webAccessUris = Objects.requireNonNull(webAccessUris);
+            $.webAccessUris = webAccessUris;
             return this;
-        }        public GoogleCloudMlV1__TrainingOutputResponse build() {
-            return new GoogleCloudMlV1__TrainingOutputResponse(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials, webAccessUris);
+        }
+
+        public GoogleCloudMlV1__TrainingOutputResponse build() {
+            $.builtInAlgorithmOutput = Objects.requireNonNull($.builtInAlgorithmOutput, "expected parameter 'builtInAlgorithmOutput' to be non-null");
+            $.completedTrialCount = Objects.requireNonNull($.completedTrialCount, "expected parameter 'completedTrialCount' to be non-null");
+            $.consumedMLUnits = Objects.requireNonNull($.consumedMLUnits, "expected parameter 'consumedMLUnits' to be non-null");
+            $.hyperparameterMetricTag = Objects.requireNonNull($.hyperparameterMetricTag, "expected parameter 'hyperparameterMetricTag' to be non-null");
+            $.isBuiltInAlgorithmJob = Objects.requireNonNull($.isBuiltInAlgorithmJob, "expected parameter 'isBuiltInAlgorithmJob' to be non-null");
+            $.isHyperparameterTuningJob = Objects.requireNonNull($.isHyperparameterTuningJob, "expected parameter 'isHyperparameterTuningJob' to be non-null");
+            $.trials = Objects.requireNonNull($.trials, "expected parameter 'trials' to be non-null");
+            $.webAccessUris = Objects.requireNonNull($.webAccessUris, "expected parameter 'webAccessUris' to be non-null");
+            return $;
         }
     }
+
 }

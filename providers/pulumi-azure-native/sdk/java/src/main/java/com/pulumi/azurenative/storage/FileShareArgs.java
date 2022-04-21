@@ -9,11 +9,11 @@ import com.pulumi.azurenative.storage.enums.ShareAccessTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accessTier")
-      private final @Nullable Output<Either<String,ShareAccessTier>> accessTier;
+    private @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
-    public Output<Either<String,ShareAccessTier>> accessTier() {
-        return this.accessTier == null ? Codegen.empty() : this.accessTier;
+    public Optional<Output<Either<String,ShareAccessTier>>> accessTier() {
+        return Optional.ofNullable(this.accessTier);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -48,10 +48,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabledProtocols")
-      private final @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
+    private @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
-    public Output<Either<String,EnabledProtocols>> enabledProtocols() {
-        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
+    public Optional<Output<Either<String,EnabledProtocols>>> enabledProtocols() {
+        return Optional.ofNullable(this.enabledProtocols);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expand")
-      private final @Nullable Output<String> expand;
+    private @Nullable Output<String> expand;
 
-    public Output<String> expand() {
-        return this.expand == null ? Codegen.empty() : this.expand;
+    public Optional<Output<String>> expand() {
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -92,10 +92,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootSquash")
-      private final @Nullable Output<Either<String,RootSquashType>> rootSquash;
+    private @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
-    public Output<Either<String,RootSquashType>> rootSquash() {
-        return this.rootSquash == null ? Codegen.empty() : this.rootSquash;
+    public Optional<Output<Either<String,RootSquashType>>> rootSquash() {
+        return Optional.ofNullable(this.rootSquash);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareName")
-      private final @Nullable Output<String> shareName;
+    private @Nullable Output<String> shareName;
 
-    public Output<String> shareName() {
-        return this.shareName == null ? Codegen.empty() : this.shareName;
+    public Optional<Output<String>> shareName() {
+        return Optional.ofNullable(this.shareName);
     }
 
     /**
@@ -114,154 +114,130 @@ public final class FileShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareQuota")
-      private final @Nullable Output<Integer> shareQuota;
+    private @Nullable Output<Integer> shareQuota;
 
-    public Output<Integer> shareQuota() {
-        return this.shareQuota == null ? Codegen.empty() : this.shareQuota;
+    public Optional<Output<Integer>> shareQuota() {
+        return Optional.ofNullable(this.shareQuota);
     }
 
-    public FileShareArgs(
-        @Nullable Output<Either<String,ShareAccessTier>> accessTier,
-        Output<String> accountName,
-        @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols,
-        @Nullable Output<String> expand,
-        @Nullable Output<Map<String,String>> metadata,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,RootSquashType>> rootSquash,
-        @Nullable Output<String> shareName,
-        @Nullable Output<Integer> shareQuota) {
-        this.accessTier = accessTier;
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.enabledProtocols = enabledProtocols;
-        this.expand = expand;
-        this.metadata = metadata;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.rootSquash = rootSquash;
-        this.shareName = shareName;
-        this.shareQuota = shareQuota;
-    }
+    private FileShareArgs() {}
 
-    private FileShareArgs() {
-        this.accessTier = Codegen.empty();
-        this.accountName = Codegen.empty();
-        this.enabledProtocols = Codegen.empty();
-        this.expand = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.rootSquash = Codegen.empty();
-        this.shareName = Codegen.empty();
-        this.shareQuota = Codegen.empty();
+    private FileShareArgs(FileShareArgs $) {
+        this.accessTier = $.accessTier;
+        this.accountName = $.accountName;
+        this.enabledProtocols = $.enabledProtocols;
+        this.expand = $.expand;
+        this.metadata = $.metadata;
+        this.resourceGroupName = $.resourceGroupName;
+        this.rootSquash = $.rootSquash;
+        this.shareName = $.shareName;
+        this.shareQuota = $.shareQuota;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ShareAccessTier>> accessTier;
-        private Output<String> accountName;
-        private @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
-        private @Nullable Output<String> expand;
-        private @Nullable Output<Map<String,String>> metadata;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,RootSquashType>> rootSquash;
-        private @Nullable Output<String> shareName;
-        private @Nullable Output<Integer> shareQuota;
+        private FileShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileShareArgs();
         }
 
         public Builder(FileShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTier = defaults.accessTier;
-    	      this.accountName = defaults.accountName;
-    	      this.enabledProtocols = defaults.enabledProtocols;
-    	      this.expand = defaults.expand;
-    	      this.metadata = defaults.metadata;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.rootSquash = defaults.rootSquash;
-    	      this.shareName = defaults.shareName;
-    	      this.shareQuota = defaults.shareQuota;
+            $ = new FileShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTier(@Nullable Output<Either<String,ShareAccessTier>> accessTier) {
-            this.accessTier = accessTier;
+            $.accessTier = accessTier;
             return this;
         }
-        public Builder accessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
-            this.accessTier = Codegen.ofNullable(accessTier);
-            return this;
+
+        public Builder accessTier(Either<String,ShareAccessTier> accessTier) {
+            return accessTier(Output.of(accessTier));
         }
+
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder enabledProtocols(@Nullable Output<Either<String,EnabledProtocols>> enabledProtocols) {
-            this.enabledProtocols = enabledProtocols;
+            $.enabledProtocols = enabledProtocols;
             return this;
         }
-        public Builder enabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
-            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
-            return this;
+
+        public Builder enabledProtocols(Either<String,EnabledProtocols> enabledProtocols) {
+            return enabledProtocols(Output.of(enabledProtocols));
         }
+
         public Builder expand(@Nullable Output<String> expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
-        public Builder expand(@Nullable String expand) {
-            this.expand = Codegen.ofNullable(expand);
-            return this;
+
+        public Builder expand(String expand) {
+            return expand(Output.of(expand));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder rootSquash(@Nullable Output<Either<String,RootSquashType>> rootSquash) {
-            this.rootSquash = rootSquash;
+            $.rootSquash = rootSquash;
             return this;
         }
-        public Builder rootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
-            this.rootSquash = Codegen.ofNullable(rootSquash);
-            return this;
+
+        public Builder rootSquash(Either<String,RootSquashType> rootSquash) {
+            return rootSquash(Output.of(rootSquash));
         }
+
         public Builder shareName(@Nullable Output<String> shareName) {
-            this.shareName = shareName;
+            $.shareName = shareName;
             return this;
         }
-        public Builder shareName(@Nullable String shareName) {
-            this.shareName = Codegen.ofNullable(shareName);
-            return this;
+
+        public Builder shareName(String shareName) {
+            return shareName(Output.of(shareName));
         }
+
         public Builder shareQuota(@Nullable Output<Integer> shareQuota) {
-            this.shareQuota = shareQuota;
+            $.shareQuota = shareQuota;
             return this;
         }
-        public Builder shareQuota(@Nullable Integer shareQuota) {
-            this.shareQuota = Codegen.ofNullable(shareQuota);
-            return this;
-        }        public FileShareArgs build() {
-            return new FileShareArgs(accessTier, accountName, enabledProtocols, expand, metadata, resourceGroupName, rootSquash, shareName, shareQuota);
+
+        public Builder shareQuota(Integer shareQuota) {
+            return shareQuota(Output.of(shareQuota));
+        }
+
+        public FileShareArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

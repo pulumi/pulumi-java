@@ -17,7 +17,7 @@ public final class ListOrderDCAccessCodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="deviceName", required=true)
-      private final String deviceName;
+    private String deviceName;
 
     public String deviceName() {
         return this.deviceName;
@@ -28,55 +28,52 @@ public final class ListOrderDCAccessCodeArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListOrderDCAccessCodeArgs(
-        String deviceName,
-        String resourceGroupName) {
-        this.deviceName = Objects.requireNonNull(deviceName, "expected parameter 'deviceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListOrderDCAccessCodeArgs() {}
 
-    private ListOrderDCAccessCodeArgs() {
-        this.deviceName = null;
-        this.resourceGroupName = null;
+    private ListOrderDCAccessCodeArgs(ListOrderDCAccessCodeArgs $) {
+        this.deviceName = $.deviceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListOrderDCAccessCodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceName;
-        private String resourceGroupName;
+        private ListOrderDCAccessCodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListOrderDCAccessCodeArgs();
         }
 
         public Builder(ListOrderDCAccessCodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceName = defaults.deviceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListOrderDCAccessCodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceName(String deviceName) {
-            this.deviceName = Objects.requireNonNull(deviceName);
+            $.deviceName = deviceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListOrderDCAccessCodeArgs build() {
-            return new ListOrderDCAccessCodeArgs(deviceName, resourceGroupName);
+        }
+
+        public ListOrderDCAccessCodeArgs build() {
+            $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

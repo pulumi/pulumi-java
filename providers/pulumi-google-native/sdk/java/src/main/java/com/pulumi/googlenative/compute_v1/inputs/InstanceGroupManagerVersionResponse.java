@@ -18,7 +18,7 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="instanceTemplate", required=true)
-      private final String instanceTemplate;
+    private String instanceTemplate;
 
     public String instanceTemplate() {
         return this.instanceTemplate;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -40,64 +40,59 @@ public final class InstanceGroupManagerVersionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetSize", required=true)
-      private final FixedOrPercentResponse targetSize;
+    private FixedOrPercentResponse targetSize;
 
     public FixedOrPercentResponse targetSize() {
         return this.targetSize;
     }
 
-    public InstanceGroupManagerVersionResponse(
-        String instanceTemplate,
-        String name,
-        FixedOrPercentResponse targetSize) {
-        this.instanceTemplate = Objects.requireNonNull(instanceTemplate, "expected parameter 'instanceTemplate' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.targetSize = Objects.requireNonNull(targetSize, "expected parameter 'targetSize' to be non-null");
-    }
+    private InstanceGroupManagerVersionResponse() {}
 
-    private InstanceGroupManagerVersionResponse() {
-        this.instanceTemplate = null;
-        this.name = null;
-        this.targetSize = null;
+    private InstanceGroupManagerVersionResponse(InstanceGroupManagerVersionResponse $) {
+        this.instanceTemplate = $.instanceTemplate;
+        this.name = $.name;
+        this.targetSize = $.targetSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceTemplate;
-        private String name;
-        private FixedOrPercentResponse targetSize;
+        private InstanceGroupManagerVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerVersionResponse();
         }
 
         public Builder(InstanceGroupManagerVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceTemplate = defaults.instanceTemplate;
-    	      this.name = defaults.name;
-    	      this.targetSize = defaults.targetSize;
+            $ = new InstanceGroupManagerVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceTemplate(String instanceTemplate) {
-            this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
+            $.instanceTemplate = instanceTemplate;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder targetSize(FixedOrPercentResponse targetSize) {
-            this.targetSize = Objects.requireNonNull(targetSize);
+            $.targetSize = targetSize;
             return this;
-        }        public InstanceGroupManagerVersionResponse build() {
-            return new InstanceGroupManagerVersionResponse(instanceTemplate, name, targetSize);
+        }
+
+        public InstanceGroupManagerVersionResponse build() {
+            $.instanceTemplate = Objects.requireNonNull($.instanceTemplate, "expected parameter 'instanceTemplate' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.targetSize = Objects.requireNonNull($.targetSize, "expected parameter 'targetSize' to be non-null");
+            return $;
         }
     }
+
 }

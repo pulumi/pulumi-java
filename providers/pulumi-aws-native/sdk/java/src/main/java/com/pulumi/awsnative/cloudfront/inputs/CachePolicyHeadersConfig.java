@@ -16,65 +16,62 @@ public final class CachePolicyHeadersConfig extends com.pulumi.resources.InvokeA
     public static final CachePolicyHeadersConfig Empty = new CachePolicyHeadersConfig();
 
     @Import(name="headerBehavior", required=true)
-      private final String headerBehavior;
+    private String headerBehavior;
 
     public String headerBehavior() {
         return this.headerBehavior;
     }
 
     @Import(name="headers")
-      private final @Nullable List<String> headers;
+    private @Nullable List<String> headers;
 
-    public List<String> headers() {
-        return this.headers == null ? List.of() : this.headers;
+    public Optional<List<String>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
-    public CachePolicyHeadersConfig(
-        String headerBehavior,
-        @Nullable List<String> headers) {
-        this.headerBehavior = Objects.requireNonNull(headerBehavior, "expected parameter 'headerBehavior' to be non-null");
-        this.headers = headers;
-    }
+    private CachePolicyHeadersConfig() {}
 
-    private CachePolicyHeadersConfig() {
-        this.headerBehavior = null;
-        this.headers = List.of();
+    private CachePolicyHeadersConfig(CachePolicyHeadersConfig $) {
+        this.headerBehavior = $.headerBehavior;
+        this.headers = $.headers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CachePolicyHeadersConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerBehavior;
-        private @Nullable List<String> headers;
+        private CachePolicyHeadersConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new CachePolicyHeadersConfig();
         }
 
         public Builder(CachePolicyHeadersConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerBehavior = defaults.headerBehavior;
-    	      this.headers = defaults.headers;
+            $ = new CachePolicyHeadersConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder headerBehavior(String headerBehavior) {
-            this.headerBehavior = Objects.requireNonNull(headerBehavior);
+            $.headerBehavior = headerBehavior;
             return this;
         }
+
         public Builder headers(@Nullable List<String> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(String... headers) {
             return headers(List.of(headers));
-        }        public CachePolicyHeadersConfig build() {
-            return new CachePolicyHeadersConfig(headerBehavior, headers);
+        }
+
+        public CachePolicyHeadersConfig build() {
+            $.headerBehavior = Objects.requireNonNull($.headerBehavior, "expected parameter 'headerBehavior' to be non-null");
+            return $;
         }
     }
+
 }

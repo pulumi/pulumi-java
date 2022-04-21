@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class SecurityPolicyAdaptiveProtectionConfigGetArgs extends com.pul
      * 
      */
     @Import(name="layer7DdosDefenseConfig")
-      private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
+    private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
 
-    public Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig() {
-        return this.layer7DdosDefenseConfig == null ? Codegen.empty() : this.layer7DdosDefenseConfig;
+    public Optional<Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs>> layer7DdosDefenseConfig() {
+        return Optional.ofNullable(this.layer7DdosDefenseConfig);
     }
 
-    public SecurityPolicyAdaptiveProtectionConfigGetArgs(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
-        this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
-    }
+    private SecurityPolicyAdaptiveProtectionConfigGetArgs() {}
 
-    private SecurityPolicyAdaptiveProtectionConfigGetArgs() {
-        this.layer7DdosDefenseConfig = Codegen.empty();
+    private SecurityPolicyAdaptiveProtectionConfigGetArgs(SecurityPolicyAdaptiveProtectionConfigGetArgs $) {
+        this.layer7DdosDefenseConfig = $.layer7DdosDefenseConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyAdaptiveProtectionConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig;
+        private SecurityPolicyAdaptiveProtectionConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyAdaptiveProtectionConfigGetArgs();
         }
 
         public Builder(SecurityPolicyAdaptiveProtectionConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.layer7DdosDefenseConfig = defaults.layer7DdosDefenseConfig;
+            $ = new SecurityPolicyAdaptiveProtectionConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder layer7DdosDefenseConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs> layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
+            $.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }
-        public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs layer7DdosDefenseConfig) {
-            this.layer7DdosDefenseConfig = Codegen.ofNullable(layer7DdosDefenseConfig);
-            return this;
-        }        public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
-            return new SecurityPolicyAdaptiveProtectionConfigGetArgs(layer7DdosDefenseConfig);
+
+        public Builder layer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs layer7DdosDefenseConfig) {
+            return layer7DdosDefenseConfig(Output.of(layer7DdosDefenseConfig));
+        }
+
+        public SecurityPolicyAdaptiveProtectionConfigGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.WorkflowTriggerRecurrenceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="batchSize")
-      private final @Nullable Output<Integer> batchSize;
+    private @Nullable Output<Integer> batchSize;
 
-    public Output<Integer> batchSize() {
-        return this.batchSize == null ? Codegen.empty() : this.batchSize;
+    public Optional<Output<Integer>> batchSize() {
+        return Optional.ofNullable(this.batchSize);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="messageCount")
-      private final @Nullable Output<Integer> messageCount;
+    private @Nullable Output<Integer> messageCount;
 
-    public Output<Integer> messageCount() {
-        return this.messageCount == null ? Codegen.empty() : this.messageCount;
+    public Optional<Output<Integer>> messageCount() {
+        return Optional.ofNullable(this.messageCount);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class BatchReleaseCriteriaArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="recurrence")
-      private final @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
+    private @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
 
-    public Output<WorkflowTriggerRecurrenceArgs> recurrence() {
-        return this.recurrence == null ? Codegen.empty() : this.recurrence;
+    public Optional<Output<WorkflowTriggerRecurrenceArgs>> recurrence() {
+        return Optional.ofNullable(this.recurrence);
     }
 
-    public BatchReleaseCriteriaArgs(
-        @Nullable Output<Integer> batchSize,
-        @Nullable Output<Integer> messageCount,
-        @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence) {
-        this.batchSize = batchSize;
-        this.messageCount = messageCount;
-        this.recurrence = recurrence;
-    }
+    private BatchReleaseCriteriaArgs() {}
 
-    private BatchReleaseCriteriaArgs() {
-        this.batchSize = Codegen.empty();
-        this.messageCount = Codegen.empty();
-        this.recurrence = Codegen.empty();
+    private BatchReleaseCriteriaArgs(BatchReleaseCriteriaArgs $) {
+        this.batchSize = $.batchSize;
+        this.messageCount = $.messageCount;
+        this.recurrence = $.recurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BatchReleaseCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> batchSize;
-        private @Nullable Output<Integer> messageCount;
-        private @Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence;
+        private BatchReleaseCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BatchReleaseCriteriaArgs();
         }
 
         public Builder(BatchReleaseCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchSize = defaults.batchSize;
-    	      this.messageCount = defaults.messageCount;
-    	      this.recurrence = defaults.recurrence;
+            $ = new BatchReleaseCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchSize(@Nullable Output<Integer> batchSize) {
-            this.batchSize = batchSize;
+            $.batchSize = batchSize;
             return this;
         }
-        public Builder batchSize(@Nullable Integer batchSize) {
-            this.batchSize = Codegen.ofNullable(batchSize);
-            return this;
+
+        public Builder batchSize(Integer batchSize) {
+            return batchSize(Output.of(batchSize));
         }
+
         public Builder messageCount(@Nullable Output<Integer> messageCount) {
-            this.messageCount = messageCount;
+            $.messageCount = messageCount;
             return this;
         }
-        public Builder messageCount(@Nullable Integer messageCount) {
-            this.messageCount = Codegen.ofNullable(messageCount);
-            return this;
+
+        public Builder messageCount(Integer messageCount) {
+            return messageCount(Output.of(messageCount));
         }
+
         public Builder recurrence(@Nullable Output<WorkflowTriggerRecurrenceArgs> recurrence) {
-            this.recurrence = recurrence;
+            $.recurrence = recurrence;
             return this;
         }
-        public Builder recurrence(@Nullable WorkflowTriggerRecurrenceArgs recurrence) {
-            this.recurrence = Codegen.ofNullable(recurrence);
-            return this;
-        }        public BatchReleaseCriteriaArgs build() {
-            return new BatchReleaseCriteriaArgs(batchSize, messageCount, recurrence);
+
+        public Builder recurrence(WorkflowTriggerRecurrenceArgs recurrence) {
+            return recurrence(Output.of(recurrence));
+        }
+
+        public BatchReleaseCriteriaArgs build() {
+            return $;
         }
     }
+
 }

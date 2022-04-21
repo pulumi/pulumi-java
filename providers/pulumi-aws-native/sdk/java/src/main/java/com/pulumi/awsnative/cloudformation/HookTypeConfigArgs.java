@@ -6,9 +6,9 @@ package com.pulumi.awsnative.cloudformation;
 import com.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="configuration")
-      private final @Nullable Output<String> configuration;
+    private @Nullable Output<String> configuration;
 
-    public Output<String> configuration() {
-        return this.configuration == null ? Codegen.empty() : this.configuration;
+    public Optional<Output<String>> configuration() {
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="configurationAlias")
-      private final @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
+    private @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
 
-    public Output<HookTypeConfigConfigurationAlias> configurationAlias() {
-        return this.configurationAlias == null ? Codegen.empty() : this.configurationAlias;
+    public Optional<Output<HookTypeConfigConfigurationAlias>> configurationAlias() {
+        return Optional.ofNullable(this.configurationAlias);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="typeArn")
-      private final @Nullable Output<String> typeArn;
+    private @Nullable Output<String> typeArn;
 
-    public Output<String> typeArn() {
-        return this.typeArn == null ? Codegen.empty() : this.typeArn;
+    public Optional<Output<String>> typeArn() {
+        return Optional.ofNullable(this.typeArn);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class HookTypeConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="typeName")
-      private final @Nullable Output<String> typeName;
+    private @Nullable Output<String> typeName;
 
-    public Output<String> typeName() {
-        return this.typeName == null ? Codegen.empty() : this.typeName;
+    public Optional<Output<String>> typeName() {
+        return Optional.ofNullable(this.typeName);
     }
 
-    public HookTypeConfigArgs(
-        @Nullable Output<String> configuration,
-        @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias,
-        @Nullable Output<String> typeArn,
-        @Nullable Output<String> typeName) {
-        this.configuration = configuration;
-        this.configurationAlias = configurationAlias;
-        this.typeArn = typeArn;
-        this.typeName = typeName;
-    }
+    private HookTypeConfigArgs() {}
 
-    private HookTypeConfigArgs() {
-        this.configuration = Codegen.empty();
-        this.configurationAlias = Codegen.empty();
-        this.typeArn = Codegen.empty();
-        this.typeName = Codegen.empty();
+    private HookTypeConfigArgs(HookTypeConfigArgs $) {
+        this.configuration = $.configuration;
+        this.configurationAlias = $.configurationAlias;
+        this.typeArn = $.typeArn;
+        this.typeName = $.typeName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HookTypeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configuration;
-        private @Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias;
-        private @Nullable Output<String> typeArn;
-        private @Nullable Output<String> typeName;
+        private HookTypeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HookTypeConfigArgs();
         }
 
         public Builder(HookTypeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.configurationAlias = defaults.configurationAlias;
-    	      this.typeArn = defaults.typeArn;
-    	      this.typeName = defaults.typeName;
+            $ = new HookTypeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable Output<String> configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
-        public Builder configuration(@Nullable String configuration) {
-            this.configuration = Codegen.ofNullable(configuration);
-            return this;
+
+        public Builder configuration(String configuration) {
+            return configuration(Output.of(configuration));
         }
+
         public Builder configurationAlias(@Nullable Output<HookTypeConfigConfigurationAlias> configurationAlias) {
-            this.configurationAlias = configurationAlias;
+            $.configurationAlias = configurationAlias;
             return this;
         }
-        public Builder configurationAlias(@Nullable HookTypeConfigConfigurationAlias configurationAlias) {
-            this.configurationAlias = Codegen.ofNullable(configurationAlias);
-            return this;
+
+        public Builder configurationAlias(HookTypeConfigConfigurationAlias configurationAlias) {
+            return configurationAlias(Output.of(configurationAlias));
         }
+
         public Builder typeArn(@Nullable Output<String> typeArn) {
-            this.typeArn = typeArn;
+            $.typeArn = typeArn;
             return this;
         }
-        public Builder typeArn(@Nullable String typeArn) {
-            this.typeArn = Codegen.ofNullable(typeArn);
-            return this;
+
+        public Builder typeArn(String typeArn) {
+            return typeArn(Output.of(typeArn));
         }
+
         public Builder typeName(@Nullable Output<String> typeName) {
-            this.typeName = typeName;
+            $.typeName = typeName;
             return this;
         }
-        public Builder typeName(@Nullable String typeName) {
-            this.typeName = Codegen.ofNullable(typeName);
-            return this;
-        }        public HookTypeConfigArgs build() {
-            return new HookTypeConfigArgs(configuration, configurationAlias, typeArn, typeName);
+
+        public Builder typeName(String typeName) {
+            return typeName(Output.of(typeName));
+        }
+
+        public HookTypeConfigArgs build() {
+            return $;
         }
     }
+
 }

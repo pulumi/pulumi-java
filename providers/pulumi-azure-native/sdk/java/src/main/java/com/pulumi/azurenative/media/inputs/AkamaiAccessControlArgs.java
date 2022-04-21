@@ -6,9 +6,9 @@ package com.pulumi.azurenative.media.inputs;
 import com.pulumi.azurenative.media.inputs.AkamaiSignatureHeaderAuthenticationKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class AkamaiAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="akamaiSignatureHeaderAuthenticationKeyList")
-      private final @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
+    private @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
 
-    public Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList() {
-        return this.akamaiSignatureHeaderAuthenticationKeyList == null ? Codegen.empty() : this.akamaiSignatureHeaderAuthenticationKeyList;
+    public Optional<Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>>> akamaiSignatureHeaderAuthenticationKeyList() {
+        return Optional.ofNullable(this.akamaiSignatureHeaderAuthenticationKeyList);
     }
 
-    public AkamaiAccessControlArgs(@Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
-        this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
-    }
+    private AkamaiAccessControlArgs() {}
 
-    private AkamaiAccessControlArgs() {
-        this.akamaiSignatureHeaderAuthenticationKeyList = Codegen.empty();
+    private AkamaiAccessControlArgs(AkamaiAccessControlArgs $) {
+        this.akamaiSignatureHeaderAuthenticationKeyList = $.akamaiSignatureHeaderAuthenticationKeyList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AkamaiAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList;
+        private AkamaiAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AkamaiAccessControlArgs();
         }
 
         public Builder(AkamaiAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.akamaiSignatureHeaderAuthenticationKeyList = defaults.akamaiSignatureHeaderAuthenticationKeyList;
+            $ = new AkamaiAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable Output<List<AkamaiSignatureHeaderAuthenticationKeyArgs>> akamaiSignatureHeaderAuthenticationKeyList) {
-            this.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
+            $.akamaiSignatureHeaderAuthenticationKeyList = akamaiSignatureHeaderAuthenticationKeyList;
             return this;
         }
-        public Builder akamaiSignatureHeaderAuthenticationKeyList(@Nullable List<AkamaiSignatureHeaderAuthenticationKeyArgs> akamaiSignatureHeaderAuthenticationKeyList) {
-            this.akamaiSignatureHeaderAuthenticationKeyList = Codegen.ofNullable(akamaiSignatureHeaderAuthenticationKeyList);
-            return this;
+
+        public Builder akamaiSignatureHeaderAuthenticationKeyList(List<AkamaiSignatureHeaderAuthenticationKeyArgs> akamaiSignatureHeaderAuthenticationKeyList) {
+            return akamaiSignatureHeaderAuthenticationKeyList(Output.of(akamaiSignatureHeaderAuthenticationKeyList));
         }
+
         public Builder akamaiSignatureHeaderAuthenticationKeyList(AkamaiSignatureHeaderAuthenticationKeyArgs... akamaiSignatureHeaderAuthenticationKeyList) {
             return akamaiSignatureHeaderAuthenticationKeyList(List.of(akamaiSignatureHeaderAuthenticationKeyList));
-        }        public AkamaiAccessControlArgs build() {
-            return new AkamaiAccessControlArgs(akamaiSignatureHeaderAuthenticationKeyList);
+        }
+
+        public AkamaiAccessControlArgs build() {
+            return $;
         }
     }
+
 }

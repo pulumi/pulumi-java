@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="podAffinityTerm", required=true)
-      private final Output<PodAffinityTermArgs> podAffinityTerm;
+    private Output<PodAffinityTermArgs> podAffinityTerm;
 
     public Output<PodAffinityTermArgs> podAffinityTerm() {
         return this.podAffinityTerm;
@@ -35,63 +34,60 @@ public final class WeightedPodAffinityTermArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="weight", required=true)
-      private final Output<Integer> weight;
+    private Output<Integer> weight;
 
     public Output<Integer> weight() {
         return this.weight;
     }
 
-    public WeightedPodAffinityTermArgs(
-        Output<PodAffinityTermArgs> podAffinityTerm,
-        Output<Integer> weight) {
-        this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm, "expected parameter 'podAffinityTerm' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private WeightedPodAffinityTermArgs() {}
 
-    private WeightedPodAffinityTermArgs() {
-        this.podAffinityTerm = Codegen.empty();
-        this.weight = Codegen.empty();
+    private WeightedPodAffinityTermArgs(WeightedPodAffinityTermArgs $) {
+        this.podAffinityTerm = $.podAffinityTerm;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeightedPodAffinityTermArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PodAffinityTermArgs> podAffinityTerm;
-        private Output<Integer> weight;
+        private WeightedPodAffinityTermArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeightedPodAffinityTermArgs();
         }
 
         public Builder(WeightedPodAffinityTermArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podAffinityTerm = defaults.podAffinityTerm;
-    	      this.weight = defaults.weight;
+            $ = new WeightedPodAffinityTermArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podAffinityTerm(Output<PodAffinityTermArgs> podAffinityTerm) {
-            this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm);
+            $.podAffinityTerm = podAffinityTerm;
             return this;
         }
+
         public Builder podAffinityTerm(PodAffinityTermArgs podAffinityTerm) {
-            this.podAffinityTerm = Output.of(Objects.requireNonNull(podAffinityTerm));
-            return this;
+            return podAffinityTerm(Output.of(podAffinityTerm));
         }
+
         public Builder weight(Output<Integer> weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Output.of(Objects.requireNonNull(weight));
-            return this;
-        }        public WeightedPodAffinityTermArgs build() {
-            return new WeightedPodAffinityTermArgs(podAffinityTerm, weight);
+            return weight(Output.of(weight));
+        }
+
+        public WeightedPodAffinityTermArgs build() {
+            $.podAffinityTerm = Objects.requireNonNull($.podAffinityTerm, "expected parameter 'podAffinityTerm' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

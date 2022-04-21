@@ -25,10 +25,10 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="operatorType", required=true)
-      private final String operatorType;
+    private String operatorType;
 
     public String operatorType() {
         return this.operatorType;
@@ -48,64 +48,57 @@ public final class BoolEqualsAdvancedFilterResponse extends com.pulumi.resources
      * 
      */
     @Import(name="value")
-      private final @Nullable Boolean value;
+    private @Nullable Boolean value;
 
     public Optional<Boolean> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public BoolEqualsAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable Boolean value) {
-        this.key = key;
-        this.operatorType = Codegen.stringProp("operatorType").arg(operatorType).require();
-        this.value = value;
-    }
+    private BoolEqualsAdvancedFilterResponse() {}
 
-    private BoolEqualsAdvancedFilterResponse() {
-        this.key = null;
-        this.operatorType = null;
-        this.value = null;
+    private BoolEqualsAdvancedFilterResponse(BoolEqualsAdvancedFilterResponse $) {
+        this.key = $.key;
+        this.operatorType = $.operatorType;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoolEqualsAdvancedFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String key;
-        private String operatorType;
-        private @Nullable Boolean value;
+        private BoolEqualsAdvancedFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoolEqualsAdvancedFilterResponse();
         }
 
         public Builder(BoolEqualsAdvancedFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operatorType = defaults.operatorType;
-    	      this.value = defaults.value;
+            $ = new BoolEqualsAdvancedFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
+
         public Builder operatorType(String operatorType) {
-            this.operatorType = Objects.requireNonNull(operatorType);
+            $.operatorType = operatorType;
             return this;
         }
+
         public Builder value(@Nullable Boolean value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public BoolEqualsAdvancedFilterResponse build() {
-            return new BoolEqualsAdvancedFilterResponse(key, operatorType, value);
+        }
+
+        public BoolEqualsAdvancedFilterResponse build() {
+            $.operatorType = Codegen.stringProp("operatorType").arg($.operatorType).require();
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
      * 
      */
     @Import(name="changeComputeType", required=true)
-      private final Boolean changeComputeType;
+    private Boolean changeComputeType;
 
     public Boolean changeComputeType() {
         return this.changeComputeType;
@@ -28,7 +28,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
      * 
      */
     @Import(name="increaseVolumeSize", required=true)
-      private final Boolean increaseVolumeSize;
+    private Boolean increaseVolumeSize;
 
     public Boolean increaseVolumeSize() {
         return this.increaseVolumeSize;
@@ -39,7 +39,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
      * 
      */
     @Import(name="rebuildWorkspace", required=true)
-      private final Boolean rebuildWorkspace;
+    private Boolean rebuildWorkspace;
 
     public Boolean rebuildWorkspace() {
         return this.rebuildWorkspace;
@@ -50,7 +50,7 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
      * 
      */
     @Import(name="restartWorkspace", required=true)
-      private final Boolean restartWorkspace;
+    private Boolean restartWorkspace;
 
     public Boolean restartWorkspace() {
         return this.restartWorkspace;
@@ -61,82 +61,73 @@ public final class GetDirectorySelfServicePermission extends com.pulumi.resource
      * 
      */
     @Import(name="switchRunningMode", required=true)
-      private final Boolean switchRunningMode;
+    private Boolean switchRunningMode;
 
     public Boolean switchRunningMode() {
         return this.switchRunningMode;
     }
 
-    public GetDirectorySelfServicePermission(
-        Boolean changeComputeType,
-        Boolean increaseVolumeSize,
-        Boolean rebuildWorkspace,
-        Boolean restartWorkspace,
-        Boolean switchRunningMode) {
-        this.changeComputeType = Objects.requireNonNull(changeComputeType, "expected parameter 'changeComputeType' to be non-null");
-        this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize, "expected parameter 'increaseVolumeSize' to be non-null");
-        this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace, "expected parameter 'rebuildWorkspace' to be non-null");
-        this.restartWorkspace = Objects.requireNonNull(restartWorkspace, "expected parameter 'restartWorkspace' to be non-null");
-        this.switchRunningMode = Objects.requireNonNull(switchRunningMode, "expected parameter 'switchRunningMode' to be non-null");
-    }
+    private GetDirectorySelfServicePermission() {}
 
-    private GetDirectorySelfServicePermission() {
-        this.changeComputeType = null;
-        this.increaseVolumeSize = null;
-        this.rebuildWorkspace = null;
-        this.restartWorkspace = null;
-        this.switchRunningMode = null;
+    private GetDirectorySelfServicePermission(GetDirectorySelfServicePermission $) {
+        this.changeComputeType = $.changeComputeType;
+        this.increaseVolumeSize = $.increaseVolumeSize;
+        this.rebuildWorkspace = $.rebuildWorkspace;
+        this.restartWorkspace = $.restartWorkspace;
+        this.switchRunningMode = $.switchRunningMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDirectorySelfServicePermission defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean changeComputeType;
-        private Boolean increaseVolumeSize;
-        private Boolean rebuildWorkspace;
-        private Boolean restartWorkspace;
-        private Boolean switchRunningMode;
+        private GetDirectorySelfServicePermission $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDirectorySelfServicePermission();
         }
 
         public Builder(GetDirectorySelfServicePermission defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.changeComputeType = defaults.changeComputeType;
-    	      this.increaseVolumeSize = defaults.increaseVolumeSize;
-    	      this.rebuildWorkspace = defaults.rebuildWorkspace;
-    	      this.restartWorkspace = defaults.restartWorkspace;
-    	      this.switchRunningMode = defaults.switchRunningMode;
+            $ = new GetDirectorySelfServicePermission(Objects.requireNonNull(defaults));
         }
 
         public Builder changeComputeType(Boolean changeComputeType) {
-            this.changeComputeType = Objects.requireNonNull(changeComputeType);
+            $.changeComputeType = changeComputeType;
             return this;
         }
+
         public Builder increaseVolumeSize(Boolean increaseVolumeSize) {
-            this.increaseVolumeSize = Objects.requireNonNull(increaseVolumeSize);
+            $.increaseVolumeSize = increaseVolumeSize;
             return this;
         }
+
         public Builder rebuildWorkspace(Boolean rebuildWorkspace) {
-            this.rebuildWorkspace = Objects.requireNonNull(rebuildWorkspace);
+            $.rebuildWorkspace = rebuildWorkspace;
             return this;
         }
+
         public Builder restartWorkspace(Boolean restartWorkspace) {
-            this.restartWorkspace = Objects.requireNonNull(restartWorkspace);
+            $.restartWorkspace = restartWorkspace;
             return this;
         }
+
         public Builder switchRunningMode(Boolean switchRunningMode) {
-            this.switchRunningMode = Objects.requireNonNull(switchRunningMode);
+            $.switchRunningMode = switchRunningMode;
             return this;
-        }        public GetDirectorySelfServicePermission build() {
-            return new GetDirectorySelfServicePermission(changeComputeType, increaseVolumeSize, rebuildWorkspace, restartWorkspace, switchRunningMode);
+        }
+
+        public GetDirectorySelfServicePermission build() {
+            $.changeComputeType = Objects.requireNonNull($.changeComputeType, "expected parameter 'changeComputeType' to be non-null");
+            $.increaseVolumeSize = Objects.requireNonNull($.increaseVolumeSize, "expected parameter 'increaseVolumeSize' to be non-null");
+            $.rebuildWorkspace = Objects.requireNonNull($.rebuildWorkspace, "expected parameter 'rebuildWorkspace' to be non-null");
+            $.restartWorkspace = Objects.requireNonNull($.restartWorkspace, "expected parameter 'restartWorkspace' to be non-null");
+            $.switchRunningMode = Objects.requireNonNull($.switchRunningMode, "expected parameter 'switchRunningMode' to be non-null");
+            return $;
         }
     }
+
 }

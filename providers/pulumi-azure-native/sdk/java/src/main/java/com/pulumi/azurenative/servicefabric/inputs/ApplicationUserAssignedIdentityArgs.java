@@ -5,7 +5,6 @@ package com.pulumi.azurenative.servicefabric.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -30,63 +29,60 @@ public final class ApplicationUserAssignedIdentityArgs extends com.pulumi.resour
      * 
      */
     @Import(name="principalId", required=true)
-      private final Output<String> principalId;
+    private Output<String> principalId;
 
     public Output<String> principalId() {
         return this.principalId;
     }
 
-    public ApplicationUserAssignedIdentityArgs(
-        Output<String> name,
-        Output<String> principalId) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.principalId = Objects.requireNonNull(principalId, "expected parameter 'principalId' to be non-null");
-    }
+    private ApplicationUserAssignedIdentityArgs() {}
 
-    private ApplicationUserAssignedIdentityArgs() {
-        this.name = Codegen.empty();
-        this.principalId = Codegen.empty();
+    private ApplicationUserAssignedIdentityArgs(ApplicationUserAssignedIdentityArgs $) {
+        this.name = $.name;
+        this.principalId = $.principalId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationUserAssignedIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> principalId;
+        private ApplicationUserAssignedIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationUserAssignedIdentityArgs();
         }
 
         public Builder(ApplicationUserAssignedIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.principalId = defaults.principalId;
+            $ = new ApplicationUserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder principalId(Output<String> principalId) {
-            this.principalId = Objects.requireNonNull(principalId);
+            $.principalId = principalId;
             return this;
         }
+
         public Builder principalId(String principalId) {
-            this.principalId = Output.of(Objects.requireNonNull(principalId));
-            return this;
-        }        public ApplicationUserAssignedIdentityArgs build() {
-            return new ApplicationUserAssignedIdentityArgs(name, principalId);
+            return principalId(Output.of(principalId));
+        }
+
+        public ApplicationUserAssignedIdentityArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.principalId = Objects.requireNonNull($.principalId, "expected parameter 'principalId' to be non-null");
+            return $;
         }
     }
+
 }

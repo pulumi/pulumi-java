@@ -15,78 +15,72 @@ public final class GetEndpointPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetEndpointPolicyArgs Empty = new GetEndpointPolicyArgs();
 
     @Import(name="endpointPolicyId", required=true)
-      private final String endpointPolicyId;
+    private String endpointPolicyId;
 
     public String endpointPolicyId() {
         return this.endpointPolicyId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEndpointPolicyArgs(
-        String endpointPolicyId,
-        String location,
-        @Nullable String project) {
-        this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId, "expected parameter 'endpointPolicyId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetEndpointPolicyArgs() {}
 
-    private GetEndpointPolicyArgs() {
-        this.endpointPolicyId = null;
-        this.location = null;
-        this.project = null;
+    private GetEndpointPolicyArgs(GetEndpointPolicyArgs $) {
+        this.endpointPolicyId = $.endpointPolicyId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEndpointPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpointPolicyId;
-        private String location;
-        private @Nullable String project;
+        private GetEndpointPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEndpointPolicyArgs();
         }
 
         public Builder(GetEndpointPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointPolicyId = defaults.endpointPolicyId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetEndpointPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointPolicyId(String endpointPolicyId) {
-            this.endpointPolicyId = Objects.requireNonNull(endpointPolicyId);
+            $.endpointPolicyId = endpointPolicyId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEndpointPolicyArgs build() {
-            return new GetEndpointPolicyArgs(endpointPolicyId, location, project);
+        }
+
+        public GetEndpointPolicyArgs build() {
+            $.endpointPolicyId = Objects.requireNonNull($.endpointPolicyId, "expected parameter 'endpointPolicyId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

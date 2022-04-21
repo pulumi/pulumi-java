@@ -18,94 +18,83 @@ public final class DeliveryStreamDataFormatConversionConfiguration extends com.p
     public static final DeliveryStreamDataFormatConversionConfiguration Empty = new DeliveryStreamDataFormatConversionConfiguration();
 
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     @Import(name="inputFormatConfiguration")
-      private final @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
+    private @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
 
     public Optional<DeliveryStreamInputFormatConfiguration> inputFormatConfiguration() {
-        return this.inputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.inputFormatConfiguration);
+        return Optional.ofNullable(this.inputFormatConfiguration);
     }
 
     @Import(name="outputFormatConfiguration")
-      private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
+    private @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
 
     public Optional<DeliveryStreamOutputFormatConfiguration> outputFormatConfiguration() {
-        return this.outputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.outputFormatConfiguration);
+        return Optional.ofNullable(this.outputFormatConfiguration);
     }
 
     @Import(name="schemaConfiguration")
-      private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
+    private @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
     public Optional<DeliveryStreamSchemaConfiguration> schemaConfiguration() {
-        return this.schemaConfiguration == null ? Optional.empty() : Optional.ofNullable(this.schemaConfiguration);
+        return Optional.ofNullable(this.schemaConfiguration);
     }
 
-    public DeliveryStreamDataFormatConversionConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
-        @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
-        @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
-        this.enabled = enabled;
-        this.inputFormatConfiguration = inputFormatConfiguration;
-        this.outputFormatConfiguration = outputFormatConfiguration;
-        this.schemaConfiguration = schemaConfiguration;
-    }
+    private DeliveryStreamDataFormatConversionConfiguration() {}
 
-    private DeliveryStreamDataFormatConversionConfiguration() {
-        this.enabled = null;
-        this.inputFormatConfiguration = null;
-        this.outputFormatConfiguration = null;
-        this.schemaConfiguration = null;
+    private DeliveryStreamDataFormatConversionConfiguration(DeliveryStreamDataFormatConversionConfiguration $) {
+        this.enabled = $.enabled;
+        this.inputFormatConfiguration = $.inputFormatConfiguration;
+        this.outputFormatConfiguration = $.outputFormatConfiguration;
+        this.schemaConfiguration = $.schemaConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamDataFormatConversionConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean enabled;
-        private @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
-        private @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
-        private @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
+        private DeliveryStreamDataFormatConversionConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamDataFormatConversionConfiguration();
         }
 
         public Builder(DeliveryStreamDataFormatConversionConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.inputFormatConfiguration = defaults.inputFormatConfiguration;
-    	      this.outputFormatConfiguration = defaults.outputFormatConfiguration;
-    	      this.schemaConfiguration = defaults.schemaConfiguration;
+            $ = new DeliveryStreamDataFormatConversionConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
-            this.inputFormatConfiguration = inputFormatConfiguration;
+            $.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
+
         public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
-            this.outputFormatConfiguration = outputFormatConfiguration;
+            $.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
+
         public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
-            this.schemaConfiguration = schemaConfiguration;
+            $.schemaConfiguration = schemaConfiguration;
             return this;
-        }        public DeliveryStreamDataFormatConversionConfiguration build() {
-            return new DeliveryStreamDataFormatConversionConfiguration(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
+        }
+
+        public DeliveryStreamDataFormatConversionConfiguration build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.InstancePropertiesArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.SourceInstanceParamsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -51,17 +51,17 @@ public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<InstancePropertiesArgs> properties;
+    private @Nullable Output<InstancePropertiesArgs> properties;
 
-    public Output<InstancePropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<InstancePropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceInstance")
-      private final @Nullable Output<String> sourceInstance;
+    private @Nullable Output<String> sourceInstance;
 
-    public Output<String> sourceInstance() {
-        return this.sourceInstance == null ? Codegen.empty() : this.sourceInstance;
+    public Optional<Output<String>> sourceInstance() {
+        return Optional.ofNullable(this.sourceInstance);
     }
 
     /**
@@ -80,128 +80,108 @@ public final class InstanceTemplateArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceInstanceParams")
-      private final @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
+    private @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
 
-    public Output<SourceInstanceParamsArgs> sourceInstanceParams() {
-        return this.sourceInstanceParams == null ? Codegen.empty() : this.sourceInstanceParams;
+    public Optional<Output<SourceInstanceParamsArgs>> sourceInstanceParams() {
+        return Optional.ofNullable(this.sourceInstanceParams);
     }
 
-    public InstanceTemplateArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<InstancePropertiesArgs> properties,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> sourceInstance,
-        @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.properties = properties;
-        this.requestId = requestId;
-        this.sourceInstance = sourceInstance;
-        this.sourceInstanceParams = sourceInstanceParams;
-    }
+    private InstanceTemplateArgs() {}
 
-    private InstanceTemplateArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sourceInstance = Codegen.empty();
-        this.sourceInstanceParams = Codegen.empty();
+    private InstanceTemplateArgs(InstanceTemplateArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.properties = $.properties;
+        this.requestId = $.requestId;
+        this.sourceInstance = $.sourceInstance;
+        this.sourceInstanceParams = $.sourceInstanceParams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstancePropertiesArgs> properties;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> sourceInstance;
-        private @Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams;
+        private InstanceTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateArgs();
         }
 
         public Builder(InstanceTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.properties = defaults.properties;
-    	      this.requestId = defaults.requestId;
-    	      this.sourceInstance = defaults.sourceInstance;
-    	      this.sourceInstanceParams = defaults.sourceInstanceParams;
+            $ = new InstanceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder properties(@Nullable Output<InstancePropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable InstancePropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(InstancePropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sourceInstance(@Nullable Output<String> sourceInstance) {
-            this.sourceInstance = sourceInstance;
+            $.sourceInstance = sourceInstance;
             return this;
         }
-        public Builder sourceInstance(@Nullable String sourceInstance) {
-            this.sourceInstance = Codegen.ofNullable(sourceInstance);
-            return this;
+
+        public Builder sourceInstance(String sourceInstance) {
+            return sourceInstance(Output.of(sourceInstance));
         }
+
         public Builder sourceInstanceParams(@Nullable Output<SourceInstanceParamsArgs> sourceInstanceParams) {
-            this.sourceInstanceParams = sourceInstanceParams;
+            $.sourceInstanceParams = sourceInstanceParams;
             return this;
         }
-        public Builder sourceInstanceParams(@Nullable SourceInstanceParamsArgs sourceInstanceParams) {
-            this.sourceInstanceParams = Codegen.ofNullable(sourceInstanceParams);
-            return this;
-        }        public InstanceTemplateArgs build() {
-            return new InstanceTemplateArgs(description, name, project, properties, requestId, sourceInstance, sourceInstanceParams);
+
+        public Builder sourceInstanceParams(SourceInstanceParamsArgs sourceInstanceParams) {
+            return sourceInstanceParams(Output.of(sourceInstanceParams));
+        }
+
+        public InstanceTemplateArgs build() {
+            return $;
         }
     }
+
 }

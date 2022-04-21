@@ -5,11 +5,11 @@ package com.pulumi.awsnative.globalaccelerator.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="clientIPPreservationEnabled")
-      private final @Nullable Output<Boolean> clientIPPreservationEnabled;
+    private @Nullable Output<Boolean> clientIPPreservationEnabled;
 
-    public Output<Boolean> clientIPPreservationEnabled() {
-        return this.clientIPPreservationEnabled == null ? Codegen.empty() : this.clientIPPreservationEnabled;
+    public Optional<Output<Boolean>> clientIPPreservationEnabled() {
+        return Optional.ofNullable(this.clientIPPreservationEnabled);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="endpointId", required=true)
-      private final Output<String> endpointId;
+    private Output<String> endpointId;
 
     public Output<String> endpointId() {
         return this.endpointId;
@@ -48,76 +48,69 @@ public final class EndpointGroupEndpointConfigurationArgs extends com.pulumi.res
      * 
      */
     @Import(name="weight")
-      private final @Nullable Output<Integer> weight;
+    private @Nullable Output<Integer> weight;
 
-    public Output<Integer> weight() {
-        return this.weight == null ? Codegen.empty() : this.weight;
+    public Optional<Output<Integer>> weight() {
+        return Optional.ofNullable(this.weight);
     }
 
-    public EndpointGroupEndpointConfigurationArgs(
-        @Nullable Output<Boolean> clientIPPreservationEnabled,
-        Output<String> endpointId,
-        @Nullable Output<Integer> weight) {
-        this.clientIPPreservationEnabled = clientIPPreservationEnabled;
-        this.endpointId = Objects.requireNonNull(endpointId, "expected parameter 'endpointId' to be non-null");
-        this.weight = weight;
-    }
+    private EndpointGroupEndpointConfigurationArgs() {}
 
-    private EndpointGroupEndpointConfigurationArgs() {
-        this.clientIPPreservationEnabled = Codegen.empty();
-        this.endpointId = Codegen.empty();
-        this.weight = Codegen.empty();
+    private EndpointGroupEndpointConfigurationArgs(EndpointGroupEndpointConfigurationArgs $) {
+        this.clientIPPreservationEnabled = $.clientIPPreservationEnabled;
+        this.endpointId = $.endpointId;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointGroupEndpointConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> clientIPPreservationEnabled;
-        private Output<String> endpointId;
-        private @Nullable Output<Integer> weight;
+        private EndpointGroupEndpointConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointGroupEndpointConfigurationArgs();
         }
 
         public Builder(EndpointGroupEndpointConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientIPPreservationEnabled = defaults.clientIPPreservationEnabled;
-    	      this.endpointId = defaults.endpointId;
-    	      this.weight = defaults.weight;
+            $ = new EndpointGroupEndpointConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientIPPreservationEnabled(@Nullable Output<Boolean> clientIPPreservationEnabled) {
-            this.clientIPPreservationEnabled = clientIPPreservationEnabled;
+            $.clientIPPreservationEnabled = clientIPPreservationEnabled;
             return this;
         }
-        public Builder clientIPPreservationEnabled(@Nullable Boolean clientIPPreservationEnabled) {
-            this.clientIPPreservationEnabled = Codegen.ofNullable(clientIPPreservationEnabled);
-            return this;
+
+        public Builder clientIPPreservationEnabled(Boolean clientIPPreservationEnabled) {
+            return clientIPPreservationEnabled(Output.of(clientIPPreservationEnabled));
         }
+
         public Builder endpointId(Output<String> endpointId) {
-            this.endpointId = Objects.requireNonNull(endpointId);
+            $.endpointId = endpointId;
             return this;
         }
+
         public Builder endpointId(String endpointId) {
-            this.endpointId = Output.of(Objects.requireNonNull(endpointId));
-            return this;
+            return endpointId(Output.of(endpointId));
         }
+
         public Builder weight(@Nullable Output<Integer> weight) {
-            this.weight = weight;
+            $.weight = weight;
             return this;
         }
-        public Builder weight(@Nullable Integer weight) {
-            this.weight = Codegen.ofNullable(weight);
-            return this;
-        }        public EndpointGroupEndpointConfigurationArgs build() {
-            return new EndpointGroupEndpointConfigurationArgs(clientIPPreservationEnabled, endpointId, weight);
+
+        public Builder weight(Integer weight) {
+            return weight(Output.of(weight));
+        }
+
+        public EndpointGroupEndpointConfigurationArgs build() {
+            $.endpointId = Objects.requireNonNull($.endpointId, "expected parameter 'endpointId' to be non-null");
+            return $;
         }
     }
+
 }

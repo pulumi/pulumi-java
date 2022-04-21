@@ -5,7 +5,6 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class VirtualNetworkBgpCommunitiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="virtualNetworkCommunity", required=true)
-      private final Output<String> virtualNetworkCommunity;
+    private Output<String> virtualNetworkCommunity;
 
     public Output<String> virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
 
-    public VirtualNetworkBgpCommunitiesArgs(Output<String> virtualNetworkCommunity) {
-        this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity, "expected parameter 'virtualNetworkCommunity' to be non-null");
-    }
+    private VirtualNetworkBgpCommunitiesArgs() {}
 
-    private VirtualNetworkBgpCommunitiesArgs() {
-        this.virtualNetworkCommunity = Codegen.empty();
+    private VirtualNetworkBgpCommunitiesArgs(VirtualNetworkBgpCommunitiesArgs $) {
+        this.virtualNetworkCommunity = $.virtualNetworkCommunity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNetworkBgpCommunitiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> virtualNetworkCommunity;
+        private VirtualNetworkBgpCommunitiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNetworkBgpCommunitiesArgs();
         }
 
         public Builder(VirtualNetworkBgpCommunitiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualNetworkCommunity = defaults.virtualNetworkCommunity;
+            $ = new VirtualNetworkBgpCommunitiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualNetworkCommunity(Output<String> virtualNetworkCommunity) {
-            this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
+            $.virtualNetworkCommunity = virtualNetworkCommunity;
             return this;
         }
+
         public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
-            this.virtualNetworkCommunity = Output.of(Objects.requireNonNull(virtualNetworkCommunity));
-            return this;
-        }        public VirtualNetworkBgpCommunitiesArgs build() {
-            return new VirtualNetworkBgpCommunitiesArgs(virtualNetworkCommunity);
+            return virtualNetworkCommunity(Output.of(virtualNetworkCommunity));
+        }
+
+        public VirtualNetworkBgpCommunitiesArgs build() {
+            $.virtualNetworkCommunity = Objects.requireNonNull($.virtualNetworkCommunity, "expected parameter 'virtualNetworkCommunity' to be non-null");
+            return $;
         }
     }
+
 }

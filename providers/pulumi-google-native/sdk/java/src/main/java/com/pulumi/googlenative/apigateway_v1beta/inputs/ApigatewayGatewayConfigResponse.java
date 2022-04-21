@@ -21,45 +21,45 @@ public final class ApigatewayGatewayConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="backendConfig", required=true)
-      private final ApigatewayBackendConfigResponse backendConfig;
+    private ApigatewayBackendConfigResponse backendConfig;
 
     public ApigatewayBackendConfigResponse backendConfig() {
         return this.backendConfig;
     }
 
-    public ApigatewayGatewayConfigResponse(ApigatewayBackendConfigResponse backendConfig) {
-        this.backendConfig = Objects.requireNonNull(backendConfig, "expected parameter 'backendConfig' to be non-null");
-    }
+    private ApigatewayGatewayConfigResponse() {}
 
-    private ApigatewayGatewayConfigResponse() {
-        this.backendConfig = null;
+    private ApigatewayGatewayConfigResponse(ApigatewayGatewayConfigResponse $) {
+        this.backendConfig = $.backendConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayGatewayConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApigatewayBackendConfigResponse backendConfig;
+        private ApigatewayGatewayConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayGatewayConfigResponse();
         }
 
         public Builder(ApigatewayGatewayConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendConfig = defaults.backendConfig;
+            $ = new ApigatewayGatewayConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendConfig(ApigatewayBackendConfigResponse backendConfig) {
-            this.backendConfig = Objects.requireNonNull(backendConfig);
+            $.backendConfig = backendConfig;
             return this;
-        }        public ApigatewayGatewayConfigResponse build() {
-            return new ApigatewayGatewayConfigResponse(backendConfig);
+        }
+
+        public ApigatewayGatewayConfigResponse build() {
+            $.backendConfig = Objects.requireNonNull($.backendConfig, "expected parameter 'backendConfig' to be non-null");
+            return $;
         }
     }
+
 }

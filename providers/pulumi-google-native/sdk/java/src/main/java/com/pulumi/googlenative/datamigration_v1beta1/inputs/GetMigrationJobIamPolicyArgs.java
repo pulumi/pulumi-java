@@ -15,94 +15,85 @@ public final class GetMigrationJobIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetMigrationJobIamPolicyArgs Empty = new GetMigrationJobIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="migrationJobId", required=true)
-      private final String migrationJobId;
+    private String migrationJobId;
 
     public String migrationJobId() {
         return this.migrationJobId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMigrationJobIamPolicyArgs(
-        String location,
-        String migrationJobId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.migrationJobId = Objects.requireNonNull(migrationJobId, "expected parameter 'migrationJobId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetMigrationJobIamPolicyArgs() {}
 
-    private GetMigrationJobIamPolicyArgs() {
-        this.location = null;
-        this.migrationJobId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetMigrationJobIamPolicyArgs(GetMigrationJobIamPolicyArgs $) {
+        this.location = $.location;
+        this.migrationJobId = $.migrationJobId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMigrationJobIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String migrationJobId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetMigrationJobIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMigrationJobIamPolicyArgs();
         }
 
         public Builder(GetMigrationJobIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.migrationJobId = defaults.migrationJobId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetMigrationJobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder migrationJobId(String migrationJobId) {
-            this.migrationJobId = Objects.requireNonNull(migrationJobId);
+            $.migrationJobId = migrationJobId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMigrationJobIamPolicyArgs build() {
-            return new GetMigrationJobIamPolicyArgs(location, migrationJobId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetMigrationJobIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.migrationJobId = Objects.requireNonNull($.migrationJobId, "expected parameter 'migrationJobId' to be non-null");
+            return $;
         }
     }
+
 }

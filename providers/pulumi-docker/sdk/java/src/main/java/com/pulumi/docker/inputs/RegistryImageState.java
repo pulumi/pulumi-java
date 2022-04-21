@@ -5,11 +5,11 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.RegistryImageBuildGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="build")
-      private final @Nullable Output<RegistryImageBuildGetArgs> build;
+    private @Nullable Output<RegistryImageBuildGetArgs> build;
 
-    public Output<RegistryImageBuildGetArgs> build() {
-        return this.build == null ? Codegen.empty() : this.build;
+    public Optional<Output<RegistryImageBuildGetArgs>> build() {
+        return Optional.ofNullable(this.build);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="insecureSkipVerify")
-      private final @Nullable Output<Boolean> insecureSkipVerify;
+    private @Nullable Output<Boolean> insecureSkipVerify;
 
-    public Output<Boolean> insecureSkipVerify() {
-        return this.insecureSkipVerify == null ? Codegen.empty() : this.insecureSkipVerify;
+    public Optional<Output<Boolean>> insecureSkipVerify() {
+        return Optional.ofNullable(this.insecureSkipVerify);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keepRemotely")
-      private final @Nullable Output<Boolean> keepRemotely;
+    private @Nullable Output<Boolean> keepRemotely;
 
-    public Output<Boolean> keepRemotely() {
-        return this.keepRemotely == null ? Codegen.empty() : this.keepRemotely;
+    public Optional<Output<Boolean>> keepRemotely() {
+        return Optional.ofNullable(this.keepRemotely);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -67,102 +67,88 @@ public final class RegistryImageState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sha256Digest")
-      private final @Nullable Output<String> sha256Digest;
+    private @Nullable Output<String> sha256Digest;
 
-    public Output<String> sha256Digest() {
-        return this.sha256Digest == null ? Codegen.empty() : this.sha256Digest;
+    public Optional<Output<String>> sha256Digest() {
+        return Optional.ofNullable(this.sha256Digest);
     }
 
-    public RegistryImageState(
-        @Nullable Output<RegistryImageBuildGetArgs> build,
-        @Nullable Output<Boolean> insecureSkipVerify,
-        @Nullable Output<Boolean> keepRemotely,
-        @Nullable Output<String> name,
-        @Nullable Output<String> sha256Digest) {
-        this.build = build;
-        this.insecureSkipVerify = insecureSkipVerify;
-        this.keepRemotely = keepRemotely;
-        this.name = name;
-        this.sha256Digest = sha256Digest;
-    }
+    private RegistryImageState() {}
 
-    private RegistryImageState() {
-        this.build = Codegen.empty();
-        this.insecureSkipVerify = Codegen.empty();
-        this.keepRemotely = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sha256Digest = Codegen.empty();
+    private RegistryImageState(RegistryImageState $) {
+        this.build = $.build;
+        this.insecureSkipVerify = $.insecureSkipVerify;
+        this.keepRemotely = $.keepRemotely;
+        this.name = $.name;
+        this.sha256Digest = $.sha256Digest;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryImageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RegistryImageBuildGetArgs> build;
-        private @Nullable Output<Boolean> insecureSkipVerify;
-        private @Nullable Output<Boolean> keepRemotely;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> sha256Digest;
+        private RegistryImageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryImageState();
         }
 
         public Builder(RegistryImageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.build = defaults.build;
-    	      this.insecureSkipVerify = defaults.insecureSkipVerify;
-    	      this.keepRemotely = defaults.keepRemotely;
-    	      this.name = defaults.name;
-    	      this.sha256Digest = defaults.sha256Digest;
+            $ = new RegistryImageState(Objects.requireNonNull(defaults));
         }
 
         public Builder build(@Nullable Output<RegistryImageBuildGetArgs> build) {
-            this.build = build;
+            $.build = build;
             return this;
         }
-        public Builder build(@Nullable RegistryImageBuildGetArgs build) {
-            this.build = Codegen.ofNullable(build);
-            return this;
+
+        public Builder build(RegistryImageBuildGetArgs build) {
+            return build(Output.of(build));
         }
+
         public Builder insecureSkipVerify(@Nullable Output<Boolean> insecureSkipVerify) {
-            this.insecureSkipVerify = insecureSkipVerify;
+            $.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
-        public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
-            this.insecureSkipVerify = Codegen.ofNullable(insecureSkipVerify);
-            return this;
+
+        public Builder insecureSkipVerify(Boolean insecureSkipVerify) {
+            return insecureSkipVerify(Output.of(insecureSkipVerify));
         }
+
         public Builder keepRemotely(@Nullable Output<Boolean> keepRemotely) {
-            this.keepRemotely = keepRemotely;
+            $.keepRemotely = keepRemotely;
             return this;
         }
-        public Builder keepRemotely(@Nullable Boolean keepRemotely) {
-            this.keepRemotely = Codegen.ofNullable(keepRemotely);
-            return this;
+
+        public Builder keepRemotely(Boolean keepRemotely) {
+            return keepRemotely(Output.of(keepRemotely));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sha256Digest(@Nullable Output<String> sha256Digest) {
-            this.sha256Digest = sha256Digest;
+            $.sha256Digest = sha256Digest;
             return this;
         }
-        public Builder sha256Digest(@Nullable String sha256Digest) {
-            this.sha256Digest = Codegen.ofNullable(sha256Digest);
-            return this;
-        }        public RegistryImageState build() {
-            return new RegistryImageState(build, insecureSkipVerify, keepRemotely, name, sha256Digest);
+
+        public Builder sha256Digest(String sha256Digest) {
+            return sha256Digest(Output.of(sha256Digest));
+        }
+
+        public RegistryImageState build() {
+            return $;
         }
     }
+
 }

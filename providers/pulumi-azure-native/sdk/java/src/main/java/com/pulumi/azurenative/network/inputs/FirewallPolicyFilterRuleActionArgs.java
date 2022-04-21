@@ -7,9 +7,9 @@ import com.pulumi.azurenative.network.enums.FirewallPolicyFilterRuleActionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class FirewallPolicyFilterRuleActionArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
+    private @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
 
-    public Output<Either<String,FirewallPolicyFilterRuleActionType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,FirewallPolicyFilterRuleActionType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public FirewallPolicyFilterRuleActionArgs(@Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type) {
-        this.type = type;
-    }
+    private FirewallPolicyFilterRuleActionArgs() {}
 
-    private FirewallPolicyFilterRuleActionArgs() {
-        this.type = Codegen.empty();
+    private FirewallPolicyFilterRuleActionArgs(FirewallPolicyFilterRuleActionArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyFilterRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type;
+        private FirewallPolicyFilterRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyFilterRuleActionArgs();
         }
 
         public Builder(FirewallPolicyFilterRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new FirewallPolicyFilterRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,FirewallPolicyFilterRuleActionType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,FirewallPolicyFilterRuleActionType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public FirewallPolicyFilterRuleActionArgs build() {
-            return new FirewallPolicyFilterRuleActionArgs(type);
+
+        public Builder type(Either<String,FirewallPolicyFilterRuleActionType> type) {
+            return type(Output.of(type));
+        }
+
+        public FirewallPolicyFilterRuleActionArgs build() {
+            return $;
         }
     }
+
 }

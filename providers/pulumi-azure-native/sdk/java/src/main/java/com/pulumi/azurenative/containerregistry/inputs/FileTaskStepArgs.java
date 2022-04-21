@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contextAccessToken")
-      private final @Nullable Output<String> contextAccessToken;
+    private @Nullable Output<String> contextAccessToken;
 
-    public Output<String> contextAccessToken() {
-        return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
+    public Optional<Output<String>> contextAccessToken() {
+        return Optional.ofNullable(this.contextAccessToken);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contextPath")
-      private final @Nullable Output<String> contextPath;
+    private @Nullable Output<String> contextPath;
 
-    public Output<String> contextPath() {
-        return this.contextPath == null ? Codegen.empty() : this.contextPath;
+    public Optional<Output<String>> contextPath() {
+        return Optional.ofNullable(this.contextPath);
     }
 
     /**
@@ -48,7 +49,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="taskFilePath", required=true)
-      private final Output<String> taskFilePath;
+    private Output<String> taskFilePath;
 
     public Output<String> taskFilePath() {
         return this.taskFilePath;
@@ -60,7 +61,7 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -71,10 +72,10 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<List<SetValueArgs>> values;
+    private @Nullable Output<List<SetValueArgs>> values;
 
-    public Output<List<SetValueArgs>> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<List<SetValueArgs>>> values() {
+        return Optional.ofNullable(this.values);
     }
 
     /**
@@ -82,118 +83,104 @@ public final class FileTaskStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valuesFilePath")
-      private final @Nullable Output<String> valuesFilePath;
+    private @Nullable Output<String> valuesFilePath;
 
-    public Output<String> valuesFilePath() {
-        return this.valuesFilePath == null ? Codegen.empty() : this.valuesFilePath;
+    public Optional<Output<String>> valuesFilePath() {
+        return Optional.ofNullable(this.valuesFilePath);
     }
 
-    public FileTaskStepArgs(
-        @Nullable Output<String> contextAccessToken,
-        @Nullable Output<String> contextPath,
-        Output<String> taskFilePath,
-        Output<String> type,
-        @Nullable Output<List<SetValueArgs>> values,
-        @Nullable Output<String> valuesFilePath) {
-        this.contextAccessToken = contextAccessToken;
-        this.contextPath = contextPath;
-        this.taskFilePath = Objects.requireNonNull(taskFilePath, "expected parameter 'taskFilePath' to be non-null");
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.values = values;
-        this.valuesFilePath = valuesFilePath;
-    }
+    private FileTaskStepArgs() {}
 
-    private FileTaskStepArgs() {
-        this.contextAccessToken = Codegen.empty();
-        this.contextPath = Codegen.empty();
-        this.taskFilePath = Codegen.empty();
-        this.type = Codegen.empty();
-        this.values = Codegen.empty();
-        this.valuesFilePath = Codegen.empty();
+    private FileTaskStepArgs(FileTaskStepArgs $) {
+        this.contextAccessToken = $.contextAccessToken;
+        this.contextPath = $.contextPath;
+        this.taskFilePath = $.taskFilePath;
+        this.type = $.type;
+        this.values = $.values;
+        this.valuesFilePath = $.valuesFilePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileTaskStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> contextAccessToken;
-        private @Nullable Output<String> contextPath;
-        private Output<String> taskFilePath;
-        private Output<String> type;
-        private @Nullable Output<List<SetValueArgs>> values;
-        private @Nullable Output<String> valuesFilePath;
+        private FileTaskStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileTaskStepArgs();
         }
 
         public Builder(FileTaskStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contextAccessToken = defaults.contextAccessToken;
-    	      this.contextPath = defaults.contextPath;
-    	      this.taskFilePath = defaults.taskFilePath;
-    	      this.type = defaults.type;
-    	      this.values = defaults.values;
-    	      this.valuesFilePath = defaults.valuesFilePath;
+            $ = new FileTaskStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contextAccessToken(@Nullable Output<String> contextAccessToken) {
-            this.contextAccessToken = contextAccessToken;
+            $.contextAccessToken = contextAccessToken;
             return this;
         }
-        public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Codegen.ofNullable(contextAccessToken);
-            return this;
+
+        public Builder contextAccessToken(String contextAccessToken) {
+            return contextAccessToken(Output.of(contextAccessToken));
         }
+
         public Builder contextPath(@Nullable Output<String> contextPath) {
-            this.contextPath = contextPath;
+            $.contextPath = contextPath;
             return this;
         }
-        public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Codegen.ofNullable(contextPath);
-            return this;
+
+        public Builder contextPath(String contextPath) {
+            return contextPath(Output.of(contextPath));
         }
+
         public Builder taskFilePath(Output<String> taskFilePath) {
-            this.taskFilePath = Objects.requireNonNull(taskFilePath);
+            $.taskFilePath = taskFilePath;
             return this;
         }
+
         public Builder taskFilePath(String taskFilePath) {
-            this.taskFilePath = Output.of(Objects.requireNonNull(taskFilePath));
-            return this;
+            return taskFilePath(Output.of(taskFilePath));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder values(@Nullable Output<List<SetValueArgs>> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
+
+        public Builder values(List<SetValueArgs> values) {
+            return values(Output.of(values));
         }
+
         public Builder values(SetValueArgs... values) {
             return values(List.of(values));
         }
+
         public Builder valuesFilePath(@Nullable Output<String> valuesFilePath) {
-            this.valuesFilePath = valuesFilePath;
+            $.valuesFilePath = valuesFilePath;
             return this;
         }
-        public Builder valuesFilePath(@Nullable String valuesFilePath) {
-            this.valuesFilePath = Codegen.ofNullable(valuesFilePath);
-            return this;
-        }        public FileTaskStepArgs build() {
-            return new FileTaskStepArgs(contextAccessToken, contextPath, taskFilePath, type, values, valuesFilePath);
+
+        public Builder valuesFilePath(String valuesFilePath) {
+            return valuesFilePath(Output.of(valuesFilePath));
+        }
+
+        public FileTaskStepArgs build() {
+            $.taskFilePath = Objects.requireNonNull($.taskFilePath, "expected parameter 'taskFilePath' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

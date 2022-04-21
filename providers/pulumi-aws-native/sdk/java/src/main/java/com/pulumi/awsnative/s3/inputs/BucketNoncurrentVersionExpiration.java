@@ -23,10 +23,10 @@ public final class BucketNoncurrentVersionExpiration extends com.pulumi.resource
      * 
      */
     @Import(name="newerNoncurrentVersions")
-      private final @Nullable Integer newerNoncurrentVersions;
+    private @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> newerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Optional.empty() : Optional.ofNullable(this.newerNoncurrentVersions);
+        return Optional.ofNullable(this.newerNoncurrentVersions);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class BucketNoncurrentVersionExpiration extends com.pulumi.resource
      * 
      */
     @Import(name="noncurrentDays", required=true)
-      private final Integer noncurrentDays;
+    private Integer noncurrentDays;
 
     public Integer noncurrentDays() {
         return this.noncurrentDays;
     }
 
-    public BucketNoncurrentVersionExpiration(
-        @Nullable Integer newerNoncurrentVersions,
-        Integer noncurrentDays) {
-        this.newerNoncurrentVersions = newerNoncurrentVersions;
-        this.noncurrentDays = Objects.requireNonNull(noncurrentDays, "expected parameter 'noncurrentDays' to be non-null");
-    }
+    private BucketNoncurrentVersionExpiration() {}
 
-    private BucketNoncurrentVersionExpiration() {
-        this.newerNoncurrentVersions = null;
-        this.noncurrentDays = null;
+    private BucketNoncurrentVersionExpiration(BucketNoncurrentVersionExpiration $) {
+        this.newerNoncurrentVersions = $.newerNoncurrentVersions;
+        this.noncurrentDays = $.noncurrentDays;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketNoncurrentVersionExpiration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer newerNoncurrentVersions;
-        private Integer noncurrentDays;
+        private BucketNoncurrentVersionExpiration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketNoncurrentVersionExpiration();
         }
 
         public Builder(BucketNoncurrentVersionExpiration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.newerNoncurrentVersions = defaults.newerNoncurrentVersions;
-    	      this.noncurrentDays = defaults.noncurrentDays;
+            $ = new BucketNoncurrentVersionExpiration(Objects.requireNonNull(defaults));
         }
 
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = newerNoncurrentVersions;
+            $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
+
         public Builder noncurrentDays(Integer noncurrentDays) {
-            this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
+            $.noncurrentDays = noncurrentDays;
             return this;
-        }        public BucketNoncurrentVersionExpiration build() {
-            return new BucketNoncurrentVersionExpiration(newerNoncurrentVersions, noncurrentDays);
+        }
+
+        public BucketNoncurrentVersionExpiration build() {
+            $.noncurrentDays = Objects.requireNonNull($.noncurrentDays, "expected parameter 'noncurrentDays' to be non-null");
+            return $;
         }
     }
+
 }

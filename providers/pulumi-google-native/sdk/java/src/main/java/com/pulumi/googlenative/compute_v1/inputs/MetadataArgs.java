@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.MetadataItemsItemArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<MetadataItemsItemArgs>> items;
+    private @Nullable Output<List<MetadataItemsItemArgs>> items;
 
-    public Output<List<MetadataItemsItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<MetadataItemsItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public MetadataArgs(@Nullable Output<List<MetadataItemsItemArgs>> items) {
-        this.items = items;
-    }
+    private MetadataArgs() {}
 
-    private MetadataArgs() {
-        this.items = Codegen.empty();
+    private MetadataArgs(MetadataArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetadataItemsItemArgs>> items;
+        private MetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataArgs();
         }
 
         public Builder(MetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new MetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<MetadataItemsItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<MetadataItemsItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<MetadataItemsItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(MetadataItemsItemArgs... items) {
             return items(List.of(items));
-        }        public MetadataArgs build() {
-            return new MetadataArgs(items);
+        }
+
+        public MetadataArgs build() {
+            return $;
         }
     }
+
 }

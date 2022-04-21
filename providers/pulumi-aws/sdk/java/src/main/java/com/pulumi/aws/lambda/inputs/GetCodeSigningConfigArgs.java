@@ -17,45 +17,45 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetCodeSigningConfigArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetCodeSigningConfigArgs() {}
 
-    private GetCodeSigningConfigArgs() {
-        this.arn = null;
+    private GetCodeSigningConfigArgs(GetCodeSigningConfigArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCodeSigningConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetCodeSigningConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCodeSigningConfigArgs();
         }
 
         public Builder(GetCodeSigningConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetCodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetCodeSigningConfigArgs build() {
-            return new GetCodeSigningConfigArgs(arn);
+        }
+
+        public GetCodeSigningConfigArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

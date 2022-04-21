@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +29,7 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="nonResourceURLs", required=true)
-      private final Output<List<String>> nonResourceURLs;
+    private Output<List<String>> nonResourceURLs;
 
     public Output<List<String>> nonResourceURLs() {
         return this.nonResourceURLs;
@@ -41,69 +40,68 @@ public final class NonResourcePolicyRuleArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="verbs", required=true)
-      private final Output<List<String>> verbs;
+    private Output<List<String>> verbs;
 
     public Output<List<String>> verbs() {
         return this.verbs;
     }
 
-    public NonResourcePolicyRuleArgs(
-        Output<List<String>> nonResourceURLs,
-        Output<List<String>> verbs) {
-        this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs, "expected parameter 'nonResourceURLs' to be non-null");
-        this.verbs = Objects.requireNonNull(verbs, "expected parameter 'verbs' to be non-null");
-    }
+    private NonResourcePolicyRuleArgs() {}
 
-    private NonResourcePolicyRuleArgs() {
-        this.nonResourceURLs = Codegen.empty();
-        this.verbs = Codegen.empty();
+    private NonResourcePolicyRuleArgs(NonResourcePolicyRuleArgs $) {
+        this.nonResourceURLs = $.nonResourceURLs;
+        this.verbs = $.verbs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonResourcePolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> nonResourceURLs;
-        private Output<List<String>> verbs;
+        private NonResourcePolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonResourcePolicyRuleArgs();
         }
 
         public Builder(NonResourcePolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nonResourceURLs = defaults.nonResourceURLs;
-    	      this.verbs = defaults.verbs;
+            $ = new NonResourcePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nonResourceURLs(Output<List<String>> nonResourceURLs) {
-            this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
+            $.nonResourceURLs = nonResourceURLs;
             return this;
         }
+
         public Builder nonResourceURLs(List<String> nonResourceURLs) {
-            this.nonResourceURLs = Output.of(Objects.requireNonNull(nonResourceURLs));
-            return this;
+            return nonResourceURLs(Output.of(nonResourceURLs));
         }
+
         public Builder nonResourceURLs(String... nonResourceURLs) {
             return nonResourceURLs(List.of(nonResourceURLs));
         }
+
         public Builder verbs(Output<List<String>> verbs) {
-            this.verbs = Objects.requireNonNull(verbs);
+            $.verbs = verbs;
             return this;
         }
+
         public Builder verbs(List<String> verbs) {
-            this.verbs = Output.of(Objects.requireNonNull(verbs));
-            return this;
+            return verbs(Output.of(verbs));
         }
+
         public Builder verbs(String... verbs) {
             return verbs(List.of(verbs));
-        }        public NonResourcePolicyRuleArgs build() {
-            return new NonResourcePolicyRuleArgs(nonResourceURLs, verbs);
+        }
+
+        public NonResourcePolicyRuleArgs build() {
+            $.nonResourceURLs = Objects.requireNonNull($.nonResourceURLs, "expected parameter 'nonResourceURLs' to be non-null");
+            $.verbs = Objects.requireNonNull($.verbs, "expected parameter 'verbs' to be non-null");
+            return $;
         }
     }
+
 }

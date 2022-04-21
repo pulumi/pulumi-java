@@ -7,12 +7,12 @@ import com.pulumi.aws.dax.inputs.ClusterNodeGetArgs;
 import com.pulumi.aws.dax.inputs.ClusterServerSideEncryptionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="availabilityZones")
-      private final @Nullable Output<List<String>> availabilityZones;
+    private @Nullable Output<List<String>> availabilityZones;
 
-    public Output<List<String>> availabilityZones() {
-        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
+    public Optional<Output<List<String>>> availabilityZones() {
+        return Optional.ofNullable(this.availabilityZones);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterAddress")
-      private final @Nullable Output<String> clusterAddress;
+    private @Nullable Output<String> clusterAddress;
 
-    public Output<String> clusterAddress() {
-        return this.clusterAddress == null ? Codegen.empty() : this.clusterAddress;
+    public Optional<Output<String>> clusterAddress() {
+        return Optional.ofNullable(this.clusterAddress);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterEndpointEncryptionType")
-      private final @Nullable Output<String> clusterEndpointEncryptionType;
+    private @Nullable Output<String> clusterEndpointEncryptionType;
 
-    public Output<String> clusterEndpointEncryptionType() {
-        return this.clusterEndpointEncryptionType == null ? Codegen.empty() : this.clusterEndpointEncryptionType;
+    public Optional<Output<String>> clusterEndpointEncryptionType() {
+        return Optional.ofNullable(this.clusterEndpointEncryptionType);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName")
-      private final @Nullable Output<String> clusterName;
+    private @Nullable Output<String> clusterName;
 
-    public Output<String> clusterName() {
-        return this.clusterName == null ? Codegen.empty() : this.clusterName;
+    public Optional<Output<String>> clusterName() {
+        return Optional.ofNullable(this.clusterName);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configurationEndpoint")
-      private final @Nullable Output<String> configurationEndpoint;
+    private @Nullable Output<String> configurationEndpoint;
 
-    public Output<String> configurationEndpoint() {
-        return this.configurationEndpoint == null ? Codegen.empty() : this.configurationEndpoint;
+    public Optional<Output<String>> configurationEndpoint() {
+        return Optional.ofNullable(this.configurationEndpoint);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iamRoleArn")
-      private final @Nullable Output<String> iamRoleArn;
+    private @Nullable Output<String> iamRoleArn;
 
-    public Output<String> iamRoleArn() {
-        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
+    public Optional<Output<String>> iamRoleArn() {
+        return Optional.ofNullable(this.iamRoleArn);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<String> maintenanceWindow;
+    private @Nullable Output<String> maintenanceWindow;
 
-    public Output<String> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<String>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeType")
-      private final @Nullable Output<String> nodeType;
+    private @Nullable Output<String> nodeType;
 
-    public Output<String> nodeType() {
-        return this.nodeType == null ? Codegen.empty() : this.nodeType;
+    public Optional<Output<String>> nodeType() {
+        return Optional.ofNullable(this.nodeType);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodes")
-      private final @Nullable Output<List<ClusterNodeGetArgs>> nodes;
+    private @Nullable Output<List<ClusterNodeGetArgs>> nodes;
 
-    public Output<List<ClusterNodeGetArgs>> nodes() {
-        return this.nodes == null ? Codegen.empty() : this.nodes;
+    public Optional<Output<List<ClusterNodeGetArgs>>> nodes() {
+        return Optional.ofNullable(this.nodes);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationTopicArn")
-      private final @Nullable Output<String> notificationTopicArn;
+    private @Nullable Output<String> notificationTopicArn;
 
-    public Output<String> notificationTopicArn() {
-        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
+    public Optional<Output<String>> notificationTopicArn() {
+        return Optional.ofNullable(this.notificationTopicArn);
     }
 
     /**
@@ -173,10 +173,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameterGroupName")
-      private final @Nullable Output<String> parameterGroupName;
+    private @Nullable Output<String> parameterGroupName;
 
-    public Output<String> parameterGroupName() {
-        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
+    public Optional<Output<String>> parameterGroupName() {
+        return Optional.ofNullable(this.parameterGroupName);
     }
 
     /**
@@ -184,10 +184,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicationFactor")
-      private final @Nullable Output<Integer> replicationFactor;
+    private @Nullable Output<Integer> replicationFactor;
 
-    public Output<Integer> replicationFactor() {
-        return this.replicationFactor == null ? Codegen.empty() : this.replicationFactor;
+    public Optional<Output<Integer>> replicationFactor() {
+        return Optional.ofNullable(this.replicationFactor);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupIds")
-      private final @Nullable Output<List<String>> securityGroupIds;
+    private @Nullable Output<List<String>> securityGroupIds;
 
-    public Output<List<String>> securityGroupIds() {
-        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
+    public Optional<Output<List<String>>> securityGroupIds() {
+        return Optional.ofNullable(this.securityGroupIds);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryption")
-      private final @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
+    private @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
 
-    public Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption() {
-        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
+    public Optional<Output<ClusterServerSideEncryptionGetArgs>> serverSideEncryption() {
+        return Optional.ofNullable(this.serverSideEncryption);
     }
 
     /**
@@ -232,10 +232,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetGroupName")
-      private final @Nullable Output<String> subnetGroupName;
+    private @Nullable Output<String> subnetGroupName;
 
-    public Output<String> subnetGroupName() {
-        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
+    public Optional<Output<String>> subnetGroupName() {
+        return Optional.ofNullable(this.subnetGroupName);
     }
 
     /**
@@ -243,10 +243,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -254,306 +254,250 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ClusterState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<String>> availabilityZones,
-        @Nullable Output<String> clusterAddress,
-        @Nullable Output<String> clusterEndpointEncryptionType,
-        @Nullable Output<String> clusterName,
-        @Nullable Output<String> configurationEndpoint,
-        @Nullable Output<String> description,
-        @Nullable Output<String> iamRoleArn,
-        @Nullable Output<String> maintenanceWindow,
-        @Nullable Output<String> nodeType,
-        @Nullable Output<List<ClusterNodeGetArgs>> nodes,
-        @Nullable Output<String> notificationTopicArn,
-        @Nullable Output<String> parameterGroupName,
-        @Nullable Output<Integer> port,
-        @Nullable Output<Integer> replicationFactor,
-        @Nullable Output<List<String>> securityGroupIds,
-        @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption,
-        @Nullable Output<String> subnetGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.availabilityZones = availabilityZones;
-        this.clusterAddress = clusterAddress;
-        this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
-        this.clusterName = clusterName;
-        this.configurationEndpoint = configurationEndpoint;
-        this.description = description;
-        this.iamRoleArn = iamRoleArn;
-        this.maintenanceWindow = maintenanceWindow;
-        this.nodeType = nodeType;
-        this.nodes = nodes;
-        this.notificationTopicArn = notificationTopicArn;
-        this.parameterGroupName = parameterGroupName;
-        this.port = port;
-        this.replicationFactor = replicationFactor;
-        this.securityGroupIds = securityGroupIds;
-        this.serverSideEncryption = serverSideEncryption;
-        this.subnetGroupName = subnetGroupName;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.arn = Codegen.empty();
-        this.availabilityZones = Codegen.empty();
-        this.clusterAddress = Codegen.empty();
-        this.clusterEndpointEncryptionType = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.configurationEndpoint = Codegen.empty();
-        this.description = Codegen.empty();
-        this.iamRoleArn = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.nodeType = Codegen.empty();
-        this.nodes = Codegen.empty();
-        this.notificationTopicArn = Codegen.empty();
-        this.parameterGroupName = Codegen.empty();
-        this.port = Codegen.empty();
-        this.replicationFactor = Codegen.empty();
-        this.securityGroupIds = Codegen.empty();
-        this.serverSideEncryption = Codegen.empty();
-        this.subnetGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.arn = $.arn;
+        this.availabilityZones = $.availabilityZones;
+        this.clusterAddress = $.clusterAddress;
+        this.clusterEndpointEncryptionType = $.clusterEndpointEncryptionType;
+        this.clusterName = $.clusterName;
+        this.configurationEndpoint = $.configurationEndpoint;
+        this.description = $.description;
+        this.iamRoleArn = $.iamRoleArn;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.nodeType = $.nodeType;
+        this.nodes = $.nodes;
+        this.notificationTopicArn = $.notificationTopicArn;
+        this.parameterGroupName = $.parameterGroupName;
+        this.port = $.port;
+        this.replicationFactor = $.replicationFactor;
+        this.securityGroupIds = $.securityGroupIds;
+        this.serverSideEncryption = $.serverSideEncryption;
+        this.subnetGroupName = $.subnetGroupName;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<String>> availabilityZones;
-        private @Nullable Output<String> clusterAddress;
-        private @Nullable Output<String> clusterEndpointEncryptionType;
-        private @Nullable Output<String> clusterName;
-        private @Nullable Output<String> configurationEndpoint;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> iamRoleArn;
-        private @Nullable Output<String> maintenanceWindow;
-        private @Nullable Output<String> nodeType;
-        private @Nullable Output<List<ClusterNodeGetArgs>> nodes;
-        private @Nullable Output<String> notificationTopicArn;
-        private @Nullable Output<String> parameterGroupName;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<Integer> replicationFactor;
-        private @Nullable Output<List<String>> securityGroupIds;
-        private @Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption;
-        private @Nullable Output<String> subnetGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.availabilityZones = defaults.availabilityZones;
-    	      this.clusterAddress = defaults.clusterAddress;
-    	      this.clusterEndpointEncryptionType = defaults.clusterEndpointEncryptionType;
-    	      this.clusterName = defaults.clusterName;
-    	      this.configurationEndpoint = defaults.configurationEndpoint;
-    	      this.description = defaults.description;
-    	      this.iamRoleArn = defaults.iamRoleArn;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.nodeType = defaults.nodeType;
-    	      this.nodes = defaults.nodes;
-    	      this.notificationTopicArn = defaults.notificationTopicArn;
-    	      this.parameterGroupName = defaults.parameterGroupName;
-    	      this.port = defaults.port;
-    	      this.replicationFactor = defaults.replicationFactor;
-    	      this.securityGroupIds = defaults.securityGroupIds;
-    	      this.serverSideEncryption = defaults.serverSideEncryption;
-    	      this.subnetGroupName = defaults.subnetGroupName;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
-            this.availabilityZones = availabilityZones;
+            $.availabilityZones = availabilityZones;
             return this;
         }
-        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Codegen.ofNullable(availabilityZones);
-            return this;
+
+        public Builder availabilityZones(List<String> availabilityZones) {
+            return availabilityZones(Output.of(availabilityZones));
         }
+
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
+
         public Builder clusterAddress(@Nullable Output<String> clusterAddress) {
-            this.clusterAddress = clusterAddress;
+            $.clusterAddress = clusterAddress;
             return this;
         }
-        public Builder clusterAddress(@Nullable String clusterAddress) {
-            this.clusterAddress = Codegen.ofNullable(clusterAddress);
-            return this;
+
+        public Builder clusterAddress(String clusterAddress) {
+            return clusterAddress(Output.of(clusterAddress));
         }
+
         public Builder clusterEndpointEncryptionType(@Nullable Output<String> clusterEndpointEncryptionType) {
-            this.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
+            $.clusterEndpointEncryptionType = clusterEndpointEncryptionType;
             return this;
         }
-        public Builder clusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
-            this.clusterEndpointEncryptionType = Codegen.ofNullable(clusterEndpointEncryptionType);
-            return this;
+
+        public Builder clusterEndpointEncryptionType(String clusterEndpointEncryptionType) {
+            return clusterEndpointEncryptionType(Output.of(clusterEndpointEncryptionType));
         }
+
         public Builder clusterName(@Nullable Output<String> clusterName) {
-            this.clusterName = clusterName;
+            $.clusterName = clusterName;
             return this;
         }
-        public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Codegen.ofNullable(clusterName);
-            return this;
+
+        public Builder clusterName(String clusterName) {
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder configurationEndpoint(@Nullable Output<String> configurationEndpoint) {
-            this.configurationEndpoint = configurationEndpoint;
+            $.configurationEndpoint = configurationEndpoint;
             return this;
         }
-        public Builder configurationEndpoint(@Nullable String configurationEndpoint) {
-            this.configurationEndpoint = Codegen.ofNullable(configurationEndpoint);
-            return this;
+
+        public Builder configurationEndpoint(String configurationEndpoint) {
+            return configurationEndpoint(Output.of(configurationEndpoint));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder iamRoleArn(@Nullable Output<String> iamRoleArn) {
-            this.iamRoleArn = iamRoleArn;
+            $.iamRoleArn = iamRoleArn;
             return this;
         }
-        public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
-            return this;
+
+        public Builder iamRoleArn(String iamRoleArn) {
+            return iamRoleArn(Output.of(iamRoleArn));
         }
+
         public Builder maintenanceWindow(@Nullable Output<String> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(String maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder nodeType(@Nullable Output<String> nodeType) {
-            this.nodeType = nodeType;
+            $.nodeType = nodeType;
             return this;
         }
-        public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Codegen.ofNullable(nodeType);
-            return this;
+
+        public Builder nodeType(String nodeType) {
+            return nodeType(Output.of(nodeType));
         }
+
         public Builder nodes(@Nullable Output<List<ClusterNodeGetArgs>> nodes) {
-            this.nodes = nodes;
+            $.nodes = nodes;
             return this;
         }
-        public Builder nodes(@Nullable List<ClusterNodeGetArgs> nodes) {
-            this.nodes = Codegen.ofNullable(nodes);
-            return this;
+
+        public Builder nodes(List<ClusterNodeGetArgs> nodes) {
+            return nodes(Output.of(nodes));
         }
+
         public Builder nodes(ClusterNodeGetArgs... nodes) {
             return nodes(List.of(nodes));
         }
+
         public Builder notificationTopicArn(@Nullable Output<String> notificationTopicArn) {
-            this.notificationTopicArn = notificationTopicArn;
+            $.notificationTopicArn = notificationTopicArn;
             return this;
         }
-        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
-            return this;
+
+        public Builder notificationTopicArn(String notificationTopicArn) {
+            return notificationTopicArn(Output.of(notificationTopicArn));
         }
+
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
-            this.parameterGroupName = parameterGroupName;
+            $.parameterGroupName = parameterGroupName;
             return this;
         }
-        public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
-            return this;
+
+        public Builder parameterGroupName(String parameterGroupName) {
+            return parameterGroupName(Output.of(parameterGroupName));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
-            this.replicationFactor = replicationFactor;
+            $.replicationFactor = replicationFactor;
             return this;
         }
-        public Builder replicationFactor(@Nullable Integer replicationFactor) {
-            this.replicationFactor = Codegen.ofNullable(replicationFactor);
-            return this;
+
+        public Builder replicationFactor(Integer replicationFactor) {
+            return replicationFactor(Output.of(replicationFactor));
         }
+
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
+            $.securityGroupIds = securityGroupIds;
             return this;
         }
-        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
-            return this;
+
+        public Builder securityGroupIds(List<String> securityGroupIds) {
+            return securityGroupIds(Output.of(securityGroupIds));
         }
+
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
+
         public Builder serverSideEncryption(@Nullable Output<ClusterServerSideEncryptionGetArgs> serverSideEncryption) {
-            this.serverSideEncryption = serverSideEncryption;
+            $.serverSideEncryption = serverSideEncryption;
             return this;
         }
-        public Builder serverSideEncryption(@Nullable ClusterServerSideEncryptionGetArgs serverSideEncryption) {
-            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
-            return this;
+
+        public Builder serverSideEncryption(ClusterServerSideEncryptionGetArgs serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
         }
+
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
-            this.subnetGroupName = subnetGroupName;
+            $.subnetGroupName = subnetGroupName;
             return this;
         }
-        public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
-            return this;
+
+        public Builder subnetGroupName(String subnetGroupName) {
+            return subnetGroupName(Output.of(subnetGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(arn, availabilityZones, clusterAddress, clusterEndpointEncryptionType, clusterName, configurationEndpoint, description, iamRoleArn, maintenanceWindow, nodeType, nodes, notificationTopicArn, parameterGroupName, port, replicationFactor, securityGroupIds, serverSideEncryption, subnetGroupName, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

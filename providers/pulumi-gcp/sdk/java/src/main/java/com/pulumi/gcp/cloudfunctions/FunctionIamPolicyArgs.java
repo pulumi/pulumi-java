@@ -5,9 +5,9 @@ package com.pulumi.gcp.cloudfunctions;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,110 +16,101 @@ public final class FunctionIamPolicyArgs extends com.pulumi.resources.ResourceAr
     public static final FunctionIamPolicyArgs Empty = new FunctionIamPolicyArgs();
 
     @Import(name="cloudFunction", required=true)
-      private final Output<String> cloudFunction;
+    private Output<String> cloudFunction;
 
     public Output<String> cloudFunction() {
         return this.cloudFunction;
     }
 
     @Import(name="policyData", required=true)
-      private final Output<String> policyData;
+    private Output<String> policyData;
 
     public Output<String> policyData() {
         return this.policyData;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public FunctionIamPolicyArgs(
-        Output<String> cloudFunction,
-        Output<String> policyData,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction, "expected parameter 'cloudFunction' to be non-null");
-        this.policyData = Objects.requireNonNull(policyData, "expected parameter 'policyData' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private FunctionIamPolicyArgs() {}
 
-    private FunctionIamPolicyArgs() {
-        this.cloudFunction = Codegen.empty();
-        this.policyData = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private FunctionIamPolicyArgs(FunctionIamPolicyArgs $) {
+        this.cloudFunction = $.cloudFunction;
+        this.policyData = $.policyData;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudFunction;
-        private Output<String> policyData;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private FunctionIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionIamPolicyArgs();
         }
 
         public Builder(FunctionIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.policyData = defaults.policyData;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new FunctionIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(Output<String> cloudFunction) {
-            this.cloudFunction = Objects.requireNonNull(cloudFunction);
+            $.cloudFunction = cloudFunction;
             return this;
         }
+
         public Builder cloudFunction(String cloudFunction) {
-            this.cloudFunction = Output.of(Objects.requireNonNull(cloudFunction));
-            return this;
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder policyData(Output<String> policyData) {
-            this.policyData = Objects.requireNonNull(policyData);
+            $.policyData = policyData;
             return this;
         }
+
         public Builder policyData(String policyData) {
-            this.policyData = Output.of(Objects.requireNonNull(policyData));
-            return this;
+            return policyData(Output.of(policyData));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public FunctionIamPolicyArgs build() {
-            return new FunctionIamPolicyArgs(cloudFunction, policyData, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public FunctionIamPolicyArgs build() {
+            $.cloudFunction = Objects.requireNonNull($.cloudFunction, "expected parameter 'cloudFunction' to be non-null");
+            $.policyData = Objects.requireNonNull($.policyData, "expected parameter 'policyData' to be non-null");
+            return $;
         }
     }
+
 }

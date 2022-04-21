@@ -5,11 +5,11 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkflowTemplateParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class WorkflowTemplateParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="fields", required=true)
-      private final Output<List<String>> fields;
+    private Output<List<String>> fields;
 
     public Output<List<String>> fields() {
         return this.fields;
@@ -44,7 +44,7 @@ public final class WorkflowTemplateParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -55,92 +55,84 @@ public final class WorkflowTemplateParameterArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="validation")
-      private final @Nullable Output<WorkflowTemplateParameterValidationArgs> validation;
+    private @Nullable Output<WorkflowTemplateParameterValidationArgs> validation;
 
-    public Output<WorkflowTemplateParameterValidationArgs> validation() {
-        return this.validation == null ? Codegen.empty() : this.validation;
+    public Optional<Output<WorkflowTemplateParameterValidationArgs>> validation() {
+        return Optional.ofNullable(this.validation);
     }
 
-    public WorkflowTemplateParameterArgs(
-        @Nullable Output<String> description,
-        Output<List<String>> fields,
-        Output<String> name,
-        @Nullable Output<WorkflowTemplateParameterValidationArgs> validation) {
-        this.description = description;
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.validation = validation;
-    }
+    private WorkflowTemplateParameterArgs() {}
 
-    private WorkflowTemplateParameterArgs() {
-        this.description = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.name = Codegen.empty();
-        this.validation = Codegen.empty();
+    private WorkflowTemplateParameterArgs(WorkflowTemplateParameterArgs $) {
+        this.description = $.description;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplateParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<String>> fields;
-        private Output<String> name;
-        private @Nullable Output<WorkflowTemplateParameterValidationArgs> validation;
+        private WorkflowTemplateParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplateParameterArgs();
         }
 
         public Builder(WorkflowTemplateParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.validation = defaults.validation;
+            $ = new WorkflowTemplateParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fields(Output<List<String>> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(List<String> fields) {
-            this.fields = Output.of(Objects.requireNonNull(fields));
-            return this;
+            return fields(Output.of(fields));
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder validation(@Nullable Output<WorkflowTemplateParameterValidationArgs> validation) {
-            this.validation = validation;
+            $.validation = validation;
             return this;
         }
-        public Builder validation(@Nullable WorkflowTemplateParameterValidationArgs validation) {
-            this.validation = Codegen.ofNullable(validation);
-            return this;
-        }        public WorkflowTemplateParameterArgs build() {
-            return new WorkflowTemplateParameterArgs(description, fields, name, validation);
+
+        public Builder validation(WorkflowTemplateParameterValidationArgs validation) {
+            return validation(Output.of(validation));
+        }
+
+        public WorkflowTemplateParameterArgs build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

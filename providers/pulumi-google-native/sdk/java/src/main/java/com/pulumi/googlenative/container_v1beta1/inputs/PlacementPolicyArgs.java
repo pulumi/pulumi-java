@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.PlacementPolicyType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PlacementPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<PlacementPolicyType> type;
+    private @Nullable Output<PlacementPolicyType> type;
 
-    public Output<PlacementPolicyType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<PlacementPolicyType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public PlacementPolicyArgs(@Nullable Output<PlacementPolicyType> type) {
-        this.type = type;
-    }
+    private PlacementPolicyArgs() {}
 
-    private PlacementPolicyArgs() {
-        this.type = Codegen.empty();
+    private PlacementPolicyArgs(PlacementPolicyArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PlacementPolicyType> type;
+        private PlacementPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementPolicyArgs();
         }
 
         public Builder(PlacementPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new PlacementPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<PlacementPolicyType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable PlacementPolicyType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public PlacementPolicyArgs build() {
-            return new PlacementPolicyArgs(type);
+
+        public Builder type(PlacementPolicyType type) {
+            return type(Output.of(type));
+        }
+
+        public PlacementPolicyArgs build() {
+            return $;
         }
     }
+
 }

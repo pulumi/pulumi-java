@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ClusteringArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<String>> fields;
+    private @Nullable Output<List<String>> fields;
 
-    public Output<List<String>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<String>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
-    public ClusteringArgs(@Nullable Output<List<String>> fields) {
-        this.fields = fields;
-    }
+    private ClusteringArgs() {}
 
-    private ClusteringArgs() {
-        this.fields = Codegen.empty();
+    private ClusteringArgs(ClusteringArgs $) {
+        this.fields = $.fields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusteringArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> fields;
+        private ClusteringArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusteringArgs();
         }
 
         public Builder(ClusteringArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
+            $ = new ClusteringArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(@Nullable Output<List<String>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<String> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<String> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
-        }        public ClusteringArgs build() {
-            return new ClusteringArgs(fields);
+        }
+
+        public ClusteringArgs build() {
+            return $;
         }
     }
+
 }

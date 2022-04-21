@@ -5,7 +5,6 @@ package com.pulumi.aws.organizations;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class DelegatedAdministratorArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -30,63 +29,60 @@ public final class DelegatedAdministratorArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="servicePrincipal", required=true)
-      private final Output<String> servicePrincipal;
+    private Output<String> servicePrincipal;
 
     public Output<String> servicePrincipal() {
         return this.servicePrincipal;
     }
 
-    public DelegatedAdministratorArgs(
-        Output<String> accountId,
-        Output<String> servicePrincipal) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.servicePrincipal = Objects.requireNonNull(servicePrincipal, "expected parameter 'servicePrincipal' to be non-null");
-    }
+    private DelegatedAdministratorArgs() {}
 
-    private DelegatedAdministratorArgs() {
-        this.accountId = Codegen.empty();
-        this.servicePrincipal = Codegen.empty();
+    private DelegatedAdministratorArgs(DelegatedAdministratorArgs $) {
+        this.accountId = $.accountId;
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DelegatedAdministratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private Output<String> servicePrincipal;
+        private DelegatedAdministratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DelegatedAdministratorArgs();
         }
 
         public Builder(DelegatedAdministratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new DelegatedAdministratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder servicePrincipal(Output<String> servicePrincipal) {
-            this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
+            $.servicePrincipal = servicePrincipal;
             return this;
         }
+
         public Builder servicePrincipal(String servicePrincipal) {
-            this.servicePrincipal = Output.of(Objects.requireNonNull(servicePrincipal));
-            return this;
-        }        public DelegatedAdministratorArgs build() {
-            return new DelegatedAdministratorArgs(accountId, servicePrincipal);
+            return servicePrincipal(Output.of(servicePrincipal));
+        }
+
+        public DelegatedAdministratorArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.servicePrincipal = Objects.requireNonNull($.servicePrincipal, "expected parameter 'servicePrincipal' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,12 +8,12 @@ import com.pulumi.awsnative.lightsail.inputs.ContainerServiceDeploymentArgs;
 import com.pulumi.awsnative.lightsail.inputs.ContainerTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerServiceDeployment")
-      private final @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
+    private @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
 
-    public Output<ContainerServiceDeploymentArgs> containerServiceDeployment() {
-        return this.containerServiceDeployment == null ? Codegen.empty() : this.containerServiceDeployment;
+    public Optional<Output<ContainerServiceDeploymentArgs>> containerServiceDeployment() {
+        return Optional.ofNullable(this.containerServiceDeployment);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isDisabled")
-      private final @Nullable Output<Boolean> isDisabled;
+    private @Nullable Output<Boolean> isDisabled;
 
-    public Output<Boolean> isDisabled() {
-        return this.isDisabled == null ? Codegen.empty() : this.isDisabled;
+    public Optional<Output<Boolean>> isDisabled() {
+        return Optional.ofNullable(this.isDisabled);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="power", required=true)
-      private final Output<String> power;
+    private Output<String> power;
 
     public Output<String> power() {
         return this.power;
@@ -59,10 +59,10 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicDomainNames")
-      private final @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
+    private @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
 
-    public Output<List<ContainerPublicDomainNameArgs>> publicDomainNames() {
-        return this.publicDomainNames == null ? Codegen.empty() : this.publicDomainNames;
+    public Optional<Output<List<ContainerPublicDomainNameArgs>>> publicDomainNames() {
+        return Optional.ofNullable(this.publicDomainNames);
     }
 
     /**
@@ -70,7 +70,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scale", required=true)
-      private final Output<Integer> scale;
+    private Output<Integer> scale;
 
     public Output<Integer> scale() {
         return this.scale;
@@ -81,7 +81,7 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName", required=true)
-      private final Output<String> serviceName;
+    private Output<String> serviceName;
 
     public Output<String> serviceName() {
         return this.serviceName;
@@ -92,134 +92,119 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ContainerTagArgs>> tags;
+    private @Nullable Output<List<ContainerTagArgs>> tags;
 
-    public Output<List<ContainerTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ContainerTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ContainerArgs(
-        @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment,
-        @Nullable Output<Boolean> isDisabled,
-        Output<String> power,
-        @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames,
-        Output<Integer> scale,
-        Output<String> serviceName,
-        @Nullable Output<List<ContainerTagArgs>> tags) {
-        this.containerServiceDeployment = containerServiceDeployment;
-        this.isDisabled = isDisabled;
-        this.power = Objects.requireNonNull(power, "expected parameter 'power' to be non-null");
-        this.publicDomainNames = publicDomainNames;
-        this.scale = Objects.requireNonNull(scale, "expected parameter 'scale' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-        this.tags = tags;
-    }
+    private ContainerArgs() {}
 
-    private ContainerArgs() {
-        this.containerServiceDeployment = Codegen.empty();
-        this.isDisabled = Codegen.empty();
-        this.power = Codegen.empty();
-        this.publicDomainNames = Codegen.empty();
-        this.scale = Codegen.empty();
-        this.serviceName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ContainerArgs(ContainerArgs $) {
+        this.containerServiceDeployment = $.containerServiceDeployment;
+        this.isDisabled = $.isDisabled;
+        this.power = $.power;
+        this.publicDomainNames = $.publicDomainNames;
+        this.scale = $.scale;
+        this.serviceName = $.serviceName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment;
-        private @Nullable Output<Boolean> isDisabled;
-        private Output<String> power;
-        private @Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames;
-        private Output<Integer> scale;
-        private Output<String> serviceName;
-        private @Nullable Output<List<ContainerTagArgs>> tags;
+        private ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerArgs();
         }
 
         public Builder(ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerServiceDeployment = defaults.containerServiceDeployment;
-    	      this.isDisabled = defaults.isDisabled;
-    	      this.power = defaults.power;
-    	      this.publicDomainNames = defaults.publicDomainNames;
-    	      this.scale = defaults.scale;
-    	      this.serviceName = defaults.serviceName;
-    	      this.tags = defaults.tags;
+            $ = new ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerServiceDeployment(@Nullable Output<ContainerServiceDeploymentArgs> containerServiceDeployment) {
-            this.containerServiceDeployment = containerServiceDeployment;
+            $.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
-        public Builder containerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
-            this.containerServiceDeployment = Codegen.ofNullable(containerServiceDeployment);
-            return this;
+
+        public Builder containerServiceDeployment(ContainerServiceDeploymentArgs containerServiceDeployment) {
+            return containerServiceDeployment(Output.of(containerServiceDeployment));
         }
+
         public Builder isDisabled(@Nullable Output<Boolean> isDisabled) {
-            this.isDisabled = isDisabled;
+            $.isDisabled = isDisabled;
             return this;
         }
-        public Builder isDisabled(@Nullable Boolean isDisabled) {
-            this.isDisabled = Codegen.ofNullable(isDisabled);
-            return this;
+
+        public Builder isDisabled(Boolean isDisabled) {
+            return isDisabled(Output.of(isDisabled));
         }
+
         public Builder power(Output<String> power) {
-            this.power = Objects.requireNonNull(power);
+            $.power = power;
             return this;
         }
+
         public Builder power(String power) {
-            this.power = Output.of(Objects.requireNonNull(power));
-            return this;
+            return power(Output.of(power));
         }
+
         public Builder publicDomainNames(@Nullable Output<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
-            this.publicDomainNames = publicDomainNames;
+            $.publicDomainNames = publicDomainNames;
             return this;
         }
-        public Builder publicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
-            this.publicDomainNames = Codegen.ofNullable(publicDomainNames);
-            return this;
+
+        public Builder publicDomainNames(List<ContainerPublicDomainNameArgs> publicDomainNames) {
+            return publicDomainNames(Output.of(publicDomainNames));
         }
+
         public Builder publicDomainNames(ContainerPublicDomainNameArgs... publicDomainNames) {
             return publicDomainNames(List.of(publicDomainNames));
         }
+
         public Builder scale(Output<Integer> scale) {
-            this.scale = Objects.requireNonNull(scale);
+            $.scale = scale;
             return this;
         }
+
         public Builder scale(Integer scale) {
-            this.scale = Output.of(Objects.requireNonNull(scale));
-            return this;
+            return scale(Output.of(scale));
         }
+
         public Builder serviceName(Output<String> serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Output.of(Objects.requireNonNull(serviceName));
-            return this;
+            return serviceName(Output.of(serviceName));
         }
+
         public Builder tags(@Nullable Output<List<ContainerTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ContainerTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ContainerTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ContainerTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ContainerArgs build() {
-            return new ContainerArgs(containerServiceDeployment, isDisabled, power, publicDomainNames, scale, serviceName, tags);
+        }
+
+        public ContainerArgs build() {
+            $.power = Objects.requireNonNull($.power, "expected parameter 'power' to be non-null");
+            $.scale = Objects.requireNonNull($.scale, "expected parameter 'scale' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

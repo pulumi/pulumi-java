@@ -7,10 +7,10 @@ import com.pulumi.azurenative.datafactory.enums.PolybaseSettingsRejectType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rejectSampleValue")
-      private final @Nullable Output<Object> rejectSampleValue;
+    private @Nullable Output<Object> rejectSampleValue;
 
-    public Output<Object> rejectSampleValue() {
-        return this.rejectSampleValue == null ? Codegen.empty() : this.rejectSampleValue;
+    public Optional<Output<Object>> rejectSampleValue() {
+        return Optional.ofNullable(this.rejectSampleValue);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rejectType")
-      private final @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
+    private @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
 
-    public Output<Either<String,PolybaseSettingsRejectType>> rejectType() {
-        return this.rejectType == null ? Codegen.empty() : this.rejectType;
+    public Optional<Output<Either<String,PolybaseSettingsRejectType>>> rejectType() {
+        return Optional.ofNullable(this.rejectType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rejectValue")
-      private final @Nullable Output<Object> rejectValue;
+    private @Nullable Output<Object> rejectValue;
 
-    public Output<Object> rejectValue() {
-        return this.rejectValue == null ? Codegen.empty() : this.rejectValue;
+    public Optional<Output<Object>> rejectValue() {
+        return Optional.ofNullable(this.rejectValue);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class PolybaseSettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="useTypeDefault")
-      private final @Nullable Output<Object> useTypeDefault;
+    private @Nullable Output<Object> useTypeDefault;
 
-    public Output<Object> useTypeDefault() {
-        return this.useTypeDefault == null ? Codegen.empty() : this.useTypeDefault;
+    public Optional<Output<Object>> useTypeDefault() {
+        return Optional.ofNullable(this.useTypeDefault);
     }
 
-    public PolybaseSettingsArgs(
-        @Nullable Output<Object> rejectSampleValue,
-        @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType,
-        @Nullable Output<Object> rejectValue,
-        @Nullable Output<Object> useTypeDefault) {
-        this.rejectSampleValue = rejectSampleValue;
-        this.rejectType = rejectType;
-        this.rejectValue = rejectValue;
-        this.useTypeDefault = useTypeDefault;
-    }
+    private PolybaseSettingsArgs() {}
 
-    private PolybaseSettingsArgs() {
-        this.rejectSampleValue = Codegen.empty();
-        this.rejectType = Codegen.empty();
-        this.rejectValue = Codegen.empty();
-        this.useTypeDefault = Codegen.empty();
+    private PolybaseSettingsArgs(PolybaseSettingsArgs $) {
+        this.rejectSampleValue = $.rejectSampleValue;
+        this.rejectType = $.rejectType;
+        this.rejectValue = $.rejectValue;
+        this.useTypeDefault = $.useTypeDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolybaseSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> rejectSampleValue;
-        private @Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType;
-        private @Nullable Output<Object> rejectValue;
-        private @Nullable Output<Object> useTypeDefault;
+        private PolybaseSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolybaseSettingsArgs();
         }
 
         public Builder(PolybaseSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rejectSampleValue = defaults.rejectSampleValue;
-    	      this.rejectType = defaults.rejectType;
-    	      this.rejectValue = defaults.rejectValue;
-    	      this.useTypeDefault = defaults.useTypeDefault;
+            $ = new PolybaseSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rejectSampleValue(@Nullable Output<Object> rejectSampleValue) {
-            this.rejectSampleValue = rejectSampleValue;
+            $.rejectSampleValue = rejectSampleValue;
             return this;
         }
-        public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
-            this.rejectSampleValue = Codegen.ofNullable(rejectSampleValue);
-            return this;
+
+        public Builder rejectSampleValue(Object rejectSampleValue) {
+            return rejectSampleValue(Output.of(rejectSampleValue));
         }
+
         public Builder rejectType(@Nullable Output<Either<String,PolybaseSettingsRejectType>> rejectType) {
-            this.rejectType = rejectType;
+            $.rejectType = rejectType;
             return this;
         }
-        public Builder rejectType(@Nullable Either<String,PolybaseSettingsRejectType> rejectType) {
-            this.rejectType = Codegen.ofNullable(rejectType);
-            return this;
+
+        public Builder rejectType(Either<String,PolybaseSettingsRejectType> rejectType) {
+            return rejectType(Output.of(rejectType));
         }
+
         public Builder rejectValue(@Nullable Output<Object> rejectValue) {
-            this.rejectValue = rejectValue;
+            $.rejectValue = rejectValue;
             return this;
         }
-        public Builder rejectValue(@Nullable Object rejectValue) {
-            this.rejectValue = Codegen.ofNullable(rejectValue);
-            return this;
+
+        public Builder rejectValue(Object rejectValue) {
+            return rejectValue(Output.of(rejectValue));
         }
+
         public Builder useTypeDefault(@Nullable Output<Object> useTypeDefault) {
-            this.useTypeDefault = useTypeDefault;
+            $.useTypeDefault = useTypeDefault;
             return this;
         }
-        public Builder useTypeDefault(@Nullable Object useTypeDefault) {
-            this.useTypeDefault = Codegen.ofNullable(useTypeDefault);
-            return this;
-        }        public PolybaseSettingsArgs build() {
-            return new PolybaseSettingsArgs(rejectSampleValue, rejectType, rejectValue, useTypeDefault);
+
+        public Builder useTypeDefault(Object useTypeDefault) {
+            return useTypeDefault(Output.of(useTypeDefault));
+        }
+
+        public PolybaseSettingsArgs build() {
+            return $;
         }
     }
+
 }

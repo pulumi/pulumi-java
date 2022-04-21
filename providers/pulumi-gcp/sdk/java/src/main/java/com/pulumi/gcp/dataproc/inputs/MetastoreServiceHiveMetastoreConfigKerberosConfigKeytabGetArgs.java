@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
      * 
      */
     @Import(name="cloudSecret", required=true)
-      private final Output<String> cloudSecret;
+    private Output<String> cloudSecret;
 
     public Output<String> cloudSecret() {
         return this.cloudSecret;
     }
 
-    public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(Output<String> cloudSecret) {
-        this.cloudSecret = Objects.requireNonNull(cloudSecret, "expected parameter 'cloudSecret' to be non-null");
-    }
+    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs() {}
 
-    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs() {
-        this.cloudSecret = Codegen.empty();
+    private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs $) {
+        this.cloudSecret = $.cloudSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloudSecret;
+        private MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs();
         }
 
         public Builder(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSecret = defaults.cloudSecret;
+            $ = new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSecret(Output<String> cloudSecret) {
-            this.cloudSecret = Objects.requireNonNull(cloudSecret);
+            $.cloudSecret = cloudSecret;
             return this;
         }
+
         public Builder cloudSecret(String cloudSecret) {
-            this.cloudSecret = Output.of(Objects.requireNonNull(cloudSecret));
-            return this;
-        }        public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {
-            return new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs(cloudSecret);
+            return cloudSecret(Output.of(cloudSecret));
+        }
+
+        public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs build() {
+            $.cloudSecret = Objects.requireNonNull($.cloudSecret, "expected parameter 'cloudSecret' to be non-null");
+            return $;
         }
     }
+
 }

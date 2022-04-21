@@ -21,7 +21,7 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class ScanConfigErrorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fieldName", required=true)
-      private final String fieldName;
+    private String fieldName;
 
     public String fieldName() {
         return this.fieldName;
     }
 
-    public ScanConfigErrorResponse(
-        String code,
-        String fieldName) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-    }
+    private ScanConfigErrorResponse() {}
 
-    private ScanConfigErrorResponse() {
-        this.code = null;
-        this.fieldName = null;
+    private ScanConfigErrorResponse(ScanConfigErrorResponse $) {
+        this.code = $.code;
+        this.fieldName = $.fieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScanConfigErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String fieldName;
+        private ScanConfigErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScanConfigErrorResponse();
         }
 
         public Builder(ScanConfigErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.fieldName = defaults.fieldName;
+            $ = new ScanConfigErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder fieldName(String fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
-        }        public ScanConfigErrorResponse build() {
-            return new ScanConfigErrorResponse(code, fieldName);
+        }
+
+        public ScanConfigErrorResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            return $;
         }
     }
+
 }

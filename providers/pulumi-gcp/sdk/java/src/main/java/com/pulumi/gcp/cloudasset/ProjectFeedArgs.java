@@ -5,12 +5,12 @@ package com.pulumi.gcp.cloudasset;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudasset.inputs.ProjectFeedConditionArgs;
 import com.pulumi.gcp.cloudasset.inputs.ProjectFeedFeedOutputConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetNames")
-      private final @Nullable Output<List<String>> assetNames;
+    private @Nullable Output<List<String>> assetNames;
 
-    public Output<List<String>> assetNames() {
-        return this.assetNames == null ? Codegen.empty() : this.assetNames;
+    public Optional<Output<List<String>>> assetNames() {
+        return Optional.ofNullable(this.assetNames);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetTypes")
-      private final @Nullable Output<List<String>> assetTypes;
+    private @Nullable Output<List<String>> assetTypes;
 
-    public Output<List<String>> assetTypes() {
-        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
+    public Optional<Output<List<String>>> assetTypes() {
+        return Optional.ofNullable(this.assetTypes);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingProject")
-      private final @Nullable Output<String> billingProject;
+    private @Nullable Output<String> billingProject;
 
-    public Output<String> billingProject() {
-        return this.billingProject == null ? Codegen.empty() : this.billingProject;
+    public Optional<Output<String>> billingProject() {
+        return Optional.ofNullable(this.billingProject);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<ProjectFeedConditionArgs> condition;
+    private @Nullable Output<ProjectFeedConditionArgs> condition;
 
-    public Output<ProjectFeedConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ProjectFeedConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedId", required=true)
-      private final Output<String> feedId;
+    private Output<String> feedId;
 
     public Output<String> feedId() {
         return this.feedId;
@@ -106,7 +106,7 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="feedOutputConfig", required=true)
-      private final Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig;
+    private Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig;
 
     public Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig() {
         return this.feedOutputConfig;
@@ -118,147 +118,128 @@ public final class ProjectFeedArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public ProjectFeedArgs(
-        @Nullable Output<List<String>> assetNames,
-        @Nullable Output<List<String>> assetTypes,
-        @Nullable Output<String> billingProject,
-        @Nullable Output<ProjectFeedConditionArgs> condition,
-        @Nullable Output<String> contentType,
-        Output<String> feedId,
-        Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig,
-        @Nullable Output<String> project) {
-        this.assetNames = assetNames;
-        this.assetTypes = assetTypes;
-        this.billingProject = billingProject;
-        this.condition = condition;
-        this.contentType = contentType;
-        this.feedId = Objects.requireNonNull(feedId, "expected parameter 'feedId' to be non-null");
-        this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
-        this.project = project;
-    }
+    private ProjectFeedArgs() {}
 
-    private ProjectFeedArgs() {
-        this.assetNames = Codegen.empty();
-        this.assetTypes = Codegen.empty();
-        this.billingProject = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.feedId = Codegen.empty();
-        this.feedOutputConfig = Codegen.empty();
-        this.project = Codegen.empty();
+    private ProjectFeedArgs(ProjectFeedArgs $) {
+        this.assetNames = $.assetNames;
+        this.assetTypes = $.assetTypes;
+        this.billingProject = $.billingProject;
+        this.condition = $.condition;
+        this.contentType = $.contentType;
+        this.feedId = $.feedId;
+        this.feedOutputConfig = $.feedOutputConfig;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectFeedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> assetNames;
-        private @Nullable Output<List<String>> assetTypes;
-        private @Nullable Output<String> billingProject;
-        private @Nullable Output<ProjectFeedConditionArgs> condition;
-        private @Nullable Output<String> contentType;
-        private Output<String> feedId;
-        private Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig;
-        private @Nullable Output<String> project;
+        private ProjectFeedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectFeedArgs();
         }
 
         public Builder(ProjectFeedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetNames = defaults.assetNames;
-    	      this.assetTypes = defaults.assetTypes;
-    	      this.billingProject = defaults.billingProject;
-    	      this.condition = defaults.condition;
-    	      this.contentType = defaults.contentType;
-    	      this.feedId = defaults.feedId;
-    	      this.feedOutputConfig = defaults.feedOutputConfig;
-    	      this.project = defaults.project;
+            $ = new ProjectFeedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetNames(@Nullable Output<List<String>> assetNames) {
-            this.assetNames = assetNames;
+            $.assetNames = assetNames;
             return this;
         }
-        public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Codegen.ofNullable(assetNames);
-            return this;
+
+        public Builder assetNames(List<String> assetNames) {
+            return assetNames(Output.of(assetNames));
         }
+
         public Builder assetNames(String... assetNames) {
             return assetNames(List.of(assetNames));
         }
+
         public Builder assetTypes(@Nullable Output<List<String>> assetTypes) {
-            this.assetTypes = assetTypes;
+            $.assetTypes = assetTypes;
             return this;
         }
-        public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Codegen.ofNullable(assetTypes);
-            return this;
+
+        public Builder assetTypes(List<String> assetTypes) {
+            return assetTypes(Output.of(assetTypes));
         }
+
         public Builder assetTypes(String... assetTypes) {
             return assetTypes(List.of(assetTypes));
         }
+
         public Builder billingProject(@Nullable Output<String> billingProject) {
-            this.billingProject = billingProject;
+            $.billingProject = billingProject;
             return this;
         }
-        public Builder billingProject(@Nullable String billingProject) {
-            this.billingProject = Codegen.ofNullable(billingProject);
-            return this;
+
+        public Builder billingProject(String billingProject) {
+            return billingProject(Output.of(billingProject));
         }
+
         public Builder condition(@Nullable Output<ProjectFeedConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ProjectFeedConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ProjectFeedConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder feedId(Output<String> feedId) {
-            this.feedId = Objects.requireNonNull(feedId);
+            $.feedId = feedId;
             return this;
         }
+
         public Builder feedId(String feedId) {
-            this.feedId = Output.of(Objects.requireNonNull(feedId));
-            return this;
+            return feedId(Output.of(feedId));
         }
+
         public Builder feedOutputConfig(Output<ProjectFeedFeedOutputConfigArgs> feedOutputConfig) {
-            this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
+            $.feedOutputConfig = feedOutputConfig;
             return this;
         }
+
         public Builder feedOutputConfig(ProjectFeedFeedOutputConfigArgs feedOutputConfig) {
-            this.feedOutputConfig = Output.of(Objects.requireNonNull(feedOutputConfig));
-            return this;
+            return feedOutputConfig(Output.of(feedOutputConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public ProjectFeedArgs build() {
-            return new ProjectFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public ProjectFeedArgs build() {
+            $.feedId = Objects.requireNonNull($.feedId, "expected parameter 'feedId' to be non-null");
+            $.feedOutputConfig = Objects.requireNonNull($.feedOutputConfig, "expected parameter 'feedOutputConfig' to be non-null");
+            return $;
         }
     }
+
 }

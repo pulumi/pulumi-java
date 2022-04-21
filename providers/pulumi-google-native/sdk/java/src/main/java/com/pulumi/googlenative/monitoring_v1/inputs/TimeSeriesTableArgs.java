@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.TableDataSetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class TimeSeriesTableArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="dataSets", required=true)
-      private final Output<List<TableDataSetArgs>> dataSets;
+    private Output<List<TableDataSetArgs>> dataSets;
 
     public Output<List<TableDataSetArgs>> dataSets() {
         return this.dataSets;
     }
 
-    public TimeSeriesTableArgs(Output<List<TableDataSetArgs>> dataSets) {
-        this.dataSets = Objects.requireNonNull(dataSets, "expected parameter 'dataSets' to be non-null");
-    }
+    private TimeSeriesTableArgs() {}
 
-    private TimeSeriesTableArgs() {
-        this.dataSets = Codegen.empty();
+    private TimeSeriesTableArgs(TimeSeriesTableArgs $) {
+        this.dataSets = $.dataSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<TableDataSetArgs>> dataSets;
+        private TimeSeriesTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesTableArgs();
         }
 
         public Builder(TimeSeriesTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSets = defaults.dataSets;
+            $ = new TimeSeriesTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSets(Output<List<TableDataSetArgs>> dataSets) {
-            this.dataSets = Objects.requireNonNull(dataSets);
+            $.dataSets = dataSets;
             return this;
         }
+
         public Builder dataSets(List<TableDataSetArgs> dataSets) {
-            this.dataSets = Output.of(Objects.requireNonNull(dataSets));
-            return this;
+            return dataSets(Output.of(dataSets));
         }
+
         public Builder dataSets(TableDataSetArgs... dataSets) {
             return dataSets(List.of(dataSets));
-        }        public TimeSeriesTableArgs build() {
-            return new TimeSeriesTableArgs(dataSets);
+        }
+
+        public TimeSeriesTableArgs build() {
+            $.dataSets = Objects.requireNonNull($.dataSets, "expected parameter 'dataSets' to be non-null");
+            return $;
         }
     }
+
 }

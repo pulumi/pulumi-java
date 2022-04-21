@@ -24,10 +24,10 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="alias")
-      private final @Nullable String alias;
+    private @Nullable String alias;
 
     public Optional<String> alias() {
-        return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
+        return Optional.ofNullable(this.alias);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="logicalId", required=true)
-      private final String logicalId;
+    private String logicalId;
 
     public String logicalId() {
         return this.logicalId;
@@ -46,64 +46,57 @@ public final class AssetProperty extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="notificationState")
-      private final @Nullable AssetPropertyNotificationState notificationState;
+    private @Nullable AssetPropertyNotificationState notificationState;
 
     public Optional<AssetPropertyNotificationState> notificationState() {
-        return this.notificationState == null ? Optional.empty() : Optional.ofNullable(this.notificationState);
+        return Optional.ofNullable(this.notificationState);
     }
 
-    public AssetProperty(
-        @Nullable String alias,
-        String logicalId,
-        @Nullable AssetPropertyNotificationState notificationState) {
-        this.alias = alias;
-        this.logicalId = Objects.requireNonNull(logicalId, "expected parameter 'logicalId' to be non-null");
-        this.notificationState = notificationState;
-    }
+    private AssetProperty() {}
 
-    private AssetProperty() {
-        this.alias = null;
-        this.logicalId = null;
-        this.notificationState = null;
+    private AssetProperty(AssetProperty $) {
+        this.alias = $.alias;
+        this.logicalId = $.logicalId;
+        this.notificationState = $.notificationState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssetProperty defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String alias;
-        private String logicalId;
-        private @Nullable AssetPropertyNotificationState notificationState;
+        private AssetProperty $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssetProperty();
         }
 
         public Builder(AssetProperty defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.logicalId = defaults.logicalId;
-    	      this.notificationState = defaults.notificationState;
+            $ = new AssetProperty(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
+
         public Builder logicalId(String logicalId) {
-            this.logicalId = Objects.requireNonNull(logicalId);
+            $.logicalId = logicalId;
             return this;
         }
+
         public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
-            this.notificationState = notificationState;
+            $.notificationState = notificationState;
             return this;
-        }        public AssetProperty build() {
-            return new AssetProperty(alias, logicalId, notificationState);
+        }
+
+        public AssetProperty build() {
+            $.logicalId = Objects.requireNonNull($.logicalId, "expected parameter 'logicalId' to be non-null");
+            return $;
         }
     }
+
 }

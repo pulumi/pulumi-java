@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final String bucketSize;
+    private String bucketSize;
 
     public String bucketSize() {
         return this.bucketSize;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @Import(name="bucketValueCount", required=true)
-      private final String bucketValueCount;
+    private String bucketValueCount;
 
     public String bucketValueCount() {
         return this.bucketValueCount;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @Import(name="bucketValues", required=true)
-      private final List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
+    private List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @Import(name="maxProbability", required=true)
-      private final Double maxProbability;
+    private Double maxProbability;
 
     public Double maxProbability() {
         return this.maxProbability;
@@ -68,85 +68,77 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
      * 
      */
     @Import(name="minProbability", required=true)
-      private final Double minProbability;
+    private Double minProbability;
 
     public Double minProbability() {
         return this.minProbability;
     }
 
-    public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues,
-        Double maxProbability,
-        Double minProbability) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
-        this.bucketValues = Objects.requireNonNull(bucketValues, "expected parameter 'bucketValues' to be non-null");
-        this.maxProbability = Objects.requireNonNull(maxProbability, "expected parameter 'maxProbability' to be non-null");
-        this.minProbability = Objects.requireNonNull(minProbability, "expected parameter 'minProbability' to be non-null");
-    }
+    private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse() {}
 
-    private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse() {
-        this.bucketSize = null;
-        this.bucketValueCount = null;
-        this.bucketValues = List.of();
-        this.maxProbability = null;
-        this.minProbability = null;
+    private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse $) {
+        this.bucketSize = $.bucketSize;
+        this.bucketValueCount = $.bucketValueCount;
+        this.bucketValues = $.bucketValues;
+        this.maxProbability = $.maxProbability;
+        this.minProbability = $.minProbability;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketSize;
-        private String bucketValueCount;
-        private List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues;
-        private Double maxProbability;
-        private Double minProbability;
+        private GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.bucketValueCount = defaults.bucketValueCount;
-    	      this.bucketValues = defaults.bucketValues;
-    	      this.maxProbability = defaults.maxProbability;
-    	      this.minProbability = defaults.minProbability;
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(String bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder bucketValueCount(String bucketValueCount) {
-            this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
+            $.bucketValueCount = bucketValueCount;
             return this;
         }
+
         public Builder bucketValues(List<GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse> bucketValues) {
-            this.bucketValues = Objects.requireNonNull(bucketValues);
+            $.bucketValues = bucketValues;
             return this;
         }
+
         public Builder bucketValues(GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
+
         public Builder maxProbability(Double maxProbability) {
-            this.maxProbability = Objects.requireNonNull(maxProbability);
+            $.maxProbability = maxProbability;
             return this;
         }
+
         public Builder minProbability(Double minProbability) {
-            this.minProbability = Objects.requireNonNull(minProbability);
+            $.minProbability = minProbability;
             return this;
-        }        public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
-            return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
+        }
+
+        public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.bucketValueCount = Objects.requireNonNull($.bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
+            $.bucketValues = Objects.requireNonNull($.bucketValues, "expected parameter 'bucketValues' to be non-null");
+            $.maxProbability = Objects.requireNonNull($.maxProbability, "expected parameter 'maxProbability' to be non-null");
+            $.minProbability = Objects.requireNonNull($.minProbability, "expected parameter 'minProbability' to be non-null");
+            return $;
         }
     }
+
 }

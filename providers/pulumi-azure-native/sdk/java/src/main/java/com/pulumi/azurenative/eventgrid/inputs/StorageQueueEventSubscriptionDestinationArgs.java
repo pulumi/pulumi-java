@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
      * 
      */
     @Import(name="endpointType", required=true)
-      private final Output<String> endpointType;
+    private Output<String> endpointType;
 
     public Output<String> endpointType() {
         return this.endpointType;
@@ -36,10 +37,10 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class StorageQueueEventSubscriptionDestinationArgs extends com.pulu
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable Output<String> resourceId;
+    private @Nullable Output<String> resourceId;
 
-    public Output<String> resourceId() {
-        return this.resourceId == null ? Codegen.empty() : this.resourceId;
+    public Optional<Output<String>> resourceId() {
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public StorageQueueEventSubscriptionDestinationArgs(
-        Output<String> endpointType,
-        @Nullable Output<String> queueName,
-        @Nullable Output<String> resourceId) {
-        this.endpointType = Codegen.stringProp("endpointType").output().arg(endpointType).require();
-        this.queueName = queueName;
-        this.resourceId = resourceId;
-    }
+    private StorageQueueEventSubscriptionDestinationArgs() {}
 
-    private StorageQueueEventSubscriptionDestinationArgs() {
-        this.endpointType = Codegen.empty();
-        this.queueName = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private StorageQueueEventSubscriptionDestinationArgs(StorageQueueEventSubscriptionDestinationArgs $) {
+        this.endpointType = $.endpointType;
+        this.queueName = $.queueName;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageQueueEventSubscriptionDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> endpointType;
-        private @Nullable Output<String> queueName;
-        private @Nullable Output<String> resourceId;
+        private StorageQueueEventSubscriptionDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageQueueEventSubscriptionDestinationArgs();
         }
 
         public Builder(StorageQueueEventSubscriptionDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointType = defaults.endpointType;
-    	      this.queueName = defaults.queueName;
-    	      this.resourceId = defaults.resourceId;
+            $ = new StorageQueueEventSubscriptionDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointType(Output<String> endpointType) {
-            this.endpointType = Objects.requireNonNull(endpointType);
+            $.endpointType = endpointType;
             return this;
         }
+
         public Builder endpointType(String endpointType) {
-            this.endpointType = Output.of(Objects.requireNonNull(endpointType));
-            return this;
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
         }
+
         public Builder resourceId(@Nullable Output<String> resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
         }
-        public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Codegen.ofNullable(resourceId);
-            return this;
-        }        public StorageQueueEventSubscriptionDestinationArgs build() {
-            return new StorageQueueEventSubscriptionDestinationArgs(endpointType, queueName, resourceId);
+
+        public Builder resourceId(String resourceId) {
+            return resourceId(Output.of(resourceId));
+        }
+
+        public StorageQueueEventSubscriptionDestinationArgs build() {
+            $.endpointType = Codegen.stringProp("endpointType").output().arg($.endpointType).require();
+            return $;
         }
     }
+
 }

@@ -32,10 +32,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="apiProperties")
-      private final @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
+    private @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
 
     public Optional<CognitiveServicesAccountApiPropertiesResponse> apiProperties() {
-        return this.apiProperties == null ? Optional.empty() : Optional.ofNullable(this.apiProperties);
+        return Optional.ofNullable(this.apiProperties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="capabilities", required=true)
-      private final List<SkuCapabilityResponse> capabilities;
+    private List<SkuCapabilityResponse> capabilities;
 
     public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities;
@@ -54,10 +54,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="customSubDomainName")
-      private final @Nullable String customSubDomainName;
+    private @Nullable String customSubDomainName;
 
     public Optional<String> customSubDomainName() {
-        return this.customSubDomainName == null ? Optional.empty() : Optional.ofNullable(this.customSubDomainName);
+        return Optional.ofNullable(this.customSubDomainName);
     }
 
     /**
@@ -65,7 +65,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="dateCreated", required=true)
-      private final String dateCreated;
+    private String dateCreated;
 
     public String dateCreated() {
         return this.dateCreated;
@@ -76,10 +76,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="encryption")
-      private final @Nullable EncryptionResponse encryption;
+    private @Nullable EncryptionResponse encryption;
 
     public Optional<EncryptionResponse> encryption() {
-        return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -87,7 +87,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
@@ -98,7 +98,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="internalId", required=true)
-      private final String internalId;
+    private String internalId;
 
     public String internalId() {
         return this.internalId;
@@ -109,7 +109,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="isMigrated", required=true)
-      private final Boolean isMigrated;
+    private Boolean isMigrated;
 
     public Boolean isMigrated() {
         return this.isMigrated;
@@ -120,10 +120,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="networkAcls")
-      private final @Nullable NetworkRuleSetResponse networkAcls;
+    private @Nullable NetworkRuleSetResponse networkAcls;
 
     public Optional<NetworkRuleSetResponse> networkAcls() {
-        return this.networkAcls == null ? Optional.empty() : Optional.ofNullable(this.networkAcls);
+        return Optional.ofNullable(this.networkAcls);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+    private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
-    public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
+    public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -153,10 +153,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable String publicNetworkAccess;
+    private @Nullable String publicNetworkAccess;
 
     public Optional<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -164,7 +164,7 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="skuChangeInfo", required=true)
-      private final CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
+    private CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
 
     public CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo() {
         return this.skuChangeInfo;
@@ -175,172 +175,141 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
      * 
      */
     @Import(name="userOwnedStorage")
-      private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
+    private @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
-    public List<UserOwnedStorageResponse> userOwnedStorage() {
-        return this.userOwnedStorage == null ? List.of() : this.userOwnedStorage;
+    public Optional<List<UserOwnedStorageResponse>> userOwnedStorage() {
+        return Optional.ofNullable(this.userOwnedStorage);
     }
 
-    public CognitiveServicesAccountPropertiesResponse(
-        @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties,
-        List<SkuCapabilityResponse> capabilities,
-        @Nullable String customSubDomainName,
-        String dateCreated,
-        @Nullable EncryptionResponse encryption,
-        String endpoint,
-        String internalId,
-        Boolean isMigrated,
-        @Nullable NetworkRuleSetResponse networkAcls,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
-        @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
-        this.apiProperties = apiProperties;
-        this.capabilities = Objects.requireNonNull(capabilities, "expected parameter 'capabilities' to be non-null");
-        this.customSubDomainName = customSubDomainName;
-        this.dateCreated = Objects.requireNonNull(dateCreated, "expected parameter 'dateCreated' to be non-null");
-        this.encryption = encryption;
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.internalId = Objects.requireNonNull(internalId, "expected parameter 'internalId' to be non-null");
-        this.isMigrated = Objects.requireNonNull(isMigrated, "expected parameter 'isMigrated' to be non-null");
-        this.networkAcls = networkAcls;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.skuChangeInfo = Objects.requireNonNull(skuChangeInfo, "expected parameter 'skuChangeInfo' to be non-null");
-        this.userOwnedStorage = userOwnedStorage;
-    }
+    private CognitiveServicesAccountPropertiesResponse() {}
 
-    private CognitiveServicesAccountPropertiesResponse() {
-        this.apiProperties = null;
-        this.capabilities = List.of();
-        this.customSubDomainName = null;
-        this.dateCreated = null;
-        this.encryption = null;
-        this.endpoint = null;
-        this.internalId = null;
-        this.isMigrated = null;
-        this.networkAcls = null;
-        this.privateEndpointConnections = List.of();
-        this.provisioningState = null;
-        this.publicNetworkAccess = null;
-        this.skuChangeInfo = null;
-        this.userOwnedStorage = List.of();
+    private CognitiveServicesAccountPropertiesResponse(CognitiveServicesAccountPropertiesResponse $) {
+        this.apiProperties = $.apiProperties;
+        this.capabilities = $.capabilities;
+        this.customSubDomainName = $.customSubDomainName;
+        this.dateCreated = $.dateCreated;
+        this.encryption = $.encryption;
+        this.endpoint = $.endpoint;
+        this.internalId = $.internalId;
+        this.isMigrated = $.isMigrated;
+        this.networkAcls = $.networkAcls;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.provisioningState = $.provisioningState;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.skuChangeInfo = $.skuChangeInfo;
+        this.userOwnedStorage = $.userOwnedStorage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CognitiveServicesAccountPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
-        private List<SkuCapabilityResponse> capabilities;
-        private @Nullable String customSubDomainName;
-        private String dateCreated;
-        private @Nullable EncryptionResponse encryption;
-        private String endpoint;
-        private String internalId;
-        private Boolean isMigrated;
-        private @Nullable NetworkRuleSetResponse networkAcls;
-        private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
-        private String provisioningState;
-        private @Nullable String publicNetworkAccess;
-        private CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
-        private @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
+        private CognitiveServicesAccountPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CognitiveServicesAccountPropertiesResponse();
         }
 
         public Builder(CognitiveServicesAccountPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiProperties = defaults.apiProperties;
-    	      this.capabilities = defaults.capabilities;
-    	      this.customSubDomainName = defaults.customSubDomainName;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.encryption = defaults.encryption;
-    	      this.endpoint = defaults.endpoint;
-    	      this.internalId = defaults.internalId;
-    	      this.isMigrated = defaults.isMigrated;
-    	      this.networkAcls = defaults.networkAcls;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.skuChangeInfo = defaults.skuChangeInfo;
-    	      this.userOwnedStorage = defaults.userOwnedStorage;
+            $ = new CognitiveServicesAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties) {
-            this.apiProperties = apiProperties;
+            $.apiProperties = apiProperties;
             return this;
         }
+
         public Builder capabilities(List<SkuCapabilityResponse> capabilities) {
-            this.capabilities = Objects.requireNonNull(capabilities);
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(SkuCapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder customSubDomainName(@Nullable String customSubDomainName) {
-            this.customSubDomainName = customSubDomainName;
+            $.customSubDomainName = customSubDomainName;
             return this;
         }
+
         public Builder dateCreated(String dateCreated) {
-            this.dateCreated = Objects.requireNonNull(dateCreated);
+            $.dateCreated = dateCreated;
             return this;
         }
+
         public Builder encryption(@Nullable EncryptionResponse encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
+
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder internalId(String internalId) {
-            this.internalId = Objects.requireNonNull(internalId);
+            $.internalId = internalId;
             return this;
         }
+
         public Builder isMigrated(Boolean isMigrated) {
-            this.isMigrated = Objects.requireNonNull(isMigrated);
+            $.isMigrated = isMigrated;
             return this;
         }
+
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
-            this.networkAcls = networkAcls;
+            $.networkAcls = networkAcls;
             return this;
         }
+
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
+
         public Builder skuChangeInfo(CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo) {
-            this.skuChangeInfo = Objects.requireNonNull(skuChangeInfo);
+            $.skuChangeInfo = skuChangeInfo;
             return this;
         }
+
         public Builder userOwnedStorage(@Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
-            this.userOwnedStorage = userOwnedStorage;
+            $.userOwnedStorage = userOwnedStorage;
             return this;
         }
+
         public Builder userOwnedStorage(UserOwnedStorageResponse... userOwnedStorage) {
             return userOwnedStorage(List.of(userOwnedStorage));
-        }        public CognitiveServicesAccountPropertiesResponse build() {
-            return new CognitiveServicesAccountPropertiesResponse(apiProperties, capabilities, customSubDomainName, dateCreated, encryption, endpoint, internalId, isMigrated, networkAcls, privateEndpointConnections, provisioningState, publicNetworkAccess, skuChangeInfo, userOwnedStorage);
+        }
+
+        public CognitiveServicesAccountPropertiesResponse build() {
+            $.capabilities = Objects.requireNonNull($.capabilities, "expected parameter 'capabilities' to be non-null");
+            $.dateCreated = Objects.requireNonNull($.dateCreated, "expected parameter 'dateCreated' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.internalId = Objects.requireNonNull($.internalId, "expected parameter 'internalId' to be non-null");
+            $.isMigrated = Objects.requireNonNull($.isMigrated, "expected parameter 'isMigrated' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.skuChangeInfo = Objects.requireNonNull($.skuChangeInfo, "expected parameter 'skuChangeInfo' to be non-null");
+            return $;
         }
     }
+
 }

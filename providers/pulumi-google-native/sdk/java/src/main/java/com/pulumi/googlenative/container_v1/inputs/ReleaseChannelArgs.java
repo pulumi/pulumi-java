@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.ReleaseChannelChannel;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ReleaseChannelArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="channel")
-      private final @Nullable Output<ReleaseChannelChannel> channel;
+    private @Nullable Output<ReleaseChannelChannel> channel;
 
-    public Output<ReleaseChannelChannel> channel() {
-        return this.channel == null ? Codegen.empty() : this.channel;
+    public Optional<Output<ReleaseChannelChannel>> channel() {
+        return Optional.ofNullable(this.channel);
     }
 
-    public ReleaseChannelArgs(@Nullable Output<ReleaseChannelChannel> channel) {
-        this.channel = channel;
-    }
+    private ReleaseChannelArgs() {}
 
-    private ReleaseChannelArgs() {
-        this.channel = Codegen.empty();
+    private ReleaseChannelArgs(ReleaseChannelArgs $) {
+        this.channel = $.channel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReleaseChannelChannel> channel;
+        private ReleaseChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseChannelArgs();
         }
 
         public Builder(ReleaseChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channel = defaults.channel;
+            $ = new ReleaseChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channel(@Nullable Output<ReleaseChannelChannel> channel) {
-            this.channel = channel;
+            $.channel = channel;
             return this;
         }
-        public Builder channel(@Nullable ReleaseChannelChannel channel) {
-            this.channel = Codegen.ofNullable(channel);
-            return this;
-        }        public ReleaseChannelArgs build() {
-            return new ReleaseChannelArgs(channel);
+
+        public Builder channel(ReleaseChannelChannel channel) {
+            return channel(Output.of(channel));
+        }
+
+        public ReleaseChannelArgs build() {
+            return $;
         }
     }
+
 }

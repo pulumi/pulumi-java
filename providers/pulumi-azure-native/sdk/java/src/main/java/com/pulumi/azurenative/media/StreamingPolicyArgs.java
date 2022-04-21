@@ -9,9 +9,9 @@ import com.pulumi.azurenative.media.inputs.EnvelopeEncryptionArgs;
 import com.pulumi.azurenative.media.inputs.NoEncryptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -35,10 +35,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="commonEncryptionCbcs")
-      private final @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
+    private @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
-    public Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs() {
-        return this.commonEncryptionCbcs == null ? Codegen.empty() : this.commonEncryptionCbcs;
+    public Optional<Output<CommonEncryptionCbcsArgs>> commonEncryptionCbcs() {
+        return Optional.ofNullable(this.commonEncryptionCbcs);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="commonEncryptionCenc")
-      private final @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
+    private @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
 
-    public Output<CommonEncryptionCencArgs> commonEncryptionCenc() {
-        return this.commonEncryptionCenc == null ? Codegen.empty() : this.commonEncryptionCenc;
+    public Optional<Output<CommonEncryptionCencArgs>> commonEncryptionCenc() {
+        return Optional.ofNullable(this.commonEncryptionCenc);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="defaultContentKeyPolicyName")
-      private final @Nullable Output<String> defaultContentKeyPolicyName;
+    private @Nullable Output<String> defaultContentKeyPolicyName;
 
-    public Output<String> defaultContentKeyPolicyName() {
-        return this.defaultContentKeyPolicyName == null ? Codegen.empty() : this.defaultContentKeyPolicyName;
+    public Optional<Output<String>> defaultContentKeyPolicyName() {
+        return Optional.ofNullable(this.defaultContentKeyPolicyName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="envelopeEncryption")
-      private final @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
+    private @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
 
-    public Output<EnvelopeEncryptionArgs> envelopeEncryption() {
-        return this.envelopeEncryption == null ? Codegen.empty() : this.envelopeEncryption;
+    public Optional<Output<EnvelopeEncryptionArgs>> envelopeEncryption() {
+        return Optional.ofNullable(this.envelopeEncryption);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="noEncryption")
-      private final @Nullable Output<NoEncryptionArgs> noEncryption;
+    private @Nullable Output<NoEncryptionArgs> noEncryption;
 
-    public Output<NoEncryptionArgs> noEncryption() {
-        return this.noEncryption == null ? Codegen.empty() : this.noEncryption;
+    public Optional<Output<NoEncryptionArgs>> noEncryption() {
+        return Optional.ofNullable(this.noEncryption);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -101,141 +101,120 @@ public final class StreamingPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="streamingPolicyName")
-      private final @Nullable Output<String> streamingPolicyName;
+    private @Nullable Output<String> streamingPolicyName;
 
-    public Output<String> streamingPolicyName() {
-        return this.streamingPolicyName == null ? Codegen.empty() : this.streamingPolicyName;
+    public Optional<Output<String>> streamingPolicyName() {
+        return Optional.ofNullable(this.streamingPolicyName);
     }
 
-    public StreamingPolicyArgs(
-        Output<String> accountName,
-        @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs,
-        @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc,
-        @Nullable Output<String> defaultContentKeyPolicyName,
-        @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption,
-        @Nullable Output<NoEncryptionArgs> noEncryption,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> streamingPolicyName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.commonEncryptionCbcs = commonEncryptionCbcs;
-        this.commonEncryptionCenc = commonEncryptionCenc;
-        this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
-        this.envelopeEncryption = envelopeEncryption;
-        this.noEncryption = noEncryption;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.streamingPolicyName = streamingPolicyName;
-    }
+    private StreamingPolicyArgs() {}
 
-    private StreamingPolicyArgs() {
-        this.accountName = Codegen.empty();
-        this.commonEncryptionCbcs = Codegen.empty();
-        this.commonEncryptionCenc = Codegen.empty();
-        this.defaultContentKeyPolicyName = Codegen.empty();
-        this.envelopeEncryption = Codegen.empty();
-        this.noEncryption = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.streamingPolicyName = Codegen.empty();
+    private StreamingPolicyArgs(StreamingPolicyArgs $) {
+        this.accountName = $.accountName;
+        this.commonEncryptionCbcs = $.commonEncryptionCbcs;
+        this.commonEncryptionCenc = $.commonEncryptionCenc;
+        this.defaultContentKeyPolicyName = $.defaultContentKeyPolicyName;
+        this.envelopeEncryption = $.envelopeEncryption;
+        this.noEncryption = $.noEncryption;
+        this.resourceGroupName = $.resourceGroupName;
+        this.streamingPolicyName = $.streamingPolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
-        private @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
-        private @Nullable Output<String> defaultContentKeyPolicyName;
-        private @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
-        private @Nullable Output<NoEncryptionArgs> noEncryption;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> streamingPolicyName;
+        private StreamingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyArgs();
         }
 
         public Builder(StreamingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.commonEncryptionCbcs = defaults.commonEncryptionCbcs;
-    	      this.commonEncryptionCenc = defaults.commonEncryptionCenc;
-    	      this.defaultContentKeyPolicyName = defaults.defaultContentKeyPolicyName;
-    	      this.envelopeEncryption = defaults.envelopeEncryption;
-    	      this.noEncryption = defaults.noEncryption;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.streamingPolicyName = defaults.streamingPolicyName;
+            $ = new StreamingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder commonEncryptionCbcs(@Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs) {
-            this.commonEncryptionCbcs = commonEncryptionCbcs;
+            $.commonEncryptionCbcs = commonEncryptionCbcs;
             return this;
         }
-        public Builder commonEncryptionCbcs(@Nullable CommonEncryptionCbcsArgs commonEncryptionCbcs) {
-            this.commonEncryptionCbcs = Codegen.ofNullable(commonEncryptionCbcs);
-            return this;
+
+        public Builder commonEncryptionCbcs(CommonEncryptionCbcsArgs commonEncryptionCbcs) {
+            return commonEncryptionCbcs(Output.of(commonEncryptionCbcs));
         }
+
         public Builder commonEncryptionCenc(@Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc) {
-            this.commonEncryptionCenc = commonEncryptionCenc;
+            $.commonEncryptionCenc = commonEncryptionCenc;
             return this;
         }
-        public Builder commonEncryptionCenc(@Nullable CommonEncryptionCencArgs commonEncryptionCenc) {
-            this.commonEncryptionCenc = Codegen.ofNullable(commonEncryptionCenc);
-            return this;
+
+        public Builder commonEncryptionCenc(CommonEncryptionCencArgs commonEncryptionCenc) {
+            return commonEncryptionCenc(Output.of(commonEncryptionCenc));
         }
+
         public Builder defaultContentKeyPolicyName(@Nullable Output<String> defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
+            $.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
-        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
-            this.defaultContentKeyPolicyName = Codegen.ofNullable(defaultContentKeyPolicyName);
-            return this;
+
+        public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
+            return defaultContentKeyPolicyName(Output.of(defaultContentKeyPolicyName));
         }
+
         public Builder envelopeEncryption(@Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption) {
-            this.envelopeEncryption = envelopeEncryption;
+            $.envelopeEncryption = envelopeEncryption;
             return this;
         }
-        public Builder envelopeEncryption(@Nullable EnvelopeEncryptionArgs envelopeEncryption) {
-            this.envelopeEncryption = Codegen.ofNullable(envelopeEncryption);
-            return this;
+
+        public Builder envelopeEncryption(EnvelopeEncryptionArgs envelopeEncryption) {
+            return envelopeEncryption(Output.of(envelopeEncryption));
         }
+
         public Builder noEncryption(@Nullable Output<NoEncryptionArgs> noEncryption) {
-            this.noEncryption = noEncryption;
+            $.noEncryption = noEncryption;
             return this;
         }
-        public Builder noEncryption(@Nullable NoEncryptionArgs noEncryption) {
-            this.noEncryption = Codegen.ofNullable(noEncryption);
-            return this;
+
+        public Builder noEncryption(NoEncryptionArgs noEncryption) {
+            return noEncryption(Output.of(noEncryption));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder streamingPolicyName(@Nullable Output<String> streamingPolicyName) {
-            this.streamingPolicyName = streamingPolicyName;
+            $.streamingPolicyName = streamingPolicyName;
             return this;
         }
-        public Builder streamingPolicyName(@Nullable String streamingPolicyName) {
-            this.streamingPolicyName = Codegen.ofNullable(streamingPolicyName);
-            return this;
-        }        public StreamingPolicyArgs build() {
-            return new StreamingPolicyArgs(accountName, commonEncryptionCbcs, commonEncryptionCenc, defaultContentKeyPolicyName, envelopeEncryption, noEncryption, resourceGroupName, streamingPolicyName);
+
+        public Builder streamingPolicyName(String streamingPolicyName) {
+            return streamingPolicyName(Output.of(streamingPolicyName));
+        }
+
+        public StreamingPolicyArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.gcp.monitoring.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,7 +35,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @Import(name="duration", required=true)
-      private final Output<String> duration;
+    private Output<String> duration;
 
     public Output<String> duration() {
         return this.duration;
@@ -46,7 +46,7 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @Import(name="query", required=true)
-      private final Output<String> query;
+    private Output<String> query;
 
     public Output<String> query() {
         return this.query;
@@ -65,76 +65,70 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs e
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger;
+    private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger;
 
-    public Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(
-        Output<String> duration,
-        Output<String> query,
-        @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger) {
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.trigger = trigger;
-    }
+    private AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs() {}
 
-    private AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs() {
-        this.duration = Codegen.empty();
-        this.query = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs $) {
+        this.duration = $.duration;
+        this.query = $.query;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> duration;
-        private Output<String> query;
-        private @Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger;
+        private AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs();
         }
 
         public Builder(AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.query = defaults.query;
-    	      this.trigger = defaults.trigger;
+            $ = new AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder duration(Output<String> duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Output.of(Objects.requireNonNull(duration));
-            return this;
+            return duration(Output.of(duration));
         }
+
         public Builder query(Output<String> query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Output.of(Objects.requireNonNull(query));
-            return this;
+            return query(Output.of(query));
         }
+
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs build() {
-            return new AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs(duration, query, trigger);
+
+        public Builder trigger(AlertPolicyConditionConditionMonitoringQueryLanguageTriggerGetArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public AlertPolicyConditionConditionMonitoringQueryLanguageGetArgs build() {
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            return $;
         }
     }
+
 }

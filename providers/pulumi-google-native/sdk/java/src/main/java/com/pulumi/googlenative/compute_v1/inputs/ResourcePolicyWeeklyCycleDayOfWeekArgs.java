@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.ResourcePolicyWeeklyCycleDayOfWeekDay;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends com.pulumi.res
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
+    private @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
-    public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<ResourcePolicyWeeklyCycleDayOfWeekDay>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends com.pulumi.res
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public ResourcePolicyWeeklyCycleDayOfWeekArgs(
-        @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day,
-        @Nullable Output<String> startTime) {
-        this.day = day;
-        this.startTime = startTime;
-    }
+    private ResourcePolicyWeeklyCycleDayOfWeekArgs() {}
 
-    private ResourcePolicyWeeklyCycleDayOfWeekArgs() {
-        this.day = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ResourcePolicyWeeklyCycleDayOfWeekArgs(ResourcePolicyWeeklyCycleDayOfWeekArgs $) {
+        this.day = $.day;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyWeeklyCycleDayOfWeekArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
-        private @Nullable Output<String> startTime;
+        private ResourcePolicyWeeklyCycleDayOfWeekArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyWeeklyCycleDayOfWeekArgs();
         }
 
         public Builder(ResourcePolicyWeeklyCycleDayOfWeekArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicyWeeklyCycleDayOfWeekArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable ResourcePolicyWeeklyCycleDayOfWeekDay day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(ResourcePolicyWeeklyCycleDayOfWeekDay day) {
+            return day(Output.of(day));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public ResourcePolicyWeeklyCycleDayOfWeekArgs build() {
-            return new ResourcePolicyWeeklyCycleDayOfWeekArgs(day, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public ResourcePolicyWeeklyCycleDayOfWeekArgs build() {
+            return $;
         }
     }
+
 }

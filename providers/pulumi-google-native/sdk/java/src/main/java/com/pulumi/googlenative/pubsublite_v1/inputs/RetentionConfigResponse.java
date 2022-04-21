@@ -21,7 +21,7 @@ public final class RetentionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="perPartitionBytes", required=true)
-      private final String perPartitionBytes;
+    private String perPartitionBytes;
 
     public String perPartitionBytes() {
         return this.perPartitionBytes;
@@ -32,55 +32,52 @@ public final class RetentionConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="period", required=true)
-      private final String period;
+    private String period;
 
     public String period() {
         return this.period;
     }
 
-    public RetentionConfigResponse(
-        String perPartitionBytes,
-        String period) {
-        this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes, "expected parameter 'perPartitionBytes' to be non-null");
-        this.period = Objects.requireNonNull(period, "expected parameter 'period' to be non-null");
-    }
+    private RetentionConfigResponse() {}
 
-    private RetentionConfigResponse() {
-        this.perPartitionBytes = null;
-        this.period = null;
+    private RetentionConfigResponse(RetentionConfigResponse $) {
+        this.perPartitionBytes = $.perPartitionBytes;
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String perPartitionBytes;
-        private String period;
+        private RetentionConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionConfigResponse();
         }
 
         public Builder(RetentionConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.perPartitionBytes = defaults.perPartitionBytes;
-    	      this.period = defaults.period;
+            $ = new RetentionConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder perPartitionBytes(String perPartitionBytes) {
-            this.perPartitionBytes = Objects.requireNonNull(perPartitionBytes);
+            $.perPartitionBytes = perPartitionBytes;
             return this;
         }
+
         public Builder period(String period) {
-            this.period = Objects.requireNonNull(period);
+            $.period = period;
             return this;
-        }        public RetentionConfigResponse build() {
-            return new RetentionConfigResponse(perPartitionBytes, period);
+        }
+
+        public RetentionConfigResponse build() {
+            $.perPartitionBytes = Objects.requireNonNull($.perPartitionBytes, "expected parameter 'perPartitionBytes' to be non-null");
+            $.period = Objects.requireNonNull($.period, "expected parameter 'period' to be non-null");
+            return $;
         }
     }
+
 }

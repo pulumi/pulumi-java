@@ -5,9 +5,9 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AzureNodePoolConfigRootVolumeGetArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sizeGib")
-      private final @Nullable Output<Integer> sizeGib;
+    private @Nullable Output<Integer> sizeGib;
 
-    public Output<Integer> sizeGib() {
-        return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
+    public Optional<Output<Integer>> sizeGib() {
+        return Optional.ofNullable(this.sizeGib);
     }
 
-    public AzureNodePoolConfigRootVolumeGetArgs(@Nullable Output<Integer> sizeGib) {
-        this.sizeGib = sizeGib;
-    }
+    private AzureNodePoolConfigRootVolumeGetArgs() {}
 
-    private AzureNodePoolConfigRootVolumeGetArgs() {
-        this.sizeGib = Codegen.empty();
+    private AzureNodePoolConfigRootVolumeGetArgs(AzureNodePoolConfigRootVolumeGetArgs $) {
+        this.sizeGib = $.sizeGib;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolConfigRootVolumeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> sizeGib;
+        private AzureNodePoolConfigRootVolumeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolConfigRootVolumeGetArgs();
         }
 
         public Builder(AzureNodePoolConfigRootVolumeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sizeGib = defaults.sizeGib;
+            $ = new AzureNodePoolConfigRootVolumeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
-            this.sizeGib = sizeGib;
+            $.sizeGib = sizeGib;
             return this;
         }
-        public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Codegen.ofNullable(sizeGib);
-            return this;
-        }        public AzureNodePoolConfigRootVolumeGetArgs build() {
-            return new AzureNodePoolConfigRootVolumeGetArgs(sizeGib);
+
+        public Builder sizeGib(Integer sizeGib) {
+            return sizeGib(Output.of(sizeGib));
+        }
+
+        public AzureNodePoolConfigRootVolumeGetArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sourceResources")
-      private final @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
+    private @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
 
-    public List<SourceCostAllocationResourceResponse> sourceResources() {
-        return this.sourceResources == null ? List.of() : this.sourceResources;
+    public Optional<List<SourceCostAllocationResourceResponse>> sourceResources() {
+        return Optional.ofNullable(this.sourceResources);
     }
 
     /**
@@ -36,61 +36,58 @@ public final class CostAllocationRuleDetailsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable List<TargetCostAllocationResourceResponse> targetResources;
+    private @Nullable List<TargetCostAllocationResourceResponse> targetResources;
 
-    public List<TargetCostAllocationResourceResponse> targetResources() {
-        return this.targetResources == null ? List.of() : this.targetResources;
+    public Optional<List<TargetCostAllocationResourceResponse>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
-    public CostAllocationRuleDetailsResponse(
-        @Nullable List<SourceCostAllocationResourceResponse> sourceResources,
-        @Nullable List<TargetCostAllocationResourceResponse> targetResources) {
-        this.sourceResources = sourceResources;
-        this.targetResources = targetResources;
-    }
+    private CostAllocationRuleDetailsResponse() {}
 
-    private CostAllocationRuleDetailsResponse() {
-        this.sourceResources = List.of();
-        this.targetResources = List.of();
+    private CostAllocationRuleDetailsResponse(CostAllocationRuleDetailsResponse $) {
+        this.sourceResources = $.sourceResources;
+        this.targetResources = $.targetResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CostAllocationRuleDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SourceCostAllocationResourceResponse> sourceResources;
-        private @Nullable List<TargetCostAllocationResourceResponse> targetResources;
+        private CostAllocationRuleDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CostAllocationRuleDetailsResponse();
         }
 
         public Builder(CostAllocationRuleDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceResources = defaults.sourceResources;
-    	      this.targetResources = defaults.targetResources;
+            $ = new CostAllocationRuleDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceResources(@Nullable List<SourceCostAllocationResourceResponse> sourceResources) {
-            this.sourceResources = sourceResources;
+            $.sourceResources = sourceResources;
             return this;
         }
+
         public Builder sourceResources(SourceCostAllocationResourceResponse... sourceResources) {
             return sourceResources(List.of(sourceResources));
         }
+
         public Builder targetResources(@Nullable List<TargetCostAllocationResourceResponse> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
+
         public Builder targetResources(TargetCostAllocationResourceResponse... targetResources) {
             return targetResources(List.of(targetResources));
-        }        public CostAllocationRuleDetailsResponse build() {
-            return new CostAllocationRuleDetailsResponse(sourceResources, targetResources);
+        }
+
+        public CostAllocationRuleDetailsResponse build() {
+            return $;
         }
     }
+
 }

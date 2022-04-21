@@ -5,13 +5,13 @@ package com.pulumi.gcp.binaryauthorization;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternArgs;
 import com.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleArgs;
 import com.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="admissionWhitelistPatterns")
-      private final @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
+    private @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
 
-    public Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns() {
-        return this.admissionWhitelistPatterns == null ? Codegen.empty() : this.admissionWhitelistPatterns;
+    public Optional<Output<List<PolicyAdmissionWhitelistPatternArgs>>> admissionWhitelistPatterns() {
+        return Optional.ofNullable(this.admissionWhitelistPatterns);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterAdmissionRules")
-      private final @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
+    private @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
 
-    public Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules() {
-        return this.clusterAdmissionRules == null ? Codegen.empty() : this.clusterAdmissionRules;
+    public Optional<Output<List<PolicyClusterAdmissionRuleArgs>>> clusterAdmissionRules() {
+        return Optional.ofNullable(this.clusterAdmissionRules);
     }
 
     /**
@@ -55,7 +55,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultAdmissionRule", required=true)
-      private final Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
+    private Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
 
     public Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule() {
         return this.defaultAdmissionRule;
@@ -66,10 +66,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalPolicyEvaluationMode")
-      private final @Nullable Output<String> globalPolicyEvaluationMode;
+    private @Nullable Output<String> globalPolicyEvaluationMode;
 
-    public Output<String> globalPolicyEvaluationMode() {
-        return this.globalPolicyEvaluationMode == null ? Codegen.empty() : this.globalPolicyEvaluationMode;
+    public Optional<Output<String>> globalPolicyEvaluationMode() {
+        return Optional.ofNullable(this.globalPolicyEvaluationMode);
     }
 
     /**
@@ -92,121 +92,107 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public PolicyArgs(
-        @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns,
-        @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules,
-        Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule,
-        @Nullable Output<String> description,
-        @Nullable Output<String> globalPolicyEvaluationMode,
-        @Nullable Output<String> project) {
-        this.admissionWhitelistPatterns = admissionWhitelistPatterns;
-        this.clusterAdmissionRules = clusterAdmissionRules;
-        this.defaultAdmissionRule = Objects.requireNonNull(defaultAdmissionRule, "expected parameter 'defaultAdmissionRule' to be non-null");
-        this.description = description;
-        this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
-        this.project = project;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.admissionWhitelistPatterns = Codegen.empty();
-        this.clusterAdmissionRules = Codegen.empty();
-        this.defaultAdmissionRule = Codegen.empty();
-        this.description = Codegen.empty();
-        this.globalPolicyEvaluationMode = Codegen.empty();
-        this.project = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.admissionWhitelistPatterns = $.admissionWhitelistPatterns;
+        this.clusterAdmissionRules = $.clusterAdmissionRules;
+        this.defaultAdmissionRule = $.defaultAdmissionRule;
+        this.description = $.description;
+        this.globalPolicyEvaluationMode = $.globalPolicyEvaluationMode;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
-        private @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
-        private Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> globalPolicyEvaluationMode;
-        private @Nullable Output<String> project;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admissionWhitelistPatterns = defaults.admissionWhitelistPatterns;
-    	      this.clusterAdmissionRules = defaults.clusterAdmissionRules;
-    	      this.defaultAdmissionRule = defaults.defaultAdmissionRule;
-    	      this.description = defaults.description;
-    	      this.globalPolicyEvaluationMode = defaults.globalPolicyEvaluationMode;
-    	      this.project = defaults.project;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder admissionWhitelistPatterns(@Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns) {
-            this.admissionWhitelistPatterns = admissionWhitelistPatterns;
+            $.admissionWhitelistPatterns = admissionWhitelistPatterns;
             return this;
         }
-        public Builder admissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
-            this.admissionWhitelistPatterns = Codegen.ofNullable(admissionWhitelistPatterns);
-            return this;
+
+        public Builder admissionWhitelistPatterns(List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
+            return admissionWhitelistPatterns(Output.of(admissionWhitelistPatterns));
         }
+
         public Builder admissionWhitelistPatterns(PolicyAdmissionWhitelistPatternArgs... admissionWhitelistPatterns) {
             return admissionWhitelistPatterns(List.of(admissionWhitelistPatterns));
         }
+
         public Builder clusterAdmissionRules(@Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules) {
-            this.clusterAdmissionRules = clusterAdmissionRules;
+            $.clusterAdmissionRules = clusterAdmissionRules;
             return this;
         }
-        public Builder clusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
-            this.clusterAdmissionRules = Codegen.ofNullable(clusterAdmissionRules);
-            return this;
+
+        public Builder clusterAdmissionRules(List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
+            return clusterAdmissionRules(Output.of(clusterAdmissionRules));
         }
+
         public Builder clusterAdmissionRules(PolicyClusterAdmissionRuleArgs... clusterAdmissionRules) {
             return clusterAdmissionRules(List.of(clusterAdmissionRules));
         }
+
         public Builder defaultAdmissionRule(Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule) {
-            this.defaultAdmissionRule = Objects.requireNonNull(defaultAdmissionRule);
+            $.defaultAdmissionRule = defaultAdmissionRule;
             return this;
         }
+
         public Builder defaultAdmissionRule(PolicyDefaultAdmissionRuleArgs defaultAdmissionRule) {
-            this.defaultAdmissionRule = Output.of(Objects.requireNonNull(defaultAdmissionRule));
-            return this;
+            return defaultAdmissionRule(Output.of(defaultAdmissionRule));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder globalPolicyEvaluationMode(@Nullable Output<String> globalPolicyEvaluationMode) {
-            this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
+            $.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
             return this;
         }
-        public Builder globalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
-            this.globalPolicyEvaluationMode = Codegen.ofNullable(globalPolicyEvaluationMode);
-            return this;
+
+        public Builder globalPolicyEvaluationMode(String globalPolicyEvaluationMode) {
+            return globalPolicyEvaluationMode(Output.of(globalPolicyEvaluationMode));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(admissionWhitelistPatterns, clusterAdmissionRules, defaultAdmissionRule, description, globalPolicyEvaluationMode, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public PolicyArgs build() {
+            $.defaultAdmissionRule = Objects.requireNonNull($.defaultAdmissionRule, "expected parameter 'defaultAdmissionRule' to be non-null");
+            return $;
         }
     }
+
 }

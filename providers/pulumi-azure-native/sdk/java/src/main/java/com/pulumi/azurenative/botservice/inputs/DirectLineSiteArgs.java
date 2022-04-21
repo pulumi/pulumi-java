@@ -5,11 +5,11 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isBlockUserUploadEnabled")
-      private final @Nullable Output<Boolean> isBlockUserUploadEnabled;
+    private @Nullable Output<Boolean> isBlockUserUploadEnabled;
 
-    public Output<Boolean> isBlockUserUploadEnabled() {
-        return this.isBlockUserUploadEnabled == null ? Codegen.empty() : this.isBlockUserUploadEnabled;
+    public Optional<Output<Boolean>> isBlockUserUploadEnabled() {
+        return Optional.ofNullable(this.isBlockUserUploadEnabled);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isEnabled", required=true)
-      private final Output<Boolean> isEnabled;
+    private Output<Boolean> isEnabled;
 
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
@@ -48,10 +48,10 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isSecureSiteEnabled")
-      private final @Nullable Output<Boolean> isSecureSiteEnabled;
+    private @Nullable Output<Boolean> isSecureSiteEnabled;
 
-    public Output<Boolean> isSecureSiteEnabled() {
-        return this.isSecureSiteEnabled == null ? Codegen.empty() : this.isSecureSiteEnabled;
+    public Optional<Output<Boolean>> isSecureSiteEnabled() {
+        return Optional.ofNullable(this.isSecureSiteEnabled);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isV1Enabled", required=true)
-      private final Output<Boolean> isV1Enabled;
+    private Output<Boolean> isV1Enabled;
 
     public Output<Boolean> isV1Enabled() {
         return this.isV1Enabled;
@@ -70,7 +70,7 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="isV3Enabled", required=true)
-      private final Output<Boolean> isV3Enabled;
+    private Output<Boolean> isV3Enabled;
 
     public Output<Boolean> isV3Enabled() {
         return this.isV3Enabled;
@@ -81,7 +81,7 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="siteName", required=true)
-      private final Output<String> siteName;
+    private Output<String> siteName;
 
     public Output<String> siteName() {
         return this.siteName;
@@ -92,131 +92,116 @@ public final class DirectLineSiteArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="trustedOrigins")
-      private final @Nullable Output<List<String>> trustedOrigins;
+    private @Nullable Output<List<String>> trustedOrigins;
 
-    public Output<List<String>> trustedOrigins() {
-        return this.trustedOrigins == null ? Codegen.empty() : this.trustedOrigins;
+    public Optional<Output<List<String>>> trustedOrigins() {
+        return Optional.ofNullable(this.trustedOrigins);
     }
 
-    public DirectLineSiteArgs(
-        @Nullable Output<Boolean> isBlockUserUploadEnabled,
-        Output<Boolean> isEnabled,
-        @Nullable Output<Boolean> isSecureSiteEnabled,
-        Output<Boolean> isV1Enabled,
-        Output<Boolean> isV3Enabled,
-        Output<String> siteName,
-        @Nullable Output<List<String>> trustedOrigins) {
-        this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
-        this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isSecureSiteEnabled = isSecureSiteEnabled;
-        this.isV1Enabled = Objects.requireNonNull(isV1Enabled, "expected parameter 'isV1Enabled' to be non-null");
-        this.isV3Enabled = Objects.requireNonNull(isV3Enabled, "expected parameter 'isV3Enabled' to be non-null");
-        this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
-        this.trustedOrigins = trustedOrigins;
-    }
+    private DirectLineSiteArgs() {}
 
-    private DirectLineSiteArgs() {
-        this.isBlockUserUploadEnabled = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.isSecureSiteEnabled = Codegen.empty();
-        this.isV1Enabled = Codegen.empty();
-        this.isV3Enabled = Codegen.empty();
-        this.siteName = Codegen.empty();
-        this.trustedOrigins = Codegen.empty();
+    private DirectLineSiteArgs(DirectLineSiteArgs $) {
+        this.isBlockUserUploadEnabled = $.isBlockUserUploadEnabled;
+        this.isEnabled = $.isEnabled;
+        this.isSecureSiteEnabled = $.isSecureSiteEnabled;
+        this.isV1Enabled = $.isV1Enabled;
+        this.isV3Enabled = $.isV3Enabled;
+        this.siteName = $.siteName;
+        this.trustedOrigins = $.trustedOrigins;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DirectLineSiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> isBlockUserUploadEnabled;
-        private Output<Boolean> isEnabled;
-        private @Nullable Output<Boolean> isSecureSiteEnabled;
-        private Output<Boolean> isV1Enabled;
-        private Output<Boolean> isV3Enabled;
-        private Output<String> siteName;
-        private @Nullable Output<List<String>> trustedOrigins;
+        private DirectLineSiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DirectLineSiteArgs();
         }
 
         public Builder(DirectLineSiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isBlockUserUploadEnabled = defaults.isBlockUserUploadEnabled;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.isSecureSiteEnabled = defaults.isSecureSiteEnabled;
-    	      this.isV1Enabled = defaults.isV1Enabled;
-    	      this.isV3Enabled = defaults.isV3Enabled;
-    	      this.siteName = defaults.siteName;
-    	      this.trustedOrigins = defaults.trustedOrigins;
+            $ = new DirectLineSiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder isBlockUserUploadEnabled(@Nullable Output<Boolean> isBlockUserUploadEnabled) {
-            this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
+            $.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
-        public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
-            this.isBlockUserUploadEnabled = Codegen.ofNullable(isBlockUserUploadEnabled);
-            return this;
+
+        public Builder isBlockUserUploadEnabled(Boolean isBlockUserUploadEnabled) {
+            return isBlockUserUploadEnabled(Output.of(isBlockUserUploadEnabled));
         }
+
         public Builder isEnabled(Output<Boolean> isEnabled) {
-            this.isEnabled = Objects.requireNonNull(isEnabled);
+            $.isEnabled = isEnabled;
             return this;
         }
+
         public Builder isEnabled(Boolean isEnabled) {
-            this.isEnabled = Output.of(Objects.requireNonNull(isEnabled));
-            return this;
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder isSecureSiteEnabled(@Nullable Output<Boolean> isSecureSiteEnabled) {
-            this.isSecureSiteEnabled = isSecureSiteEnabled;
+            $.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
-        public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
-            this.isSecureSiteEnabled = Codegen.ofNullable(isSecureSiteEnabled);
-            return this;
+
+        public Builder isSecureSiteEnabled(Boolean isSecureSiteEnabled) {
+            return isSecureSiteEnabled(Output.of(isSecureSiteEnabled));
         }
+
         public Builder isV1Enabled(Output<Boolean> isV1Enabled) {
-            this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
+            $.isV1Enabled = isV1Enabled;
             return this;
         }
+
         public Builder isV1Enabled(Boolean isV1Enabled) {
-            this.isV1Enabled = Output.of(Objects.requireNonNull(isV1Enabled));
-            return this;
+            return isV1Enabled(Output.of(isV1Enabled));
         }
+
         public Builder isV3Enabled(Output<Boolean> isV3Enabled) {
-            this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
+            $.isV3Enabled = isV3Enabled;
             return this;
         }
+
         public Builder isV3Enabled(Boolean isV3Enabled) {
-            this.isV3Enabled = Output.of(Objects.requireNonNull(isV3Enabled));
-            return this;
+            return isV3Enabled(Output.of(isV3Enabled));
         }
+
         public Builder siteName(Output<String> siteName) {
-            this.siteName = Objects.requireNonNull(siteName);
+            $.siteName = siteName;
             return this;
         }
+
         public Builder siteName(String siteName) {
-            this.siteName = Output.of(Objects.requireNonNull(siteName));
-            return this;
+            return siteName(Output.of(siteName));
         }
+
         public Builder trustedOrigins(@Nullable Output<List<String>> trustedOrigins) {
-            this.trustedOrigins = trustedOrigins;
+            $.trustedOrigins = trustedOrigins;
             return this;
         }
-        public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
-            this.trustedOrigins = Codegen.ofNullable(trustedOrigins);
-            return this;
+
+        public Builder trustedOrigins(List<String> trustedOrigins) {
+            return trustedOrigins(Output.of(trustedOrigins));
         }
+
         public Builder trustedOrigins(String... trustedOrigins) {
             return trustedOrigins(List.of(trustedOrigins));
-        }        public DirectLineSiteArgs build() {
-            return new DirectLineSiteArgs(isBlockUserUploadEnabled, isEnabled, isSecureSiteEnabled, isV1Enabled, isV3Enabled, siteName, trustedOrigins);
+        }
+
+        public DirectLineSiteArgs build() {
+            $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");
+            $.isV1Enabled = Objects.requireNonNull($.isV1Enabled, "expected parameter 'isV1Enabled' to be non-null");
+            $.isV3Enabled = Objects.requireNonNull($.isV3Enabled, "expected parameter 'isV3Enabled' to be non-null");
+            $.siteName = Objects.requireNonNull($.siteName, "expected parameter 'siteName' to be non-null");
+            return $;
         }
     }
+
 }

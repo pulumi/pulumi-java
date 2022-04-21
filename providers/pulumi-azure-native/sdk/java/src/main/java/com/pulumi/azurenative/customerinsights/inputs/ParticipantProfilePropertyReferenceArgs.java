@@ -5,7 +5,6 @@ package com.pulumi.azurenative.customerinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="interactionPropertyName", required=true)
-      private final Output<String> interactionPropertyName;
+    private Output<String> interactionPropertyName;
 
     public Output<String> interactionPropertyName() {
         return this.interactionPropertyName;
@@ -34,63 +33,60 @@ public final class ParticipantProfilePropertyReferenceArgs extends com.pulumi.re
      * 
      */
     @Import(name="profilePropertyName", required=true)
-      private final Output<String> profilePropertyName;
+    private Output<String> profilePropertyName;
 
     public Output<String> profilePropertyName() {
         return this.profilePropertyName;
     }
 
-    public ParticipantProfilePropertyReferenceArgs(
-        Output<String> interactionPropertyName,
-        Output<String> profilePropertyName) {
-        this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName, "expected parameter 'interactionPropertyName' to be non-null");
-        this.profilePropertyName = Objects.requireNonNull(profilePropertyName, "expected parameter 'profilePropertyName' to be non-null");
-    }
+    private ParticipantProfilePropertyReferenceArgs() {}
 
-    private ParticipantProfilePropertyReferenceArgs() {
-        this.interactionPropertyName = Codegen.empty();
-        this.profilePropertyName = Codegen.empty();
+    private ParticipantProfilePropertyReferenceArgs(ParticipantProfilePropertyReferenceArgs $) {
+        this.interactionPropertyName = $.interactionPropertyName;
+        this.profilePropertyName = $.profilePropertyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParticipantProfilePropertyReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> interactionPropertyName;
-        private Output<String> profilePropertyName;
+        private ParticipantProfilePropertyReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParticipantProfilePropertyReferenceArgs();
         }
 
         public Builder(ParticipantProfilePropertyReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.interactionPropertyName = defaults.interactionPropertyName;
-    	      this.profilePropertyName = defaults.profilePropertyName;
+            $ = new ParticipantProfilePropertyReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder interactionPropertyName(Output<String> interactionPropertyName) {
-            this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
+            $.interactionPropertyName = interactionPropertyName;
             return this;
         }
+
         public Builder interactionPropertyName(String interactionPropertyName) {
-            this.interactionPropertyName = Output.of(Objects.requireNonNull(interactionPropertyName));
-            return this;
+            return interactionPropertyName(Output.of(interactionPropertyName));
         }
+
         public Builder profilePropertyName(Output<String> profilePropertyName) {
-            this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
+            $.profilePropertyName = profilePropertyName;
             return this;
         }
+
         public Builder profilePropertyName(String profilePropertyName) {
-            this.profilePropertyName = Output.of(Objects.requireNonNull(profilePropertyName));
-            return this;
-        }        public ParticipantProfilePropertyReferenceArgs build() {
-            return new ParticipantProfilePropertyReferenceArgs(interactionPropertyName, profilePropertyName);
+            return profilePropertyName(Output.of(profilePropertyName));
+        }
+
+        public ParticipantProfilePropertyReferenceArgs build() {
+            $.interactionPropertyName = Objects.requireNonNull($.interactionPropertyName, "expected parameter 'interactionPropertyName' to be non-null");
+            $.profilePropertyName = Objects.requireNonNull($.profilePropertyName, "expected parameter 'profilePropertyName' to be non-null");
+            return $;
         }
     }
+
 }

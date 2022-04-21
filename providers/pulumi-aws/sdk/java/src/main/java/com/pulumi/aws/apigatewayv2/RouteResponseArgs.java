@@ -5,10 +5,10 @@ package com.pulumi.aws.apigatewayv2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiId", required=true)
-      private final Output<String> apiId;
+    private Output<String> apiId;
 
     public Output<String> apiId() {
         return this.apiId;
@@ -32,10 +32,10 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="modelSelectionExpression")
-      private final @Nullable Output<String> modelSelectionExpression;
+    private @Nullable Output<String> modelSelectionExpression;
 
-    public Output<String> modelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
+    public Optional<Output<String>> modelSelectionExpression() {
+        return Optional.ofNullable(this.modelSelectionExpression);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="responseModels")
-      private final @Nullable Output<Map<String,String>> responseModels;
+    private @Nullable Output<Map<String,String>> responseModels;
 
-    public Output<Map<String,String>> responseModels() {
-        return this.responseModels == null ? Codegen.empty() : this.responseModels;
+    public Optional<Output<Map<String,String>>> responseModels() {
+        return Optional.ofNullable(this.responseModels);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeId", required=true)
-      private final Output<String> routeId;
+    private Output<String> routeId;
 
     public Output<String> routeId() {
         return this.routeId;
@@ -65,102 +65,91 @@ public final class RouteResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeResponseKey", required=true)
-      private final Output<String> routeResponseKey;
+    private Output<String> routeResponseKey;
 
     public Output<String> routeResponseKey() {
         return this.routeResponseKey;
     }
 
-    public RouteResponseArgs(
-        Output<String> apiId,
-        @Nullable Output<String> modelSelectionExpression,
-        @Nullable Output<Map<String,String>> responseModels,
-        Output<String> routeId,
-        Output<String> routeResponseKey) {
-        this.apiId = Objects.requireNonNull(apiId, "expected parameter 'apiId' to be non-null");
-        this.modelSelectionExpression = modelSelectionExpression;
-        this.responseModels = responseModels;
-        this.routeId = Objects.requireNonNull(routeId, "expected parameter 'routeId' to be non-null");
-        this.routeResponseKey = Objects.requireNonNull(routeResponseKey, "expected parameter 'routeResponseKey' to be non-null");
-    }
+    private RouteResponseArgs() {}
 
-    private RouteResponseArgs() {
-        this.apiId = Codegen.empty();
-        this.modelSelectionExpression = Codegen.empty();
-        this.responseModels = Codegen.empty();
-        this.routeId = Codegen.empty();
-        this.routeResponseKey = Codegen.empty();
+    private RouteResponseArgs(RouteResponseArgs $) {
+        this.apiId = $.apiId;
+        this.modelSelectionExpression = $.modelSelectionExpression;
+        this.responseModels = $.responseModels;
+        this.routeId = $.routeId;
+        this.routeResponseKey = $.routeResponseKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiId;
-        private @Nullable Output<String> modelSelectionExpression;
-        private @Nullable Output<Map<String,String>> responseModels;
-        private Output<String> routeId;
-        private Output<String> routeResponseKey;
+        private RouteResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteResponseArgs();
         }
 
         public Builder(RouteResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiId = defaults.apiId;
-    	      this.modelSelectionExpression = defaults.modelSelectionExpression;
-    	      this.responseModels = defaults.responseModels;
-    	      this.routeId = defaults.routeId;
-    	      this.routeResponseKey = defaults.routeResponseKey;
+            $ = new RouteResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiId(Output<String> apiId) {
-            this.apiId = Objects.requireNonNull(apiId);
+            $.apiId = apiId;
             return this;
         }
+
         public Builder apiId(String apiId) {
-            this.apiId = Output.of(Objects.requireNonNull(apiId));
-            return this;
+            return apiId(Output.of(apiId));
         }
+
         public Builder modelSelectionExpression(@Nullable Output<String> modelSelectionExpression) {
-            this.modelSelectionExpression = modelSelectionExpression;
+            $.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
-        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Codegen.ofNullable(modelSelectionExpression);
-            return this;
+
+        public Builder modelSelectionExpression(String modelSelectionExpression) {
+            return modelSelectionExpression(Output.of(modelSelectionExpression));
         }
+
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
-            this.responseModels = responseModels;
+            $.responseModels = responseModels;
             return this;
         }
-        public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Codegen.ofNullable(responseModels);
-            return this;
+
+        public Builder responseModels(Map<String,String> responseModels) {
+            return responseModels(Output.of(responseModels));
         }
+
         public Builder routeId(Output<String> routeId) {
-            this.routeId = Objects.requireNonNull(routeId);
+            $.routeId = routeId;
             return this;
         }
+
         public Builder routeId(String routeId) {
-            this.routeId = Output.of(Objects.requireNonNull(routeId));
-            return this;
+            return routeId(Output.of(routeId));
         }
+
         public Builder routeResponseKey(Output<String> routeResponseKey) {
-            this.routeResponseKey = Objects.requireNonNull(routeResponseKey);
+            $.routeResponseKey = routeResponseKey;
             return this;
         }
+
         public Builder routeResponseKey(String routeResponseKey) {
-            this.routeResponseKey = Output.of(Objects.requireNonNull(routeResponseKey));
-            return this;
-        }        public RouteResponseArgs build() {
-            return new RouteResponseArgs(apiId, modelSelectionExpression, responseModels, routeId, routeResponseKey);
+            return routeResponseKey(Output.of(routeResponseKey));
+        }
+
+        public RouteResponseArgs build() {
+            $.apiId = Objects.requireNonNull($.apiId, "expected parameter 'apiId' to be non-null");
+            $.routeId = Objects.requireNonNull($.routeId, "expected parameter 'routeId' to be non-null");
+            $.routeResponseKey = Objects.requireNonNull($.routeResponseKey, "expected parameter 'routeResponseKey' to be non-null");
+            return $;
         }
     }
+
 }

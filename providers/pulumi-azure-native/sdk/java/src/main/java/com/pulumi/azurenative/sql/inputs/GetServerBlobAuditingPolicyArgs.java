@@ -17,7 +17,7 @@ public final class GetServerBlobAuditingPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="blobAuditingPolicyName", required=true)
-      private final String blobAuditingPolicyName;
+    private String blobAuditingPolicyName;
 
     public String blobAuditingPolicyName() {
         return this.blobAuditingPolicyName;
@@ -28,7 +28,7 @@ public final class GetServerBlobAuditingPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetServerBlobAuditingPolicyArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
     }
 
-    public GetServerBlobAuditingPolicyArgs(
-        String blobAuditingPolicyName,
-        String resourceGroupName,
-        String serverName) {
-        this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName, "expected parameter 'blobAuditingPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-    }
+    private GetServerBlobAuditingPolicyArgs() {}
 
-    private GetServerBlobAuditingPolicyArgs() {
-        this.blobAuditingPolicyName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
+    private GetServerBlobAuditingPolicyArgs(GetServerBlobAuditingPolicyArgs $) {
+        this.blobAuditingPolicyName = $.blobAuditingPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServerBlobAuditingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String blobAuditingPolicyName;
-        private String resourceGroupName;
-        private String serverName;
+        private GetServerBlobAuditingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServerBlobAuditingPolicyArgs();
         }
 
         public Builder(GetServerBlobAuditingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobAuditingPolicyName = defaults.blobAuditingPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
+            $ = new GetServerBlobAuditingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder blobAuditingPolicyName(String blobAuditingPolicyName) {
-            this.blobAuditingPolicyName = Objects.requireNonNull(blobAuditingPolicyName);
+            $.blobAuditingPolicyName = blobAuditingPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
-        }        public GetServerBlobAuditingPolicyArgs build() {
-            return new GetServerBlobAuditingPolicyArgs(blobAuditingPolicyName, resourceGroupName, serverName);
+        }
+
+        public GetServerBlobAuditingPolicyArgs build() {
+            $.blobAuditingPolicyName = Objects.requireNonNull($.blobAuditingPolicyName, "expected parameter 'blobAuditingPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="postgresInstanceName", required=true)
-      private final String postgresInstanceName;
+    private String postgresInstanceName;
 
     public String postgresInstanceName() {
         return this.postgresInstanceName;
@@ -28,55 +28,52 @@ public final class GetPostgresInstanceArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPostgresInstanceArgs(
-        String postgresInstanceName,
-        String resourceGroupName) {
-        this.postgresInstanceName = Objects.requireNonNull(postgresInstanceName, "expected parameter 'postgresInstanceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPostgresInstanceArgs() {}
 
-    private GetPostgresInstanceArgs() {
-        this.postgresInstanceName = null;
-        this.resourceGroupName = null;
+    private GetPostgresInstanceArgs(GetPostgresInstanceArgs $) {
+        this.postgresInstanceName = $.postgresInstanceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPostgresInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String postgresInstanceName;
-        private String resourceGroupName;
+        private GetPostgresInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPostgresInstanceArgs();
         }
 
         public Builder(GetPostgresInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postgresInstanceName = defaults.postgresInstanceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPostgresInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder postgresInstanceName(String postgresInstanceName) {
-            this.postgresInstanceName = Objects.requireNonNull(postgresInstanceName);
+            $.postgresInstanceName = postgresInstanceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPostgresInstanceArgs build() {
-            return new GetPostgresInstanceArgs(postgresInstanceName, resourceGroupName);
+        }
+
+        public GetPostgresInstanceArgs build() {
+            $.postgresInstanceName = Objects.requireNonNull($.postgresInstanceName, "expected parameter 'postgresInstanceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

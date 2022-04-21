@@ -25,10 +25,10 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="endTime")
-      private final @Nullable String endTime;
+    private @Nullable String endTime;
 
     public Optional<String> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="frequency")
-      private final @Nullable String frequency;
+    private @Nullable String frequency;
 
     public Optional<String> frequency() {
-        return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="interval")
-      private final @Nullable Integer interval;
+    private @Nullable Integer interval;
 
     public Optional<Integer> interval() {
-        return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="schedule")
-      private final @Nullable RecurrenceScheduleResponse schedule;
+    private @Nullable RecurrenceScheduleResponse schedule;
 
     public Optional<RecurrenceScheduleResponse> schedule() {
-        return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="startTime")
-      private final @Nullable String startTime;
+    private @Nullable String startTime;
 
     public Optional<String> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -80,91 +80,74 @@ public final class WorkflowTriggerRecurrenceResponse extends com.pulumi.resource
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable String timeZone;
+    private @Nullable String timeZone;
 
     public Optional<String> timeZone() {
-        return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
+        return Optional.ofNullable(this.timeZone);
     }
 
-    public WorkflowTriggerRecurrenceResponse(
-        @Nullable String endTime,
-        @Nullable String frequency,
-        @Nullable Integer interval,
-        @Nullable RecurrenceScheduleResponse schedule,
-        @Nullable String startTime,
-        @Nullable String timeZone) {
-        this.endTime = endTime;
-        this.frequency = frequency;
-        this.interval = interval;
-        this.schedule = schedule;
-        this.startTime = startTime;
-        this.timeZone = timeZone;
-    }
+    private WorkflowTriggerRecurrenceResponse() {}
 
-    private WorkflowTriggerRecurrenceResponse() {
-        this.endTime = null;
-        this.frequency = null;
-        this.interval = null;
-        this.schedule = null;
-        this.startTime = null;
-        this.timeZone = null;
+    private WorkflowTriggerRecurrenceResponse(WorkflowTriggerRecurrenceResponse $) {
+        this.endTime = $.endTime;
+        this.frequency = $.frequency;
+        this.interval = $.interval;
+        this.schedule = $.schedule;
+        this.startTime = $.startTime;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTriggerRecurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String endTime;
-        private @Nullable String frequency;
-        private @Nullable Integer interval;
-        private @Nullable RecurrenceScheduleResponse schedule;
-        private @Nullable String startTime;
-        private @Nullable String timeZone;
+        private WorkflowTriggerRecurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTriggerRecurrenceResponse();
         }
 
         public Builder(WorkflowTriggerRecurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.frequency = defaults.frequency;
-    	      this.interval = defaults.interval;
-    	      this.schedule = defaults.schedule;
-    	      this.startTime = defaults.startTime;
-    	      this.timeZone = defaults.timeZone;
+            $ = new WorkflowTriggerRecurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder frequency(@Nullable String frequency) {
-            this.frequency = frequency;
+            $.frequency = frequency;
             return this;
         }
+
         public Builder interval(@Nullable Integer interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
+
         public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
+
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
-        }        public WorkflowTriggerRecurrenceResponse build() {
-            return new WorkflowTriggerRecurrenceResponse(endTime, frequency, interval, schedule, startTime, timeZone);
+        }
+
+        public WorkflowTriggerRecurrenceResponse build() {
+            return $;
         }
     }
+
 }

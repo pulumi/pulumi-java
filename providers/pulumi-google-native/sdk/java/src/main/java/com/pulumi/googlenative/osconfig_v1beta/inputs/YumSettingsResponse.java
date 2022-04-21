@@ -23,7 +23,7 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludes", required=true)
-      private final List<String> excludes;
+    private List<String> excludes;
 
     public List<String> excludes() {
         return this.excludes;
@@ -34,7 +34,7 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exclusivePackages", required=true)
-      private final List<String> exclusivePackages;
+    private List<String> exclusivePackages;
 
     public List<String> exclusivePackages() {
         return this.exclusivePackages;
@@ -45,7 +45,7 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minimal", required=true)
-      private final Boolean minimal;
+    private Boolean minimal;
 
     public Boolean minimal() {
         return this.minimal;
@@ -56,79 +56,74 @@ public final class YumSettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="security", required=true)
-      private final Boolean security;
+    private Boolean security;
 
     public Boolean security() {
         return this.security;
     }
 
-    public YumSettingsResponse(
-        List<String> excludes,
-        List<String> exclusivePackages,
-        Boolean minimal,
-        Boolean security) {
-        this.excludes = Objects.requireNonNull(excludes, "expected parameter 'excludes' to be non-null");
-        this.exclusivePackages = Objects.requireNonNull(exclusivePackages, "expected parameter 'exclusivePackages' to be non-null");
-        this.minimal = Objects.requireNonNull(minimal, "expected parameter 'minimal' to be non-null");
-        this.security = Objects.requireNonNull(security, "expected parameter 'security' to be non-null");
-    }
+    private YumSettingsResponse() {}
 
-    private YumSettingsResponse() {
-        this.excludes = List.of();
-        this.exclusivePackages = List.of();
-        this.minimal = null;
-        this.security = null;
+    private YumSettingsResponse(YumSettingsResponse $) {
+        this.excludes = $.excludes;
+        this.exclusivePackages = $.exclusivePackages;
+        this.minimal = $.minimal;
+        this.security = $.security;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(YumSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> excludes;
-        private List<String> exclusivePackages;
-        private Boolean minimal;
-        private Boolean security;
+        private YumSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new YumSettingsResponse();
         }
 
         public Builder(YumSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePackages = defaults.exclusivePackages;
-    	      this.minimal = defaults.minimal;
-    	      this.security = defaults.security;
+            $ = new YumSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludes(List<String> excludes) {
-            this.excludes = Objects.requireNonNull(excludes);
+            $.excludes = excludes;
             return this;
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePackages(List<String> exclusivePackages) {
-            this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
+            $.exclusivePackages = exclusivePackages;
             return this;
         }
+
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
+
         public Builder minimal(Boolean minimal) {
-            this.minimal = Objects.requireNonNull(minimal);
+            $.minimal = minimal;
             return this;
         }
+
         public Builder security(Boolean security) {
-            this.security = Objects.requireNonNull(security);
+            $.security = security;
             return this;
-        }        public YumSettingsResponse build() {
-            return new YumSettingsResponse(excludes, exclusivePackages, minimal, security);
+        }
+
+        public YumSettingsResponse build() {
+            $.excludes = Objects.requireNonNull($.excludes, "expected parameter 'excludes' to be non-null");
+            $.exclusivePackages = Objects.requireNonNull($.exclusivePackages, "expected parameter 'exclusivePackages' to be non-null");
+            $.minimal = Objects.requireNonNull($.minimal, "expected parameter 'minimal' to be non-null");
+            $.security = Objects.requireNonNull($.security, "expected parameter 'security' to be non-null");
+            return $;
         }
     }
+
 }

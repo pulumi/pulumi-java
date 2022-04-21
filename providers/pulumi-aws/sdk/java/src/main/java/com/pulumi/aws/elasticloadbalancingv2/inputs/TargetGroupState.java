@@ -7,12 +7,12 @@ import com.pulumi.aws.elasticloadbalancingv2.inputs.TargetGroupHealthCheckGetArg
 import com.pulumi.aws.elasticloadbalancingv2.inputs.TargetGroupStickinessGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arnSuffix")
-      private final @Nullable Output<String> arnSuffix;
+    private @Nullable Output<String> arnSuffix;
 
-    public Output<String> arnSuffix() {
-        return this.arnSuffix == null ? Codegen.empty() : this.arnSuffix;
+    public Optional<Output<String>> arnSuffix() {
+        return Optional.ofNullable(this.arnSuffix);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionTermination")
-      private final @Nullable Output<Boolean> connectionTermination;
+    private @Nullable Output<Boolean> connectionTermination;
 
-    public Output<Boolean> connectionTermination() {
-        return this.connectionTermination == null ? Codegen.empty() : this.connectionTermination;
+    public Optional<Output<Boolean>> connectionTermination() {
+        return Optional.ofNullable(this.connectionTermination);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deregistrationDelay")
-      private final @Nullable Output<Integer> deregistrationDelay;
+    private @Nullable Output<Integer> deregistrationDelay;
 
-    public Output<Integer> deregistrationDelay() {
-        return this.deregistrationDelay == null ? Codegen.empty() : this.deregistrationDelay;
+    public Optional<Output<Integer>> deregistrationDelay() {
+        return Optional.ofNullable(this.deregistrationDelay);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="healthCheck")
-      private final @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck;
+    private @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck;
 
-    public Output<TargetGroupHealthCheckGetArgs> healthCheck() {
-        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
+    public Optional<Output<TargetGroupHealthCheckGetArgs>> healthCheck() {
+        return Optional.ofNullable(this.healthCheck);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lambdaMultiValueHeadersEnabled")
-      private final @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
+    private @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
 
-    public Output<Boolean> lambdaMultiValueHeadersEnabled() {
-        return this.lambdaMultiValueHeadersEnabled == null ? Codegen.empty() : this.lambdaMultiValueHeadersEnabled;
+    public Optional<Output<Boolean>> lambdaMultiValueHeadersEnabled() {
+        return Optional.ofNullable(this.lambdaMultiValueHeadersEnabled);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancingAlgorithmType")
-      private final @Nullable Output<String> loadBalancingAlgorithmType;
+    private @Nullable Output<String> loadBalancingAlgorithmType;
 
-    public Output<String> loadBalancingAlgorithmType() {
-        return this.loadBalancingAlgorithmType == null ? Codegen.empty() : this.loadBalancingAlgorithmType;
+    public Optional<Output<String>> loadBalancingAlgorithmType() {
+        return Optional.ofNullable(this.loadBalancingAlgorithmType);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preserveClientIp")
-      private final @Nullable Output<String> preserveClientIp;
+    private @Nullable Output<String> preserveClientIp;
 
-    public Output<String> preserveClientIp() {
-        return this.preserveClientIp == null ? Codegen.empty() : this.preserveClientIp;
+    public Optional<Output<String>> preserveClientIp() {
+        return Optional.ofNullable(this.preserveClientIp);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocolVersion")
-      private final @Nullable Output<String> protocolVersion;
+    private @Nullable Output<String> protocolVersion;
 
-    public Output<String> protocolVersion() {
-        return this.protocolVersion == null ? Codegen.empty() : this.protocolVersion;
+    public Optional<Output<String>> protocolVersion() {
+        return Optional.ofNullable(this.protocolVersion);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="proxyProtocolV2")
-      private final @Nullable Output<Boolean> proxyProtocolV2;
+    private @Nullable Output<Boolean> proxyProtocolV2;
 
-    public Output<Boolean> proxyProtocolV2() {
-        return this.proxyProtocolV2 == null ? Codegen.empty() : this.proxyProtocolV2;
+    public Optional<Output<Boolean>> proxyProtocolV2() {
+        return Optional.ofNullable(this.proxyProtocolV2);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="slowStart")
-      private final @Nullable Output<Integer> slowStart;
+    private @Nullable Output<Integer> slowStart;
 
-    public Output<Integer> slowStart() {
-        return this.slowStart == null ? Codegen.empty() : this.slowStart;
+    public Optional<Output<Integer>> slowStart() {
+        return Optional.ofNullable(this.slowStart);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stickiness")
-      private final @Nullable Output<TargetGroupStickinessGetArgs> stickiness;
+    private @Nullable Output<TargetGroupStickinessGetArgs> stickiness;
 
-    public Output<TargetGroupStickinessGetArgs> stickiness() {
-        return this.stickiness == null ? Codegen.empty() : this.stickiness;
+    public Optional<Output<TargetGroupStickinessGetArgs>> stickiness() {
+        return Optional.ofNullable(this.stickiness);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -223,10 +223,10 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
     /**
@@ -234,297 +234,238 @@ public final class TargetGroupState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public TargetGroupState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> arnSuffix,
-        @Nullable Output<Boolean> connectionTermination,
-        @Nullable Output<Integer> deregistrationDelay,
-        @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck,
-        @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled,
-        @Nullable Output<String> loadBalancingAlgorithmType,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> preserveClientIp,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> protocolVersion,
-        @Nullable Output<Boolean> proxyProtocolV2,
-        @Nullable Output<Integer> slowStart,
-        @Nullable Output<TargetGroupStickinessGetArgs> stickiness,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> targetType,
-        @Nullable Output<String> vpcId) {
-        this.arn = arn;
-        this.arnSuffix = arnSuffix;
-        this.connectionTermination = connectionTermination;
-        this.deregistrationDelay = deregistrationDelay;
-        this.healthCheck = healthCheck;
-        this.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
-        this.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
-        this.name = name;
-        this.namePrefix = namePrefix;
-        this.port = port;
-        this.preserveClientIp = preserveClientIp;
-        this.protocol = protocol;
-        this.protocolVersion = protocolVersion;
-        this.proxyProtocolV2 = proxyProtocolV2;
-        this.slowStart = slowStart;
-        this.stickiness = stickiness;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetType = targetType;
-        this.vpcId = vpcId;
-    }
+    private TargetGroupState() {}
 
-    private TargetGroupState() {
-        this.arn = Codegen.empty();
-        this.arnSuffix = Codegen.empty();
-        this.connectionTermination = Codegen.empty();
-        this.deregistrationDelay = Codegen.empty();
-        this.healthCheck = Codegen.empty();
-        this.lambdaMultiValueHeadersEnabled = Codegen.empty();
-        this.loadBalancingAlgorithmType = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
-        this.port = Codegen.empty();
-        this.preserveClientIp = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.protocolVersion = Codegen.empty();
-        this.proxyProtocolV2 = Codegen.empty();
-        this.slowStart = Codegen.empty();
-        this.stickiness = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private TargetGroupState(TargetGroupState $) {
+        this.arn = $.arn;
+        this.arnSuffix = $.arnSuffix;
+        this.connectionTermination = $.connectionTermination;
+        this.deregistrationDelay = $.deregistrationDelay;
+        this.healthCheck = $.healthCheck;
+        this.lambdaMultiValueHeadersEnabled = $.lambdaMultiValueHeadersEnabled;
+        this.loadBalancingAlgorithmType = $.loadBalancingAlgorithmType;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
+        this.port = $.port;
+        this.preserveClientIp = $.preserveClientIp;
+        this.protocol = $.protocol;
+        this.protocolVersion = $.protocolVersion;
+        this.proxyProtocolV2 = $.proxyProtocolV2;
+        this.slowStart = $.slowStart;
+        this.stickiness = $.stickiness;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetType = $.targetType;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetGroupState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> arnSuffix;
-        private @Nullable Output<Boolean> connectionTermination;
-        private @Nullable Output<Integer> deregistrationDelay;
-        private @Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck;
-        private @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
-        private @Nullable Output<String> loadBalancingAlgorithmType;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> preserveClientIp;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> protocolVersion;
-        private @Nullable Output<Boolean> proxyProtocolV2;
-        private @Nullable Output<Integer> slowStart;
-        private @Nullable Output<TargetGroupStickinessGetArgs> stickiness;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> targetType;
-        private @Nullable Output<String> vpcId;
+        private TargetGroupState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetGroupState();
         }
 
         public Builder(TargetGroupState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.arnSuffix = defaults.arnSuffix;
-    	      this.connectionTermination = defaults.connectionTermination;
-    	      this.deregistrationDelay = defaults.deregistrationDelay;
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.lambdaMultiValueHeadersEnabled = defaults.lambdaMultiValueHeadersEnabled;
-    	      this.loadBalancingAlgorithmType = defaults.loadBalancingAlgorithmType;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
-    	      this.port = defaults.port;
-    	      this.preserveClientIp = defaults.preserveClientIp;
-    	      this.protocol = defaults.protocol;
-    	      this.protocolVersion = defaults.protocolVersion;
-    	      this.proxyProtocolV2 = defaults.proxyProtocolV2;
-    	      this.slowStart = defaults.slowStart;
-    	      this.stickiness = defaults.stickiness;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetType = defaults.targetType;
-    	      this.vpcId = defaults.vpcId;
+            $ = new TargetGroupState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder arnSuffix(@Nullable Output<String> arnSuffix) {
-            this.arnSuffix = arnSuffix;
+            $.arnSuffix = arnSuffix;
             return this;
         }
-        public Builder arnSuffix(@Nullable String arnSuffix) {
-            this.arnSuffix = Codegen.ofNullable(arnSuffix);
-            return this;
+
+        public Builder arnSuffix(String arnSuffix) {
+            return arnSuffix(Output.of(arnSuffix));
         }
+
         public Builder connectionTermination(@Nullable Output<Boolean> connectionTermination) {
-            this.connectionTermination = connectionTermination;
+            $.connectionTermination = connectionTermination;
             return this;
         }
-        public Builder connectionTermination(@Nullable Boolean connectionTermination) {
-            this.connectionTermination = Codegen.ofNullable(connectionTermination);
-            return this;
+
+        public Builder connectionTermination(Boolean connectionTermination) {
+            return connectionTermination(Output.of(connectionTermination));
         }
+
         public Builder deregistrationDelay(@Nullable Output<Integer> deregistrationDelay) {
-            this.deregistrationDelay = deregistrationDelay;
+            $.deregistrationDelay = deregistrationDelay;
             return this;
         }
-        public Builder deregistrationDelay(@Nullable Integer deregistrationDelay) {
-            this.deregistrationDelay = Codegen.ofNullable(deregistrationDelay);
-            return this;
+
+        public Builder deregistrationDelay(Integer deregistrationDelay) {
+            return deregistrationDelay(Output.of(deregistrationDelay));
         }
+
         public Builder healthCheck(@Nullable Output<TargetGroupHealthCheckGetArgs> healthCheck) {
-            this.healthCheck = healthCheck;
+            $.healthCheck = healthCheck;
             return this;
         }
-        public Builder healthCheck(@Nullable TargetGroupHealthCheckGetArgs healthCheck) {
-            this.healthCheck = Codegen.ofNullable(healthCheck);
-            return this;
+
+        public Builder healthCheck(TargetGroupHealthCheckGetArgs healthCheck) {
+            return healthCheck(Output.of(healthCheck));
         }
+
         public Builder lambdaMultiValueHeadersEnabled(@Nullable Output<Boolean> lambdaMultiValueHeadersEnabled) {
-            this.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
+            $.lambdaMultiValueHeadersEnabled = lambdaMultiValueHeadersEnabled;
             return this;
         }
-        public Builder lambdaMultiValueHeadersEnabled(@Nullable Boolean lambdaMultiValueHeadersEnabled) {
-            this.lambdaMultiValueHeadersEnabled = Codegen.ofNullable(lambdaMultiValueHeadersEnabled);
-            return this;
+
+        public Builder lambdaMultiValueHeadersEnabled(Boolean lambdaMultiValueHeadersEnabled) {
+            return lambdaMultiValueHeadersEnabled(Output.of(lambdaMultiValueHeadersEnabled));
         }
+
         public Builder loadBalancingAlgorithmType(@Nullable Output<String> loadBalancingAlgorithmType) {
-            this.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
+            $.loadBalancingAlgorithmType = loadBalancingAlgorithmType;
             return this;
         }
-        public Builder loadBalancingAlgorithmType(@Nullable String loadBalancingAlgorithmType) {
-            this.loadBalancingAlgorithmType = Codegen.ofNullable(loadBalancingAlgorithmType);
-            return this;
+
+        public Builder loadBalancingAlgorithmType(String loadBalancingAlgorithmType) {
+            return loadBalancingAlgorithmType(Output.of(loadBalancingAlgorithmType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder preserveClientIp(@Nullable Output<String> preserveClientIp) {
-            this.preserveClientIp = preserveClientIp;
+            $.preserveClientIp = preserveClientIp;
             return this;
         }
-        public Builder preserveClientIp(@Nullable String preserveClientIp) {
-            this.preserveClientIp = Codegen.ofNullable(preserveClientIp);
-            return this;
+
+        public Builder preserveClientIp(String preserveClientIp) {
+            return preserveClientIp(Output.of(preserveClientIp));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder protocolVersion(@Nullable Output<String> protocolVersion) {
-            this.protocolVersion = protocolVersion;
+            $.protocolVersion = protocolVersion;
             return this;
         }
-        public Builder protocolVersion(@Nullable String protocolVersion) {
-            this.protocolVersion = Codegen.ofNullable(protocolVersion);
-            return this;
+
+        public Builder protocolVersion(String protocolVersion) {
+            return protocolVersion(Output.of(protocolVersion));
         }
+
         public Builder proxyProtocolV2(@Nullable Output<Boolean> proxyProtocolV2) {
-            this.proxyProtocolV2 = proxyProtocolV2;
+            $.proxyProtocolV2 = proxyProtocolV2;
             return this;
         }
-        public Builder proxyProtocolV2(@Nullable Boolean proxyProtocolV2) {
-            this.proxyProtocolV2 = Codegen.ofNullable(proxyProtocolV2);
-            return this;
+
+        public Builder proxyProtocolV2(Boolean proxyProtocolV2) {
+            return proxyProtocolV2(Output.of(proxyProtocolV2));
         }
+
         public Builder slowStart(@Nullable Output<Integer> slowStart) {
-            this.slowStart = slowStart;
+            $.slowStart = slowStart;
             return this;
         }
-        public Builder slowStart(@Nullable Integer slowStart) {
-            this.slowStart = Codegen.ofNullable(slowStart);
-            return this;
+
+        public Builder slowStart(Integer slowStart) {
+            return slowStart(Output.of(slowStart));
         }
+
         public Builder stickiness(@Nullable Output<TargetGroupStickinessGetArgs> stickiness) {
-            this.stickiness = stickiness;
+            $.stickiness = stickiness;
             return this;
         }
-        public Builder stickiness(@Nullable TargetGroupStickinessGetArgs stickiness) {
-            this.stickiness = Codegen.ofNullable(stickiness);
-            return this;
+
+        public Builder stickiness(TargetGroupStickinessGetArgs stickiness) {
+            return stickiness(Output.of(stickiness));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public TargetGroupState build() {
-            return new TargetGroupState(arn, arnSuffix, connectionTermination, deregistrationDelay, healthCheck, lambdaMultiValueHeadersEnabled, loadBalancingAlgorithmType, name, namePrefix, port, preserveClientIp, protocol, protocolVersion, proxyProtocolV2, slowStart, stickiness, tags, tagsAll, targetType, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public TargetGroupState build() {
+            return $;
         }
     }
+
 }

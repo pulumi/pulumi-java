@@ -23,7 +23,7 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="cacheHitBytes", required=true)
-      private final Double cacheHitBytes;
+    private Double cacheHitBytes;
 
     public Double cacheHitBytes() {
         return this.cacheHitBytes;
@@ -34,7 +34,7 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="cacheHitBytesPercent", required=true)
-      private final Integer cacheHitBytesPercent;
+    private Integer cacheHitBytesPercent;
 
     public Integer cacheHitBytesPercent() {
         return this.cacheHitBytesPercent;
@@ -45,7 +45,7 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="cacheMissBytes", required=true)
-      private final Double cacheMissBytes;
+    private Double cacheMissBytes;
 
     public Double cacheMissBytes() {
         return this.cacheMissBytes;
@@ -56,73 +56,66 @@ public final class CloudTieringCachePerformanceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="lastUpdatedTimestamp", required=true)
-      private final String lastUpdatedTimestamp;
+    private String lastUpdatedTimestamp;
 
     public String lastUpdatedTimestamp() {
         return this.lastUpdatedTimestamp;
     }
 
-    public CloudTieringCachePerformanceResponse(
-        Double cacheHitBytes,
-        Integer cacheHitBytesPercent,
-        Double cacheMissBytes,
-        String lastUpdatedTimestamp) {
-        this.cacheHitBytes = Objects.requireNonNull(cacheHitBytes, "expected parameter 'cacheHitBytes' to be non-null");
-        this.cacheHitBytesPercent = Objects.requireNonNull(cacheHitBytesPercent, "expected parameter 'cacheHitBytesPercent' to be non-null");
-        this.cacheMissBytes = Objects.requireNonNull(cacheMissBytes, "expected parameter 'cacheMissBytes' to be non-null");
-        this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
-    }
+    private CloudTieringCachePerformanceResponse() {}
 
-    private CloudTieringCachePerformanceResponse() {
-        this.cacheHitBytes = null;
-        this.cacheHitBytesPercent = null;
-        this.cacheMissBytes = null;
-        this.lastUpdatedTimestamp = null;
+    private CloudTieringCachePerformanceResponse(CloudTieringCachePerformanceResponse $) {
+        this.cacheHitBytes = $.cacheHitBytes;
+        this.cacheHitBytesPercent = $.cacheHitBytesPercent;
+        this.cacheMissBytes = $.cacheMissBytes;
+        this.lastUpdatedTimestamp = $.lastUpdatedTimestamp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudTieringCachePerformanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cacheHitBytes;
-        private Integer cacheHitBytesPercent;
-        private Double cacheMissBytes;
-        private String lastUpdatedTimestamp;
+        private CloudTieringCachePerformanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudTieringCachePerformanceResponse();
         }
 
         public Builder(CloudTieringCachePerformanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheHitBytes = defaults.cacheHitBytes;
-    	      this.cacheHitBytesPercent = defaults.cacheHitBytesPercent;
-    	      this.cacheMissBytes = defaults.cacheMissBytes;
-    	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
+            $ = new CloudTieringCachePerformanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheHitBytes(Double cacheHitBytes) {
-            this.cacheHitBytes = Objects.requireNonNull(cacheHitBytes);
+            $.cacheHitBytes = cacheHitBytes;
             return this;
         }
+
         public Builder cacheHitBytesPercent(Integer cacheHitBytesPercent) {
-            this.cacheHitBytesPercent = Objects.requireNonNull(cacheHitBytesPercent);
+            $.cacheHitBytesPercent = cacheHitBytesPercent;
             return this;
         }
+
         public Builder cacheMissBytes(Double cacheMissBytes) {
-            this.cacheMissBytes = Objects.requireNonNull(cacheMissBytes);
+            $.cacheMissBytes = cacheMissBytes;
             return this;
         }
+
         public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
-            this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
+            $.lastUpdatedTimestamp = lastUpdatedTimestamp;
             return this;
-        }        public CloudTieringCachePerformanceResponse build() {
-            return new CloudTieringCachePerformanceResponse(cacheHitBytes, cacheHitBytesPercent, cacheMissBytes, lastUpdatedTimestamp);
+        }
+
+        public CloudTieringCachePerformanceResponse build() {
+            $.cacheHitBytes = Objects.requireNonNull($.cacheHitBytes, "expected parameter 'cacheHitBytes' to be non-null");
+            $.cacheHitBytesPercent = Objects.requireNonNull($.cacheHitBytesPercent, "expected parameter 'cacheHitBytesPercent' to be non-null");
+            $.cacheMissBytes = Objects.requireNonNull($.cacheMissBytes, "expected parameter 'cacheMissBytes' to be non-null");
+            $.lastUpdatedTimestamp = Objects.requireNonNull($.lastUpdatedTimestamp, "expected parameter 'lastUpdatedTimestamp' to be non-null");
+            return $;
         }
     }
+
 }

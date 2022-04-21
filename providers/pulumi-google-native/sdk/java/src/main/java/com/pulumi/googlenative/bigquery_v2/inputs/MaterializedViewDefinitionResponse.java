@@ -18,7 +18,7 @@ public final class MaterializedViewDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enableRefresh", required=true)
-      private final Boolean enableRefresh;
+    private Boolean enableRefresh;
 
     public Boolean enableRefresh() {
         return this.enableRefresh;
@@ -29,7 +29,7 @@ public final class MaterializedViewDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="lastRefreshTime", required=true)
-      private final String lastRefreshTime;
+    private String lastRefreshTime;
 
     public String lastRefreshTime() {
         return this.lastRefreshTime;
@@ -40,7 +40,7 @@ public final class MaterializedViewDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -51,73 +51,66 @@ public final class MaterializedViewDefinitionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="refreshIntervalMs", required=true)
-      private final String refreshIntervalMs;
+    private String refreshIntervalMs;
 
     public String refreshIntervalMs() {
         return this.refreshIntervalMs;
     }
 
-    public MaterializedViewDefinitionResponse(
-        Boolean enableRefresh,
-        String lastRefreshTime,
-        String query,
-        String refreshIntervalMs) {
-        this.enableRefresh = Objects.requireNonNull(enableRefresh, "expected parameter 'enableRefresh' to be non-null");
-        this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime, "expected parameter 'lastRefreshTime' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs, "expected parameter 'refreshIntervalMs' to be non-null");
-    }
+    private MaterializedViewDefinitionResponse() {}
 
-    private MaterializedViewDefinitionResponse() {
-        this.enableRefresh = null;
-        this.lastRefreshTime = null;
-        this.query = null;
-        this.refreshIntervalMs = null;
+    private MaterializedViewDefinitionResponse(MaterializedViewDefinitionResponse $) {
+        this.enableRefresh = $.enableRefresh;
+        this.lastRefreshTime = $.lastRefreshTime;
+        this.query = $.query;
+        this.refreshIntervalMs = $.refreshIntervalMs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaterializedViewDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableRefresh;
-        private String lastRefreshTime;
-        private String query;
-        private String refreshIntervalMs;
+        private MaterializedViewDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaterializedViewDefinitionResponse();
         }
 
         public Builder(MaterializedViewDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableRefresh = defaults.enableRefresh;
-    	      this.lastRefreshTime = defaults.lastRefreshTime;
-    	      this.query = defaults.query;
-    	      this.refreshIntervalMs = defaults.refreshIntervalMs;
+            $ = new MaterializedViewDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableRefresh(Boolean enableRefresh) {
-            this.enableRefresh = Objects.requireNonNull(enableRefresh);
+            $.enableRefresh = enableRefresh;
             return this;
         }
+
         public Builder lastRefreshTime(String lastRefreshTime) {
-            this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime);
+            $.lastRefreshTime = lastRefreshTime;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder refreshIntervalMs(String refreshIntervalMs) {
-            this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
+            $.refreshIntervalMs = refreshIntervalMs;
             return this;
-        }        public MaterializedViewDefinitionResponse build() {
-            return new MaterializedViewDefinitionResponse(enableRefresh, lastRefreshTime, query, refreshIntervalMs);
+        }
+
+        public MaterializedViewDefinitionResponse build() {
+            $.enableRefresh = Objects.requireNonNull($.enableRefresh, "expected parameter 'enableRefresh' to be non-null");
+            $.lastRefreshTime = Objects.requireNonNull($.lastRefreshTime, "expected parameter 'lastRefreshTime' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.refreshIntervalMs = Objects.requireNonNull($.refreshIntervalMs, "expected parameter 'refreshIntervalMs' to be non-null");
+            return $;
         }
     }
+
 }

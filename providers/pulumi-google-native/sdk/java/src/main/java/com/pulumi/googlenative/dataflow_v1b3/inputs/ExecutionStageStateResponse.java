@@ -21,7 +21,7 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="currentStateTime", required=true)
-      private final String currentStateTime;
+    private String currentStateTime;
 
     public String currentStateTime() {
         return this.currentStateTime;
@@ -32,7 +32,7 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="executionStageName", required=true)
-      private final String executionStageName;
+    private String executionStageName;
 
     public String executionStageName() {
         return this.executionStageName;
@@ -43,64 +43,59 @@ public final class ExecutionStageStateResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="executionStageState", required=true)
-      private final String executionStageState;
+    private String executionStageState;
 
     public String executionStageState() {
         return this.executionStageState;
     }
 
-    public ExecutionStageStateResponse(
-        String currentStateTime,
-        String executionStageName,
-        String executionStageState) {
-        this.currentStateTime = Objects.requireNonNull(currentStateTime, "expected parameter 'currentStateTime' to be non-null");
-        this.executionStageName = Objects.requireNonNull(executionStageName, "expected parameter 'executionStageName' to be non-null");
-        this.executionStageState = Objects.requireNonNull(executionStageState, "expected parameter 'executionStageState' to be non-null");
-    }
+    private ExecutionStageStateResponse() {}
 
-    private ExecutionStageStateResponse() {
-        this.currentStateTime = null;
-        this.executionStageName = null;
-        this.executionStageState = null;
+    private ExecutionStageStateResponse(ExecutionStageStateResponse $) {
+        this.currentStateTime = $.currentStateTime;
+        this.executionStageName = $.executionStageName;
+        this.executionStageState = $.executionStageState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionStageStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentStateTime;
-        private String executionStageName;
-        private String executionStageState;
+        private ExecutionStageStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionStageStateResponse();
         }
 
         public Builder(ExecutionStageStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentStateTime = defaults.currentStateTime;
-    	      this.executionStageName = defaults.executionStageName;
-    	      this.executionStageState = defaults.executionStageState;
+            $ = new ExecutionStageStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentStateTime(String currentStateTime) {
-            this.currentStateTime = Objects.requireNonNull(currentStateTime);
+            $.currentStateTime = currentStateTime;
             return this;
         }
+
         public Builder executionStageName(String executionStageName) {
-            this.executionStageName = Objects.requireNonNull(executionStageName);
+            $.executionStageName = executionStageName;
             return this;
         }
+
         public Builder executionStageState(String executionStageState) {
-            this.executionStageState = Objects.requireNonNull(executionStageState);
+            $.executionStageState = executionStageState;
             return this;
-        }        public ExecutionStageStateResponse build() {
-            return new ExecutionStageStateResponse(currentStateTime, executionStageName, executionStageState);
+        }
+
+        public ExecutionStageStateResponse build() {
+            $.currentStateTime = Objects.requireNonNull($.currentStateTime, "expected parameter 'currentStateTime' to be non-null");
+            $.executionStageName = Objects.requireNonNull($.executionStageName, "expected parameter 'executionStageName' to be non-null");
+            $.executionStageState = Objects.requireNonNull($.executionStageState, "expected parameter 'executionStageState' to be non-null");
+            return $;
         }
     }
+
 }

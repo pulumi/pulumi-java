@@ -5,10 +5,10 @@ package com.pulumi.awsnative.logs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class QueryDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logGroupNames")
-      private final @Nullable Output<List<String>> logGroupNames;
+    private @Nullable Output<List<String>> logGroupNames;
 
-    public Output<List<String>> logGroupNames() {
-        return this.logGroupNames == null ? Codegen.empty() : this.logGroupNames;
+    public Optional<Output<List<String>>> logGroupNames() {
+        return Optional.ofNullable(this.logGroupNames);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class QueryDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -43,79 +43,73 @@ public final class QueryDefinitionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="queryString", required=true)
-      private final Output<String> queryString;
+    private Output<String> queryString;
 
     public Output<String> queryString() {
         return this.queryString;
     }
 
-    public QueryDefinitionArgs(
-        @Nullable Output<List<String>> logGroupNames,
-        @Nullable Output<String> name,
-        Output<String> queryString) {
-        this.logGroupNames = logGroupNames;
-        this.name = name;
-        this.queryString = Objects.requireNonNull(queryString, "expected parameter 'queryString' to be non-null");
-    }
+    private QueryDefinitionArgs() {}
 
-    private QueryDefinitionArgs() {
-        this.logGroupNames = Codegen.empty();
-        this.name = Codegen.empty();
-        this.queryString = Codegen.empty();
+    private QueryDefinitionArgs(QueryDefinitionArgs $) {
+        this.logGroupNames = $.logGroupNames;
+        this.name = $.name;
+        this.queryString = $.queryString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryDefinitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> logGroupNames;
-        private @Nullable Output<String> name;
-        private Output<String> queryString;
+        private QueryDefinitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryDefinitionArgs();
         }
 
         public Builder(QueryDefinitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logGroupNames = defaults.logGroupNames;
-    	      this.name = defaults.name;
-    	      this.queryString = defaults.queryString;
+            $ = new QueryDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logGroupNames(@Nullable Output<List<String>> logGroupNames) {
-            this.logGroupNames = logGroupNames;
+            $.logGroupNames = logGroupNames;
             return this;
         }
-        public Builder logGroupNames(@Nullable List<String> logGroupNames) {
-            this.logGroupNames = Codegen.ofNullable(logGroupNames);
-            return this;
+
+        public Builder logGroupNames(List<String> logGroupNames) {
+            return logGroupNames(Output.of(logGroupNames));
         }
+
         public Builder logGroupNames(String... logGroupNames) {
             return logGroupNames(List.of(logGroupNames));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder queryString(Output<String> queryString) {
-            this.queryString = Objects.requireNonNull(queryString);
+            $.queryString = queryString;
             return this;
         }
+
         public Builder queryString(String queryString) {
-            this.queryString = Output.of(Objects.requireNonNull(queryString));
-            return this;
-        }        public QueryDefinitionArgs build() {
-            return new QueryDefinitionArgs(logGroupNames, name, queryString);
+            return queryString(Output.of(queryString));
+        }
+
+        public QueryDefinitionArgs build() {
+            $.queryString = Objects.requireNonNull($.queryString, "expected parameter 'queryString' to be non-null");
+            return $;
         }
     }
+
 }

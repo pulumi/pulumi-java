@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DistributionPolicyZoneConfigurationArgs extends com.pulumi.re
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public DistributionPolicyZoneConfigurationArgs(@Nullable Output<String> zone) {
-        this.zone = zone;
-    }
+    private DistributionPolicyZoneConfigurationArgs() {}
 
-    private DistributionPolicyZoneConfigurationArgs() {
-        this.zone = Codegen.empty();
+    private DistributionPolicyZoneConfigurationArgs(DistributionPolicyZoneConfigurationArgs $) {
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionPolicyZoneConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> zone;
+        private DistributionPolicyZoneConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionPolicyZoneConfigurationArgs();
         }
 
         public Builder(DistributionPolicyZoneConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.zone = defaults.zone;
+            $ = new DistributionPolicyZoneConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public DistributionPolicyZoneConfigurationArgs build() {
-            return new DistributionPolicyZoneConfigurationArgs(zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public DistributionPolicyZoneConfigurationArgs build() {
+            return $;
         }
     }
+
 }

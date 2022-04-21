@@ -23,7 +23,7 @@ public final class WeightedBackendServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="backendService", required=true)
-      private final String backendService;
+    private String backendService;
 
     public String backendService() {
         return this.backendService;
@@ -34,7 +34,7 @@ public final class WeightedBackendServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="headerAction", required=true)
-      private final HttpHeaderActionResponse headerAction;
+    private HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse headerAction() {
         return this.headerAction;
@@ -45,64 +45,59 @@ public final class WeightedBackendServiceResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="weight", required=true)
-      private final Integer weight;
+    private Integer weight;
 
     public Integer weight() {
         return this.weight;
     }
 
-    public WeightedBackendServiceResponse(
-        String backendService,
-        HttpHeaderActionResponse headerAction,
-        Integer weight) {
-        this.backendService = Objects.requireNonNull(backendService, "expected parameter 'backendService' to be non-null");
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.weight = Objects.requireNonNull(weight, "expected parameter 'weight' to be non-null");
-    }
+    private WeightedBackendServiceResponse() {}
 
-    private WeightedBackendServiceResponse() {
-        this.backendService = null;
-        this.headerAction = null;
-        this.weight = null;
+    private WeightedBackendServiceResponse(WeightedBackendServiceResponse $) {
+        this.backendService = $.backendService;
+        this.headerAction = $.headerAction;
+        this.weight = $.weight;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeightedBackendServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backendService;
-        private HttpHeaderActionResponse headerAction;
-        private Integer weight;
+        private WeightedBackendServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeightedBackendServiceResponse();
         }
 
         public Builder(WeightedBackendServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendService = defaults.backendService;
-    	      this.headerAction = defaults.headerAction;
-    	      this.weight = defaults.weight;
+            $ = new WeightedBackendServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendService(String backendService) {
-            this.backendService = Objects.requireNonNull(backendService);
+            $.backendService = backendService;
             return this;
         }
+
         public Builder headerAction(HttpHeaderActionResponse headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder weight(Integer weight) {
-            this.weight = Objects.requireNonNull(weight);
+            $.weight = weight;
             return this;
-        }        public WeightedBackendServiceResponse build() {
-            return new WeightedBackendServiceResponse(backendService, headerAction, weight);
+        }
+
+        public WeightedBackendServiceResponse build() {
+            $.backendService = Objects.requireNonNull($.backendService, "expected parameter 'backendService' to be non-null");
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.weight = Objects.requireNonNull($.weight, "expected parameter 'weight' to be non-null");
+            return $;
         }
     }
+
 }

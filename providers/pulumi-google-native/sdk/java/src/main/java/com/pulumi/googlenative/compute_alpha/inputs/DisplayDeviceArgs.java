@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DisplayDeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableDisplay")
-      private final @Nullable Output<Boolean> enableDisplay;
+    private @Nullable Output<Boolean> enableDisplay;
 
-    public Output<Boolean> enableDisplay() {
-        return this.enableDisplay == null ? Codegen.empty() : this.enableDisplay;
+    public Optional<Output<Boolean>> enableDisplay() {
+        return Optional.ofNullable(this.enableDisplay);
     }
 
-    public DisplayDeviceArgs(@Nullable Output<Boolean> enableDisplay) {
-        this.enableDisplay = enableDisplay;
-    }
+    private DisplayDeviceArgs() {}
 
-    private DisplayDeviceArgs() {
-        this.enableDisplay = Codegen.empty();
+    private DisplayDeviceArgs(DisplayDeviceArgs $) {
+        this.enableDisplay = $.enableDisplay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisplayDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableDisplay;
+        private DisplayDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisplayDeviceArgs();
         }
 
         public Builder(DisplayDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableDisplay = defaults.enableDisplay;
+            $ = new DisplayDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableDisplay(@Nullable Output<Boolean> enableDisplay) {
-            this.enableDisplay = enableDisplay;
+            $.enableDisplay = enableDisplay;
             return this;
         }
-        public Builder enableDisplay(@Nullable Boolean enableDisplay) {
-            this.enableDisplay = Codegen.ofNullable(enableDisplay);
-            return this;
-        }        public DisplayDeviceArgs build() {
-            return new DisplayDeviceArgs(enableDisplay);
+
+        public Builder enableDisplay(Boolean enableDisplay) {
+            return enableDisplay(Output.of(enableDisplay));
+        }
+
+        public DisplayDeviceArgs build() {
+            return $;
         }
     }
+
 }

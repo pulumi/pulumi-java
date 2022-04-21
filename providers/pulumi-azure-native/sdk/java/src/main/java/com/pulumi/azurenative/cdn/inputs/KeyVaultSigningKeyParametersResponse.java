@@ -17,7 +17,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
     public static final KeyVaultSigningKeyParametersResponse Empty = new KeyVaultSigningKeyParametersResponse();
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -28,7 +28,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
@@ -50,7 +50,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="secretVersion", required=true)
-      private final String secretVersion;
+    private String secretVersion;
 
     public String secretVersion() {
         return this.secretVersion;
@@ -61,7 +61,7 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
@@ -72,91 +72,80 @@ public final class KeyVaultSigningKeyParametersResponse extends com.pulumi.resou
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public KeyVaultSigningKeyParametersResponse(
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        String secretVersion,
-        String subscriptionId,
-        String vaultName) {
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.secretVersion = Objects.requireNonNull(secretVersion, "expected parameter 'secretVersion' to be non-null");
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private KeyVaultSigningKeyParametersResponse() {}
 
-    private KeyVaultSigningKeyParametersResponse() {
-        this.odataType = null;
-        this.resourceGroupName = null;
-        this.secretName = null;
-        this.secretVersion = null;
-        this.subscriptionId = null;
-        this.vaultName = null;
+    private KeyVaultSigningKeyParametersResponse(KeyVaultSigningKeyParametersResponse $) {
+        this.odataType = $.odataType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretName = $.secretName;
+        this.secretVersion = $.secretVersion;
+        this.subscriptionId = $.subscriptionId;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultSigningKeyParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String odataType;
-        private String resourceGroupName;
-        private String secretName;
-        private String secretVersion;
-        private String subscriptionId;
-        private String vaultName;
+        private KeyVaultSigningKeyParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultSigningKeyParametersResponse();
         }
 
         public Builder(KeyVaultSigningKeyParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.odataType = defaults.odataType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretName = defaults.secretName;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.vaultName = defaults.vaultName;
+            $ = new KeyVaultSigningKeyParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretVersion(String secretVersion) {
-            this.secretVersion = Objects.requireNonNull(secretVersion);
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public KeyVaultSigningKeyParametersResponse build() {
-            return new KeyVaultSigningKeyParametersResponse(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
+        }
+
+        public KeyVaultSigningKeyParametersResponse build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            $.secretVersion = Objects.requireNonNull($.secretVersion, "expected parameter 'secretVersion' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

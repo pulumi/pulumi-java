@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storagetransfer_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.BandwidthLimitArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
     @Import(name="agentPoolId", required=true)
-      private final Output<String> agentPoolId;
+    private Output<String> agentPoolId;
 
     public Output<String> agentPoolId() {
         return this.agentPoolId;
@@ -28,10 +28,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bandwidthLimit")
-      private final @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
+    private @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
 
-    public Output<BandwidthLimitArgs> bandwidthLimit() {
-        return this.bandwidthLimit == null ? Codegen.empty() : this.bandwidthLimit;
+    public Optional<Output<BandwidthLimitArgs>> bandwidthLimit() {
+        return Optional.ofNullable(this.bandwidthLimit);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -50,109 +50,96 @@ public final class AgentPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public AgentPoolArgs(
-        Output<String> agentPoolId,
-        @Nullable Output<BandwidthLimitArgs> bandwidthLimit,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.agentPoolId = Objects.requireNonNull(agentPoolId, "expected parameter 'agentPoolId' to be non-null");
-        this.bandwidthLimit = bandwidthLimit;
-        this.displayName = displayName;
-        this.name = name;
-        this.project = project;
-    }
+    private AgentPoolArgs() {}
 
-    private AgentPoolArgs() {
-        this.agentPoolId = Codegen.empty();
-        this.bandwidthLimit = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private AgentPoolArgs(AgentPoolArgs $) {
+        this.agentPoolId = $.agentPoolId;
+        this.bandwidthLimit = $.bandwidthLimit;
+        this.displayName = $.displayName;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentPoolId;
-        private @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private AgentPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentPoolArgs();
         }
 
         public Builder(AgentPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPoolId = defaults.agentPoolId;
-    	      this.bandwidthLimit = defaults.bandwidthLimit;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new AgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPoolId(Output<String> agentPoolId) {
-            this.agentPoolId = Objects.requireNonNull(agentPoolId);
+            $.agentPoolId = agentPoolId;
             return this;
         }
+
         public Builder agentPoolId(String agentPoolId) {
-            this.agentPoolId = Output.of(Objects.requireNonNull(agentPoolId));
-            return this;
+            return agentPoolId(Output.of(agentPoolId));
         }
+
         public Builder bandwidthLimit(@Nullable Output<BandwidthLimitArgs> bandwidthLimit) {
-            this.bandwidthLimit = bandwidthLimit;
+            $.bandwidthLimit = bandwidthLimit;
             return this;
         }
-        public Builder bandwidthLimit(@Nullable BandwidthLimitArgs bandwidthLimit) {
-            this.bandwidthLimit = Codegen.ofNullable(bandwidthLimit);
-            return this;
+
+        public Builder bandwidthLimit(BandwidthLimitArgs bandwidthLimit) {
+            return bandwidthLimit(Output.of(bandwidthLimit));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public AgentPoolArgs build() {
-            return new AgentPoolArgs(agentPoolId, bandwidthLimit, displayName, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public AgentPoolArgs build() {
+            $.agentPoolId = Objects.requireNonNull($.agentPoolId, "expected parameter 'agentPoolId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ciphers", required=true)
-      private final List<String> ciphers;
+    private List<String> ciphers;
 
     public List<String> ciphers() {
         return this.ciphers;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="clientAuthEnabled", required=true)
-      private final Boolean clientAuthEnabled;
+    private Boolean clientAuthEnabled;
 
     public Boolean clientAuthEnabled() {
         return this.clientAuthEnabled;
@@ -46,7 +46,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="commonName", required=true)
-      private final GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
+    private GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
 
     public GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName() {
         return this.commonName;
@@ -57,7 +57,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -68,7 +68,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="ignoreValidationErrors", required=true)
-      private final Boolean ignoreValidationErrors;
+    private Boolean ignoreValidationErrors;
 
     public Boolean ignoreValidationErrors() {
         return this.ignoreValidationErrors;
@@ -79,7 +79,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="keyAlias", required=true)
-      private final String keyAlias;
+    private String keyAlias;
 
     public String keyAlias() {
         return this.keyAlias;
@@ -90,7 +90,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="keyStore", required=true)
-      private final String keyStore;
+    private String keyStore;
 
     public String keyStore() {
         return this.keyStore;
@@ -101,7 +101,7 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="protocols", required=true)
-      private final List<String> protocols;
+    private List<String> protocols;
 
     public List<String> protocols() {
         return this.protocols;
@@ -112,124 +112,109 @@ public final class GoogleCloudApigeeV1TlsInfoResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="trustStore", required=true)
-      private final String trustStore;
+    private String trustStore;
 
     public String trustStore() {
         return this.trustStore;
     }
 
-    public GoogleCloudApigeeV1TlsInfoResponse(
-        List<String> ciphers,
-        Boolean clientAuthEnabled,
-        GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
-        Boolean enabled,
-        Boolean ignoreValidationErrors,
-        String keyAlias,
-        String keyStore,
-        List<String> protocols,
-        String trustStore) {
-        this.ciphers = Objects.requireNonNull(ciphers, "expected parameter 'ciphers' to be non-null");
-        this.clientAuthEnabled = Objects.requireNonNull(clientAuthEnabled, "expected parameter 'clientAuthEnabled' to be non-null");
-        this.commonName = Objects.requireNonNull(commonName, "expected parameter 'commonName' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.ignoreValidationErrors = Objects.requireNonNull(ignoreValidationErrors, "expected parameter 'ignoreValidationErrors' to be non-null");
-        this.keyAlias = Objects.requireNonNull(keyAlias, "expected parameter 'keyAlias' to be non-null");
-        this.keyStore = Objects.requireNonNull(keyStore, "expected parameter 'keyStore' to be non-null");
-        this.protocols = Objects.requireNonNull(protocols, "expected parameter 'protocols' to be non-null");
-        this.trustStore = Objects.requireNonNull(trustStore, "expected parameter 'trustStore' to be non-null");
-    }
+    private GoogleCloudApigeeV1TlsInfoResponse() {}
 
-    private GoogleCloudApigeeV1TlsInfoResponse() {
-        this.ciphers = List.of();
-        this.clientAuthEnabled = null;
-        this.commonName = null;
-        this.enabled = null;
-        this.ignoreValidationErrors = null;
-        this.keyAlias = null;
-        this.keyStore = null;
-        this.protocols = List.of();
-        this.trustStore = null;
+    private GoogleCloudApigeeV1TlsInfoResponse(GoogleCloudApigeeV1TlsInfoResponse $) {
+        this.ciphers = $.ciphers;
+        this.clientAuthEnabled = $.clientAuthEnabled;
+        this.commonName = $.commonName;
+        this.enabled = $.enabled;
+        this.ignoreValidationErrors = $.ignoreValidationErrors;
+        this.keyAlias = $.keyAlias;
+        this.keyStore = $.keyStore;
+        this.protocols = $.protocols;
+        this.trustStore = $.trustStore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1TlsInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ciphers;
-        private Boolean clientAuthEnabled;
-        private GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName;
-        private Boolean enabled;
-        private Boolean ignoreValidationErrors;
-        private String keyAlias;
-        private String keyStore;
-        private List<String> protocols;
-        private String trustStore;
+        private GoogleCloudApigeeV1TlsInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1TlsInfoResponse();
         }
 
         public Builder(GoogleCloudApigeeV1TlsInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ciphers = defaults.ciphers;
-    	      this.clientAuthEnabled = defaults.clientAuthEnabled;
-    	      this.commonName = defaults.commonName;
-    	      this.enabled = defaults.enabled;
-    	      this.ignoreValidationErrors = defaults.ignoreValidationErrors;
-    	      this.keyAlias = defaults.keyAlias;
-    	      this.keyStore = defaults.keyStore;
-    	      this.protocols = defaults.protocols;
-    	      this.trustStore = defaults.trustStore;
+            $ = new GoogleCloudApigeeV1TlsInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ciphers(List<String> ciphers) {
-            this.ciphers = Objects.requireNonNull(ciphers);
+            $.ciphers = ciphers;
             return this;
         }
+
         public Builder ciphers(String... ciphers) {
             return ciphers(List.of(ciphers));
         }
+
         public Builder clientAuthEnabled(Boolean clientAuthEnabled) {
-            this.clientAuthEnabled = Objects.requireNonNull(clientAuthEnabled);
+            $.clientAuthEnabled = clientAuthEnabled;
             return this;
         }
+
         public Builder commonName(GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName) {
-            this.commonName = Objects.requireNonNull(commonName);
+            $.commonName = commonName;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder ignoreValidationErrors(Boolean ignoreValidationErrors) {
-            this.ignoreValidationErrors = Objects.requireNonNull(ignoreValidationErrors);
+            $.ignoreValidationErrors = ignoreValidationErrors;
             return this;
         }
+
         public Builder keyAlias(String keyAlias) {
-            this.keyAlias = Objects.requireNonNull(keyAlias);
+            $.keyAlias = keyAlias;
             return this;
         }
+
         public Builder keyStore(String keyStore) {
-            this.keyStore = Objects.requireNonNull(keyStore);
+            $.keyStore = keyStore;
             return this;
         }
+
         public Builder protocols(List<String> protocols) {
-            this.protocols = Objects.requireNonNull(protocols);
+            $.protocols = protocols;
             return this;
         }
+
         public Builder protocols(String... protocols) {
             return protocols(List.of(protocols));
         }
+
         public Builder trustStore(String trustStore) {
-            this.trustStore = Objects.requireNonNull(trustStore);
+            $.trustStore = trustStore;
             return this;
-        }        public GoogleCloudApigeeV1TlsInfoResponse build() {
-            return new GoogleCloudApigeeV1TlsInfoResponse(ciphers, clientAuthEnabled, commonName, enabled, ignoreValidationErrors, keyAlias, keyStore, protocols, trustStore);
+        }
+
+        public GoogleCloudApigeeV1TlsInfoResponse build() {
+            $.ciphers = Objects.requireNonNull($.ciphers, "expected parameter 'ciphers' to be non-null");
+            $.clientAuthEnabled = Objects.requireNonNull($.clientAuthEnabled, "expected parameter 'clientAuthEnabled' to be non-null");
+            $.commonName = Objects.requireNonNull($.commonName, "expected parameter 'commonName' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.ignoreValidationErrors = Objects.requireNonNull($.ignoreValidationErrors, "expected parameter 'ignoreValidationErrors' to be non-null");
+            $.keyAlias = Objects.requireNonNull($.keyAlias, "expected parameter 'keyAlias' to be non-null");
+            $.keyStore = Objects.requireNonNull($.keyStore, "expected parameter 'keyStore' to be non-null");
+            $.protocols = Objects.requireNonNull($.protocols, "expected parameter 'protocols' to be non-null");
+            $.trustStore = Objects.requireNonNull($.trustStore, "expected parameter 'trustStore' to be non-null");
+            return $;
         }
     }
+
 }

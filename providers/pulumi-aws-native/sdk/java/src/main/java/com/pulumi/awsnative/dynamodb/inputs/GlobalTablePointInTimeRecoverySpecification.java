@@ -15,45 +15,44 @@ public final class GlobalTablePointInTimeRecoverySpecification extends com.pulum
     public static final GlobalTablePointInTimeRecoverySpecification Empty = new GlobalTablePointInTimeRecoverySpecification();
 
     @Import(name="pointInTimeRecoveryEnabled")
-      private final @Nullable Boolean pointInTimeRecoveryEnabled;
+    private @Nullable Boolean pointInTimeRecoveryEnabled;
 
     public Optional<Boolean> pointInTimeRecoveryEnabled() {
-        return this.pointInTimeRecoveryEnabled == null ? Optional.empty() : Optional.ofNullable(this.pointInTimeRecoveryEnabled);
+        return Optional.ofNullable(this.pointInTimeRecoveryEnabled);
     }
 
-    public GlobalTablePointInTimeRecoverySpecification(@Nullable Boolean pointInTimeRecoveryEnabled) {
-        this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
-    }
+    private GlobalTablePointInTimeRecoverySpecification() {}
 
-    private GlobalTablePointInTimeRecoverySpecification() {
-        this.pointInTimeRecoveryEnabled = null;
+    private GlobalTablePointInTimeRecoverySpecification(GlobalTablePointInTimeRecoverySpecification $) {
+        this.pointInTimeRecoveryEnabled = $.pointInTimeRecoveryEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTablePointInTimeRecoverySpecification defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean pointInTimeRecoveryEnabled;
+        private GlobalTablePointInTimeRecoverySpecification $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTablePointInTimeRecoverySpecification();
         }
 
         public Builder(GlobalTablePointInTimeRecoverySpecification defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
+            $ = new GlobalTablePointInTimeRecoverySpecification(Objects.requireNonNull(defaults));
         }
 
         public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
-            this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
+            $.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
-        }        public GlobalTablePointInTimeRecoverySpecification build() {
-            return new GlobalTablePointInTimeRecoverySpecification(pointInTimeRecoveryEnabled);
+        }
+
+        public GlobalTablePointInTimeRecoverySpecification build() {
+            return $;
         }
     }
+
 }

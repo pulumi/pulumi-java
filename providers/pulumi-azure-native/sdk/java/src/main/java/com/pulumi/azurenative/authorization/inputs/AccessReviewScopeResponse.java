@@ -24,7 +24,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assignmentState", required=true)
-      private final String assignmentState;
+    private String assignmentState;
 
     public String assignmentState() {
         return this.assignmentState;
@@ -35,10 +35,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expandNestedMemberships")
-      private final @Nullable Boolean expandNestedMemberships;
+    private @Nullable Boolean expandNestedMemberships;
 
     public Optional<Boolean> expandNestedMemberships() {
-        return this.expandNestedMemberships == null ? Optional.empty() : Optional.ofNullable(this.expandNestedMemberships);
+        return Optional.ofNullable(this.expandNestedMemberships);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="inactiveDuration")
-      private final @Nullable String inactiveDuration;
+    private @Nullable String inactiveDuration;
 
     public Optional<String> inactiveDuration() {
-        return this.inactiveDuration == null ? Optional.empty() : Optional.ofNullable(this.inactiveDuration);
+        return Optional.ofNullable(this.inactiveDuration);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="principalType", required=true)
-      private final String principalType;
+    private String principalType;
 
     public String principalType() {
         return this.principalType;
@@ -68,7 +68,7 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -79,91 +79,78 @@ public final class AccessReviewScopeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="roleDefinitionId", required=true)
-      private final String roleDefinitionId;
+    private String roleDefinitionId;
 
     public String roleDefinitionId() {
         return this.roleDefinitionId;
     }
 
-    public AccessReviewScopeResponse(
-        String assignmentState,
-        @Nullable Boolean expandNestedMemberships,
-        @Nullable String inactiveDuration,
-        String principalType,
-        String resourceId,
-        String roleDefinitionId) {
-        this.assignmentState = Objects.requireNonNull(assignmentState, "expected parameter 'assignmentState' to be non-null");
-        this.expandNestedMemberships = expandNestedMemberships;
-        this.inactiveDuration = inactiveDuration;
-        this.principalType = Objects.requireNonNull(principalType, "expected parameter 'principalType' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
-    }
+    private AccessReviewScopeResponse() {}
 
-    private AccessReviewScopeResponse() {
-        this.assignmentState = null;
-        this.expandNestedMemberships = null;
-        this.inactiveDuration = null;
-        this.principalType = null;
-        this.resourceId = null;
-        this.roleDefinitionId = null;
+    private AccessReviewScopeResponse(AccessReviewScopeResponse $) {
+        this.assignmentState = $.assignmentState;
+        this.expandNestedMemberships = $.expandNestedMemberships;
+        this.inactiveDuration = $.inactiveDuration;
+        this.principalType = $.principalType;
+        this.resourceId = $.resourceId;
+        this.roleDefinitionId = $.roleDefinitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessReviewScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assignmentState;
-        private @Nullable Boolean expandNestedMemberships;
-        private @Nullable String inactiveDuration;
-        private String principalType;
-        private String resourceId;
-        private String roleDefinitionId;
+        private AccessReviewScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessReviewScopeResponse();
         }
 
         public Builder(AccessReviewScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assignmentState = defaults.assignmentState;
-    	      this.expandNestedMemberships = defaults.expandNestedMemberships;
-    	      this.inactiveDuration = defaults.inactiveDuration;
-    	      this.principalType = defaults.principalType;
-    	      this.resourceId = defaults.resourceId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
+            $ = new AccessReviewScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assignmentState(String assignmentState) {
-            this.assignmentState = Objects.requireNonNull(assignmentState);
+            $.assignmentState = assignmentState;
             return this;
         }
+
         public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
-            this.expandNestedMemberships = expandNestedMemberships;
+            $.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
+
         public Builder inactiveDuration(@Nullable String inactiveDuration) {
-            this.inactiveDuration = inactiveDuration;
+            $.inactiveDuration = inactiveDuration;
             return this;
         }
+
         public Builder principalType(String principalType) {
-            this.principalType = Objects.requireNonNull(principalType);
+            $.principalType = principalType;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder roleDefinitionId(String roleDefinitionId) {
-            this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
+            $.roleDefinitionId = roleDefinitionId;
             return this;
-        }        public AccessReviewScopeResponse build() {
-            return new AccessReviewScopeResponse(assignmentState, expandNestedMemberships, inactiveDuration, principalType, resourceId, roleDefinitionId);
+        }
+
+        public AccessReviewScopeResponse build() {
+            $.assignmentState = Objects.requireNonNull($.assignmentState, "expected parameter 'assignmentState' to be non-null");
+            $.principalType = Objects.requireNonNull($.principalType, "expected parameter 'principalType' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.roleDefinitionId = Objects.requireNonNull($.roleDefinitionId, "expected parameter 'roleDefinitionId' to be non-null");
+            return $;
         }
     }
+
 }

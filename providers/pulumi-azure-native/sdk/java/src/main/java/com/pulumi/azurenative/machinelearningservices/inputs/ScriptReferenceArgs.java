@@ -5,9 +5,9 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptArguments")
-      private final @Nullable Output<String> scriptArguments;
+    private @Nullable Output<String> scriptArguments;
 
-    public Output<String> scriptArguments() {
-        return this.scriptArguments == null ? Codegen.empty() : this.scriptArguments;
+    public Optional<Output<String>> scriptArguments() {
+        return Optional.ofNullable(this.scriptArguments);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptData")
-      private final @Nullable Output<String> scriptData;
+    private @Nullable Output<String> scriptData;
 
-    public Output<String> scriptData() {
-        return this.scriptData == null ? Codegen.empty() : this.scriptData;
+    public Optional<Output<String>> scriptData() {
+        return Optional.ofNullable(this.scriptData);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptSource")
-      private final @Nullable Output<String> scriptSource;
+    private @Nullable Output<String> scriptSource;
 
-    public Output<String> scriptSource() {
-        return this.scriptSource == null ? Codegen.empty() : this.scriptSource;
+    public Optional<Output<String>> scriptSource() {
+        return Optional.ofNullable(this.scriptSource);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class ScriptReferenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ScriptReferenceArgs(
-        @Nullable Output<String> scriptArguments,
-        @Nullable Output<String> scriptData,
-        @Nullable Output<String> scriptSource,
-        @Nullable Output<String> timeout) {
-        this.scriptArguments = scriptArguments;
-        this.scriptData = scriptData;
-        this.scriptSource = scriptSource;
-        this.timeout = timeout;
-    }
+    private ScriptReferenceArgs() {}
 
-    private ScriptReferenceArgs() {
-        this.scriptArguments = Codegen.empty();
-        this.scriptData = Codegen.empty();
-        this.scriptSource = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ScriptReferenceArgs(ScriptReferenceArgs $) {
+        this.scriptArguments = $.scriptArguments;
+        this.scriptData = $.scriptData;
+        this.scriptSource = $.scriptSource;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> scriptArguments;
-        private @Nullable Output<String> scriptData;
-        private @Nullable Output<String> scriptSource;
-        private @Nullable Output<String> timeout;
+        private ScriptReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptReferenceArgs();
         }
 
         public Builder(ScriptReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scriptArguments = defaults.scriptArguments;
-    	      this.scriptData = defaults.scriptData;
-    	      this.scriptSource = defaults.scriptSource;
-    	      this.timeout = defaults.timeout;
+            $ = new ScriptReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scriptArguments(@Nullable Output<String> scriptArguments) {
-            this.scriptArguments = scriptArguments;
+            $.scriptArguments = scriptArguments;
             return this;
         }
-        public Builder scriptArguments(@Nullable String scriptArguments) {
-            this.scriptArguments = Codegen.ofNullable(scriptArguments);
-            return this;
+
+        public Builder scriptArguments(String scriptArguments) {
+            return scriptArguments(Output.of(scriptArguments));
         }
+
         public Builder scriptData(@Nullable Output<String> scriptData) {
-            this.scriptData = scriptData;
+            $.scriptData = scriptData;
             return this;
         }
-        public Builder scriptData(@Nullable String scriptData) {
-            this.scriptData = Codegen.ofNullable(scriptData);
-            return this;
+
+        public Builder scriptData(String scriptData) {
+            return scriptData(Output.of(scriptData));
         }
+
         public Builder scriptSource(@Nullable Output<String> scriptSource) {
-            this.scriptSource = scriptSource;
+            $.scriptSource = scriptSource;
             return this;
         }
-        public Builder scriptSource(@Nullable String scriptSource) {
-            this.scriptSource = Codegen.ofNullable(scriptSource);
-            return this;
+
+        public Builder scriptSource(String scriptSource) {
+            return scriptSource(Output.of(scriptSource));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ScriptReferenceArgs build() {
-            return new ScriptReferenceArgs(scriptArguments, scriptData, scriptSource, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ScriptReferenceArgs build() {
+            return $;
         }
     }
+
 }

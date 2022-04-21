@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="executionNamePrefix")
-      private final @Nullable Output<String> executionNamePrefix;
+    private @Nullable Output<String> executionNamePrefix;
 
-    public Output<String> executionNamePrefix() {
-        return this.executionNamePrefix == null ? Codegen.empty() : this.executionNamePrefix;
+    public Optional<Output<String>> executionNamePrefix() {
+        return Optional.ofNullable(this.executionNamePrefix);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -42,76 +42,70 @@ public final class TopicRuleErrorActionStepFunctionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="stateMachineName", required=true)
-      private final Output<String> stateMachineName;
+    private Output<String> stateMachineName;
 
     public Output<String> stateMachineName() {
         return this.stateMachineName;
     }
 
-    public TopicRuleErrorActionStepFunctionsArgs(
-        @Nullable Output<String> executionNamePrefix,
-        Output<String> roleArn,
-        Output<String> stateMachineName) {
-        this.executionNamePrefix = executionNamePrefix;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stateMachineName = Objects.requireNonNull(stateMachineName, "expected parameter 'stateMachineName' to be non-null");
-    }
+    private TopicRuleErrorActionStepFunctionsArgs() {}
 
-    private TopicRuleErrorActionStepFunctionsArgs() {
-        this.executionNamePrefix = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stateMachineName = Codegen.empty();
+    private TopicRuleErrorActionStepFunctionsArgs(TopicRuleErrorActionStepFunctionsArgs $) {
+        this.executionNamePrefix = $.executionNamePrefix;
+        this.roleArn = $.roleArn;
+        this.stateMachineName = $.stateMachineName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleErrorActionStepFunctionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> executionNamePrefix;
-        private Output<String> roleArn;
-        private Output<String> stateMachineName;
+        private TopicRuleErrorActionStepFunctionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleErrorActionStepFunctionsArgs();
         }
 
         public Builder(TopicRuleErrorActionStepFunctionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionNamePrefix = defaults.executionNamePrefix;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stateMachineName = defaults.stateMachineName;
+            $ = new TopicRuleErrorActionStepFunctionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionNamePrefix(@Nullable Output<String> executionNamePrefix) {
-            this.executionNamePrefix = executionNamePrefix;
+            $.executionNamePrefix = executionNamePrefix;
             return this;
         }
-        public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
-            this.executionNamePrefix = Codegen.ofNullable(executionNamePrefix);
-            return this;
+
+        public Builder executionNamePrefix(String executionNamePrefix) {
+            return executionNamePrefix(Output.of(executionNamePrefix));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stateMachineName(Output<String> stateMachineName) {
-            this.stateMachineName = Objects.requireNonNull(stateMachineName);
+            $.stateMachineName = stateMachineName;
             return this;
         }
+
         public Builder stateMachineName(String stateMachineName) {
-            this.stateMachineName = Output.of(Objects.requireNonNull(stateMachineName));
-            return this;
-        }        public TopicRuleErrorActionStepFunctionsArgs build() {
-            return new TopicRuleErrorActionStepFunctionsArgs(executionNamePrefix, roleArn, stateMachineName);
+            return stateMachineName(Output.of(stateMachineName));
+        }
+
+        public TopicRuleErrorActionStepFunctionsArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stateMachineName = Objects.requireNonNull($.stateMachineName, "expected parameter 'stateMachineName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -32,7 +32,7 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final String fingerprint;
+    private String fingerprint;
 
     public String fingerprint() {
         return this.fingerprint;
@@ -43,64 +43,59 @@ public final class FileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public FileResponse(
-        String content,
-        String fingerprint,
-        String name) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private FileResponse() {}
 
-    private FileResponse() {
-        this.content = null;
-        this.fingerprint = null;
-        this.name = null;
+    private FileResponse(FileResponse $) {
+        this.content = $.content;
+        this.fingerprint = $.fingerprint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String fingerprint;
-        private String name;
+        private FileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileResponse();
         }
 
         public Builder(FileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.name = defaults.name;
+            $ = new FileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder fingerprint(String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public FileResponse build() {
-            return new FileResponse(content, fingerprint, name);
+        }
+
+        public FileResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

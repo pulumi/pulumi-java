@@ -6,11 +6,11 @@ package com.pulumi.aws.cloudhsmv2.inputs;
 import com.pulumi.aws.cloudhsmv2.inputs.ClusterClusterCertificateGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterCertificates")
-      private final @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
+    private @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
 
-    public Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates() {
-        return this.clusterCertificates == null ? Codegen.empty() : this.clusterCertificates;
+    public Optional<Output<List<ClusterClusterCertificateGetArgs>>> clusterCertificates() {
+        return Optional.ofNullable(this.clusterCertificates);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable Output<String> clusterId;
+    private @Nullable Output<String> clusterId;
 
-    public Output<String> clusterId() {
-        return this.clusterId == null ? Codegen.empty() : this.clusterId;
+    public Optional<Output<String>> clusterId() {
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterState")
-      private final @Nullable Output<String> clusterState;
+    private @Nullable Output<String> clusterState;
 
-    public Output<String> clusterState() {
-        return this.clusterState == null ? Codegen.empty() : this.clusterState;
+    public Optional<Output<String>> clusterState() {
+        return Optional.ofNullable(this.clusterState);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hsmType")
-      private final @Nullable Output<String> hsmType;
+    private @Nullable Output<String> hsmType;
 
-    public Output<String> hsmType() {
-        return this.hsmType == null ? Codegen.empty() : this.hsmType;
+    public Optional<Output<String>> hsmType() {
+        return Optional.ofNullable(this.hsmType);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityGroupId")
-      private final @Nullable Output<String> securityGroupId;
+    private @Nullable Output<String> securityGroupId;
 
-    public Output<String> securityGroupId() {
-        return this.securityGroupId == null ? Codegen.empty() : this.securityGroupId;
+    public Optional<Output<String>> securityGroupId() {
+        return Optional.ofNullable(this.securityGroupId);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceBackupIdentifier")
-      private final @Nullable Output<String> sourceBackupIdentifier;
+    private @Nullable Output<String> sourceBackupIdentifier;
 
-    public Output<String> sourceBackupIdentifier() {
-        return this.sourceBackupIdentifier == null ? Codegen.empty() : this.sourceBackupIdentifier;
+    public Optional<Output<String>> sourceBackupIdentifier() {
+        return Optional.ofNullable(this.sourceBackupIdentifier);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subnetIds")
-      private final @Nullable Output<List<String>> subnetIds;
+    private @Nullable Output<List<String>> subnetIds;
 
-    public Output<List<String>> subnetIds() {
-        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
+    public Optional<Output<List<String>>> subnetIds() {
+        return Optional.ofNullable(this.subnetIds);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -127,173 +127,146 @@ public final class ClusterState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable Output<String> vpcId;
+    private @Nullable Output<String> vpcId;
 
-    public Output<String> vpcId() {
-        return this.vpcId == null ? Codegen.empty() : this.vpcId;
+    public Optional<Output<String>> vpcId() {
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public ClusterState(
-        @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates,
-        @Nullable Output<String> clusterId,
-        @Nullable Output<String> clusterState,
-        @Nullable Output<String> hsmType,
-        @Nullable Output<String> securityGroupId,
-        @Nullable Output<String> sourceBackupIdentifier,
-        @Nullable Output<List<String>> subnetIds,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> vpcId) {
-        this.clusterCertificates = clusterCertificates;
-        this.clusterId = clusterId;
-        this.clusterState = clusterState;
-        this.hsmType = hsmType;
-        this.securityGroupId = securityGroupId;
-        this.sourceBackupIdentifier = sourceBackupIdentifier;
-        this.subnetIds = subnetIds;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.vpcId = vpcId;
-    }
+    private ClusterState() {}
 
-    private ClusterState() {
-        this.clusterCertificates = Codegen.empty();
-        this.clusterId = Codegen.empty();
-        this.clusterState = Codegen.empty();
-        this.hsmType = Codegen.empty();
-        this.securityGroupId = Codegen.empty();
-        this.sourceBackupIdentifier = Codegen.empty();
-        this.subnetIds = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.vpcId = Codegen.empty();
+    private ClusterState(ClusterState $) {
+        this.clusterCertificates = $.clusterCertificates;
+        this.clusterId = $.clusterId;
+        this.clusterState = $.clusterState;
+        this.hsmType = $.hsmType;
+        this.securityGroupId = $.securityGroupId;
+        this.sourceBackupIdentifier = $.sourceBackupIdentifier;
+        this.subnetIds = $.subnetIds;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates;
-        private @Nullable Output<String> clusterId;
-        private @Nullable Output<String> clusterState;
-        private @Nullable Output<String> hsmType;
-        private @Nullable Output<String> securityGroupId;
-        private @Nullable Output<String> sourceBackupIdentifier;
-        private @Nullable Output<List<String>> subnetIds;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> vpcId;
+        private ClusterState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterState();
         }
 
         public Builder(ClusterState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterCertificates = defaults.clusterCertificates;
-    	      this.clusterId = defaults.clusterId;
-    	      this.clusterState = defaults.clusterState;
-    	      this.hsmType = defaults.hsmType;
-    	      this.securityGroupId = defaults.securityGroupId;
-    	      this.sourceBackupIdentifier = defaults.sourceBackupIdentifier;
-    	      this.subnetIds = defaults.subnetIds;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.vpcId = defaults.vpcId;
+            $ = new ClusterState(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterCertificates(@Nullable Output<List<ClusterClusterCertificateGetArgs>> clusterCertificates) {
-            this.clusterCertificates = clusterCertificates;
+            $.clusterCertificates = clusterCertificates;
             return this;
         }
-        public Builder clusterCertificates(@Nullable List<ClusterClusterCertificateGetArgs> clusterCertificates) {
-            this.clusterCertificates = Codegen.ofNullable(clusterCertificates);
-            return this;
+
+        public Builder clusterCertificates(List<ClusterClusterCertificateGetArgs> clusterCertificates) {
+            return clusterCertificates(Output.of(clusterCertificates));
         }
+
         public Builder clusterCertificates(ClusterClusterCertificateGetArgs... clusterCertificates) {
             return clusterCertificates(List.of(clusterCertificates));
         }
+
         public Builder clusterId(@Nullable Output<String> clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
-        public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Codegen.ofNullable(clusterId);
-            return this;
+
+        public Builder clusterId(String clusterId) {
+            return clusterId(Output.of(clusterId));
         }
+
         public Builder clusterState(@Nullable Output<String> clusterState) {
-            this.clusterState = clusterState;
+            $.clusterState = clusterState;
             return this;
         }
-        public Builder clusterState(@Nullable String clusterState) {
-            this.clusterState = Codegen.ofNullable(clusterState);
-            return this;
+
+        public Builder clusterState(String clusterState) {
+            return clusterState(Output.of(clusterState));
         }
+
         public Builder hsmType(@Nullable Output<String> hsmType) {
-            this.hsmType = hsmType;
+            $.hsmType = hsmType;
             return this;
         }
-        public Builder hsmType(@Nullable String hsmType) {
-            this.hsmType = Codegen.ofNullable(hsmType);
-            return this;
+
+        public Builder hsmType(String hsmType) {
+            return hsmType(Output.of(hsmType));
         }
+
         public Builder securityGroupId(@Nullable Output<String> securityGroupId) {
-            this.securityGroupId = securityGroupId;
+            $.securityGroupId = securityGroupId;
             return this;
         }
-        public Builder securityGroupId(@Nullable String securityGroupId) {
-            this.securityGroupId = Codegen.ofNullable(securityGroupId);
-            return this;
+
+        public Builder securityGroupId(String securityGroupId) {
+            return securityGroupId(Output.of(securityGroupId));
         }
+
         public Builder sourceBackupIdentifier(@Nullable Output<String> sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = sourceBackupIdentifier;
+            $.sourceBackupIdentifier = sourceBackupIdentifier;
             return this;
         }
-        public Builder sourceBackupIdentifier(@Nullable String sourceBackupIdentifier) {
-            this.sourceBackupIdentifier = Codegen.ofNullable(sourceBackupIdentifier);
-            return this;
+
+        public Builder sourceBackupIdentifier(String sourceBackupIdentifier) {
+            return sourceBackupIdentifier(Output.of(sourceBackupIdentifier));
         }
+
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
-            this.subnetIds = subnetIds;
+            $.subnetIds = subnetIds;
             return this;
         }
-        public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Codegen.ofNullable(subnetIds);
-            return this;
+
+        public Builder subnetIds(List<String> subnetIds) {
+            return subnetIds(Output.of(subnetIds));
         }
+
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder vpcId(@Nullable Output<String> vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
         }
-        public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Codegen.ofNullable(vpcId);
-            return this;
-        }        public ClusterState build() {
-            return new ClusterState(clusterCertificates, clusterId, clusterState, hsmType, securityGroupId, sourceBackupIdentifier, subnetIds, tags, tagsAll, vpcId);
+
+        public Builder vpcId(String vpcId) {
+            return vpcId(Output.of(vpcId));
+        }
+
+        public ClusterState build() {
+            return $;
         }
     }
+
 }

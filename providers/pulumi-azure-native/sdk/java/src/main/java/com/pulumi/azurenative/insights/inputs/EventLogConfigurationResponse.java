@@ -15,62 +15,58 @@ public final class EventLogConfigurationResponse extends com.pulumi.resources.In
     public static final EventLogConfigurationResponse Empty = new EventLogConfigurationResponse();
 
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="logName", required=true)
-      private final String logName;
+    private String logName;
 
     public String logName() {
         return this.logName;
     }
 
-    public EventLogConfigurationResponse(
-        @Nullable String filter,
-        String logName) {
-        this.filter = filter;
-        this.logName = Objects.requireNonNull(logName, "expected parameter 'logName' to be non-null");
-    }
+    private EventLogConfigurationResponse() {}
 
-    private EventLogConfigurationResponse() {
-        this.filter = null;
-        this.logName = null;
+    private EventLogConfigurationResponse(EventLogConfigurationResponse $) {
+        this.filter = $.filter;
+        this.logName = $.logName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventLogConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filter;
-        private String logName;
+        private EventLogConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventLogConfigurationResponse();
         }
 
         public Builder(EventLogConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.logName = defaults.logName;
+            $ = new EventLogConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder logName(String logName) {
-            this.logName = Objects.requireNonNull(logName);
+            $.logName = logName;
             return this;
-        }        public EventLogConfigurationResponse build() {
-            return new EventLogConfigurationResponse(filter, logName);
+        }
+
+        public EventLogConfigurationResponse build() {
+            $.logName = Objects.requireNonNull($.logName, "expected parameter 'logName' to be non-null");
+            return $;
         }
     }
+
 }

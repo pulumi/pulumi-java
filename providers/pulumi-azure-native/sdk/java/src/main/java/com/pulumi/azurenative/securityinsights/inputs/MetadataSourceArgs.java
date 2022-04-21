@@ -7,9 +7,9 @@ import com.pulumi.azurenative.securityinsights.enums.SourceKind;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<Either<String,SourceKind>> kind;
+    private Output<Either<String,SourceKind>> kind;
 
     public Output<Either<String,SourceKind>> kind() {
         return this.kind;
@@ -37,10 +37,10 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,76 +48,69 @@ public final class MetadataSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sourceId")
-      private final @Nullable Output<String> sourceId;
+    private @Nullable Output<String> sourceId;
 
-    public Output<String> sourceId() {
-        return this.sourceId == null ? Codegen.empty() : this.sourceId;
+    public Optional<Output<String>> sourceId() {
+        return Optional.ofNullable(this.sourceId);
     }
 
-    public MetadataSourceArgs(
-        Output<Either<String,SourceKind>> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> sourceId) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = name;
-        this.sourceId = sourceId;
-    }
+    private MetadataSourceArgs() {}
 
-    private MetadataSourceArgs() {
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.sourceId = Codegen.empty();
+    private MetadataSourceArgs(MetadataSourceArgs $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,SourceKind>> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> sourceId;
+        private MetadataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataSourceArgs();
         }
 
         public Builder(MetadataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.sourceId = defaults.sourceId;
+            $ = new MetadataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(Output<Either<String,SourceKind>> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(Either<String,SourceKind> kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sourceId(@Nullable Output<String> sourceId) {
-            this.sourceId = sourceId;
+            $.sourceId = sourceId;
             return this;
         }
-        public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Codegen.ofNullable(sourceId);
-            return this;
-        }        public MetadataSourceArgs build() {
-            return new MetadataSourceArgs(kind, name, sourceId);
+
+        public Builder sourceId(String sourceId) {
+            return sourceId(Output.of(sourceId));
+        }
+
+        public MetadataSourceArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

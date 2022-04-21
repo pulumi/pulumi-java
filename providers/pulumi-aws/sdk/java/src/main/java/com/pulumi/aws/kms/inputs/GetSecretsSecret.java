@@ -21,10 +21,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="context")
-      private final @Nullable Map<String,String> context;
+    private @Nullable Map<String,String> context;
 
-    public Map<String,String> context() {
-        return this.context == null ? Map.of() : this.context;
+    public Optional<Map<String,String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grantTokens")
-      private final @Nullable List<String> grantTokens;
+    private @Nullable List<String> grantTokens;
 
-    public List<String> grantTokens() {
-        return this.grantTokens == null ? List.of() : this.grantTokens;
+    public Optional<List<String>> grantTokens() {
+        return Optional.ofNullable(this.grantTokens);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,76 +54,68 @@ public final class GetSecretsSecret extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="payload", required=true)
-      private final String payload;
+    private String payload;
 
     public String payload() {
         return this.payload;
     }
 
-    public GetSecretsSecret(
-        @Nullable Map<String,String> context,
-        @Nullable List<String> grantTokens,
-        String name,
-        String payload) {
-        this.context = context;
-        this.grantTokens = grantTokens;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-    }
+    private GetSecretsSecret() {}
 
-    private GetSecretsSecret() {
-        this.context = Map.of();
-        this.grantTokens = List.of();
-        this.name = null;
-        this.payload = null;
+    private GetSecretsSecret(GetSecretsSecret $) {
+        this.context = $.context;
+        this.grantTokens = $.grantTokens;
+        this.name = $.name;
+        this.payload = $.payload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecretsSecret defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> context;
-        private @Nullable List<String> grantTokens;
-        private String name;
-        private String payload;
+        private GetSecretsSecret $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecretsSecret();
         }
 
         public Builder(GetSecretsSecret defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.grantTokens = defaults.grantTokens;
-    	      this.name = defaults.name;
-    	      this.payload = defaults.payload;
+            $ = new GetSecretsSecret(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
+
         public Builder grantTokens(@Nullable List<String> grantTokens) {
-            this.grantTokens = grantTokens;
+            $.grantTokens = grantTokens;
             return this;
         }
+
         public Builder grantTokens(String... grantTokens) {
             return grantTokens(List.of(grantTokens));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder payload(String payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
-        }        public GetSecretsSecret build() {
-            return new GetSecretsSecret(context, grantTokens, name, payload);
+        }
+
+        public GetSecretsSecret build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            return $;
         }
     }
+
 }

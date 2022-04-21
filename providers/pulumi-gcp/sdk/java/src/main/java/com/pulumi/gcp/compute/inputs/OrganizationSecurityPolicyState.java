@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -80,115 +80,98 @@ public final class OrganizationSecurityPolicyState extends com.pulumi.resources.
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OrganizationSecurityPolicyState(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> policyId,
-        @Nullable Output<String> type) {
-        this.description = description;
-        this.displayName = displayName;
-        this.fingerprint = fingerprint;
-        this.parent = parent;
-        this.policyId = policyId;
-        this.type = type;
-    }
+    private OrganizationSecurityPolicyState() {}
 
-    private OrganizationSecurityPolicyState() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.policyId = Codegen.empty();
-        this.type = Codegen.empty();
+    private OrganizationSecurityPolicyState(OrganizationSecurityPolicyState $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.fingerprint = $.fingerprint;
+        this.parent = $.parent;
+        this.policyId = $.policyId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<String> type;
+        private OrganizationSecurityPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyState();
         }
 
         public Builder(OrganizationSecurityPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.parent = defaults.parent;
-    	      this.policyId = defaults.policyId;
-    	      this.type = defaults.type;
+            $ = new OrganizationSecurityPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OrganizationSecurityPolicyState build() {
-            return new OrganizationSecurityPolicyState(description, displayName, fingerprint, parent, policyId, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public OrganizationSecurityPolicyState build() {
+            return $;
         }
     }
+
 }

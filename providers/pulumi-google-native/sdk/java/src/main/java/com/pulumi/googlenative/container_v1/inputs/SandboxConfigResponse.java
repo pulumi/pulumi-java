@@ -21,45 +21,45 @@ public final class SandboxConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SandboxConfigResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SandboxConfigResponse() {}
 
-    private SandboxConfigResponse() {
-        this.type = null;
+    private SandboxConfigResponse(SandboxConfigResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SandboxConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private SandboxConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SandboxConfigResponse();
         }
 
         public Builder(SandboxConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new SandboxConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SandboxConfigResponse build() {
-            return new SandboxConfigResponse(type);
+        }
+
+        public SandboxConfigResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class BucketRedirectAllRequestsTo extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -35,55 +35,51 @@ public final class BucketRedirectAllRequestsTo extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="protocol")
-      private final @Nullable BucketRedirectAllRequestsToProtocol protocol;
+    private @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
     public Optional<BucketRedirectAllRequestsToProtocol> protocol() {
-        return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
+        return Optional.ofNullable(this.protocol);
     }
 
-    public BucketRedirectAllRequestsTo(
-        String hostName,
-        @Nullable BucketRedirectAllRequestsToProtocol protocol) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.protocol = protocol;
-    }
+    private BucketRedirectAllRequestsTo() {}
 
-    private BucketRedirectAllRequestsTo() {
-        this.hostName = null;
-        this.protocol = null;
+    private BucketRedirectAllRequestsTo(BucketRedirectAllRequestsTo $) {
+        this.hostName = $.hostName;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRedirectAllRequestsTo defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private @Nullable BucketRedirectAllRequestsToProtocol protocol;
+        private BucketRedirectAllRequestsTo $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRedirectAllRequestsTo();
         }
 
         public Builder(BucketRedirectAllRequestsTo defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.protocol = defaults.protocol;
+            $ = new BucketRedirectAllRequestsTo(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
-        }        public BucketRedirectAllRequestsTo build() {
-            return new BucketRedirectAllRequestsTo(hostName, protocol);
+        }
+
+        public BucketRedirectAllRequestsTo build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            return $;
         }
     }
+
 }

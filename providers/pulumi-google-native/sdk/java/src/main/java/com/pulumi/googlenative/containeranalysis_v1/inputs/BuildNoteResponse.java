@@ -21,45 +21,45 @@ public final class BuildNoteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="builderVersion", required=true)
-      private final String builderVersion;
+    private String builderVersion;
 
     public String builderVersion() {
         return this.builderVersion;
     }
 
-    public BuildNoteResponse(String builderVersion) {
-        this.builderVersion = Objects.requireNonNull(builderVersion, "expected parameter 'builderVersion' to be non-null");
-    }
+    private BuildNoteResponse() {}
 
-    private BuildNoteResponse() {
-        this.builderVersion = null;
+    private BuildNoteResponse(BuildNoteResponse $) {
+        this.builderVersion = $.builderVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildNoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String builderVersion;
+        private BuildNoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildNoteResponse();
         }
 
         public Builder(BuildNoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builderVersion = defaults.builderVersion;
+            $ = new BuildNoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builderVersion(String builderVersion) {
-            this.builderVersion = Objects.requireNonNull(builderVersion);
+            $.builderVersion = builderVersion;
             return this;
-        }        public BuildNoteResponse build() {
-            return new BuildNoteResponse(builderVersion);
+        }
+
+        public BuildNoteResponse build() {
+            $.builderVersion = Objects.requireNonNull($.builderVersion, "expected parameter 'builderVersion' to be non-null");
+            return $;
         }
     }
+
 }

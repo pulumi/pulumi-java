@@ -24,10 +24,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="count")
-      private final @Nullable Integer count;
+    private @Nullable Integer count;
 
     public Optional<Integer> count() {
-        return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable String subnetId;
+    private @Nullable String subnetId;
 
     public Optional<String> subnetId() {
-        return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -68,82 +68,68 @@ public final class WorkerProfileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable String vmSize;
+    private @Nullable String vmSize;
 
     public Optional<String> vmSize() {
-        return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public WorkerProfileResponse(
-        @Nullable Integer count,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name,
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
-        this.count = count;
-        this.diskSizeGB = diskSizeGB;
-        this.name = name;
-        this.subnetId = subnetId;
-        this.vmSize = vmSize;
-    }
+    private WorkerProfileResponse() {}
 
-    private WorkerProfileResponse() {
-        this.count = null;
-        this.diskSizeGB = null;
-        this.name = null;
-        this.subnetId = null;
-        this.vmSize = null;
+    private WorkerProfileResponse(WorkerProfileResponse $) {
+        this.count = $.count;
+        this.diskSizeGB = $.diskSizeGB;
+        this.name = $.name;
+        this.subnetId = $.subnetId;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer count;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable String name;
-        private @Nullable String subnetId;
-        private @Nullable String vmSize;
+        private WorkerProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerProfileResponse();
         }
 
         public Builder(WorkerProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.name = defaults.name;
-    	      this.subnetId = defaults.subnetId;
-    	      this.vmSize = defaults.vmSize;
+            $ = new WorkerProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Integer count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
-        }        public WorkerProfileResponse build() {
-            return new WorkerProfileResponse(count, diskSizeGB, name, subnetId, vmSize);
+        }
+
+        public WorkerProfileResponse build() {
+            return $;
         }
     }
+
 }

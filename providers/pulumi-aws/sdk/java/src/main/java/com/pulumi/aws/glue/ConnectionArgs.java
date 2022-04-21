@@ -6,11 +6,11 @@ package com.pulumi.aws.glue;
 import com.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="catalogId")
-      private final @Nullable Output<String> catalogId;
+    private @Nullable Output<String> catalogId;
 
-    public Output<String> catalogId() {
-        return this.catalogId == null ? Codegen.empty() : this.catalogId;
+    public Optional<Output<String>> catalogId() {
+        return Optional.ofNullable(this.catalogId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionProperties")
-      private final @Nullable Output<Map<String,String>> connectionProperties;
+    private @Nullable Output<Map<String,String>> connectionProperties;
 
-    public Output<Map<String,String>> connectionProperties() {
-        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
+    public Optional<Output<Map<String,String>>> connectionProperties() {
+        return Optional.ofNullable(this.connectionProperties);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionType")
-      private final @Nullable Output<String> connectionType;
+    private @Nullable Output<String> connectionType;
 
-    public Output<String> connectionType() {
-        return this.connectionType == null ? Codegen.empty() : this.connectionType;
+    public Optional<Output<String>> connectionType() {
+        return Optional.ofNullable(this.connectionType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="matchCriterias")
-      private final @Nullable Output<List<String>> matchCriterias;
+    private @Nullable Output<List<String>> matchCriterias;
 
-    public Output<List<String>> matchCriterias() {
-        return this.matchCriterias == null ? Codegen.empty() : this.matchCriterias;
+    public Optional<Output<List<String>>> matchCriterias() {
+        return Optional.ofNullable(this.matchCriterias);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="physicalConnectionRequirements")
-      private final @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
+    private @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
 
-    public Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements() {
-        return this.physicalConnectionRequirements == null ? Codegen.empty() : this.physicalConnectionRequirements;
+    public Optional<Output<ConnectionPhysicalConnectionRequirementsArgs>> physicalConnectionRequirements() {
+        return Optional.ofNullable(this.physicalConnectionRequirements);
     }
 
     /**
@@ -100,144 +100,122 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConnectionArgs(
-        @Nullable Output<String> catalogId,
-        @Nullable Output<Map<String,String>> connectionProperties,
-        @Nullable Output<String> connectionType,
-        @Nullable Output<String> description,
-        @Nullable Output<List<String>> matchCriterias,
-        @Nullable Output<String> name,
-        @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements,
-        @Nullable Output<Map<String,String>> tags) {
-        this.catalogId = catalogId;
-        this.connectionProperties = connectionProperties;
-        this.connectionType = connectionType;
-        this.description = description;
-        this.matchCriterias = matchCriterias;
-        this.name = name;
-        this.physicalConnectionRequirements = physicalConnectionRequirements;
-        this.tags = tags;
-    }
+    private ConnectionArgs() {}
 
-    private ConnectionArgs() {
-        this.catalogId = Codegen.empty();
-        this.connectionProperties = Codegen.empty();
-        this.connectionType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.matchCriterias = Codegen.empty();
-        this.name = Codegen.empty();
-        this.physicalConnectionRequirements = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConnectionArgs(ConnectionArgs $) {
+        this.catalogId = $.catalogId;
+        this.connectionProperties = $.connectionProperties;
+        this.connectionType = $.connectionType;
+        this.description = $.description;
+        this.matchCriterias = $.matchCriterias;
+        this.name = $.name;
+        this.physicalConnectionRequirements = $.physicalConnectionRequirements;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> catalogId;
-        private @Nullable Output<Map<String,String>> connectionProperties;
-        private @Nullable Output<String> connectionType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<String>> matchCriterias;
-        private @Nullable Output<String> name;
-        private @Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements;
-        private @Nullable Output<Map<String,String>> tags;
+        private ConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionArgs();
         }
 
         public Builder(ConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.connectionProperties = defaults.connectionProperties;
-    	      this.connectionType = defaults.connectionType;
-    	      this.description = defaults.description;
-    	      this.matchCriterias = defaults.matchCriterias;
-    	      this.name = defaults.name;
-    	      this.physicalConnectionRequirements = defaults.physicalConnectionRequirements;
-    	      this.tags = defaults.tags;
+            $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(@Nullable Output<String> catalogId) {
-            this.catalogId = catalogId;
+            $.catalogId = catalogId;
             return this;
         }
-        public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Codegen.ofNullable(catalogId);
-            return this;
+
+        public Builder catalogId(String catalogId) {
+            return catalogId(Output.of(catalogId));
         }
+
         public Builder connectionProperties(@Nullable Output<Map<String,String>> connectionProperties) {
-            this.connectionProperties = connectionProperties;
+            $.connectionProperties = connectionProperties;
             return this;
         }
-        public Builder connectionProperties(@Nullable Map<String,String> connectionProperties) {
-            this.connectionProperties = Codegen.ofNullable(connectionProperties);
-            return this;
+
+        public Builder connectionProperties(Map<String,String> connectionProperties) {
+            return connectionProperties(Output.of(connectionProperties));
         }
+
         public Builder connectionType(@Nullable Output<String> connectionType) {
-            this.connectionType = connectionType;
+            $.connectionType = connectionType;
             return this;
         }
-        public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Codegen.ofNullable(connectionType);
-            return this;
+
+        public Builder connectionType(String connectionType) {
+            return connectionType(Output.of(connectionType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder matchCriterias(@Nullable Output<List<String>> matchCriterias) {
-            this.matchCriterias = matchCriterias;
+            $.matchCriterias = matchCriterias;
             return this;
         }
-        public Builder matchCriterias(@Nullable List<String> matchCriterias) {
-            this.matchCriterias = Codegen.ofNullable(matchCriterias);
-            return this;
+
+        public Builder matchCriterias(List<String> matchCriterias) {
+            return matchCriterias(Output.of(matchCriterias));
         }
+
         public Builder matchCriterias(String... matchCriterias) {
             return matchCriterias(List.of(matchCriterias));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsArgs> physicalConnectionRequirements) {
-            this.physicalConnectionRequirements = physicalConnectionRequirements;
+            $.physicalConnectionRequirements = physicalConnectionRequirements;
             return this;
         }
-        public Builder physicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
-            this.physicalConnectionRequirements = Codegen.ofNullable(physicalConnectionRequirements);
-            return this;
+
+        public Builder physicalConnectionRequirements(ConnectionPhysicalConnectionRequirementsArgs physicalConnectionRequirements) {
+            return physicalConnectionRequirements(Output.of(physicalConnectionRequirements));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ConnectionArgs build() {
-            return new ConnectionArgs(catalogId, connectionProperties, connectionType, description, matchCriterias, name, physicalConnectionRequirements, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ConnectionArgs build() {
+            return $;
         }
     }
+
 }

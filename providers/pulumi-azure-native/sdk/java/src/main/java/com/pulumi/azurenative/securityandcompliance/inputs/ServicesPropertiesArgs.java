@@ -13,10 +13,10 @@ import com.pulumi.azurenative.securityandcompliance.inputs.ServiceExportConfigur
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="accessPolicies")
-      private final @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
+    private @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
 
-    public Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies() {
-        return this.accessPolicies == null ? Codegen.empty() : this.accessPolicies;
+    public Optional<Output<List<ServiceAccessPolicyEntryArgs>>> accessPolicies() {
+        return Optional.ofNullable(this.accessPolicies);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="authenticationConfiguration")
-      private final @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
+    private @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
 
-    public Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration() {
-        return this.authenticationConfiguration == null ? Codegen.empty() : this.authenticationConfiguration;
+    public Optional<Output<ServiceAuthenticationConfigurationInfoArgs>> authenticationConfiguration() {
+        return Optional.ofNullable(this.authenticationConfiguration);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="corsConfiguration")
-      private final @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
+    private @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
 
-    public Output<ServiceCorsConfigurationInfoArgs> corsConfiguration() {
-        return this.corsConfiguration == null ? Codegen.empty() : this.corsConfiguration;
+    public Optional<Output<ServiceCorsConfigurationInfoArgs>> corsConfiguration() {
+        return Optional.ofNullable(this.corsConfiguration);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="cosmosDbConfiguration")
-      private final @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
+    private @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
 
-    public Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration() {
-        return this.cosmosDbConfiguration == null ? Codegen.empty() : this.cosmosDbConfiguration;
+    public Optional<Output<ServiceCosmosDbConfigurationInfoArgs>> cosmosDbConfiguration() {
+        return Optional.ofNullable(this.cosmosDbConfiguration);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="exportConfiguration")
-      private final @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
+    private @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
 
-    public Output<ServiceExportConfigurationInfoArgs> exportConfiguration() {
-        return this.exportConfiguration == null ? Codegen.empty() : this.exportConfiguration;
+    public Optional<Output<ServiceExportConfigurationInfoArgs>> exportConfiguration() {
+        return Optional.ofNullable(this.exportConfiguration);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateEndpointConnections")
-      private final @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+    private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
-    public Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections() {
-        return this.privateEndpointConnections == null ? Codegen.empty() : this.privateEndpointConnections;
+    public Optional<Output<List<PrivateEndpointConnectionArgs>>> privateEndpointConnections() {
+        return Optional.ofNullable(this.privateEndpointConnections);
     }
 
     /**
@@ -99,134 +99,116 @@ public final class ServicesPropertiesArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccess>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
-    public ServicesPropertiesArgs(
-        @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies,
-        @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration,
-        @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration,
-        @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration,
-        @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration,
-        @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections,
-        @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-        this.accessPolicies = accessPolicies;
-        this.authenticationConfiguration = authenticationConfiguration;
-        this.corsConfiguration = corsConfiguration;
-        this.cosmosDbConfiguration = cosmosDbConfiguration;
-        this.exportConfiguration = exportConfiguration;
-        this.privateEndpointConnections = privateEndpointConnections;
-        this.publicNetworkAccess = publicNetworkAccess;
-    }
+    private ServicesPropertiesArgs() {}
 
-    private ServicesPropertiesArgs() {
-        this.accessPolicies = Codegen.empty();
-        this.authenticationConfiguration = Codegen.empty();
-        this.corsConfiguration = Codegen.empty();
-        this.cosmosDbConfiguration = Codegen.empty();
-        this.exportConfiguration = Codegen.empty();
-        this.privateEndpointConnections = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
+    private ServicesPropertiesArgs(ServicesPropertiesArgs $) {
+        this.accessPolicies = $.accessPolicies;
+        this.authenticationConfiguration = $.authenticationConfiguration;
+        this.corsConfiguration = $.corsConfiguration;
+        this.cosmosDbConfiguration = $.cosmosDbConfiguration;
+        this.exportConfiguration = $.exportConfiguration;
+        this.privateEndpointConnections = $.privateEndpointConnections;
+        this.publicNetworkAccess = $.publicNetworkAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicesPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies;
-        private @Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration;
-        private @Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration;
-        private @Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration;
-        private @Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration;
-        private @Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
-        private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private ServicesPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicesPropertiesArgs();
         }
 
         public Builder(ServicesPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicies = defaults.accessPolicies;
-    	      this.authenticationConfiguration = defaults.authenticationConfiguration;
-    	      this.corsConfiguration = defaults.corsConfiguration;
-    	      this.cosmosDbConfiguration = defaults.cosmosDbConfiguration;
-    	      this.exportConfiguration = defaults.exportConfiguration;
-    	      this.privateEndpointConnections = defaults.privateEndpointConnections;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
+            $ = new ServicesPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicies(@Nullable Output<List<ServiceAccessPolicyEntryArgs>> accessPolicies) {
-            this.accessPolicies = accessPolicies;
+            $.accessPolicies = accessPolicies;
             return this;
         }
-        public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryArgs> accessPolicies) {
-            this.accessPolicies = Codegen.ofNullable(accessPolicies);
-            return this;
+
+        public Builder accessPolicies(List<ServiceAccessPolicyEntryArgs> accessPolicies) {
+            return accessPolicies(Output.of(accessPolicies));
         }
+
         public Builder accessPolicies(ServiceAccessPolicyEntryArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }
+
         public Builder authenticationConfiguration(@Nullable Output<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration) {
-            this.authenticationConfiguration = authenticationConfiguration;
+            $.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
-        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
-            this.authenticationConfiguration = Codegen.ofNullable(authenticationConfiguration);
-            return this;
+
+        public Builder authenticationConfiguration(ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
+            return authenticationConfiguration(Output.of(authenticationConfiguration));
         }
+
         public Builder corsConfiguration(@Nullable Output<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
-            this.corsConfiguration = corsConfiguration;
+            $.corsConfiguration = corsConfiguration;
             return this;
         }
-        public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoArgs corsConfiguration) {
-            this.corsConfiguration = Codegen.ofNullable(corsConfiguration);
-            return this;
+
+        public Builder corsConfiguration(ServiceCorsConfigurationInfoArgs corsConfiguration) {
+            return corsConfiguration(Output.of(corsConfiguration));
         }
+
         public Builder cosmosDbConfiguration(@Nullable Output<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
-            this.cosmosDbConfiguration = cosmosDbConfiguration;
+            $.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
-        public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
-            this.cosmosDbConfiguration = Codegen.ofNullable(cosmosDbConfiguration);
-            return this;
+
+        public Builder cosmosDbConfiguration(ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
+            return cosmosDbConfiguration(Output.of(cosmosDbConfiguration));
         }
+
         public Builder exportConfiguration(@Nullable Output<ServiceExportConfigurationInfoArgs> exportConfiguration) {
-            this.exportConfiguration = exportConfiguration;
+            $.exportConfiguration = exportConfiguration;
             return this;
         }
-        public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoArgs exportConfiguration) {
-            this.exportConfiguration = Codegen.ofNullable(exportConfiguration);
-            return this;
+
+        public Builder exportConfiguration(ServiceExportConfigurationInfoArgs exportConfiguration) {
+            return exportConfiguration(Output.of(exportConfiguration));
         }
+
         public Builder privateEndpointConnections(@Nullable Output<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
-            this.privateEndpointConnections = privateEndpointConnections;
+            $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
-        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
-            this.privateEndpointConnections = Codegen.ofNullable(privateEndpointConnections);
-            return this;
+
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+            return privateEndpointConnections(Output.of(privateEndpointConnections));
         }
+
         public Builder privateEndpointConnections(PrivateEndpointConnectionArgs... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
-        }        public ServicesPropertiesArgs build() {
-            return new ServicesPropertiesArgs(accessPolicies, authenticationConfiguration, corsConfiguration, cosmosDbConfiguration, exportConfiguration, privateEndpointConnections, publicNetworkAccess);
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public ServicesPropertiesArgs build() {
+            return $;
         }
     }
+
 }

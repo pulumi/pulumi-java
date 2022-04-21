@@ -21,45 +21,45 @@ public final class GkeClusterReferenceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
     }
 
-    public GkeClusterReferenceResponse(String cluster) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-    }
+    private GkeClusterReferenceResponse() {}
 
-    private GkeClusterReferenceResponse() {
-        this.cluster = null;
+    private GkeClusterReferenceResponse(GkeClusterReferenceResponse $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
+        private GkeClusterReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterReferenceResponse();
         }
 
         public Builder(GkeClusterReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GkeClusterReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
-        }        public GkeClusterReferenceResponse build() {
-            return new GkeClusterReferenceResponse(cluster);
+        }
+
+        public GkeClusterReferenceResponse build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

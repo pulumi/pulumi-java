@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends com.pulumi.re
      * 
      */
     @Import(name="config", required=true)
-      private final Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
+    private Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
 
     public Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config() {
         return this.config;
@@ -33,10 +33,10 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends com.pulumi.re
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends com.pulumi.re
      * 
      */
     @Import(name="versionedExpr")
-      private final @Nullable Output<String> versionedExpr;
+    private @Nullable Output<String> versionedExpr;
 
-    public Output<String> versionedExpr() {
-        return this.versionedExpr == null ? Codegen.empty() : this.versionedExpr;
+    public Optional<Output<String>> versionedExpr() {
+        return Optional.ofNullable(this.versionedExpr);
     }
 
-    public OrganizationSecurityPolicyRuleMatchArgs(
-        Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config,
-        @Nullable Output<String> description,
-        @Nullable Output<String> versionedExpr) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.description = description;
-        this.versionedExpr = versionedExpr;
-    }
+    private OrganizationSecurityPolicyRuleMatchArgs() {}
 
-    private OrganizationSecurityPolicyRuleMatchArgs() {
-        this.config = Codegen.empty();
-        this.description = Codegen.empty();
-        this.versionedExpr = Codegen.empty();
+    private OrganizationSecurityPolicyRuleMatchArgs(OrganizationSecurityPolicyRuleMatchArgs $) {
+        this.config = $.config;
+        this.description = $.description;
+        this.versionedExpr = $.versionedExpr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationSecurityPolicyRuleMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> versionedExpr;
+        private OrganizationSecurityPolicyRuleMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationSecurityPolicyRuleMatchArgs();
         }
 
         public Builder(OrganizationSecurityPolicyRuleMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.description = defaults.description;
-    	      this.versionedExpr = defaults.versionedExpr;
+            $ = new OrganizationSecurityPolicyRuleMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(OrganizationSecurityPolicyRuleMatchConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
-            this.versionedExpr = versionedExpr;
+            $.versionedExpr = versionedExpr;
             return this;
         }
-        public Builder versionedExpr(@Nullable String versionedExpr) {
-            this.versionedExpr = Codegen.ofNullable(versionedExpr);
-            return this;
-        }        public OrganizationSecurityPolicyRuleMatchArgs build() {
-            return new OrganizationSecurityPolicyRuleMatchArgs(config, description, versionedExpr);
+
+        public Builder versionedExpr(String versionedExpr) {
+            return versionedExpr(Output.of(versionedExpr));
+        }
+
+        public OrganizationSecurityPolicyRuleMatchArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.notebooks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="accessType")
-      private final @Nullable Output<String> accessType;
+    private @Nullable Output<String> accessType;
 
-    public Output<String> accessType() {
-        return this.accessType == null ? Codegen.empty() : this.accessType;
+    public Optional<Output<String>> accessType() {
+        return Optional.ofNullable(this.accessType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="proxyUri")
-      private final @Nullable Output<String> proxyUri;
+    private @Nullable Output<String> proxyUri;
 
-    public Output<String> proxyUri() {
-        return this.proxyUri == null ? Codegen.empty() : this.proxyUri;
+    public Optional<Output<String>> proxyUri() {
+        return Optional.ofNullable(this.proxyUri);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class RuntimeAccessConfigGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="runtimeOwner")
-      private final @Nullable Output<String> runtimeOwner;
+    private @Nullable Output<String> runtimeOwner;
 
-    public Output<String> runtimeOwner() {
-        return this.runtimeOwner == null ? Codegen.empty() : this.runtimeOwner;
+    public Optional<Output<String>> runtimeOwner() {
+        return Optional.ofNullable(this.runtimeOwner);
     }
 
-    public RuntimeAccessConfigGetArgs(
-        @Nullable Output<String> accessType,
-        @Nullable Output<String> proxyUri,
-        @Nullable Output<String> runtimeOwner) {
-        this.accessType = accessType;
-        this.proxyUri = proxyUri;
-        this.runtimeOwner = runtimeOwner;
-    }
+    private RuntimeAccessConfigGetArgs() {}
 
-    private RuntimeAccessConfigGetArgs() {
-        this.accessType = Codegen.empty();
-        this.proxyUri = Codegen.empty();
-        this.runtimeOwner = Codegen.empty();
+    private RuntimeAccessConfigGetArgs(RuntimeAccessConfigGetArgs $) {
+        this.accessType = $.accessType;
+        this.proxyUri = $.proxyUri;
+        this.runtimeOwner = $.runtimeOwner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeAccessConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessType;
-        private @Nullable Output<String> proxyUri;
-        private @Nullable Output<String> runtimeOwner;
+        private RuntimeAccessConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeAccessConfigGetArgs();
         }
 
         public Builder(RuntimeAccessConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.proxyUri = defaults.proxyUri;
-    	      this.runtimeOwner = defaults.runtimeOwner;
+            $ = new RuntimeAccessConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(@Nullable Output<String> accessType) {
-            this.accessType = accessType;
+            $.accessType = accessType;
             return this;
         }
-        public Builder accessType(@Nullable String accessType) {
-            this.accessType = Codegen.ofNullable(accessType);
-            return this;
+
+        public Builder accessType(String accessType) {
+            return accessType(Output.of(accessType));
         }
+
         public Builder proxyUri(@Nullable Output<String> proxyUri) {
-            this.proxyUri = proxyUri;
+            $.proxyUri = proxyUri;
             return this;
         }
-        public Builder proxyUri(@Nullable String proxyUri) {
-            this.proxyUri = Codegen.ofNullable(proxyUri);
-            return this;
+
+        public Builder proxyUri(String proxyUri) {
+            return proxyUri(Output.of(proxyUri));
         }
+
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
-            this.runtimeOwner = runtimeOwner;
+            $.runtimeOwner = runtimeOwner;
             return this;
         }
-        public Builder runtimeOwner(@Nullable String runtimeOwner) {
-            this.runtimeOwner = Codegen.ofNullable(runtimeOwner);
-            return this;
-        }        public RuntimeAccessConfigGetArgs build() {
-            return new RuntimeAccessConfigGetArgs(accessType, proxyUri, runtimeOwner);
+
+        public Builder runtimeOwner(String runtimeOwner) {
+            return runtimeOwner(Output.of(runtimeOwner));
+        }
+
+        public RuntimeAccessConfigGetArgs build() {
+            return $;
         }
     }
+
 }

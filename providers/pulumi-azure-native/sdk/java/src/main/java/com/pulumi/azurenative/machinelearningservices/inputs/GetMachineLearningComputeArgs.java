@@ -17,7 +17,7 @@ public final class GetMachineLearningComputeArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="computeName", required=true)
-      private final String computeName;
+    private String computeName;
 
     public String computeName() {
         return this.computeName;
@@ -28,7 +28,7 @@ public final class GetMachineLearningComputeArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetMachineLearningComputeArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetMachineLearningComputeArgs(
-        String computeName,
-        String resourceGroupName,
-        String workspaceName) {
-        this.computeName = Objects.requireNonNull(computeName, "expected parameter 'computeName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetMachineLearningComputeArgs() {}
 
-    private GetMachineLearningComputeArgs() {
-        this.computeName = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetMachineLearningComputeArgs(GetMachineLearningComputeArgs $) {
+        this.computeName = $.computeName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMachineLearningComputeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String computeName;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetMachineLearningComputeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMachineLearningComputeArgs();
         }
 
         public Builder(GetMachineLearningComputeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeName = defaults.computeName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetMachineLearningComputeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder computeName(String computeName) {
-            this.computeName = Objects.requireNonNull(computeName);
+            $.computeName = computeName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetMachineLearningComputeArgs build() {
-            return new GetMachineLearningComputeArgs(computeName, resourceGroupName, workspaceName);
+        }
+
+        public GetMachineLearningComputeArgs build() {
+            $.computeName = Objects.requireNonNull($.computeName, "expected parameter 'computeName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

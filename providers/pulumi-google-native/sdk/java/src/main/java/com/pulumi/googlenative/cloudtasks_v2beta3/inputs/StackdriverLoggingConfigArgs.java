@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class StackdriverLoggingConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="samplingRatio")
-      private final @Nullable Output<Double> samplingRatio;
+    private @Nullable Output<Double> samplingRatio;
 
-    public Output<Double> samplingRatio() {
-        return this.samplingRatio == null ? Codegen.empty() : this.samplingRatio;
+    public Optional<Output<Double>> samplingRatio() {
+        return Optional.ofNullable(this.samplingRatio);
     }
 
-    public StackdriverLoggingConfigArgs(@Nullable Output<Double> samplingRatio) {
-        this.samplingRatio = samplingRatio;
-    }
+    private StackdriverLoggingConfigArgs() {}
 
-    private StackdriverLoggingConfigArgs() {
-        this.samplingRatio = Codegen.empty();
+    private StackdriverLoggingConfigArgs(StackdriverLoggingConfigArgs $) {
+        this.samplingRatio = $.samplingRatio;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackdriverLoggingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> samplingRatio;
+        private StackdriverLoggingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackdriverLoggingConfigArgs();
         }
 
         public Builder(StackdriverLoggingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.samplingRatio = defaults.samplingRatio;
+            $ = new StackdriverLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder samplingRatio(@Nullable Output<Double> samplingRatio) {
-            this.samplingRatio = samplingRatio;
+            $.samplingRatio = samplingRatio;
             return this;
         }
-        public Builder samplingRatio(@Nullable Double samplingRatio) {
-            this.samplingRatio = Codegen.ofNullable(samplingRatio);
-            return this;
-        }        public StackdriverLoggingConfigArgs build() {
-            return new StackdriverLoggingConfigArgs(samplingRatio);
+
+        public Builder samplingRatio(Double samplingRatio) {
+            return samplingRatio(Output.of(samplingRatio));
+        }
+
+        public StackdriverLoggingConfigArgs build() {
+            return $;
         }
     }
+
 }

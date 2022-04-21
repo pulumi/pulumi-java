@@ -23,14 +23,14 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="deleteRule", required=true)
-      private final String deleteRule;
+    private String deleteRule;
 
     public String deleteRule() {
         return this.deleteRule;
     }
 
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -41,7 +41,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
@@ -63,10 +63,10 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="secretVersion")
-      private final @Nullable String secretVersion;
+    private @Nullable String secretVersion;
 
     public Optional<String> secretVersion() {
-        return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
+        return Optional.ofNullable(this.secretVersion);
     }
 
     /**
@@ -74,7 +74,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="subscriptionId", required=true)
-      private final String subscriptionId;
+    private String subscriptionId;
 
     public String subscriptionId() {
         return this.subscriptionId;
@@ -85,7 +85,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="updateRule", required=true)
-      private final String updateRule;
+    private String updateRule;
 
     public String updateRule() {
         return this.updateRule;
@@ -96,109 +96,93 @@ public final class KeyVaultCertificateSourceParametersResponse extends com.pulum
      * 
      */
     @Import(name="vaultName", required=true)
-      private final String vaultName;
+    private String vaultName;
 
     public String vaultName() {
         return this.vaultName;
     }
 
-    public KeyVaultCertificateSourceParametersResponse(
-        String deleteRule,
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        @Nullable String secretVersion,
-        String subscriptionId,
-        String updateRule,
-        String vaultName) {
-        this.deleteRule = Objects.requireNonNull(deleteRule, "expected parameter 'deleteRule' to be non-null");
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-        this.secretVersion = secretVersion;
-        this.subscriptionId = Objects.requireNonNull(subscriptionId, "expected parameter 'subscriptionId' to be non-null");
-        this.updateRule = Objects.requireNonNull(updateRule, "expected parameter 'updateRule' to be non-null");
-        this.vaultName = Objects.requireNonNull(vaultName, "expected parameter 'vaultName' to be non-null");
-    }
+    private KeyVaultCertificateSourceParametersResponse() {}
 
-    private KeyVaultCertificateSourceParametersResponse() {
-        this.deleteRule = null;
-        this.odataType = null;
-        this.resourceGroupName = null;
-        this.secretName = null;
-        this.secretVersion = null;
-        this.subscriptionId = null;
-        this.updateRule = null;
-        this.vaultName = null;
+    private KeyVaultCertificateSourceParametersResponse(KeyVaultCertificateSourceParametersResponse $) {
+        this.deleteRule = $.deleteRule;
+        this.odataType = $.odataType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretName = $.secretName;
+        this.secretVersion = $.secretVersion;
+        this.subscriptionId = $.subscriptionId;
+        this.updateRule = $.updateRule;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultCertificateSourceParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deleteRule;
-        private String odataType;
-        private String resourceGroupName;
-        private String secretName;
-        private @Nullable String secretVersion;
-        private String subscriptionId;
-        private String updateRule;
-        private String vaultName;
+        private KeyVaultCertificateSourceParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultCertificateSourceParametersResponse();
         }
 
         public Builder(KeyVaultCertificateSourceParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteRule = defaults.deleteRule;
-    	      this.odataType = defaults.odataType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretName = defaults.secretName;
-    	      this.secretVersion = defaults.secretVersion;
-    	      this.subscriptionId = defaults.subscriptionId;
-    	      this.updateRule = defaults.updateRule;
-    	      this.vaultName = defaults.vaultName;
+            $ = new KeyVaultCertificateSourceParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteRule(String deleteRule) {
-            this.deleteRule = Objects.requireNonNull(deleteRule);
+            $.deleteRule = deleteRule;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
         }
+
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = secretVersion;
+            $.secretVersion = secretVersion;
             return this;
         }
+
         public Builder subscriptionId(String subscriptionId) {
-            this.subscriptionId = Objects.requireNonNull(subscriptionId);
+            $.subscriptionId = subscriptionId;
             return this;
         }
+
         public Builder updateRule(String updateRule) {
-            this.updateRule = Objects.requireNonNull(updateRule);
+            $.updateRule = updateRule;
             return this;
         }
+
         public Builder vaultName(String vaultName) {
-            this.vaultName = Objects.requireNonNull(vaultName);
+            $.vaultName = vaultName;
             return this;
-        }        public KeyVaultCertificateSourceParametersResponse build() {
-            return new KeyVaultCertificateSourceParametersResponse(deleteRule, odataType, resourceGroupName, secretName, secretVersion, subscriptionId, updateRule, vaultName);
+        }
+
+        public KeyVaultCertificateSourceParametersResponse build() {
+            $.deleteRule = Objects.requireNonNull($.deleteRule, "expected parameter 'deleteRule' to be non-null");
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            $.subscriptionId = Objects.requireNonNull($.subscriptionId, "expected parameter 'subscriptionId' to be non-null");
+            $.updateRule = Objects.requireNonNull($.updateRule, "expected parameter 'updateRule' to be non-null");
+            $.vaultName = Objects.requireNonNull($.vaultName, "expected parameter 'vaultName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<String> secret;
+    private @Nullable Output<String> secret;
 
-    public Output<String> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<String>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SecretEnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SecretEnvVarArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> project,
-        @Nullable Output<String> secret,
-        @Nullable Output<String> version) {
-        this.key = key;
-        this.project = project;
-        this.secret = secret;
-        this.version = version;
-    }
+    private SecretEnvVarArgs() {}
 
-    private SecretEnvVarArgs() {
-        this.key = Codegen.empty();
-        this.project = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.version = Codegen.empty();
+    private SecretEnvVarArgs(SecretEnvVarArgs $) {
+        this.key = $.key;
+        this.project = $.project;
+        this.secret = $.secret;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretEnvVarArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> secret;
-        private @Nullable Output<String> version;
+        private SecretEnvVarArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretEnvVarArgs();
         }
 
         public Builder(SecretEnvVarArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.version = defaults.version;
+            $ = new SecretEnvVarArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder secret(@Nullable Output<String> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable String secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(String secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SecretEnvVarArgs build() {
-            return new SecretEnvVarArgs(key, project, secret, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SecretEnvVarArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ApplicationHealthPolicyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="defaultServiceTypeHealthPolicy")
-      private final @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
+    private @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
 
     public Optional<ServiceTypeHealthPolicyResponse> defaultServiceTypeHealthPolicy() {
-        return this.defaultServiceTypeHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
+        return Optional.ofNullable(this.defaultServiceTypeHealthPolicy);
     }
 
     /**
@@ -36,55 +36,50 @@ public final class ApplicationHealthPolicyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="serviceTypeHealthPolicies")
-      private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
+    private @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
-    public Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies() {
-        return this.serviceTypeHealthPolicies == null ? Map.of() : this.serviceTypeHealthPolicies;
+    public Optional<Map<String,ServiceTypeHealthPolicyResponse>> serviceTypeHealthPolicies() {
+        return Optional.ofNullable(this.serviceTypeHealthPolicies);
     }
 
-    public ApplicationHealthPolicyResponse(
-        @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
-        this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
-        this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
-    }
+    private ApplicationHealthPolicyResponse() {}
 
-    private ApplicationHealthPolicyResponse() {
-        this.defaultServiceTypeHealthPolicy = null;
-        this.serviceTypeHealthPolicies = Map.of();
+    private ApplicationHealthPolicyResponse(ApplicationHealthPolicyResponse $) {
+        this.defaultServiceTypeHealthPolicy = $.defaultServiceTypeHealthPolicy;
+        this.serviceTypeHealthPolicies = $.serviceTypeHealthPolicies;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy;
-        private @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
+        private ApplicationHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationHealthPolicyResponse();
         }
 
         public Builder(ApplicationHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultServiceTypeHealthPolicy = defaults.defaultServiceTypeHealthPolicy;
-    	      this.serviceTypeHealthPolicies = defaults.serviceTypeHealthPolicies;
+            $ = new ApplicationHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
-            this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
+            $.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
+
         public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
-            this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
+            $.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
-        }        public ApplicationHealthPolicyResponse build() {
-            return new ApplicationHealthPolicyResponse(defaultServiceTypeHealthPolicy, serviceTypeHealthPolicies);
+        }
+
+        public ApplicationHealthPolicyResponse build() {
+            return $;
         }
     }
+
 }

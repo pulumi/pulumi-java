@@ -5,11 +5,11 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucketPolicyOnly")
-      private final @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
+    private @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
-    public Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly() {
-        return this.bucketPolicyOnly == null ? Codegen.empty() : this.bucketPolicyOnly;
+    public Optional<Output<BucketIamConfigurationBucketPolicyOnlyArgs>> bucketPolicyOnly() {
+        return Optional.ofNullable(this.bucketPolicyOnly);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="publicAccessPrevention")
-      private final @Nullable Output<String> publicAccessPrevention;
+    private @Nullable Output<String> publicAccessPrevention;
 
-    public Output<String> publicAccessPrevention() {
-        return this.publicAccessPrevention == null ? Codegen.empty() : this.publicAccessPrevention;
+    public Optional<Output<String>> publicAccessPrevention() {
+        return Optional.ofNullable(this.publicAccessPrevention);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class BucketIamConfigurationArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="uniformBucketLevelAccess")
-      private final @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
+    private @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
-    public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess() {
-        return this.uniformBucketLevelAccess == null ? Codegen.empty() : this.uniformBucketLevelAccess;
+    public Optional<Output<BucketIamConfigurationUniformBucketLevelAccessArgs>> uniformBucketLevelAccess() {
+        return Optional.ofNullable(this.uniformBucketLevelAccess);
     }
 
-    public BucketIamConfigurationArgs(
-        @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly,
-        @Nullable Output<String> publicAccessPrevention,
-        @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
-        this.bucketPolicyOnly = bucketPolicyOnly;
-        this.publicAccessPrevention = publicAccessPrevention;
-        this.uniformBucketLevelAccess = uniformBucketLevelAccess;
-    }
+    private BucketIamConfigurationArgs() {}
 
-    private BucketIamConfigurationArgs() {
-        this.bucketPolicyOnly = Codegen.empty();
-        this.publicAccessPrevention = Codegen.empty();
-        this.uniformBucketLevelAccess = Codegen.empty();
+    private BucketIamConfigurationArgs(BucketIamConfigurationArgs $) {
+        this.bucketPolicyOnly = $.bucketPolicyOnly;
+        this.publicAccessPrevention = $.publicAccessPrevention;
+        this.uniformBucketLevelAccess = $.uniformBucketLevelAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIamConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
-        private @Nullable Output<String> publicAccessPrevention;
-        private @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
+        private BucketIamConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIamConfigurationArgs();
         }
 
         public Builder(BucketIamConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketPolicyOnly = defaults.bucketPolicyOnly;
-    	      this.publicAccessPrevention = defaults.publicAccessPrevention;
-    	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
+            $ = new BucketIamConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketPolicyOnly(@Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly) {
-            this.bucketPolicyOnly = bucketPolicyOnly;
+            $.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
-        public Builder bucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
-            this.bucketPolicyOnly = Codegen.ofNullable(bucketPolicyOnly);
-            return this;
+
+        public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
+            return bucketPolicyOnly(Output.of(bucketPolicyOnly));
         }
+
         public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
-            this.publicAccessPrevention = publicAccessPrevention;
+            $.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
-        public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
-            this.publicAccessPrevention = Codegen.ofNullable(publicAccessPrevention);
-            return this;
+
+        public Builder publicAccessPrevention(String publicAccessPrevention) {
+            return publicAccessPrevention(Output.of(publicAccessPrevention));
         }
+
         public Builder uniformBucketLevelAccess(@Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = uniformBucketLevelAccess;
+            $.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
         }
-        public Builder uniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = Codegen.ofNullable(uniformBucketLevelAccess);
-            return this;
-        }        public BucketIamConfigurationArgs build() {
-            return new BucketIamConfigurationArgs(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
+
+        public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
+            return uniformBucketLevelAccess(Output.of(uniformBucketLevelAccess));
+        }
+
+        public BucketIamConfigurationArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class GetPlaybackKeyPairArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetPlaybackKeyPairArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetPlaybackKeyPairArgs() {}
 
-    private GetPlaybackKeyPairArgs() {
-        this.arn = null;
+    private GetPlaybackKeyPairArgs(GetPlaybackKeyPairArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPlaybackKeyPairArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetPlaybackKeyPairArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPlaybackKeyPairArgs();
         }
 
         public Builder(GetPlaybackKeyPairArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetPlaybackKeyPairArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetPlaybackKeyPairArgs build() {
-            return new GetPlaybackKeyPairArgs(arn);
+        }
+
+        public GetPlaybackKeyPairArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

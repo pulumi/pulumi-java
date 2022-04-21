@@ -17,7 +17,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="eventSubscriptionName", required=true)
-      private final String eventSubscriptionName;
+    private String eventSubscriptionName;
 
     public String eventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="partnerTopicName", required=true)
-      private final String partnerTopicName;
+    private String partnerTopicName;
 
     public String partnerTopicName() {
         return this.partnerTopicName;
@@ -39,64 +39,59 @@ public final class GetPartnerTopicEventSubscriptionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetPartnerTopicEventSubscriptionArgs(
-        String eventSubscriptionName,
-        String partnerTopicName,
-        String resourceGroupName) {
-        this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
-        this.partnerTopicName = Objects.requireNonNull(partnerTopicName, "expected parameter 'partnerTopicName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetPartnerTopicEventSubscriptionArgs() {}
 
-    private GetPartnerTopicEventSubscriptionArgs() {
-        this.eventSubscriptionName = null;
-        this.partnerTopicName = null;
-        this.resourceGroupName = null;
+    private GetPartnerTopicEventSubscriptionArgs(GetPartnerTopicEventSubscriptionArgs $) {
+        this.eventSubscriptionName = $.eventSubscriptionName;
+        this.partnerTopicName = $.partnerTopicName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPartnerTopicEventSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventSubscriptionName;
-        private String partnerTopicName;
-        private String resourceGroupName;
+        private GetPartnerTopicEventSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPartnerTopicEventSubscriptionArgs();
         }
 
         public Builder(GetPartnerTopicEventSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventSubscriptionName = defaults.eventSubscriptionName;
-    	      this.partnerTopicName = defaults.partnerTopicName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetPartnerTopicEventSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventSubscriptionName(String eventSubscriptionName) {
-            this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
+            $.eventSubscriptionName = eventSubscriptionName;
             return this;
         }
+
         public Builder partnerTopicName(String partnerTopicName) {
-            this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
+            $.partnerTopicName = partnerTopicName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetPartnerTopicEventSubscriptionArgs build() {
-            return new GetPartnerTopicEventSubscriptionArgs(eventSubscriptionName, partnerTopicName, resourceGroupName);
+        }
+
+        public GetPartnerTopicEventSubscriptionArgs build() {
+            $.eventSubscriptionName = Objects.requireNonNull($.eventSubscriptionName, "expected parameter 'eventSubscriptionName' to be non-null");
+            $.partnerTopicName = Objects.requireNonNull($.partnerTopicName, "expected parameter 'partnerTopicName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

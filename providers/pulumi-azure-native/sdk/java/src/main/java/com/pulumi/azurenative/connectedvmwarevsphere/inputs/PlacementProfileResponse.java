@@ -23,10 +23,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="clusterId")
-      private final @Nullable String clusterId;
+    private @Nullable String clusterId;
 
     public Optional<String> clusterId() {
-        return this.clusterId == null ? Optional.empty() : Optional.ofNullable(this.clusterId);
+        return Optional.ofNullable(this.clusterId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable String datastoreId;
+    private @Nullable String datastoreId;
 
     public Optional<String> datastoreId() {
-        return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="hostId")
-      private final @Nullable String hostId;
+    private @Nullable String hostId;
 
     public Optional<String> hostId() {
-        return this.hostId == null ? Optional.empty() : Optional.ofNullable(this.hostId);
+        return Optional.ofNullable(this.hostId);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class PlacementProfileResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourcePoolId")
-      private final @Nullable String resourcePoolId;
+    private @Nullable String resourcePoolId;
 
     public Optional<String> resourcePoolId() {
-        return this.resourcePoolId == null ? Optional.empty() : Optional.ofNullable(this.resourcePoolId);
+        return Optional.ofNullable(this.resourcePoolId);
     }
 
-    public PlacementProfileResponse(
-        @Nullable String clusterId,
-        @Nullable String datastoreId,
-        @Nullable String hostId,
-        @Nullable String resourcePoolId) {
-        this.clusterId = clusterId;
-        this.datastoreId = datastoreId;
-        this.hostId = hostId;
-        this.resourcePoolId = resourcePoolId;
-    }
+    private PlacementProfileResponse() {}
 
-    private PlacementProfileResponse() {
-        this.clusterId = null;
-        this.datastoreId = null;
-        this.hostId = null;
-        this.resourcePoolId = null;
+    private PlacementProfileResponse(PlacementProfileResponse $) {
+        this.clusterId = $.clusterId;
+        this.datastoreId = $.datastoreId;
+        this.hostId = $.hostId;
+        this.resourcePoolId = $.resourcePoolId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clusterId;
-        private @Nullable String datastoreId;
-        private @Nullable String hostId;
-        private @Nullable String resourcePoolId;
+        private PlacementProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementProfileResponse();
         }
 
         public Builder(PlacementProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.hostId = defaults.hostId;
-    	      this.resourcePoolId = defaults.resourcePoolId;
+            $ = new PlacementProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = clusterId;
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = hostId;
+            $.hostId = hostId;
             return this;
         }
+
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = resourcePoolId;
+            $.resourcePoolId = resourcePoolId;
             return this;
-        }        public PlacementProfileResponse build() {
-            return new PlacementProfileResponse(clusterId, datastoreId, hostId, resourcePoolId);
+        }
+
+        public PlacementProfileResponse build() {
+            return $;
         }
     }
+
 }

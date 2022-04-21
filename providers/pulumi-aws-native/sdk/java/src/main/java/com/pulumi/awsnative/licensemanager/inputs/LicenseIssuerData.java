@@ -15,62 +15,58 @@ public final class LicenseIssuerData extends com.pulumi.resources.InvokeArgs {
     public static final LicenseIssuerData Empty = new LicenseIssuerData();
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="signKey")
-      private final @Nullable String signKey;
+    private @Nullable String signKey;
 
     public Optional<String> signKey() {
-        return this.signKey == null ? Optional.empty() : Optional.ofNullable(this.signKey);
+        return Optional.ofNullable(this.signKey);
     }
 
-    public LicenseIssuerData(
-        String name,
-        @Nullable String signKey) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.signKey = signKey;
-    }
+    private LicenseIssuerData() {}
 
-    private LicenseIssuerData() {
-        this.name = null;
-        this.signKey = null;
+    private LicenseIssuerData(LicenseIssuerData $) {
+        this.name = $.name;
+        this.signKey = $.signKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseIssuerData defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String signKey;
+        private LicenseIssuerData $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseIssuerData();
         }
 
         public Builder(LicenseIssuerData defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.signKey = defaults.signKey;
+            $ = new LicenseIssuerData(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder signKey(@Nullable String signKey) {
-            this.signKey = signKey;
+            $.signKey = signKey;
             return this;
-        }        public LicenseIssuerData build() {
-            return new LicenseIssuerData(name, signKey);
+        }
+
+        public LicenseIssuerData build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

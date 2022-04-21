@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LogAnalyticsDestinationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class LogAnalyticsDestinationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="workspaceResourceId")
-      private final @Nullable Output<String> workspaceResourceId;
+    private @Nullable Output<String> workspaceResourceId;
 
-    public Output<String> workspaceResourceId() {
-        return this.workspaceResourceId == null ? Codegen.empty() : this.workspaceResourceId;
+    public Optional<Output<String>> workspaceResourceId() {
+        return Optional.ofNullable(this.workspaceResourceId);
     }
 
-    public LogAnalyticsDestinationArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> workspaceResourceId) {
-        this.name = name;
-        this.workspaceResourceId = workspaceResourceId;
-    }
+    private LogAnalyticsDestinationArgs() {}
 
-    private LogAnalyticsDestinationArgs() {
-        this.name = Codegen.empty();
-        this.workspaceResourceId = Codegen.empty();
+    private LogAnalyticsDestinationArgs(LogAnalyticsDestinationArgs $) {
+        this.name = $.name;
+        this.workspaceResourceId = $.workspaceResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogAnalyticsDestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> workspaceResourceId;
+        private LogAnalyticsDestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogAnalyticsDestinationArgs();
         }
 
         public Builder(LogAnalyticsDestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.workspaceResourceId = defaults.workspaceResourceId;
+            $ = new LogAnalyticsDestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder workspaceResourceId(@Nullable Output<String> workspaceResourceId) {
-            this.workspaceResourceId = workspaceResourceId;
+            $.workspaceResourceId = workspaceResourceId;
             return this;
         }
-        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
-            this.workspaceResourceId = Codegen.ofNullable(workspaceResourceId);
-            return this;
-        }        public LogAnalyticsDestinationArgs build() {
-            return new LogAnalyticsDestinationArgs(name, workspaceResourceId);
+
+        public Builder workspaceResourceId(String workspaceResourceId) {
+            return workspaceResourceId(Output.of(workspaceResourceId));
+        }
+
+        public LogAnalyticsDestinationArgs build() {
+            return $;
         }
     }
+
 }

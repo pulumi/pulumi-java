@@ -7,7 +7,6 @@ import com.pulumi.azurenative.databoxedge.enums.ClientPermissionType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="accessPermission", required=true)
-      private final Output<Either<String,ClientPermissionType>> accessPermission;
+    private Output<Either<String,ClientPermissionType>> accessPermission;
 
     public Output<Either<String,ClientPermissionType>> accessPermission() {
         return this.accessPermission;
@@ -36,63 +35,60 @@ public final class ClientAccessRightArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="client", required=true)
-      private final Output<String> client;
+    private Output<String> client;
 
     public Output<String> client() {
         return this.client;
     }
 
-    public ClientAccessRightArgs(
-        Output<Either<String,ClientPermissionType>> accessPermission,
-        Output<String> client) {
-        this.accessPermission = Objects.requireNonNull(accessPermission, "expected parameter 'accessPermission' to be non-null");
-        this.client = Objects.requireNonNull(client, "expected parameter 'client' to be non-null");
-    }
+    private ClientAccessRightArgs() {}
 
-    private ClientAccessRightArgs() {
-        this.accessPermission = Codegen.empty();
-        this.client = Codegen.empty();
+    private ClientAccessRightArgs(ClientAccessRightArgs $) {
+        this.accessPermission = $.accessPermission;
+        this.client = $.client;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientAccessRightArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,ClientPermissionType>> accessPermission;
-        private Output<String> client;
+        private ClientAccessRightArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientAccessRightArgs();
         }
 
         public Builder(ClientAccessRightArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPermission = defaults.accessPermission;
-    	      this.client = defaults.client;
+            $ = new ClientAccessRightArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPermission(Output<Either<String,ClientPermissionType>> accessPermission) {
-            this.accessPermission = Objects.requireNonNull(accessPermission);
+            $.accessPermission = accessPermission;
             return this;
         }
+
         public Builder accessPermission(Either<String,ClientPermissionType> accessPermission) {
-            this.accessPermission = Output.of(Objects.requireNonNull(accessPermission));
-            return this;
+            return accessPermission(Output.of(accessPermission));
         }
+
         public Builder client(Output<String> client) {
-            this.client = Objects.requireNonNull(client);
+            $.client = client;
             return this;
         }
+
         public Builder client(String client) {
-            this.client = Output.of(Objects.requireNonNull(client));
-            return this;
-        }        public ClientAccessRightArgs build() {
-            return new ClientAccessRightArgs(accessPermission, client);
+            return client(Output.of(client));
+        }
+
+        public ClientAccessRightArgs build() {
+            $.accessPermission = Objects.requireNonNull($.accessPermission, "expected parameter 'accessPermission' to be non-null");
+            $.client = Objects.requireNonNull($.client, "expected parameter 'client' to be non-null");
+            return $;
         }
     }
+
 }

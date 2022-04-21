@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="batchSize", required=true)
-      private final String batchSize;
+    private String batchSize;
 
     public String batchSize() {
         return this.batchSize;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="dataFormat", required=true)
-      private final String dataFormat;
+    private String dataFormat;
 
     public String dataFormat() {
         return this.dataFormat;
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="inputPaths", required=true)
-      private final List<String> inputPaths;
+    private List<String> inputPaths;
 
     public List<String> inputPaths() {
         return this.inputPaths;
@@ -55,7 +55,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="maxWorkerCount", required=true)
-      private final String maxWorkerCount;
+    private String maxWorkerCount;
 
     public String maxWorkerCount() {
         return this.maxWorkerCount;
@@ -66,7 +66,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="modelName", required=true)
-      private final String modelName;
+    private String modelName;
 
     public String modelName() {
         return this.modelName;
@@ -77,7 +77,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="outputDataFormat", required=true)
-      private final String outputDataFormat;
+    private String outputDataFormat;
 
     public String outputDataFormat() {
         return this.outputDataFormat;
@@ -88,7 +88,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="outputPath", required=true)
-      private final String outputPath;
+    private String outputPath;
 
     public String outputPath() {
         return this.outputPath;
@@ -99,7 +99,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -110,7 +110,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="runtimeVersion", required=true)
-      private final String runtimeVersion;
+    private String runtimeVersion;
 
     public String runtimeVersion() {
         return this.runtimeVersion;
@@ -121,7 +121,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="signatureName", required=true)
-      private final String signatureName;
+    private String signatureName;
 
     public String signatureName() {
         return this.signatureName;
@@ -132,7 +132,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -143,148 +143,126 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends com.pulumi.r
      * 
      */
     @Import(name="versionName", required=true)
-      private final String versionName;
+    private String versionName;
 
     public String versionName() {
         return this.versionName;
     }
 
-    public GoogleCloudMlV1__PredictionInputResponse(
-        String batchSize,
-        String dataFormat,
-        List<String> inputPaths,
-        String maxWorkerCount,
-        String modelName,
-        String outputDataFormat,
-        String outputPath,
-        String region,
-        String runtimeVersion,
-        String signatureName,
-        String uri,
-        String versionName) {
-        this.batchSize = Objects.requireNonNull(batchSize, "expected parameter 'batchSize' to be non-null");
-        this.dataFormat = Objects.requireNonNull(dataFormat, "expected parameter 'dataFormat' to be non-null");
-        this.inputPaths = Objects.requireNonNull(inputPaths, "expected parameter 'inputPaths' to be non-null");
-        this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount, "expected parameter 'maxWorkerCount' to be non-null");
-        this.modelName = Objects.requireNonNull(modelName, "expected parameter 'modelName' to be non-null");
-        this.outputDataFormat = Objects.requireNonNull(outputDataFormat, "expected parameter 'outputDataFormat' to be non-null");
-        this.outputPath = Objects.requireNonNull(outputPath, "expected parameter 'outputPath' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.runtimeVersion = Objects.requireNonNull(runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
-        this.signatureName = Objects.requireNonNull(signatureName, "expected parameter 'signatureName' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.versionName = Objects.requireNonNull(versionName, "expected parameter 'versionName' to be non-null");
-    }
+    private GoogleCloudMlV1__PredictionInputResponse() {}
 
-    private GoogleCloudMlV1__PredictionInputResponse() {
-        this.batchSize = null;
-        this.dataFormat = null;
-        this.inputPaths = List.of();
-        this.maxWorkerCount = null;
-        this.modelName = null;
-        this.outputDataFormat = null;
-        this.outputPath = null;
-        this.region = null;
-        this.runtimeVersion = null;
-        this.signatureName = null;
-        this.uri = null;
-        this.versionName = null;
+    private GoogleCloudMlV1__PredictionInputResponse(GoogleCloudMlV1__PredictionInputResponse $) {
+        this.batchSize = $.batchSize;
+        this.dataFormat = $.dataFormat;
+        this.inputPaths = $.inputPaths;
+        this.maxWorkerCount = $.maxWorkerCount;
+        this.modelName = $.modelName;
+        this.outputDataFormat = $.outputDataFormat;
+        this.outputPath = $.outputPath;
+        this.region = $.region;
+        this.runtimeVersion = $.runtimeVersion;
+        this.signatureName = $.signatureName;
+        this.uri = $.uri;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__PredictionInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String batchSize;
-        private String dataFormat;
-        private List<String> inputPaths;
-        private String maxWorkerCount;
-        private String modelName;
-        private String outputDataFormat;
-        private String outputPath;
-        private String region;
-        private String runtimeVersion;
-        private String signatureName;
-        private String uri;
-        private String versionName;
+        private GoogleCloudMlV1__PredictionInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__PredictionInputResponse();
         }
 
         public Builder(GoogleCloudMlV1__PredictionInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchSize = defaults.batchSize;
-    	      this.dataFormat = defaults.dataFormat;
-    	      this.inputPaths = defaults.inputPaths;
-    	      this.maxWorkerCount = defaults.maxWorkerCount;
-    	      this.modelName = defaults.modelName;
-    	      this.outputDataFormat = defaults.outputDataFormat;
-    	      this.outputPath = defaults.outputPath;
-    	      this.region = defaults.region;
-    	      this.runtimeVersion = defaults.runtimeVersion;
-    	      this.signatureName = defaults.signatureName;
-    	      this.uri = defaults.uri;
-    	      this.versionName = defaults.versionName;
+            $ = new GoogleCloudMlV1__PredictionInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder batchSize(String batchSize) {
-            this.batchSize = Objects.requireNonNull(batchSize);
+            $.batchSize = batchSize;
             return this;
         }
+
         public Builder dataFormat(String dataFormat) {
-            this.dataFormat = Objects.requireNonNull(dataFormat);
+            $.dataFormat = dataFormat;
             return this;
         }
+
         public Builder inputPaths(List<String> inputPaths) {
-            this.inputPaths = Objects.requireNonNull(inputPaths);
+            $.inputPaths = inputPaths;
             return this;
         }
+
         public Builder inputPaths(String... inputPaths) {
             return inputPaths(List.of(inputPaths));
         }
+
         public Builder maxWorkerCount(String maxWorkerCount) {
-            this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
+            $.maxWorkerCount = maxWorkerCount;
             return this;
         }
+
         public Builder modelName(String modelName) {
-            this.modelName = Objects.requireNonNull(modelName);
+            $.modelName = modelName;
             return this;
         }
+
         public Builder outputDataFormat(String outputDataFormat) {
-            this.outputDataFormat = Objects.requireNonNull(outputDataFormat);
+            $.outputDataFormat = outputDataFormat;
             return this;
         }
+
         public Builder outputPath(String outputPath) {
-            this.outputPath = Objects.requireNonNull(outputPath);
+            $.outputPath = outputPath;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder runtimeVersion(String runtimeVersion) {
-            this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
+            $.runtimeVersion = runtimeVersion;
             return this;
         }
+
         public Builder signatureName(String signatureName) {
-            this.signatureName = Objects.requireNonNull(signatureName);
+            $.signatureName = signatureName;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder versionName(String versionName) {
-            this.versionName = Objects.requireNonNull(versionName);
+            $.versionName = versionName;
             return this;
-        }        public GoogleCloudMlV1__PredictionInputResponse build() {
-            return new GoogleCloudMlV1__PredictionInputResponse(batchSize, dataFormat, inputPaths, maxWorkerCount, modelName, outputDataFormat, outputPath, region, runtimeVersion, signatureName, uri, versionName);
+        }
+
+        public GoogleCloudMlV1__PredictionInputResponse build() {
+            $.batchSize = Objects.requireNonNull($.batchSize, "expected parameter 'batchSize' to be non-null");
+            $.dataFormat = Objects.requireNonNull($.dataFormat, "expected parameter 'dataFormat' to be non-null");
+            $.inputPaths = Objects.requireNonNull($.inputPaths, "expected parameter 'inputPaths' to be non-null");
+            $.maxWorkerCount = Objects.requireNonNull($.maxWorkerCount, "expected parameter 'maxWorkerCount' to be non-null");
+            $.modelName = Objects.requireNonNull($.modelName, "expected parameter 'modelName' to be non-null");
+            $.outputDataFormat = Objects.requireNonNull($.outputDataFormat, "expected parameter 'outputDataFormat' to be non-null");
+            $.outputPath = Objects.requireNonNull($.outputPath, "expected parameter 'outputPath' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.runtimeVersion = Objects.requireNonNull($.runtimeVersion, "expected parameter 'runtimeVersion' to be non-null");
+            $.signatureName = Objects.requireNonNull($.signatureName, "expected parameter 'signatureName' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.versionName = Objects.requireNonNull($.versionName, "expected parameter 'versionName' to be non-null");
+            return $;
         }
     }
+
 }

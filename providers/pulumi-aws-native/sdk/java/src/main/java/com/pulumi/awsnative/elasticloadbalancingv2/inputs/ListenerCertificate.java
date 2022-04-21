@@ -15,45 +15,44 @@ public final class ListenerCertificate extends com.pulumi.resources.InvokeArgs {
     public static final ListenerCertificate Empty = new ListenerCertificate();
 
     @Import(name="certificateArn")
-      private final @Nullable String certificateArn;
+    private @Nullable String certificateArn;
 
     public Optional<String> certificateArn() {
-        return this.certificateArn == null ? Optional.empty() : Optional.ofNullable(this.certificateArn);
+        return Optional.ofNullable(this.certificateArn);
     }
 
-    public ListenerCertificate(@Nullable String certificateArn) {
-        this.certificateArn = certificateArn;
-    }
+    private ListenerCertificate() {}
 
-    private ListenerCertificate() {
-        this.certificateArn = null;
+    private ListenerCertificate(ListenerCertificate $) {
+        this.certificateArn = $.certificateArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerCertificate defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateArn;
+        private ListenerCertificate $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerCertificate();
         }
 
         public Builder(ListenerCertificate defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateArn = defaults.certificateArn;
+            $ = new ListenerCertificate(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = certificateArn;
+            $.certificateArn = certificateArn;
             return this;
-        }        public ListenerCertificate build() {
-            return new ListenerCertificate(certificateArn);
+        }
+
+        public ListenerCertificate build() {
+            return $;
         }
     }
+
 }

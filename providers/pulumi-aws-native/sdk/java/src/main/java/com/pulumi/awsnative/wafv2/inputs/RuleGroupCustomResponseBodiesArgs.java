@@ -3,7 +3,7 @@
 
 package com.pulumi.awsnative.wafv2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class RuleGroupCustomResponseBodiesArgs extends com.pulumi.resource
 
     public static final RuleGroupCustomResponseBodiesArgs Empty = new RuleGroupCustomResponseBodiesArgs();
 
-    public RuleGroupCustomResponseBodiesArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(RuleGroupCustomResponseBodiesArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private RuleGroupCustomResponseBodiesArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(RuleGroupCustomResponseBodiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new RuleGroupCustomResponseBodiesArgs();
         }
         public RuleGroupCustomResponseBodiesArgs build() {
-            return new RuleGroupCustomResponseBodiesArgs();
+            return $;
         }
     }
+
 }

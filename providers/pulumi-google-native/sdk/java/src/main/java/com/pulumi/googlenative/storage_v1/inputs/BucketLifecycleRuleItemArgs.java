@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemActionArgs;
 import com.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemConditionArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketLifecycleRuleItemArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
+    private @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
 
-    public Output<BucketLifecycleRuleItemActionArgs> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<BucketLifecycleRuleItemActionArgs>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BucketLifecycleRuleItemArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
+    private @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
 
-    public Output<BucketLifecycleRuleItemConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<BucketLifecycleRuleItemConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
-    public BucketLifecycleRuleItemArgs(
-        @Nullable Output<BucketLifecycleRuleItemActionArgs> action,
-        @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
-        this.action = action;
-        this.condition = condition;
-    }
+    private BucketLifecycleRuleItemArgs() {}
 
-    private BucketLifecycleRuleItemArgs() {
-        this.action = Codegen.empty();
-        this.condition = Codegen.empty();
+    private BucketLifecycleRuleItemArgs(BucketLifecycleRuleItemArgs $) {
+        this.action = $.action;
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BucketLifecycleRuleItemActionArgs> action;
-        private @Nullable Output<BucketLifecycleRuleItemConditionArgs> condition;
+        private BucketLifecycleRuleItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleItemArgs();
         }
 
         public Builder(BucketLifecycleRuleItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.condition = defaults.condition;
+            $ = new BucketLifecycleRuleItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<BucketLifecycleRuleItemActionArgs> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable BucketLifecycleRuleItemActionArgs action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(BucketLifecycleRuleItemActionArgs action) {
+            return action(Output.of(action));
         }
+
         public Builder condition(@Nullable Output<BucketLifecycleRuleItemConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable BucketLifecycleRuleItemConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
-        }        public BucketLifecycleRuleItemArgs build() {
-            return new BucketLifecycleRuleItemArgs(action, condition);
+
+        public Builder condition(BucketLifecycleRuleItemConditionArgs condition) {
+            return condition(Output.of(condition));
+        }
+
+        public BucketLifecycleRuleItemArgs build() {
+            return $;
         }
     }
+
 }

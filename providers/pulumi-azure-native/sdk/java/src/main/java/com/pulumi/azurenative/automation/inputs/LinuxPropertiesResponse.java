@@ -24,10 +24,10 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="excludedPackageNameMasks")
-      private final @Nullable List<String> excludedPackageNameMasks;
+    private @Nullable List<String> excludedPackageNameMasks;
 
-    public List<String> excludedPackageNameMasks() {
-        return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
+    public Optional<List<String>> excludedPackageNameMasks() {
+        return Optional.ofNullable(this.excludedPackageNameMasks);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="includedPackageClassifications")
-      private final @Nullable String includedPackageClassifications;
+    private @Nullable String includedPackageClassifications;
 
     public Optional<String> includedPackageClassifications() {
-        return this.includedPackageClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedPackageClassifications);
+        return Optional.ofNullable(this.includedPackageClassifications);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="includedPackageNameMasks")
-      private final @Nullable List<String> includedPackageNameMasks;
+    private @Nullable List<String> includedPackageNameMasks;
 
-    public List<String> includedPackageNameMasks() {
-        return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
+    public Optional<List<String>> includedPackageNameMasks() {
+        return Optional.ofNullable(this.includedPackageNameMasks);
     }
 
     /**
@@ -57,79 +57,70 @@ public final class LinuxPropertiesResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rebootSetting")
-      private final @Nullable String rebootSetting;
+    private @Nullable String rebootSetting;
 
     public Optional<String> rebootSetting() {
-        return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
+        return Optional.ofNullable(this.rebootSetting);
     }
 
-    public LinuxPropertiesResponse(
-        @Nullable List<String> excludedPackageNameMasks,
-        @Nullable String includedPackageClassifications,
-        @Nullable List<String> includedPackageNameMasks,
-        @Nullable String rebootSetting) {
-        this.excludedPackageNameMasks = excludedPackageNameMasks;
-        this.includedPackageClassifications = includedPackageClassifications;
-        this.includedPackageNameMasks = includedPackageNameMasks;
-        this.rebootSetting = rebootSetting;
-    }
+    private LinuxPropertiesResponse() {}
 
-    private LinuxPropertiesResponse() {
-        this.excludedPackageNameMasks = List.of();
-        this.includedPackageClassifications = null;
-        this.includedPackageNameMasks = List.of();
-        this.rebootSetting = null;
+    private LinuxPropertiesResponse(LinuxPropertiesResponse $) {
+        this.excludedPackageNameMasks = $.excludedPackageNameMasks;
+        this.includedPackageClassifications = $.includedPackageClassifications;
+        this.includedPackageNameMasks = $.includedPackageNameMasks;
+        this.rebootSetting = $.rebootSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> excludedPackageNameMasks;
-        private @Nullable String includedPackageClassifications;
-        private @Nullable List<String> includedPackageNameMasks;
-        private @Nullable String rebootSetting;
+        private LinuxPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxPropertiesResponse();
         }
 
         public Builder(LinuxPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludedPackageNameMasks = defaults.excludedPackageNameMasks;
-    	      this.includedPackageClassifications = defaults.includedPackageClassifications;
-    	      this.includedPackageNameMasks = defaults.includedPackageNameMasks;
-    	      this.rebootSetting = defaults.rebootSetting;
+            $ = new LinuxPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludedPackageNameMasks(@Nullable List<String> excludedPackageNameMasks) {
-            this.excludedPackageNameMasks = excludedPackageNameMasks;
+            $.excludedPackageNameMasks = excludedPackageNameMasks;
             return this;
         }
+
         public Builder excludedPackageNameMasks(String... excludedPackageNameMasks) {
             return excludedPackageNameMasks(List.of(excludedPackageNameMasks));
         }
+
         public Builder includedPackageClassifications(@Nullable String includedPackageClassifications) {
-            this.includedPackageClassifications = includedPackageClassifications;
+            $.includedPackageClassifications = includedPackageClassifications;
             return this;
         }
+
         public Builder includedPackageNameMasks(@Nullable List<String> includedPackageNameMasks) {
-            this.includedPackageNameMasks = includedPackageNameMasks;
+            $.includedPackageNameMasks = includedPackageNameMasks;
             return this;
         }
+
         public Builder includedPackageNameMasks(String... includedPackageNameMasks) {
             return includedPackageNameMasks(List.of(includedPackageNameMasks));
         }
+
         public Builder rebootSetting(@Nullable String rebootSetting) {
-            this.rebootSetting = rebootSetting;
+            $.rebootSetting = rebootSetting;
             return this;
-        }        public LinuxPropertiesResponse build() {
-            return new LinuxPropertiesResponse(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
+        }
+
+        public LinuxPropertiesResponse build() {
+            return $;
         }
     }
+
 }

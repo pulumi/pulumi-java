@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends com.pulumi.resour
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends com.pulumi.resour
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
@@ -47,76 +47,69 @@ public final class GoogleCloudRunOpV2VersionToPathArgs extends com.pulumi.resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public GoogleCloudRunOpV2VersionToPathArgs(
-        @Nullable Output<Integer> mode,
-        Output<String> path,
-        @Nullable Output<String> version) {
-        this.mode = mode;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.version = version;
-    }
+    private GoogleCloudRunOpV2VersionToPathArgs() {}
 
-    private GoogleCloudRunOpV2VersionToPathArgs() {
-        this.mode = Codegen.empty();
-        this.path = Codegen.empty();
-        this.version = Codegen.empty();
+    private GoogleCloudRunOpV2VersionToPathArgs(GoogleCloudRunOpV2VersionToPathArgs $) {
+        this.mode = $.mode;
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VersionToPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> mode;
-        private Output<String> path;
-        private @Nullable Output<String> version;
+        private GoogleCloudRunOpV2VersionToPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VersionToPathArgs();
         }
 
         public Builder(GoogleCloudRunOpV2VersionToPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudRunOpV2VersionToPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
+            return path(Output.of(path));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public GoogleCloudRunOpV2VersionToPathArgs build() {
-            return new GoogleCloudRunOpV2VersionToPathArgs(mode, path, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public GoogleCloudRunOpV2VersionToPathArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

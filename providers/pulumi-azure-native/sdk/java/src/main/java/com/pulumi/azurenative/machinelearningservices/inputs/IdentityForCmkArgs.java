@@ -5,7 +5,6 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class IdentityForCmkArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="userAssignedIdentity", required=true)
-      private final Output<String> userAssignedIdentity;
+    private Output<String> userAssignedIdentity;
 
     public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
 
-    public IdentityForCmkArgs(Output<String> userAssignedIdentity) {
-        this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
-    }
+    private IdentityForCmkArgs() {}
 
-    private IdentityForCmkArgs() {
-        this.userAssignedIdentity = Codegen.empty();
+    private IdentityForCmkArgs(IdentityForCmkArgs $) {
+        this.userAssignedIdentity = $.userAssignedIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityForCmkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> userAssignedIdentity;
+        private IdentityForCmkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityForCmkArgs();
         }
 
         public Builder(IdentityForCmkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.userAssignedIdentity = defaults.userAssignedIdentity;
+            $ = new IdentityForCmkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {
-            this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
+            $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
+
         public Builder userAssignedIdentity(String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.of(Objects.requireNonNull(userAssignedIdentity));
-            return this;
-        }        public IdentityForCmkArgs build() {
-            return new IdentityForCmkArgs(userAssignedIdentity);
+            return userAssignedIdentity(Output.of(userAssignedIdentity));
+        }
+
+        public IdentityForCmkArgs build() {
+            $.userAssignedIdentity = Objects.requireNonNull($.userAssignedIdentity, "expected parameter 'userAssignedIdentity' to be non-null");
+            return $;
         }
     }
+
 }

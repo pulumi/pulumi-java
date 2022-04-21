@@ -23,45 +23,44 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      * 
      */
     @Import(name="s3Configuration")
-      private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
+    private @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
 
     public Optional<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties> s3Configuration() {
-        return this.s3Configuration == null ? Optional.empty() : Optional.ofNullable(this.s3Configuration);
+        return Optional.ofNullable(this.s3Configuration);
     }
 
-    public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
-        this.s3Configuration = s3Configuration;
-    }
+    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties() {}
 
-    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties() {
-        this.s3Configuration = null;
+    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties $) {
+        this.s3Configuration = $.s3Configuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
+        private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties();
         }
 
         public Builder(MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Configuration = defaults.s3Configuration;
+            $ = new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
-            this.s3Configuration = s3Configuration;
+            $.s3Configuration = s3Configuration;
             return this;
-        }        public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties build() {
-            return new MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(s3Configuration);
+        }
+
+        public MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties build() {
+            return $;
         }
     }
+
 }

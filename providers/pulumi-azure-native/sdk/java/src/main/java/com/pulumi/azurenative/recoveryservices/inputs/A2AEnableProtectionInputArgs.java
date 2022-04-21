@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="diskEncryptionInfo")
-      private final @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
+    private @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
-    public Output<DiskEncryptionInfoArgs> diskEncryptionInfo() {
-        return this.diskEncryptionInfo == null ? Codegen.empty() : this.diskEncryptionInfo;
+    public Optional<Output<DiskEncryptionInfoArgs>> diskEncryptionInfo() {
+        return Optional.ofNullable(this.diskEncryptionInfo);
     }
 
     /**
@@ -39,10 +40,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="fabricObjectId")
-      private final @Nullable Output<String> fabricObjectId;
+    private @Nullable Output<String> fabricObjectId;
 
-    public Output<String> fabricObjectId() {
-        return this.fabricObjectId == null ? Codegen.empty() : this.fabricObjectId;
+    public Optional<Output<String>> fabricObjectId() {
+        return Optional.ofNullable(this.fabricObjectId);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="multiVmGroupName")
-      private final @Nullable Output<String> multiVmGroupName;
+    private @Nullable Output<String> multiVmGroupName;
 
-    public Output<String> multiVmGroupName() {
-        return this.multiVmGroupName == null ? Codegen.empty() : this.multiVmGroupName;
+    public Optional<Output<String>> multiVmGroupName() {
+        return Optional.ofNullable(this.multiVmGroupName);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryAvailabilitySetId")
-      private final @Nullable Output<String> recoveryAvailabilitySetId;
+    private @Nullable Output<String> recoveryAvailabilitySetId;
 
-    public Output<String> recoveryAvailabilitySetId() {
-        return this.recoveryAvailabilitySetId == null ? Codegen.empty() : this.recoveryAvailabilitySetId;
+    public Optional<Output<String>> recoveryAvailabilitySetId() {
+        return Optional.ofNullable(this.recoveryAvailabilitySetId);
     }
 
     /**
@@ -84,10 +85,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryAvailabilityZone")
-      private final @Nullable Output<String> recoveryAvailabilityZone;
+    private @Nullable Output<String> recoveryAvailabilityZone;
 
-    public Output<String> recoveryAvailabilityZone() {
-        return this.recoveryAvailabilityZone == null ? Codegen.empty() : this.recoveryAvailabilityZone;
+    public Optional<Output<String>> recoveryAvailabilityZone() {
+        return Optional.ofNullable(this.recoveryAvailabilityZone);
     }
 
     /**
@@ -95,10 +96,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryAzureNetworkId")
-      private final @Nullable Output<String> recoveryAzureNetworkId;
+    private @Nullable Output<String> recoveryAzureNetworkId;
 
-    public Output<String> recoveryAzureNetworkId() {
-        return this.recoveryAzureNetworkId == null ? Codegen.empty() : this.recoveryAzureNetworkId;
+    public Optional<Output<String>> recoveryAzureNetworkId() {
+        return Optional.ofNullable(this.recoveryAzureNetworkId);
     }
 
     /**
@@ -106,10 +107,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryBootDiagStorageAccountId")
-      private final @Nullable Output<String> recoveryBootDiagStorageAccountId;
+    private @Nullable Output<String> recoveryBootDiagStorageAccountId;
 
-    public Output<String> recoveryBootDiagStorageAccountId() {
-        return this.recoveryBootDiagStorageAccountId == null ? Codegen.empty() : this.recoveryBootDiagStorageAccountId;
+    public Optional<Output<String>> recoveryBootDiagStorageAccountId() {
+        return Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
 
     /**
@@ -117,10 +118,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryCloudServiceId")
-      private final @Nullable Output<String> recoveryCloudServiceId;
+    private @Nullable Output<String> recoveryCloudServiceId;
 
-    public Output<String> recoveryCloudServiceId() {
-        return this.recoveryCloudServiceId == null ? Codegen.empty() : this.recoveryCloudServiceId;
+    public Optional<Output<String>> recoveryCloudServiceId() {
+        return Optional.ofNullable(this.recoveryCloudServiceId);
     }
 
     /**
@@ -128,10 +129,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryContainerId")
-      private final @Nullable Output<String> recoveryContainerId;
+    private @Nullable Output<String> recoveryContainerId;
 
-    public Output<String> recoveryContainerId() {
-        return this.recoveryContainerId == null ? Codegen.empty() : this.recoveryContainerId;
+    public Optional<Output<String>> recoveryContainerId() {
+        return Optional.ofNullable(this.recoveryContainerId);
     }
 
     /**
@@ -139,10 +140,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryProximityPlacementGroupId")
-      private final @Nullable Output<String> recoveryProximityPlacementGroupId;
+    private @Nullable Output<String> recoveryProximityPlacementGroupId;
 
-    public Output<String> recoveryProximityPlacementGroupId() {
-        return this.recoveryProximityPlacementGroupId == null ? Codegen.empty() : this.recoveryProximityPlacementGroupId;
+    public Optional<Output<String>> recoveryProximityPlacementGroupId() {
+        return Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
 
     /**
@@ -150,10 +151,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoveryResourceGroupId")
-      private final @Nullable Output<String> recoveryResourceGroupId;
+    private @Nullable Output<String> recoveryResourceGroupId;
 
-    public Output<String> recoveryResourceGroupId() {
-        return this.recoveryResourceGroupId == null ? Codegen.empty() : this.recoveryResourceGroupId;
+    public Optional<Output<String>> recoveryResourceGroupId() {
+        return Optional.ofNullable(this.recoveryResourceGroupId);
     }
 
     /**
@@ -161,10 +162,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="recoverySubnetName")
-      private final @Nullable Output<String> recoverySubnetName;
+    private @Nullable Output<String> recoverySubnetName;
 
-    public Output<String> recoverySubnetName() {
-        return this.recoverySubnetName == null ? Codegen.empty() : this.recoverySubnetName;
+    public Optional<Output<String>> recoverySubnetName() {
+        return Optional.ofNullable(this.recoverySubnetName);
     }
 
     /**
@@ -172,10 +173,10 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vmDisks")
-      private final @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
+    private @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
 
-    public Output<List<A2AVmDiskInputDetailsArgs>> vmDisks() {
-        return this.vmDisks == null ? Codegen.empty() : this.vmDisks;
+    public Optional<Output<List<A2AVmDiskInputDetailsArgs>>> vmDisks() {
+        return Optional.ofNullable(this.vmDisks);
     }
 
     /**
@@ -183,238 +184,197 @@ public final class A2AEnableProtectionInputArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="vmManagedDisks")
-      private final @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
+    private @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
 
-    public Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks() {
-        return this.vmManagedDisks == null ? Codegen.empty() : this.vmManagedDisks;
+    public Optional<Output<List<A2AVmManagedDiskInputDetailsArgs>>> vmManagedDisks() {
+        return Optional.ofNullable(this.vmManagedDisks);
     }
 
-    public A2AEnableProtectionInputArgs(
-        @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo,
-        @Nullable Output<String> fabricObjectId,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<String> multiVmGroupName,
-        @Nullable Output<String> recoveryAvailabilitySetId,
-        @Nullable Output<String> recoveryAvailabilityZone,
-        @Nullable Output<String> recoveryAzureNetworkId,
-        @Nullable Output<String> recoveryBootDiagStorageAccountId,
-        @Nullable Output<String> recoveryCloudServiceId,
-        @Nullable Output<String> recoveryContainerId,
-        @Nullable Output<String> recoveryProximityPlacementGroupId,
-        @Nullable Output<String> recoveryResourceGroupId,
-        @Nullable Output<String> recoverySubnetName,
-        @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks,
-        @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
-        this.diskEncryptionInfo = diskEncryptionInfo;
-        this.fabricObjectId = fabricObjectId;
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-        this.multiVmGroupName = multiVmGroupName;
-        this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
-        this.recoveryAvailabilityZone = recoveryAvailabilityZone;
-        this.recoveryAzureNetworkId = recoveryAzureNetworkId;
-        this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
-        this.recoveryCloudServiceId = recoveryCloudServiceId;
-        this.recoveryContainerId = recoveryContainerId;
-        this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
-        this.recoveryResourceGroupId = recoveryResourceGroupId;
-        this.recoverySubnetName = recoverySubnetName;
-        this.vmDisks = vmDisks;
-        this.vmManagedDisks = vmManagedDisks;
-    }
+    private A2AEnableProtectionInputArgs() {}
 
-    private A2AEnableProtectionInputArgs() {
-        this.diskEncryptionInfo = Codegen.empty();
-        this.fabricObjectId = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.multiVmGroupName = Codegen.empty();
-        this.recoveryAvailabilitySetId = Codegen.empty();
-        this.recoveryAvailabilityZone = Codegen.empty();
-        this.recoveryAzureNetworkId = Codegen.empty();
-        this.recoveryBootDiagStorageAccountId = Codegen.empty();
-        this.recoveryCloudServiceId = Codegen.empty();
-        this.recoveryContainerId = Codegen.empty();
-        this.recoveryProximityPlacementGroupId = Codegen.empty();
-        this.recoveryResourceGroupId = Codegen.empty();
-        this.recoverySubnetName = Codegen.empty();
-        this.vmDisks = Codegen.empty();
-        this.vmManagedDisks = Codegen.empty();
+    private A2AEnableProtectionInputArgs(A2AEnableProtectionInputArgs $) {
+        this.diskEncryptionInfo = $.diskEncryptionInfo;
+        this.fabricObjectId = $.fabricObjectId;
+        this.instanceType = $.instanceType;
+        this.multiVmGroupName = $.multiVmGroupName;
+        this.recoveryAvailabilitySetId = $.recoveryAvailabilitySetId;
+        this.recoveryAvailabilityZone = $.recoveryAvailabilityZone;
+        this.recoveryAzureNetworkId = $.recoveryAzureNetworkId;
+        this.recoveryBootDiagStorageAccountId = $.recoveryBootDiagStorageAccountId;
+        this.recoveryCloudServiceId = $.recoveryCloudServiceId;
+        this.recoveryContainerId = $.recoveryContainerId;
+        this.recoveryProximityPlacementGroupId = $.recoveryProximityPlacementGroupId;
+        this.recoveryResourceGroupId = $.recoveryResourceGroupId;
+        this.recoverySubnetName = $.recoverySubnetName;
+        this.vmDisks = $.vmDisks;
+        this.vmManagedDisks = $.vmManagedDisks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(A2AEnableProtectionInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo;
-        private @Nullable Output<String> fabricObjectId;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<String> multiVmGroupName;
-        private @Nullable Output<String> recoveryAvailabilitySetId;
-        private @Nullable Output<String> recoveryAvailabilityZone;
-        private @Nullable Output<String> recoveryAzureNetworkId;
-        private @Nullable Output<String> recoveryBootDiagStorageAccountId;
-        private @Nullable Output<String> recoveryCloudServiceId;
-        private @Nullable Output<String> recoveryContainerId;
-        private @Nullable Output<String> recoveryProximityPlacementGroupId;
-        private @Nullable Output<String> recoveryResourceGroupId;
-        private @Nullable Output<String> recoverySubnetName;
-        private @Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks;
-        private @Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks;
+        private A2AEnableProtectionInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new A2AEnableProtectionInputArgs();
         }
 
         public Builder(A2AEnableProtectionInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskEncryptionInfo = defaults.diskEncryptionInfo;
-    	      this.fabricObjectId = defaults.fabricObjectId;
-    	      this.instanceType = defaults.instanceType;
-    	      this.multiVmGroupName = defaults.multiVmGroupName;
-    	      this.recoveryAvailabilitySetId = defaults.recoveryAvailabilitySetId;
-    	      this.recoveryAvailabilityZone = defaults.recoveryAvailabilityZone;
-    	      this.recoveryAzureNetworkId = defaults.recoveryAzureNetworkId;
-    	      this.recoveryBootDiagStorageAccountId = defaults.recoveryBootDiagStorageAccountId;
-    	      this.recoveryCloudServiceId = defaults.recoveryCloudServiceId;
-    	      this.recoveryContainerId = defaults.recoveryContainerId;
-    	      this.recoveryProximityPlacementGroupId = defaults.recoveryProximityPlacementGroupId;
-    	      this.recoveryResourceGroupId = defaults.recoveryResourceGroupId;
-    	      this.recoverySubnetName = defaults.recoverySubnetName;
-    	      this.vmDisks = defaults.vmDisks;
-    	      this.vmManagedDisks = defaults.vmManagedDisks;
+            $ = new A2AEnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskEncryptionInfo(@Nullable Output<DiskEncryptionInfoArgs> diskEncryptionInfo) {
-            this.diskEncryptionInfo = diskEncryptionInfo;
+            $.diskEncryptionInfo = diskEncryptionInfo;
             return this;
         }
-        public Builder diskEncryptionInfo(@Nullable DiskEncryptionInfoArgs diskEncryptionInfo) {
-            this.diskEncryptionInfo = Codegen.ofNullable(diskEncryptionInfo);
-            return this;
+
+        public Builder diskEncryptionInfo(DiskEncryptionInfoArgs diskEncryptionInfo) {
+            return diskEncryptionInfo(Output.of(diskEncryptionInfo));
         }
+
         public Builder fabricObjectId(@Nullable Output<String> fabricObjectId) {
-            this.fabricObjectId = fabricObjectId;
+            $.fabricObjectId = fabricObjectId;
             return this;
         }
-        public Builder fabricObjectId(@Nullable String fabricObjectId) {
-            this.fabricObjectId = Codegen.ofNullable(fabricObjectId);
-            return this;
+
+        public Builder fabricObjectId(String fabricObjectId) {
+            return fabricObjectId(Output.of(fabricObjectId));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
-            this.multiVmGroupName = multiVmGroupName;
+            $.multiVmGroupName = multiVmGroupName;
             return this;
         }
-        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
-            this.multiVmGroupName = Codegen.ofNullable(multiVmGroupName);
-            return this;
+
+        public Builder multiVmGroupName(String multiVmGroupName) {
+            return multiVmGroupName(Output.of(multiVmGroupName));
         }
+
         public Builder recoveryAvailabilitySetId(@Nullable Output<String> recoveryAvailabilitySetId) {
-            this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
+            $.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
-        public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
-            this.recoveryAvailabilitySetId = Codegen.ofNullable(recoveryAvailabilitySetId);
-            return this;
+
+        public Builder recoveryAvailabilitySetId(String recoveryAvailabilitySetId) {
+            return recoveryAvailabilitySetId(Output.of(recoveryAvailabilitySetId));
         }
+
         public Builder recoveryAvailabilityZone(@Nullable Output<String> recoveryAvailabilityZone) {
-            this.recoveryAvailabilityZone = recoveryAvailabilityZone;
+            $.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
-        public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
-            this.recoveryAvailabilityZone = Codegen.ofNullable(recoveryAvailabilityZone);
-            return this;
+
+        public Builder recoveryAvailabilityZone(String recoveryAvailabilityZone) {
+            return recoveryAvailabilityZone(Output.of(recoveryAvailabilityZone));
         }
+
         public Builder recoveryAzureNetworkId(@Nullable Output<String> recoveryAzureNetworkId) {
-            this.recoveryAzureNetworkId = recoveryAzureNetworkId;
+            $.recoveryAzureNetworkId = recoveryAzureNetworkId;
             return this;
         }
-        public Builder recoveryAzureNetworkId(@Nullable String recoveryAzureNetworkId) {
-            this.recoveryAzureNetworkId = Codegen.ofNullable(recoveryAzureNetworkId);
-            return this;
+
+        public Builder recoveryAzureNetworkId(String recoveryAzureNetworkId) {
+            return recoveryAzureNetworkId(Output.of(recoveryAzureNetworkId));
         }
+
         public Builder recoveryBootDiagStorageAccountId(@Nullable Output<String> recoveryBootDiagStorageAccountId) {
-            this.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
+            $.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
-        public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
-            this.recoveryBootDiagStorageAccountId = Codegen.ofNullable(recoveryBootDiagStorageAccountId);
-            return this;
+
+        public Builder recoveryBootDiagStorageAccountId(String recoveryBootDiagStorageAccountId) {
+            return recoveryBootDiagStorageAccountId(Output.of(recoveryBootDiagStorageAccountId));
         }
+
         public Builder recoveryCloudServiceId(@Nullable Output<String> recoveryCloudServiceId) {
-            this.recoveryCloudServiceId = recoveryCloudServiceId;
+            $.recoveryCloudServiceId = recoveryCloudServiceId;
             return this;
         }
-        public Builder recoveryCloudServiceId(@Nullable String recoveryCloudServiceId) {
-            this.recoveryCloudServiceId = Codegen.ofNullable(recoveryCloudServiceId);
-            return this;
+
+        public Builder recoveryCloudServiceId(String recoveryCloudServiceId) {
+            return recoveryCloudServiceId(Output.of(recoveryCloudServiceId));
         }
+
         public Builder recoveryContainerId(@Nullable Output<String> recoveryContainerId) {
-            this.recoveryContainerId = recoveryContainerId;
+            $.recoveryContainerId = recoveryContainerId;
             return this;
         }
-        public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
-            this.recoveryContainerId = Codegen.ofNullable(recoveryContainerId);
-            return this;
+
+        public Builder recoveryContainerId(String recoveryContainerId) {
+            return recoveryContainerId(Output.of(recoveryContainerId));
         }
+
         public Builder recoveryProximityPlacementGroupId(@Nullable Output<String> recoveryProximityPlacementGroupId) {
-            this.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
+            $.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
-        public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
-            this.recoveryProximityPlacementGroupId = Codegen.ofNullable(recoveryProximityPlacementGroupId);
-            return this;
+
+        public Builder recoveryProximityPlacementGroupId(String recoveryProximityPlacementGroupId) {
+            return recoveryProximityPlacementGroupId(Output.of(recoveryProximityPlacementGroupId));
         }
+
         public Builder recoveryResourceGroupId(@Nullable Output<String> recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = recoveryResourceGroupId;
+            $.recoveryResourceGroupId = recoveryResourceGroupId;
             return this;
         }
-        public Builder recoveryResourceGroupId(@Nullable String recoveryResourceGroupId) {
-            this.recoveryResourceGroupId = Codegen.ofNullable(recoveryResourceGroupId);
-            return this;
+
+        public Builder recoveryResourceGroupId(String recoveryResourceGroupId) {
+            return recoveryResourceGroupId(Output.of(recoveryResourceGroupId));
         }
+
         public Builder recoverySubnetName(@Nullable Output<String> recoverySubnetName) {
-            this.recoverySubnetName = recoverySubnetName;
+            $.recoverySubnetName = recoverySubnetName;
             return this;
         }
-        public Builder recoverySubnetName(@Nullable String recoverySubnetName) {
-            this.recoverySubnetName = Codegen.ofNullable(recoverySubnetName);
-            return this;
+
+        public Builder recoverySubnetName(String recoverySubnetName) {
+            return recoverySubnetName(Output.of(recoverySubnetName));
         }
+
         public Builder vmDisks(@Nullable Output<List<A2AVmDiskInputDetailsArgs>> vmDisks) {
-            this.vmDisks = vmDisks;
+            $.vmDisks = vmDisks;
             return this;
         }
-        public Builder vmDisks(@Nullable List<A2AVmDiskInputDetailsArgs> vmDisks) {
-            this.vmDisks = Codegen.ofNullable(vmDisks);
-            return this;
+
+        public Builder vmDisks(List<A2AVmDiskInputDetailsArgs> vmDisks) {
+            return vmDisks(Output.of(vmDisks));
         }
+
         public Builder vmDisks(A2AVmDiskInputDetailsArgs... vmDisks) {
             return vmDisks(List.of(vmDisks));
         }
+
         public Builder vmManagedDisks(@Nullable Output<List<A2AVmManagedDiskInputDetailsArgs>> vmManagedDisks) {
-            this.vmManagedDisks = vmManagedDisks;
+            $.vmManagedDisks = vmManagedDisks;
             return this;
         }
-        public Builder vmManagedDisks(@Nullable List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
-            this.vmManagedDisks = Codegen.ofNullable(vmManagedDisks);
-            return this;
+
+        public Builder vmManagedDisks(List<A2AVmManagedDiskInputDetailsArgs> vmManagedDisks) {
+            return vmManagedDisks(Output.of(vmManagedDisks));
         }
+
         public Builder vmManagedDisks(A2AVmManagedDiskInputDetailsArgs... vmManagedDisks) {
             return vmManagedDisks(List.of(vmManagedDisks));
-        }        public A2AEnableProtectionInputArgs build() {
-            return new A2AEnableProtectionInputArgs(diskEncryptionInfo, fabricObjectId, instanceType, multiVmGroupName, recoveryAvailabilitySetId, recoveryAvailabilityZone, recoveryAzureNetworkId, recoveryBootDiagStorageAccountId, recoveryCloudServiceId, recoveryContainerId, recoveryProximityPlacementGroupId, recoveryResourceGroupId, recoverySubnetName, vmDisks, vmManagedDisks);
+        }
+
+        public A2AEnableProtectionInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

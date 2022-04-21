@@ -5,9 +5,9 @@ package com.pulumi.gcp.sourcerepo.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class RepositoryPubsubConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="messageFormat", required=true)
-      private final Output<String> messageFormat;
+    private Output<String> messageFormat;
 
     public Output<String> messageFormat() {
         return this.messageFormat;
@@ -37,10 +37,10 @@ public final class RepositoryPubsubConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -48,76 +48,70 @@ public final class RepositoryPubsubConfigGetArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
     }
 
-    public RepositoryPubsubConfigGetArgs(
-        Output<String> messageFormat,
-        @Nullable Output<String> serviceAccountEmail,
-        Output<String> topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat, "expected parameter 'messageFormat' to be non-null");
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private RepositoryPubsubConfigGetArgs() {}
 
-    private RepositoryPubsubConfigGetArgs() {
-        this.messageFormat = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
-        this.topic = Codegen.empty();
+    private RepositoryPubsubConfigGetArgs(RepositoryPubsubConfigGetArgs $) {
+        this.messageFormat = $.messageFormat;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepositoryPubsubConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> messageFormat;
-        private @Nullable Output<String> serviceAccountEmail;
-        private Output<String> topic;
+        private RepositoryPubsubConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepositoryPubsubConfigGetArgs();
         }
 
         public Builder(RepositoryPubsubConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.topic = defaults.topic;
+            $ = new RepositoryPubsubConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(Output<String> messageFormat) {
-            this.messageFormat = Objects.requireNonNull(messageFormat);
+            $.messageFormat = messageFormat;
             return this;
         }
+
         public Builder messageFormat(String messageFormat) {
-            this.messageFormat = Output.of(Objects.requireNonNull(messageFormat));
-            return this;
+            return messageFormat(Output.of(messageFormat));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
-        }        public RepositoryPubsubConfigGetArgs build() {
-            return new RepositoryPubsubConfigGetArgs(messageFormat, serviceAccountEmail, topic);
+            return topic(Output.of(topic));
+        }
+
+        public RepositoryPubsubConfigGetArgs build() {
+            $.messageFormat = Objects.requireNonNull($.messageFormat, "expected parameter 'messageFormat' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
      * 
      */
     @Import(name="remediationName", required=true)
-      private final String remediationName;
+    private String remediationName;
 
     public String remediationName() {
         return this.remediationName;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -42,64 +42,58 @@ public final class ListRemediationDeploymentsAtResourceGroupArgs extends com.pul
      * 
      */
     @Import(name="top")
-      private final @Nullable Integer top;
+    private @Nullable Integer top;
 
     public Optional<Integer> top() {
-        return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
+        return Optional.ofNullable(this.top);
     }
 
-    public ListRemediationDeploymentsAtResourceGroupArgs(
-        String remediationName,
-        String resourceGroupName,
-        @Nullable Integer top) {
-        this.remediationName = Objects.requireNonNull(remediationName, "expected parameter 'remediationName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.top = top;
-    }
+    private ListRemediationDeploymentsAtResourceGroupArgs() {}
 
-    private ListRemediationDeploymentsAtResourceGroupArgs() {
-        this.remediationName = null;
-        this.resourceGroupName = null;
-        this.top = null;
+    private ListRemediationDeploymentsAtResourceGroupArgs(ListRemediationDeploymentsAtResourceGroupArgs $) {
+        this.remediationName = $.remediationName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.top = $.top;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRemediationDeploymentsAtResourceGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String remediationName;
-        private String resourceGroupName;
-        private @Nullable Integer top;
+        private ListRemediationDeploymentsAtResourceGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRemediationDeploymentsAtResourceGroupArgs();
         }
 
         public Builder(ListRemediationDeploymentsAtResourceGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.remediationName = defaults.remediationName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.top = defaults.top;
+            $ = new ListRemediationDeploymentsAtResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder remediationName(String remediationName) {
-            this.remediationName = Objects.requireNonNull(remediationName);
+            $.remediationName = remediationName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder top(@Nullable Integer top) {
-            this.top = top;
+            $.top = top;
             return this;
-        }        public ListRemediationDeploymentsAtResourceGroupArgs build() {
-            return new ListRemediationDeploymentsAtResourceGroupArgs(remediationName, resourceGroupName, top);
+        }
+
+        public ListRemediationDeploymentsAtResourceGroupArgs build() {
+            $.remediationName = Objects.requireNonNull($.remediationName, "expected parameter 'remediationName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

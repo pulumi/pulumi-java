@@ -24,48 +24,48 @@ public final class CorsRulesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="corsRules")
-      private final @Nullable List<CorsRuleResponse> corsRules;
+    private @Nullable List<CorsRuleResponse> corsRules;
 
-    public List<CorsRuleResponse> corsRules() {
-        return this.corsRules == null ? List.of() : this.corsRules;
+    public Optional<List<CorsRuleResponse>> corsRules() {
+        return Optional.ofNullable(this.corsRules);
     }
 
-    public CorsRulesResponse(@Nullable List<CorsRuleResponse> corsRules) {
-        this.corsRules = corsRules;
-    }
+    private CorsRulesResponse() {}
 
-    private CorsRulesResponse() {
-        this.corsRules = List.of();
+    private CorsRulesResponse(CorsRulesResponse $) {
+        this.corsRules = $.corsRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CorsRulesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<CorsRuleResponse> corsRules;
+        private CorsRulesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CorsRulesResponse();
         }
 
         public Builder(CorsRulesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.corsRules = defaults.corsRules;
+            $ = new CorsRulesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder corsRules(@Nullable List<CorsRuleResponse> corsRules) {
-            this.corsRules = corsRules;
+            $.corsRules = corsRules;
             return this;
         }
+
         public Builder corsRules(CorsRuleResponse... corsRules) {
             return corsRules(List.of(corsRules));
-        }        public CorsRulesResponse build() {
-            return new CorsRulesResponse(corsRules);
+        }
+
+        public CorsRulesResponse build() {
+            return $;
         }
     }
+
 }

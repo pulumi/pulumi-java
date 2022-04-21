@@ -20,48 +20,48 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends com.pulumi.
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable List<SubResource> targetResources;
+    private @Nullable List<SubResource> targetResources;
 
-    public List<SubResource> targetResources() {
-        return this.targetResources == null ? List.of() : this.targetResources;
+    public Optional<List<SubResource>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
-    public GetDnsResourceReferenceByTarResourcesArgs(@Nullable List<SubResource> targetResources) {
-        this.targetResources = targetResources;
-    }
+    private GetDnsResourceReferenceByTarResourcesArgs() {}
 
-    private GetDnsResourceReferenceByTarResourcesArgs() {
-        this.targetResources = List.of();
+    private GetDnsResourceReferenceByTarResourcesArgs(GetDnsResourceReferenceByTarResourcesArgs $) {
+        this.targetResources = $.targetResources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDnsResourceReferenceByTarResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SubResource> targetResources;
+        private GetDnsResourceReferenceByTarResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDnsResourceReferenceByTarResourcesArgs();
         }
 
         public Builder(GetDnsResourceReferenceByTarResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetResources = defaults.targetResources;
+            $ = new GetDnsResourceReferenceByTarResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder targetResources(@Nullable List<SubResource> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
+
         public Builder targetResources(SubResource... targetResources) {
             return targetResources(List.of(targetResources));
-        }        public GetDnsResourceReferenceByTarResourcesArgs build() {
-            return new GetDnsResourceReferenceByTarResourcesArgs(targetResources);
+        }
+
+        public GetDnsResourceReferenceByTarResourcesArgs build() {
+            return $;
         }
     }
+
 }

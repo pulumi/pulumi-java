@@ -26,10 +26,10 @@ public final class SqlFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="compatibilityLevel")
-      private final @Nullable Integer compatibilityLevel;
+    private @Nullable Integer compatibilityLevel;
 
     public Optional<Integer> compatibilityLevel() {
-        return this.compatibilityLevel == null ? Optional.empty() : Optional.ofNullable(this.compatibilityLevel);
+        return Optional.ofNullable(this.compatibilityLevel);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SqlFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requiresPreprocessing")
-      private final @Nullable Boolean requiresPreprocessing;
+    private @Nullable Boolean requiresPreprocessing;
 
     public Optional<Boolean> requiresPreprocessing() {
-        return this.requiresPreprocessing == null ? Optional.empty() : Optional.ofNullable(this.requiresPreprocessing);
+        return Optional.ofNullable(this.requiresPreprocessing);
     }
 
     /**
@@ -48,64 +48,58 @@ public final class SqlFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlExpression")
-      private final @Nullable String sqlExpression;
+    private @Nullable String sqlExpression;
 
     public Optional<String> sqlExpression() {
-        return this.sqlExpression == null ? Optional.empty() : Optional.ofNullable(this.sqlExpression);
+        return Optional.ofNullable(this.sqlExpression);
     }
 
-    public SqlFilterResponse(
-        @Nullable Integer compatibilityLevel,
-        @Nullable Boolean requiresPreprocessing,
-        @Nullable String sqlExpression) {
-        this.compatibilityLevel = Codegen.integerProp("compatibilityLevel").arg(compatibilityLevel).def(20).getNullable();
-        this.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg(requiresPreprocessing).def(true).getNullable();
-        this.sqlExpression = sqlExpression;
-    }
+    private SqlFilterResponse() {}
 
-    private SqlFilterResponse() {
-        this.compatibilityLevel = null;
-        this.requiresPreprocessing = null;
-        this.sqlExpression = null;
+    private SqlFilterResponse(SqlFilterResponse $) {
+        this.compatibilityLevel = $.compatibilityLevel;
+        this.requiresPreprocessing = $.requiresPreprocessing;
+        this.sqlExpression = $.sqlExpression;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer compatibilityLevel;
-        private @Nullable Boolean requiresPreprocessing;
-        private @Nullable String sqlExpression;
+        private SqlFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlFilterResponse();
         }
 
         public Builder(SqlFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compatibilityLevel = defaults.compatibilityLevel;
-    	      this.requiresPreprocessing = defaults.requiresPreprocessing;
-    	      this.sqlExpression = defaults.sqlExpression;
+            $ = new SqlFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
-            this.compatibilityLevel = compatibilityLevel;
+            $.compatibilityLevel = compatibilityLevel;
             return this;
         }
+
         public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
-            this.requiresPreprocessing = requiresPreprocessing;
+            $.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
+
         public Builder sqlExpression(@Nullable String sqlExpression) {
-            this.sqlExpression = sqlExpression;
+            $.sqlExpression = sqlExpression;
             return this;
-        }        public SqlFilterResponse build() {
-            return new SqlFilterResponse(compatibilityLevel, requiresPreprocessing, sqlExpression);
+        }
+
+        public SqlFilterResponse build() {
+            $.compatibilityLevel = Codegen.integerProp("compatibilityLevel").arg($.compatibilityLevel).def(20).getNullable();
+            $.requiresPreprocessing = Codegen.booleanProp("requiresPreprocessing").arg($.requiresPreprocessing).def(true).getNullable();
+            return $;
         }
     }
+
 }

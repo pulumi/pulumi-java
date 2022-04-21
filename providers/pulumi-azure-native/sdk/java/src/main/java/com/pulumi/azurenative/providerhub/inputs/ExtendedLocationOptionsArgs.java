@@ -5,9 +5,9 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ExtendedLocationOptionsArgs extends com.pulumi.resources.Reso
     public static final ExtendedLocationOptionsArgs Empty = new ExtendedLocationOptionsArgs();
 
     @Import(name="supportedPolicy")
-      private final @Nullable Output<String> supportedPolicy;
+    private @Nullable Output<String> supportedPolicy;
 
-    public Output<String> supportedPolicy() {
-        return this.supportedPolicy == null ? Codegen.empty() : this.supportedPolicy;
+    public Optional<Output<String>> supportedPolicy() {
+        return Optional.ofNullable(this.supportedPolicy);
     }
 
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public ExtendedLocationOptionsArgs(
-        @Nullable Output<String> supportedPolicy,
-        @Nullable Output<String> type) {
-        this.supportedPolicy = supportedPolicy;
-        this.type = type;
-    }
+    private ExtendedLocationOptionsArgs() {}
 
-    private ExtendedLocationOptionsArgs() {
-        this.supportedPolicy = Codegen.empty();
-        this.type = Codegen.empty();
+    private ExtendedLocationOptionsArgs(ExtendedLocationOptionsArgs $) {
+        this.supportedPolicy = $.supportedPolicy;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtendedLocationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> supportedPolicy;
-        private @Nullable Output<String> type;
+        private ExtendedLocationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtendedLocationOptionsArgs();
         }
 
         public Builder(ExtendedLocationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.supportedPolicy = defaults.supportedPolicy;
-    	      this.type = defaults.type;
+            $ = new ExtendedLocationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder supportedPolicy(@Nullable Output<String> supportedPolicy) {
-            this.supportedPolicy = supportedPolicy;
+            $.supportedPolicy = supportedPolicy;
             return this;
         }
-        public Builder supportedPolicy(@Nullable String supportedPolicy) {
-            this.supportedPolicy = Codegen.ofNullable(supportedPolicy);
-            return this;
+
+        public Builder supportedPolicy(String supportedPolicy) {
+            return supportedPolicy(Output.of(supportedPolicy));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public ExtendedLocationOptionsArgs build() {
-            return new ExtendedLocationOptionsArgs(supportedPolicy, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public ExtendedLocationOptionsArgs build() {
+            return $;
         }
     }
+
 }

@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +26,49 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends com.pulumi.re
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
-    public VmmToAzureCreateNetworkMappingInputArgs(@Nullable Output<String> instanceType) {
-        this.instanceType = Codegen.stringProp("instanceType").output().arg(instanceType).getNullable();
-    }
+    private VmmToAzureCreateNetworkMappingInputArgs() {}
 
-    private VmmToAzureCreateNetworkMappingInputArgs() {
-        this.instanceType = Codegen.empty();
+    private VmmToAzureCreateNetworkMappingInputArgs(VmmToAzureCreateNetworkMappingInputArgs $) {
+        this.instanceType = $.instanceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmmToAzureCreateNetworkMappingInputArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceType;
+        private VmmToAzureCreateNetworkMappingInputArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmmToAzureCreateNetworkMappingInputArgs();
         }
 
         public Builder(VmmToAzureCreateNetworkMappingInputArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceType = defaults.instanceType;
+            $ = new VmmToAzureCreateNetworkMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
-        }        public VmmToAzureCreateNetworkMappingInputArgs build() {
-            return new VmmToAzureCreateNetworkMappingInputArgs(instanceType);
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
+        }
+
+        public VmmToAzureCreateNetworkMappingInputArgs build() {
+            $.instanceType = Codegen.stringProp("instanceType").output().arg($.instanceType).getNullable();
+            return $;
         }
     }
+
 }

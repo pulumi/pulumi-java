@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends com
      * 
      */
     @Import(name="parts", required=true)
-      private final Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
+    private Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
 
     public Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
@@ -37,66 +37,63 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs extends com
      * 
      */
     @Import(name="repeatCount")
-      private final @Nullable Output<Integer> repeatCount;
+    private @Nullable Output<Integer> repeatCount;
 
-    public Output<Integer> repeatCount() {
-        return this.repeatCount == null ? Codegen.empty() : this.repeatCount;
+    public Optional<Output<Integer>> repeatCount() {
+        return Optional.ofNullable(this.repeatCount);
     }
 
-    public GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs(
-        Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts,
-        @Nullable Output<Integer> repeatCount) {
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-        this.repeatCount = repeatCount;
-    }
+    private GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs() {}
 
-    private GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs() {
-        this.parts = Codegen.empty();
-        this.repeatCount = Codegen.empty();
+    private GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs $) {
+        this.parts = $.parts;
+        this.repeatCount = $.repeatCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts;
-        private @Nullable Output<Integer> repeatCount;
+        private GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parts = defaults.parts;
-    	      this.repeatCount = defaults.repeatCount;
+            $ = new GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parts(Output<List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs>> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(List<GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs> parts) {
-            this.parts = Output.of(Objects.requireNonNull(parts));
-            return this;
+            return parts(Output.of(parts));
         }
+
         public Builder parts(GoogleCloudDialogflowCxV3IntentTrainingPhrasePartArgs... parts) {
             return parts(List.of(parts));
         }
+
         public Builder repeatCount(@Nullable Output<Integer> repeatCount) {
-            this.repeatCount = repeatCount;
+            $.repeatCount = repeatCount;
             return this;
         }
-        public Builder repeatCount(@Nullable Integer repeatCount) {
-            this.repeatCount = Codegen.ofNullable(repeatCount);
-            return this;
-        }        public GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs build() {
-            return new GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs(parts, repeatCount);
+
+        public Builder repeatCount(Integer repeatCount) {
+            return repeatCount(Output.of(repeatCount));
+        }
+
+        public GoogleCloudDialogflowCxV3IntentTrainingPhraseArgs build() {
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            return $;
         }
     }
+
 }

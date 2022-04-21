@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualRouterSpecListenerPortMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class VirtualRouterSpecListenerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="portMapping", required=true)
-      private final Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
+    private Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
 
     public Output<VirtualRouterSpecListenerPortMappingArgs> portMapping() {
         return this.portMapping;
     }
 
-    public VirtualRouterSpecListenerArgs(Output<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
-        this.portMapping = Objects.requireNonNull(portMapping, "expected parameter 'portMapping' to be non-null");
-    }
+    private VirtualRouterSpecListenerArgs() {}
 
-    private VirtualRouterSpecListenerArgs() {
-        this.portMapping = Codegen.empty();
+    private VirtualRouterSpecListenerArgs(VirtualRouterSpecListenerArgs $) {
+        this.portMapping = $.portMapping;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualRouterSpecListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VirtualRouterSpecListenerPortMappingArgs> portMapping;
+        private VirtualRouterSpecListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualRouterSpecListenerArgs();
         }
 
         public Builder(VirtualRouterSpecListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.portMapping = defaults.portMapping;
+            $ = new VirtualRouterSpecListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder portMapping(Output<VirtualRouterSpecListenerPortMappingArgs> portMapping) {
-            this.portMapping = Objects.requireNonNull(portMapping);
+            $.portMapping = portMapping;
             return this;
         }
+
         public Builder portMapping(VirtualRouterSpecListenerPortMappingArgs portMapping) {
-            this.portMapping = Output.of(Objects.requireNonNull(portMapping));
-            return this;
-        }        public VirtualRouterSpecListenerArgs build() {
-            return new VirtualRouterSpecListenerArgs(portMapping);
+            return portMapping(Output.of(portMapping));
+        }
+
+        public VirtualRouterSpecListenerArgs build() {
+            $.portMapping = Objects.requireNonNull($.portMapping, "expected parameter 'portMapping' to be non-null");
+            return $;
         }
     }
+
 }

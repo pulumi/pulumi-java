@@ -25,10 +25,10 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deserializer")
-      private final @Nullable Object deserializer;
+    private @Nullable Object deserializer;
 
     public Optional<Object> deserializer() {
-        return this.deserializer == null ? Optional.empty() : Optional.ofNullable(this.deserializer);
+        return Optional.ofNullable(this.deserializer);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serializer")
-      private final @Nullable Object serializer;
+    private @Nullable Object serializer;
 
     public Optional<Object> serializer() {
-        return this.serializer == null ? Optional.empty() : Optional.ofNullable(this.serializer);
+        return Optional.ofNullable(this.serializer);
     }
 
     /**
@@ -48,64 +48,57 @@ public final class OrcFormatResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public OrcFormatResponse(
-        @Nullable Object deserializer,
-        @Nullable Object serializer,
-        String type) {
-        this.deserializer = deserializer;
-        this.serializer = serializer;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private OrcFormatResponse() {}
 
-    private OrcFormatResponse() {
-        this.deserializer = null;
-        this.serializer = null;
-        this.type = null;
+    private OrcFormatResponse(OrcFormatResponse $) {
+        this.deserializer = $.deserializer;
+        this.serializer = $.serializer;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrcFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object deserializer;
-        private @Nullable Object serializer;
-        private String type;
+        private OrcFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrcFormatResponse();
         }
 
         public Builder(OrcFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deserializer = defaults.deserializer;
-    	      this.serializer = defaults.serializer;
-    	      this.type = defaults.type;
+            $ = new OrcFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deserializer(@Nullable Object deserializer) {
-            this.deserializer = deserializer;
+            $.deserializer = deserializer;
             return this;
         }
+
         public Builder serializer(@Nullable Object serializer) {
-            this.serializer = serializer;
+            $.serializer = serializer;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public OrcFormatResponse build() {
-            return new OrcFormatResponse(deserializer, serializer, type);
+        }
+
+        public OrcFormatResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

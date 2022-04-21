@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ClientCertificateConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="issueClientCertificate")
-      private final @Nullable Output<Boolean> issueClientCertificate;
+    private @Nullable Output<Boolean> issueClientCertificate;
 
-    public Output<Boolean> issueClientCertificate() {
-        return this.issueClientCertificate == null ? Codegen.empty() : this.issueClientCertificate;
+    public Optional<Output<Boolean>> issueClientCertificate() {
+        return Optional.ofNullable(this.issueClientCertificate);
     }
 
-    public ClientCertificateConfigArgs(@Nullable Output<Boolean> issueClientCertificate) {
-        this.issueClientCertificate = issueClientCertificate;
-    }
+    private ClientCertificateConfigArgs() {}
 
-    private ClientCertificateConfigArgs() {
-        this.issueClientCertificate = Codegen.empty();
+    private ClientCertificateConfigArgs(ClientCertificateConfigArgs $) {
+        this.issueClientCertificate = $.issueClientCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientCertificateConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> issueClientCertificate;
+        private ClientCertificateConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientCertificateConfigArgs();
         }
 
         public Builder(ClientCertificateConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issueClientCertificate = defaults.issueClientCertificate;
+            $ = new ClientCertificateConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issueClientCertificate(@Nullable Output<Boolean> issueClientCertificate) {
-            this.issueClientCertificate = issueClientCertificate;
+            $.issueClientCertificate = issueClientCertificate;
             return this;
         }
-        public Builder issueClientCertificate(@Nullable Boolean issueClientCertificate) {
-            this.issueClientCertificate = Codegen.ofNullable(issueClientCertificate);
-            return this;
-        }        public ClientCertificateConfigArgs build() {
-            return new ClientCertificateConfigArgs(issueClientCertificate);
+
+        public Builder issueClientCertificate(Boolean issueClientCertificate) {
+            return issueClientCertificate(Output.of(issueClientCertificate));
+        }
+
+        public ClientCertificateConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,13 +7,13 @@ import com.pulumi.aws.opsworks.inputs.CustomLayerCloudwatchConfigurationArgs;
 import com.pulumi.aws.opsworks.inputs.CustomLayerEbsVolumeArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoAssignElasticIps")
-      private final @Nullable Output<Boolean> autoAssignElasticIps;
+    private @Nullable Output<Boolean> autoAssignElasticIps;
 
-    public Output<Boolean> autoAssignElasticIps() {
-        return this.autoAssignElasticIps == null ? Codegen.empty() : this.autoAssignElasticIps;
+    public Optional<Output<Boolean>> autoAssignElasticIps() {
+        return Optional.ofNullable(this.autoAssignElasticIps);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoAssignPublicIps")
-      private final @Nullable Output<Boolean> autoAssignPublicIps;
+    private @Nullable Output<Boolean> autoAssignPublicIps;
 
-    public Output<Boolean> autoAssignPublicIps() {
-        return this.autoAssignPublicIps == null ? Codegen.empty() : this.autoAssignPublicIps;
+    public Optional<Output<Boolean>> autoAssignPublicIps() {
+        return Optional.ofNullable(this.autoAssignPublicIps);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoHealing")
-      private final @Nullable Output<Boolean> autoHealing;
+    private @Nullable Output<Boolean> autoHealing;
 
-    public Output<Boolean> autoHealing() {
-        return this.autoHealing == null ? Codegen.empty() : this.autoHealing;
+    public Optional<Output<Boolean>> autoHealing() {
+        return Optional.ofNullable(this.autoHealing);
     }
 
     /**
@@ -59,24 +59,24 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchConfiguration")
-      private final @Nullable Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
+    private @Nullable Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
-    public Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration() {
-        return this.cloudwatchConfiguration == null ? Codegen.empty() : this.cloudwatchConfiguration;
+    public Optional<Output<CustomLayerCloudwatchConfigurationArgs>> cloudwatchConfiguration() {
+        return Optional.ofNullable(this.cloudwatchConfiguration);
     }
 
     @Import(name="customConfigureRecipes")
-      private final @Nullable Output<List<String>> customConfigureRecipes;
+    private @Nullable Output<List<String>> customConfigureRecipes;
 
-    public Output<List<String>> customConfigureRecipes() {
-        return this.customConfigureRecipes == null ? Codegen.empty() : this.customConfigureRecipes;
+    public Optional<Output<List<String>>> customConfigureRecipes() {
+        return Optional.ofNullable(this.customConfigureRecipes);
     }
 
     @Import(name="customDeployRecipes")
-      private final @Nullable Output<List<String>> customDeployRecipes;
+    private @Nullable Output<List<String>> customDeployRecipes;
 
-    public Output<List<String>> customDeployRecipes() {
-        return this.customDeployRecipes == null ? Codegen.empty() : this.customDeployRecipes;
+    public Optional<Output<List<String>>> customDeployRecipes() {
+        return Optional.ofNullable(this.customDeployRecipes);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customInstanceProfileArn")
-      private final @Nullable Output<String> customInstanceProfileArn;
+    private @Nullable Output<String> customInstanceProfileArn;
 
-    public Output<String> customInstanceProfileArn() {
-        return this.customInstanceProfileArn == null ? Codegen.empty() : this.customInstanceProfileArn;
+    public Optional<Output<String>> customInstanceProfileArn() {
+        return Optional.ofNullable(this.customInstanceProfileArn);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customJson")
-      private final @Nullable Output<String> customJson;
+    private @Nullable Output<String> customJson;
 
-    public Output<String> customJson() {
-        return this.customJson == null ? Codegen.empty() : this.customJson;
+    public Optional<Output<String>> customJson() {
+        return Optional.ofNullable(this.customJson);
     }
 
     /**
@@ -106,31 +106,31 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customSecurityGroupIds")
-      private final @Nullable Output<List<String>> customSecurityGroupIds;
+    private @Nullable Output<List<String>> customSecurityGroupIds;
 
-    public Output<List<String>> customSecurityGroupIds() {
-        return this.customSecurityGroupIds == null ? Codegen.empty() : this.customSecurityGroupIds;
+    public Optional<Output<List<String>>> customSecurityGroupIds() {
+        return Optional.ofNullable(this.customSecurityGroupIds);
     }
 
     @Import(name="customSetupRecipes")
-      private final @Nullable Output<List<String>> customSetupRecipes;
+    private @Nullable Output<List<String>> customSetupRecipes;
 
-    public Output<List<String>> customSetupRecipes() {
-        return this.customSetupRecipes == null ? Codegen.empty() : this.customSetupRecipes;
+    public Optional<Output<List<String>>> customSetupRecipes() {
+        return Optional.ofNullable(this.customSetupRecipes);
     }
 
     @Import(name="customShutdownRecipes")
-      private final @Nullable Output<List<String>> customShutdownRecipes;
+    private @Nullable Output<List<String>> customShutdownRecipes;
 
-    public Output<List<String>> customShutdownRecipes() {
-        return this.customShutdownRecipes == null ? Codegen.empty() : this.customShutdownRecipes;
+    public Optional<Output<List<String>>> customShutdownRecipes() {
+        return Optional.ofNullable(this.customShutdownRecipes);
     }
 
     @Import(name="customUndeployRecipes")
-      private final @Nullable Output<List<String>> customUndeployRecipes;
+    private @Nullable Output<List<String>> customUndeployRecipes;
 
-    public Output<List<String>> customUndeployRecipes() {
-        return this.customUndeployRecipes == null ? Codegen.empty() : this.customUndeployRecipes;
+    public Optional<Output<List<String>>> customUndeployRecipes() {
+        return Optional.ofNullable(this.customUndeployRecipes);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="drainElbOnShutdown")
-      private final @Nullable Output<Boolean> drainElbOnShutdown;
+    private @Nullable Output<Boolean> drainElbOnShutdown;
 
-    public Output<Boolean> drainElbOnShutdown() {
-        return this.drainElbOnShutdown == null ? Codegen.empty() : this.drainElbOnShutdown;
+    public Optional<Output<Boolean>> drainElbOnShutdown() {
+        return Optional.ofNullable(this.drainElbOnShutdown);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ebsVolumes")
-      private final @Nullable Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes;
+    private @Nullable Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes;
 
-    public Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes() {
-        return this.ebsVolumes == null ? Codegen.empty() : this.ebsVolumes;
+    public Optional<Output<List<CustomLayerEbsVolumeArgs>>> ebsVolumes() {
+        return Optional.ofNullable(this.ebsVolumes);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elasticLoadBalancer")
-      private final @Nullable Output<String> elasticLoadBalancer;
+    private @Nullable Output<String> elasticLoadBalancer;
 
-    public Output<String> elasticLoadBalancer() {
-        return this.elasticLoadBalancer == null ? Codegen.empty() : this.elasticLoadBalancer;
+    public Optional<Output<String>> elasticLoadBalancer() {
+        return Optional.ofNullable(this.elasticLoadBalancer);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="installUpdatesOnBoot")
-      private final @Nullable Output<Boolean> installUpdatesOnBoot;
+    private @Nullable Output<Boolean> installUpdatesOnBoot;
 
-    public Output<Boolean> installUpdatesOnBoot() {
-        return this.installUpdatesOnBoot == null ? Codegen.empty() : this.installUpdatesOnBoot;
+    public Optional<Output<Boolean>> installUpdatesOnBoot() {
+        return Optional.ofNullable(this.installUpdatesOnBoot);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceShutdownTimeout")
-      private final @Nullable Output<Integer> instanceShutdownTimeout;
+    private @Nullable Output<Integer> instanceShutdownTimeout;
 
-    public Output<Integer> instanceShutdownTimeout() {
-        return this.instanceShutdownTimeout == null ? Codegen.empty() : this.instanceShutdownTimeout;
+    public Optional<Output<Integer>> instanceShutdownTimeout() {
+        return Optional.ofNullable(this.instanceShutdownTimeout);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -204,7 +204,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName", required=true)
-      private final Output<String> shortName;
+    private Output<String> shortName;
 
     public Output<String> shortName() {
         return this.shortName;
@@ -215,7 +215,7 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackId", required=true)
-      private final Output<String> stackId;
+    private Output<String> stackId;
 
     public Output<String> stackId() {
         return this.stackId;
@@ -226,10 +226,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="systemPackages")
-      private final @Nullable Output<List<String>> systemPackages;
+    private @Nullable Output<List<String>> systemPackages;
 
-    public Output<List<String>> systemPackages() {
-        return this.systemPackages == null ? Codegen.empty() : this.systemPackages;
+    public Optional<Output<List<String>>> systemPackages() {
+        return Optional.ofNullable(this.systemPackages);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -248,360 +248,302 @@ public final class CustomLayerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useEbsOptimizedInstances")
-      private final @Nullable Output<Boolean> useEbsOptimizedInstances;
+    private @Nullable Output<Boolean> useEbsOptimizedInstances;
 
-    public Output<Boolean> useEbsOptimizedInstances() {
-        return this.useEbsOptimizedInstances == null ? Codegen.empty() : this.useEbsOptimizedInstances;
+    public Optional<Output<Boolean>> useEbsOptimizedInstances() {
+        return Optional.ofNullable(this.useEbsOptimizedInstances);
     }
 
-    public CustomLayerArgs(
-        @Nullable Output<Boolean> autoAssignElasticIps,
-        @Nullable Output<Boolean> autoAssignPublicIps,
-        @Nullable Output<Boolean> autoHealing,
-        @Nullable Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration,
-        @Nullable Output<List<String>> customConfigureRecipes,
-        @Nullable Output<List<String>> customDeployRecipes,
-        @Nullable Output<String> customInstanceProfileArn,
-        @Nullable Output<String> customJson,
-        @Nullable Output<List<String>> customSecurityGroupIds,
-        @Nullable Output<List<String>> customSetupRecipes,
-        @Nullable Output<List<String>> customShutdownRecipes,
-        @Nullable Output<List<String>> customUndeployRecipes,
-        @Nullable Output<Boolean> drainElbOnShutdown,
-        @Nullable Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes,
-        @Nullable Output<String> elasticLoadBalancer,
-        @Nullable Output<Boolean> installUpdatesOnBoot,
-        @Nullable Output<Integer> instanceShutdownTimeout,
-        @Nullable Output<String> name,
-        Output<String> shortName,
-        Output<String> stackId,
-        @Nullable Output<List<String>> systemPackages,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> useEbsOptimizedInstances) {
-        this.autoAssignElasticIps = autoAssignElasticIps;
-        this.autoAssignPublicIps = autoAssignPublicIps;
-        this.autoHealing = autoHealing;
-        this.cloudwatchConfiguration = cloudwatchConfiguration;
-        this.customConfigureRecipes = customConfigureRecipes;
-        this.customDeployRecipes = customDeployRecipes;
-        this.customInstanceProfileArn = customInstanceProfileArn;
-        this.customJson = customJson;
-        this.customSecurityGroupIds = customSecurityGroupIds;
-        this.customSetupRecipes = customSetupRecipes;
-        this.customShutdownRecipes = customShutdownRecipes;
-        this.customUndeployRecipes = customUndeployRecipes;
-        this.drainElbOnShutdown = drainElbOnShutdown;
-        this.ebsVolumes = ebsVolumes;
-        this.elasticLoadBalancer = elasticLoadBalancer;
-        this.installUpdatesOnBoot = installUpdatesOnBoot;
-        this.instanceShutdownTimeout = instanceShutdownTimeout;
-        this.name = name;
-        this.shortName = Objects.requireNonNull(shortName, "expected parameter 'shortName' to be non-null");
-        this.stackId = Objects.requireNonNull(stackId, "expected parameter 'stackId' to be non-null");
-        this.systemPackages = systemPackages;
-        this.tags = tags;
-        this.useEbsOptimizedInstances = useEbsOptimizedInstances;
-    }
+    private CustomLayerArgs() {}
 
-    private CustomLayerArgs() {
-        this.autoAssignElasticIps = Codegen.empty();
-        this.autoAssignPublicIps = Codegen.empty();
-        this.autoHealing = Codegen.empty();
-        this.cloudwatchConfiguration = Codegen.empty();
-        this.customConfigureRecipes = Codegen.empty();
-        this.customDeployRecipes = Codegen.empty();
-        this.customInstanceProfileArn = Codegen.empty();
-        this.customJson = Codegen.empty();
-        this.customSecurityGroupIds = Codegen.empty();
-        this.customSetupRecipes = Codegen.empty();
-        this.customShutdownRecipes = Codegen.empty();
-        this.customUndeployRecipes = Codegen.empty();
-        this.drainElbOnShutdown = Codegen.empty();
-        this.ebsVolumes = Codegen.empty();
-        this.elasticLoadBalancer = Codegen.empty();
-        this.installUpdatesOnBoot = Codegen.empty();
-        this.instanceShutdownTimeout = Codegen.empty();
-        this.name = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.stackId = Codegen.empty();
-        this.systemPackages = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.useEbsOptimizedInstances = Codegen.empty();
+    private CustomLayerArgs(CustomLayerArgs $) {
+        this.autoAssignElasticIps = $.autoAssignElasticIps;
+        this.autoAssignPublicIps = $.autoAssignPublicIps;
+        this.autoHealing = $.autoHealing;
+        this.cloudwatchConfiguration = $.cloudwatchConfiguration;
+        this.customConfigureRecipes = $.customConfigureRecipes;
+        this.customDeployRecipes = $.customDeployRecipes;
+        this.customInstanceProfileArn = $.customInstanceProfileArn;
+        this.customJson = $.customJson;
+        this.customSecurityGroupIds = $.customSecurityGroupIds;
+        this.customSetupRecipes = $.customSetupRecipes;
+        this.customShutdownRecipes = $.customShutdownRecipes;
+        this.customUndeployRecipes = $.customUndeployRecipes;
+        this.drainElbOnShutdown = $.drainElbOnShutdown;
+        this.ebsVolumes = $.ebsVolumes;
+        this.elasticLoadBalancer = $.elasticLoadBalancer;
+        this.installUpdatesOnBoot = $.installUpdatesOnBoot;
+        this.instanceShutdownTimeout = $.instanceShutdownTimeout;
+        this.name = $.name;
+        this.shortName = $.shortName;
+        this.stackId = $.stackId;
+        this.systemPackages = $.systemPackages;
+        this.tags = $.tags;
+        this.useEbsOptimizedInstances = $.useEbsOptimizedInstances;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLayerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoAssignElasticIps;
-        private @Nullable Output<Boolean> autoAssignPublicIps;
-        private @Nullable Output<Boolean> autoHealing;
-        private @Nullable Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
-        private @Nullable Output<List<String>> customConfigureRecipes;
-        private @Nullable Output<List<String>> customDeployRecipes;
-        private @Nullable Output<String> customInstanceProfileArn;
-        private @Nullable Output<String> customJson;
-        private @Nullable Output<List<String>> customSecurityGroupIds;
-        private @Nullable Output<List<String>> customSetupRecipes;
-        private @Nullable Output<List<String>> customShutdownRecipes;
-        private @Nullable Output<List<String>> customUndeployRecipes;
-        private @Nullable Output<Boolean> drainElbOnShutdown;
-        private @Nullable Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes;
-        private @Nullable Output<String> elasticLoadBalancer;
-        private @Nullable Output<Boolean> installUpdatesOnBoot;
-        private @Nullable Output<Integer> instanceShutdownTimeout;
-        private @Nullable Output<String> name;
-        private Output<String> shortName;
-        private Output<String> stackId;
-        private @Nullable Output<List<String>> systemPackages;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> useEbsOptimizedInstances;
+        private CustomLayerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLayerArgs();
         }
 
         public Builder(CustomLayerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoAssignElasticIps = defaults.autoAssignElasticIps;
-    	      this.autoAssignPublicIps = defaults.autoAssignPublicIps;
-    	      this.autoHealing = defaults.autoHealing;
-    	      this.cloudwatchConfiguration = defaults.cloudwatchConfiguration;
-    	      this.customConfigureRecipes = defaults.customConfigureRecipes;
-    	      this.customDeployRecipes = defaults.customDeployRecipes;
-    	      this.customInstanceProfileArn = defaults.customInstanceProfileArn;
-    	      this.customJson = defaults.customJson;
-    	      this.customSecurityGroupIds = defaults.customSecurityGroupIds;
-    	      this.customSetupRecipes = defaults.customSetupRecipes;
-    	      this.customShutdownRecipes = defaults.customShutdownRecipes;
-    	      this.customUndeployRecipes = defaults.customUndeployRecipes;
-    	      this.drainElbOnShutdown = defaults.drainElbOnShutdown;
-    	      this.ebsVolumes = defaults.ebsVolumes;
-    	      this.elasticLoadBalancer = defaults.elasticLoadBalancer;
-    	      this.installUpdatesOnBoot = defaults.installUpdatesOnBoot;
-    	      this.instanceShutdownTimeout = defaults.instanceShutdownTimeout;
-    	      this.name = defaults.name;
-    	      this.shortName = defaults.shortName;
-    	      this.stackId = defaults.stackId;
-    	      this.systemPackages = defaults.systemPackages;
-    	      this.tags = defaults.tags;
-    	      this.useEbsOptimizedInstances = defaults.useEbsOptimizedInstances;
+            $ = new CustomLayerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoAssignElasticIps(@Nullable Output<Boolean> autoAssignElasticIps) {
-            this.autoAssignElasticIps = autoAssignElasticIps;
+            $.autoAssignElasticIps = autoAssignElasticIps;
             return this;
         }
-        public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
-            this.autoAssignElasticIps = Codegen.ofNullable(autoAssignElasticIps);
-            return this;
+
+        public Builder autoAssignElasticIps(Boolean autoAssignElasticIps) {
+            return autoAssignElasticIps(Output.of(autoAssignElasticIps));
         }
+
         public Builder autoAssignPublicIps(@Nullable Output<Boolean> autoAssignPublicIps) {
-            this.autoAssignPublicIps = autoAssignPublicIps;
+            $.autoAssignPublicIps = autoAssignPublicIps;
             return this;
         }
-        public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
-            this.autoAssignPublicIps = Codegen.ofNullable(autoAssignPublicIps);
-            return this;
+
+        public Builder autoAssignPublicIps(Boolean autoAssignPublicIps) {
+            return autoAssignPublicIps(Output.of(autoAssignPublicIps));
         }
+
         public Builder autoHealing(@Nullable Output<Boolean> autoHealing) {
-            this.autoHealing = autoHealing;
+            $.autoHealing = autoHealing;
             return this;
         }
-        public Builder autoHealing(@Nullable Boolean autoHealing) {
-            this.autoHealing = Codegen.ofNullable(autoHealing);
-            return this;
+
+        public Builder autoHealing(Boolean autoHealing) {
+            return autoHealing(Output.of(autoHealing));
         }
+
         public Builder cloudwatchConfiguration(@Nullable Output<CustomLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
-            this.cloudwatchConfiguration = cloudwatchConfiguration;
+            $.cloudwatchConfiguration = cloudwatchConfiguration;
             return this;
         }
-        public Builder cloudwatchConfiguration(@Nullable CustomLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
-            this.cloudwatchConfiguration = Codegen.ofNullable(cloudwatchConfiguration);
-            return this;
+
+        public Builder cloudwatchConfiguration(CustomLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
+            return cloudwatchConfiguration(Output.of(cloudwatchConfiguration));
         }
+
         public Builder customConfigureRecipes(@Nullable Output<List<String>> customConfigureRecipes) {
-            this.customConfigureRecipes = customConfigureRecipes;
+            $.customConfigureRecipes = customConfigureRecipes;
             return this;
         }
-        public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
-            this.customConfigureRecipes = Codegen.ofNullable(customConfigureRecipes);
-            return this;
+
+        public Builder customConfigureRecipes(List<String> customConfigureRecipes) {
+            return customConfigureRecipes(Output.of(customConfigureRecipes));
         }
+
         public Builder customConfigureRecipes(String... customConfigureRecipes) {
             return customConfigureRecipes(List.of(customConfigureRecipes));
         }
+
         public Builder customDeployRecipes(@Nullable Output<List<String>> customDeployRecipes) {
-            this.customDeployRecipes = customDeployRecipes;
+            $.customDeployRecipes = customDeployRecipes;
             return this;
         }
-        public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
-            this.customDeployRecipes = Codegen.ofNullable(customDeployRecipes);
-            return this;
+
+        public Builder customDeployRecipes(List<String> customDeployRecipes) {
+            return customDeployRecipes(Output.of(customDeployRecipes));
         }
+
         public Builder customDeployRecipes(String... customDeployRecipes) {
             return customDeployRecipes(List.of(customDeployRecipes));
         }
+
         public Builder customInstanceProfileArn(@Nullable Output<String> customInstanceProfileArn) {
-            this.customInstanceProfileArn = customInstanceProfileArn;
+            $.customInstanceProfileArn = customInstanceProfileArn;
             return this;
         }
-        public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
-            this.customInstanceProfileArn = Codegen.ofNullable(customInstanceProfileArn);
-            return this;
+
+        public Builder customInstanceProfileArn(String customInstanceProfileArn) {
+            return customInstanceProfileArn(Output.of(customInstanceProfileArn));
         }
+
         public Builder customJson(@Nullable Output<String> customJson) {
-            this.customJson = customJson;
+            $.customJson = customJson;
             return this;
         }
-        public Builder customJson(@Nullable String customJson) {
-            this.customJson = Codegen.ofNullable(customJson);
-            return this;
+
+        public Builder customJson(String customJson) {
+            return customJson(Output.of(customJson));
         }
+
         public Builder customSecurityGroupIds(@Nullable Output<List<String>> customSecurityGroupIds) {
-            this.customSecurityGroupIds = customSecurityGroupIds;
+            $.customSecurityGroupIds = customSecurityGroupIds;
             return this;
         }
-        public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
-            this.customSecurityGroupIds = Codegen.ofNullable(customSecurityGroupIds);
-            return this;
+
+        public Builder customSecurityGroupIds(List<String> customSecurityGroupIds) {
+            return customSecurityGroupIds(Output.of(customSecurityGroupIds));
         }
+
         public Builder customSecurityGroupIds(String... customSecurityGroupIds) {
             return customSecurityGroupIds(List.of(customSecurityGroupIds));
         }
+
         public Builder customSetupRecipes(@Nullable Output<List<String>> customSetupRecipes) {
-            this.customSetupRecipes = customSetupRecipes;
+            $.customSetupRecipes = customSetupRecipes;
             return this;
         }
-        public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
-            this.customSetupRecipes = Codegen.ofNullable(customSetupRecipes);
-            return this;
+
+        public Builder customSetupRecipes(List<String> customSetupRecipes) {
+            return customSetupRecipes(Output.of(customSetupRecipes));
         }
+
         public Builder customSetupRecipes(String... customSetupRecipes) {
             return customSetupRecipes(List.of(customSetupRecipes));
         }
+
         public Builder customShutdownRecipes(@Nullable Output<List<String>> customShutdownRecipes) {
-            this.customShutdownRecipes = customShutdownRecipes;
+            $.customShutdownRecipes = customShutdownRecipes;
             return this;
         }
-        public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
-            this.customShutdownRecipes = Codegen.ofNullable(customShutdownRecipes);
-            return this;
+
+        public Builder customShutdownRecipes(List<String> customShutdownRecipes) {
+            return customShutdownRecipes(Output.of(customShutdownRecipes));
         }
+
         public Builder customShutdownRecipes(String... customShutdownRecipes) {
             return customShutdownRecipes(List.of(customShutdownRecipes));
         }
+
         public Builder customUndeployRecipes(@Nullable Output<List<String>> customUndeployRecipes) {
-            this.customUndeployRecipes = customUndeployRecipes;
+            $.customUndeployRecipes = customUndeployRecipes;
             return this;
         }
-        public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
-            this.customUndeployRecipes = Codegen.ofNullable(customUndeployRecipes);
-            return this;
+
+        public Builder customUndeployRecipes(List<String> customUndeployRecipes) {
+            return customUndeployRecipes(Output.of(customUndeployRecipes));
         }
+
         public Builder customUndeployRecipes(String... customUndeployRecipes) {
             return customUndeployRecipes(List.of(customUndeployRecipes));
         }
+
         public Builder drainElbOnShutdown(@Nullable Output<Boolean> drainElbOnShutdown) {
-            this.drainElbOnShutdown = drainElbOnShutdown;
+            $.drainElbOnShutdown = drainElbOnShutdown;
             return this;
         }
-        public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
-            this.drainElbOnShutdown = Codegen.ofNullable(drainElbOnShutdown);
-            return this;
+
+        public Builder drainElbOnShutdown(Boolean drainElbOnShutdown) {
+            return drainElbOnShutdown(Output.of(drainElbOnShutdown));
         }
+
         public Builder ebsVolumes(@Nullable Output<List<CustomLayerEbsVolumeArgs>> ebsVolumes) {
-            this.ebsVolumes = ebsVolumes;
+            $.ebsVolumes = ebsVolumes;
             return this;
         }
-        public Builder ebsVolumes(@Nullable List<CustomLayerEbsVolumeArgs> ebsVolumes) {
-            this.ebsVolumes = Codegen.ofNullable(ebsVolumes);
-            return this;
+
+        public Builder ebsVolumes(List<CustomLayerEbsVolumeArgs> ebsVolumes) {
+            return ebsVolumes(Output.of(ebsVolumes));
         }
+
         public Builder ebsVolumes(CustomLayerEbsVolumeArgs... ebsVolumes) {
             return ebsVolumes(List.of(ebsVolumes));
         }
+
         public Builder elasticLoadBalancer(@Nullable Output<String> elasticLoadBalancer) {
-            this.elasticLoadBalancer = elasticLoadBalancer;
+            $.elasticLoadBalancer = elasticLoadBalancer;
             return this;
         }
-        public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
-            this.elasticLoadBalancer = Codegen.ofNullable(elasticLoadBalancer);
-            return this;
+
+        public Builder elasticLoadBalancer(String elasticLoadBalancer) {
+            return elasticLoadBalancer(Output.of(elasticLoadBalancer));
         }
+
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = installUpdatesOnBoot;
+            $.installUpdatesOnBoot = installUpdatesOnBoot;
             return this;
         }
-        public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = Codegen.ofNullable(installUpdatesOnBoot);
-            return this;
+
+        public Builder installUpdatesOnBoot(Boolean installUpdatesOnBoot) {
+            return installUpdatesOnBoot(Output.of(installUpdatesOnBoot));
         }
+
         public Builder instanceShutdownTimeout(@Nullable Output<Integer> instanceShutdownTimeout) {
-            this.instanceShutdownTimeout = instanceShutdownTimeout;
+            $.instanceShutdownTimeout = instanceShutdownTimeout;
             return this;
         }
-        public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
-            this.instanceShutdownTimeout = Codegen.ofNullable(instanceShutdownTimeout);
-            return this;
+
+        public Builder instanceShutdownTimeout(Integer instanceShutdownTimeout) {
+            return instanceShutdownTimeout(Output.of(instanceShutdownTimeout));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder shortName(Output<String> shortName) {
-            this.shortName = Objects.requireNonNull(shortName);
+            $.shortName = shortName;
             return this;
         }
+
         public Builder shortName(String shortName) {
-            this.shortName = Output.of(Objects.requireNonNull(shortName));
-            return this;
+            return shortName(Output.of(shortName));
         }
+
         public Builder stackId(Output<String> stackId) {
-            this.stackId = Objects.requireNonNull(stackId);
+            $.stackId = stackId;
             return this;
         }
+
         public Builder stackId(String stackId) {
-            this.stackId = Output.of(Objects.requireNonNull(stackId));
-            return this;
+            return stackId(Output.of(stackId));
         }
+
         public Builder systemPackages(@Nullable Output<List<String>> systemPackages) {
-            this.systemPackages = systemPackages;
+            $.systemPackages = systemPackages;
             return this;
         }
-        public Builder systemPackages(@Nullable List<String> systemPackages) {
-            this.systemPackages = Codegen.ofNullable(systemPackages);
-            return this;
+
+        public Builder systemPackages(List<String> systemPackages) {
+            return systemPackages(Output.of(systemPackages));
         }
+
         public Builder systemPackages(String... systemPackages) {
             return systemPackages(List.of(systemPackages));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder useEbsOptimizedInstances(@Nullable Output<Boolean> useEbsOptimizedInstances) {
-            this.useEbsOptimizedInstances = useEbsOptimizedInstances;
+            $.useEbsOptimizedInstances = useEbsOptimizedInstances;
             return this;
         }
-        public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
-            this.useEbsOptimizedInstances = Codegen.ofNullable(useEbsOptimizedInstances);
-            return this;
-        }        public CustomLayerArgs build() {
-            return new CustomLayerArgs(autoAssignElasticIps, autoAssignPublicIps, autoHealing, cloudwatchConfiguration, customConfigureRecipes, customDeployRecipes, customInstanceProfileArn, customJson, customSecurityGroupIds, customSetupRecipes, customShutdownRecipes, customUndeployRecipes, drainElbOnShutdown, ebsVolumes, elasticLoadBalancer, installUpdatesOnBoot, instanceShutdownTimeout, name, shortName, stackId, systemPackages, tags, useEbsOptimizedInstances);
+
+        public Builder useEbsOptimizedInstances(Boolean useEbsOptimizedInstances) {
+            return useEbsOptimizedInstances(Output.of(useEbsOptimizedInstances));
+        }
+
+        public CustomLayerArgs build() {
+            $.shortName = Objects.requireNonNull($.shortName, "expected parameter 'shortName' to be non-null");
+            $.stackId = Objects.requireNonNull($.stackId, "expected parameter 'stackId' to be non-null");
+            return $;
         }
     }
+
 }

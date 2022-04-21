@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2QuasiIdFieldArgs;
@@ -26,7 +25,7 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
      * 
      */
     @Import(name="quasiIds", required=true)
-      private final Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds;
+    private Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds;
 
     public Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds() {
         return this.quasiIds;
@@ -37,7 +36,7 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
      * 
      */
     @Import(name="relativeFrequency", required=true)
-      private final Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
+    private Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency() {
         return this.relativeFrequency;
@@ -48,79 +47,75 @@ public final class GooglePrivacyDlpV2AuxiliaryTableArgs extends com.pulumi.resou
      * 
      */
     @Import(name="table", required=true)
-      private final Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+    private Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> table() {
         return this.table;
     }
 
-    public GooglePrivacyDlpV2AuxiliaryTableArgs(
-        Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds,
-        Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency,
-        Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-        this.quasiIds = Objects.requireNonNull(quasiIds, "expected parameter 'quasiIds' to be non-null");
-        this.relativeFrequency = Objects.requireNonNull(relativeFrequency, "expected parameter 'relativeFrequency' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private GooglePrivacyDlpV2AuxiliaryTableArgs() {}
 
-    private GooglePrivacyDlpV2AuxiliaryTableArgs() {
-        this.quasiIds = Codegen.empty();
-        this.relativeFrequency = Codegen.empty();
-        this.table = Codegen.empty();
+    private GooglePrivacyDlpV2AuxiliaryTableArgs(GooglePrivacyDlpV2AuxiliaryTableArgs $) {
+        this.quasiIds = $.quasiIds;
+        this.relativeFrequency = $.relativeFrequency;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2AuxiliaryTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds;
-        private Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency;
-        private Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
+        private GooglePrivacyDlpV2AuxiliaryTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2AuxiliaryTableArgs();
         }
 
         public Builder(GooglePrivacyDlpV2AuxiliaryTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quasiIds = defaults.quasiIds;
-    	      this.relativeFrequency = defaults.relativeFrequency;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2AuxiliaryTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quasiIds(Output<List<GooglePrivacyDlpV2QuasiIdFieldArgs>> quasiIds) {
-            this.quasiIds = Objects.requireNonNull(quasiIds);
+            $.quasiIds = quasiIds;
             return this;
         }
+
         public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdFieldArgs> quasiIds) {
-            this.quasiIds = Output.of(Objects.requireNonNull(quasiIds));
-            return this;
+            return quasiIds(Output.of(quasiIds));
         }
+
         public Builder quasiIds(GooglePrivacyDlpV2QuasiIdFieldArgs... quasiIds) {
             return quasiIds(List.of(quasiIds));
         }
+
         public Builder relativeFrequency(Output<GooglePrivacyDlpV2FieldIdArgs> relativeFrequency) {
-            this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
+            $.relativeFrequency = relativeFrequency;
             return this;
         }
+
         public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdArgs relativeFrequency) {
-            this.relativeFrequency = Output.of(Objects.requireNonNull(relativeFrequency));
-            return this;
+            return relativeFrequency(Output.of(relativeFrequency));
         }
+
         public Builder table(Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
         }
+
         public Builder table(GooglePrivacyDlpV2BigQueryTableArgs table) {
-            this.table = Output.of(Objects.requireNonNull(table));
-            return this;
-        }        public GooglePrivacyDlpV2AuxiliaryTableArgs build() {
-            return new GooglePrivacyDlpV2AuxiliaryTableArgs(quasiIds, relativeFrequency, table);
+            return table(Output.of(table));
+        }
+
+        public GooglePrivacyDlpV2AuxiliaryTableArgs build() {
+            $.quasiIds = Objects.requireNonNull($.quasiIds, "expected parameter 'quasiIds' to be non-null");
+            $.relativeFrequency = Objects.requireNonNull($.relativeFrequency, "expected parameter 'relativeFrequency' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

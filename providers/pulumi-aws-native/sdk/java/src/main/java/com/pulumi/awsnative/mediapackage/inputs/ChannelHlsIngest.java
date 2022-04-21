@@ -24,48 +24,48 @@ public final class ChannelHlsIngest extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ingestEndpoints")
-      private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
+    private @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
 
-    public List<ChannelIngestEndpoint> ingestEndpoints() {
-        return this.ingestEndpoints == null ? List.of() : this.ingestEndpoints;
+    public Optional<List<ChannelIngestEndpoint>> ingestEndpoints() {
+        return Optional.ofNullable(this.ingestEndpoints);
     }
 
-    public ChannelHlsIngest(@Nullable List<ChannelIngestEndpoint> ingestEndpoints) {
-        this.ingestEndpoints = ingestEndpoints;
-    }
+    private ChannelHlsIngest() {}
 
-    private ChannelHlsIngest() {
-        this.ingestEndpoints = List.of();
+    private ChannelHlsIngest(ChannelHlsIngest $) {
+        this.ingestEndpoints = $.ingestEndpoints;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelHlsIngest defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
+        private ChannelHlsIngest $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelHlsIngest();
         }
 
         public Builder(ChannelHlsIngest defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestEndpoints = defaults.ingestEndpoints;
+            $ = new ChannelHlsIngest(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestEndpoints(@Nullable List<ChannelIngestEndpoint> ingestEndpoints) {
-            this.ingestEndpoints = ingestEndpoints;
+            $.ingestEndpoints = ingestEndpoints;
             return this;
         }
+
         public Builder ingestEndpoints(ChannelIngestEndpoint... ingestEndpoints) {
             return ingestEndpoints(List.of(ingestEndpoints));
-        }        public ChannelHlsIngest build() {
-            return new ChannelHlsIngest(ingestEndpoints);
+        }
+
+        public ChannelHlsIngest build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<String> instanceType;
+    private @Nullable Output<String> instanceType;
 
-    public Output<String> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<String>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="isLocal")
-      private final @Nullable Output<Boolean> isLocal;
+    private @Nullable Output<Boolean> isLocal;
 
-    public Output<Boolean> isLocal() {
-        return this.isLocal == null ? Codegen.empty() : this.isLocal;
+    public Optional<Output<Boolean>> isLocal() {
+        return Optional.ofNullable(this.isLocal);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<Map<String,String>> properties;
+    private @Nullable Output<Map<String,String>> properties;
 
-    public Output<Map<String,String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<Map<String,String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -82,115 +82,98 @@ public final class ComputeConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public ComputeConfigurationArgs(
-        @Nullable Output<Integer> instanceCount,
-        @Nullable Output<String> instanceType,
-        @Nullable Output<Boolean> isLocal,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> properties,
-        @Nullable Output<String> target) {
-        this.instanceCount = instanceCount;
-        this.instanceType = instanceType;
-        this.isLocal = isLocal;
-        this.location = location;
-        this.properties = properties;
-        this.target = target;
-    }
+    private ComputeConfigurationArgs() {}
 
-    private ComputeConfigurationArgs() {
-        this.instanceCount = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.isLocal = Codegen.empty();
-        this.location = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.target = Codegen.empty();
+    private ComputeConfigurationArgs(ComputeConfigurationArgs $) {
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.isLocal = $.isLocal;
+        this.location = $.location;
+        this.properties = $.properties;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> instanceCount;
-        private @Nullable Output<String> instanceType;
-        private @Nullable Output<Boolean> isLocal;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> properties;
-        private @Nullable Output<String> target;
+        private ComputeConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeConfigurationArgs();
         }
 
         public Builder(ComputeConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.isLocal = defaults.isLocal;
-    	      this.location = defaults.location;
-    	      this.properties = defaults.properties;
-    	      this.target = defaults.target;
+            $ = new ComputeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceType(@Nullable Output<String> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(String instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder isLocal(@Nullable Output<Boolean> isLocal) {
-            this.isLocal = isLocal;
+            $.isLocal = isLocal;
             return this;
         }
-        public Builder isLocal(@Nullable Boolean isLocal) {
-            this.isLocal = Codegen.ofNullable(isLocal);
-            return this;
+
+        public Builder isLocal(Boolean isLocal) {
+            return isLocal(Output.of(isLocal));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(Map<String,String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public ComputeConfigurationArgs build() {
-            return new ComputeConfigurationArgs(instanceCount, instanceType, isLocal, location, properties, target);
+
+        public Builder target(String target) {
+            return target(Output.of(target));
+        }
+
+        public ComputeConfigurationArgs build() {
+            return $;
         }
     }
+
 }

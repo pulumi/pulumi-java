@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="selfLinkWithId")
-      private final @Nullable Output<String> selfLinkWithId;
+    private @Nullable Output<String> selfLinkWithId;
 
-    public Output<String> selfLinkWithId() {
-        return this.selfLinkWithId == null ? Codegen.empty() : this.selfLinkWithId;
+    public Optional<Output<String>> selfLinkWithId() {
+        return Optional.ofNullable(this.selfLinkWithId);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="urlMap")
-      private final @Nullable Output<String> urlMap;
+    private @Nullable Output<String> urlMap;
 
-    public Output<String> urlMap() {
-        return this.urlMap == null ? Codegen.empty() : this.urlMap;
+    public Optional<Output<String>> urlMap() {
+        return Optional.ofNullable(this.urlMap);
     }
 
     /**
@@ -130,154 +130,128 @@ public final class TargetGrpcProxyState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="validateForProxyless")
-      private final @Nullable Output<Boolean> validateForProxyless;
+    private @Nullable Output<Boolean> validateForProxyless;
 
-    public Output<Boolean> validateForProxyless() {
-        return this.validateForProxyless == null ? Codegen.empty() : this.validateForProxyless;
+    public Optional<Output<Boolean>> validateForProxyless() {
+        return Optional.ofNullable(this.validateForProxyless);
     }
 
-    public TargetGrpcProxyState(
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> fingerprint,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> selfLinkWithId,
-        @Nullable Output<String> urlMap,
-        @Nullable Output<Boolean> validateForProxyless) {
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.fingerprint = fingerprint;
-        this.name = name;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.selfLinkWithId = selfLinkWithId;
-        this.urlMap = urlMap;
-        this.validateForProxyless = validateForProxyless;
-    }
+    private TargetGrpcProxyState() {}
 
-    private TargetGrpcProxyState() {
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.selfLinkWithId = Codegen.empty();
-        this.urlMap = Codegen.empty();
-        this.validateForProxyless = Codegen.empty();
+    private TargetGrpcProxyState(TargetGrpcProxyState $) {
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.fingerprint = $.fingerprint;
+        this.name = $.name;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.selfLinkWithId = $.selfLinkWithId;
+        this.urlMap = $.urlMap;
+        this.validateForProxyless = $.validateForProxyless;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetGrpcProxyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> fingerprint;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> selfLinkWithId;
-        private @Nullable Output<String> urlMap;
-        private @Nullable Output<Boolean> validateForProxyless;
+        private TargetGrpcProxyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetGrpcProxyState();
         }
 
         public Builder(TargetGrpcProxyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.selfLinkWithId = defaults.selfLinkWithId;
-    	      this.urlMap = defaults.urlMap;
-    	      this.validateForProxyless = defaults.validateForProxyless;
+            $ = new TargetGrpcProxyState(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder selfLinkWithId(@Nullable Output<String> selfLinkWithId) {
-            this.selfLinkWithId = selfLinkWithId;
+            $.selfLinkWithId = selfLinkWithId;
             return this;
         }
-        public Builder selfLinkWithId(@Nullable String selfLinkWithId) {
-            this.selfLinkWithId = Codegen.ofNullable(selfLinkWithId);
-            return this;
+
+        public Builder selfLinkWithId(String selfLinkWithId) {
+            return selfLinkWithId(Output.of(selfLinkWithId));
         }
+
         public Builder urlMap(@Nullable Output<String> urlMap) {
-            this.urlMap = urlMap;
+            $.urlMap = urlMap;
             return this;
         }
-        public Builder urlMap(@Nullable String urlMap) {
-            this.urlMap = Codegen.ofNullable(urlMap);
-            return this;
+
+        public Builder urlMap(String urlMap) {
+            return urlMap(Output.of(urlMap));
         }
+
         public Builder validateForProxyless(@Nullable Output<Boolean> validateForProxyless) {
-            this.validateForProxyless = validateForProxyless;
+            $.validateForProxyless = validateForProxyless;
             return this;
         }
-        public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
-            this.validateForProxyless = Codegen.ofNullable(validateForProxyless);
-            return this;
-        }        public TargetGrpcProxyState build() {
-            return new TargetGrpcProxyState(creationTimestamp, description, fingerprint, name, project, selfLink, selfLinkWithId, urlMap, validateForProxyless);
+
+        public Builder validateForProxyless(Boolean validateForProxyless) {
+            return validateForProxyless(Output.of(validateForProxyless));
+        }
+
+        public TargetGrpcProxyState build() {
+            return $;
         }
     }
+
 }

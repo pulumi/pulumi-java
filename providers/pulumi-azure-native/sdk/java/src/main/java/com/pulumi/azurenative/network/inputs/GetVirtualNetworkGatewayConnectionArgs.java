@@ -17,7 +17,7 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends com.pulumi.res
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends com.pulumi.res
      * 
      */
     @Import(name="virtualNetworkGatewayConnectionName", required=true)
-      private final String virtualNetworkGatewayConnectionName;
+    private String virtualNetworkGatewayConnectionName;
 
     public String virtualNetworkGatewayConnectionName() {
         return this.virtualNetworkGatewayConnectionName;
     }
 
-    public GetVirtualNetworkGatewayConnectionArgs(
-        String resourceGroupName,
-        String virtualNetworkGatewayConnectionName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.virtualNetworkGatewayConnectionName = Objects.requireNonNull(virtualNetworkGatewayConnectionName, "expected parameter 'virtualNetworkGatewayConnectionName' to be non-null");
-    }
+    private GetVirtualNetworkGatewayConnectionArgs() {}
 
-    private GetVirtualNetworkGatewayConnectionArgs() {
-        this.resourceGroupName = null;
-        this.virtualNetworkGatewayConnectionName = null;
+    private GetVirtualNetworkGatewayConnectionArgs(GetVirtualNetworkGatewayConnectionArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.virtualNetworkGatewayConnectionName = $.virtualNetworkGatewayConnectionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualNetworkGatewayConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String virtualNetworkGatewayConnectionName;
+        private GetVirtualNetworkGatewayConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualNetworkGatewayConnectionArgs();
         }
 
         public Builder(GetVirtualNetworkGatewayConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.virtualNetworkGatewayConnectionName = defaults.virtualNetworkGatewayConnectionName;
+            $ = new GetVirtualNetworkGatewayConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder virtualNetworkGatewayConnectionName(String virtualNetworkGatewayConnectionName) {
-            this.virtualNetworkGatewayConnectionName = Objects.requireNonNull(virtualNetworkGatewayConnectionName);
+            $.virtualNetworkGatewayConnectionName = virtualNetworkGatewayConnectionName;
             return this;
-        }        public GetVirtualNetworkGatewayConnectionArgs build() {
-            return new GetVirtualNetworkGatewayConnectionArgs(resourceGroupName, virtualNetworkGatewayConnectionName);
+        }
+
+        public GetVirtualNetworkGatewayConnectionArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.virtualNetworkGatewayConnectionName = Objects.requireNonNull($.virtualNetworkGatewayConnectionName, "expected parameter 'virtualNetworkGatewayConnectionName' to be non-null");
+            return $;
         }
     }
+
 }

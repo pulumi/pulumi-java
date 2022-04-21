@@ -24,10 +24,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mimeType")
-      private final @Nullable String mimeType;
+    private @Nullable String mimeType;
 
     public Optional<String> mimeType() {
-        return this.mimeType == null ? Optional.empty() : Optional.ofNullable(this.mimeType);
+        return Optional.ofNullable(this.mimeType);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unpack")
-      private final @Nullable Boolean unpack;
+    private @Nullable Boolean unpack;
 
     public Optional<Boolean> unpack() {
-        return this.unpack == null ? Optional.empty() : Optional.ofNullable(this.unpack);
+        return Optional.ofNullable(this.unpack);
     }
 
     /**
@@ -57,73 +57,62 @@ public final class ImageAssetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable String url;
+    private @Nullable String url;
 
     public Optional<String> url() {
-        return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
+        return Optional.ofNullable(this.url);
     }
 
-    public ImageAssetResponse(
-        @Nullable String id,
-        @Nullable String mimeType,
-        @Nullable Boolean unpack,
-        @Nullable String url) {
-        this.id = id;
-        this.mimeType = mimeType;
-        this.unpack = unpack;
-        this.url = url;
-    }
+    private ImageAssetResponse() {}
 
-    private ImageAssetResponse() {
-        this.id = null;
-        this.mimeType = null;
-        this.unpack = null;
-        this.url = null;
+    private ImageAssetResponse(ImageAssetResponse $) {
+        this.id = $.id;
+        this.mimeType = $.mimeType;
+        this.unpack = $.unpack;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageAssetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable String mimeType;
-        private @Nullable Boolean unpack;
-        private @Nullable String url;
+        private ImageAssetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageAssetResponse();
         }
 
         public Builder(ImageAssetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.mimeType = defaults.mimeType;
-    	      this.unpack = defaults.unpack;
-    	      this.url = defaults.url;
+            $ = new ImageAssetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder mimeType(@Nullable String mimeType) {
-            this.mimeType = mimeType;
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder unpack(@Nullable Boolean unpack) {
-            this.unpack = unpack;
+            $.unpack = unpack;
             return this;
         }
+
         public Builder url(@Nullable String url) {
-            this.url = url;
+            $.url = url;
             return this;
-        }        public ImageAssetResponse build() {
-            return new ImageAssetResponse(id, mimeType, unpack, url);
+        }
+
+        public ImageAssetResponse build() {
+            return $;
         }
     }
+
 }

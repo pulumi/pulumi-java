@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final Output<String> cpeUri;
+    private Output<String> cpeUri;
 
     public Output<String> cpeUri() {
         return this.cpeUri;
@@ -36,10 +36,10 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class LocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<VersionArgs> version;
+    private @Nullable Output<VersionArgs> version;
 
-    public Output<VersionArgs> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<VersionArgs>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public LocationArgs(
-        Output<String> cpeUri,
-        @Nullable Output<String> path,
-        @Nullable Output<VersionArgs> version) {
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.path = path;
-        this.version = version;
-    }
+    private LocationArgs() {}
 
-    private LocationArgs() {
-        this.cpeUri = Codegen.empty();
-        this.path = Codegen.empty();
-        this.version = Codegen.empty();
+    private LocationArgs(LocationArgs $) {
+        this.cpeUri = $.cpeUri;
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cpeUri;
-        private @Nullable Output<String> path;
-        private @Nullable Output<VersionArgs> version;
+        private LocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocationArgs();
         }
 
         public Builder(LocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new LocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(Output<String> cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Output.of(Objects.requireNonNull(cpeUri));
-            return this;
+            return cpeUri(Output.of(cpeUri));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder version(@Nullable Output<VersionArgs> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable VersionArgs version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public LocationArgs build() {
-            return new LocationArgs(cpeUri, path, version);
+
+        public Builder version(VersionArgs version) {
+            return version(Output.of(version));
+        }
+
+        public LocationArgs build() {
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            return $;
         }
     }
+
 }

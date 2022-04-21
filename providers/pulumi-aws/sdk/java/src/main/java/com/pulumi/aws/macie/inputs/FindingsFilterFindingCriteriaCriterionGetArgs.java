@@ -5,10 +5,10 @@ package com.pulumi.aws.macie.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="eqExactMatches")
-      private final @Nullable Output<List<String>> eqExactMatches;
+    private @Nullable Output<List<String>> eqExactMatches;
 
-    public Output<List<String>> eqExactMatches() {
-        return this.eqExactMatches == null ? Codegen.empty() : this.eqExactMatches;
+    public Optional<Output<List<String>>> eqExactMatches() {
+        return Optional.ofNullable(this.eqExactMatches);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="eqs")
-      private final @Nullable Output<List<String>> eqs;
+    private @Nullable Output<List<String>> eqs;
 
-    public Output<List<String>> eqs() {
-        return this.eqs == null ? Codegen.empty() : this.eqs;
+    public Optional<Output<List<String>>> eqs() {
+        return Optional.ofNullable(this.eqs);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="field", required=true)
-      private final Output<String> field;
+    private Output<String> field;
 
     public Output<String> field() {
         return this.field;
@@ -54,10 +54,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="gt")
-      private final @Nullable Output<String> gt;
+    private @Nullable Output<String> gt;
 
-    public Output<String> gt() {
-        return this.gt == null ? Codegen.empty() : this.gt;
+    public Optional<Output<String>> gt() {
+        return Optional.ofNullable(this.gt);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="gte")
-      private final @Nullable Output<String> gte;
+    private @Nullable Output<String> gte;
 
-    public Output<String> gte() {
-        return this.gte == null ? Codegen.empty() : this.gte;
+    public Optional<Output<String>> gte() {
+        return Optional.ofNullable(this.gte);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="lt")
-      private final @Nullable Output<String> lt;
+    private @Nullable Output<String> lt;
 
-    public Output<String> lt() {
-        return this.lt == null ? Codegen.empty() : this.lt;
+    public Optional<Output<String>> lt() {
+        return Optional.ofNullable(this.lt);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="lte")
-      private final @Nullable Output<String> lte;
+    private @Nullable Output<String> lte;
 
-    public Output<String> lte() {
-        return this.lte == null ? Codegen.empty() : this.lte;
+    public Optional<Output<String>> lte() {
+        return Optional.ofNullable(this.lte);
     }
 
     /**
@@ -98,150 +98,131 @@ public final class FindingsFilterFindingCriteriaCriterionGetArgs extends com.pul
      * 
      */
     @Import(name="neqs")
-      private final @Nullable Output<List<String>> neqs;
+    private @Nullable Output<List<String>> neqs;
 
-    public Output<List<String>> neqs() {
-        return this.neqs == null ? Codegen.empty() : this.neqs;
+    public Optional<Output<List<String>>> neqs() {
+        return Optional.ofNullable(this.neqs);
     }
 
-    public FindingsFilterFindingCriteriaCriterionGetArgs(
-        @Nullable Output<List<String>> eqExactMatches,
-        @Nullable Output<List<String>> eqs,
-        Output<String> field,
-        @Nullable Output<String> gt,
-        @Nullable Output<String> gte,
-        @Nullable Output<String> lt,
-        @Nullable Output<String> lte,
-        @Nullable Output<List<String>> neqs) {
-        this.eqExactMatches = eqExactMatches;
-        this.eqs = eqs;
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.gt = gt;
-        this.gte = gte;
-        this.lt = lt;
-        this.lte = lte;
-        this.neqs = neqs;
-    }
+    private FindingsFilterFindingCriteriaCriterionGetArgs() {}
 
-    private FindingsFilterFindingCriteriaCriterionGetArgs() {
-        this.eqExactMatches = Codegen.empty();
-        this.eqs = Codegen.empty();
-        this.field = Codegen.empty();
-        this.gt = Codegen.empty();
-        this.gte = Codegen.empty();
-        this.lt = Codegen.empty();
-        this.lte = Codegen.empty();
-        this.neqs = Codegen.empty();
+    private FindingsFilterFindingCriteriaCriterionGetArgs(FindingsFilterFindingCriteriaCriterionGetArgs $) {
+        this.eqExactMatches = $.eqExactMatches;
+        this.eqs = $.eqs;
+        this.field = $.field;
+        this.gt = $.gt;
+        this.gte = $.gte;
+        this.lt = $.lt;
+        this.lte = $.lte;
+        this.neqs = $.neqs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FindingsFilterFindingCriteriaCriterionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> eqExactMatches;
-        private @Nullable Output<List<String>> eqs;
-        private Output<String> field;
-        private @Nullable Output<String> gt;
-        private @Nullable Output<String> gte;
-        private @Nullable Output<String> lt;
-        private @Nullable Output<String> lte;
-        private @Nullable Output<List<String>> neqs;
+        private FindingsFilterFindingCriteriaCriterionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FindingsFilterFindingCriteriaCriterionGetArgs();
         }
 
         public Builder(FindingsFilterFindingCriteriaCriterionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eqExactMatches = defaults.eqExactMatches;
-    	      this.eqs = defaults.eqs;
-    	      this.field = defaults.field;
-    	      this.gt = defaults.gt;
-    	      this.gte = defaults.gte;
-    	      this.lt = defaults.lt;
-    	      this.lte = defaults.lte;
-    	      this.neqs = defaults.neqs;
+            $ = new FindingsFilterFindingCriteriaCriterionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eqExactMatches(@Nullable Output<List<String>> eqExactMatches) {
-            this.eqExactMatches = eqExactMatches;
+            $.eqExactMatches = eqExactMatches;
             return this;
         }
-        public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
-            this.eqExactMatches = Codegen.ofNullable(eqExactMatches);
-            return this;
+
+        public Builder eqExactMatches(List<String> eqExactMatches) {
+            return eqExactMatches(Output.of(eqExactMatches));
         }
+
         public Builder eqExactMatches(String... eqExactMatches) {
             return eqExactMatches(List.of(eqExactMatches));
         }
+
         public Builder eqs(@Nullable Output<List<String>> eqs) {
-            this.eqs = eqs;
+            $.eqs = eqs;
             return this;
         }
-        public Builder eqs(@Nullable List<String> eqs) {
-            this.eqs = Codegen.ofNullable(eqs);
-            return this;
+
+        public Builder eqs(List<String> eqs) {
+            return eqs(Output.of(eqs));
         }
+
         public Builder eqs(String... eqs) {
             return eqs(List.of(eqs));
         }
+
         public Builder field(Output<String> field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder field(String field) {
-            this.field = Output.of(Objects.requireNonNull(field));
-            return this;
+            return field(Output.of(field));
         }
+
         public Builder gt(@Nullable Output<String> gt) {
-            this.gt = gt;
+            $.gt = gt;
             return this;
         }
-        public Builder gt(@Nullable String gt) {
-            this.gt = Codegen.ofNullable(gt);
-            return this;
+
+        public Builder gt(String gt) {
+            return gt(Output.of(gt));
         }
+
         public Builder gte(@Nullable Output<String> gte) {
-            this.gte = gte;
+            $.gte = gte;
             return this;
         }
-        public Builder gte(@Nullable String gte) {
-            this.gte = Codegen.ofNullable(gte);
-            return this;
+
+        public Builder gte(String gte) {
+            return gte(Output.of(gte));
         }
+
         public Builder lt(@Nullable Output<String> lt) {
-            this.lt = lt;
+            $.lt = lt;
             return this;
         }
-        public Builder lt(@Nullable String lt) {
-            this.lt = Codegen.ofNullable(lt);
-            return this;
+
+        public Builder lt(String lt) {
+            return lt(Output.of(lt));
         }
+
         public Builder lte(@Nullable Output<String> lte) {
-            this.lte = lte;
+            $.lte = lte;
             return this;
         }
-        public Builder lte(@Nullable String lte) {
-            this.lte = Codegen.ofNullable(lte);
-            return this;
+
+        public Builder lte(String lte) {
+            return lte(Output.of(lte));
         }
+
         public Builder neqs(@Nullable Output<List<String>> neqs) {
-            this.neqs = neqs;
+            $.neqs = neqs;
             return this;
         }
-        public Builder neqs(@Nullable List<String> neqs) {
-            this.neqs = Codegen.ofNullable(neqs);
-            return this;
+
+        public Builder neqs(List<String> neqs) {
+            return neqs(Output.of(neqs));
         }
+
         public Builder neqs(String... neqs) {
             return neqs(List.of(neqs));
-        }        public FindingsFilterFindingCriteriaCriterionGetArgs build() {
-            return new FindingsFilterFindingCriteriaCriterionGetArgs(eqExactMatches, eqs, field, gt, gte, lt, lte, neqs);
+        }
+
+        public FindingsFilterFindingCriteriaCriterionGetArgs build() {
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            return $;
         }
     }
+
 }

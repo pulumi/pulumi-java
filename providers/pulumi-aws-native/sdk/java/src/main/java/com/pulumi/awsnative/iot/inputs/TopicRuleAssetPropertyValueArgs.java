@@ -7,9 +7,9 @@ import com.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyTimestampArgs;
 import com.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyVariantArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,84 @@ public final class TopicRuleAssetPropertyValueArgs extends com.pulumi.resources.
     public static final TopicRuleAssetPropertyValueArgs Empty = new TopicRuleAssetPropertyValueArgs();
 
     @Import(name="quality")
-      private final @Nullable Output<String> quality;
+    private @Nullable Output<String> quality;
 
-    public Output<String> quality() {
-        return this.quality == null ? Codegen.empty() : this.quality;
+    public Optional<Output<String>> quality() {
+        return Optional.ofNullable(this.quality);
     }
 
     @Import(name="timestamp", required=true)
-      private final Output<TopicRuleAssetPropertyTimestampArgs> timestamp;
+    private Output<TopicRuleAssetPropertyTimestampArgs> timestamp;
 
     public Output<TopicRuleAssetPropertyTimestampArgs> timestamp() {
         return this.timestamp;
     }
 
     @Import(name="value", required=true)
-      private final Output<TopicRuleAssetPropertyVariantArgs> value;
+    private Output<TopicRuleAssetPropertyVariantArgs> value;
 
     public Output<TopicRuleAssetPropertyVariantArgs> value() {
         return this.value;
     }
 
-    public TopicRuleAssetPropertyValueArgs(
-        @Nullable Output<String> quality,
-        Output<TopicRuleAssetPropertyTimestampArgs> timestamp,
-        Output<TopicRuleAssetPropertyVariantArgs> value) {
-        this.quality = quality;
-        this.timestamp = Objects.requireNonNull(timestamp, "expected parameter 'timestamp' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TopicRuleAssetPropertyValueArgs() {}
 
-    private TopicRuleAssetPropertyValueArgs() {
-        this.quality = Codegen.empty();
-        this.timestamp = Codegen.empty();
-        this.value = Codegen.empty();
+    private TopicRuleAssetPropertyValueArgs(TopicRuleAssetPropertyValueArgs $) {
+        this.quality = $.quality;
+        this.timestamp = $.timestamp;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleAssetPropertyValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> quality;
-        private Output<TopicRuleAssetPropertyTimestampArgs> timestamp;
-        private Output<TopicRuleAssetPropertyVariantArgs> value;
+        private TopicRuleAssetPropertyValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleAssetPropertyValueArgs();
         }
 
         public Builder(TopicRuleAssetPropertyValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.quality = defaults.quality;
-    	      this.timestamp = defaults.timestamp;
-    	      this.value = defaults.value;
+            $ = new TopicRuleAssetPropertyValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder quality(@Nullable Output<String> quality) {
-            this.quality = quality;
+            $.quality = quality;
             return this;
         }
-        public Builder quality(@Nullable String quality) {
-            this.quality = Codegen.ofNullable(quality);
-            return this;
+
+        public Builder quality(String quality) {
+            return quality(Output.of(quality));
         }
+
         public Builder timestamp(Output<TopicRuleAssetPropertyTimestampArgs> timestamp) {
-            this.timestamp = Objects.requireNonNull(timestamp);
+            $.timestamp = timestamp;
             return this;
         }
+
         public Builder timestamp(TopicRuleAssetPropertyTimestampArgs timestamp) {
-            this.timestamp = Output.of(Objects.requireNonNull(timestamp));
-            return this;
+            return timestamp(Output.of(timestamp));
         }
+
         public Builder value(Output<TopicRuleAssetPropertyVariantArgs> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(TopicRuleAssetPropertyVariantArgs value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TopicRuleAssetPropertyValueArgs build() {
-            return new TopicRuleAssetPropertyValueArgs(quality, timestamp, value);
+            return value(Output.of(value));
+        }
+
+        public TopicRuleAssetPropertyValueArgs build() {
+            $.timestamp = Objects.requireNonNull($.timestamp, "expected parameter 'timestamp' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="datasetName")
-      private final @Nullable Output<String> datasetName;
+    private @Nullable Output<String> datasetName;
 
-    public Output<String> datasetName() {
-        return this.datasetName == null ? Codegen.empty() : this.datasetName;
+    public Optional<Output<String>> datasetName() {
+        return Optional.ofNullable(this.datasetName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class FlockerVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="datasetUUID")
-      private final @Nullable Output<String> datasetUUID;
+    private @Nullable Output<String> datasetUUID;
 
-    public Output<String> datasetUUID() {
-        return this.datasetUUID == null ? Codegen.empty() : this.datasetUUID;
+    public Optional<Output<String>> datasetUUID() {
+        return Optional.ofNullable(this.datasetUUID);
     }
 
-    public FlockerVolumeSourceArgs(
-        @Nullable Output<String> datasetName,
-        @Nullable Output<String> datasetUUID) {
-        this.datasetName = datasetName;
-        this.datasetUUID = datasetUUID;
-    }
+    private FlockerVolumeSourceArgs() {}
 
-    private FlockerVolumeSourceArgs() {
-        this.datasetName = Codegen.empty();
-        this.datasetUUID = Codegen.empty();
+    private FlockerVolumeSourceArgs(FlockerVolumeSourceArgs $) {
+        this.datasetName = $.datasetName;
+        this.datasetUUID = $.datasetUUID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlockerVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> datasetName;
-        private @Nullable Output<String> datasetUUID;
+        private FlockerVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlockerVolumeSourceArgs();
         }
 
         public Builder(FlockerVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetName = defaults.datasetName;
-    	      this.datasetUUID = defaults.datasetUUID;
+            $ = new FlockerVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetName(@Nullable Output<String> datasetName) {
-            this.datasetName = datasetName;
+            $.datasetName = datasetName;
             return this;
         }
-        public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Codegen.ofNullable(datasetName);
-            return this;
+
+        public Builder datasetName(String datasetName) {
+            return datasetName(Output.of(datasetName));
         }
+
         public Builder datasetUUID(@Nullable Output<String> datasetUUID) {
-            this.datasetUUID = datasetUUID;
+            $.datasetUUID = datasetUUID;
             return this;
         }
-        public Builder datasetUUID(@Nullable String datasetUUID) {
-            this.datasetUUID = Codegen.ofNullable(datasetUUID);
-            return this;
-        }        public FlockerVolumeSourceArgs build() {
-            return new FlockerVolumeSourceArgs(datasetName, datasetUUID);
+
+        public Builder datasetUUID(String datasetUUID) {
+            return datasetUUID(Output.of(datasetUUID));
+        }
+
+        public FlockerVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

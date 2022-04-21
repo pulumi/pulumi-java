@@ -5,12 +5,12 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.enums.ArgumentArgumentKind;
 import com.pulumi.googlenative.bigquery_v2.enums.ArgumentMode;
 import com.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="argumentKind")
-      private final @Nullable Output<ArgumentArgumentKind> argumentKind;
+    private @Nullable Output<ArgumentArgumentKind> argumentKind;
 
-    public Output<ArgumentArgumentKind> argumentKind() {
-        return this.argumentKind == null ? Codegen.empty() : this.argumentKind;
+    public Optional<Output<ArgumentArgumentKind>> argumentKind() {
+        return Optional.ofNullable(this.argumentKind);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable Output<StandardSqlDataTypeArgs> dataType;
+    private @Nullable Output<StandardSqlDataTypeArgs> dataType;
 
-    public Output<StandardSqlDataTypeArgs> dataType() {
-        return this.dataType == null ? Codegen.empty() : this.dataType;
+    public Optional<Output<StandardSqlDataTypeArgs>> dataType() {
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<ArgumentMode> mode;
+    private @Nullable Output<ArgumentMode> mode;
 
-    public Output<ArgumentMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<ArgumentMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ArgumentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ArgumentArgs(
-        @Nullable Output<ArgumentArgumentKind> argumentKind,
-        @Nullable Output<StandardSqlDataTypeArgs> dataType,
-        @Nullable Output<ArgumentMode> mode,
-        @Nullable Output<String> name) {
-        this.argumentKind = argumentKind;
-        this.dataType = dataType;
-        this.mode = mode;
-        this.name = name;
-    }
+    private ArgumentArgs() {}
 
-    private ArgumentArgs() {
-        this.argumentKind = Codegen.empty();
-        this.dataType = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.name = Codegen.empty();
+    private ArgumentArgs(ArgumentArgs $) {
+        this.argumentKind = $.argumentKind;
+        this.dataType = $.dataType;
+        this.mode = $.mode;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ArgumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ArgumentArgumentKind> argumentKind;
-        private @Nullable Output<StandardSqlDataTypeArgs> dataType;
-        private @Nullable Output<ArgumentMode> mode;
-        private @Nullable Output<String> name;
+        private ArgumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ArgumentArgs();
         }
 
         public Builder(ArgumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.argumentKind = defaults.argumentKind;
-    	      this.dataType = defaults.dataType;
-    	      this.mode = defaults.mode;
-    	      this.name = defaults.name;
+            $ = new ArgumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder argumentKind(@Nullable Output<ArgumentArgumentKind> argumentKind) {
-            this.argumentKind = argumentKind;
+            $.argumentKind = argumentKind;
             return this;
         }
-        public Builder argumentKind(@Nullable ArgumentArgumentKind argumentKind) {
-            this.argumentKind = Codegen.ofNullable(argumentKind);
-            return this;
+
+        public Builder argumentKind(ArgumentArgumentKind argumentKind) {
+            return argumentKind(Output.of(argumentKind));
         }
+
         public Builder dataType(@Nullable Output<StandardSqlDataTypeArgs> dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
-        public Builder dataType(@Nullable StandardSqlDataTypeArgs dataType) {
-            this.dataType = Codegen.ofNullable(dataType);
-            return this;
+
+        public Builder dataType(StandardSqlDataTypeArgs dataType) {
+            return dataType(Output.of(dataType));
         }
+
         public Builder mode(@Nullable Output<ArgumentMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable ArgumentMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(ArgumentMode mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ArgumentArgs build() {
-            return new ArgumentArgs(argumentKind, dataType, mode, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ArgumentArgs build() {
+            return $;
         }
     }
+
 }

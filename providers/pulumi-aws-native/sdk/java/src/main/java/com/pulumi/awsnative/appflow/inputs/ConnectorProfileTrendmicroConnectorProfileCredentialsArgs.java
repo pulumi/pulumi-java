@@ -5,7 +5,6 @@ package com.pulumi.awsnative.appflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class ConnectorProfileTrendmicroConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="apiSecretKey", required=true)
-      private final Output<String> apiSecretKey;
+    private Output<String> apiSecretKey;
 
     public Output<String> apiSecretKey() {
         return this.apiSecretKey;
     }
 
-    public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(Output<String> apiSecretKey) {
-        this.apiSecretKey = Objects.requireNonNull(apiSecretKey, "expected parameter 'apiSecretKey' to be non-null");
-    }
+    private ConnectorProfileTrendmicroConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileTrendmicroConnectorProfileCredentialsArgs() {
-        this.apiSecretKey = Codegen.empty();
+    private ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(ConnectorProfileTrendmicroConnectorProfileCredentialsArgs $) {
+        this.apiSecretKey = $.apiSecretKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileTrendmicroConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiSecretKey;
+        private ConnectorProfileTrendmicroConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileTrendmicroConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiSecretKey = defaults.apiSecretKey;
+            $ = new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiSecretKey(Output<String> apiSecretKey) {
-            this.apiSecretKey = Objects.requireNonNull(apiSecretKey);
+            $.apiSecretKey = apiSecretKey;
             return this;
         }
+
         public Builder apiSecretKey(String apiSecretKey) {
-            this.apiSecretKey = Output.of(Objects.requireNonNull(apiSecretKey));
-            return this;
-        }        public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileTrendmicroConnectorProfileCredentialsArgs(apiSecretKey);
+            return apiSecretKey(Output.of(apiSecretKey));
+        }
+
+        public ConnectorProfileTrendmicroConnectorProfileCredentialsArgs build() {
+            $.apiSecretKey = Objects.requireNonNull($.apiSecretKey, "expected parameter 'apiSecretKey' to be non-null");
+            return $;
         }
     }
+
 }

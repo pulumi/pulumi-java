@@ -23,7 +23,7 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -34,10 +34,10 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,57 @@ public final class MetadataSourceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="sourceId")
-      private final @Nullable String sourceId;
+    private @Nullable String sourceId;
 
     public Optional<String> sourceId() {
-        return this.sourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceId);
+        return Optional.ofNullable(this.sourceId);
     }
 
-    public MetadataSourceResponse(
-        String kind,
-        @Nullable String name,
-        @Nullable String sourceId) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = name;
-        this.sourceId = sourceId;
-    }
+    private MetadataSourceResponse() {}
 
-    private MetadataSourceResponse() {
-        this.kind = null;
-        this.name = null;
-        this.sourceId = null;
+    private MetadataSourceResponse(MetadataSourceResponse $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private @Nullable String name;
-        private @Nullable String sourceId;
+        private MetadataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataSourceResponse();
         }
 
         public Builder(MetadataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.sourceId = defaults.sourceId;
+            $ = new MetadataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = sourceId;
+            $.sourceId = sourceId;
             return this;
-        }        public MetadataSourceResponse build() {
-            return new MetadataSourceResponse(kind, name, sourceId);
+        }
+
+        public MetadataSourceResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="v1Name", required=true)
-      private final Output<String> v1Name;
+    private Output<String> v1Name;
 
     public Output<String> v1Name() {
         return this.v1Name;
@@ -35,66 +34,64 @@ public final class FingerprintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="v2Blob", required=true)
-      private final Output<List<String>> v2Blob;
+    private Output<List<String>> v2Blob;
 
     public Output<List<String>> v2Blob() {
         return this.v2Blob;
     }
 
-    public FingerprintArgs(
-        Output<String> v1Name,
-        Output<List<String>> v2Blob) {
-        this.v1Name = Objects.requireNonNull(v1Name, "expected parameter 'v1Name' to be non-null");
-        this.v2Blob = Objects.requireNonNull(v2Blob, "expected parameter 'v2Blob' to be non-null");
-    }
+    private FingerprintArgs() {}
 
-    private FingerprintArgs() {
-        this.v1Name = Codegen.empty();
-        this.v2Blob = Codegen.empty();
+    private FingerprintArgs(FingerprintArgs $) {
+        this.v1Name = $.v1Name;
+        this.v2Blob = $.v2Blob;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FingerprintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> v1Name;
-        private Output<List<String>> v2Blob;
+        private FingerprintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FingerprintArgs();
         }
 
         public Builder(FingerprintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.v1Name = defaults.v1Name;
-    	      this.v2Blob = defaults.v2Blob;
+            $ = new FingerprintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder v1Name(Output<String> v1Name) {
-            this.v1Name = Objects.requireNonNull(v1Name);
+            $.v1Name = v1Name;
             return this;
         }
+
         public Builder v1Name(String v1Name) {
-            this.v1Name = Output.of(Objects.requireNonNull(v1Name));
-            return this;
+            return v1Name(Output.of(v1Name));
         }
+
         public Builder v2Blob(Output<List<String>> v2Blob) {
-            this.v2Blob = Objects.requireNonNull(v2Blob);
+            $.v2Blob = v2Blob;
             return this;
         }
+
         public Builder v2Blob(List<String> v2Blob) {
-            this.v2Blob = Output.of(Objects.requireNonNull(v2Blob));
-            return this;
+            return v2Blob(Output.of(v2Blob));
         }
+
         public Builder v2Blob(String... v2Blob) {
             return v2Blob(List.of(v2Blob));
-        }        public FingerprintArgs build() {
-            return new FingerprintArgs(v1Name, v2Blob);
+        }
+
+        public FingerprintArgs build() {
+            $.v1Name = Objects.requireNonNull($.v1Name, "expected parameter 'v1Name' to be non-null");
+            $.v2Blob = Objects.requireNonNull($.v2Blob, "expected parameter 'v2Blob' to be non-null");
+            return $;
         }
     }
+
 }

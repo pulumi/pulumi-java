@@ -5,10 +5,10 @@ package com.pulumi.gcp.sql.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends com.pul
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<Integer> day;
+    private @Nullable Output<Integer> day;
 
-    public Output<Integer> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<Integer>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends com.pul
      * 
      */
     @Import(name="hour")
-      private final @Nullable Output<Integer> hour;
+    private @Nullable Output<Integer> hour;
 
-    public Output<Integer> hour() {
-        return this.hour == null ? Codegen.empty() : this.hour;
+    public Optional<Output<Integer>> hour() {
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class DatabaseInstanceSettingsMaintenanceWindowArgs extends com.pul
      * 
      */
     @Import(name="updateTrack")
-      private final @Nullable Output<String> updateTrack;
+    private @Nullable Output<String> updateTrack;
 
-    public Output<String> updateTrack() {
-        return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
+    public Optional<Output<String>> updateTrack() {
+        return Optional.ofNullable(this.updateTrack);
     }
 
-    public DatabaseInstanceSettingsMaintenanceWindowArgs(
-        @Nullable Output<Integer> day,
-        @Nullable Output<Integer> hour,
-        @Nullable Output<String> updateTrack) {
-        this.day = day;
-        this.hour = hour;
-        this.updateTrack = updateTrack;
-    }
+    private DatabaseInstanceSettingsMaintenanceWindowArgs() {}
 
-    private DatabaseInstanceSettingsMaintenanceWindowArgs() {
-        this.day = Codegen.empty();
-        this.hour = Codegen.empty();
-        this.updateTrack = Codegen.empty();
+    private DatabaseInstanceSettingsMaintenanceWindowArgs(DatabaseInstanceSettingsMaintenanceWindowArgs $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.updateTrack = $.updateTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseInstanceSettingsMaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> day;
-        private @Nullable Output<Integer> hour;
-        private @Nullable Output<String> updateTrack;
+        private DatabaseInstanceSettingsMaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseInstanceSettingsMaintenanceWindowArgs();
         }
 
         public Builder(DatabaseInstanceSettingsMaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.updateTrack = defaults.updateTrack;
+            $ = new DatabaseInstanceSettingsMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<Integer> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable Integer day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(Integer day) {
+            return day(Output.of(day));
         }
+
         public Builder hour(@Nullable Output<Integer> hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
-        public Builder hour(@Nullable Integer hour) {
-            this.hour = Codegen.ofNullable(hour);
-            return this;
+
+        public Builder hour(Integer hour) {
+            return hour(Output.of(hour));
         }
+
         public Builder updateTrack(@Nullable Output<String> updateTrack) {
-            this.updateTrack = updateTrack;
+            $.updateTrack = updateTrack;
             return this;
         }
-        public Builder updateTrack(@Nullable String updateTrack) {
-            this.updateTrack = Codegen.ofNullable(updateTrack);
-            return this;
-        }        public DatabaseInstanceSettingsMaintenanceWindowArgs build() {
-            return new DatabaseInstanceSettingsMaintenanceWindowArgs(day, hour, updateTrack);
+
+        public Builder updateTrack(String updateTrack) {
+            return updateTrack(Output.of(updateTrack));
+        }
+
+        public DatabaseInstanceSettingsMaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

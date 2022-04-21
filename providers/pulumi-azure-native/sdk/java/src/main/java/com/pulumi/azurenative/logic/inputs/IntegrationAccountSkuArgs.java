@@ -7,7 +7,6 @@ import com.pulumi.azurenative.logic.enums.IntegrationAccountSkuName;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,49 +24,49 @@ public final class IntegrationAccountSkuArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,IntegrationAccountSkuName>> name;
+    private Output<Either<String,IntegrationAccountSkuName>> name;
 
     public Output<Either<String,IntegrationAccountSkuName>> name() {
         return this.name;
     }
 
-    public IntegrationAccountSkuArgs(Output<Either<String,IntegrationAccountSkuName>> name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private IntegrationAccountSkuArgs() {}
 
-    private IntegrationAccountSkuArgs() {
-        this.name = Codegen.empty();
+    private IntegrationAccountSkuArgs(IntegrationAccountSkuArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationAccountSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,IntegrationAccountSkuName>> name;
+        private IntegrationAccountSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationAccountSkuArgs();
         }
 
         public Builder(IntegrationAccountSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new IntegrationAccountSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,IntegrationAccountSkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,IntegrationAccountSkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public IntegrationAccountSkuArgs build() {
-            return new IntegrationAccountSkuArgs(name);
+            return name(Output.of(name));
+        }
+
+        public IntegrationAccountSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

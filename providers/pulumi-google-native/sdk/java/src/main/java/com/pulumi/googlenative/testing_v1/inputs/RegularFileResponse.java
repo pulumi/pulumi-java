@@ -22,7 +22,7 @@ public final class RegularFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final FileReferenceResponse content;
+    private FileReferenceResponse content;
 
     public FileReferenceResponse content() {
         return this.content;
@@ -33,55 +33,52 @@ public final class RegularFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="devicePath", required=true)
-      private final String devicePath;
+    private String devicePath;
 
     public String devicePath() {
         return this.devicePath;
     }
 
-    public RegularFileResponse(
-        FileReferenceResponse content,
-        String devicePath) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
-    }
+    private RegularFileResponse() {}
 
-    private RegularFileResponse() {
-        this.content = null;
-        this.devicePath = null;
+    private RegularFileResponse(RegularFileResponse $) {
+        this.content = $.content;
+        this.devicePath = $.devicePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegularFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse content;
-        private String devicePath;
+        private RegularFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegularFileResponse();
         }
 
         public Builder(RegularFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.devicePath = defaults.devicePath;
+            $ = new RegularFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(FileReferenceResponse content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder devicePath(String devicePath) {
-            this.devicePath = Objects.requireNonNull(devicePath);
+            $.devicePath = devicePath;
             return this;
-        }        public RegularFileResponse build() {
-            return new RegularFileResponse(content, devicePath);
+        }
+
+        public RegularFileResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.devicePath = Objects.requireNonNull($.devicePath, "expected parameter 'devicePath' to be non-null");
+            return $;
         }
     }
+
 }

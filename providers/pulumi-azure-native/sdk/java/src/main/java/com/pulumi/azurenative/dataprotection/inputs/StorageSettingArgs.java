@@ -8,9 +8,9 @@ import com.pulumi.azurenative.dataprotection.enums.StorageSettingTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="datastoreType")
-      private final @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
+    private @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
 
-    public Output<Either<String,StorageSettingStoreTypes>> datastoreType() {
-        return this.datastoreType == null ? Codegen.empty() : this.datastoreType;
+    public Optional<Output<Either<String,StorageSettingStoreTypes>>> datastoreType() {
+        return Optional.ofNullable(this.datastoreType);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class StorageSettingArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,StorageSettingTypes>> type;
+    private @Nullable Output<Either<String,StorageSettingTypes>> type;
 
-    public Output<Either<String,StorageSettingTypes>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,StorageSettingTypes>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public StorageSettingArgs(
-        @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType,
-        @Nullable Output<Either<String,StorageSettingTypes>> type) {
-        this.datastoreType = datastoreType;
-        this.type = type;
-    }
+    private StorageSettingArgs() {}
 
-    private StorageSettingArgs() {
-        this.datastoreType = Codegen.empty();
-        this.type = Codegen.empty();
+    private StorageSettingArgs(StorageSettingArgs $) {
+        this.datastoreType = $.datastoreType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType;
-        private @Nullable Output<Either<String,StorageSettingTypes>> type;
+        private StorageSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageSettingArgs();
         }
 
         public Builder(StorageSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreType = defaults.datastoreType;
-    	      this.type = defaults.type;
+            $ = new StorageSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreType(@Nullable Output<Either<String,StorageSettingStoreTypes>> datastoreType) {
-            this.datastoreType = datastoreType;
+            $.datastoreType = datastoreType;
             return this;
         }
-        public Builder datastoreType(@Nullable Either<String,StorageSettingStoreTypes> datastoreType) {
-            this.datastoreType = Codegen.ofNullable(datastoreType);
-            return this;
+
+        public Builder datastoreType(Either<String,StorageSettingStoreTypes> datastoreType) {
+            return datastoreType(Output.of(datastoreType));
         }
+
         public Builder type(@Nullable Output<Either<String,StorageSettingTypes>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,StorageSettingTypes> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public StorageSettingArgs build() {
-            return new StorageSettingArgs(datastoreType, type);
+
+        public Builder type(Either<String,StorageSettingTypes> type) {
+            return type(Output.of(type));
+        }
+
+        public StorageSettingArgs build() {
+            return $;
         }
     }
+
 }

@@ -13,45 +13,45 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImageArgs Empty = new GetImageArgs();
 
     @Import(name="imageArn", required=true)
-      private final String imageArn;
+    private String imageArn;
 
     public String imageArn() {
         return this.imageArn;
     }
 
-    public GetImageArgs(String imageArn) {
-        this.imageArn = Objects.requireNonNull(imageArn, "expected parameter 'imageArn' to be non-null");
-    }
+    private GetImageArgs() {}
 
-    private GetImageArgs() {
-        this.imageArn = null;
+    private GetImageArgs(GetImageArgs $) {
+        this.imageArn = $.imageArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageArn;
+        private GetImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImageArgs();
         }
 
         public Builder(GetImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageArn = defaults.imageArn;
+            $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageArn(String imageArn) {
-            this.imageArn = Objects.requireNonNull(imageArn);
+            $.imageArn = imageArn;
             return this;
-        }        public GetImageArgs build() {
-            return new GetImageArgs(imageArn);
+        }
+
+        public GetImageArgs build() {
+            $.imageArn = Objects.requireNonNull($.imageArn, "expected parameter 'imageArn' to be non-null");
+            return $;
         }
     }
+
 }

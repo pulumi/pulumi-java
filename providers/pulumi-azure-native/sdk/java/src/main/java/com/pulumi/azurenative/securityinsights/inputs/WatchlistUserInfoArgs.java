@@ -5,9 +5,9 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WatchlistUserInfoArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="objectId")
-      private final @Nullable Output<String> objectId;
+    private @Nullable Output<String> objectId;
 
-    public Output<String> objectId() {
-        return this.objectId == null ? Codegen.empty() : this.objectId;
+    public Optional<Output<String>> objectId() {
+        return Optional.ofNullable(this.objectId);
     }
 
-    public WatchlistUserInfoArgs(@Nullable Output<String> objectId) {
-        this.objectId = objectId;
-    }
+    private WatchlistUserInfoArgs() {}
 
-    private WatchlistUserInfoArgs() {
-        this.objectId = Codegen.empty();
+    private WatchlistUserInfoArgs(WatchlistUserInfoArgs $) {
+        this.objectId = $.objectId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WatchlistUserInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> objectId;
+        private WatchlistUserInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WatchlistUserInfoArgs();
         }
 
         public Builder(WatchlistUserInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectId = defaults.objectId;
+            $ = new WatchlistUserInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectId(@Nullable Output<String> objectId) {
-            this.objectId = objectId;
+            $.objectId = objectId;
             return this;
         }
-        public Builder objectId(@Nullable String objectId) {
-            this.objectId = Codegen.ofNullable(objectId);
-            return this;
-        }        public WatchlistUserInfoArgs build() {
-            return new WatchlistUserInfoArgs(objectId);
+
+        public Builder objectId(String objectId) {
+            return objectId(Output.of(objectId));
+        }
+
+        public WatchlistUserInfoArgs build() {
+            return $;
         }
     }
+
 }

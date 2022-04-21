@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class InstanceTemplateServiceAccountArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -35,66 +35,63 @@ public final class InstanceTemplateServiceAccountArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scopes", required=true)
-      private final Output<List<String>> scopes;
+    private Output<List<String>> scopes;
 
     public Output<List<String>> scopes() {
         return this.scopes;
     }
 
-    public InstanceTemplateServiceAccountArgs(
-        @Nullable Output<String> email,
-        Output<List<String>> scopes) {
-        this.email = email;
-        this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
-    }
+    private InstanceTemplateServiceAccountArgs() {}
 
-    private InstanceTemplateServiceAccountArgs() {
-        this.email = Codegen.empty();
-        this.scopes = Codegen.empty();
+    private InstanceTemplateServiceAccountArgs(InstanceTemplateServiceAccountArgs $) {
+        this.email = $.email;
+        this.scopes = $.scopes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private Output<List<String>> scopes;
+        private InstanceTemplateServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateServiceAccountArgs();
         }
 
         public Builder(InstanceTemplateServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.scopes = defaults.scopes;
+            $ = new InstanceTemplateServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder scopes(Output<List<String>> scopes) {
-            this.scopes = Objects.requireNonNull(scopes);
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(List<String> scopes) {
-            this.scopes = Output.of(Objects.requireNonNull(scopes));
-            return this;
+            return scopes(Output.of(scopes));
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
-        }        public InstanceTemplateServiceAccountArgs build() {
-            return new InstanceTemplateServiceAccountArgs(email, scopes);
+        }
+
+        public InstanceTemplateServiceAccountArgs build() {
+            $.scopes = Objects.requireNonNull($.scopes, "expected parameter 'scopes' to be non-null");
+            return $;
         }
     }
+
 }

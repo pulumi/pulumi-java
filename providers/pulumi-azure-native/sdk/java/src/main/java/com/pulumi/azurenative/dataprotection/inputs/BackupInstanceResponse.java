@@ -28,7 +28,7 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="currentProtectionState", required=true)
-      private final String currentProtectionState;
+    private String currentProtectionState;
 
     public String currentProtectionState() {
         return this.currentProtectionState;
@@ -39,7 +39,7 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dataSourceInfo", required=true)
-      private final DatasourceResponse dataSourceInfo;
+    private DatasourceResponse dataSourceInfo;
 
     public DatasourceResponse dataSourceInfo() {
         return this.dataSourceInfo;
@@ -50,10 +50,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dataSourceSetInfo")
-      private final @Nullable DatasourceSetResponse dataSourceSetInfo;
+    private @Nullable DatasourceSetResponse dataSourceSetInfo;
 
     public Optional<DatasourceSetResponse> dataSourceSetInfo() {
-        return this.dataSourceSetInfo == null ? Optional.empty() : Optional.ofNullable(this.dataSourceSetInfo);
+        return Optional.ofNullable(this.dataSourceSetInfo);
     }
 
     /**
@@ -61,14 +61,14 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -79,7 +79,7 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="policyInfo", required=true)
-      private final PolicyInfoResponse policyInfo;
+    private PolicyInfoResponse policyInfo;
 
     public PolicyInfoResponse policyInfo() {
         return this.policyInfo;
@@ -90,7 +90,7 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="protectionErrorDetails", required=true)
-      private final UserFacingErrorResponse protectionErrorDetails;
+    private UserFacingErrorResponse protectionErrorDetails;
 
     public UserFacingErrorResponse protectionErrorDetails() {
         return this.protectionErrorDetails;
@@ -101,7 +101,7 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="protectionStatus", required=true)
-      private final ProtectionStatusDetailsResponse protectionStatus;
+    private ProtectionStatusDetailsResponse protectionStatus;
 
     public ProtectionStatusDetailsResponse protectionStatus() {
         return this.protectionStatus;
@@ -112,118 +112,99 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public BackupInstanceResponse(
-        String currentProtectionState,
-        DatasourceResponse dataSourceInfo,
-        @Nullable DatasourceSetResponse dataSourceSetInfo,
-        @Nullable String friendlyName,
-        String objectType,
-        PolicyInfoResponse policyInfo,
-        UserFacingErrorResponse protectionErrorDetails,
-        ProtectionStatusDetailsResponse protectionStatus,
-        String provisioningState) {
-        this.currentProtectionState = Objects.requireNonNull(currentProtectionState, "expected parameter 'currentProtectionState' to be non-null");
-        this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo, "expected parameter 'dataSourceInfo' to be non-null");
-        this.dataSourceSetInfo = dataSourceSetInfo;
-        this.friendlyName = friendlyName;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.policyInfo = Objects.requireNonNull(policyInfo, "expected parameter 'policyInfo' to be non-null");
-        this.protectionErrorDetails = Objects.requireNonNull(protectionErrorDetails, "expected parameter 'protectionErrorDetails' to be non-null");
-        this.protectionStatus = Objects.requireNonNull(protectionStatus, "expected parameter 'protectionStatus' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private BackupInstanceResponse() {}
 
-    private BackupInstanceResponse() {
-        this.currentProtectionState = null;
-        this.dataSourceInfo = null;
-        this.dataSourceSetInfo = null;
-        this.friendlyName = null;
-        this.objectType = null;
-        this.policyInfo = null;
-        this.protectionErrorDetails = null;
-        this.protectionStatus = null;
-        this.provisioningState = null;
+    private BackupInstanceResponse(BackupInstanceResponse $) {
+        this.currentProtectionState = $.currentProtectionState;
+        this.dataSourceInfo = $.dataSourceInfo;
+        this.dataSourceSetInfo = $.dataSourceSetInfo;
+        this.friendlyName = $.friendlyName;
+        this.objectType = $.objectType;
+        this.policyInfo = $.policyInfo;
+        this.protectionErrorDetails = $.protectionErrorDetails;
+        this.protectionStatus = $.protectionStatus;
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupInstanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String currentProtectionState;
-        private DatasourceResponse dataSourceInfo;
-        private @Nullable DatasourceSetResponse dataSourceSetInfo;
-        private @Nullable String friendlyName;
-        private String objectType;
-        private PolicyInfoResponse policyInfo;
-        private UserFacingErrorResponse protectionErrorDetails;
-        private ProtectionStatusDetailsResponse protectionStatus;
-        private String provisioningState;
+        private BackupInstanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupInstanceResponse();
         }
 
         public Builder(BackupInstanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentProtectionState = defaults.currentProtectionState;
-    	      this.dataSourceInfo = defaults.dataSourceInfo;
-    	      this.dataSourceSetInfo = defaults.dataSourceSetInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.objectType = defaults.objectType;
-    	      this.policyInfo = defaults.policyInfo;
-    	      this.protectionErrorDetails = defaults.protectionErrorDetails;
-    	      this.protectionStatus = defaults.protectionStatus;
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new BackupInstanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder currentProtectionState(String currentProtectionState) {
-            this.currentProtectionState = Objects.requireNonNull(currentProtectionState);
+            $.currentProtectionState = currentProtectionState;
             return this;
         }
+
         public Builder dataSourceInfo(DatasourceResponse dataSourceInfo) {
-            this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
+            $.dataSourceInfo = dataSourceInfo;
             return this;
         }
+
         public Builder dataSourceSetInfo(@Nullable DatasourceSetResponse dataSourceSetInfo) {
-            this.dataSourceSetInfo = dataSourceSetInfo;
+            $.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder policyInfo(PolicyInfoResponse policyInfo) {
-            this.policyInfo = Objects.requireNonNull(policyInfo);
+            $.policyInfo = policyInfo;
             return this;
         }
+
         public Builder protectionErrorDetails(UserFacingErrorResponse protectionErrorDetails) {
-            this.protectionErrorDetails = Objects.requireNonNull(protectionErrorDetails);
+            $.protectionErrorDetails = protectionErrorDetails;
             return this;
         }
+
         public Builder protectionStatus(ProtectionStatusDetailsResponse protectionStatus) {
-            this.protectionStatus = Objects.requireNonNull(protectionStatus);
+            $.protectionStatus = protectionStatus;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public BackupInstanceResponse build() {
-            return new BackupInstanceResponse(currentProtectionState, dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo, protectionErrorDetails, protectionStatus, provisioningState);
+        }
+
+        public BackupInstanceResponse build() {
+            $.currentProtectionState = Objects.requireNonNull($.currentProtectionState, "expected parameter 'currentProtectionState' to be non-null");
+            $.dataSourceInfo = Objects.requireNonNull($.dataSourceInfo, "expected parameter 'dataSourceInfo' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.policyInfo = Objects.requireNonNull($.policyInfo, "expected parameter 'policyInfo' to be non-null");
+            $.protectionErrorDetails = Objects.requireNonNull($.protectionErrorDetails, "expected parameter 'protectionErrorDetails' to be non-null");
+            $.protectionStatus = Objects.requireNonNull($.protectionStatus, "expected parameter 'protectionStatus' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

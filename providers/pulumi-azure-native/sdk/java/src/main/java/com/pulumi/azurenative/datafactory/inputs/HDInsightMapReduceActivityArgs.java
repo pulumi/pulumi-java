@@ -17,6 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +34,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="arguments")
-      private final @Nullable Output<List<Object>> arguments;
+    private @Nullable Output<List<Object>> arguments;
 
-    public Output<List<Object>> arguments() {
-        return this.arguments == null ? Codegen.empty() : this.arguments;
+    public Optional<Output<List<Object>>> arguments() {
+        return Optional.ofNullable(this.arguments);
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="className", required=true)
-      private final Output<Object> className;
+    private Output<Object> className;
 
     public Output<Object> className() {
         return this.className;
@@ -55,10 +56,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="defines")
-      private final @Nullable Output<Map<String,Object>> defines;
+    private @Nullable Output<Map<String,Object>> defines;
 
-    public Output<Map<String,Object>> defines() {
-        return this.defines == null ? Codegen.empty() : this.defines;
+    public Optional<Output<Map<String,Object>>> defines() {
+        return Optional.ofNullable(this.defines);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="dependsOn")
-      private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
+    private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
-    public Output<List<ActivityDependencyArgs>> dependsOn() {
-        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
+    public Optional<Output<List<ActivityDependencyArgs>>> dependsOn() {
+        return Optional.ofNullable(this.dependsOn);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -88,10 +89,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="getDebugInfo")
-      private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+    private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
-    public Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo() {
-        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
+    public Optional<Output<Either<String,HDInsightActivityDebugInfoOption>>> getDebugInfo() {
+        return Optional.ofNullable(this.getDebugInfo);
     }
 
     /**
@@ -99,7 +100,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="jarFilePath", required=true)
-      private final Output<Object> jarFilePath;
+    private Output<Object> jarFilePath;
 
     public Output<Object> jarFilePath() {
         return this.jarFilePath;
@@ -110,10 +111,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="jarLibs")
-      private final @Nullable Output<List<Object>> jarLibs;
+    private @Nullable Output<List<Object>> jarLibs;
 
-    public Output<List<Object>> jarLibs() {
-        return this.jarLibs == null ? Codegen.empty() : this.jarLibs;
+    public Optional<Output<List<Object>>> jarLibs() {
+        return Optional.ofNullable(this.jarLibs);
     }
 
     /**
@@ -121,10 +122,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="jarLinkedService")
-      private final @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService;
+    private @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService;
 
-    public Output<LinkedServiceReferenceArgs> jarLinkedService() {
-        return this.jarLinkedService == null ? Codegen.empty() : this.jarLinkedService;
+    public Optional<Output<LinkedServiceReferenceArgs>> jarLinkedService() {
+        return Optional.ofNullable(this.jarLinkedService);
     }
 
     /**
@@ -132,10 +133,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="linkedServiceName")
-      private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
+    private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
-    public Output<LinkedServiceReferenceArgs> linkedServiceName() {
-        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
+    public Optional<Output<LinkedServiceReferenceArgs>> linkedServiceName() {
+        return Optional.ofNullable(this.linkedServiceName);
     }
 
     /**
@@ -143,7 +144,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -154,10 +155,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<ActivityPolicyArgs> policy;
+    private @Nullable Output<ActivityPolicyArgs> policy;
 
-    public Output<ActivityPolicyArgs> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<ActivityPolicyArgs>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -165,10 +166,10 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="storageLinkedServices")
-      private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+    private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
-    public Output<List<LinkedServiceReferenceArgs>> storageLinkedServices() {
-        return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
+    public Optional<Output<List<LinkedServiceReferenceArgs>>> storageLinkedServices() {
+        return Optional.ofNullable(this.storageLinkedServices);
     }
 
     /**
@@ -177,7 +178,7 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -188,247 +189,212 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="userProperties")
-      private final @Nullable Output<List<UserPropertyArgs>> userProperties;
+    private @Nullable Output<List<UserPropertyArgs>> userProperties;
 
-    public Output<List<UserPropertyArgs>> userProperties() {
-        return this.userProperties == null ? Codegen.empty() : this.userProperties;
+    public Optional<Output<List<UserPropertyArgs>>> userProperties() {
+        return Optional.ofNullable(this.userProperties);
     }
 
-    public HDInsightMapReduceActivityArgs(
-        @Nullable Output<List<Object>> arguments,
-        Output<Object> className,
-        @Nullable Output<Map<String,Object>> defines,
-        @Nullable Output<List<ActivityDependencyArgs>> dependsOn,
-        @Nullable Output<String> description,
-        @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo,
-        Output<Object> jarFilePath,
-        @Nullable Output<List<Object>> jarLibs,
-        @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService,
-        @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName,
-        Output<String> name,
-        @Nullable Output<ActivityPolicyArgs> policy,
-        @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices,
-        Output<String> type,
-        @Nullable Output<List<UserPropertyArgs>> userProperties) {
-        this.arguments = arguments;
-        this.className = Objects.requireNonNull(className, "expected parameter 'className' to be non-null");
-        this.defines = defines;
-        this.dependsOn = dependsOn;
-        this.description = description;
-        this.getDebugInfo = getDebugInfo;
-        this.jarFilePath = Objects.requireNonNull(jarFilePath, "expected parameter 'jarFilePath' to be non-null");
-        this.jarLibs = jarLibs;
-        this.jarLinkedService = jarLinkedService;
-        this.linkedServiceName = linkedServiceName;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.policy = policy;
-        this.storageLinkedServices = storageLinkedServices;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.userProperties = userProperties;
-    }
+    private HDInsightMapReduceActivityArgs() {}
 
-    private HDInsightMapReduceActivityArgs() {
-        this.arguments = Codegen.empty();
-        this.className = Codegen.empty();
-        this.defines = Codegen.empty();
-        this.dependsOn = Codegen.empty();
-        this.description = Codegen.empty();
-        this.getDebugInfo = Codegen.empty();
-        this.jarFilePath = Codegen.empty();
-        this.jarLibs = Codegen.empty();
-        this.jarLinkedService = Codegen.empty();
-        this.linkedServiceName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.storageLinkedServices = Codegen.empty();
-        this.type = Codegen.empty();
-        this.userProperties = Codegen.empty();
+    private HDInsightMapReduceActivityArgs(HDInsightMapReduceActivityArgs $) {
+        this.arguments = $.arguments;
+        this.className = $.className;
+        this.defines = $.defines;
+        this.dependsOn = $.dependsOn;
+        this.description = $.description;
+        this.getDebugInfo = $.getDebugInfo;
+        this.jarFilePath = $.jarFilePath;
+        this.jarLibs = $.jarLibs;
+        this.jarLinkedService = $.jarLinkedService;
+        this.linkedServiceName = $.linkedServiceName;
+        this.name = $.name;
+        this.policy = $.policy;
+        this.storageLinkedServices = $.storageLinkedServices;
+        this.type = $.type;
+        this.userProperties = $.userProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightMapReduceActivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Object>> arguments;
-        private Output<Object> className;
-        private @Nullable Output<Map<String,Object>> defines;
-        private @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
-        private Output<Object> jarFilePath;
-        private @Nullable Output<List<Object>> jarLibs;
-        private @Nullable Output<LinkedServiceReferenceArgs> jarLinkedService;
-        private @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
-        private Output<String> name;
-        private @Nullable Output<ActivityPolicyArgs> policy;
-        private @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
-        private Output<String> type;
-        private @Nullable Output<List<UserPropertyArgs>> userProperties;
+        private HDInsightMapReduceActivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightMapReduceActivityArgs();
         }
 
         public Builder(HDInsightMapReduceActivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.className = defaults.className;
-    	      this.defines = defaults.defines;
-    	      this.dependsOn = defaults.dependsOn;
-    	      this.description = defaults.description;
-    	      this.getDebugInfo = defaults.getDebugInfo;
-    	      this.jarFilePath = defaults.jarFilePath;
-    	      this.jarLibs = defaults.jarLibs;
-    	      this.jarLinkedService = defaults.jarLinkedService;
-    	      this.linkedServiceName = defaults.linkedServiceName;
-    	      this.name = defaults.name;
-    	      this.policy = defaults.policy;
-    	      this.storageLinkedServices = defaults.storageLinkedServices;
-    	      this.type = defaults.type;
-    	      this.userProperties = defaults.userProperties;
+            $ = new HDInsightMapReduceActivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(@Nullable Output<List<Object>> arguments) {
-            this.arguments = arguments;
+            $.arguments = arguments;
             return this;
         }
-        public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Codegen.ofNullable(arguments);
-            return this;
+
+        public Builder arguments(List<Object> arguments) {
+            return arguments(Output.of(arguments));
         }
+
         public Builder arguments(Object... arguments) {
             return arguments(List.of(arguments));
         }
+
         public Builder className(Output<Object> className) {
-            this.className = Objects.requireNonNull(className);
+            $.className = className;
             return this;
         }
+
         public Builder className(Object className) {
-            this.className = Output.of(Objects.requireNonNull(className));
-            return this;
+            return className(Output.of(className));
         }
+
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
-            this.defines = defines;
+            $.defines = defines;
             return this;
         }
-        public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Codegen.ofNullable(defines);
-            return this;
+
+        public Builder defines(Map<String,Object> defines) {
+            return defines(Output.of(defines));
         }
+
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
-            this.dependsOn = dependsOn;
+            $.dependsOn = dependsOn;
             return this;
         }
-        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Codegen.ofNullable(dependsOn);
-            return this;
+
+        public Builder dependsOn(List<ActivityDependencyArgs> dependsOn) {
+            return dependsOn(Output.of(dependsOn));
         }
+
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
-            this.getDebugInfo = getDebugInfo;
+            $.getDebugInfo = getDebugInfo;
             return this;
         }
-        public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
-            return this;
+
+        public Builder getDebugInfo(Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
+            return getDebugInfo(Output.of(getDebugInfo));
         }
+
         public Builder jarFilePath(Output<Object> jarFilePath) {
-            this.jarFilePath = Objects.requireNonNull(jarFilePath);
+            $.jarFilePath = jarFilePath;
             return this;
         }
+
         public Builder jarFilePath(Object jarFilePath) {
-            this.jarFilePath = Output.of(Objects.requireNonNull(jarFilePath));
-            return this;
+            return jarFilePath(Output.of(jarFilePath));
         }
+
         public Builder jarLibs(@Nullable Output<List<Object>> jarLibs) {
-            this.jarLibs = jarLibs;
+            $.jarLibs = jarLibs;
             return this;
         }
-        public Builder jarLibs(@Nullable List<Object> jarLibs) {
-            this.jarLibs = Codegen.ofNullable(jarLibs);
-            return this;
+
+        public Builder jarLibs(List<Object> jarLibs) {
+            return jarLibs(Output.of(jarLibs));
         }
+
         public Builder jarLibs(Object... jarLibs) {
             return jarLibs(List.of(jarLibs));
         }
+
         public Builder jarLinkedService(@Nullable Output<LinkedServiceReferenceArgs> jarLinkedService) {
-            this.jarLinkedService = jarLinkedService;
+            $.jarLinkedService = jarLinkedService;
             return this;
         }
-        public Builder jarLinkedService(@Nullable LinkedServiceReferenceArgs jarLinkedService) {
-            this.jarLinkedService = Codegen.ofNullable(jarLinkedService);
-            return this;
+
+        public Builder jarLinkedService(LinkedServiceReferenceArgs jarLinkedService) {
+            return jarLinkedService(Output.of(jarLinkedService));
         }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
-            this.linkedServiceName = linkedServiceName;
+            $.linkedServiceName = linkedServiceName;
             return this;
         }
-        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
-            return this;
+
+        public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
+            return linkedServiceName(Output.of(linkedServiceName));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder policy(@Nullable Output<ActivityPolicyArgs> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(ActivityPolicyArgs policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
-            this.storageLinkedServices = storageLinkedServices;
+            $.storageLinkedServices = storageLinkedServices;
             return this;
         }
-        public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Codegen.ofNullable(storageLinkedServices);
-            return this;
+
+        public Builder storageLinkedServices(List<LinkedServiceReferenceArgs> storageLinkedServices) {
+            return storageLinkedServices(Output.of(storageLinkedServices));
         }
+
         public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
             return storageLinkedServices(List.of(storageLinkedServices));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder userProperties(@Nullable Output<List<UserPropertyArgs>> userProperties) {
-            this.userProperties = userProperties;
+            $.userProperties = userProperties;
             return this;
         }
-        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Codegen.ofNullable(userProperties);
-            return this;
+
+        public Builder userProperties(List<UserPropertyArgs> userProperties) {
+            return userProperties(Output.of(userProperties));
         }
+
         public Builder userProperties(UserPropertyArgs... userProperties) {
             return userProperties(List.of(userProperties));
-        }        public HDInsightMapReduceActivityArgs build() {
-            return new HDInsightMapReduceActivityArgs(arguments, className, defines, dependsOn, description, getDebugInfo, jarFilePath, jarLibs, jarLinkedService, linkedServiceName, name, policy, storageLinkedServices, type, userProperties);
+        }
+
+        public HDInsightMapReduceActivityArgs build() {
+            $.className = Objects.requireNonNull($.className, "expected parameter 'className' to be non-null");
+            $.jarFilePath = Objects.requireNonNull($.jarFilePath, "expected parameter 'jarFilePath' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            return $;
         }
     }
+
 }

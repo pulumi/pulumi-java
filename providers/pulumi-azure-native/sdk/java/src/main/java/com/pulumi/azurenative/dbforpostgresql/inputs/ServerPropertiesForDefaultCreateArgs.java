@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,7 +32,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="administratorLogin", required=true)
-      private final Output<String> administratorLogin;
+    private Output<String> administratorLogin;
 
     public Output<String> administratorLogin() {
         return this.administratorLogin;
@@ -42,7 +43,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="administratorLoginPassword", required=true)
-      private final Output<String> administratorLoginPassword;
+    private Output<String> administratorLoginPassword;
 
     public Output<String> administratorLoginPassword() {
         return this.administratorLoginPassword;
@@ -54,7 +55,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="createMode", required=true)
-      private final Output<String> createMode;
+    private Output<String> createMode;
 
     public Output<String> createMode() {
         return this.createMode;
@@ -65,10 +66,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="infrastructureEncryption")
-      private final @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
+    private @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
-    public Output<Either<String,InfrastructureEncryption>> infrastructureEncryption() {
-        return this.infrastructureEncryption == null ? Codegen.empty() : this.infrastructureEncryption;
+    public Optional<Output<Either<String,InfrastructureEncryption>>> infrastructureEncryption() {
+        return Optional.ofNullable(this.infrastructureEncryption);
     }
 
     /**
@@ -76,10 +77,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minimalTlsVersion")
-      private final @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
+    private @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
-    public Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion() {
-        return this.minimalTlsVersion == null ? Codegen.empty() : this.minimalTlsVersion;
+    public Optional<Output<Either<String,MinimalTlsVersionEnum>>> minimalTlsVersion() {
+        return Optional.ofNullable(this.minimalTlsVersion);
     }
 
     /**
@@ -87,10 +88,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
+    private @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
-    public Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<Either<String,PublicNetworkAccessEnum>>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -98,10 +99,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="sslEnforcement")
-      private final @Nullable Output<SslEnforcementEnum> sslEnforcement;
+    private @Nullable Output<SslEnforcementEnum> sslEnforcement;
 
-    public Output<SslEnforcementEnum> sslEnforcement() {
-        return this.sslEnforcement == null ? Codegen.empty() : this.sslEnforcement;
+    public Optional<Output<SslEnforcementEnum>> sslEnforcement() {
+        return Optional.ofNullable(this.sslEnforcement);
     }
 
     /**
@@ -109,10 +110,10 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -120,154 +121,131 @@ public final class ServerPropertiesForDefaultCreateArgs extends com.pulumi.resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Either<String,ServerVersion>> version;
+    private @Nullable Output<Either<String,ServerVersion>> version;
 
-    public Output<Either<String,ServerVersion>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Either<String,ServerVersion>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ServerPropertiesForDefaultCreateArgs(
-        Output<String> administratorLogin,
-        Output<String> administratorLoginPassword,
-        Output<String> createMode,
-        @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption,
-        @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion,
-        @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess,
-        @Nullable Output<SslEnforcementEnum> sslEnforcement,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Either<String,ServerVersion>> version) {
-        this.administratorLogin = Objects.requireNonNull(administratorLogin, "expected parameter 'administratorLogin' to be non-null");
-        this.administratorLoginPassword = Objects.requireNonNull(administratorLoginPassword, "expected parameter 'administratorLoginPassword' to be non-null");
-        this.createMode = Codegen.stringProp("createMode").output().arg(createMode).require();
-        this.infrastructureEncryption = infrastructureEncryption;
-        this.minimalTlsVersion = minimalTlsVersion;
-        this.publicNetworkAccess = publicNetworkAccess;
-        this.sslEnforcement = sslEnforcement;
-        this.storageProfile = storageProfile;
-        this.version = version;
-    }
+    private ServerPropertiesForDefaultCreateArgs() {}
 
-    private ServerPropertiesForDefaultCreateArgs() {
-        this.administratorLogin = Codegen.empty();
-        this.administratorLoginPassword = Codegen.empty();
-        this.createMode = Codegen.empty();
-        this.infrastructureEncryption = Codegen.empty();
-        this.minimalTlsVersion = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.sslEnforcement = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.version = Codegen.empty();
+    private ServerPropertiesForDefaultCreateArgs(ServerPropertiesForDefaultCreateArgs $) {
+        this.administratorLogin = $.administratorLogin;
+        this.administratorLoginPassword = $.administratorLoginPassword;
+        this.createMode = $.createMode;
+        this.infrastructureEncryption = $.infrastructureEncryption;
+        this.minimalTlsVersion = $.minimalTlsVersion;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.sslEnforcement = $.sslEnforcement;
+        this.storageProfile = $.storageProfile;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerPropertiesForDefaultCreateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> administratorLogin;
-        private Output<String> administratorLoginPassword;
-        private Output<String> createMode;
-        private @Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption;
-        private @Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
-        private @Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
-        private @Nullable Output<SslEnforcementEnum> sslEnforcement;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Either<String,ServerVersion>> version;
+        private ServerPropertiesForDefaultCreateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerPropertiesForDefaultCreateArgs();
         }
 
         public Builder(ServerPropertiesForDefaultCreateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administratorLogin = defaults.administratorLogin;
-    	      this.administratorLoginPassword = defaults.administratorLoginPassword;
-    	      this.createMode = defaults.createMode;
-    	      this.infrastructureEncryption = defaults.infrastructureEncryption;
-    	      this.minimalTlsVersion = defaults.minimalTlsVersion;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.sslEnforcement = defaults.sslEnforcement;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.version = defaults.version;
+            $ = new ServerPropertiesForDefaultCreateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administratorLogin(Output<String> administratorLogin) {
-            this.administratorLogin = Objects.requireNonNull(administratorLogin);
+            $.administratorLogin = administratorLogin;
             return this;
         }
+
         public Builder administratorLogin(String administratorLogin) {
-            this.administratorLogin = Output.of(Objects.requireNonNull(administratorLogin));
-            return this;
+            return administratorLogin(Output.of(administratorLogin));
         }
+
         public Builder administratorLoginPassword(Output<String> administratorLoginPassword) {
-            this.administratorLoginPassword = Objects.requireNonNull(administratorLoginPassword);
+            $.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
+
         public Builder administratorLoginPassword(String administratorLoginPassword) {
-            this.administratorLoginPassword = Output.of(Objects.requireNonNull(administratorLoginPassword));
-            return this;
+            return administratorLoginPassword(Output.of(administratorLoginPassword));
         }
+
         public Builder createMode(Output<String> createMode) {
-            this.createMode = Objects.requireNonNull(createMode);
+            $.createMode = createMode;
             return this;
         }
+
         public Builder createMode(String createMode) {
-            this.createMode = Output.of(Objects.requireNonNull(createMode));
-            return this;
+            return createMode(Output.of(createMode));
         }
+
         public Builder infrastructureEncryption(@Nullable Output<Either<String,InfrastructureEncryption>> infrastructureEncryption) {
-            this.infrastructureEncryption = infrastructureEncryption;
+            $.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
-        public Builder infrastructureEncryption(@Nullable Either<String,InfrastructureEncryption> infrastructureEncryption) {
-            this.infrastructureEncryption = Codegen.ofNullable(infrastructureEncryption);
-            return this;
+
+        public Builder infrastructureEncryption(Either<String,InfrastructureEncryption> infrastructureEncryption) {
+            return infrastructureEncryption(Output.of(infrastructureEncryption));
         }
+
         public Builder minimalTlsVersion(@Nullable Output<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion) {
-            this.minimalTlsVersion = minimalTlsVersion;
+            $.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
-        public Builder minimalTlsVersion(@Nullable Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
-            this.minimalTlsVersion = Codegen.ofNullable(minimalTlsVersion);
-            return this;
+
+        public Builder minimalTlsVersion(Either<String,MinimalTlsVersionEnum> minimalTlsVersion) {
+            return minimalTlsVersion(Output.of(minimalTlsVersion));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(Either<String,PublicNetworkAccessEnum> publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder sslEnforcement(@Nullable Output<SslEnforcementEnum> sslEnforcement) {
-            this.sslEnforcement = sslEnforcement;
+            $.sslEnforcement = sslEnforcement;
             return this;
         }
-        public Builder sslEnforcement(@Nullable SslEnforcementEnum sslEnforcement) {
-            this.sslEnforcement = Codegen.ofNullable(sslEnforcement);
-            return this;
+
+        public Builder sslEnforcement(SslEnforcementEnum sslEnforcement) {
+            return sslEnforcement(Output.of(sslEnforcement));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder version(@Nullable Output<Either<String,ServerVersion>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Either<String,ServerVersion> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ServerPropertiesForDefaultCreateArgs build() {
-            return new ServerPropertiesForDefaultCreateArgs(administratorLogin, administratorLoginPassword, createMode, infrastructureEncryption, minimalTlsVersion, publicNetworkAccess, sslEnforcement, storageProfile, version);
+
+        public Builder version(Either<String,ServerVersion> version) {
+            return version(Output.of(version));
+        }
+
+        public ServerPropertiesForDefaultCreateArgs build() {
+            $.administratorLogin = Objects.requireNonNull($.administratorLogin, "expected parameter 'administratorLogin' to be non-null");
+            $.administratorLoginPassword = Objects.requireNonNull($.administratorLoginPassword, "expected parameter 'administratorLoginPassword' to be non-null");
+            $.createMode = Codegen.stringProp("createMode").output().arg($.createMode).require();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @Import(name="headerName")
-      private final @Nullable Output<String> headerName;
+    private @Nullable Output<String> headerName;
 
-    public Output<String> headerName() {
-        return this.headerName == null ? Codegen.empty() : this.headerName;
+    public Optional<Output<String>> headerName() {
+        return Optional.ofNullable(this.headerName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @Import(name="headerValue")
-      private final @Nullable Output<String> headerValue;
+    private @Nullable Output<String> headerValue;
 
-    public Output<String> headerValue() {
-        return this.headerValue == null ? Codegen.empty() : this.headerValue;
+    public Optional<Output<String>> headerValue() {
+        return Optional.ofNullable(this.headerValue);
     }
 
-    public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(
-        @Nullable Output<String> headerName,
-        @Nullable Output<String> headerValue) {
-        this.headerName = headerName;
-        this.headerValue = headerValue;
-    }
+    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs() {}
 
-    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
+    private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> headerName;
-        private @Nullable Output<String> headerValue;
+        private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs();
         }
 
         public Builder(SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(@Nullable Output<String> headerName) {
-            this.headerName = headerName;
+            $.headerName = headerName;
             return this;
         }
-        public Builder headerName(@Nullable String headerName) {
-            this.headerName = Codegen.ofNullable(headerName);
-            return this;
+
+        public Builder headerName(String headerName) {
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(@Nullable Output<String> headerValue) {
-            this.headerValue = headerValue;
+            $.headerValue = headerValue;
             return this;
         }
-        public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Codegen.ofNullable(headerValue);
-            return this;
-        }        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
-            return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(headerName, headerValue);
+
+        public Builder headerValue(String headerValue) {
+            return headerValue(Output.of(headerValue));
+        }
+
+        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.containerregistry;
 import com.pulumi.azurenative.containerregistry.inputs.PipelineRunRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceUpdateTag")
-      private final @Nullable Output<String> forceUpdateTag;
+    private @Nullable Output<String> forceUpdateTag;
 
-    public Output<String> forceUpdateTag() {
-        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
+    public Optional<Output<String>> forceUpdateTag() {
+        return Optional.ofNullable(this.forceUpdateTag);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineRunName")
-      private final @Nullable Output<String> pipelineRunName;
+    private @Nullable Output<String> pipelineRunName;
 
-    public Output<String> pipelineRunName() {
-        return this.pipelineRunName == null ? Codegen.empty() : this.pipelineRunName;
+    public Optional<Output<String>> pipelineRunName() {
+        return Optional.ofNullable(this.pipelineRunName);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registryName", required=true)
-      private final Output<String> registryName;
+    private Output<String> registryName;
 
     public Output<String> registryName() {
         return this.registryName;
@@ -54,10 +54,10 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<PipelineRunRequestArgs> request;
+    private @Nullable Output<PipelineRunRequestArgs> request;
 
-    public Output<PipelineRunRequestArgs> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<PipelineRunRequestArgs>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class PipelineRunArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public PipelineRunArgs(
-        @Nullable Output<String> forceUpdateTag,
-        @Nullable Output<String> pipelineRunName,
-        Output<String> registryName,
-        @Nullable Output<PipelineRunRequestArgs> request,
-        Output<String> resourceGroupName) {
-        this.forceUpdateTag = forceUpdateTag;
-        this.pipelineRunName = pipelineRunName;
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.request = request;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private PipelineRunArgs() {}
 
-    private PipelineRunArgs() {
-        this.forceUpdateTag = Codegen.empty();
-        this.pipelineRunName = Codegen.empty();
-        this.registryName = Codegen.empty();
-        this.request = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private PipelineRunArgs(PipelineRunArgs $) {
+        this.forceUpdateTag = $.forceUpdateTag;
+        this.pipelineRunName = $.pipelineRunName;
+        this.registryName = $.registryName;
+        this.request = $.request;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineRunArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> forceUpdateTag;
-        private @Nullable Output<String> pipelineRunName;
-        private Output<String> registryName;
-        private @Nullable Output<PipelineRunRequestArgs> request;
-        private Output<String> resourceGroupName;
+        private PipelineRunArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineRunArgs();
         }
 
         public Builder(PipelineRunArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forceUpdateTag = defaults.forceUpdateTag;
-    	      this.pipelineRunName = defaults.pipelineRunName;
-    	      this.registryName = defaults.registryName;
-    	      this.request = defaults.request;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new PipelineRunArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forceUpdateTag(@Nullable Output<String> forceUpdateTag) {
-            this.forceUpdateTag = forceUpdateTag;
+            $.forceUpdateTag = forceUpdateTag;
             return this;
         }
-        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
-            return this;
+
+        public Builder forceUpdateTag(String forceUpdateTag) {
+            return forceUpdateTag(Output.of(forceUpdateTag));
         }
+
         public Builder pipelineRunName(@Nullable Output<String> pipelineRunName) {
-            this.pipelineRunName = pipelineRunName;
+            $.pipelineRunName = pipelineRunName;
             return this;
         }
-        public Builder pipelineRunName(@Nullable String pipelineRunName) {
-            this.pipelineRunName = Codegen.ofNullable(pipelineRunName);
-            return this;
+
+        public Builder pipelineRunName(String pipelineRunName) {
+            return pipelineRunName(Output.of(pipelineRunName));
         }
+
         public Builder registryName(Output<String> registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder registryName(String registryName) {
-            this.registryName = Output.of(Objects.requireNonNull(registryName));
-            return this;
+            return registryName(Output.of(registryName));
         }
+
         public Builder request(@Nullable Output<PipelineRunRequestArgs> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable PipelineRunRequestArgs request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(PipelineRunRequestArgs request) {
+            return request(Output.of(request));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public PipelineRunArgs build() {
-            return new PipelineRunArgs(forceUpdateTag, pipelineRunName, registryName, request, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public PipelineRunArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

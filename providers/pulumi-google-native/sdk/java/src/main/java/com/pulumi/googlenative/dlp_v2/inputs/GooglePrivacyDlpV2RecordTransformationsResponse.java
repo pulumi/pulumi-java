@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends com.p
      * 
      */
     @Import(name="fieldTransformations", required=true)
-      private final List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
+    private List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
 
     public List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations() {
         return this.fieldTransformations;
@@ -34,61 +34,60 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse extends com.p
      * 
      */
     @Import(name="recordSuppressions", required=true)
-      private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
+    private List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
     public List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions() {
         return this.recordSuppressions;
     }
 
-    public GooglePrivacyDlpV2RecordTransformationsResponse(
-        List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
-        List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
-        this.fieldTransformations = Objects.requireNonNull(fieldTransformations, "expected parameter 'fieldTransformations' to be non-null");
-        this.recordSuppressions = Objects.requireNonNull(recordSuppressions, "expected parameter 'recordSuppressions' to be non-null");
-    }
+    private GooglePrivacyDlpV2RecordTransformationsResponse() {}
 
-    private GooglePrivacyDlpV2RecordTransformationsResponse() {
-        this.fieldTransformations = List.of();
-        this.recordSuppressions = List.of();
+    private GooglePrivacyDlpV2RecordTransformationsResponse(GooglePrivacyDlpV2RecordTransformationsResponse $) {
+        this.fieldTransformations = $.fieldTransformations;
+        this.recordSuppressions = $.recordSuppressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordTransformationsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations;
-        private List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
+        private GooglePrivacyDlpV2RecordTransformationsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordTransformationsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RecordTransformationsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldTransformations = defaults.fieldTransformations;
-    	      this.recordSuppressions = defaults.recordSuppressions;
+            $ = new GooglePrivacyDlpV2RecordTransformationsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldTransformations(List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations) {
-            this.fieldTransformations = Objects.requireNonNull(fieldTransformations);
+            $.fieldTransformations = fieldTransformations;
             return this;
         }
+
         public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationResponse... fieldTransformations) {
             return fieldTransformations(List.of(fieldTransformations));
         }
+
         public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
-            this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
+            $.recordSuppressions = recordSuppressions;
             return this;
         }
+
         public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionResponse... recordSuppressions) {
             return recordSuppressions(List.of(recordSuppressions));
-        }        public GooglePrivacyDlpV2RecordTransformationsResponse build() {
-            return new GooglePrivacyDlpV2RecordTransformationsResponse(fieldTransformations, recordSuppressions);
+        }
+
+        public GooglePrivacyDlpV2RecordTransformationsResponse build() {
+            $.fieldTransformations = Objects.requireNonNull($.fieldTransformations, "expected parameter 'fieldTransformations' to be non-null");
+            $.recordSuppressions = Objects.requireNonNull($.recordSuppressions, "expected parameter 'recordSuppressions' to be non-null");
+            return $;
         }
     }
+
 }

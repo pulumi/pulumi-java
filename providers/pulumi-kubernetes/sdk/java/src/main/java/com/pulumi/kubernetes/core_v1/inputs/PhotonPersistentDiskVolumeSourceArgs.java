@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class PhotonPersistentDiskVolumeSourceArgs extends com.pulumi.resou
      * 
      */
     @Import(name="pdID", required=true)
-      private final Output<String> pdID;
+    private Output<String> pdID;
 
     public Output<String> pdID() {
         return this.pdID;
     }
 
-    public PhotonPersistentDiskVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        Output<String> pdID) {
-        this.fsType = fsType;
-        this.pdID = Objects.requireNonNull(pdID, "expected parameter 'pdID' to be non-null");
-    }
+    private PhotonPersistentDiskVolumeSourceArgs() {}
 
-    private PhotonPersistentDiskVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.pdID = Codegen.empty();
+    private PhotonPersistentDiskVolumeSourceArgs(PhotonPersistentDiskVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.pdID = $.pdID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PhotonPersistentDiskVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private Output<String> pdID;
+        private PhotonPersistentDiskVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PhotonPersistentDiskVolumeSourceArgs();
         }
 
         public Builder(PhotonPersistentDiskVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.pdID = defaults.pdID;
+            $ = new PhotonPersistentDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder pdID(Output<String> pdID) {
-            this.pdID = Objects.requireNonNull(pdID);
+            $.pdID = pdID;
             return this;
         }
+
         public Builder pdID(String pdID) {
-            this.pdID = Output.of(Objects.requireNonNull(pdID));
-            return this;
-        }        public PhotonPersistentDiskVolumeSourceArgs build() {
-            return new PhotonPersistentDiskVolumeSourceArgs(fsType, pdID);
+            return pdID(Output.of(pdID));
+        }
+
+        public PhotonPersistentDiskVolumeSourceArgs build() {
+            $.pdID = Objects.requireNonNull($.pdID, "expected parameter 'pdID' to be non-null");
+            return $;
         }
     }
+
 }

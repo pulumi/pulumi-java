@@ -17,7 +17,7 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="addressName", required=true)
-      private final String addressName;
+    private String addressName;
 
     public String addressName() {
         return this.addressName;
@@ -28,55 +28,52 @@ public final class GetAddressByNameArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetAddressByNameArgs(
-        String addressName,
-        String resourceGroupName) {
-        this.addressName = Objects.requireNonNull(addressName, "expected parameter 'addressName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetAddressByNameArgs() {}
 
-    private GetAddressByNameArgs() {
-        this.addressName = null;
-        this.resourceGroupName = null;
+    private GetAddressByNameArgs(GetAddressByNameArgs $) {
+        this.addressName = $.addressName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAddressByNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addressName;
-        private String resourceGroupName;
+        private GetAddressByNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAddressByNameArgs();
         }
 
         public Builder(GetAddressByNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressName = defaults.addressName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetAddressByNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressName(String addressName) {
-            this.addressName = Objects.requireNonNull(addressName);
+            $.addressName = addressName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetAddressByNameArgs build() {
-            return new GetAddressByNameArgs(addressName, resourceGroupName);
+        }
+
+        public GetAddressByNameArgs build() {
+            $.addressName = Objects.requireNonNull($.addressName, "expected parameter 'addressName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

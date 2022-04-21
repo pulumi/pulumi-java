@@ -15,62 +15,58 @@ public final class GetHubArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHubArgs Empty = new GetHubArgs();
 
     @Import(name="hubId", required=true)
-      private final String hubId;
+    private String hubId;
 
     public String hubId() {
         return this.hubId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHubArgs(
-        String hubId,
-        @Nullable String project) {
-        this.hubId = Objects.requireNonNull(hubId, "expected parameter 'hubId' to be non-null");
-        this.project = project;
-    }
+    private GetHubArgs() {}
 
-    private GetHubArgs() {
-        this.hubId = null;
-        this.project = null;
+    private GetHubArgs(GetHubArgs $) {
+        this.hubId = $.hubId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hubId;
-        private @Nullable String project;
+        private GetHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHubArgs();
         }
 
         public Builder(GetHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hubId = defaults.hubId;
-    	      this.project = defaults.project;
+            $ = new GetHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hubId(String hubId) {
-            this.hubId = Objects.requireNonNull(hubId);
+            $.hubId = hubId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHubArgs build() {
-            return new GetHubArgs(hubId, project);
+        }
+
+        public GetHubArgs build() {
+            $.hubId = Objects.requireNonNull($.hubId, "expected parameter 'hubId' to be non-null");
+            return $;
         }
     }
+
 }

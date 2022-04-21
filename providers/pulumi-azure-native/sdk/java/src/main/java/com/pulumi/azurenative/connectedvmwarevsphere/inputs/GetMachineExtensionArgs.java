@@ -17,7 +17,7 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="extensionName", required=true)
-      private final String extensionName;
+    private String extensionName;
 
     public String extensionName() {
         return this.extensionName;
@@ -28,7 +28,7 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,64 +39,59 @@ public final class GetMachineExtensionArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMachineExtensionArgs(
-        String extensionName,
-        String name,
-        String resourceGroupName) {
-        this.extensionName = Objects.requireNonNull(extensionName, "expected parameter 'extensionName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMachineExtensionArgs() {}
 
-    private GetMachineExtensionArgs() {
-        this.extensionName = null;
-        this.name = null;
-        this.resourceGroupName = null;
+    private GetMachineExtensionArgs(GetMachineExtensionArgs $) {
+        this.extensionName = $.extensionName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMachineExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String extensionName;
-        private String name;
-        private String resourceGroupName;
+        private GetMachineExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMachineExtensionArgs();
         }
 
         public Builder(GetMachineExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionName = defaults.extensionName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMachineExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionName(String extensionName) {
-            this.extensionName = Objects.requireNonNull(extensionName);
+            $.extensionName = extensionName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMachineExtensionArgs build() {
-            return new GetMachineExtensionArgs(extensionName, name, resourceGroupName);
+        }
+
+        public GetMachineExtensionArgs build() {
+            $.extensionName = Objects.requireNonNull($.extensionName, "expected parameter 'extensionName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

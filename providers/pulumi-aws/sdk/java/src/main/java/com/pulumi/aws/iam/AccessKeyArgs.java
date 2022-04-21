@@ -5,9 +5,9 @@ package com.pulumi.aws.iam;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pgpKey")
-      private final @Nullable Output<String> pgpKey;
+    private @Nullable Output<String> pgpKey;
 
-    public Output<String> pgpKey() {
-        return this.pgpKey == null ? Codegen.empty() : this.pgpKey;
+    public Optional<Output<String>> pgpKey() {
+        return Optional.ofNullable(this.pgpKey);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -42,76 +42,69 @@ public final class AccessKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="user", required=true)
-      private final Output<String> user;
+    private Output<String> user;
 
     public Output<String> user() {
         return this.user;
     }
 
-    public AccessKeyArgs(
-        @Nullable Output<String> pgpKey,
-        @Nullable Output<String> status,
-        Output<String> user) {
-        this.pgpKey = pgpKey;
-        this.status = status;
-        this.user = Objects.requireNonNull(user, "expected parameter 'user' to be non-null");
-    }
+    private AccessKeyArgs() {}
 
-    private AccessKeyArgs() {
-        this.pgpKey = Codegen.empty();
-        this.status = Codegen.empty();
-        this.user = Codegen.empty();
+    private AccessKeyArgs(AccessKeyArgs $) {
+        this.pgpKey = $.pgpKey;
+        this.status = $.status;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> pgpKey;
-        private @Nullable Output<String> status;
-        private Output<String> user;
+        private AccessKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessKeyArgs();
         }
 
         public Builder(AccessKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pgpKey = defaults.pgpKey;
-    	      this.status = defaults.status;
-    	      this.user = defaults.user;
+            $ = new AccessKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pgpKey(@Nullable Output<String> pgpKey) {
-            this.pgpKey = pgpKey;
+            $.pgpKey = pgpKey;
             return this;
         }
-        public Builder pgpKey(@Nullable String pgpKey) {
-            this.pgpKey = Codegen.ofNullable(pgpKey);
-            return this;
+
+        public Builder pgpKey(String pgpKey) {
+            return pgpKey(Output.of(pgpKey));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder user(Output<String> user) {
-            this.user = Objects.requireNonNull(user);
+            $.user = user;
             return this;
         }
+
         public Builder user(String user) {
-            this.user = Output.of(Objects.requireNonNull(user));
-            return this;
-        }        public AccessKeyArgs build() {
-            return new AccessKeyArgs(pgpKey, status, user);
+            return user(Output.of(user));
+        }
+
+        public AccessKeyArgs build() {
+            $.user = Objects.requireNonNull($.user, "expected parameter 'user' to be non-null");
+            return $;
         }
     }
+
 }

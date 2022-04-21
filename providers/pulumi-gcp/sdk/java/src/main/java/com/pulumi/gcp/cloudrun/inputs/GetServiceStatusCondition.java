@@ -13,94 +13,87 @@ public final class GetServiceStatusCondition extends com.pulumi.resources.Invoke
     public static final GetServiceStatusCondition Empty = new GetServiceStatusCondition();
 
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
     }
 
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GetServiceStatusCondition(
-        String message,
-        String reason,
-        String status,
-        String type) {
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GetServiceStatusCondition() {}
 
-    private GetServiceStatusCondition() {
-        this.message = null;
-        this.reason = null;
-        this.status = null;
-        this.type = null;
+    private GetServiceStatusCondition(GetServiceStatusCondition $) {
+        this.message = $.message;
+        this.reason = $.reason;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceStatusCondition defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String message;
-        private String reason;
-        private String status;
-        private String type;
+        private GetServiceStatusCondition $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceStatusCondition();
         }
 
         public Builder(GetServiceStatusCondition defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new GetServiceStatusCondition(Objects.requireNonNull(defaults));
         }
 
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GetServiceStatusCondition build() {
-            return new GetServiceStatusCondition(message, reason, status, type);
+        }
+
+        public GetServiceStatusCondition build() {
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

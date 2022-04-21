@@ -6,10 +6,10 @@ package com.pulumi.awsnative.evidently.inputs;
 import com.pulumi.awsnative.evidently.inputs.ExperimentTreatmentToWeightArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class ExperimentOnlineAbConfigObjectArgs extends com.pulumi.resourc
     public static final ExperimentOnlineAbConfigObjectArgs Empty = new ExperimentOnlineAbConfigObjectArgs();
 
     @Import(name="controlTreatmentName")
-      private final @Nullable Output<String> controlTreatmentName;
+    private @Nullable Output<String> controlTreatmentName;
 
-    public Output<String> controlTreatmentName() {
-        return this.controlTreatmentName == null ? Codegen.empty() : this.controlTreatmentName;
+    public Optional<Output<String>> controlTreatmentName() {
+        return Optional.ofNullable(this.controlTreatmentName);
     }
 
     @Import(name="treatmentWeights")
-      private final @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
+    private @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
 
-    public Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights() {
-        return this.treatmentWeights == null ? Codegen.empty() : this.treatmentWeights;
+    public Optional<Output<List<ExperimentTreatmentToWeightArgs>>> treatmentWeights() {
+        return Optional.ofNullable(this.treatmentWeights);
     }
 
-    public ExperimentOnlineAbConfigObjectArgs(
-        @Nullable Output<String> controlTreatmentName,
-        @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
-        this.controlTreatmentName = controlTreatmentName;
-        this.treatmentWeights = treatmentWeights;
-    }
+    private ExperimentOnlineAbConfigObjectArgs() {}
 
-    private ExperimentOnlineAbConfigObjectArgs() {
-        this.controlTreatmentName = Codegen.empty();
-        this.treatmentWeights = Codegen.empty();
+    private ExperimentOnlineAbConfigObjectArgs(ExperimentOnlineAbConfigObjectArgs $) {
+        this.controlTreatmentName = $.controlTreatmentName;
+        this.treatmentWeights = $.treatmentWeights;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentOnlineAbConfigObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> controlTreatmentName;
-        private @Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights;
+        private ExperimentOnlineAbConfigObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentOnlineAbConfigObjectArgs();
         }
 
         public Builder(ExperimentOnlineAbConfigObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlTreatmentName = defaults.controlTreatmentName;
-    	      this.treatmentWeights = defaults.treatmentWeights;
+            $ = new ExperimentOnlineAbConfigObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder controlTreatmentName(@Nullable Output<String> controlTreatmentName) {
-            this.controlTreatmentName = controlTreatmentName;
+            $.controlTreatmentName = controlTreatmentName;
             return this;
         }
-        public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
-            this.controlTreatmentName = Codegen.ofNullable(controlTreatmentName);
-            return this;
+
+        public Builder controlTreatmentName(String controlTreatmentName) {
+            return controlTreatmentName(Output.of(controlTreatmentName));
         }
+
         public Builder treatmentWeights(@Nullable Output<List<ExperimentTreatmentToWeightArgs>> treatmentWeights) {
-            this.treatmentWeights = treatmentWeights;
+            $.treatmentWeights = treatmentWeights;
             return this;
         }
-        public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
-            this.treatmentWeights = Codegen.ofNullable(treatmentWeights);
-            return this;
+
+        public Builder treatmentWeights(List<ExperimentTreatmentToWeightArgs> treatmentWeights) {
+            return treatmentWeights(Output.of(treatmentWeights));
         }
+
         public Builder treatmentWeights(ExperimentTreatmentToWeightArgs... treatmentWeights) {
             return treatmentWeights(List.of(treatmentWeights));
-        }        public ExperimentOnlineAbConfigObjectArgs build() {
-            return new ExperimentOnlineAbConfigObjectArgs(controlTreatmentName, treatmentWeights);
+        }
+
+        public ExperimentOnlineAbConfigObjectArgs build() {
+            return $;
         }
     }
+
 }

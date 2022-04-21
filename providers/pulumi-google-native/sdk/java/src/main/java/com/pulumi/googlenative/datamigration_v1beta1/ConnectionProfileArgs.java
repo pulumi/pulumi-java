@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datamigration_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileProvider;
 import com.pulumi.googlenative.datamigration_v1beta1.enums.ConnectionProfileState;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlConnectionProfileArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.datamigration_v1beta1.inputs.MySqlConnectionProfi
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,14 +25,14 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cloudsql")
-      private final @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
+    private @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
 
-    public Output<CloudSqlConnectionProfileArgs> cloudsql() {
-        return this.cloudsql == null ? Codegen.empty() : this.cloudsql;
+    public Optional<Output<CloudSqlConnectionProfileArgs>> cloudsql() {
+        return Optional.ofNullable(this.cloudsql);
     }
 
     @Import(name="connectionProfileId", required=true)
-      private final Output<String> connectionProfileId;
+    private Output<String> connectionProfileId;
 
     public Output<String> connectionProfileId() {
         return this.connectionProfileId;
@@ -43,10 +43,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -54,17 +54,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="mysql")
-      private final @Nullable Output<MySqlConnectionProfileArgs> mysql;
+    private @Nullable Output<MySqlConnectionProfileArgs> mysql;
 
-    public Output<MySqlConnectionProfileArgs> mysql() {
-        return this.mysql == null ? Codegen.empty() : this.mysql;
+    public Optional<Output<MySqlConnectionProfileArgs>> mysql() {
+        return Optional.ofNullable(this.mysql);
     }
 
     /**
@@ -83,17 +83,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -101,17 +101,17 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<ConnectionProfileProvider> provider;
+    private @Nullable Output<ConnectionProfileProvider> provider;
 
-    public Output<ConnectionProfileProvider> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<ConnectionProfileProvider>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -119,180 +119,149 @@ public final class ConnectionProfileArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ConnectionProfileState> state;
+    private @Nullable Output<ConnectionProfileState> state;
 
-    public Output<ConnectionProfileState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ConnectionProfileState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public ConnectionProfileArgs(
-        @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql,
-        Output<String> connectionProfileId,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<MySqlConnectionProfileArgs> mysql,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<ConnectionProfileProvider> provider,
-        @Nullable Output<String> requestId,
-        @Nullable Output<ConnectionProfileState> state) {
-        this.cloudsql = cloudsql;
-        this.connectionProfileId = Objects.requireNonNull(connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
-        this.displayName = displayName;
-        this.labels = labels;
-        this.location = location;
-        this.mysql = mysql;
-        this.name = name;
-        this.project = project;
-        this.provider = provider;
-        this.requestId = requestId;
-        this.state = state;
-    }
+    private ConnectionProfileArgs() {}
 
-    private ConnectionProfileArgs() {
-        this.cloudsql = Codegen.empty();
-        this.connectionProfileId = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.mysql = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.provider = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.state = Codegen.empty();
+    private ConnectionProfileArgs(ConnectionProfileArgs $) {
+        this.cloudsql = $.cloudsql;
+        this.connectionProfileId = $.connectionProfileId;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.mysql = $.mysql;
+        this.name = $.name;
+        this.project = $.project;
+        this.provider = $.provider;
+        this.requestId = $.requestId;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudSqlConnectionProfileArgs> cloudsql;
-        private Output<String> connectionProfileId;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MySqlConnectionProfileArgs> mysql;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ConnectionProfileProvider> provider;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<ConnectionProfileState> state;
+        private ConnectionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionProfileArgs();
         }
 
         public Builder(ConnectionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudsql = defaults.cloudsql;
-    	      this.connectionProfileId = defaults.connectionProfileId;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.mysql = defaults.mysql;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.provider = defaults.provider;
-    	      this.requestId = defaults.requestId;
-    	      this.state = defaults.state;
+            $ = new ConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudsql(@Nullable Output<CloudSqlConnectionProfileArgs> cloudsql) {
-            this.cloudsql = cloudsql;
+            $.cloudsql = cloudsql;
             return this;
         }
-        public Builder cloudsql(@Nullable CloudSqlConnectionProfileArgs cloudsql) {
-            this.cloudsql = Codegen.ofNullable(cloudsql);
-            return this;
+
+        public Builder cloudsql(CloudSqlConnectionProfileArgs cloudsql) {
+            return cloudsql(Output.of(cloudsql));
         }
+
         public Builder connectionProfileId(Output<String> connectionProfileId) {
-            this.connectionProfileId = Objects.requireNonNull(connectionProfileId);
+            $.connectionProfileId = connectionProfileId;
             return this;
         }
+
         public Builder connectionProfileId(String connectionProfileId) {
-            this.connectionProfileId = Output.of(Objects.requireNonNull(connectionProfileId));
-            return this;
+            return connectionProfileId(Output.of(connectionProfileId));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder mysql(@Nullable Output<MySqlConnectionProfileArgs> mysql) {
-            this.mysql = mysql;
+            $.mysql = mysql;
             return this;
         }
-        public Builder mysql(@Nullable MySqlConnectionProfileArgs mysql) {
-            this.mysql = Codegen.ofNullable(mysql);
-            return this;
+
+        public Builder mysql(MySqlConnectionProfileArgs mysql) {
+            return mysql(Output.of(mysql));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder provider(@Nullable Output<ConnectionProfileProvider> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable ConnectionProfileProvider provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
+
+        public Builder provider(ConnectionProfileProvider provider) {
+            return provider(Output.of(provider));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder state(@Nullable Output<ConnectionProfileState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ConnectionProfileState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public ConnectionProfileArgs build() {
-            return new ConnectionProfileArgs(cloudsql, connectionProfileId, displayName, labels, location, mysql, name, project, provider, requestId, state);
+
+        public Builder state(ConnectionProfileState state) {
+            return state(Output.of(state));
+        }
+
+        public ConnectionProfileArgs build() {
+            $.connectionProfileId = Objects.requireNonNull($.connectionProfileId, "expected parameter 'connectionProfileId' to be non-null");
+            return $;
         }
     }
+
 }

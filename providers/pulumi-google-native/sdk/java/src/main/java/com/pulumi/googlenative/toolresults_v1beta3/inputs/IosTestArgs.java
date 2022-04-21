@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosAppInfoArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosRoboTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosTestLoopArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.IosXcTestArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosAppInfo")
-      private final @Nullable Output<IosAppInfoArgs> iosAppInfo;
+    private @Nullable Output<IosAppInfoArgs> iosAppInfo;
 
-    public Output<IosAppInfoArgs> iosAppInfo() {
-        return this.iosAppInfo == null ? Codegen.empty() : this.iosAppInfo;
+    public Optional<Output<IosAppInfoArgs>> iosAppInfo() {
+        return Optional.ofNullable(this.iosAppInfo);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosRoboTest")
-      private final @Nullable Output<IosRoboTestArgs> iosRoboTest;
+    private @Nullable Output<IosRoboTestArgs> iosRoboTest;
 
-    public Output<IosRoboTestArgs> iosRoboTest() {
-        return this.iosRoboTest == null ? Codegen.empty() : this.iosRoboTest;
+    public Optional<Output<IosRoboTestArgs>> iosRoboTest() {
+        return Optional.ofNullable(this.iosRoboTest);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosTestLoop")
-      private final @Nullable Output<IosTestLoopArgs> iosTestLoop;
+    private @Nullable Output<IosTestLoopArgs> iosTestLoop;
 
-    public Output<IosTestLoopArgs> iosTestLoop() {
-        return this.iosTestLoop == null ? Codegen.empty() : this.iosTestLoop;
+    public Optional<Output<IosTestLoopArgs>> iosTestLoop() {
+        return Optional.ofNullable(this.iosTestLoop);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iosXcTest")
-      private final @Nullable Output<IosXcTestArgs> iosXcTest;
+    private @Nullable Output<IosXcTestArgs> iosXcTest;
 
-    public Output<IosXcTestArgs> iosXcTest() {
-        return this.iosXcTest == null ? Codegen.empty() : this.iosXcTest;
+    public Optional<Output<IosXcTestArgs>> iosXcTest() {
+        return Optional.ofNullable(this.iosXcTest);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class IosTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testTimeout")
-      private final @Nullable Output<DurationArgs> testTimeout;
+    private @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> testTimeout() {
-        return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
+    public Optional<Output<DurationArgs>> testTimeout() {
+        return Optional.ofNullable(this.testTimeout);
     }
 
-    public IosTestArgs(
-        @Nullable Output<IosAppInfoArgs> iosAppInfo,
-        @Nullable Output<IosRoboTestArgs> iosRoboTest,
-        @Nullable Output<IosTestLoopArgs> iosTestLoop,
-        @Nullable Output<IosXcTestArgs> iosXcTest,
-        @Nullable Output<DurationArgs> testTimeout) {
-        this.iosAppInfo = iosAppInfo;
-        this.iosRoboTest = iosRoboTest;
-        this.iosTestLoop = iosTestLoop;
-        this.iosXcTest = iosXcTest;
-        this.testTimeout = testTimeout;
-    }
+    private IosTestArgs() {}
 
-    private IosTestArgs() {
-        this.iosAppInfo = Codegen.empty();
-        this.iosRoboTest = Codegen.empty();
-        this.iosTestLoop = Codegen.empty();
-        this.iosXcTest = Codegen.empty();
-        this.testTimeout = Codegen.empty();
+    private IosTestArgs(IosTestArgs $) {
+        this.iosAppInfo = $.iosAppInfo;
+        this.iosRoboTest = $.iosRoboTest;
+        this.iosTestLoop = $.iosTestLoop;
+        this.iosXcTest = $.iosXcTest;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IosAppInfoArgs> iosAppInfo;
-        private @Nullable Output<IosRoboTestArgs> iosRoboTest;
-        private @Nullable Output<IosTestLoopArgs> iosTestLoop;
-        private @Nullable Output<IosXcTestArgs> iosXcTest;
-        private @Nullable Output<DurationArgs> testTimeout;
+        private IosTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestArgs();
         }
 
         public Builder(IosTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosAppInfo = defaults.iosAppInfo;
-    	      this.iosRoboTest = defaults.iosRoboTest;
-    	      this.iosTestLoop = defaults.iosTestLoop;
-    	      this.iosXcTest = defaults.iosXcTest;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new IosTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iosAppInfo(@Nullable Output<IosAppInfoArgs> iosAppInfo) {
-            this.iosAppInfo = iosAppInfo;
+            $.iosAppInfo = iosAppInfo;
             return this;
         }
-        public Builder iosAppInfo(@Nullable IosAppInfoArgs iosAppInfo) {
-            this.iosAppInfo = Codegen.ofNullable(iosAppInfo);
-            return this;
+
+        public Builder iosAppInfo(IosAppInfoArgs iosAppInfo) {
+            return iosAppInfo(Output.of(iosAppInfo));
         }
+
         public Builder iosRoboTest(@Nullable Output<IosRoboTestArgs> iosRoboTest) {
-            this.iosRoboTest = iosRoboTest;
+            $.iosRoboTest = iosRoboTest;
             return this;
         }
-        public Builder iosRoboTest(@Nullable IosRoboTestArgs iosRoboTest) {
-            this.iosRoboTest = Codegen.ofNullable(iosRoboTest);
-            return this;
+
+        public Builder iosRoboTest(IosRoboTestArgs iosRoboTest) {
+            return iosRoboTest(Output.of(iosRoboTest));
         }
+
         public Builder iosTestLoop(@Nullable Output<IosTestLoopArgs> iosTestLoop) {
-            this.iosTestLoop = iosTestLoop;
+            $.iosTestLoop = iosTestLoop;
             return this;
         }
-        public Builder iosTestLoop(@Nullable IosTestLoopArgs iosTestLoop) {
-            this.iosTestLoop = Codegen.ofNullable(iosTestLoop);
-            return this;
+
+        public Builder iosTestLoop(IosTestLoopArgs iosTestLoop) {
+            return iosTestLoop(Output.of(iosTestLoop));
         }
+
         public Builder iosXcTest(@Nullable Output<IosXcTestArgs> iosXcTest) {
-            this.iosXcTest = iosXcTest;
+            $.iosXcTest = iosXcTest;
             return this;
         }
-        public Builder iosXcTest(@Nullable IosXcTestArgs iosXcTest) {
-            this.iosXcTest = Codegen.ofNullable(iosXcTest);
-            return this;
+
+        public Builder iosXcTest(IosXcTestArgs iosXcTest) {
+            return iosXcTest(Output.of(iosXcTest));
         }
+
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
-            this.testTimeout = testTimeout;
+            $.testTimeout = testTimeout;
             return this;
         }
-        public Builder testTimeout(@Nullable DurationArgs testTimeout) {
-            this.testTimeout = Codegen.ofNullable(testTimeout);
-            return this;
-        }        public IosTestArgs build() {
-            return new IosTestArgs(iosAppInfo, iosRoboTest, iosTestLoop, iosXcTest, testTimeout);
+
+        public Builder testTimeout(DurationArgs testTimeout) {
+            return testTimeout(Output.of(testTimeout));
+        }
+
+        public IosTestArgs build() {
+            return $;
         }
     }
+
 }

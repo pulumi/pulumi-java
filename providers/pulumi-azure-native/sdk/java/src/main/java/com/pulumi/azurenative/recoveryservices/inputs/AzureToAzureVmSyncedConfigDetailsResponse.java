@@ -26,10 +26,10 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends com.pulumi.
      * 
      */
     @Import(name="inputEndpoints")
-      private final @Nullable List<InputEndpointResponse> inputEndpoints;
+    private @Nullable List<InputEndpointResponse> inputEndpoints;
 
-    public List<InputEndpointResponse> inputEndpoints() {
-        return this.inputEndpoints == null ? List.of() : this.inputEndpoints;
+    public Optional<List<InputEndpointResponse>> inputEndpoints() {
+        return Optional.ofNullable(this.inputEndpoints);
     }
 
     /**
@@ -37,58 +37,54 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse extends com.pulumi.
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public AzureToAzureVmSyncedConfigDetailsResponse(
-        @Nullable List<InputEndpointResponse> inputEndpoints,
-        @Nullable Map<String,String> tags) {
-        this.inputEndpoints = inputEndpoints;
-        this.tags = tags;
-    }
+    private AzureToAzureVmSyncedConfigDetailsResponse() {}
 
-    private AzureToAzureVmSyncedConfigDetailsResponse() {
-        this.inputEndpoints = List.of();
-        this.tags = Map.of();
+    private AzureToAzureVmSyncedConfigDetailsResponse(AzureToAzureVmSyncedConfigDetailsResponse $) {
+        this.inputEndpoints = $.inputEndpoints;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureToAzureVmSyncedConfigDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<InputEndpointResponse> inputEndpoints;
-        private @Nullable Map<String,String> tags;
+        private AzureToAzureVmSyncedConfigDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureToAzureVmSyncedConfigDetailsResponse();
         }
 
         public Builder(AzureToAzureVmSyncedConfigDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputEndpoints = defaults.inputEndpoints;
-    	      this.tags = defaults.tags;
+            $ = new AzureToAzureVmSyncedConfigDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
-            this.inputEndpoints = inputEndpoints;
+            $.inputEndpoints = inputEndpoints;
             return this;
         }
+
         public Builder inputEndpoints(InputEndpointResponse... inputEndpoints) {
             return inputEndpoints(List.of(inputEndpoints));
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public AzureToAzureVmSyncedConfigDetailsResponse build() {
-            return new AzureToAzureVmSyncedConfigDetailsResponse(inputEndpoints, tags);
+        }
+
+        public AzureToAzureVmSyncedConfigDetailsResponse build() {
+            return $;
         }
     }
+
 }

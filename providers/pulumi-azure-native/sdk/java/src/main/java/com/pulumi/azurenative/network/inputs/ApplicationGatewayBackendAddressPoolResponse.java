@@ -26,10 +26,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="backendAddresses")
-      private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
+    private @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
-    public List<ApplicationGatewayBackendAddressResponse> backendAddresses() {
-        return this.backendAddresses == null ? List.of() : this.backendAddresses;
+    public Optional<List<ApplicationGatewayBackendAddressResponse>> backendAddresses() {
+        return Optional.ofNullable(this.backendAddresses);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="backendIPConfigurations", required=true)
-      private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
+    private List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
@@ -48,7 +48,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -59,10 +59,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -92,106 +92,92 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends com.pulu
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewayBackendAddressPoolResponse(
-        @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
-        List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
-        this.backendAddresses = backendAddresses;
-        this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations, "expected parameter 'backendIPConfigurations' to be non-null");
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewayBackendAddressPoolResponse() {}
 
-    private ApplicationGatewayBackendAddressPoolResponse() {
-        this.backendAddresses = List.of();
-        this.backendIPConfigurations = List.of();
-        this.etag = null;
-        this.id = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.type = null;
+    private ApplicationGatewayBackendAddressPoolResponse(ApplicationGatewayBackendAddressPoolResponse $) {
+        this.backendAddresses = $.backendAddresses;
+        this.backendIPConfigurations = $.backendIPConfigurations;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayBackendAddressPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
-        private List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String name;
-        private String provisioningState;
-        private String type;
+        private ApplicationGatewayBackendAddressPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayBackendAddressPoolResponse();
         }
 
         public Builder(ApplicationGatewayBackendAddressPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendAddresses = defaults.backendAddresses;
-    	      this.backendIPConfigurations = defaults.backendIPConfigurations;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewayBackendAddressPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses) {
-            this.backendAddresses = backendAddresses;
+            $.backendAddresses = backendAddresses;
             return this;
         }
+
         public Builder backendAddresses(ApplicationGatewayBackendAddressResponse... backendAddresses) {
             return backendAddresses(List.of(backendAddresses));
         }
+
         public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
-            this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
+            $.backendIPConfigurations = backendIPConfigurations;
             return this;
         }
+
         public Builder backendIPConfigurations(NetworkInterfaceIPConfigurationResponse... backendIPConfigurations) {
             return backendIPConfigurations(List.of(backendIPConfigurations));
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewayBackendAddressPoolResponse build() {
-            return new ApplicationGatewayBackendAddressPoolResponse(backendAddresses, backendIPConfigurations, etag, id, name, provisioningState, type);
+        }
+
+        public ApplicationGatewayBackendAddressPoolResponse build() {
+            $.backendIPConfigurations = Objects.requireNonNull($.backendIPConfigurations, "expected parameter 'backendIPConfigurations' to be non-null");
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

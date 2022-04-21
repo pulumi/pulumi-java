@@ -22,7 +22,7 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="enabledUnknownSources", required=true)
-      private final Boolean enabledUnknownSources;
+    private Boolean enabledUnknownSources;
 
     public Boolean enabledUnknownSources() {
         return this.enabledUnknownSources;
@@ -33,7 +33,7 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ownerProfileAccount", required=true)
-      private final Boolean ownerProfileAccount;
+    private Boolean ownerProfileAccount;
 
     public Boolean ownerProfileAccount() {
         return this.ownerProfileAccount;
@@ -44,7 +44,7 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="ownershipPrivilege", required=true)
-      private final String ownershipPrivilege;
+    private String ownershipPrivilege;
 
     public String ownershipPrivilege() {
         return this.ownershipPrivilege;
@@ -55,73 +55,66 @@ public final class AndroidAttributesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="supportsWorkProfile", required=true)
-      private final Boolean supportsWorkProfile;
+    private Boolean supportsWorkProfile;
 
     public Boolean supportsWorkProfile() {
         return this.supportsWorkProfile;
     }
 
-    public AndroidAttributesResponse(
-        Boolean enabledUnknownSources,
-        Boolean ownerProfileAccount,
-        String ownershipPrivilege,
-        Boolean supportsWorkProfile) {
-        this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources, "expected parameter 'enabledUnknownSources' to be non-null");
-        this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount, "expected parameter 'ownerProfileAccount' to be non-null");
-        this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege, "expected parameter 'ownershipPrivilege' to be non-null");
-        this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile, "expected parameter 'supportsWorkProfile' to be non-null");
-    }
+    private AndroidAttributesResponse() {}
 
-    private AndroidAttributesResponse() {
-        this.enabledUnknownSources = null;
-        this.ownerProfileAccount = null;
-        this.ownershipPrivilege = null;
-        this.supportsWorkProfile = null;
+    private AndroidAttributesResponse(AndroidAttributesResponse $) {
+        this.enabledUnknownSources = $.enabledUnknownSources;
+        this.ownerProfileAccount = $.ownerProfileAccount;
+        this.ownershipPrivilege = $.ownershipPrivilege;
+        this.supportsWorkProfile = $.supportsWorkProfile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabledUnknownSources;
-        private Boolean ownerProfileAccount;
-        private String ownershipPrivilege;
-        private Boolean supportsWorkProfile;
+        private AndroidAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidAttributesResponse();
         }
 
         public Builder(AndroidAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabledUnknownSources = defaults.enabledUnknownSources;
-    	      this.ownerProfileAccount = defaults.ownerProfileAccount;
-    	      this.ownershipPrivilege = defaults.ownershipPrivilege;
-    	      this.supportsWorkProfile = defaults.supportsWorkProfile;
+            $ = new AndroidAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabledUnknownSources(Boolean enabledUnknownSources) {
-            this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
+            $.enabledUnknownSources = enabledUnknownSources;
             return this;
         }
+
         public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
-            this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
+            $.ownerProfileAccount = ownerProfileAccount;
             return this;
         }
+
         public Builder ownershipPrivilege(String ownershipPrivilege) {
-            this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
+            $.ownershipPrivilege = ownershipPrivilege;
             return this;
         }
+
         public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
-            this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
+            $.supportsWorkProfile = supportsWorkProfile;
             return this;
-        }        public AndroidAttributesResponse build() {
-            return new AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
+        }
+
+        public AndroidAttributesResponse build() {
+            $.enabledUnknownSources = Objects.requireNonNull($.enabledUnknownSources, "expected parameter 'enabledUnknownSources' to be non-null");
+            $.ownerProfileAccount = Objects.requireNonNull($.ownerProfileAccount, "expected parameter 'ownerProfileAccount' to be non-null");
+            $.ownershipPrivilege = Objects.requireNonNull($.ownershipPrivilege, "expected parameter 'ownershipPrivilege' to be non-null");
+            $.supportsWorkProfile = Objects.requireNonNull($.supportsWorkProfile, "expected parameter 'supportsWorkProfile' to be non-null");
+            return $;
         }
     }
+
 }

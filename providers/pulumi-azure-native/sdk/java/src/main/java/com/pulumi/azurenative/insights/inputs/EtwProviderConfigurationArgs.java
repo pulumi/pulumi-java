@@ -6,7 +6,6 @@ package com.pulumi.azurenative.insights.inputs;
 import com.pulumi.azurenative.insights.inputs.EtwEventConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,73 +16,71 @@ public final class EtwProviderConfigurationArgs extends com.pulumi.resources.Res
     public static final EtwProviderConfigurationArgs Empty = new EtwProviderConfigurationArgs();
 
     @Import(name="events", required=true)
-      private final Output<List<EtwEventConfigurationArgs>> events;
+    private Output<List<EtwEventConfigurationArgs>> events;
 
     public Output<List<EtwEventConfigurationArgs>> events() {
         return this.events;
     }
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
     }
 
-    public EtwProviderConfigurationArgs(
-        Output<List<EtwEventConfigurationArgs>> events,
-        Output<String> id) {
-        this.events = Objects.requireNonNull(events, "expected parameter 'events' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private EtwProviderConfigurationArgs() {}
 
-    private EtwProviderConfigurationArgs() {
-        this.events = Codegen.empty();
-        this.id = Codegen.empty();
+    private EtwProviderConfigurationArgs(EtwProviderConfigurationArgs $) {
+        this.events = $.events;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EtwProviderConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<EtwEventConfigurationArgs>> events;
-        private Output<String> id;
+        private EtwProviderConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EtwProviderConfigurationArgs();
         }
 
         public Builder(EtwProviderConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.events = defaults.events;
-    	      this.id = defaults.id;
+            $ = new EtwProviderConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder events(Output<List<EtwEventConfigurationArgs>> events) {
-            this.events = Objects.requireNonNull(events);
+            $.events = events;
             return this;
         }
+
         public Builder events(List<EtwEventConfigurationArgs> events) {
-            this.events = Output.of(Objects.requireNonNull(events));
-            return this;
+            return events(Output.of(events));
         }
+
         public Builder events(EtwEventConfigurationArgs... events) {
             return events(List.of(events));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
-        }        public EtwProviderConfigurationArgs build() {
-            return new EtwProviderConfigurationArgs(events, id);
+            return id(Output.of(id));
+        }
+
+        public EtwProviderConfigurationArgs build() {
+            $.events = Objects.requireNonNull($.events, "expected parameter 'events' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.enums.BucketReplicaModificationsStatus;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class BucketReplicaModificationsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="status", required=true)
-      private final Output<BucketReplicaModificationsStatus> status;
+    private Output<BucketReplicaModificationsStatus> status;
 
     public Output<BucketReplicaModificationsStatus> status() {
         return this.status;
     }
 
-    public BucketReplicaModificationsArgs(Output<BucketReplicaModificationsStatus> status) {
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private BucketReplicaModificationsArgs() {}
 
-    private BucketReplicaModificationsArgs() {
-        this.status = Codegen.empty();
+    private BucketReplicaModificationsArgs(BucketReplicaModificationsArgs $) {
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketReplicaModificationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketReplicaModificationsStatus> status;
+        private BucketReplicaModificationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketReplicaModificationsArgs();
         }
 
         public Builder(BucketReplicaModificationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.status = defaults.status;
+            $ = new BucketReplicaModificationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder status(Output<BucketReplicaModificationsStatus> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(BucketReplicaModificationsStatus status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
-        }        public BucketReplicaModificationsArgs build() {
-            return new BucketReplicaModificationsArgs(status);
+            return status(Output.of(status));
+        }
+
+        public BucketReplicaModificationsArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

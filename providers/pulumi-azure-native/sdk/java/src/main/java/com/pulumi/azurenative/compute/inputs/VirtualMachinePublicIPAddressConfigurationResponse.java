@@ -29,10 +29,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
+    private @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse> dnsSettings() {
-        return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="idleTimeoutInMinutes")
-      private final @Nullable Integer idleTimeoutInMinutes;
+    private @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> idleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Optional.empty() : Optional.ofNullable(this.idleTimeoutInMinutes);
+        return Optional.ofNullable(this.idleTimeoutInMinutes);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="ipTags")
-      private final @Nullable List<VirtualMachineIpTagResponse> ipTags;
+    private @Nullable List<VirtualMachineIpTagResponse> ipTags;
 
-    public List<VirtualMachineIpTagResponse> ipTags() {
-        return this.ipTags == null ? List.of() : this.ipTags;
+    public Optional<List<VirtualMachineIpTagResponse>> ipTags() {
+        return Optional.ofNullable(this.ipTags);
     }
 
     /**
@@ -73,7 +73,7 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -84,10 +84,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="publicIPAddressVersion")
-      private final @Nullable String publicIPAddressVersion;
+    private @Nullable String publicIPAddressVersion;
 
     public Optional<String> publicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressVersion);
+        return Optional.ofNullable(this.publicIPAddressVersion);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="publicIPAllocationMethod")
-      private final @Nullable String publicIPAllocationMethod;
+    private @Nullable String publicIPAllocationMethod;
 
     public Optional<String> publicIPAllocationMethod() {
-        return this.publicIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.publicIPAllocationMethod);
+        return Optional.ofNullable(this.publicIPAllocationMethod);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="publicIPPrefix")
-      private final @Nullable SubResourceResponse publicIPPrefix;
+    private @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> publicIPPrefix() {
-        return this.publicIPPrefix == null ? Optional.empty() : Optional.ofNullable(this.publicIPPrefix);
+        return Optional.ofNullable(this.publicIPPrefix);
     }
 
     /**
@@ -117,121 +117,97 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse extends co
      * 
      */
     @Import(name="sku")
-      private final @Nullable PublicIPAddressSkuResponse sku;
+    private @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> sku() {
-        return this.sku == null ? Optional.empty() : Optional.ofNullable(this.sku);
+        return Optional.ofNullable(this.sku);
     }
 
-    public VirtualMachinePublicIPAddressConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable List<VirtualMachineIpTagResponse> ipTags,
-        String name,
-        @Nullable String publicIPAddressVersion,
-        @Nullable String publicIPAllocationMethod,
-        @Nullable SubResourceResponse publicIPPrefix,
-        @Nullable PublicIPAddressSkuResponse sku) {
-        this.deleteOption = deleteOption;
-        this.dnsSettings = dnsSettings;
-        this.idleTimeoutInMinutes = idleTimeoutInMinutes;
-        this.ipTags = ipTags;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.publicIPAddressVersion = publicIPAddressVersion;
-        this.publicIPAllocationMethod = publicIPAllocationMethod;
-        this.publicIPPrefix = publicIPPrefix;
-        this.sku = sku;
-    }
+    private VirtualMachinePublicIPAddressConfigurationResponse() {}
 
-    private VirtualMachinePublicIPAddressConfigurationResponse() {
-        this.deleteOption = null;
-        this.dnsSettings = null;
-        this.idleTimeoutInMinutes = null;
-        this.ipTags = List.of();
-        this.name = null;
-        this.publicIPAddressVersion = null;
-        this.publicIPAllocationMethod = null;
-        this.publicIPPrefix = null;
-        this.sku = null;
+    private VirtualMachinePublicIPAddressConfigurationResponse(VirtualMachinePublicIPAddressConfigurationResponse $) {
+        this.deleteOption = $.deleteOption;
+        this.dnsSettings = $.dnsSettings;
+        this.idleTimeoutInMinutes = $.idleTimeoutInMinutes;
+        this.ipTags = $.ipTags;
+        this.name = $.name;
+        this.publicIPAddressVersion = $.publicIPAddressVersion;
+        this.publicIPAllocationMethod = $.publicIPAllocationMethod;
+        this.publicIPPrefix = $.publicIPPrefix;
+        this.sku = $.sku;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachinePublicIPAddressConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String deleteOption;
-        private @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings;
-        private @Nullable Integer idleTimeoutInMinutes;
-        private @Nullable List<VirtualMachineIpTagResponse> ipTags;
-        private String name;
-        private @Nullable String publicIPAddressVersion;
-        private @Nullable String publicIPAllocationMethod;
-        private @Nullable SubResourceResponse publicIPPrefix;
-        private @Nullable PublicIPAddressSkuResponse sku;
+        private VirtualMachinePublicIPAddressConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachinePublicIPAddressConfigurationResponse();
         }
 
         public Builder(VirtualMachinePublicIPAddressConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.idleTimeoutInMinutes = defaults.idleTimeoutInMinutes;
-    	      this.ipTags = defaults.ipTags;
-    	      this.name = defaults.name;
-    	      this.publicIPAddressVersion = defaults.publicIPAddressVersion;
-    	      this.publicIPAllocationMethod = defaults.publicIPAllocationMethod;
-    	      this.publicIPPrefix = defaults.publicIPPrefix;
-    	      this.sku = defaults.sku;
+            $ = new VirtualMachinePublicIPAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder dnsSettings(@Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
+
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = idleTimeoutInMinutes;
+            $.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
+
         public Builder ipTags(@Nullable List<VirtualMachineIpTagResponse> ipTags) {
-            this.ipTags = ipTags;
+            $.ipTags = ipTags;
             return this;
         }
+
         public Builder ipTags(VirtualMachineIpTagResponse... ipTags) {
             return ipTags(List.of(ipTags));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
-            this.publicIPAddressVersion = publicIPAddressVersion;
+            $.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
+
         public Builder publicIPAllocationMethod(@Nullable String publicIPAllocationMethod) {
-            this.publicIPAllocationMethod = publicIPAllocationMethod;
+            $.publicIPAllocationMethod = publicIPAllocationMethod;
             return this;
         }
+
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
-            this.publicIPPrefix = publicIPPrefix;
+            $.publicIPPrefix = publicIPPrefix;
             return this;
         }
+
         public Builder sku(@Nullable PublicIPAddressSkuResponse sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
-        }        public VirtualMachinePublicIPAddressConfigurationResponse build() {
-            return new VirtualMachinePublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
+        }
+
+        public VirtualMachinePublicIPAddressConfigurationResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

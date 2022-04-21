@@ -14,48 +14,49 @@ public final class RuleGroupOrStatement extends com.pulumi.resources.InvokeArgs 
     public static final RuleGroupOrStatement Empty = new RuleGroupOrStatement();
 
     @Import(name="statements", required=true)
-      private final List<RuleGroupStatement> statements;
+    private List<RuleGroupStatement> statements;
 
     public List<RuleGroupStatement> statements() {
         return this.statements;
     }
 
-    public RuleGroupOrStatement(List<RuleGroupStatement> statements) {
-        this.statements = Objects.requireNonNull(statements, "expected parameter 'statements' to be non-null");
-    }
+    private RuleGroupOrStatement() {}
 
-    private RuleGroupOrStatement() {
-        this.statements = List.of();
+    private RuleGroupOrStatement(RuleGroupOrStatement $) {
+        this.statements = $.statements;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleGroupOrStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RuleGroupStatement> statements;
+        private RuleGroupOrStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleGroupOrStatement();
         }
 
         public Builder(RuleGroupOrStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statements = defaults.statements;
+            $ = new RuleGroupOrStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statements(List<RuleGroupStatement> statements) {
-            this.statements = Objects.requireNonNull(statements);
+            $.statements = statements;
             return this;
         }
+
         public Builder statements(RuleGroupStatement... statements) {
             return statements(List.of(statements));
-        }        public RuleGroupOrStatement build() {
-            return new RuleGroupOrStatement(statements);
+        }
+
+        public RuleGroupOrStatement build() {
+            $.statements = Objects.requireNonNull($.statements, "expected parameter 'statements' to be non-null");
+            return $;
         }
     }
+
 }

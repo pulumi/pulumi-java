@@ -6,8 +6,8 @@ package com.pulumi.awsnative.quicksight.inputs;
 import com.pulumi.awsnative.quicksight.enums.DashboardUIState;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class DashboardSheetControlsOptionArgs extends com.pulumi.resources
     public static final DashboardSheetControlsOptionArgs Empty = new DashboardSheetControlsOptionArgs();
 
     @Import(name="visibilityState")
-      private final @Nullable Output<DashboardUIState> visibilityState;
+    private @Nullable Output<DashboardUIState> visibilityState;
 
-    public Output<DashboardUIState> visibilityState() {
-        return this.visibilityState == null ? Codegen.empty() : this.visibilityState;
+    public Optional<Output<DashboardUIState>> visibilityState() {
+        return Optional.ofNullable(this.visibilityState);
     }
 
-    public DashboardSheetControlsOptionArgs(@Nullable Output<DashboardUIState> visibilityState) {
-        this.visibilityState = visibilityState;
-    }
+    private DashboardSheetControlsOptionArgs() {}
 
-    private DashboardSheetControlsOptionArgs() {
-        this.visibilityState = Codegen.empty();
+    private DashboardSheetControlsOptionArgs(DashboardSheetControlsOptionArgs $) {
+        this.visibilityState = $.visibilityState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DashboardSheetControlsOptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DashboardUIState> visibilityState;
+        private DashboardSheetControlsOptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DashboardSheetControlsOptionArgs();
         }
 
         public Builder(DashboardSheetControlsOptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.visibilityState = defaults.visibilityState;
+            $ = new DashboardSheetControlsOptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder visibilityState(@Nullable Output<DashboardUIState> visibilityState) {
-            this.visibilityState = visibilityState;
+            $.visibilityState = visibilityState;
             return this;
         }
-        public Builder visibilityState(@Nullable DashboardUIState visibilityState) {
-            this.visibilityState = Codegen.ofNullable(visibilityState);
-            return this;
-        }        public DashboardSheetControlsOptionArgs build() {
-            return new DashboardSheetControlsOptionArgs(visibilityState);
+
+        public Builder visibilityState(DashboardUIState visibilityState) {
+            return visibilityState(Output.of(visibilityState));
+        }
+
+        public DashboardSheetControlsOptionArgs build() {
+            return $;
         }
     }
+
 }

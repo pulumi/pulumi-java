@@ -5,7 +5,6 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends com.pulu
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final Output<String> defaultValue;
+    private Output<String> defaultValue;
 
     public Output<String> defaultValue() {
         return this.defaultValue;
@@ -30,7 +29,7 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends com.pulu
      * 
      */
     @Import(name="dimensionName", required=true)
-      private final Output<String> dimensionName;
+    private Output<String> dimensionName;
 
     public Output<String> dimensionName() {
         return this.dimensionName;
@@ -41,76 +40,71 @@ public final class EventDestinationCloudwatchDestinationGetArgs extends com.pulu
      * 
      */
     @Import(name="valueSource", required=true)
-      private final Output<String> valueSource;
+    private Output<String> valueSource;
 
     public Output<String> valueSource() {
         return this.valueSource;
     }
 
-    public EventDestinationCloudwatchDestinationGetArgs(
-        Output<String> defaultValue,
-        Output<String> dimensionName,
-        Output<String> valueSource) {
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-        this.dimensionName = Objects.requireNonNull(dimensionName, "expected parameter 'dimensionName' to be non-null");
-        this.valueSource = Objects.requireNonNull(valueSource, "expected parameter 'valueSource' to be non-null");
-    }
+    private EventDestinationCloudwatchDestinationGetArgs() {}
 
-    private EventDestinationCloudwatchDestinationGetArgs() {
-        this.defaultValue = Codegen.empty();
-        this.dimensionName = Codegen.empty();
-        this.valueSource = Codegen.empty();
+    private EventDestinationCloudwatchDestinationGetArgs(EventDestinationCloudwatchDestinationGetArgs $) {
+        this.defaultValue = $.defaultValue;
+        this.dimensionName = $.dimensionName;
+        this.valueSource = $.valueSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventDestinationCloudwatchDestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultValue;
-        private Output<String> dimensionName;
-        private Output<String> valueSource;
+        private EventDestinationCloudwatchDestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventDestinationCloudwatchDestinationGetArgs();
         }
 
         public Builder(EventDestinationCloudwatchDestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.dimensionName = defaults.dimensionName;
-    	      this.valueSource = defaults.valueSource;
+            $ = new EventDestinationCloudwatchDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(Output<String> defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Output.of(Objects.requireNonNull(defaultValue));
-            return this;
+            return defaultValue(Output.of(defaultValue));
         }
+
         public Builder dimensionName(Output<String> dimensionName) {
-            this.dimensionName = Objects.requireNonNull(dimensionName);
+            $.dimensionName = dimensionName;
             return this;
         }
+
         public Builder dimensionName(String dimensionName) {
-            this.dimensionName = Output.of(Objects.requireNonNull(dimensionName));
-            return this;
+            return dimensionName(Output.of(dimensionName));
         }
+
         public Builder valueSource(Output<String> valueSource) {
-            this.valueSource = Objects.requireNonNull(valueSource);
+            $.valueSource = valueSource;
             return this;
         }
+
         public Builder valueSource(String valueSource) {
-            this.valueSource = Output.of(Objects.requireNonNull(valueSource));
-            return this;
-        }        public EventDestinationCloudwatchDestinationGetArgs build() {
-            return new EventDestinationCloudwatchDestinationGetArgs(defaultValue, dimensionName, valueSource);
+            return valueSource(Output.of(valueSource));
+        }
+
+        public EventDestinationCloudwatchDestinationGetArgs build() {
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            $.dimensionName = Objects.requireNonNull($.dimensionName, "expected parameter 'dimensionName' to be non-null");
+            $.valueSource = Objects.requireNonNull($.valueSource, "expected parameter 'valueSource' to be non-null");
+            return $;
         }
     }
+
 }

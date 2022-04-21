@@ -17,45 +17,45 @@ public final class GetWirelessGatewayArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetWirelessGatewayArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetWirelessGatewayArgs() {}
 
-    private GetWirelessGatewayArgs() {
-        this.id = null;
+    private GetWirelessGatewayArgs(GetWirelessGatewayArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWirelessGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetWirelessGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWirelessGatewayArgs();
         }
 
         public Builder(GetWirelessGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetWirelessGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetWirelessGatewayArgs build() {
-            return new GetWirelessGatewayArgs(id);
+        }
+
+        public GetWirelessGatewayArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

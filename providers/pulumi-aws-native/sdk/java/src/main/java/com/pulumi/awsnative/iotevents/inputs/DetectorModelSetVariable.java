@@ -21,7 +21,7 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -32,55 +32,52 @@ public final class DetectorModelSetVariable extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="variableName", required=true)
-      private final String variableName;
+    private String variableName;
 
     public String variableName() {
         return this.variableName;
     }
 
-    public DetectorModelSetVariable(
-        String value,
-        String variableName) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.variableName = Objects.requireNonNull(variableName, "expected parameter 'variableName' to be non-null");
-    }
+    private DetectorModelSetVariable() {}
 
-    private DetectorModelSetVariable() {
-        this.value = null;
-        this.variableName = null;
+    private DetectorModelSetVariable(DetectorModelSetVariable $) {
+        this.value = $.value;
+        this.variableName = $.variableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetectorModelSetVariable defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
-        private String variableName;
+        private DetectorModelSetVariable $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetectorModelSetVariable();
         }
 
         public Builder(DetectorModelSetVariable defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.variableName = defaults.variableName;
+            $ = new DetectorModelSetVariable(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder variableName(String variableName) {
-            this.variableName = Objects.requireNonNull(variableName);
+            $.variableName = variableName;
             return this;
-        }        public DetectorModelSetVariable build() {
-            return new DetectorModelSetVariable(value, variableName);
+        }
+
+        public DetectorModelSetVariable build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
+            return $;
         }
     }
+
 }

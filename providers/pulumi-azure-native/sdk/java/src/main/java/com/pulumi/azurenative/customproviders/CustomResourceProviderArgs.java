@@ -8,11 +8,11 @@ import com.pulumi.azurenative.customproviders.inputs.CustomRPResourceTypeRouteDe
 import com.pulumi.azurenative.customproviders.inputs.CustomRPValidationsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
+    private @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
 
-    public Output<List<CustomRPActionRouteDefinitionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<CustomRPActionRouteDefinitionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -58,10 +58,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceProviderName")
-      private final @Nullable Output<String> resourceProviderName;
+    private @Nullable Output<String> resourceProviderName;
 
-    public Output<String> resourceProviderName() {
-        return this.resourceProviderName == null ? Codegen.empty() : this.resourceProviderName;
+    public Optional<Output<String>> resourceProviderName() {
+        return Optional.ofNullable(this.resourceProviderName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
+    private @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
-    public Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<CustomRPResourceTypeRouteDefinitionArgs>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -91,137 +91,121 @@ public final class CustomResourceProviderArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="validations")
-      private final @Nullable Output<List<CustomRPValidationsArgs>> validations;
+    private @Nullable Output<List<CustomRPValidationsArgs>> validations;
 
-    public Output<List<CustomRPValidationsArgs>> validations() {
-        return this.validations == null ? Codegen.empty() : this.validations;
+    public Optional<Output<List<CustomRPValidationsArgs>>> validations() {
+        return Optional.ofNullable(this.validations);
     }
 
-    public CustomResourceProviderArgs(
-        @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions,
-        @Nullable Output<String> location,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceProviderName,
-        @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<List<CustomRPValidationsArgs>> validations) {
-        this.actions = actions;
-        this.location = location;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceProviderName = resourceProviderName;
-        this.resourceTypes = resourceTypes;
-        this.tags = tags;
-        this.validations = validations;
-    }
+    private CustomResourceProviderArgs() {}
 
-    private CustomResourceProviderArgs() {
-        this.actions = Codegen.empty();
-        this.location = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceProviderName = Codegen.empty();
-        this.resourceTypes = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validations = Codegen.empty();
+    private CustomResourceProviderArgs(CustomResourceProviderArgs $) {
+        this.actions = $.actions;
+        this.location = $.location;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceProviderName = $.resourceProviderName;
+        this.resourceTypes = $.resourceTypes;
+        this.tags = $.tags;
+        this.validations = $.validations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceProviderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions;
-        private @Nullable Output<String> location;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceProviderName;
-        private @Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<List<CustomRPValidationsArgs>> validations;
+        private CustomResourceProviderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceProviderArgs();
         }
 
         public Builder(CustomResourceProviderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.location = defaults.location;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceProviderName = defaults.resourceProviderName;
-    	      this.resourceTypes = defaults.resourceTypes;
-    	      this.tags = defaults.tags;
-    	      this.validations = defaults.validations;
+            $ = new CustomResourceProviderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<CustomRPActionRouteDefinitionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<CustomRPActionRouteDefinitionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<CustomRPActionRouteDefinitionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(CustomRPActionRouteDefinitionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceProviderName(@Nullable Output<String> resourceProviderName) {
-            this.resourceProviderName = resourceProviderName;
+            $.resourceProviderName = resourceProviderName;
             return this;
         }
-        public Builder resourceProviderName(@Nullable String resourceProviderName) {
-            this.resourceProviderName = Codegen.ofNullable(resourceProviderName);
-            return this;
+
+        public Builder resourceProviderName(String resourceProviderName) {
+            return resourceProviderName(Output.of(resourceProviderName));
         }
+
         public Builder resourceTypes(@Nullable Output<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<CustomRPResourceTypeRouteDefinitionArgs> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(CustomRPResourceTypeRouteDefinitionArgs... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder validations(@Nullable Output<List<CustomRPValidationsArgs>> validations) {
-            this.validations = validations;
+            $.validations = validations;
             return this;
         }
-        public Builder validations(@Nullable List<CustomRPValidationsArgs> validations) {
-            this.validations = Codegen.ofNullable(validations);
-            return this;
+
+        public Builder validations(List<CustomRPValidationsArgs> validations) {
+            return validations(Output.of(validations));
         }
+
         public Builder validations(CustomRPValidationsArgs... validations) {
             return validations(List.of(validations));
-        }        public CustomResourceProviderArgs build() {
-            return new CustomResourceProviderArgs(actions, location, resourceGroupName, resourceProviderName, resourceTypes, tags, validations);
+        }
+
+        public CustomResourceProviderArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

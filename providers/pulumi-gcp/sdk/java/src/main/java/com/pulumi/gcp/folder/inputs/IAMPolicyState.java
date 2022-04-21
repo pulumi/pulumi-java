@@ -5,9 +5,9 @@ package com.pulumi.gcp.folder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,82 @@ public final class IAMPolicyState extends com.pulumi.resources.ResourceArgs {
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="folder")
-      private final @Nullable Output<String> folder;
+    private @Nullable Output<String> folder;
 
-    public Output<String> folder() {
-        return this.folder == null ? Codegen.empty() : this.folder;
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
     }
 
     @Import(name="policyData")
-      private final @Nullable Output<String> policyData;
+    private @Nullable Output<String> policyData;
 
-    public Output<String> policyData() {
-        return this.policyData == null ? Codegen.empty() : this.policyData;
+    public Optional<Output<String>> policyData() {
+        return Optional.ofNullable(this.policyData);
     }
 
-    public IAMPolicyState(
-        @Nullable Output<String> etag,
-        @Nullable Output<String> folder,
-        @Nullable Output<String> policyData) {
-        this.etag = etag;
-        this.folder = folder;
-        this.policyData = policyData;
-    }
+    private IAMPolicyState() {}
 
-    private IAMPolicyState() {
-        this.etag = Codegen.empty();
-        this.folder = Codegen.empty();
-        this.policyData = Codegen.empty();
+    private IAMPolicyState(IAMPolicyState $) {
+        this.etag = $.etag;
+        this.folder = $.folder;
+        this.policyData = $.policyData;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> folder;
-        private @Nullable Output<String> policyData;
+        private IAMPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMPolicyState();
         }
 
         public Builder(IAMPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.etag = defaults.etag;
-    	      this.folder = defaults.folder;
-    	      this.policyData = defaults.policyData;
+            $ = new IAMPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder folder(@Nullable Output<String> folder) {
-            this.folder = folder;
+            $.folder = folder;
             return this;
         }
-        public Builder folder(@Nullable String folder) {
-            this.folder = Codegen.ofNullable(folder);
-            return this;
+
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
         }
+
         public Builder policyData(@Nullable Output<String> policyData) {
-            this.policyData = policyData;
+            $.policyData = policyData;
             return this;
         }
-        public Builder policyData(@Nullable String policyData) {
-            this.policyData = Codegen.ofNullable(policyData);
-            return this;
-        }        public IAMPolicyState build() {
-            return new IAMPolicyState(etag, folder, policyData);
+
+        public Builder policyData(String policyData) {
+            return policyData(Output.of(policyData));
+        }
+
+        public IAMPolicyState build() {
+            return $;
         }
     }
+
 }

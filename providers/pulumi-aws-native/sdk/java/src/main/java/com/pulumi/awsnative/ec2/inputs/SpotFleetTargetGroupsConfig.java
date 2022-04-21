@@ -14,48 +14,49 @@ public final class SpotFleetTargetGroupsConfig extends com.pulumi.resources.Invo
     public static final SpotFleetTargetGroupsConfig Empty = new SpotFleetTargetGroupsConfig();
 
     @Import(name="targetGroups", required=true)
-      private final List<SpotFleetTargetGroup> targetGroups;
+    private List<SpotFleetTargetGroup> targetGroups;
 
     public List<SpotFleetTargetGroup> targetGroups() {
         return this.targetGroups;
     }
 
-    public SpotFleetTargetGroupsConfig(List<SpotFleetTargetGroup> targetGroups) {
-        this.targetGroups = Objects.requireNonNull(targetGroups, "expected parameter 'targetGroups' to be non-null");
-    }
+    private SpotFleetTargetGroupsConfig() {}
 
-    private SpotFleetTargetGroupsConfig() {
-        this.targetGroups = List.of();
+    private SpotFleetTargetGroupsConfig(SpotFleetTargetGroupsConfig $) {
+        this.targetGroups = $.targetGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTargetGroupsConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SpotFleetTargetGroup> targetGroups;
+        private SpotFleetTargetGroupsConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTargetGroupsConfig();
         }
 
         public Builder(SpotFleetTargetGroupsConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetGroups = defaults.targetGroups;
+            $ = new SpotFleetTargetGroupsConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder targetGroups(List<SpotFleetTargetGroup> targetGroups) {
-            this.targetGroups = Objects.requireNonNull(targetGroups);
+            $.targetGroups = targetGroups;
             return this;
         }
+
         public Builder targetGroups(SpotFleetTargetGroup... targetGroups) {
             return targetGroups(List.of(targetGroups));
-        }        public SpotFleetTargetGroupsConfig build() {
-            return new SpotFleetTargetGroupsConfig(targetGroups);
+        }
+
+        public SpotFleetTargetGroupsConfig build() {
+            $.targetGroups = Objects.requireNonNull($.targetGroups, "expected parameter 'targetGroups' to be non-null");
+            return $;
         }
     }
+
 }

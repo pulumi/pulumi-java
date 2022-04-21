@@ -21,7 +21,7 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterNetworkUri", required=true)
-      private final String clusterNetworkUri;
+    private String clusterNetworkUri;
 
     public String clusterNetworkUri() {
         return this.clusterNetworkUri;
@@ -32,7 +32,7 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterUri", required=true)
-      private final String clusterUri;
+    private String clusterUri;
 
     public String clusterUri() {
         return this.clusterUri;
@@ -43,7 +43,7 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="externalIp", required=true)
-      private final String externalIp;
+    private String externalIp;
 
     public String externalIp() {
         return this.externalIp;
@@ -54,73 +54,66 @@ public final class GKEMasterInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="internalIp", required=true)
-      private final String internalIp;
+    private String internalIp;
 
     public String internalIp() {
         return this.internalIp;
     }
 
-    public GKEMasterInfoResponse(
-        String clusterNetworkUri,
-        String clusterUri,
-        String externalIp,
-        String internalIp) {
-        this.clusterNetworkUri = Objects.requireNonNull(clusterNetworkUri, "expected parameter 'clusterNetworkUri' to be non-null");
-        this.clusterUri = Objects.requireNonNull(clusterUri, "expected parameter 'clusterUri' to be non-null");
-        this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
-    }
+    private GKEMasterInfoResponse() {}
 
-    private GKEMasterInfoResponse() {
-        this.clusterNetworkUri = null;
-        this.clusterUri = null;
-        this.externalIp = null;
-        this.internalIp = null;
+    private GKEMasterInfoResponse(GKEMasterInfoResponse $) {
+        this.clusterNetworkUri = $.clusterNetworkUri;
+        this.clusterUri = $.clusterUri;
+        this.externalIp = $.externalIp;
+        this.internalIp = $.internalIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GKEMasterInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterNetworkUri;
-        private String clusterUri;
-        private String externalIp;
-        private String internalIp;
+        private GKEMasterInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GKEMasterInfoResponse();
         }
 
         public Builder(GKEMasterInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterNetworkUri = defaults.clusterNetworkUri;
-    	      this.clusterUri = defaults.clusterUri;
-    	      this.externalIp = defaults.externalIp;
-    	      this.internalIp = defaults.internalIp;
+            $ = new GKEMasterInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterNetworkUri(String clusterNetworkUri) {
-            this.clusterNetworkUri = Objects.requireNonNull(clusterNetworkUri);
+            $.clusterNetworkUri = clusterNetworkUri;
             return this;
         }
+
         public Builder clusterUri(String clusterUri) {
-            this.clusterUri = Objects.requireNonNull(clusterUri);
+            $.clusterUri = clusterUri;
             return this;
         }
+
         public Builder externalIp(String externalIp) {
-            this.externalIp = Objects.requireNonNull(externalIp);
+            $.externalIp = externalIp;
             return this;
         }
+
         public Builder internalIp(String internalIp) {
-            this.internalIp = Objects.requireNonNull(internalIp);
+            $.internalIp = internalIp;
             return this;
-        }        public GKEMasterInfoResponse build() {
-            return new GKEMasterInfoResponse(clusterNetworkUri, clusterUri, externalIp, internalIp);
+        }
+
+        public GKEMasterInfoResponse build() {
+            $.clusterNetworkUri = Objects.requireNonNull($.clusterNetworkUri, "expected parameter 'clusterNetworkUri' to be non-null");
+            $.clusterUri = Objects.requireNonNull($.clusterUri, "expected parameter 'clusterUri' to be non-null");
+            $.externalIp = Objects.requireNonNull($.externalIp, "expected parameter 'externalIp' to be non-null");
+            $.internalIp = Objects.requireNonNull($.internalIp, "expected parameter 'internalIp' to be non-null");
+            return $;
         }
     }
+
 }

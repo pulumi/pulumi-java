@@ -5,9 +5,9 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AutomaticArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerManagedEncryption")
-      private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
+    private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
-    public Output<CustomerManagedEncryptionArgs> customerManagedEncryption() {
-        return this.customerManagedEncryption == null ? Codegen.empty() : this.customerManagedEncryption;
+    public Optional<Output<CustomerManagedEncryptionArgs>> customerManagedEncryption() {
+        return Optional.ofNullable(this.customerManagedEncryption);
     }
 
-    public AutomaticArgs(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
-        this.customerManagedEncryption = customerManagedEncryption;
-    }
+    private AutomaticArgs() {}
 
-    private AutomaticArgs() {
-        this.customerManagedEncryption = Codegen.empty();
+    private AutomaticArgs(AutomaticArgs $) {
+        this.customerManagedEncryption = $.customerManagedEncryption;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutomaticArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
+        private AutomaticArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutomaticArgs();
         }
 
         public Builder(AutomaticArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedEncryption = defaults.customerManagedEncryption;
+            $ = new AutomaticArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedEncryption(@Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption) {
-            this.customerManagedEncryption = customerManagedEncryption;
+            $.customerManagedEncryption = customerManagedEncryption;
             return this;
         }
-        public Builder customerManagedEncryption(@Nullable CustomerManagedEncryptionArgs customerManagedEncryption) {
-            this.customerManagedEncryption = Codegen.ofNullable(customerManagedEncryption);
-            return this;
-        }        public AutomaticArgs build() {
-            return new AutomaticArgs(customerManagedEncryption);
+
+        public Builder customerManagedEncryption(CustomerManagedEncryptionArgs customerManagedEncryption) {
+            return customerManagedEncryption(Output.of(customerManagedEncryption));
+        }
+
+        public AutomaticArgs build() {
+            return $;
         }
     }
+
 }

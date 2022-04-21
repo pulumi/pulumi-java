@@ -13,45 +13,45 @@ public final class GetClusterMasterAuthClientCertificateConfig extends com.pulum
     public static final GetClusterMasterAuthClientCertificateConfig Empty = new GetClusterMasterAuthClientCertificateConfig();
 
     @Import(name="issueClientCertificate", required=true)
-      private final Boolean issueClientCertificate;
+    private Boolean issueClientCertificate;
 
     public Boolean issueClientCertificate() {
         return this.issueClientCertificate;
     }
 
-    public GetClusterMasterAuthClientCertificateConfig(Boolean issueClientCertificate) {
-        this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
-    }
+    private GetClusterMasterAuthClientCertificateConfig() {}
 
-    private GetClusterMasterAuthClientCertificateConfig() {
-        this.issueClientCertificate = null;
+    private GetClusterMasterAuthClientCertificateConfig(GetClusterMasterAuthClientCertificateConfig $) {
+        this.issueClientCertificate = $.issueClientCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterMasterAuthClientCertificateConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean issueClientCertificate;
+        private GetClusterMasterAuthClientCertificateConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterMasterAuthClientCertificateConfig();
         }
 
         public Builder(GetClusterMasterAuthClientCertificateConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issueClientCertificate = defaults.issueClientCertificate;
+            $ = new GetClusterMasterAuthClientCertificateConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder issueClientCertificate(Boolean issueClientCertificate) {
-            this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
+            $.issueClientCertificate = issueClientCertificate;
             return this;
-        }        public GetClusterMasterAuthClientCertificateConfig build() {
-            return new GetClusterMasterAuthClientCertificateConfig(issueClientCertificate);
+        }
+
+        public GetClusterMasterAuthClientCertificateConfig build() {
+            $.issueClientCertificate = Objects.requireNonNull($.issueClientCertificate, "expected parameter 'issueClientCertificate' to be non-null");
+            return $;
         }
     }
+
 }

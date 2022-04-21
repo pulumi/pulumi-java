@@ -26,7 +26,7 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="extensionName", required=true)
-      private final String extensionName;
+    private String extensionName;
 
     public String extensionName() {
         return this.extensionName;
@@ -37,10 +37,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="extensionSettings")
-      private final @Nullable Object extensionSettings;
+    private @Nullable Object extensionSettings;
 
     public Optional<Object> extensionSettings() {
-        return this.extensionSettings == null ? Optional.empty() : Optional.ofNullable(this.extensionSettings);
+        return Optional.ofNullable(this.extensionSettings);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="inputDataSources")
-      private final @Nullable List<String> inputDataSources;
+    private @Nullable List<String> inputDataSources;
 
-    public List<String> inputDataSources() {
-        return this.inputDataSources == null ? List.of() : this.inputDataSources;
+    public Optional<List<String>> inputDataSources() {
+        return Optional.ofNullable(this.inputDataSources);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -72,88 +72,77 @@ public final class ExtensionDataSourceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="streams")
-      private final @Nullable List<String> streams;
+    private @Nullable List<String> streams;
 
-    public List<String> streams() {
-        return this.streams == null ? List.of() : this.streams;
+    public Optional<List<String>> streams() {
+        return Optional.ofNullable(this.streams);
     }
 
-    public ExtensionDataSourceResponse(
-        String extensionName,
-        @Nullable Object extensionSettings,
-        @Nullable List<String> inputDataSources,
-        @Nullable String name,
-        @Nullable List<String> streams) {
-        this.extensionName = Objects.requireNonNull(extensionName, "expected parameter 'extensionName' to be non-null");
-        this.extensionSettings = extensionSettings;
-        this.inputDataSources = inputDataSources;
-        this.name = name;
-        this.streams = streams;
-    }
+    private ExtensionDataSourceResponse() {}
 
-    private ExtensionDataSourceResponse() {
-        this.extensionName = null;
-        this.extensionSettings = null;
-        this.inputDataSources = List.of();
-        this.name = null;
-        this.streams = List.of();
+    private ExtensionDataSourceResponse(ExtensionDataSourceResponse $) {
+        this.extensionName = $.extensionName;
+        this.extensionSettings = $.extensionSettings;
+        this.inputDataSources = $.inputDataSources;
+        this.name = $.name;
+        this.streams = $.streams;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExtensionDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String extensionName;
-        private @Nullable Object extensionSettings;
-        private @Nullable List<String> inputDataSources;
-        private @Nullable String name;
-        private @Nullable List<String> streams;
+        private ExtensionDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExtensionDataSourceResponse();
         }
 
         public Builder(ExtensionDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extensionName = defaults.extensionName;
-    	      this.extensionSettings = defaults.extensionSettings;
-    	      this.inputDataSources = defaults.inputDataSources;
-    	      this.name = defaults.name;
-    	      this.streams = defaults.streams;
+            $ = new ExtensionDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extensionName(String extensionName) {
-            this.extensionName = Objects.requireNonNull(extensionName);
+            $.extensionName = extensionName;
             return this;
         }
+
         public Builder extensionSettings(@Nullable Object extensionSettings) {
-            this.extensionSettings = extensionSettings;
+            $.extensionSettings = extensionSettings;
             return this;
         }
+
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
-            this.inputDataSources = inputDataSources;
+            $.inputDataSources = inputDataSources;
             return this;
         }
+
         public Builder inputDataSources(String... inputDataSources) {
             return inputDataSources(List.of(inputDataSources));
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder streams(@Nullable List<String> streams) {
-            this.streams = streams;
+            $.streams = streams;
             return this;
         }
+
         public Builder streams(String... streams) {
             return streams(List.of(streams));
-        }        public ExtensionDataSourceResponse build() {
-            return new ExtensionDataSourceResponse(extensionName, extensionSettings, inputDataSources, name, streams);
+        }
+
+        public ExtensionDataSourceResponse build() {
+            $.extensionName = Objects.requireNonNull($.extensionName, "expected parameter 'extensionName' to be non-null");
+            return $;
         }
     }
+
 }

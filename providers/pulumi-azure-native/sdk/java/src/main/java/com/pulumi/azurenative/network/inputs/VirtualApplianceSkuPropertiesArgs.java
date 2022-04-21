@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bundledScaleUnit")
-      private final @Nullable Output<String> bundledScaleUnit;
+    private @Nullable Output<String> bundledScaleUnit;
 
-    public Output<String> bundledScaleUnit() {
-        return this.bundledScaleUnit == null ? Codegen.empty() : this.bundledScaleUnit;
+    public Optional<Output<String>> bundledScaleUnit() {
+        return Optional.ofNullable(this.bundledScaleUnit);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="marketPlaceVersion")
-      private final @Nullable Output<String> marketPlaceVersion;
+    private @Nullable Output<String> marketPlaceVersion;
 
-    public Output<String> marketPlaceVersion() {
-        return this.marketPlaceVersion == null ? Codegen.empty() : this.marketPlaceVersion;
+    public Optional<Output<String>> marketPlaceVersion() {
+        return Optional.ofNullable(this.marketPlaceVersion);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class VirtualApplianceSkuPropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="vendor")
-      private final @Nullable Output<String> vendor;
+    private @Nullable Output<String> vendor;
 
-    public Output<String> vendor() {
-        return this.vendor == null ? Codegen.empty() : this.vendor;
+    public Optional<Output<String>> vendor() {
+        return Optional.ofNullable(this.vendor);
     }
 
-    public VirtualApplianceSkuPropertiesArgs(
-        @Nullable Output<String> bundledScaleUnit,
-        @Nullable Output<String> marketPlaceVersion,
-        @Nullable Output<String> vendor) {
-        this.bundledScaleUnit = bundledScaleUnit;
-        this.marketPlaceVersion = marketPlaceVersion;
-        this.vendor = vendor;
-    }
+    private VirtualApplianceSkuPropertiesArgs() {}
 
-    private VirtualApplianceSkuPropertiesArgs() {
-        this.bundledScaleUnit = Codegen.empty();
-        this.marketPlaceVersion = Codegen.empty();
-        this.vendor = Codegen.empty();
+    private VirtualApplianceSkuPropertiesArgs(VirtualApplianceSkuPropertiesArgs $) {
+        this.bundledScaleUnit = $.bundledScaleUnit;
+        this.marketPlaceVersion = $.marketPlaceVersion;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualApplianceSkuPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bundledScaleUnit;
-        private @Nullable Output<String> marketPlaceVersion;
-        private @Nullable Output<String> vendor;
+        private VirtualApplianceSkuPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualApplianceSkuPropertiesArgs();
         }
 
         public Builder(VirtualApplianceSkuPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundledScaleUnit = defaults.bundledScaleUnit;
-    	      this.marketPlaceVersion = defaults.marketPlaceVersion;
-    	      this.vendor = defaults.vendor;
+            $ = new VirtualApplianceSkuPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundledScaleUnit(@Nullable Output<String> bundledScaleUnit) {
-            this.bundledScaleUnit = bundledScaleUnit;
+            $.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
-        public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
-            this.bundledScaleUnit = Codegen.ofNullable(bundledScaleUnit);
-            return this;
+
+        public Builder bundledScaleUnit(String bundledScaleUnit) {
+            return bundledScaleUnit(Output.of(bundledScaleUnit));
         }
+
         public Builder marketPlaceVersion(@Nullable Output<String> marketPlaceVersion) {
-            this.marketPlaceVersion = marketPlaceVersion;
+            $.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
-        public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
-            this.marketPlaceVersion = Codegen.ofNullable(marketPlaceVersion);
-            return this;
+
+        public Builder marketPlaceVersion(String marketPlaceVersion) {
+            return marketPlaceVersion(Output.of(marketPlaceVersion));
         }
+
         public Builder vendor(@Nullable Output<String> vendor) {
-            this.vendor = vendor;
+            $.vendor = vendor;
             return this;
         }
-        public Builder vendor(@Nullable String vendor) {
-            this.vendor = Codegen.ofNullable(vendor);
-            return this;
-        }        public VirtualApplianceSkuPropertiesArgs build() {
-            return new VirtualApplianceSkuPropertiesArgs(bundledScaleUnit, marketPlaceVersion, vendor);
+
+        public Builder vendor(String vendor) {
+            return vendor(Output.of(vendor));
+        }
+
+        public VirtualApplianceSkuPropertiesArgs build() {
+            return $;
         }
     }
+
 }

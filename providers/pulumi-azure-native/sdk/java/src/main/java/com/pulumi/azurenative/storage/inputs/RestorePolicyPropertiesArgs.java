@@ -5,10 +5,10 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="days")
-      private final @Nullable Output<Integer> days;
+    private @Nullable Output<Integer> days;
 
-    public Output<Integer> days() {
-        return this.days == null ? Codegen.empty() : this.days;
+    public Optional<Output<Integer>> days() {
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class RestorePolicyPropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public RestorePolicyPropertiesArgs(
-        @Nullable Output<Integer> days,
-        Output<Boolean> enabled) {
-        this.days = days;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private RestorePolicyPropertiesArgs() {}
 
-    private RestorePolicyPropertiesArgs() {
-        this.days = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private RestorePolicyPropertiesArgs(RestorePolicyPropertiesArgs $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestorePolicyPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> days;
-        private Output<Boolean> enabled;
+        private RestorePolicyPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestorePolicyPropertiesArgs();
         }
 
         public Builder(RestorePolicyPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
+            $ = new RestorePolicyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Output<Integer> days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
-        public Builder days(@Nullable Integer days) {
-            this.days = Codegen.ofNullable(days);
-            return this;
+
+        public Builder days(Integer days) {
+            return days(Output.of(days));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public RestorePolicyPropertiesArgs build() {
-            return new RestorePolicyPropertiesArgs(days, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public RestorePolicyPropertiesArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

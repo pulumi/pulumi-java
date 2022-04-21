@@ -5,9 +5,9 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ShieldedInstanceConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableIntegrityMonitoring")
-      private final @Nullable Output<Boolean> enableIntegrityMonitoring;
+    private @Nullable Output<Boolean> enableIntegrityMonitoring;
 
-    public Output<Boolean> enableIntegrityMonitoring() {
-        return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
+    public Optional<Output<Boolean>> enableIntegrityMonitoring() {
+        return Optional.ofNullable(this.enableIntegrityMonitoring);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ShieldedInstanceConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableSecureBoot")
-      private final @Nullable Output<Boolean> enableSecureBoot;
+    private @Nullable Output<Boolean> enableSecureBoot;
 
-    public Output<Boolean> enableSecureBoot() {
-        return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
+    public Optional<Output<Boolean>> enableSecureBoot() {
+        return Optional.ofNullable(this.enableSecureBoot);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ShieldedInstanceConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enableVtpm")
-      private final @Nullable Output<Boolean> enableVtpm;
+    private @Nullable Output<Boolean> enableVtpm;
 
-    public Output<Boolean> enableVtpm() {
-        return this.enableVtpm == null ? Codegen.empty() : this.enableVtpm;
+    public Optional<Output<Boolean>> enableVtpm() {
+        return Optional.ofNullable(this.enableVtpm);
     }
 
-    public ShieldedInstanceConfigArgs(
-        @Nullable Output<Boolean> enableIntegrityMonitoring,
-        @Nullable Output<Boolean> enableSecureBoot,
-        @Nullable Output<Boolean> enableVtpm) {
-        this.enableIntegrityMonitoring = enableIntegrityMonitoring;
-        this.enableSecureBoot = enableSecureBoot;
-        this.enableVtpm = enableVtpm;
-    }
+    private ShieldedInstanceConfigArgs() {}
 
-    private ShieldedInstanceConfigArgs() {
-        this.enableIntegrityMonitoring = Codegen.empty();
-        this.enableSecureBoot = Codegen.empty();
-        this.enableVtpm = Codegen.empty();
+    private ShieldedInstanceConfigArgs(ShieldedInstanceConfigArgs $) {
+        this.enableIntegrityMonitoring = $.enableIntegrityMonitoring;
+        this.enableSecureBoot = $.enableSecureBoot;
+        this.enableVtpm = $.enableVtpm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShieldedInstanceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableIntegrityMonitoring;
-        private @Nullable Output<Boolean> enableSecureBoot;
-        private @Nullable Output<Boolean> enableVtpm;
+        private ShieldedInstanceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShieldedInstanceConfigArgs();
         }
 
         public Builder(ShieldedInstanceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableIntegrityMonitoring = defaults.enableIntegrityMonitoring;
-    	      this.enableSecureBoot = defaults.enableSecureBoot;
-    	      this.enableVtpm = defaults.enableVtpm;
+            $ = new ShieldedInstanceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableIntegrityMonitoring(@Nullable Output<Boolean> enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = enableIntegrityMonitoring;
+            $.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
-        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Codegen.ofNullable(enableIntegrityMonitoring);
-            return this;
+
+        public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
+            return enableIntegrityMonitoring(Output.of(enableIntegrityMonitoring));
         }
+
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
-            this.enableSecureBoot = enableSecureBoot;
+            $.enableSecureBoot = enableSecureBoot;
             return this;
         }
-        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
-            this.enableSecureBoot = Codegen.ofNullable(enableSecureBoot);
-            return this;
+
+        public Builder enableSecureBoot(Boolean enableSecureBoot) {
+            return enableSecureBoot(Output.of(enableSecureBoot));
         }
+
         public Builder enableVtpm(@Nullable Output<Boolean> enableVtpm) {
-            this.enableVtpm = enableVtpm;
+            $.enableVtpm = enableVtpm;
             return this;
         }
-        public Builder enableVtpm(@Nullable Boolean enableVtpm) {
-            this.enableVtpm = Codegen.ofNullable(enableVtpm);
-            return this;
-        }        public ShieldedInstanceConfigArgs build() {
-            return new ShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
+
+        public Builder enableVtpm(Boolean enableVtpm) {
+            return enableVtpm(Output.of(enableVtpm));
+        }
+
+        public ShieldedInstanceConfigArgs build() {
+            return $;
         }
     }
+
 }

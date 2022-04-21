@@ -17,45 +17,45 @@ public final class GetDelegatedServicesArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public GetDelegatedServicesArgs(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private GetDelegatedServicesArgs() {}
 
-    private GetDelegatedServicesArgs() {
-        this.accountId = null;
+    private GetDelegatedServicesArgs(GetDelegatedServicesArgs $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegatedServicesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private GetDelegatedServicesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegatedServicesArgs();
         }
 
         public Builder(GetDelegatedServicesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new GetDelegatedServicesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public GetDelegatedServicesArgs build() {
-            return new GetDelegatedServicesArgs(accountId);
+        }
+
+        public GetDelegatedServicesArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

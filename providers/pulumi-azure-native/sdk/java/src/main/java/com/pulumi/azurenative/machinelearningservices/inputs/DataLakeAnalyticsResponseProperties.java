@@ -19,45 +19,44 @@ public final class DataLakeAnalyticsResponseProperties extends com.pulumi.resour
      * 
      */
     @Import(name="dataLakeStoreAccountName")
-      private final @Nullable String dataLakeStoreAccountName;
+    private @Nullable String dataLakeStoreAccountName;
 
     public Optional<String> dataLakeStoreAccountName() {
-        return this.dataLakeStoreAccountName == null ? Optional.empty() : Optional.ofNullable(this.dataLakeStoreAccountName);
+        return Optional.ofNullable(this.dataLakeStoreAccountName);
     }
 
-    public DataLakeAnalyticsResponseProperties(@Nullable String dataLakeStoreAccountName) {
-        this.dataLakeStoreAccountName = dataLakeStoreAccountName;
-    }
+    private DataLakeAnalyticsResponseProperties() {}
 
-    private DataLakeAnalyticsResponseProperties() {
-        this.dataLakeStoreAccountName = null;
+    private DataLakeAnalyticsResponseProperties(DataLakeAnalyticsResponseProperties $) {
+        this.dataLakeStoreAccountName = $.dataLakeStoreAccountName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataLakeAnalyticsResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataLakeStoreAccountName;
+        private DataLakeAnalyticsResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataLakeAnalyticsResponseProperties();
         }
 
         public Builder(DataLakeAnalyticsResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
+            $ = new DataLakeAnalyticsResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
-            this.dataLakeStoreAccountName = dataLakeStoreAccountName;
+            $.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
-        }        public DataLakeAnalyticsResponseProperties build() {
-            return new DataLakeAnalyticsResponseProperties(dataLakeStoreAccountName);
+        }
+
+        public DataLakeAnalyticsResponseProperties build() {
+            return $;
         }
     }
+
 }

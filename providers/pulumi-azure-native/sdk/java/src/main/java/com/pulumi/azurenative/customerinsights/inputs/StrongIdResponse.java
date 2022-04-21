@@ -25,10 +25,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Map<String,String> description;
+    private @Nullable Map<String,String> description;
 
-    public Map<String,String> description() {
-        return this.description == null ? Map.of() : this.description;
+    public Optional<Map<String,String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Map<String,String> displayName;
+    private @Nullable Map<String,String> displayName;
 
-    public Map<String,String> displayName() {
-        return this.displayName == null ? Map.of() : this.displayName;
+    public Optional<Map<String,String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyPropertyNames", required=true)
-      private final List<String> keyPropertyNames;
+    private List<String> keyPropertyNames;
 
     public List<String> keyPropertyNames() {
         return this.keyPropertyNames;
@@ -58,76 +58,68 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="strongIdName", required=true)
-      private final String strongIdName;
+    private String strongIdName;
 
     public String strongIdName() {
         return this.strongIdName;
     }
 
-    public StrongIdResponse(
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        List<String> keyPropertyNames,
-        String strongIdName) {
-        this.description = description;
-        this.displayName = displayName;
-        this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames, "expected parameter 'keyPropertyNames' to be non-null");
-        this.strongIdName = Objects.requireNonNull(strongIdName, "expected parameter 'strongIdName' to be non-null");
-    }
+    private StrongIdResponse() {}
 
-    private StrongIdResponse() {
-        this.description = Map.of();
-        this.displayName = Map.of();
-        this.keyPropertyNames = List.of();
-        this.strongIdName = null;
+    private StrongIdResponse(StrongIdResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.keyPropertyNames = $.keyPropertyNames;
+        this.strongIdName = $.strongIdName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StrongIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> description;
-        private @Nullable Map<String,String> displayName;
-        private List<String> keyPropertyNames;
-        private String strongIdName;
+        private StrongIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StrongIdResponse();
         }
 
         public Builder(StrongIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.keyPropertyNames = defaults.keyPropertyNames;
-    	      this.strongIdName = defaults.strongIdName;
+            $ = new StrongIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
-            this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
+            $.keyPropertyNames = keyPropertyNames;
             return this;
         }
+
         public Builder keyPropertyNames(String... keyPropertyNames) {
             return keyPropertyNames(List.of(keyPropertyNames));
         }
+
         public Builder strongIdName(String strongIdName) {
-            this.strongIdName = Objects.requireNonNull(strongIdName);
+            $.strongIdName = strongIdName;
             return this;
-        }        public StrongIdResponse build() {
-            return new StrongIdResponse(description, displayName, keyPropertyNames, strongIdName);
+        }
+
+        public StrongIdResponse build() {
+            $.keyPropertyNames = Objects.requireNonNull($.keyPropertyNames, "expected parameter 'keyPropertyNames' to be non-null");
+            $.strongIdName = Objects.requireNonNull($.strongIdName, "expected parameter 'strongIdName' to be non-null");
+            return $;
         }
     }
+
 }

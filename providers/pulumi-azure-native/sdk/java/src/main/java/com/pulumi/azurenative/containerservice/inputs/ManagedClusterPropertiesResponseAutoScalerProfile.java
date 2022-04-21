@@ -19,302 +19,252 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile extends com
     public static final ManagedClusterPropertiesResponseAutoScalerProfile Empty = new ManagedClusterPropertiesResponseAutoScalerProfile();
 
     @Import(name="balanceSimilarNodeGroups")
-      private final @Nullable String balanceSimilarNodeGroups;
+    private @Nullable String balanceSimilarNodeGroups;
 
     public Optional<String> balanceSimilarNodeGroups() {
-        return this.balanceSimilarNodeGroups == null ? Optional.empty() : Optional.ofNullable(this.balanceSimilarNodeGroups);
+        return Optional.ofNullable(this.balanceSimilarNodeGroups);
     }
 
     @Import(name="expander")
-      private final @Nullable String expander;
+    private @Nullable String expander;
 
     public Optional<String> expander() {
-        return this.expander == null ? Optional.empty() : Optional.ofNullable(this.expander);
+        return Optional.ofNullable(this.expander);
     }
 
     @Import(name="maxEmptyBulkDelete")
-      private final @Nullable String maxEmptyBulkDelete;
+    private @Nullable String maxEmptyBulkDelete;
 
     public Optional<String> maxEmptyBulkDelete() {
-        return this.maxEmptyBulkDelete == null ? Optional.empty() : Optional.ofNullable(this.maxEmptyBulkDelete);
+        return Optional.ofNullable(this.maxEmptyBulkDelete);
     }
 
     @Import(name="maxGracefulTerminationSec")
-      private final @Nullable String maxGracefulTerminationSec;
+    private @Nullable String maxGracefulTerminationSec;
 
     public Optional<String> maxGracefulTerminationSec() {
-        return this.maxGracefulTerminationSec == null ? Optional.empty() : Optional.ofNullable(this.maxGracefulTerminationSec);
+        return Optional.ofNullable(this.maxGracefulTerminationSec);
     }
 
     @Import(name="maxNodeProvisionTime")
-      private final @Nullable String maxNodeProvisionTime;
+    private @Nullable String maxNodeProvisionTime;
 
     public Optional<String> maxNodeProvisionTime() {
-        return this.maxNodeProvisionTime == null ? Optional.empty() : Optional.ofNullable(this.maxNodeProvisionTime);
+        return Optional.ofNullable(this.maxNodeProvisionTime);
     }
 
     @Import(name="maxTotalUnreadyPercentage")
-      private final @Nullable String maxTotalUnreadyPercentage;
+    private @Nullable String maxTotalUnreadyPercentage;
 
     public Optional<String> maxTotalUnreadyPercentage() {
-        return this.maxTotalUnreadyPercentage == null ? Optional.empty() : Optional.ofNullable(this.maxTotalUnreadyPercentage);
+        return Optional.ofNullable(this.maxTotalUnreadyPercentage);
     }
 
     @Import(name="newPodScaleUpDelay")
-      private final @Nullable String newPodScaleUpDelay;
+    private @Nullable String newPodScaleUpDelay;
 
     public Optional<String> newPodScaleUpDelay() {
-        return this.newPodScaleUpDelay == null ? Optional.empty() : Optional.ofNullable(this.newPodScaleUpDelay);
+        return Optional.ofNullable(this.newPodScaleUpDelay);
     }
 
     @Import(name="okTotalUnreadyCount")
-      private final @Nullable String okTotalUnreadyCount;
+    private @Nullable String okTotalUnreadyCount;
 
     public Optional<String> okTotalUnreadyCount() {
-        return this.okTotalUnreadyCount == null ? Optional.empty() : Optional.ofNullable(this.okTotalUnreadyCount);
+        return Optional.ofNullable(this.okTotalUnreadyCount);
     }
 
     @Import(name="scaleDownDelayAfterAdd")
-      private final @Nullable String scaleDownDelayAfterAdd;
+    private @Nullable String scaleDownDelayAfterAdd;
 
     public Optional<String> scaleDownDelayAfterAdd() {
-        return this.scaleDownDelayAfterAdd == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterAdd);
+        return Optional.ofNullable(this.scaleDownDelayAfterAdd);
     }
 
     @Import(name="scaleDownDelayAfterDelete")
-      private final @Nullable String scaleDownDelayAfterDelete;
+    private @Nullable String scaleDownDelayAfterDelete;
 
     public Optional<String> scaleDownDelayAfterDelete() {
-        return this.scaleDownDelayAfterDelete == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterDelete);
+        return Optional.ofNullable(this.scaleDownDelayAfterDelete);
     }
 
     @Import(name="scaleDownDelayAfterFailure")
-      private final @Nullable String scaleDownDelayAfterFailure;
+    private @Nullable String scaleDownDelayAfterFailure;
 
     public Optional<String> scaleDownDelayAfterFailure() {
-        return this.scaleDownDelayAfterFailure == null ? Optional.empty() : Optional.ofNullable(this.scaleDownDelayAfterFailure);
+        return Optional.ofNullable(this.scaleDownDelayAfterFailure);
     }
 
     @Import(name="scaleDownUnneededTime")
-      private final @Nullable String scaleDownUnneededTime;
+    private @Nullable String scaleDownUnneededTime;
 
     public Optional<String> scaleDownUnneededTime() {
-        return this.scaleDownUnneededTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnneededTime);
+        return Optional.ofNullable(this.scaleDownUnneededTime);
     }
 
     @Import(name="scaleDownUnreadyTime")
-      private final @Nullable String scaleDownUnreadyTime;
+    private @Nullable String scaleDownUnreadyTime;
 
     public Optional<String> scaleDownUnreadyTime() {
-        return this.scaleDownUnreadyTime == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUnreadyTime);
+        return Optional.ofNullable(this.scaleDownUnreadyTime);
     }
 
     @Import(name="scaleDownUtilizationThreshold")
-      private final @Nullable String scaleDownUtilizationThreshold;
+    private @Nullable String scaleDownUtilizationThreshold;
 
     public Optional<String> scaleDownUtilizationThreshold() {
-        return this.scaleDownUtilizationThreshold == null ? Optional.empty() : Optional.ofNullable(this.scaleDownUtilizationThreshold);
+        return Optional.ofNullable(this.scaleDownUtilizationThreshold);
     }
 
     @Import(name="scanInterval")
-      private final @Nullable String scanInterval;
+    private @Nullable String scanInterval;
 
     public Optional<String> scanInterval() {
-        return this.scanInterval == null ? Optional.empty() : Optional.ofNullable(this.scanInterval);
+        return Optional.ofNullable(this.scanInterval);
     }
 
     @Import(name="skipNodesWithLocalStorage")
-      private final @Nullable String skipNodesWithLocalStorage;
+    private @Nullable String skipNodesWithLocalStorage;
 
     public Optional<String> skipNodesWithLocalStorage() {
-        return this.skipNodesWithLocalStorage == null ? Optional.empty() : Optional.ofNullable(this.skipNodesWithLocalStorage);
+        return Optional.ofNullable(this.skipNodesWithLocalStorage);
     }
 
     @Import(name="skipNodesWithSystemPods")
-      private final @Nullable String skipNodesWithSystemPods;
+    private @Nullable String skipNodesWithSystemPods;
 
     public Optional<String> skipNodesWithSystemPods() {
-        return this.skipNodesWithSystemPods == null ? Optional.empty() : Optional.ofNullable(this.skipNodesWithSystemPods);
+        return Optional.ofNullable(this.skipNodesWithSystemPods);
     }
 
-    public ManagedClusterPropertiesResponseAutoScalerProfile(
-        @Nullable String balanceSimilarNodeGroups,
-        @Nullable String expander,
-        @Nullable String maxEmptyBulkDelete,
-        @Nullable String maxGracefulTerminationSec,
-        @Nullable String maxNodeProvisionTime,
-        @Nullable String maxTotalUnreadyPercentage,
-        @Nullable String newPodScaleUpDelay,
-        @Nullable String okTotalUnreadyCount,
-        @Nullable String scaleDownDelayAfterAdd,
-        @Nullable String scaleDownDelayAfterDelete,
-        @Nullable String scaleDownDelayAfterFailure,
-        @Nullable String scaleDownUnneededTime,
-        @Nullable String scaleDownUnreadyTime,
-        @Nullable String scaleDownUtilizationThreshold,
-        @Nullable String scanInterval,
-        @Nullable String skipNodesWithLocalStorage,
-        @Nullable String skipNodesWithSystemPods) {
-        this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
-        this.expander = expander;
-        this.maxEmptyBulkDelete = maxEmptyBulkDelete;
-        this.maxGracefulTerminationSec = maxGracefulTerminationSec;
-        this.maxNodeProvisionTime = maxNodeProvisionTime;
-        this.maxTotalUnreadyPercentage = maxTotalUnreadyPercentage;
-        this.newPodScaleUpDelay = newPodScaleUpDelay;
-        this.okTotalUnreadyCount = okTotalUnreadyCount;
-        this.scaleDownDelayAfterAdd = scaleDownDelayAfterAdd;
-        this.scaleDownDelayAfterDelete = scaleDownDelayAfterDelete;
-        this.scaleDownDelayAfterFailure = scaleDownDelayAfterFailure;
-        this.scaleDownUnneededTime = scaleDownUnneededTime;
-        this.scaleDownUnreadyTime = scaleDownUnreadyTime;
-        this.scaleDownUtilizationThreshold = scaleDownUtilizationThreshold;
-        this.scanInterval = scanInterval;
-        this.skipNodesWithLocalStorage = skipNodesWithLocalStorage;
-        this.skipNodesWithSystemPods = skipNodesWithSystemPods;
-    }
+    private ManagedClusterPropertiesResponseAutoScalerProfile() {}
 
-    private ManagedClusterPropertiesResponseAutoScalerProfile() {
-        this.balanceSimilarNodeGroups = null;
-        this.expander = null;
-        this.maxEmptyBulkDelete = null;
-        this.maxGracefulTerminationSec = null;
-        this.maxNodeProvisionTime = null;
-        this.maxTotalUnreadyPercentage = null;
-        this.newPodScaleUpDelay = null;
-        this.okTotalUnreadyCount = null;
-        this.scaleDownDelayAfterAdd = null;
-        this.scaleDownDelayAfterDelete = null;
-        this.scaleDownDelayAfterFailure = null;
-        this.scaleDownUnneededTime = null;
-        this.scaleDownUnreadyTime = null;
-        this.scaleDownUtilizationThreshold = null;
-        this.scanInterval = null;
-        this.skipNodesWithLocalStorage = null;
-        this.skipNodesWithSystemPods = null;
+    private ManagedClusterPropertiesResponseAutoScalerProfile(ManagedClusterPropertiesResponseAutoScalerProfile $) {
+        this.balanceSimilarNodeGroups = $.balanceSimilarNodeGroups;
+        this.expander = $.expander;
+        this.maxEmptyBulkDelete = $.maxEmptyBulkDelete;
+        this.maxGracefulTerminationSec = $.maxGracefulTerminationSec;
+        this.maxNodeProvisionTime = $.maxNodeProvisionTime;
+        this.maxTotalUnreadyPercentage = $.maxTotalUnreadyPercentage;
+        this.newPodScaleUpDelay = $.newPodScaleUpDelay;
+        this.okTotalUnreadyCount = $.okTotalUnreadyCount;
+        this.scaleDownDelayAfterAdd = $.scaleDownDelayAfterAdd;
+        this.scaleDownDelayAfterDelete = $.scaleDownDelayAfterDelete;
+        this.scaleDownDelayAfterFailure = $.scaleDownDelayAfterFailure;
+        this.scaleDownUnneededTime = $.scaleDownUnneededTime;
+        this.scaleDownUnreadyTime = $.scaleDownUnreadyTime;
+        this.scaleDownUtilizationThreshold = $.scaleDownUtilizationThreshold;
+        this.scanInterval = $.scanInterval;
+        this.skipNodesWithLocalStorage = $.skipNodesWithLocalStorage;
+        this.skipNodesWithSystemPods = $.skipNodesWithSystemPods;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterPropertiesResponseAutoScalerProfile defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String balanceSimilarNodeGroups;
-        private @Nullable String expander;
-        private @Nullable String maxEmptyBulkDelete;
-        private @Nullable String maxGracefulTerminationSec;
-        private @Nullable String maxNodeProvisionTime;
-        private @Nullable String maxTotalUnreadyPercentage;
-        private @Nullable String newPodScaleUpDelay;
-        private @Nullable String okTotalUnreadyCount;
-        private @Nullable String scaleDownDelayAfterAdd;
-        private @Nullable String scaleDownDelayAfterDelete;
-        private @Nullable String scaleDownDelayAfterFailure;
-        private @Nullable String scaleDownUnneededTime;
-        private @Nullable String scaleDownUnreadyTime;
-        private @Nullable String scaleDownUtilizationThreshold;
-        private @Nullable String scanInterval;
-        private @Nullable String skipNodesWithLocalStorage;
-        private @Nullable String skipNodesWithSystemPods;
+        private ManagedClusterPropertiesResponseAutoScalerProfile $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterPropertiesResponseAutoScalerProfile();
         }
 
         public Builder(ManagedClusterPropertiesResponseAutoScalerProfile defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.balanceSimilarNodeGroups = defaults.balanceSimilarNodeGroups;
-    	      this.expander = defaults.expander;
-    	      this.maxEmptyBulkDelete = defaults.maxEmptyBulkDelete;
-    	      this.maxGracefulTerminationSec = defaults.maxGracefulTerminationSec;
-    	      this.maxNodeProvisionTime = defaults.maxNodeProvisionTime;
-    	      this.maxTotalUnreadyPercentage = defaults.maxTotalUnreadyPercentage;
-    	      this.newPodScaleUpDelay = defaults.newPodScaleUpDelay;
-    	      this.okTotalUnreadyCount = defaults.okTotalUnreadyCount;
-    	      this.scaleDownDelayAfterAdd = defaults.scaleDownDelayAfterAdd;
-    	      this.scaleDownDelayAfterDelete = defaults.scaleDownDelayAfterDelete;
-    	      this.scaleDownDelayAfterFailure = defaults.scaleDownDelayAfterFailure;
-    	      this.scaleDownUnneededTime = defaults.scaleDownUnneededTime;
-    	      this.scaleDownUnreadyTime = defaults.scaleDownUnreadyTime;
-    	      this.scaleDownUtilizationThreshold = defaults.scaleDownUtilizationThreshold;
-    	      this.scanInterval = defaults.scanInterval;
-    	      this.skipNodesWithLocalStorage = defaults.skipNodesWithLocalStorage;
-    	      this.skipNodesWithSystemPods = defaults.skipNodesWithSystemPods;
+            $ = new ManagedClusterPropertiesResponseAutoScalerProfile(Objects.requireNonNull(defaults));
         }
 
         public Builder balanceSimilarNodeGroups(@Nullable String balanceSimilarNodeGroups) {
-            this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
+            $.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
             return this;
         }
+
         public Builder expander(@Nullable String expander) {
-            this.expander = expander;
+            $.expander = expander;
             return this;
         }
+
         public Builder maxEmptyBulkDelete(@Nullable String maxEmptyBulkDelete) {
-            this.maxEmptyBulkDelete = maxEmptyBulkDelete;
+            $.maxEmptyBulkDelete = maxEmptyBulkDelete;
             return this;
         }
+
         public Builder maxGracefulTerminationSec(@Nullable String maxGracefulTerminationSec) {
-            this.maxGracefulTerminationSec = maxGracefulTerminationSec;
+            $.maxGracefulTerminationSec = maxGracefulTerminationSec;
             return this;
         }
+
         public Builder maxNodeProvisionTime(@Nullable String maxNodeProvisionTime) {
-            this.maxNodeProvisionTime = maxNodeProvisionTime;
+            $.maxNodeProvisionTime = maxNodeProvisionTime;
             return this;
         }
+
         public Builder maxTotalUnreadyPercentage(@Nullable String maxTotalUnreadyPercentage) {
-            this.maxTotalUnreadyPercentage = maxTotalUnreadyPercentage;
+            $.maxTotalUnreadyPercentage = maxTotalUnreadyPercentage;
             return this;
         }
+
         public Builder newPodScaleUpDelay(@Nullable String newPodScaleUpDelay) {
-            this.newPodScaleUpDelay = newPodScaleUpDelay;
+            $.newPodScaleUpDelay = newPodScaleUpDelay;
             return this;
         }
+
         public Builder okTotalUnreadyCount(@Nullable String okTotalUnreadyCount) {
-            this.okTotalUnreadyCount = okTotalUnreadyCount;
+            $.okTotalUnreadyCount = okTotalUnreadyCount;
             return this;
         }
+
         public Builder scaleDownDelayAfterAdd(@Nullable String scaleDownDelayAfterAdd) {
-            this.scaleDownDelayAfterAdd = scaleDownDelayAfterAdd;
+            $.scaleDownDelayAfterAdd = scaleDownDelayAfterAdd;
             return this;
         }
+
         public Builder scaleDownDelayAfterDelete(@Nullable String scaleDownDelayAfterDelete) {
-            this.scaleDownDelayAfterDelete = scaleDownDelayAfterDelete;
+            $.scaleDownDelayAfterDelete = scaleDownDelayAfterDelete;
             return this;
         }
+
         public Builder scaleDownDelayAfterFailure(@Nullable String scaleDownDelayAfterFailure) {
-            this.scaleDownDelayAfterFailure = scaleDownDelayAfterFailure;
+            $.scaleDownDelayAfterFailure = scaleDownDelayAfterFailure;
             return this;
         }
+
         public Builder scaleDownUnneededTime(@Nullable String scaleDownUnneededTime) {
-            this.scaleDownUnneededTime = scaleDownUnneededTime;
+            $.scaleDownUnneededTime = scaleDownUnneededTime;
             return this;
         }
+
         public Builder scaleDownUnreadyTime(@Nullable String scaleDownUnreadyTime) {
-            this.scaleDownUnreadyTime = scaleDownUnreadyTime;
+            $.scaleDownUnreadyTime = scaleDownUnreadyTime;
             return this;
         }
+
         public Builder scaleDownUtilizationThreshold(@Nullable String scaleDownUtilizationThreshold) {
-            this.scaleDownUtilizationThreshold = scaleDownUtilizationThreshold;
+            $.scaleDownUtilizationThreshold = scaleDownUtilizationThreshold;
             return this;
         }
+
         public Builder scanInterval(@Nullable String scanInterval) {
-            this.scanInterval = scanInterval;
+            $.scanInterval = scanInterval;
             return this;
         }
+
         public Builder skipNodesWithLocalStorage(@Nullable String skipNodesWithLocalStorage) {
-            this.skipNodesWithLocalStorage = skipNodesWithLocalStorage;
+            $.skipNodesWithLocalStorage = skipNodesWithLocalStorage;
             return this;
         }
+
         public Builder skipNodesWithSystemPods(@Nullable String skipNodesWithSystemPods) {
-            this.skipNodesWithSystemPods = skipNodesWithSystemPods;
+            $.skipNodesWithSystemPods = skipNodesWithSystemPods;
             return this;
-        }        public ManagedClusterPropertiesResponseAutoScalerProfile build() {
-            return new ManagedClusterPropertiesResponseAutoScalerProfile(balanceSimilarNodeGroups, expander, maxEmptyBulkDelete, maxGracefulTerminationSec, maxNodeProvisionTime, maxTotalUnreadyPercentage, newPodScaleUpDelay, okTotalUnreadyCount, scaleDownDelayAfterAdd, scaleDownDelayAfterDelete, scaleDownDelayAfterFailure, scaleDownUnneededTime, scaleDownUnreadyTime, scaleDownUtilizationThreshold, scanInterval, skipNodesWithLocalStorage, skipNodesWithSystemPods);
+        }
+
+        public ManagedClusterPropertiesResponseAutoScalerProfile build() {
+            return $;
         }
     }
+
 }

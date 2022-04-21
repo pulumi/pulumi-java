@@ -5,7 +5,6 @@ package com.pulumi.aws.waf.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WebAclDefaultActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public WebAclDefaultActionGetArgs(Output<String> type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private WebAclDefaultActionGetArgs() {}
 
-    private WebAclDefaultActionGetArgs() {
-        this.type = Codegen.empty();
+    private WebAclDefaultActionGetArgs(WebAclDefaultActionGetArgs $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAclDefaultActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> type;
+        private WebAclDefaultActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAclDefaultActionGetArgs();
         }
 
         public Builder(WebAclDefaultActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new WebAclDefaultActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public WebAclDefaultActionGetArgs build() {
-            return new WebAclDefaultActionGetArgs(type);
+            return type(Output.of(type));
+        }
+
+        public WebAclDefaultActionGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

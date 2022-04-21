@@ -7,10 +7,10 @@ import com.pulumi.azurenative.hybridnetwork.enums.DiskCreateOptionTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createOption")
-      private final @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
+    private @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
-    public Output<Either<String,DiskCreateOptionTypes>> createOption() {
-        return this.createOption == null ? Codegen.empty() : this.createOption;
+    public Optional<Output<Either<String,DiskCreateOptionTypes>>> createOption() {
+        return Optional.ofNullable(this.createOption);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Output<Integer> diskSizeGB;
+    private @Nullable Output<Integer> diskSizeGB;
 
-    public Output<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
+    public Optional<Output<Integer>> diskSizeGB() {
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DataDiskArgs(
-        @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption,
-        @Nullable Output<Integer> diskSizeGB,
-        @Nullable Output<String> name) {
-        this.createOption = createOption;
-        this.diskSizeGB = diskSizeGB;
-        this.name = name;
-    }
+    private DataDiskArgs() {}
 
-    private DataDiskArgs() {
-        this.createOption = Codegen.empty();
-        this.diskSizeGB = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataDiskArgs(DataDiskArgs $) {
+        this.createOption = $.createOption;
+        this.diskSizeGB = $.diskSizeGB;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
-        private @Nullable Output<Integer> diskSizeGB;
-        private @Nullable Output<String> name;
+        private DataDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskArgs();
         }
 
         public Builder(DataDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createOption = defaults.createOption;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.name = defaults.name;
+            $ = new DataDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createOption(@Nullable Output<Either<String,DiskCreateOptionTypes>> createOption) {
-            this.createOption = createOption;
+            $.createOption = createOption;
             return this;
         }
-        public Builder createOption(@Nullable Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Codegen.ofNullable(createOption);
-            return this;
+
+        public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
+            return createOption(Output.of(createOption));
         }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
-        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
-            return this;
+
+        public Builder diskSizeGB(Integer diskSizeGB) {
+            return diskSizeGB(Output.of(diskSizeGB));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DataDiskArgs build() {
-            return new DataDiskArgs(createOption, diskSizeGB, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public DataDiskArgs build() {
+            return $;
         }
     }
+
 }

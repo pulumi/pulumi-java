@@ -6,9 +6,9 @@ package com.pulumi.awsnative.imagebuilder.inputs;
 import com.pulumi.awsnative.imagebuilder.enums.ContainerRecipeTargetContainerRepositoryService;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
      * 
      */
     @Import(name="repositoryName")
-      private final @Nullable Output<String> repositoryName;
+    private @Nullable Output<String> repositoryName;
 
-    public Output<String> repositoryName() {
-        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
+    public Optional<Output<String>> repositoryName() {
+        return Optional.ofNullable(this.repositoryName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ContainerRecipeTargetContainerRepositoryArgs extends com.pulu
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
+    private @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
 
-    public Output<ContainerRecipeTargetContainerRepositoryService> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<ContainerRecipeTargetContainerRepositoryService>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ContainerRecipeTargetContainerRepositoryArgs(
-        @Nullable Output<String> repositoryName,
-        @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service) {
-        this.repositoryName = repositoryName;
-        this.service = service;
-    }
+    private ContainerRecipeTargetContainerRepositoryArgs() {}
 
-    private ContainerRecipeTargetContainerRepositoryArgs() {
-        this.repositoryName = Codegen.empty();
-        this.service = Codegen.empty();
+    private ContainerRecipeTargetContainerRepositoryArgs(ContainerRecipeTargetContainerRepositoryArgs $) {
+        this.repositoryName = $.repositoryName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerRecipeTargetContainerRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> repositoryName;
-        private @Nullable Output<ContainerRecipeTargetContainerRepositoryService> service;
+        private ContainerRecipeTargetContainerRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerRecipeTargetContainerRepositoryArgs();
         }
 
         public Builder(ContainerRecipeTargetContainerRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repositoryName = defaults.repositoryName;
-    	      this.service = defaults.service;
+            $ = new ContainerRecipeTargetContainerRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
-            this.repositoryName = repositoryName;
+            $.repositoryName = repositoryName;
             return this;
         }
-        public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Codegen.ofNullable(repositoryName);
-            return this;
+
+        public Builder repositoryName(String repositoryName) {
+            return repositoryName(Output.of(repositoryName));
         }
+
         public Builder service(@Nullable Output<ContainerRecipeTargetContainerRepositoryService> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable ContainerRecipeTargetContainerRepositoryService service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ContainerRecipeTargetContainerRepositoryArgs build() {
-            return new ContainerRecipeTargetContainerRepositoryArgs(repositoryName, service);
+
+        public Builder service(ContainerRecipeTargetContainerRepositoryService service) {
+            return service(Output.of(service));
+        }
+
+        public ContainerRecipeTargetContainerRepositoryArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,13 +7,13 @@ import com.pulumi.aws.storagegateway.inputs.GatewayGatewayNetworkInterfaceGetArg
 import com.pulumi.aws.storagegateway.inputs.GatewaySmbActiveDirectorySettingsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activationKey")
-      private final @Nullable Output<String> activationKey;
+    private @Nullable Output<String> activationKey;
 
-    public Output<String> activationKey() {
-        return this.activationKey == null ? Codegen.empty() : this.activationKey;
+    public Optional<Output<String>> activationKey() {
+        return Optional.ofNullable(this.activationKey);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="averageDownloadRateLimitInBitsPerSec")
-      private final @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
+    private @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
 
-    public Output<Integer> averageDownloadRateLimitInBitsPerSec() {
-        return this.averageDownloadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageDownloadRateLimitInBitsPerSec;
+    public Optional<Output<Integer>> averageDownloadRateLimitInBitsPerSec() {
+        return Optional.ofNullable(this.averageDownloadRateLimitInBitsPerSec);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="averageUploadRateLimitInBitsPerSec")
-      private final @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
+    private @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
 
-    public Output<Integer> averageUploadRateLimitInBitsPerSec() {
-        return this.averageUploadRateLimitInBitsPerSec == null ? Codegen.empty() : this.averageUploadRateLimitInBitsPerSec;
+    public Optional<Output<Integer>> averageUploadRateLimitInBitsPerSec() {
+        return Optional.ofNullable(this.averageUploadRateLimitInBitsPerSec);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchLogGroupArn")
-      private final @Nullable Output<String> cloudwatchLogGroupArn;
+    private @Nullable Output<String> cloudwatchLogGroupArn;
 
-    public Output<String> cloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn == null ? Codegen.empty() : this.cloudwatchLogGroupArn;
+    public Optional<Output<String>> cloudwatchLogGroupArn() {
+        return Optional.ofNullable(this.cloudwatchLogGroupArn);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ec2InstanceId")
-      private final @Nullable Output<String> ec2InstanceId;
+    private @Nullable Output<String> ec2InstanceId;
 
-    public Output<String> ec2InstanceId() {
-        return this.ec2InstanceId == null ? Codegen.empty() : this.ec2InstanceId;
+    public Optional<Output<String>> ec2InstanceId() {
+        return Optional.ofNullable(this.ec2InstanceId);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpointType")
-      private final @Nullable Output<String> endpointType;
+    private @Nullable Output<String> endpointType;
 
-    public Output<String> endpointType() {
-        return this.endpointType == null ? Codegen.empty() : this.endpointType;
+    public Optional<Output<String>> endpointType() {
+        return Optional.ofNullable(this.endpointType);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayId")
-      private final @Nullable Output<String> gatewayId;
+    private @Nullable Output<String> gatewayId;
 
-    public Output<String> gatewayId() {
-        return this.gatewayId == null ? Codegen.empty() : this.gatewayId;
+    public Optional<Output<String>> gatewayId() {
+        return Optional.ofNullable(this.gatewayId);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayIpAddress")
-      private final @Nullable Output<String> gatewayIpAddress;
+    private @Nullable Output<String> gatewayIpAddress;
 
-    public Output<String> gatewayIpAddress() {
-        return this.gatewayIpAddress == null ? Codegen.empty() : this.gatewayIpAddress;
+    public Optional<Output<String>> gatewayIpAddress() {
+        return Optional.ofNullable(this.gatewayIpAddress);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayName")
-      private final @Nullable Output<String> gatewayName;
+    private @Nullable Output<String> gatewayName;
 
-    public Output<String> gatewayName() {
-        return this.gatewayName == null ? Codegen.empty() : this.gatewayName;
+    public Optional<Output<String>> gatewayName() {
+        return Optional.ofNullable(this.gatewayName);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayNetworkInterfaces")
-      private final @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
+    private @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
 
-    public Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces() {
-        return this.gatewayNetworkInterfaces == null ? Codegen.empty() : this.gatewayNetworkInterfaces;
+    public Optional<Output<List<GatewayGatewayNetworkInterfaceGetArgs>>> gatewayNetworkInterfaces() {
+        return Optional.ofNullable(this.gatewayNetworkInterfaces);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayTimezone")
-      private final @Nullable Output<String> gatewayTimezone;
+    private @Nullable Output<String> gatewayTimezone;
 
-    public Output<String> gatewayTimezone() {
-        return this.gatewayTimezone == null ? Codegen.empty() : this.gatewayTimezone;
+    public Optional<Output<String>> gatewayTimezone() {
+        return Optional.ofNullable(this.gatewayTimezone);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayType")
-      private final @Nullable Output<String> gatewayType;
+    private @Nullable Output<String> gatewayType;
 
-    public Output<String> gatewayType() {
-        return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
+    public Optional<Output<String>> gatewayType() {
+        return Optional.ofNullable(this.gatewayType);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayVpcEndpoint")
-      private final @Nullable Output<String> gatewayVpcEndpoint;
+    private @Nullable Output<String> gatewayVpcEndpoint;
 
-    public Output<String> gatewayVpcEndpoint() {
-        return this.gatewayVpcEndpoint == null ? Codegen.empty() : this.gatewayVpcEndpoint;
+    public Optional<Output<String>> gatewayVpcEndpoint() {
+        return Optional.ofNullable(this.gatewayVpcEndpoint);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostEnvironment")
-      private final @Nullable Output<String> hostEnvironment;
+    private @Nullable Output<String> hostEnvironment;
 
-    public Output<String> hostEnvironment() {
-        return this.hostEnvironment == null ? Codegen.empty() : this.hostEnvironment;
+    public Optional<Output<String>> hostEnvironment() {
+        return Optional.ofNullable(this.hostEnvironment);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mediumChangerType")
-      private final @Nullable Output<String> mediumChangerType;
+    private @Nullable Output<String> mediumChangerType;
 
-    public Output<String> mediumChangerType() {
-        return this.mediumChangerType == null ? Codegen.empty() : this.mediumChangerType;
+    public Optional<Output<String>> mediumChangerType() {
+        return Optional.ofNullable(this.mediumChangerType);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbActiveDirectorySettings")
-      private final @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
+    private @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
 
-    public Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings() {
-        return this.smbActiveDirectorySettings == null ? Codegen.empty() : this.smbActiveDirectorySettings;
+    public Optional<Output<GatewaySmbActiveDirectorySettingsGetArgs>> smbActiveDirectorySettings() {
+        return Optional.ofNullable(this.smbActiveDirectorySettings);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbFileShareVisibility")
-      private final @Nullable Output<Boolean> smbFileShareVisibility;
+    private @Nullable Output<Boolean> smbFileShareVisibility;
 
-    public Output<Boolean> smbFileShareVisibility() {
-        return this.smbFileShareVisibility == null ? Codegen.empty() : this.smbFileShareVisibility;
+    public Optional<Output<Boolean>> smbFileShareVisibility() {
+        return Optional.ofNullable(this.smbFileShareVisibility);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbGuestPassword")
-      private final @Nullable Output<String> smbGuestPassword;
+    private @Nullable Output<String> smbGuestPassword;
 
-    public Output<String> smbGuestPassword() {
-        return this.smbGuestPassword == null ? Codegen.empty() : this.smbGuestPassword;
+    public Optional<Output<String>> smbGuestPassword() {
+        return Optional.ofNullable(this.smbGuestPassword);
     }
 
     /**
@@ -235,10 +235,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="smbSecurityStrategy")
-      private final @Nullable Output<String> smbSecurityStrategy;
+    private @Nullable Output<String> smbSecurityStrategy;
 
-    public Output<String> smbSecurityStrategy() {
-        return this.smbSecurityStrategy == null ? Codegen.empty() : this.smbSecurityStrategy;
+    public Optional<Output<String>> smbSecurityStrategy() {
+        return Optional.ofNullable(this.smbSecurityStrategy);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -268,339 +268,272 @@ public final class GatewayState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tapeDriveType")
-      private final @Nullable Output<String> tapeDriveType;
+    private @Nullable Output<String> tapeDriveType;
 
-    public Output<String> tapeDriveType() {
-        return this.tapeDriveType == null ? Codegen.empty() : this.tapeDriveType;
+    public Optional<Output<String>> tapeDriveType() {
+        return Optional.ofNullable(this.tapeDriveType);
     }
 
-    public GatewayState(
-        @Nullable Output<String> activationKey,
-        @Nullable Output<String> arn,
-        @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec,
-        @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec,
-        @Nullable Output<String> cloudwatchLogGroupArn,
-        @Nullable Output<String> ec2InstanceId,
-        @Nullable Output<String> endpointType,
-        @Nullable Output<String> gatewayId,
-        @Nullable Output<String> gatewayIpAddress,
-        @Nullable Output<String> gatewayName,
-        @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces,
-        @Nullable Output<String> gatewayTimezone,
-        @Nullable Output<String> gatewayType,
-        @Nullable Output<String> gatewayVpcEndpoint,
-        @Nullable Output<String> hostEnvironment,
-        @Nullable Output<String> mediumChangerType,
-        @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings,
-        @Nullable Output<Boolean> smbFileShareVisibility,
-        @Nullable Output<String> smbGuestPassword,
-        @Nullable Output<String> smbSecurityStrategy,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> tapeDriveType) {
-        this.activationKey = activationKey;
-        this.arn = arn;
-        this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
-        this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
-        this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
-        this.ec2InstanceId = ec2InstanceId;
-        this.endpointType = endpointType;
-        this.gatewayId = gatewayId;
-        this.gatewayIpAddress = gatewayIpAddress;
-        this.gatewayName = gatewayName;
-        this.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
-        this.gatewayTimezone = gatewayTimezone;
-        this.gatewayType = gatewayType;
-        this.gatewayVpcEndpoint = gatewayVpcEndpoint;
-        this.hostEnvironment = hostEnvironment;
-        this.mediumChangerType = mediumChangerType;
-        this.smbActiveDirectorySettings = smbActiveDirectorySettings;
-        this.smbFileShareVisibility = smbFileShareVisibility;
-        this.smbGuestPassword = smbGuestPassword;
-        this.smbSecurityStrategy = smbSecurityStrategy;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.tapeDriveType = tapeDriveType;
-    }
+    private GatewayState() {}
 
-    private GatewayState() {
-        this.activationKey = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.averageDownloadRateLimitInBitsPerSec = Codegen.empty();
-        this.averageUploadRateLimitInBitsPerSec = Codegen.empty();
-        this.cloudwatchLogGroupArn = Codegen.empty();
-        this.ec2InstanceId = Codegen.empty();
-        this.endpointType = Codegen.empty();
-        this.gatewayId = Codegen.empty();
-        this.gatewayIpAddress = Codegen.empty();
-        this.gatewayName = Codegen.empty();
-        this.gatewayNetworkInterfaces = Codegen.empty();
-        this.gatewayTimezone = Codegen.empty();
-        this.gatewayType = Codegen.empty();
-        this.gatewayVpcEndpoint = Codegen.empty();
-        this.hostEnvironment = Codegen.empty();
-        this.mediumChangerType = Codegen.empty();
-        this.smbActiveDirectorySettings = Codegen.empty();
-        this.smbFileShareVisibility = Codegen.empty();
-        this.smbGuestPassword = Codegen.empty();
-        this.smbSecurityStrategy = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.tapeDriveType = Codegen.empty();
+    private GatewayState(GatewayState $) {
+        this.activationKey = $.activationKey;
+        this.arn = $.arn;
+        this.averageDownloadRateLimitInBitsPerSec = $.averageDownloadRateLimitInBitsPerSec;
+        this.averageUploadRateLimitInBitsPerSec = $.averageUploadRateLimitInBitsPerSec;
+        this.cloudwatchLogGroupArn = $.cloudwatchLogGroupArn;
+        this.ec2InstanceId = $.ec2InstanceId;
+        this.endpointType = $.endpointType;
+        this.gatewayId = $.gatewayId;
+        this.gatewayIpAddress = $.gatewayIpAddress;
+        this.gatewayName = $.gatewayName;
+        this.gatewayNetworkInterfaces = $.gatewayNetworkInterfaces;
+        this.gatewayTimezone = $.gatewayTimezone;
+        this.gatewayType = $.gatewayType;
+        this.gatewayVpcEndpoint = $.gatewayVpcEndpoint;
+        this.hostEnvironment = $.hostEnvironment;
+        this.mediumChangerType = $.mediumChangerType;
+        this.smbActiveDirectorySettings = $.smbActiveDirectorySettings;
+        this.smbFileShareVisibility = $.smbFileShareVisibility;
+        this.smbGuestPassword = $.smbGuestPassword;
+        this.smbSecurityStrategy = $.smbSecurityStrategy;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.tapeDriveType = $.tapeDriveType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activationKey;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec;
-        private @Nullable Output<Integer> averageUploadRateLimitInBitsPerSec;
-        private @Nullable Output<String> cloudwatchLogGroupArn;
-        private @Nullable Output<String> ec2InstanceId;
-        private @Nullable Output<String> endpointType;
-        private @Nullable Output<String> gatewayId;
-        private @Nullable Output<String> gatewayIpAddress;
-        private @Nullable Output<String> gatewayName;
-        private @Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces;
-        private @Nullable Output<String> gatewayTimezone;
-        private @Nullable Output<String> gatewayType;
-        private @Nullable Output<String> gatewayVpcEndpoint;
-        private @Nullable Output<String> hostEnvironment;
-        private @Nullable Output<String> mediumChangerType;
-        private @Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings;
-        private @Nullable Output<Boolean> smbFileShareVisibility;
-        private @Nullable Output<String> smbGuestPassword;
-        private @Nullable Output<String> smbSecurityStrategy;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> tapeDriveType;
+        private GatewayState $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayState();
         }
 
         public Builder(GatewayState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationKey = defaults.activationKey;
-    	      this.arn = defaults.arn;
-    	      this.averageDownloadRateLimitInBitsPerSec = defaults.averageDownloadRateLimitInBitsPerSec;
-    	      this.averageUploadRateLimitInBitsPerSec = defaults.averageUploadRateLimitInBitsPerSec;
-    	      this.cloudwatchLogGroupArn = defaults.cloudwatchLogGroupArn;
-    	      this.ec2InstanceId = defaults.ec2InstanceId;
-    	      this.endpointType = defaults.endpointType;
-    	      this.gatewayId = defaults.gatewayId;
-    	      this.gatewayIpAddress = defaults.gatewayIpAddress;
-    	      this.gatewayName = defaults.gatewayName;
-    	      this.gatewayNetworkInterfaces = defaults.gatewayNetworkInterfaces;
-    	      this.gatewayTimezone = defaults.gatewayTimezone;
-    	      this.gatewayType = defaults.gatewayType;
-    	      this.gatewayVpcEndpoint = defaults.gatewayVpcEndpoint;
-    	      this.hostEnvironment = defaults.hostEnvironment;
-    	      this.mediumChangerType = defaults.mediumChangerType;
-    	      this.smbActiveDirectorySettings = defaults.smbActiveDirectorySettings;
-    	      this.smbFileShareVisibility = defaults.smbFileShareVisibility;
-    	      this.smbGuestPassword = defaults.smbGuestPassword;
-    	      this.smbSecurityStrategy = defaults.smbSecurityStrategy;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.tapeDriveType = defaults.tapeDriveType;
+            $ = new GatewayState(Objects.requireNonNull(defaults));
         }
 
         public Builder activationKey(@Nullable Output<String> activationKey) {
-            this.activationKey = activationKey;
+            $.activationKey = activationKey;
             return this;
         }
-        public Builder activationKey(@Nullable String activationKey) {
-            this.activationKey = Codegen.ofNullable(activationKey);
-            return this;
+
+        public Builder activationKey(String activationKey) {
+            return activationKey(Output.of(activationKey));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Output<Integer> averageDownloadRateLimitInBitsPerSec) {
-            this.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
+            $.averageDownloadRateLimitInBitsPerSec = averageDownloadRateLimitInBitsPerSec;
             return this;
         }
-        public Builder averageDownloadRateLimitInBitsPerSec(@Nullable Integer averageDownloadRateLimitInBitsPerSec) {
-            this.averageDownloadRateLimitInBitsPerSec = Codegen.ofNullable(averageDownloadRateLimitInBitsPerSec);
-            return this;
+
+        public Builder averageDownloadRateLimitInBitsPerSec(Integer averageDownloadRateLimitInBitsPerSec) {
+            return averageDownloadRateLimitInBitsPerSec(Output.of(averageDownloadRateLimitInBitsPerSec));
         }
+
         public Builder averageUploadRateLimitInBitsPerSec(@Nullable Output<Integer> averageUploadRateLimitInBitsPerSec) {
-            this.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
+            $.averageUploadRateLimitInBitsPerSec = averageUploadRateLimitInBitsPerSec;
             return this;
         }
-        public Builder averageUploadRateLimitInBitsPerSec(@Nullable Integer averageUploadRateLimitInBitsPerSec) {
-            this.averageUploadRateLimitInBitsPerSec = Codegen.ofNullable(averageUploadRateLimitInBitsPerSec);
-            return this;
+
+        public Builder averageUploadRateLimitInBitsPerSec(Integer averageUploadRateLimitInBitsPerSec) {
+            return averageUploadRateLimitInBitsPerSec(Output.of(averageUploadRateLimitInBitsPerSec));
         }
+
         public Builder cloudwatchLogGroupArn(@Nullable Output<String> cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
+            $.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
             return this;
         }
-        public Builder cloudwatchLogGroupArn(@Nullable String cloudwatchLogGroupArn) {
-            this.cloudwatchLogGroupArn = Codegen.ofNullable(cloudwatchLogGroupArn);
-            return this;
+
+        public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
+            return cloudwatchLogGroupArn(Output.of(cloudwatchLogGroupArn));
         }
+
         public Builder ec2InstanceId(@Nullable Output<String> ec2InstanceId) {
-            this.ec2InstanceId = ec2InstanceId;
+            $.ec2InstanceId = ec2InstanceId;
             return this;
         }
-        public Builder ec2InstanceId(@Nullable String ec2InstanceId) {
-            this.ec2InstanceId = Codegen.ofNullable(ec2InstanceId);
-            return this;
+
+        public Builder ec2InstanceId(String ec2InstanceId) {
+            return ec2InstanceId(Output.of(ec2InstanceId));
         }
+
         public Builder endpointType(@Nullable Output<String> endpointType) {
-            this.endpointType = endpointType;
+            $.endpointType = endpointType;
             return this;
         }
-        public Builder endpointType(@Nullable String endpointType) {
-            this.endpointType = Codegen.ofNullable(endpointType);
-            return this;
+
+        public Builder endpointType(String endpointType) {
+            return endpointType(Output.of(endpointType));
         }
+
         public Builder gatewayId(@Nullable Output<String> gatewayId) {
-            this.gatewayId = gatewayId;
+            $.gatewayId = gatewayId;
             return this;
         }
-        public Builder gatewayId(@Nullable String gatewayId) {
-            this.gatewayId = Codegen.ofNullable(gatewayId);
-            return this;
+
+        public Builder gatewayId(String gatewayId) {
+            return gatewayId(Output.of(gatewayId));
         }
+
         public Builder gatewayIpAddress(@Nullable Output<String> gatewayIpAddress) {
-            this.gatewayIpAddress = gatewayIpAddress;
+            $.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
-        public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
-            this.gatewayIpAddress = Codegen.ofNullable(gatewayIpAddress);
-            return this;
+
+        public Builder gatewayIpAddress(String gatewayIpAddress) {
+            return gatewayIpAddress(Output.of(gatewayIpAddress));
         }
+
         public Builder gatewayName(@Nullable Output<String> gatewayName) {
-            this.gatewayName = gatewayName;
+            $.gatewayName = gatewayName;
             return this;
         }
-        public Builder gatewayName(@Nullable String gatewayName) {
-            this.gatewayName = Codegen.ofNullable(gatewayName);
-            return this;
+
+        public Builder gatewayName(String gatewayName) {
+            return gatewayName(Output.of(gatewayName));
         }
+
         public Builder gatewayNetworkInterfaces(@Nullable Output<List<GatewayGatewayNetworkInterfaceGetArgs>> gatewayNetworkInterfaces) {
-            this.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
+            $.gatewayNetworkInterfaces = gatewayNetworkInterfaces;
             return this;
         }
-        public Builder gatewayNetworkInterfaces(@Nullable List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
-            this.gatewayNetworkInterfaces = Codegen.ofNullable(gatewayNetworkInterfaces);
-            return this;
+
+        public Builder gatewayNetworkInterfaces(List<GatewayGatewayNetworkInterfaceGetArgs> gatewayNetworkInterfaces) {
+            return gatewayNetworkInterfaces(Output.of(gatewayNetworkInterfaces));
         }
+
         public Builder gatewayNetworkInterfaces(GatewayGatewayNetworkInterfaceGetArgs... gatewayNetworkInterfaces) {
             return gatewayNetworkInterfaces(List.of(gatewayNetworkInterfaces));
         }
+
         public Builder gatewayTimezone(@Nullable Output<String> gatewayTimezone) {
-            this.gatewayTimezone = gatewayTimezone;
+            $.gatewayTimezone = gatewayTimezone;
             return this;
         }
-        public Builder gatewayTimezone(@Nullable String gatewayTimezone) {
-            this.gatewayTimezone = Codegen.ofNullable(gatewayTimezone);
-            return this;
+
+        public Builder gatewayTimezone(String gatewayTimezone) {
+            return gatewayTimezone(Output.of(gatewayTimezone));
         }
+
         public Builder gatewayType(@Nullable Output<String> gatewayType) {
-            this.gatewayType = gatewayType;
+            $.gatewayType = gatewayType;
             return this;
         }
-        public Builder gatewayType(@Nullable String gatewayType) {
-            this.gatewayType = Codegen.ofNullable(gatewayType);
-            return this;
+
+        public Builder gatewayType(String gatewayType) {
+            return gatewayType(Output.of(gatewayType));
         }
+
         public Builder gatewayVpcEndpoint(@Nullable Output<String> gatewayVpcEndpoint) {
-            this.gatewayVpcEndpoint = gatewayVpcEndpoint;
+            $.gatewayVpcEndpoint = gatewayVpcEndpoint;
             return this;
         }
-        public Builder gatewayVpcEndpoint(@Nullable String gatewayVpcEndpoint) {
-            this.gatewayVpcEndpoint = Codegen.ofNullable(gatewayVpcEndpoint);
-            return this;
+
+        public Builder gatewayVpcEndpoint(String gatewayVpcEndpoint) {
+            return gatewayVpcEndpoint(Output.of(gatewayVpcEndpoint));
         }
+
         public Builder hostEnvironment(@Nullable Output<String> hostEnvironment) {
-            this.hostEnvironment = hostEnvironment;
+            $.hostEnvironment = hostEnvironment;
             return this;
         }
-        public Builder hostEnvironment(@Nullable String hostEnvironment) {
-            this.hostEnvironment = Codegen.ofNullable(hostEnvironment);
-            return this;
+
+        public Builder hostEnvironment(String hostEnvironment) {
+            return hostEnvironment(Output.of(hostEnvironment));
         }
+
         public Builder mediumChangerType(@Nullable Output<String> mediumChangerType) {
-            this.mediumChangerType = mediumChangerType;
+            $.mediumChangerType = mediumChangerType;
             return this;
         }
-        public Builder mediumChangerType(@Nullable String mediumChangerType) {
-            this.mediumChangerType = Codegen.ofNullable(mediumChangerType);
-            return this;
+
+        public Builder mediumChangerType(String mediumChangerType) {
+            return mediumChangerType(Output.of(mediumChangerType));
         }
+
         public Builder smbActiveDirectorySettings(@Nullable Output<GatewaySmbActiveDirectorySettingsGetArgs> smbActiveDirectorySettings) {
-            this.smbActiveDirectorySettings = smbActiveDirectorySettings;
+            $.smbActiveDirectorySettings = smbActiveDirectorySettings;
             return this;
         }
-        public Builder smbActiveDirectorySettings(@Nullable GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
-            this.smbActiveDirectorySettings = Codegen.ofNullable(smbActiveDirectorySettings);
-            return this;
+
+        public Builder smbActiveDirectorySettings(GatewaySmbActiveDirectorySettingsGetArgs smbActiveDirectorySettings) {
+            return smbActiveDirectorySettings(Output.of(smbActiveDirectorySettings));
         }
+
         public Builder smbFileShareVisibility(@Nullable Output<Boolean> smbFileShareVisibility) {
-            this.smbFileShareVisibility = smbFileShareVisibility;
+            $.smbFileShareVisibility = smbFileShareVisibility;
             return this;
         }
-        public Builder smbFileShareVisibility(@Nullable Boolean smbFileShareVisibility) {
-            this.smbFileShareVisibility = Codegen.ofNullable(smbFileShareVisibility);
-            return this;
+
+        public Builder smbFileShareVisibility(Boolean smbFileShareVisibility) {
+            return smbFileShareVisibility(Output.of(smbFileShareVisibility));
         }
+
         public Builder smbGuestPassword(@Nullable Output<String> smbGuestPassword) {
-            this.smbGuestPassword = smbGuestPassword;
+            $.smbGuestPassword = smbGuestPassword;
             return this;
         }
-        public Builder smbGuestPassword(@Nullable String smbGuestPassword) {
-            this.smbGuestPassword = Codegen.ofNullable(smbGuestPassword);
-            return this;
+
+        public Builder smbGuestPassword(String smbGuestPassword) {
+            return smbGuestPassword(Output.of(smbGuestPassword));
         }
+
         public Builder smbSecurityStrategy(@Nullable Output<String> smbSecurityStrategy) {
-            this.smbSecurityStrategy = smbSecurityStrategy;
+            $.smbSecurityStrategy = smbSecurityStrategy;
             return this;
         }
-        public Builder smbSecurityStrategy(@Nullable String smbSecurityStrategy) {
-            this.smbSecurityStrategy = Codegen.ofNullable(smbSecurityStrategy);
-            return this;
+
+        public Builder smbSecurityStrategy(String smbSecurityStrategy) {
+            return smbSecurityStrategy(Output.of(smbSecurityStrategy));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder tapeDriveType(@Nullable Output<String> tapeDriveType) {
-            this.tapeDriveType = tapeDriveType;
+            $.tapeDriveType = tapeDriveType;
             return this;
         }
-        public Builder tapeDriveType(@Nullable String tapeDriveType) {
-            this.tapeDriveType = Codegen.ofNullable(tapeDriveType);
-            return this;
-        }        public GatewayState build() {
-            return new GatewayState(activationKey, arn, averageDownloadRateLimitInBitsPerSec, averageUploadRateLimitInBitsPerSec, cloudwatchLogGroupArn, ec2InstanceId, endpointType, gatewayId, gatewayIpAddress, gatewayName, gatewayNetworkInterfaces, gatewayTimezone, gatewayType, gatewayVpcEndpoint, hostEnvironment, mediumChangerType, smbActiveDirectorySettings, smbFileShareVisibility, smbGuestPassword, smbSecurityStrategy, tags, tagsAll, tapeDriveType);
+
+        public Builder tapeDriveType(String tapeDriveType) {
+            return tapeDriveType(Output.of(tapeDriveType));
+        }
+
+        public GatewayState build() {
+            return $;
         }
     }
+
 }

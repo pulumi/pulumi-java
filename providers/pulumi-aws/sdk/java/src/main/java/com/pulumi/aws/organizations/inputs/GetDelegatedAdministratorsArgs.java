@@ -19,45 +19,44 @@ public final class GetDelegatedAdministratorsArgs extends com.pulumi.resources.I
      * 
      */
     @Import(name="servicePrincipal")
-      private final @Nullable String servicePrincipal;
+    private @Nullable String servicePrincipal;
 
     public Optional<String> servicePrincipal() {
-        return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
+        return Optional.ofNullable(this.servicePrincipal);
     }
 
-    public GetDelegatedAdministratorsArgs(@Nullable String servicePrincipal) {
-        this.servicePrincipal = servicePrincipal;
-    }
+    private GetDelegatedAdministratorsArgs() {}
 
-    private GetDelegatedAdministratorsArgs() {
-        this.servicePrincipal = null;
+    private GetDelegatedAdministratorsArgs(GetDelegatedAdministratorsArgs $) {
+        this.servicePrincipal = $.servicePrincipal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDelegatedAdministratorsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String servicePrincipal;
+        private GetDelegatedAdministratorsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDelegatedAdministratorsArgs();
         }
 
         public Builder(GetDelegatedAdministratorsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.servicePrincipal = defaults.servicePrincipal;
+            $ = new GetDelegatedAdministratorsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder servicePrincipal(@Nullable String servicePrincipal) {
-            this.servicePrincipal = servicePrincipal;
+            $.servicePrincipal = servicePrincipal;
             return this;
-        }        public GetDelegatedAdministratorsArgs build() {
-            return new GetDelegatedAdministratorsArgs(servicePrincipal);
+        }
+
+        public GetDelegatedAdministratorsArgs build() {
+            return $;
         }
     }
+
 }

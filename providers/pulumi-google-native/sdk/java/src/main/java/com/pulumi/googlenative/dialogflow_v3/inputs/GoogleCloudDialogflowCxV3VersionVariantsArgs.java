@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsVariantArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends com.pulu
      * 
      */
     @Import(name="variants")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
 
-    public Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants() {
-        return this.variants == null ? Codegen.empty() : this.variants;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>>> variants() {
+        return Optional.ofNullable(this.variants);
     }
 
-    public GoogleCloudDialogflowCxV3VersionVariantsArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants) {
-        this.variants = variants;
-    }
+    private GoogleCloudDialogflowCxV3VersionVariantsArgs() {}
 
-    private GoogleCloudDialogflowCxV3VersionVariantsArgs() {
-        this.variants = Codegen.empty();
+    private GoogleCloudDialogflowCxV3VersionVariantsArgs(GoogleCloudDialogflowCxV3VersionVariantsArgs $) {
+        this.variants = $.variants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3VersionVariantsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
+        private GoogleCloudDialogflowCxV3VersionVariantsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3VersionVariantsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3VersionVariantsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.variants = defaults.variants;
+            $ = new GoogleCloudDialogflowCxV3VersionVariantsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder variants(@Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants) {
-            this.variants = variants;
+            $.variants = variants;
             return this;
         }
-        public Builder variants(@Nullable List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs> variants) {
-            this.variants = Codegen.ofNullable(variants);
-            return this;
+
+        public Builder variants(List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs> variants) {
+            return variants(Output.of(variants));
         }
+
         public Builder variants(GoogleCloudDialogflowCxV3VersionVariantsVariantArgs... variants) {
             return variants(List.of(variants));
-        }        public GoogleCloudDialogflowCxV3VersionVariantsArgs build() {
-            return new GoogleCloudDialogflowCxV3VersionVariantsArgs(variants);
+        }
+
+        public GoogleCloudDialogflowCxV3VersionVariantsArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,11 +7,11 @@ import com.pulumi.aws.imagebuilder.inputs.ImagePipelineImageTestsConfigurationGe
 import com.pulumi.aws.imagebuilder.inputs.ImagePipelineScheduleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dateCreated")
-      private final @Nullable Output<String> dateCreated;
+    private @Nullable Output<String> dateCreated;
 
-    public Output<String> dateCreated() {
-        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
+    public Optional<Output<String>> dateCreated() {
+        return Optional.ofNullable(this.dateCreated);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dateLastRun")
-      private final @Nullable Output<String> dateLastRun;
+    private @Nullable Output<String> dateLastRun;
 
-    public Output<String> dateLastRun() {
-        return this.dateLastRun == null ? Codegen.empty() : this.dateLastRun;
+    public Optional<Output<String>> dateLastRun() {
+        return Optional.ofNullable(this.dateLastRun);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dateNextRun")
-      private final @Nullable Output<String> dateNextRun;
+    private @Nullable Output<String> dateNextRun;
 
-    public Output<String> dateNextRun() {
-        return this.dateNextRun == null ? Codegen.empty() : this.dateNextRun;
+    public Optional<Output<String>> dateNextRun() {
+        return Optional.ofNullable(this.dateNextRun);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dateUpdated")
-      private final @Nullable Output<String> dateUpdated;
+    private @Nullable Output<String> dateUpdated;
 
-    public Output<String> dateUpdated() {
-        return this.dateUpdated == null ? Codegen.empty() : this.dateUpdated;
+    public Optional<Output<String>> dateUpdated() {
+        return Optional.ofNullable(this.dateUpdated);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="distributionConfigurationArn")
-      private final @Nullable Output<String> distributionConfigurationArn;
+    private @Nullable Output<String> distributionConfigurationArn;
 
-    public Output<String> distributionConfigurationArn() {
-        return this.distributionConfigurationArn == null ? Codegen.empty() : this.distributionConfigurationArn;
+    public Optional<Output<String>> distributionConfigurationArn() {
+        return Optional.ofNullable(this.distributionConfigurationArn);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enhancedImageMetadataEnabled")
-      private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
+    private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
-    public Output<Boolean> enhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled == null ? Codegen.empty() : this.enhancedImageMetadataEnabled;
+    public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
+        return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageRecipeArn")
-      private final @Nullable Output<String> imageRecipeArn;
+    private @Nullable Output<String> imageRecipeArn;
 
-    public Output<String> imageRecipeArn() {
-        return this.imageRecipeArn == null ? Codegen.empty() : this.imageRecipeArn;
+    public Optional<Output<String>> imageRecipeArn() {
+        return Optional.ofNullable(this.imageRecipeArn);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageTestsConfiguration")
-      private final @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
+    private @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
-    public Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration() {
-        return this.imageTestsConfiguration == null ? Codegen.empty() : this.imageTestsConfiguration;
+    public Optional<Output<ImagePipelineImageTestsConfigurationGetArgs>> imageTestsConfiguration() {
+        return Optional.ofNullable(this.imageTestsConfiguration);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="infrastructureConfigurationArn")
-      private final @Nullable Output<String> infrastructureConfigurationArn;
+    private @Nullable Output<String> infrastructureConfigurationArn;
 
-    public Output<String> infrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn == null ? Codegen.empty() : this.infrastructureConfigurationArn;
+    public Optional<Output<String>> infrastructureConfigurationArn() {
+        return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
+    private @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
 
-    public Output<ImagePipelineScheduleGetArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<ImagePipelineScheduleGetArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<String> status;
+    private @Nullable Output<String> status;
 
-    public Output<String> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<String>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -200,258 +200,208 @@ public final class ImagePipelineState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public ImagePipelineState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> dateCreated,
-        @Nullable Output<String> dateLastRun,
-        @Nullable Output<String> dateNextRun,
-        @Nullable Output<String> dateUpdated,
-        @Nullable Output<String> description,
-        @Nullable Output<String> distributionConfigurationArn,
-        @Nullable Output<Boolean> enhancedImageMetadataEnabled,
-        @Nullable Output<String> imageRecipeArn,
-        @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration,
-        @Nullable Output<String> infrastructureConfigurationArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> platform,
-        @Nullable Output<ImagePipelineScheduleGetArgs> schedule,
-        @Nullable Output<String> status,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.dateCreated = dateCreated;
-        this.dateLastRun = dateLastRun;
-        this.dateNextRun = dateNextRun;
-        this.dateUpdated = dateUpdated;
-        this.description = description;
-        this.distributionConfigurationArn = distributionConfigurationArn;
-        this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
-        this.imageRecipeArn = imageRecipeArn;
-        this.imageTestsConfiguration = imageTestsConfiguration;
-        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
-        this.name = name;
-        this.platform = platform;
-        this.schedule = schedule;
-        this.status = status;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private ImagePipelineState() {}
 
-    private ImagePipelineState() {
-        this.arn = Codegen.empty();
-        this.dateCreated = Codegen.empty();
-        this.dateLastRun = Codegen.empty();
-        this.dateNextRun = Codegen.empty();
-        this.dateUpdated = Codegen.empty();
-        this.description = Codegen.empty();
-        this.distributionConfigurationArn = Codegen.empty();
-        this.enhancedImageMetadataEnabled = Codegen.empty();
-        this.imageRecipeArn = Codegen.empty();
-        this.imageTestsConfiguration = Codegen.empty();
-        this.infrastructureConfigurationArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.status = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private ImagePipelineState(ImagePipelineState $) {
+        this.arn = $.arn;
+        this.dateCreated = $.dateCreated;
+        this.dateLastRun = $.dateLastRun;
+        this.dateNextRun = $.dateNextRun;
+        this.dateUpdated = $.dateUpdated;
+        this.description = $.description;
+        this.distributionConfigurationArn = $.distributionConfigurationArn;
+        this.enhancedImageMetadataEnabled = $.enhancedImageMetadataEnabled;
+        this.imageRecipeArn = $.imageRecipeArn;
+        this.imageTestsConfiguration = $.imageTestsConfiguration;
+        this.infrastructureConfigurationArn = $.infrastructureConfigurationArn;
+        this.name = $.name;
+        this.platform = $.platform;
+        this.schedule = $.schedule;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImagePipelineState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> dateCreated;
-        private @Nullable Output<String> dateLastRun;
-        private @Nullable Output<String> dateNextRun;
-        private @Nullable Output<String> dateUpdated;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> distributionConfigurationArn;
-        private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
-        private @Nullable Output<String> imageRecipeArn;
-        private @Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration;
-        private @Nullable Output<String> infrastructureConfigurationArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> platform;
-        private @Nullable Output<ImagePipelineScheduleGetArgs> schedule;
-        private @Nullable Output<String> status;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private ImagePipelineState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImagePipelineState();
         }
 
         public Builder(ImagePipelineState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.dateLastRun = defaults.dateLastRun;
-    	      this.dateNextRun = defaults.dateNextRun;
-    	      this.dateUpdated = defaults.dateUpdated;
-    	      this.description = defaults.description;
-    	      this.distributionConfigurationArn = defaults.distributionConfigurationArn;
-    	      this.enhancedImageMetadataEnabled = defaults.enhancedImageMetadataEnabled;
-    	      this.imageRecipeArn = defaults.imageRecipeArn;
-    	      this.imageTestsConfiguration = defaults.imageTestsConfiguration;
-    	      this.infrastructureConfigurationArn = defaults.infrastructureConfigurationArn;
-    	      this.name = defaults.name;
-    	      this.platform = defaults.platform;
-    	      this.schedule = defaults.schedule;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new ImagePipelineState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
-            this.dateCreated = dateCreated;
+            $.dateCreated = dateCreated;
             return this;
         }
-        public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Codegen.ofNullable(dateCreated);
-            return this;
+
+        public Builder dateCreated(String dateCreated) {
+            return dateCreated(Output.of(dateCreated));
         }
+
         public Builder dateLastRun(@Nullable Output<String> dateLastRun) {
-            this.dateLastRun = dateLastRun;
+            $.dateLastRun = dateLastRun;
             return this;
         }
-        public Builder dateLastRun(@Nullable String dateLastRun) {
-            this.dateLastRun = Codegen.ofNullable(dateLastRun);
-            return this;
+
+        public Builder dateLastRun(String dateLastRun) {
+            return dateLastRun(Output.of(dateLastRun));
         }
+
         public Builder dateNextRun(@Nullable Output<String> dateNextRun) {
-            this.dateNextRun = dateNextRun;
+            $.dateNextRun = dateNextRun;
             return this;
         }
-        public Builder dateNextRun(@Nullable String dateNextRun) {
-            this.dateNextRun = Codegen.ofNullable(dateNextRun);
-            return this;
+
+        public Builder dateNextRun(String dateNextRun) {
+            return dateNextRun(Output.of(dateNextRun));
         }
+
         public Builder dateUpdated(@Nullable Output<String> dateUpdated) {
-            this.dateUpdated = dateUpdated;
+            $.dateUpdated = dateUpdated;
             return this;
         }
-        public Builder dateUpdated(@Nullable String dateUpdated) {
-            this.dateUpdated = Codegen.ofNullable(dateUpdated);
-            return this;
+
+        public Builder dateUpdated(String dateUpdated) {
+            return dateUpdated(Output.of(dateUpdated));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
-            this.distributionConfigurationArn = distributionConfigurationArn;
+            $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
-        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
-            this.distributionConfigurationArn = Codegen.ofNullable(distributionConfigurationArn);
-            return this;
+
+        public Builder distributionConfigurationArn(String distributionConfigurationArn) {
+            return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
+
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
+            $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
-        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
-            this.enhancedImageMetadataEnabled = Codegen.ofNullable(enhancedImageMetadataEnabled);
-            return this;
+
+        public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
+            return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
+
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
-            this.imageRecipeArn = imageRecipeArn;
+            $.imageRecipeArn = imageRecipeArn;
             return this;
         }
-        public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
-            this.imageRecipeArn = Codegen.ofNullable(imageRecipeArn);
-            return this;
+
+        public Builder imageRecipeArn(String imageRecipeArn) {
+            return imageRecipeArn(Output.of(imageRecipeArn));
         }
+
         public Builder imageTestsConfiguration(@Nullable Output<ImagePipelineImageTestsConfigurationGetArgs> imageTestsConfiguration) {
-            this.imageTestsConfiguration = imageTestsConfiguration;
+            $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
-        public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfigurationGetArgs imageTestsConfiguration) {
-            this.imageTestsConfiguration = Codegen.ofNullable(imageTestsConfiguration);
-            return this;
+
+        public Builder imageTestsConfiguration(ImagePipelineImageTestsConfigurationGetArgs imageTestsConfiguration) {
+            return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
+
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+            $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
-        public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
-            this.infrastructureConfigurationArn = Codegen.ofNullable(infrastructureConfigurationArn);
-            return this;
+
+        public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
+            return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder schedule(@Nullable Output<ImagePipelineScheduleGetArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable ImagePipelineScheduleGetArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(ImagePipelineScheduleGetArgs schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder status(@Nullable Output<String> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable String status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(String status) {
+            return status(Output.of(status));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public ImagePipelineState build() {
-            return new ImagePipelineState(arn, dateCreated, dateLastRun, dateNextRun, dateUpdated, description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, name, platform, schedule, status, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public ImagePipelineState build() {
+            return $;
         }
     }
+
 }

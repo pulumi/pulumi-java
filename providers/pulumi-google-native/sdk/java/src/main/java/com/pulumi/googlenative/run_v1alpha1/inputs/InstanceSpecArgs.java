@@ -5,12 +5,12 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1alpha1.inputs.ContainerArgs;
 import com.pulumi.googlenative.run_v1alpha1.inputs.VolumeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="activeDeadlineSeconds")
-      private final @Nullable Output<String> activeDeadlineSeconds;
+    private @Nullable Output<String> activeDeadlineSeconds;
 
-    public Output<String> activeDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
+    public Optional<Output<String>> activeDeadlineSeconds() {
+        return Optional.ofNullable(this.activeDeadlineSeconds);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<ContainerArgs>> containers;
+    private @Nullable Output<List<ContainerArgs>> containers;
 
-    public Output<List<ContainerArgs>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<ContainerArgs>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restartPolicy")
-      private final @Nullable Output<String> restartPolicy;
+    private @Nullable Output<String> restartPolicy;
 
-    public Output<String> restartPolicy() {
-        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
+    public Optional<Output<String>> restartPolicy() {
+        return Optional.ofNullable(this.restartPolicy);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountName")
-      private final @Nullable Output<String> serviceAccountName;
+    private @Nullable Output<String> serviceAccountName;
 
-    public Output<String> serviceAccountName() {
-        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
+    public Optional<Output<String>> serviceAccountName() {
+        return Optional.ofNullable(this.serviceAccountName);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="terminationGracePeriodSeconds")
-      private final @Nullable Output<String> terminationGracePeriodSeconds;
+    private @Nullable Output<String> terminationGracePeriodSeconds;
 
-    public Output<String> terminationGracePeriodSeconds() {
-        return this.terminationGracePeriodSeconds == null ? Codegen.empty() : this.terminationGracePeriodSeconds;
+    public Optional<Output<String>> terminationGracePeriodSeconds() {
+        return Optional.ofNullable(this.terminationGracePeriodSeconds);
     }
 
     /**
@@ -82,121 +82,106 @@ public final class InstanceSpecArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
-    public InstanceSpecArgs(
-        @Nullable Output<String> activeDeadlineSeconds,
-        @Nullable Output<List<ContainerArgs>> containers,
-        @Nullable Output<String> restartPolicy,
-        @Nullable Output<String> serviceAccountName,
-        @Nullable Output<String> terminationGracePeriodSeconds,
-        @Nullable Output<List<VolumeArgs>> volumes) {
-        this.activeDeadlineSeconds = activeDeadlineSeconds;
-        this.containers = containers;
-        this.restartPolicy = restartPolicy;
-        this.serviceAccountName = serviceAccountName;
-        this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
-        this.volumes = volumes;
-    }
+    private InstanceSpecArgs() {}
 
-    private InstanceSpecArgs() {
-        this.activeDeadlineSeconds = Codegen.empty();
-        this.containers = Codegen.empty();
-        this.restartPolicy = Codegen.empty();
-        this.serviceAccountName = Codegen.empty();
-        this.terminationGracePeriodSeconds = Codegen.empty();
-        this.volumes = Codegen.empty();
+    private InstanceSpecArgs(InstanceSpecArgs $) {
+        this.activeDeadlineSeconds = $.activeDeadlineSeconds;
+        this.containers = $.containers;
+        this.restartPolicy = $.restartPolicy;
+        this.serviceAccountName = $.serviceAccountName;
+        this.terminationGracePeriodSeconds = $.terminationGracePeriodSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> activeDeadlineSeconds;
-        private @Nullable Output<List<ContainerArgs>> containers;
-        private @Nullable Output<String> restartPolicy;
-        private @Nullable Output<String> serviceAccountName;
-        private @Nullable Output<String> terminationGracePeriodSeconds;
-        private @Nullable Output<List<VolumeArgs>> volumes;
+        private InstanceSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceSpecArgs();
         }
 
         public Builder(InstanceSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeadlineSeconds = defaults.activeDeadlineSeconds;
-    	      this.containers = defaults.containers;
-    	      this.restartPolicy = defaults.restartPolicy;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.terminationGracePeriodSeconds = defaults.terminationGracePeriodSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new InstanceSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeadlineSeconds(@Nullable Output<String> activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = activeDeadlineSeconds;
+            $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
-        public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
-            return this;
+
+        public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
+            return activeDeadlineSeconds(Output.of(activeDeadlineSeconds));
         }
+
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<ContainerArgs> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
+
         public Builder restartPolicy(@Nullable Output<String> restartPolicy) {
-            this.restartPolicy = restartPolicy;
+            $.restartPolicy = restartPolicy;
             return this;
         }
-        public Builder restartPolicy(@Nullable String restartPolicy) {
-            this.restartPolicy = Codegen.ofNullable(restartPolicy);
-            return this;
+
+        public Builder restartPolicy(String restartPolicy) {
+            return restartPolicy(Output.of(restartPolicy));
         }
+
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
-            this.serviceAccountName = serviceAccountName;
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
-        public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
-            return this;
+
+        public Builder serviceAccountName(String serviceAccountName) {
+            return serviceAccountName(Output.of(serviceAccountName));
         }
+
         public Builder terminationGracePeriodSeconds(@Nullable Output<String> terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
+            $.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
-        public Builder terminationGracePeriodSeconds(@Nullable String terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Codegen.ofNullable(terminationGracePeriodSeconds);
-            return this;
+
+        public Builder terminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
+            return terminationGracePeriodSeconds(Output.of(terminationGracePeriodSeconds));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
-        }        public InstanceSpecArgs build() {
-            return new InstanceSpecArgs(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
+        }
+
+        public InstanceSpecArgs build() {
+            return $;
         }
     }
+
 }

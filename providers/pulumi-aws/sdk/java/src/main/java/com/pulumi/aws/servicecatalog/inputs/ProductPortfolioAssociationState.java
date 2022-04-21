@@ -5,9 +5,9 @@ package com.pulumi.aws.servicecatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="acceptLanguage")
-      private final @Nullable Output<String> acceptLanguage;
+    private @Nullable Output<String> acceptLanguage;
 
-    public Output<String> acceptLanguage() {
-        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
+    public Optional<Output<String>> acceptLanguage() {
+        return Optional.ofNullable(this.acceptLanguage);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="portfolioId")
-      private final @Nullable Output<String> portfolioId;
+    private @Nullable Output<String> portfolioId;
 
-    public Output<String> portfolioId() {
-        return this.portfolioId == null ? Codegen.empty() : this.portfolioId;
+    public Optional<Output<String>> portfolioId() {
+        return Optional.ofNullable(this.portfolioId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="productId")
-      private final @Nullable Output<String> productId;
+    private @Nullable Output<String> productId;
 
-    public Output<String> productId() {
-        return this.productId == null ? Codegen.empty() : this.productId;
+    public Optional<Output<String>> productId() {
+        return Optional.ofNullable(this.productId);
     }
 
     /**
@@ -53,89 +53,78 @@ public final class ProductPortfolioAssociationState extends com.pulumi.resources
      * 
      */
     @Import(name="sourcePortfolioId")
-      private final @Nullable Output<String> sourcePortfolioId;
+    private @Nullable Output<String> sourcePortfolioId;
 
-    public Output<String> sourcePortfolioId() {
-        return this.sourcePortfolioId == null ? Codegen.empty() : this.sourcePortfolioId;
+    public Optional<Output<String>> sourcePortfolioId() {
+        return Optional.ofNullable(this.sourcePortfolioId);
     }
 
-    public ProductPortfolioAssociationState(
-        @Nullable Output<String> acceptLanguage,
-        @Nullable Output<String> portfolioId,
-        @Nullable Output<String> productId,
-        @Nullable Output<String> sourcePortfolioId) {
-        this.acceptLanguage = acceptLanguage;
-        this.portfolioId = portfolioId;
-        this.productId = productId;
-        this.sourcePortfolioId = sourcePortfolioId;
-    }
+    private ProductPortfolioAssociationState() {}
 
-    private ProductPortfolioAssociationState() {
-        this.acceptLanguage = Codegen.empty();
-        this.portfolioId = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.sourcePortfolioId = Codegen.empty();
+    private ProductPortfolioAssociationState(ProductPortfolioAssociationState $) {
+        this.acceptLanguage = $.acceptLanguage;
+        this.portfolioId = $.portfolioId;
+        this.productId = $.productId;
+        this.sourcePortfolioId = $.sourcePortfolioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductPortfolioAssociationState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceptLanguage;
-        private @Nullable Output<String> portfolioId;
-        private @Nullable Output<String> productId;
-        private @Nullable Output<String> sourcePortfolioId;
+        private ProductPortfolioAssociationState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductPortfolioAssociationState();
         }
 
         public Builder(ProductPortfolioAssociationState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceptLanguage = defaults.acceptLanguage;
-    	      this.portfolioId = defaults.portfolioId;
-    	      this.productId = defaults.productId;
-    	      this.sourcePortfolioId = defaults.sourcePortfolioId;
+            $ = new ProductPortfolioAssociationState(Objects.requireNonNull(defaults));
         }
 
         public Builder acceptLanguage(@Nullable Output<String> acceptLanguage) {
-            this.acceptLanguage = acceptLanguage;
+            $.acceptLanguage = acceptLanguage;
             return this;
         }
-        public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
-            return this;
+
+        public Builder acceptLanguage(String acceptLanguage) {
+            return acceptLanguage(Output.of(acceptLanguage));
         }
+
         public Builder portfolioId(@Nullable Output<String> portfolioId) {
-            this.portfolioId = portfolioId;
+            $.portfolioId = portfolioId;
             return this;
         }
-        public Builder portfolioId(@Nullable String portfolioId) {
-            this.portfolioId = Codegen.ofNullable(portfolioId);
-            return this;
+
+        public Builder portfolioId(String portfolioId) {
+            return portfolioId(Output.of(portfolioId));
         }
+
         public Builder productId(@Nullable Output<String> productId) {
-            this.productId = productId;
+            $.productId = productId;
             return this;
         }
-        public Builder productId(@Nullable String productId) {
-            this.productId = Codegen.ofNullable(productId);
-            return this;
+
+        public Builder productId(String productId) {
+            return productId(Output.of(productId));
         }
+
         public Builder sourcePortfolioId(@Nullable Output<String> sourcePortfolioId) {
-            this.sourcePortfolioId = sourcePortfolioId;
+            $.sourcePortfolioId = sourcePortfolioId;
             return this;
         }
-        public Builder sourcePortfolioId(@Nullable String sourcePortfolioId) {
-            this.sourcePortfolioId = Codegen.ofNullable(sourcePortfolioId);
-            return this;
-        }        public ProductPortfolioAssociationState build() {
-            return new ProductPortfolioAssociationState(acceptLanguage, portfolioId, productId, sourcePortfolioId);
+
+        public Builder sourcePortfolioId(String sourcePortfolioId) {
+            return sourcePortfolioId(Output.of(sourcePortfolioId));
+        }
+
+        public ProductPortfolioAssociationState build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="badServiceFilter", required=true)
-      private final String badServiceFilter;
+    private String badServiceFilter;
 
     public String badServiceFilter() {
         return this.badServiceFilter;
@@ -32,7 +32,7 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="goodServiceFilter", required=true)
-      private final String goodServiceFilter;
+    private String goodServiceFilter;
 
     public String goodServiceFilter() {
         return this.goodServiceFilter;
@@ -43,64 +43,59 @@ public final class TimeSeriesRatioResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="totalServiceFilter", required=true)
-      private final String totalServiceFilter;
+    private String totalServiceFilter;
 
     public String totalServiceFilter() {
         return this.totalServiceFilter;
     }
 
-    public TimeSeriesRatioResponse(
-        String badServiceFilter,
-        String goodServiceFilter,
-        String totalServiceFilter) {
-        this.badServiceFilter = Objects.requireNonNull(badServiceFilter, "expected parameter 'badServiceFilter' to be non-null");
-        this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter, "expected parameter 'goodServiceFilter' to be non-null");
-        this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter, "expected parameter 'totalServiceFilter' to be non-null");
-    }
+    private TimeSeriesRatioResponse() {}
 
-    private TimeSeriesRatioResponse() {
-        this.badServiceFilter = null;
-        this.goodServiceFilter = null;
-        this.totalServiceFilter = null;
+    private TimeSeriesRatioResponse(TimeSeriesRatioResponse $) {
+        this.badServiceFilter = $.badServiceFilter;
+        this.goodServiceFilter = $.goodServiceFilter;
+        this.totalServiceFilter = $.totalServiceFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesRatioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String badServiceFilter;
-        private String goodServiceFilter;
-        private String totalServiceFilter;
+        private TimeSeriesRatioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesRatioResponse();
         }
 
         public Builder(TimeSeriesRatioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.badServiceFilter = defaults.badServiceFilter;
-    	      this.goodServiceFilter = defaults.goodServiceFilter;
-    	      this.totalServiceFilter = defaults.totalServiceFilter;
+            $ = new TimeSeriesRatioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder badServiceFilter(String badServiceFilter) {
-            this.badServiceFilter = Objects.requireNonNull(badServiceFilter);
+            $.badServiceFilter = badServiceFilter;
             return this;
         }
+
         public Builder goodServiceFilter(String goodServiceFilter) {
-            this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter);
+            $.goodServiceFilter = goodServiceFilter;
             return this;
         }
+
         public Builder totalServiceFilter(String totalServiceFilter) {
-            this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
+            $.totalServiceFilter = totalServiceFilter;
             return this;
-        }        public TimeSeriesRatioResponse build() {
-            return new TimeSeriesRatioResponse(badServiceFilter, goodServiceFilter, totalServiceFilter);
+        }
+
+        public TimeSeriesRatioResponse build() {
+            $.badServiceFilter = Objects.requireNonNull($.badServiceFilter, "expected parameter 'badServiceFilter' to be non-null");
+            $.goodServiceFilter = Objects.requireNonNull($.goodServiceFilter, "expected parameter 'goodServiceFilter' to be non-null");
+            $.totalServiceFilter = Objects.requireNonNull($.totalServiceFilter, "expected parameter 'totalServiceFilter' to be non-null");
+            return $;
         }
     }
+
 }

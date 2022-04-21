@@ -17,62 +17,59 @@ public final class TableProvisionedThroughput extends com.pulumi.resources.Invok
     public static final TableProvisionedThroughput Empty = new TableProvisionedThroughput();
 
     @Import(name="readCapacityUnits", required=true)
-      private final Integer readCapacityUnits;
+    private Integer readCapacityUnits;
 
     public Integer readCapacityUnits() {
         return this.readCapacityUnits;
     }
 
     @Import(name="writeCapacityUnits", required=true)
-      private final Integer writeCapacityUnits;
+    private Integer writeCapacityUnits;
 
     public Integer writeCapacityUnits() {
         return this.writeCapacityUnits;
     }
 
-    public TableProvisionedThroughput(
-        Integer readCapacityUnits,
-        Integer writeCapacityUnits) {
-        this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits, "expected parameter 'readCapacityUnits' to be non-null");
-        this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits, "expected parameter 'writeCapacityUnits' to be non-null");
-    }
+    private TableProvisionedThroughput() {}
 
-    private TableProvisionedThroughput() {
-        this.readCapacityUnits = null;
-        this.writeCapacityUnits = null;
+    private TableProvisionedThroughput(TableProvisionedThroughput $) {
+        this.readCapacityUnits = $.readCapacityUnits;
+        this.writeCapacityUnits = $.writeCapacityUnits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableProvisionedThroughput defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer readCapacityUnits;
-        private Integer writeCapacityUnits;
+        private TableProvisionedThroughput $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableProvisionedThroughput();
         }
 
         public Builder(TableProvisionedThroughput defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readCapacityUnits = defaults.readCapacityUnits;
-    	      this.writeCapacityUnits = defaults.writeCapacityUnits;
+            $ = new TableProvisionedThroughput(Objects.requireNonNull(defaults));
         }
 
         public Builder readCapacityUnits(Integer readCapacityUnits) {
-            this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
+            $.readCapacityUnits = readCapacityUnits;
             return this;
         }
+
         public Builder writeCapacityUnits(Integer writeCapacityUnits) {
-            this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
+            $.writeCapacityUnits = writeCapacityUnits;
             return this;
-        }        public TableProvisionedThroughput build() {
-            return new TableProvisionedThroughput(readCapacityUnits, writeCapacityUnits);
+        }
+
+        public TableProvisionedThroughput build() {
+            $.readCapacityUnits = Objects.requireNonNull($.readCapacityUnits, "expected parameter 'readCapacityUnits' to be non-null");
+            $.writeCapacityUnits = Objects.requireNonNull($.writeCapacityUnits, "expected parameter 'writeCapacityUnits' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="apiProducts", required=true)
-      private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
+    private List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
 
     public List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts() {
         return this.apiProducts;
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="attributes", required=true)
-      private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
+    private List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> attributes() {
         return this.attributes;
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="consumerKey", required=true)
-      private final String consumerKey;
+    private String consumerKey;
 
     public String consumerKey() {
         return this.consumerKey;
@@ -53,7 +53,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="consumerSecret", required=true)
-      private final String consumerSecret;
+    private String consumerSecret;
 
     public String consumerSecret() {
         return this.consumerSecret;
@@ -64,7 +64,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="expiresAt", required=true)
-      private final String expiresAt;
+    private String expiresAt;
 
     public String expiresAt() {
         return this.expiresAt;
@@ -75,7 +75,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="issuedAt", required=true)
-      private final String issuedAt;
+    private String issuedAt;
 
     public String issuedAt() {
         return this.issuedAt;
@@ -86,7 +86,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="scopes", required=true)
-      private final List<String> scopes;
+    private List<String> scopes;
 
     public List<String> scopes() {
         return this.scopes;
@@ -97,118 +97,106 @@ public final class GoogleCloudApigeeV1CredentialResponse extends com.pulumi.reso
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public GoogleCloudApigeeV1CredentialResponse(
-        List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String consumerKey,
-        String consumerSecret,
-        String expiresAt,
-        String issuedAt,
-        List<String> scopes,
-        String status) {
-        this.apiProducts = Objects.requireNonNull(apiProducts, "expected parameter 'apiProducts' to be non-null");
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.consumerKey = Objects.requireNonNull(consumerKey, "expected parameter 'consumerKey' to be non-null");
-        this.consumerSecret = Objects.requireNonNull(consumerSecret, "expected parameter 'consumerSecret' to be non-null");
-        this.expiresAt = Objects.requireNonNull(expiresAt, "expected parameter 'expiresAt' to be non-null");
-        this.issuedAt = Objects.requireNonNull(issuedAt, "expected parameter 'issuedAt' to be non-null");
-        this.scopes = Objects.requireNonNull(scopes, "expected parameter 'scopes' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private GoogleCloudApigeeV1CredentialResponse() {}
 
-    private GoogleCloudApigeeV1CredentialResponse() {
-        this.apiProducts = List.of();
-        this.attributes = List.of();
-        this.consumerKey = null;
-        this.consumerSecret = null;
-        this.expiresAt = null;
-        this.issuedAt = null;
-        this.scopes = List.of();
-        this.status = null;
+    private GoogleCloudApigeeV1CredentialResponse(GoogleCloudApigeeV1CredentialResponse $) {
+        this.apiProducts = $.apiProducts;
+        this.attributes = $.attributes;
+        this.consumerKey = $.consumerKey;
+        this.consumerSecret = $.consumerSecret;
+        this.expiresAt = $.expiresAt;
+        this.issuedAt = $.issuedAt;
+        this.scopes = $.scopes;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
-        private List<GoogleCloudApigeeV1AttributeResponse> attributes;
-        private String consumerKey;
-        private String consumerSecret;
-        private String expiresAt;
-        private String issuedAt;
-        private List<String> scopes;
-        private String status;
+        private GoogleCloudApigeeV1CredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CredentialResponse();
         }
 
         public Builder(GoogleCloudApigeeV1CredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiProducts = defaults.apiProducts;
-    	      this.attributes = defaults.attributes;
-    	      this.consumerKey = defaults.consumerKey;
-    	      this.consumerSecret = defaults.consumerSecret;
-    	      this.expiresAt = defaults.expiresAt;
-    	      this.issuedAt = defaults.issuedAt;
-    	      this.scopes = defaults.scopes;
-    	      this.status = defaults.status;
+            $ = new GoogleCloudApigeeV1CredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiProducts(List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts) {
-            this.apiProducts = Objects.requireNonNull(apiProducts);
+            $.apiProducts = apiProducts;
             return this;
         }
+
         public Builder apiProducts(GoogleCloudApigeeV1ApiProductRefResponse... apiProducts) {
             return apiProducts(List.of(apiProducts));
         }
+
         public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeResponse... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder consumerKey(String consumerKey) {
-            this.consumerKey = Objects.requireNonNull(consumerKey);
+            $.consumerKey = consumerKey;
             return this;
         }
+
         public Builder consumerSecret(String consumerSecret) {
-            this.consumerSecret = Objects.requireNonNull(consumerSecret);
+            $.consumerSecret = consumerSecret;
             return this;
         }
+
         public Builder expiresAt(String expiresAt) {
-            this.expiresAt = Objects.requireNonNull(expiresAt);
+            $.expiresAt = expiresAt;
             return this;
         }
+
         public Builder issuedAt(String issuedAt) {
-            this.issuedAt = Objects.requireNonNull(issuedAt);
+            $.issuedAt = issuedAt;
             return this;
         }
+
         public Builder scopes(List<String> scopes) {
-            this.scopes = Objects.requireNonNull(scopes);
+            $.scopes = scopes;
             return this;
         }
+
         public Builder scopes(String... scopes) {
             return scopes(List.of(scopes));
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public GoogleCloudApigeeV1CredentialResponse build() {
-            return new GoogleCloudApigeeV1CredentialResponse(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, issuedAt, scopes, status);
+        }
+
+        public GoogleCloudApigeeV1CredentialResponse build() {
+            $.apiProducts = Objects.requireNonNull($.apiProducts, "expected parameter 'apiProducts' to be non-null");
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.consumerKey = Objects.requireNonNull($.consumerKey, "expected parameter 'consumerKey' to be non-null");
+            $.consumerSecret = Objects.requireNonNull($.consumerSecret, "expected parameter 'consumerSecret' to be non-null");
+            $.expiresAt = Objects.requireNonNull($.expiresAt, "expected parameter 'expiresAt' to be non-null");
+            $.issuedAt = Objects.requireNonNull($.issuedAt, "expected parameter 'issuedAt' to be non-null");
+            $.scopes = Objects.requireNonNull($.scopes, "expected parameter 'scopes' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

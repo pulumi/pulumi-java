@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudbuild_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<String> diskSizeGb;
+    private @Nullable Output<String> diskSizeGb;
 
-    public Output<String> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<String>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class WorkerConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
-    public WorkerConfigArgs(
-        @Nullable Output<String> diskSizeGb,
-        @Nullable Output<String> machineType) {
-        this.diskSizeGb = diskSizeGb;
-        this.machineType = machineType;
-    }
+    private WorkerConfigArgs() {}
 
-    private WorkerConfigArgs() {
-        this.diskSizeGb = Codegen.empty();
-        this.machineType = Codegen.empty();
+    private WorkerConfigArgs(WorkerConfigArgs $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskSizeGb;
-        private @Nullable Output<String> machineType;
+        private WorkerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerConfigArgs();
         }
 
         public Builder(WorkerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.machineType = defaults.machineType;
+            $ = new WorkerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(String diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
-        }        public WorkerConfigArgs build() {
-            return new WorkerConfigArgs(diskSizeGb, machineType);
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
+        }
+
+        public WorkerConfigArgs build() {
+            return $;
         }
     }
+
 }

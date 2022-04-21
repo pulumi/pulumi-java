@@ -5,11 +5,11 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class Hl7StoreIamBindingArgs extends com.pulumi.resources.ResourceA
     public static final Hl7StoreIamBindingArgs Empty = new Hl7StoreIamBindingArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<Hl7StoreIamBindingConditionArgs> condition;
+    private @Nullable Output<Hl7StoreIamBindingConditionArgs> condition;
 
-    public Output<Hl7StoreIamBindingConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<Hl7StoreIamBindingConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -32,14 +32,14 @@ public final class Hl7StoreIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="hl7V2StoreId", required=true)
-      private final Output<String> hl7V2StoreId;
+    private Output<String> hl7V2StoreId;
 
     public Output<String> hl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
     @Import(name="members", required=true)
-      private final Output<List<String>> members;
+    private Output<List<String>> members;
 
     public Output<List<String>> members() {
         return this.members;
@@ -52,92 +52,85 @@ public final class Hl7StoreIamBindingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public Hl7StoreIamBindingArgs(
-        @Nullable Output<Hl7StoreIamBindingConditionArgs> condition,
-        Output<String> hl7V2StoreId,
-        Output<List<String>> members,
-        Output<String> role) {
-        this.condition = condition;
-        this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private Hl7StoreIamBindingArgs() {}
 
-    private Hl7StoreIamBindingArgs() {
-        this.condition = Codegen.empty();
-        this.hl7V2StoreId = Codegen.empty();
-        this.members = Codegen.empty();
-        this.role = Codegen.empty();
+    private Hl7StoreIamBindingArgs(Hl7StoreIamBindingArgs $) {
+        this.condition = $.condition;
+        this.hl7V2StoreId = $.hl7V2StoreId;
+        this.members = $.members;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7StoreIamBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Hl7StoreIamBindingConditionArgs> condition;
-        private Output<String> hl7V2StoreId;
-        private Output<List<String>> members;
-        private Output<String> role;
+        private Hl7StoreIamBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7StoreIamBindingArgs();
         }
 
         public Builder(Hl7StoreIamBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.hl7V2StoreId = defaults.hl7V2StoreId;
-    	      this.members = defaults.members;
-    	      this.role = defaults.role;
+            $ = new Hl7StoreIamBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<Hl7StoreIamBindingConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable Hl7StoreIamBindingConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(Hl7StoreIamBindingConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder hl7V2StoreId(Output<String> hl7V2StoreId) {
-            this.hl7V2StoreId = Objects.requireNonNull(hl7V2StoreId);
+            $.hl7V2StoreId = hl7V2StoreId;
             return this;
         }
+
         public Builder hl7V2StoreId(String hl7V2StoreId) {
-            this.hl7V2StoreId = Output.of(Objects.requireNonNull(hl7V2StoreId));
-            return this;
+            return hl7V2StoreId(Output.of(hl7V2StoreId));
         }
+
         public Builder members(Output<List<String>> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(List<String> members) {
-            this.members = Output.of(Objects.requireNonNull(members));
-            return this;
+            return members(Output.of(members));
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public Hl7StoreIamBindingArgs build() {
-            return new Hl7StoreIamBindingArgs(condition, hl7V2StoreId, members, role);
+            return role(Output.of(role));
+        }
+
+        public Hl7StoreIamBindingArgs build() {
+            $.hl7V2StoreId = Objects.requireNonNull($.hl7V2StoreId, "expected parameter 'hl7V2StoreId' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

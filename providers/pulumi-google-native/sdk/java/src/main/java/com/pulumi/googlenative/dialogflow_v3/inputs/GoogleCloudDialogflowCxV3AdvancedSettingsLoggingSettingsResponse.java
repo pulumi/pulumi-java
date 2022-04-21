@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      * 
      */
     @Import(name="enableInteractionLogging", required=true)
-      private final Boolean enableInteractionLogging;
+    private Boolean enableInteractionLogging;
 
     public Boolean enableInteractionLogging() {
         return this.enableInteractionLogging;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsRespo
      * 
      */
     @Import(name="enableStackdriverLogging", required=true)
-      private final Boolean enableStackdriverLogging;
+    private Boolean enableStackdriverLogging;
 
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
 
-    public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(
-        Boolean enableInteractionLogging,
-        Boolean enableStackdriverLogging) {
-        this.enableInteractionLogging = Objects.requireNonNull(enableInteractionLogging, "expected parameter 'enableInteractionLogging' to be non-null");
-        this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging, "expected parameter 'enableStackdriverLogging' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse() {
-        this.enableInteractionLogging = null;
-        this.enableStackdriverLogging = null;
+    private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse $) {
+        this.enableInteractionLogging = $.enableInteractionLogging;
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableInteractionLogging;
-        private Boolean enableStackdriverLogging;
+        private GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInteractionLogging = defaults.enableInteractionLogging;
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
+            $ = new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInteractionLogging(Boolean enableInteractionLogging) {
-            this.enableInteractionLogging = Objects.requireNonNull(enableInteractionLogging);
+            $.enableInteractionLogging = enableInteractionLogging;
             return this;
         }
+
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
-        }        public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse(enableInteractionLogging, enableStackdriverLogging);
+        }
+
+        public GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsResponse build() {
+            $.enableInteractionLogging = Objects.requireNonNull($.enableInteractionLogging, "expected parameter 'enableInteractionLogging' to be non-null");
+            $.enableStackdriverLogging = Objects.requireNonNull($.enableStackdriverLogging, "expected parameter 'enableStackdriverLogging' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BuildNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="builderVersion", required=true)
-      private final Output<String> builderVersion;
+    private Output<String> builderVersion;
 
     public Output<String> builderVersion() {
         return this.builderVersion;
     }
 
-    public BuildNoteArgs(Output<String> builderVersion) {
-        this.builderVersion = Objects.requireNonNull(builderVersion, "expected parameter 'builderVersion' to be non-null");
-    }
+    private BuildNoteArgs() {}
 
-    private BuildNoteArgs() {
-        this.builderVersion = Codegen.empty();
+    private BuildNoteArgs(BuildNoteArgs $) {
+        this.builderVersion = $.builderVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> builderVersion;
+        private BuildNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildNoteArgs();
         }
 
         public Builder(BuildNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builderVersion = defaults.builderVersion;
+            $ = new BuildNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder builderVersion(Output<String> builderVersion) {
-            this.builderVersion = Objects.requireNonNull(builderVersion);
+            $.builderVersion = builderVersion;
             return this;
         }
+
         public Builder builderVersion(String builderVersion) {
-            this.builderVersion = Output.of(Objects.requireNonNull(builderVersion));
-            return this;
-        }        public BuildNoteArgs build() {
-            return new BuildNoteArgs(builderVersion);
+            return builderVersion(Output.of(builderVersion));
+        }
+
+        public BuildNoteArgs build() {
+            $.builderVersion = Objects.requireNonNull($.builderVersion, "expected parameter 'builderVersion' to be non-null");
+            return $;
         }
     }
+
 }

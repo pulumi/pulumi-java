@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportS
      * 
      */
     @Import(name="enableInsightsExport")
-      private final @Nullable Output<Boolean> enableInsightsExport;
+    private @Nullable Output<Boolean> enableInsightsExport;
 
-    public Output<Boolean> enableInsightsExport() {
-        return this.enableInsightsExport == null ? Codegen.empty() : this.enableInsightsExport;
+    public Optional<Output<Boolean>> enableInsightsExport() {
+        return Optional.ofNullable(this.enableInsightsExport);
     }
 
-    public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(@Nullable Output<Boolean> enableInsightsExport) {
-        this.enableInsightsExport = enableInsightsExport;
-    }
+    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs() {
-        this.enableInsightsExport = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs $) {
+        this.enableInsightsExport = $.enableInsightsExport;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableInsightsExport;
+        private GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableInsightsExport = defaults.enableInsightsExport;
+            $ = new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableInsightsExport(@Nullable Output<Boolean> enableInsightsExport) {
-            this.enableInsightsExport = enableInsightsExport;
+            $.enableInsightsExport = enableInsightsExport;
             return this;
         }
-        public Builder enableInsightsExport(@Nullable Boolean enableInsightsExport) {
-            this.enableInsightsExport = Codegen.ofNullable(enableInsightsExport);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs(enableInsightsExport);
+
+        public Builder enableInsightsExport(Boolean enableInsightsExport) {
+            return enableInsightsExport(Output.of(enableInsightsExport));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable Output<String> keyFrameInterval;
+    private @Nullable Output<String> keyFrameInterval;
 
-    public Output<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
+    public Optional<Output<String>> keyFrameInterval() {
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -38,10 +39,10 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -61,10 +62,10 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable Output<Either<String,StretchMode>> stretchMode;
+    private @Nullable Output<Either<String,StretchMode>> stretchMode;
 
-    public Output<Either<String,StretchMode>> stretchMode() {
-        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
+    public Optional<Output<Either<String,StretchMode>>> stretchMode() {
+        return Optional.ofNullable(this.stretchMode);
     }
 
     /**
@@ -72,102 +73,89 @@ public final class VideoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syncMode")
-      private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
+    private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
-    public Output<Either<String,VideoSyncMode>> syncMode() {
-        return this.syncMode == null ? Codegen.empty() : this.syncMode;
+    public Optional<Output<Either<String,VideoSyncMode>>> syncMode() {
+        return Optional.ofNullable(this.syncMode);
     }
 
-    public VideoArgs(
-        @Nullable Output<String> keyFrameInterval,
-        @Nullable Output<String> label,
-        Output<String> odataType,
-        @Nullable Output<Either<String,StretchMode>> stretchMode,
-        @Nullable Output<Either<String,VideoSyncMode>> syncMode) {
-        this.keyFrameInterval = keyFrameInterval;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").output().arg(odataType).require();
-        this.stretchMode = stretchMode;
-        this.syncMode = syncMode;
-    }
+    private VideoArgs() {}
 
-    private VideoArgs() {
-        this.keyFrameInterval = Codegen.empty();
-        this.label = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.stretchMode = Codegen.empty();
-        this.syncMode = Codegen.empty();
+    private VideoArgs(VideoArgs $) {
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.stretchMode = $.stretchMode;
+        this.syncMode = $.syncMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VideoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyFrameInterval;
-        private @Nullable Output<String> label;
-        private Output<String> odataType;
-        private @Nullable Output<Either<String,StretchMode>> stretchMode;
-        private @Nullable Output<Either<String,VideoSyncMode>> syncMode;
+        private VideoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VideoArgs();
         }
 
         public Builder(VideoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.stretchMode = defaults.stretchMode;
-    	      this.syncMode = defaults.syncMode;
+            $ = new VideoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
-        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
-            return this;
+
+        public Builder keyFrameInterval(String keyFrameInterval) {
+            return keyFrameInterval(Output.of(keyFrameInterval));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
-        public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Codegen.ofNullable(stretchMode);
-            return this;
+
+        public Builder stretchMode(Either<String,StretchMode> stretchMode) {
+            return stretchMode(Output.of(stretchMode));
         }
+
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
-            this.syncMode = syncMode;
+            $.syncMode = syncMode;
             return this;
         }
-        public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Codegen.ofNullable(syncMode);
-            return this;
-        }        public VideoArgs build() {
-            return new VideoArgs(keyFrameInterval, label, odataType, stretchMode, syncMode);
+
+        public Builder syncMode(Either<String,VideoSyncMode> syncMode) {
+            return syncMode(Output.of(syncMode));
+        }
+
+        public VideoArgs build() {
+            $.odataType = Codegen.stringProp("odataType").output().arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class ManagedRulesDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="exclusions")
-      private final @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
+    private @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
 
-    public List<OwaspCrsExclusionEntryResponse> exclusions() {
-        return this.exclusions == null ? List.of() : this.exclusions;
+    public Optional<List<OwaspCrsExclusionEntryResponse>> exclusions() {
+        return Optional.ofNullable(this.exclusions);
     }
 
     /**
@@ -36,61 +36,59 @@ public final class ManagedRulesDefinitionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="managedRuleSets", required=true)
-      private final List<ManagedRuleSetResponse> managedRuleSets;
+    private List<ManagedRuleSetResponse> managedRuleSets;
 
     public List<ManagedRuleSetResponse> managedRuleSets() {
         return this.managedRuleSets;
     }
 
-    public ManagedRulesDefinitionResponse(
-        @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
-        List<ManagedRuleSetResponse> managedRuleSets) {
-        this.exclusions = exclusions;
-        this.managedRuleSets = Objects.requireNonNull(managedRuleSets, "expected parameter 'managedRuleSets' to be non-null");
-    }
+    private ManagedRulesDefinitionResponse() {}
 
-    private ManagedRulesDefinitionResponse() {
-        this.exclusions = List.of();
-        this.managedRuleSets = List.of();
+    private ManagedRulesDefinitionResponse(ManagedRulesDefinitionResponse $) {
+        this.exclusions = $.exclusions;
+        this.managedRuleSets = $.managedRuleSets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRulesDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<OwaspCrsExclusionEntryResponse> exclusions;
-        private List<ManagedRuleSetResponse> managedRuleSets;
+        private ManagedRulesDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRulesDefinitionResponse();
         }
 
         public Builder(ManagedRulesDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusions = defaults.exclusions;
-    	      this.managedRuleSets = defaults.managedRuleSets;
+            $ = new ManagedRulesDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryResponse> exclusions) {
-            this.exclusions = exclusions;
+            $.exclusions = exclusions;
             return this;
         }
+
         public Builder exclusions(OwaspCrsExclusionEntryResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
+
         public Builder managedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
-            this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
+            $.managedRuleSets = managedRuleSets;
             return this;
         }
+
         public Builder managedRuleSets(ManagedRuleSetResponse... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
-        }        public ManagedRulesDefinitionResponse build() {
-            return new ManagedRulesDefinitionResponse(exclusions, managedRuleSets);
+        }
+
+        public ManagedRulesDefinitionResponse build() {
+            $.managedRuleSets = Objects.requireNonNull($.managedRuleSets, "expected parameter 'managedRuleSets' to be non-null");
+            return $;
         }
     }
+
 }

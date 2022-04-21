@@ -20,10 +20,10 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="brokerId")
-      private final @Nullable String brokerId;
+    private @Nullable String brokerId;
 
     public Optional<String> brokerId() {
-        return this.brokerId == null ? Optional.empty() : Optional.ofNullable(this.brokerId);
+        return Optional.ofNullable(this.brokerId);
     }
 
     /**
@@ -31,71 +31,63 @@ public final class GetBrokerArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="brokerName")
-      private final @Nullable String brokerName;
+    private @Nullable String brokerName;
 
     public Optional<String> brokerName() {
-        return this.brokerName == null ? Optional.empty() : Optional.ofNullable(this.brokerName);
+        return Optional.ofNullable(this.brokerName);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetBrokerArgs(
-        @Nullable String brokerId,
-        @Nullable String brokerName,
-        @Nullable Map<String,String> tags) {
-        this.brokerId = brokerId;
-        this.brokerName = brokerName;
-        this.tags = tags;
-    }
+    private GetBrokerArgs() {}
 
-    private GetBrokerArgs() {
-        this.brokerId = null;
-        this.brokerName = null;
-        this.tags = Map.of();
+    private GetBrokerArgs(GetBrokerArgs $) {
+        this.brokerId = $.brokerId;
+        this.brokerName = $.brokerName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBrokerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String brokerId;
-        private @Nullable String brokerName;
-        private @Nullable Map<String,String> tags;
+        private GetBrokerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBrokerArgs();
         }
 
         public Builder(GetBrokerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brokerId = defaults.brokerId;
-    	      this.brokerName = defaults.brokerName;
-    	      this.tags = defaults.tags;
+            $ = new GetBrokerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder brokerId(@Nullable String brokerId) {
-            this.brokerId = brokerId;
+            $.brokerId = brokerId;
             return this;
         }
+
         public Builder brokerName(@Nullable String brokerName) {
-            this.brokerName = brokerName;
+            $.brokerName = brokerName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetBrokerArgs build() {
-            return new GetBrokerArgs(brokerId, brokerName, tags);
+        }
+
+        public GetBrokerArgs build() {
+            return $;
         }
     }
+
 }

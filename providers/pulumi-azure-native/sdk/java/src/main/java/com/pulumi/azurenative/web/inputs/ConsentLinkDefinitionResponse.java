@@ -23,10 +23,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="firstPartyLoginUri")
-      private final @Nullable String firstPartyLoginUri;
+    private @Nullable String firstPartyLoginUri;
 
     public Optional<String> firstPartyLoginUri() {
-        return this.firstPartyLoginUri == null ? Optional.empty() : Optional.ofNullable(this.firstPartyLoginUri);
+        return Optional.ofNullable(this.firstPartyLoginUri);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="link")
-      private final @Nullable String link;
+    private @Nullable String link;
 
     public Optional<String> link() {
-        return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
+        return Optional.ofNullable(this.link);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ConsentLinkDefinitionResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public ConsentLinkDefinitionResponse(
-        @Nullable String displayName,
-        @Nullable String firstPartyLoginUri,
-        @Nullable String link,
-        @Nullable String status) {
-        this.displayName = displayName;
-        this.firstPartyLoginUri = firstPartyLoginUri;
-        this.link = link;
-        this.status = status;
-    }
+    private ConsentLinkDefinitionResponse() {}
 
-    private ConsentLinkDefinitionResponse() {
-        this.displayName = null;
-        this.firstPartyLoginUri = null;
-        this.link = null;
-        this.status = null;
+    private ConsentLinkDefinitionResponse(ConsentLinkDefinitionResponse $) {
+        this.displayName = $.displayName;
+        this.firstPartyLoginUri = $.firstPartyLoginUri;
+        this.link = $.link;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentLinkDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String firstPartyLoginUri;
-        private @Nullable String link;
-        private @Nullable String status;
+        private ConsentLinkDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentLinkDefinitionResponse();
         }
 
         public Builder(ConsentLinkDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.firstPartyLoginUri = defaults.firstPartyLoginUri;
-    	      this.link = defaults.link;
-    	      this.status = defaults.status;
+            $ = new ConsentLinkDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder firstPartyLoginUri(@Nullable String firstPartyLoginUri) {
-            this.firstPartyLoginUri = firstPartyLoginUri;
+            $.firstPartyLoginUri = firstPartyLoginUri;
             return this;
         }
+
         public Builder link(@Nullable String link) {
-            this.link = link;
+            $.link = link;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public ConsentLinkDefinitionResponse build() {
-            return new ConsentLinkDefinitionResponse(displayName, firstPartyLoginUri, link, status);
+        }
+
+        public ConsentLinkDefinitionResponse build() {
+            return $;
         }
     }
+
 }

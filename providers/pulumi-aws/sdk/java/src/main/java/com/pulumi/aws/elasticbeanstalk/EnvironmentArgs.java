@@ -6,11 +6,11 @@ package com.pulumi.aws.elasticbeanstalk;
 import com.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="application", required=true)
-      private final Output<String> application;
+    private Output<String> application;
 
     public Output<String> application() {
         return this.application;
@@ -36,10 +36,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cnamePrefix")
-      private final @Nullable Output<String> cnamePrefix;
+    private @Nullable Output<String> cnamePrefix;
 
-    public Output<String> cnamePrefix() {
-        return this.cnamePrefix == null ? Codegen.empty() : this.cnamePrefix;
+    public Optional<Output<String>> cnamePrefix() {
+        return Optional.ofNullable(this.cnamePrefix);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platformArn")
-      private final @Nullable Output<String> platformArn;
+    private @Nullable Output<String> platformArn;
 
-    public Output<String> platformArn() {
-        return this.platformArn == null ? Codegen.empty() : this.platformArn;
+    public Optional<Output<String>> platformArn() {
+        return Optional.ofNullable(this.platformArn);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pollInterval")
-      private final @Nullable Output<String> pollInterval;
+    private @Nullable Output<String> pollInterval;
 
-    public Output<String> pollInterval() {
-        return this.pollInterval == null ? Codegen.empty() : this.pollInterval;
+    public Optional<Output<String>> pollInterval() {
+        return Optional.ofNullable(this.pollInterval);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<List<EnvironmentSettingArgs>> settings;
+    private @Nullable Output<List<EnvironmentSettingArgs>> settings;
 
-    public Output<List<EnvironmentSettingArgs>> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<List<EnvironmentSettingArgs>>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="solutionStackName")
-      private final @Nullable Output<String> solutionStackName;
+    private @Nullable Output<String> solutionStackName;
 
-    public Output<String> solutionStackName() {
-        return this.solutionStackName == null ? Codegen.empty() : this.solutionStackName;
+    public Optional<Output<String>> solutionStackName() {
+        return Optional.ofNullable(this.solutionStackName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateName")
-      private final @Nullable Output<String> templateName;
+    private @Nullable Output<String> templateName;
 
-    public Output<String> templateName() {
-        return this.templateName == null ? Codegen.empty() : this.templateName;
+    public Optional<Output<String>> templateName() {
+        return Optional.ofNullable(this.templateName);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<String> tier;
+    private @Nullable Output<String> tier;
 
-    public Output<String> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<String>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
     /**
@@ -171,205 +171,173 @@ public final class EnvironmentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitForReadyTimeout")
-      private final @Nullable Output<String> waitForReadyTimeout;
+    private @Nullable Output<String> waitForReadyTimeout;
 
-    public Output<String> waitForReadyTimeout() {
-        return this.waitForReadyTimeout == null ? Codegen.empty() : this.waitForReadyTimeout;
+    public Optional<Output<String>> waitForReadyTimeout() {
+        return Optional.ofNullable(this.waitForReadyTimeout);
     }
 
-    public EnvironmentArgs(
-        Output<String> application,
-        @Nullable Output<String> cnamePrefix,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> platformArn,
-        @Nullable Output<String> pollInterval,
-        @Nullable Output<List<EnvironmentSettingArgs>> settings,
-        @Nullable Output<String> solutionStackName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> templateName,
-        @Nullable Output<String> tier,
-        @Nullable Output<String> version,
-        @Nullable Output<String> waitForReadyTimeout) {
-        this.application = Objects.requireNonNull(application, "expected parameter 'application' to be non-null");
-        this.cnamePrefix = cnamePrefix;
-        this.description = description;
-        this.name = name;
-        this.platformArn = platformArn;
-        this.pollInterval = pollInterval;
-        this.settings = settings;
-        this.solutionStackName = solutionStackName;
-        this.tags = tags;
-        this.templateName = templateName;
-        this.tier = tier;
-        this.version = version;
-        this.waitForReadyTimeout = waitForReadyTimeout;
-    }
+    private EnvironmentArgs() {}
 
-    private EnvironmentArgs() {
-        this.application = Codegen.empty();
-        this.cnamePrefix = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.platformArn = Codegen.empty();
-        this.pollInterval = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.solutionStackName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateName = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.version = Codegen.empty();
-        this.waitForReadyTimeout = Codegen.empty();
+    private EnvironmentArgs(EnvironmentArgs $) {
+        this.application = $.application;
+        this.cnamePrefix = $.cnamePrefix;
+        this.description = $.description;
+        this.name = $.name;
+        this.platformArn = $.platformArn;
+        this.pollInterval = $.pollInterval;
+        this.settings = $.settings;
+        this.solutionStackName = $.solutionStackName;
+        this.tags = $.tags;
+        this.templateName = $.templateName;
+        this.tier = $.tier;
+        this.version = $.version;
+        this.waitForReadyTimeout = $.waitForReadyTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> application;
-        private @Nullable Output<String> cnamePrefix;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> platformArn;
-        private @Nullable Output<String> pollInterval;
-        private @Nullable Output<List<EnvironmentSettingArgs>> settings;
-        private @Nullable Output<String> solutionStackName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> templateName;
-        private @Nullable Output<String> tier;
-        private @Nullable Output<String> version;
-        private @Nullable Output<String> waitForReadyTimeout;
+        private EnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentArgs();
         }
 
         public Builder(EnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.application = defaults.application;
-    	      this.cnamePrefix = defaults.cnamePrefix;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.platformArn = defaults.platformArn;
-    	      this.pollInterval = defaults.pollInterval;
-    	      this.settings = defaults.settings;
-    	      this.solutionStackName = defaults.solutionStackName;
-    	      this.tags = defaults.tags;
-    	      this.templateName = defaults.templateName;
-    	      this.tier = defaults.tier;
-    	      this.version = defaults.version;
-    	      this.waitForReadyTimeout = defaults.waitForReadyTimeout;
+            $ = new EnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder application(Output<String> application) {
-            this.application = Objects.requireNonNull(application);
+            $.application = application;
             return this;
         }
+
+        public Builder application(String application) {
+            return application(Output.of(application));
+        }
+
         public Builder cnamePrefix(@Nullable Output<String> cnamePrefix) {
-            this.cnamePrefix = cnamePrefix;
+            $.cnamePrefix = cnamePrefix;
             return this;
         }
-        public Builder cnamePrefix(@Nullable String cnamePrefix) {
-            this.cnamePrefix = Codegen.ofNullable(cnamePrefix);
-            return this;
+
+        public Builder cnamePrefix(String cnamePrefix) {
+            return cnamePrefix(Output.of(cnamePrefix));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder platformArn(@Nullable Output<String> platformArn) {
-            this.platformArn = platformArn;
+            $.platformArn = platformArn;
             return this;
         }
-        public Builder platformArn(@Nullable String platformArn) {
-            this.platformArn = Codegen.ofNullable(platformArn);
-            return this;
+
+        public Builder platformArn(String platformArn) {
+            return platformArn(Output.of(platformArn));
         }
+
         public Builder pollInterval(@Nullable Output<String> pollInterval) {
-            this.pollInterval = pollInterval;
+            $.pollInterval = pollInterval;
             return this;
         }
-        public Builder pollInterval(@Nullable String pollInterval) {
-            this.pollInterval = Codegen.ofNullable(pollInterval);
-            return this;
+
+        public Builder pollInterval(String pollInterval) {
+            return pollInterval(Output.of(pollInterval));
         }
+
         public Builder settings(@Nullable Output<List<EnvironmentSettingArgs>> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable List<EnvironmentSettingArgs> settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(List<EnvironmentSettingArgs> settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder settings(EnvironmentSettingArgs... settings) {
             return settings(List.of(settings));
         }
+
         public Builder solutionStackName(@Nullable Output<String> solutionStackName) {
-            this.solutionStackName = solutionStackName;
+            $.solutionStackName = solutionStackName;
             return this;
         }
-        public Builder solutionStackName(@Nullable String solutionStackName) {
-            this.solutionStackName = Codegen.ofNullable(solutionStackName);
-            return this;
+
+        public Builder solutionStackName(String solutionStackName) {
+            return solutionStackName(Output.of(solutionStackName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder templateName(@Nullable Output<String> templateName) {
-            this.templateName = templateName;
+            $.templateName = templateName;
             return this;
         }
-        public Builder templateName(@Nullable String templateName) {
-            this.templateName = Codegen.ofNullable(templateName);
-            return this;
+
+        public Builder templateName(String templateName) {
+            return templateName(Output.of(templateName));
         }
+
         public Builder tier(@Nullable Output<String> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable String tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
+
+        public Builder tier(String tier) {
+            return tier(Output.of(tier));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(String version) {
+            return version(Output.of(version));
         }
+
         public Builder waitForReadyTimeout(@Nullable Output<String> waitForReadyTimeout) {
-            this.waitForReadyTimeout = waitForReadyTimeout;
+            $.waitForReadyTimeout = waitForReadyTimeout;
             return this;
         }
-        public Builder waitForReadyTimeout(@Nullable String waitForReadyTimeout) {
-            this.waitForReadyTimeout = Codegen.ofNullable(waitForReadyTimeout);
-            return this;
-        }        public EnvironmentArgs build() {
-            return new EnvironmentArgs(application, cnamePrefix, description, name, platformArn, pollInterval, settings, solutionStackName, tags, templateName, tier, version, waitForReadyTimeout);
+
+        public Builder waitForReadyTimeout(String waitForReadyTimeout) {
+            return waitForReadyTimeout(Output.of(waitForReadyTimeout));
+        }
+
+        public EnvironmentArgs build() {
+            $.application = Objects.requireNonNull($.application, "expected parameter 'application' to be non-null");
+            return $;
         }
     }
+
 }

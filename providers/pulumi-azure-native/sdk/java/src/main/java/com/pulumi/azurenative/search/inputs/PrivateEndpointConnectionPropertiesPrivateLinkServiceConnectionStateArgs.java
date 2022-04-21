@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @Import(name="actionsRequired")
-      private final @Nullable Output<String> actionsRequired;
+    private @Nullable Output<String> actionsRequired;
 
-    public Output<String> actionsRequired() {
-        return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
+    public Optional<Output<String>> actionsRequired() {
+        return Optional.ofNullable(this.actionsRequired);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,76 +48,69 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<PrivateLinkServiceConnectionStatus> status;
+    private @Nullable Output<PrivateLinkServiceConnectionStatus> status;
 
-    public Output<PrivateLinkServiceConnectionStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<PrivateLinkServiceConnectionStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(
-        @Nullable Output<String> actionsRequired,
-        @Nullable Output<String> description,
-        @Nullable Output<PrivateLinkServiceConnectionStatus> status) {
-        this.actionsRequired = Codegen.stringProp("actionsRequired").output().arg(actionsRequired).def("None").getNullable();
-        this.description = description;
-        this.status = status;
-    }
+    private PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs() {}
 
-    private PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs() {
-        this.actionsRequired = Codegen.empty();
-        this.description = Codegen.empty();
-        this.status = Codegen.empty();
+    private PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs $) {
+        this.actionsRequired = $.actionsRequired;
+        this.description = $.description;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionsRequired;
-        private @Nullable Output<String> description;
-        private @Nullable Output<PrivateLinkServiceConnectionStatus> status;
+        private PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs();
         }
 
         public Builder(PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionsRequired = defaults.actionsRequired;
-    	      this.description = defaults.description;
-    	      this.status = defaults.status;
+            $ = new PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionsRequired(@Nullable Output<String> actionsRequired) {
-            this.actionsRequired = actionsRequired;
+            $.actionsRequired = actionsRequired;
             return this;
         }
-        public Builder actionsRequired(@Nullable String actionsRequired) {
-            this.actionsRequired = Codegen.ofNullable(actionsRequired);
-            return this;
+
+        public Builder actionsRequired(String actionsRequired) {
+            return actionsRequired(Output.of(actionsRequired));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder status(@Nullable Output<PrivateLinkServiceConnectionStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable PrivateLinkServiceConnectionStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
-            return new PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
+
+        public Builder status(PrivateLinkServiceConnectionStatus status) {
+            return status(Output.of(status));
+        }
+
+        public PrivateEndpointConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
+            $.actionsRequired = Codegen.stringProp("actionsRequired").output().arg($.actionsRequired).def("None").getNullable();
+            return $;
         }
     }
+
 }

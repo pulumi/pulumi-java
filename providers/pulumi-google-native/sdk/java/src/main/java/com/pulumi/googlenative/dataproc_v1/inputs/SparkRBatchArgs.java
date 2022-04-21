@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SparkRBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveUris")
-      private final @Nullable Output<List<String>> archiveUris;
+    private @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> archiveUris() {
-        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
+    public Optional<Output<List<String>>> archiveUris() {
+        return Optional.ofNullable(this.archiveUris);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class SparkRBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class SparkRBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileUris")
-      private final @Nullable Output<List<String>> fileUris;
+    private @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> fileUris() {
-        return this.fileUris == null ? Codegen.empty() : this.fileUris;
+    public Optional<Output<List<String>>> fileUris() {
+        return Optional.ofNullable(this.fileUris);
     }
 
     /**
@@ -58,98 +58,91 @@ public final class SparkRBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mainRFileUri", required=true)
-      private final Output<String> mainRFileUri;
+    private Output<String> mainRFileUri;
 
     public Output<String> mainRFileUri() {
         return this.mainRFileUri;
     }
 
-    public SparkRBatchArgs(
-        @Nullable Output<List<String>> archiveUris,
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> fileUris,
-        Output<String> mainRFileUri) {
-        this.archiveUris = archiveUris;
-        this.args = args;
-        this.fileUris = fileUris;
-        this.mainRFileUri = Objects.requireNonNull(mainRFileUri, "expected parameter 'mainRFileUri' to be non-null");
-    }
+    private SparkRBatchArgs() {}
 
-    private SparkRBatchArgs() {
-        this.archiveUris = Codegen.empty();
-        this.args = Codegen.empty();
-        this.fileUris = Codegen.empty();
-        this.mainRFileUri = Codegen.empty();
+    private SparkRBatchArgs(SparkRBatchArgs $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.mainRFileUri = $.mainRFileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkRBatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> archiveUris;
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> fileUris;
-        private Output<String> mainRFileUri;
+        private SparkRBatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkRBatchArgs();
         }
 
         public Builder(SparkRBatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.mainRFileUri = defaults.mainRFileUri;
+            $ = new SparkRBatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
-            this.archiveUris = archiveUris;
+            $.archiveUris = archiveUris;
             return this;
         }
-        public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Codegen.ofNullable(archiveUris);
-            return this;
+
+        public Builder archiveUris(List<String> archiveUris) {
+            return archiveUris(Output.of(archiveUris));
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
-            this.fileUris = fileUris;
+            $.fileUris = fileUris;
             return this;
         }
-        public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Codegen.ofNullable(fileUris);
-            return this;
+
+        public Builder fileUris(List<String> fileUris) {
+            return fileUris(Output.of(fileUris));
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder mainRFileUri(Output<String> mainRFileUri) {
-            this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
+            $.mainRFileUri = mainRFileUri;
             return this;
         }
+
         public Builder mainRFileUri(String mainRFileUri) {
-            this.mainRFileUri = Output.of(Objects.requireNonNull(mainRFileUri));
-            return this;
-        }        public SparkRBatchArgs build() {
-            return new SparkRBatchArgs(archiveUris, args, fileUris, mainRFileUri);
+            return mainRFileUri(Output.of(mainRFileUri));
+        }
+
+        public SparkRBatchArgs build() {
+            $.mainRFileUri = Objects.requireNonNull($.mainRFileUri, "expected parameter 'mainRFileUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -33,7 +33,7 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="operator", required=true)
-      private final String operator;
+    private String operator;
 
     public String operator() {
         return this.operator;
@@ -44,67 +44,63 @@ public final class SchedulingNodeAffinityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="values", required=true)
-      private final List<String> values;
+    private List<String> values;
 
     public List<String> values() {
         return this.values;
     }
 
-    public SchedulingNodeAffinityResponse(
-        String key,
-        String operator,
-        List<String> values) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private SchedulingNodeAffinityResponse() {}
 
-    private SchedulingNodeAffinityResponse() {
-        this.key = null;
-        this.operator = null;
-        this.values = List.of();
+    private SchedulingNodeAffinityResponse(SchedulingNodeAffinityResponse $) {
+        this.key = $.key;
+        this.operator = $.operator;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingNodeAffinityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String operator;
-        private List<String> values;
+        private SchedulingNodeAffinityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingNodeAffinityResponse();
         }
 
         public Builder(SchedulingNodeAffinityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.operator = defaults.operator;
-    	      this.values = defaults.values;
+            $ = new SchedulingNodeAffinityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder operator(String operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder values(List<String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
         }
+
         public Builder values(String... values) {
             return values(List.of(values));
-        }        public SchedulingNodeAffinityResponse build() {
-            return new SchedulingNodeAffinityResponse(key, operator, values);
+        }
+
+        public SchedulingNodeAffinityResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

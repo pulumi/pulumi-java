@@ -8,12 +8,12 @@ import com.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArg
 import com.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="failureReason")
-      private final @Nullable Output<String> failureReason;
+    private @Nullable Output<String> failureReason;
 
-    public Output<String> failureReason() {
-        return this.failureReason == null ? Codegen.empty() : this.failureReason;
+    public Optional<Output<String>> failureReason() {
+        return Optional.ofNullable(this.failureReason);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="hiddenParameters")
-      private final @Nullable Output<List<Object>> hiddenParameters;
+    private @Nullable Output<List<Object>> hiddenParameters;
 
-    public Output<List<Object>> hiddenParameters() {
-        return this.hiddenParameters == null ? Codegen.empty() : this.hiddenParameters;
+    public Optional<Output<List<Object>>> hiddenParameters() {
+        return Optional.ofNullable(this.hiddenParameters);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namedOutputs")
-      private final @Nullable Output<Map<String,Object>> namedOutputs;
+    private @Nullable Output<Map<String,Object>> namedOutputs;
 
-    public Output<Map<String,Object>> namedOutputs() {
-        return this.namedOutputs == null ? Codegen.empty() : this.namedOutputs;
+    public Optional<Output<Map<String,Object>>> namedOutputs() {
+        return Optional.ofNullable(this.namedOutputs);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<List<String>> output;
+    private @Nullable Output<List<String>> output;
 
-    public Output<List<String>> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<List<String>>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<Object>> parameters;
+    private @Nullable Output<List<Object>> parameters;
 
-    public Output<List<Object>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<Object>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="privateCloudName", required=true)
-      private final Output<String> privateCloudName;
+    private Output<String> privateCloudName;
 
     public Output<String> privateCloudName() {
         return this.privateCloudName;
@@ -92,7 +92,7 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +103,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="retention")
-      private final @Nullable Output<String> retention;
+    private @Nullable Output<String> retention;
 
-    public Output<String> retention() {
-        return this.retention == null ? Codegen.empty() : this.retention;
+    public Optional<Output<String>> retention() {
+        return Optional.ofNullable(this.retention);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptCmdletId")
-      private final @Nullable Output<String> scriptCmdletId;
+    private @Nullable Output<String> scriptCmdletId;
 
-    public Output<String> scriptCmdletId() {
-        return this.scriptCmdletId == null ? Codegen.empty() : this.scriptCmdletId;
+    public Optional<Output<String>> scriptCmdletId() {
+        return Optional.ofNullable(this.scriptCmdletId);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="scriptExecutionName")
-      private final @Nullable Output<String> scriptExecutionName;
+    private @Nullable Output<String> scriptExecutionName;
 
-    public Output<String> scriptExecutionName() {
-        return this.scriptExecutionName == null ? Codegen.empty() : this.scriptExecutionName;
+    public Optional<Output<String>> scriptExecutionName() {
+        return Optional.ofNullable(this.scriptExecutionName);
     }
 
     /**
@@ -136,189 +136,163 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeout", required=true)
-      private final Output<String> timeout;
+    private Output<String> timeout;
 
     public Output<String> timeout() {
         return this.timeout;
     }
 
-    public ScriptExecutionArgs(
-        @Nullable Output<String> failureReason,
-        @Nullable Output<List<Object>> hiddenParameters,
-        @Nullable Output<Map<String,Object>> namedOutputs,
-        @Nullable Output<List<String>> output,
-        @Nullable Output<List<Object>> parameters,
-        Output<String> privateCloudName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> retention,
-        @Nullable Output<String> scriptCmdletId,
-        @Nullable Output<String> scriptExecutionName,
-        Output<String> timeout) {
-        this.failureReason = failureReason;
-        this.hiddenParameters = hiddenParameters;
-        this.namedOutputs = namedOutputs;
-        this.output = output;
-        this.parameters = parameters;
-        this.privateCloudName = Objects.requireNonNull(privateCloudName, "expected parameter 'privateCloudName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.retention = retention;
-        this.scriptCmdletId = scriptCmdletId;
-        this.scriptExecutionName = scriptExecutionName;
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-    }
+    private ScriptExecutionArgs() {}
 
-    private ScriptExecutionArgs() {
-        this.failureReason = Codegen.empty();
-        this.hiddenParameters = Codegen.empty();
-        this.namedOutputs = Codegen.empty();
-        this.output = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.privateCloudName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.retention = Codegen.empty();
-        this.scriptCmdletId = Codegen.empty();
-        this.scriptExecutionName = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ScriptExecutionArgs(ScriptExecutionArgs $) {
+        this.failureReason = $.failureReason;
+        this.hiddenParameters = $.hiddenParameters;
+        this.namedOutputs = $.namedOutputs;
+        this.output = $.output;
+        this.parameters = $.parameters;
+        this.privateCloudName = $.privateCloudName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.retention = $.retention;
+        this.scriptCmdletId = $.scriptCmdletId;
+        this.scriptExecutionName = $.scriptExecutionName;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScriptExecutionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> failureReason;
-        private @Nullable Output<List<Object>> hiddenParameters;
-        private @Nullable Output<Map<String,Object>> namedOutputs;
-        private @Nullable Output<List<String>> output;
-        private @Nullable Output<List<Object>> parameters;
-        private Output<String> privateCloudName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> retention;
-        private @Nullable Output<String> scriptCmdletId;
-        private @Nullable Output<String> scriptExecutionName;
-        private Output<String> timeout;
+        private ScriptExecutionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScriptExecutionArgs();
         }
 
         public Builder(ScriptExecutionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureReason = defaults.failureReason;
-    	      this.hiddenParameters = defaults.hiddenParameters;
-    	      this.namedOutputs = defaults.namedOutputs;
-    	      this.output = defaults.output;
-    	      this.parameters = defaults.parameters;
-    	      this.privateCloudName = defaults.privateCloudName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.retention = defaults.retention;
-    	      this.scriptCmdletId = defaults.scriptCmdletId;
-    	      this.scriptExecutionName = defaults.scriptExecutionName;
-    	      this.timeout = defaults.timeout;
+            $ = new ScriptExecutionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failureReason(@Nullable Output<String> failureReason) {
-            this.failureReason = failureReason;
+            $.failureReason = failureReason;
             return this;
         }
-        public Builder failureReason(@Nullable String failureReason) {
-            this.failureReason = Codegen.ofNullable(failureReason);
-            return this;
+
+        public Builder failureReason(String failureReason) {
+            return failureReason(Output.of(failureReason));
         }
+
         public Builder hiddenParameters(@Nullable Output<List<Object>> hiddenParameters) {
-            this.hiddenParameters = hiddenParameters;
+            $.hiddenParameters = hiddenParameters;
             return this;
         }
-        public Builder hiddenParameters(@Nullable List<Object> hiddenParameters) {
-            this.hiddenParameters = Codegen.ofNullable(hiddenParameters);
-            return this;
+
+        public Builder hiddenParameters(List<Object> hiddenParameters) {
+            return hiddenParameters(Output.of(hiddenParameters));
         }
+
         public Builder hiddenParameters(Object... hiddenParameters) {
             return hiddenParameters(List.of(hiddenParameters));
         }
+
         public Builder namedOutputs(@Nullable Output<Map<String,Object>> namedOutputs) {
-            this.namedOutputs = namedOutputs;
+            $.namedOutputs = namedOutputs;
             return this;
         }
-        public Builder namedOutputs(@Nullable Map<String,Object> namedOutputs) {
-            this.namedOutputs = Codegen.ofNullable(namedOutputs);
-            return this;
+
+        public Builder namedOutputs(Map<String,Object> namedOutputs) {
+            return namedOutputs(Output.of(namedOutputs));
         }
+
         public Builder output(@Nullable Output<List<String>> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable List<String> output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(List<String> output) {
+            return output(Output.of(output));
         }
+
         public Builder output(String... output) {
             return output(List.of(output));
         }
+
         public Builder parameters(@Nullable Output<List<Object>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<Object> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<Object> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
-            this.privateCloudName = Objects.requireNonNull(privateCloudName);
+            $.privateCloudName = privateCloudName;
             return this;
         }
+
         public Builder privateCloudName(String privateCloudName) {
-            this.privateCloudName = Output.of(Objects.requireNonNull(privateCloudName));
-            return this;
+            return privateCloudName(Output.of(privateCloudName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder retention(@Nullable Output<String> retention) {
-            this.retention = retention;
+            $.retention = retention;
             return this;
         }
-        public Builder retention(@Nullable String retention) {
-            this.retention = Codegen.ofNullable(retention);
-            return this;
+
+        public Builder retention(String retention) {
+            return retention(Output.of(retention));
         }
+
         public Builder scriptCmdletId(@Nullable Output<String> scriptCmdletId) {
-            this.scriptCmdletId = scriptCmdletId;
+            $.scriptCmdletId = scriptCmdletId;
             return this;
         }
-        public Builder scriptCmdletId(@Nullable String scriptCmdletId) {
-            this.scriptCmdletId = Codegen.ofNullable(scriptCmdletId);
-            return this;
+
+        public Builder scriptCmdletId(String scriptCmdletId) {
+            return scriptCmdletId(Output.of(scriptCmdletId));
         }
+
         public Builder scriptExecutionName(@Nullable Output<String> scriptExecutionName) {
-            this.scriptExecutionName = scriptExecutionName;
+            $.scriptExecutionName = scriptExecutionName;
             return this;
         }
-        public Builder scriptExecutionName(@Nullable String scriptExecutionName) {
-            this.scriptExecutionName = Codegen.ofNullable(scriptExecutionName);
-            return this;
+
+        public Builder scriptExecutionName(String scriptExecutionName) {
+            return scriptExecutionName(Output.of(scriptExecutionName));
         }
+
         public Builder timeout(Output<String> timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Output.of(Objects.requireNonNull(timeout));
-            return this;
-        }        public ScriptExecutionArgs build() {
-            return new ScriptExecutionArgs(failureReason, hiddenParameters, namedOutputs, output, parameters, privateCloudName, resourceGroupName, retention, scriptCmdletId, scriptExecutionName, timeout);
+            return timeout(Output.of(timeout));
+        }
+
+        public ScriptExecutionArgs build() {
+            $.privateCloudName = Objects.requireNonNull($.privateCloudName, "expected parameter 'privateCloudName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            return $;
         }
     }
+
 }

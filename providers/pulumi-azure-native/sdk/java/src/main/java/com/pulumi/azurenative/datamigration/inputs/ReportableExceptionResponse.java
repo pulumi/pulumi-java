@@ -24,10 +24,10 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="actionableMessage")
-      private final @Nullable String actionableMessage;
+    private @Nullable String actionableMessage;
 
     public Optional<String> actionableMessage() {
-        return this.actionableMessage == null ? Optional.empty() : Optional.ofNullable(this.actionableMessage);
+        return Optional.ofNullable(this.actionableMessage);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filePath", required=true)
-      private final String filePath;
+    private String filePath;
 
     public String filePath() {
         return this.filePath;
@@ -46,7 +46,7 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="hResult", required=true)
-      private final Integer hResult;
+    private Integer hResult;
 
     public Integer hResult() {
         return this.hResult;
@@ -57,7 +57,7 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="lineNumber", required=true)
-      private final String lineNumber;
+    private String lineNumber;
 
     public String lineNumber() {
         return this.lineNumber;
@@ -68,7 +68,7 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -79,91 +79,79 @@ public final class ReportableExceptionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="stackTrace", required=true)
-      private final String stackTrace;
+    private String stackTrace;
 
     public String stackTrace() {
         return this.stackTrace;
     }
 
-    public ReportableExceptionResponse(
-        @Nullable String actionableMessage,
-        String filePath,
-        Integer hResult,
-        String lineNumber,
-        String message,
-        String stackTrace) {
-        this.actionableMessage = actionableMessage;
-        this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.hResult = Objects.requireNonNull(hResult, "expected parameter 'hResult' to be non-null");
-        this.lineNumber = Objects.requireNonNull(lineNumber, "expected parameter 'lineNumber' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.stackTrace = Objects.requireNonNull(stackTrace, "expected parameter 'stackTrace' to be non-null");
-    }
+    private ReportableExceptionResponse() {}
 
-    private ReportableExceptionResponse() {
-        this.actionableMessage = null;
-        this.filePath = null;
-        this.hResult = null;
-        this.lineNumber = null;
-        this.message = null;
-        this.stackTrace = null;
+    private ReportableExceptionResponse(ReportableExceptionResponse $) {
+        this.actionableMessage = $.actionableMessage;
+        this.filePath = $.filePath;
+        this.hResult = $.hResult;
+        this.lineNumber = $.lineNumber;
+        this.message = $.message;
+        this.stackTrace = $.stackTrace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportableExceptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String actionableMessage;
-        private String filePath;
-        private Integer hResult;
-        private String lineNumber;
-        private String message;
-        private String stackTrace;
+        private ReportableExceptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportableExceptionResponse();
         }
 
         public Builder(ReportableExceptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionableMessage = defaults.actionableMessage;
-    	      this.filePath = defaults.filePath;
-    	      this.hResult = defaults.hResult;
-    	      this.lineNumber = defaults.lineNumber;
-    	      this.message = defaults.message;
-    	      this.stackTrace = defaults.stackTrace;
+            $ = new ReportableExceptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder actionableMessage(@Nullable String actionableMessage) {
-            this.actionableMessage = actionableMessage;
+            $.actionableMessage = actionableMessage;
             return this;
         }
+
         public Builder filePath(String filePath) {
-            this.filePath = Objects.requireNonNull(filePath);
+            $.filePath = filePath;
             return this;
         }
+
         public Builder hResult(Integer hResult) {
-            this.hResult = Objects.requireNonNull(hResult);
+            $.hResult = hResult;
             return this;
         }
+
         public Builder lineNumber(String lineNumber) {
-            this.lineNumber = Objects.requireNonNull(lineNumber);
+            $.lineNumber = lineNumber;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder stackTrace(String stackTrace) {
-            this.stackTrace = Objects.requireNonNull(stackTrace);
+            $.stackTrace = stackTrace;
             return this;
-        }        public ReportableExceptionResponse build() {
-            return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
+        }
+
+        public ReportableExceptionResponse build() {
+            $.filePath = Objects.requireNonNull($.filePath, "expected parameter 'filePath' to be non-null");
+            $.hResult = Objects.requireNonNull($.hResult, "expected parameter 'hResult' to be non-null");
+            $.lineNumber = Objects.requireNonNull($.lineNumber, "expected parameter 'lineNumber' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.stackTrace = Objects.requireNonNull($.stackTrace, "expected parameter 'stackTrace' to be non-null");
+            return $;
         }
     }
+
 }

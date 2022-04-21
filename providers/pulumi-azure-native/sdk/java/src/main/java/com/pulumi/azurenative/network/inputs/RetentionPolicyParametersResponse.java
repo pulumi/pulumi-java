@@ -25,10 +25,10 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="days")
-      private final @Nullable Integer days;
+    private @Nullable Integer days;
 
     public Optional<Integer> days() {
-        return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -36,55 +36,52 @@ public final class RetentionPolicyParametersResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public RetentionPolicyParametersResponse(
-        @Nullable Integer days,
-        @Nullable Boolean enabled) {
-        this.days = Codegen.integerProp("days").arg(days).def(0).getNullable();
-        this.enabled = Codegen.booleanProp("enabled").arg(enabled).def(false).getNullable();
-    }
+    private RetentionPolicyParametersResponse() {}
 
-    private RetentionPolicyParametersResponse() {
-        this.days = null;
-        this.enabled = null;
+    private RetentionPolicyParametersResponse(RetentionPolicyParametersResponse $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetentionPolicyParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer days;
-        private @Nullable Boolean enabled;
+        private RetentionPolicyParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetentionPolicyParametersResponse();
         }
 
         public Builder(RetentionPolicyParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
+            $ = new RetentionPolicyParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public RetentionPolicyParametersResponse build() {
-            return new RetentionPolicyParametersResponse(days, enabled);
+        }
+
+        public RetentionPolicyParametersResponse build() {
+            $.days = Codegen.integerProp("days").arg($.days).def(0).getNullable();
+            $.enabled = Codegen.booleanProp("enabled").arg($.enabled).def(false).getNullable();
+            return $;
         }
     }
+
 }

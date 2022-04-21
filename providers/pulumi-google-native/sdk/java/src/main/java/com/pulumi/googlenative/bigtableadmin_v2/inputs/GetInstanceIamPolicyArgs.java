@@ -15,62 +15,58 @@ public final class GetInstanceIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetInstanceIamPolicyArgs Empty = new GetInstanceIamPolicyArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceIamPolicyArgs(
-        String instanceId,
-        @Nullable String project) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private GetInstanceIamPolicyArgs() {}
 
-    private GetInstanceIamPolicyArgs() {
-        this.instanceId = null;
-        this.project = null;
+    private GetInstanceIamPolicyArgs(GetInstanceIamPolicyArgs $) {
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private @Nullable String project;
+        private GetInstanceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceIamPolicyArgs();
         }
 
         public Builder(GetInstanceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetInstanceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceIamPolicyArgs build() {
-            return new GetInstanceIamPolicyArgs(instanceId, project);
+        }
+
+        public GetInstanceIamPolicyArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

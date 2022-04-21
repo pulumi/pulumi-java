@@ -24,7 +24,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends com.pulumi.r
      * 
      */
     @Import(name="all", required=true)
-      private final Boolean all;
+    private Boolean all;
 
     public Boolean all() {
         return this.all;
@@ -35,7 +35,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends com.pulumi.r
      * 
      */
     @Import(name="exclusionLabels", required=true)
-      private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
+    private List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> exclusionLabels() {
         return this.exclusionLabels;
@@ -46,7 +46,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends com.pulumi.r
      * 
      */
     @Import(name="inclusionLabels", required=true)
-      private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
+    private List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> inclusionLabels() {
         return this.inclusionLabels;
@@ -57,82 +57,78 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends com.pulumi.r
      * 
      */
     @Import(name="inventories", required=true)
-      private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
+    private List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
     public List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories() {
         return this.inventories;
     }
 
-    public OSPolicyAssignmentInstanceFilterResponse(
-        Boolean all,
-        List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
-        List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
-        List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
-        this.all = Objects.requireNonNull(all, "expected parameter 'all' to be non-null");
-        this.exclusionLabels = Objects.requireNonNull(exclusionLabels, "expected parameter 'exclusionLabels' to be non-null");
-        this.inclusionLabels = Objects.requireNonNull(inclusionLabels, "expected parameter 'inclusionLabels' to be non-null");
-        this.inventories = Objects.requireNonNull(inventories, "expected parameter 'inventories' to be non-null");
-    }
+    private OSPolicyAssignmentInstanceFilterResponse() {}
 
-    private OSPolicyAssignmentInstanceFilterResponse() {
-        this.all = null;
-        this.exclusionLabels = List.of();
-        this.inclusionLabels = List.of();
-        this.inventories = List.of();
+    private OSPolicyAssignmentInstanceFilterResponse(OSPolicyAssignmentInstanceFilterResponse $) {
+        this.all = $.all;
+        this.exclusionLabels = $.exclusionLabels;
+        this.inclusionLabels = $.inclusionLabels;
+        this.inventories = $.inventories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentInstanceFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean all;
-        private List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
-        private List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
-        private List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
+        private OSPolicyAssignmentInstanceFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentInstanceFilterResponse();
         }
 
         public Builder(OSPolicyAssignmentInstanceFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.all = defaults.all;
-    	      this.exclusionLabels = defaults.exclusionLabels;
-    	      this.inclusionLabels = defaults.inclusionLabels;
-    	      this.inventories = defaults.inventories;
+            $ = new OSPolicyAssignmentInstanceFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder all(Boolean all) {
-            this.all = Objects.requireNonNull(all);
+            $.all = all;
             return this;
         }
+
         public Builder exclusionLabels(List<OSPolicyAssignmentLabelSetResponse> exclusionLabels) {
-            this.exclusionLabels = Objects.requireNonNull(exclusionLabels);
+            $.exclusionLabels = exclusionLabels;
             return this;
         }
+
         public Builder exclusionLabels(OSPolicyAssignmentLabelSetResponse... exclusionLabels) {
             return exclusionLabels(List.of(exclusionLabels));
         }
+
         public Builder inclusionLabels(List<OSPolicyAssignmentLabelSetResponse> inclusionLabels) {
-            this.inclusionLabels = Objects.requireNonNull(inclusionLabels);
+            $.inclusionLabels = inclusionLabels;
             return this;
         }
+
         public Builder inclusionLabels(OSPolicyAssignmentLabelSetResponse... inclusionLabels) {
             return inclusionLabels(List.of(inclusionLabels));
         }
+
         public Builder inventories(List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
-            this.inventories = Objects.requireNonNull(inventories);
+            $.inventories = inventories;
             return this;
         }
+
         public Builder inventories(OSPolicyAssignmentInstanceFilterInventoryResponse... inventories) {
             return inventories(List.of(inventories));
-        }        public OSPolicyAssignmentInstanceFilterResponse build() {
-            return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
+        }
+
+        public OSPolicyAssignmentInstanceFilterResponse build() {
+            $.all = Objects.requireNonNull($.all, "expected parameter 'all' to be non-null");
+            $.exclusionLabels = Objects.requireNonNull($.exclusionLabels, "expected parameter 'exclusionLabels' to be non-null");
+            $.inclusionLabels = Objects.requireNonNull($.inclusionLabels, "expected parameter 'inclusionLabels' to be non-null");
+            $.inventories = Objects.requireNonNull($.inventories, "expected parameter 'inventories' to be non-null");
+            return $;
         }
     }
+
 }

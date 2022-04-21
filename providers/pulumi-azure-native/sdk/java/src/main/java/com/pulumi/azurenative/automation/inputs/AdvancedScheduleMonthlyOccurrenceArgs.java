@@ -7,10 +7,10 @@ import com.pulumi.azurenative.automation.enums.ScheduleDay;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<Either<String,ScheduleDay>> day;
+    private @Nullable Output<Either<String,ScheduleDay>> day;
 
-    public Output<Either<String,ScheduleDay>> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<Either<String,ScheduleDay>>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -38,63 +38,58 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="occurrence")
-      private final @Nullable Output<Integer> occurrence;
+    private @Nullable Output<Integer> occurrence;
 
-    public Output<Integer> occurrence() {
-        return this.occurrence == null ? Codegen.empty() : this.occurrence;
+    public Optional<Output<Integer>> occurrence() {
+        return Optional.ofNullable(this.occurrence);
     }
 
-    public AdvancedScheduleMonthlyOccurrenceArgs(
-        @Nullable Output<Either<String,ScheduleDay>> day,
-        @Nullable Output<Integer> occurrence) {
-        this.day = day;
-        this.occurrence = occurrence;
-    }
+    private AdvancedScheduleMonthlyOccurrenceArgs() {}
 
-    private AdvancedScheduleMonthlyOccurrenceArgs() {
-        this.day = Codegen.empty();
-        this.occurrence = Codegen.empty();
+    private AdvancedScheduleMonthlyOccurrenceArgs(AdvancedScheduleMonthlyOccurrenceArgs $) {
+        this.day = $.day;
+        this.occurrence = $.occurrence;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedScheduleMonthlyOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,ScheduleDay>> day;
-        private @Nullable Output<Integer> occurrence;
+        private AdvancedScheduleMonthlyOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedScheduleMonthlyOccurrenceArgs();
         }
 
         public Builder(AdvancedScheduleMonthlyOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.occurrence = defaults.occurrence;
+            $ = new AdvancedScheduleMonthlyOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<Either<String,ScheduleDay>> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable Either<String,ScheduleDay> day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(Either<String,ScheduleDay> day) {
+            return day(Output.of(day));
         }
+
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
-            this.occurrence = occurrence;
+            $.occurrence = occurrence;
             return this;
         }
-        public Builder occurrence(@Nullable Integer occurrence) {
-            this.occurrence = Codegen.ofNullable(occurrence);
-            return this;
-        }        public AdvancedScheduleMonthlyOccurrenceArgs build() {
-            return new AdvancedScheduleMonthlyOccurrenceArgs(day, occurrence);
+
+        public Builder occurrence(Integer occurrence) {
+            return occurrence(Output.of(occurrence));
+        }
+
+        public AdvancedScheduleMonthlyOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

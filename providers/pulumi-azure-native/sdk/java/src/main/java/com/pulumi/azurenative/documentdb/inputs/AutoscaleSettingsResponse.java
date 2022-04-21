@@ -19,45 +19,44 @@ public final class AutoscaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxThroughput")
-      private final @Nullable Integer maxThroughput;
+    private @Nullable Integer maxThroughput;
 
     public Optional<Integer> maxThroughput() {
-        return this.maxThroughput == null ? Optional.empty() : Optional.ofNullable(this.maxThroughput);
+        return Optional.ofNullable(this.maxThroughput);
     }
 
-    public AutoscaleSettingsResponse(@Nullable Integer maxThroughput) {
-        this.maxThroughput = maxThroughput;
-    }
+    private AutoscaleSettingsResponse() {}
 
-    private AutoscaleSettingsResponse() {
-        this.maxThroughput = null;
+    private AutoscaleSettingsResponse(AutoscaleSettingsResponse $) {
+        this.maxThroughput = $.maxThroughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxThroughput;
+        private AutoscaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscaleSettingsResponse();
         }
 
         public Builder(AutoscaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxThroughput = defaults.maxThroughput;
+            $ = new AutoscaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxThroughput(@Nullable Integer maxThroughput) {
-            this.maxThroughput = maxThroughput;
+            $.maxThroughput = maxThroughput;
             return this;
-        }        public AutoscaleSettingsResponse build() {
-            return new AutoscaleSettingsResponse(maxThroughput);
+        }
+
+        public AutoscaleSettingsResponse build() {
+            return $;
         }
     }
+
 }

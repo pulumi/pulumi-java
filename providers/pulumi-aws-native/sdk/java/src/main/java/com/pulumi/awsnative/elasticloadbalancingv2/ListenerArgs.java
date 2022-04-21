@@ -7,11 +7,11 @@ import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerActionArgs;
 import com.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,179 +20,164 @@ public final class ListenerArgs extends com.pulumi.resources.ResourceArgs {
     public static final ListenerArgs Empty = new ListenerArgs();
 
     @Import(name="alpnPolicy")
-      private final @Nullable Output<List<String>> alpnPolicy;
+    private @Nullable Output<List<String>> alpnPolicy;
 
-    public Output<List<String>> alpnPolicy() {
-        return this.alpnPolicy == null ? Codegen.empty() : this.alpnPolicy;
+    public Optional<Output<List<String>>> alpnPolicy() {
+        return Optional.ofNullable(this.alpnPolicy);
     }
 
     @Import(name="certificates")
-      private final @Nullable Output<List<ListenerCertificateArgs>> certificates;
+    private @Nullable Output<List<ListenerCertificateArgs>> certificates;
 
-    public Output<List<ListenerCertificateArgs>> certificates() {
-        return this.certificates == null ? Codegen.empty() : this.certificates;
+    public Optional<Output<List<ListenerCertificateArgs>>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     @Import(name="defaultActions", required=true)
-      private final Output<List<ListenerActionArgs>> defaultActions;
+    private Output<List<ListenerActionArgs>> defaultActions;
 
     public Output<List<ListenerActionArgs>> defaultActions() {
         return this.defaultActions;
     }
 
     @Import(name="loadBalancerArn", required=true)
-      private final Output<String> loadBalancerArn;
+    private Output<String> loadBalancerArn;
 
     public Output<String> loadBalancerArn() {
         return this.loadBalancerArn;
     }
 
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
     @Import(name="sslPolicy")
-      private final @Nullable Output<String> sslPolicy;
+    private @Nullable Output<String> sslPolicy;
 
-    public Output<String> sslPolicy() {
-        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
+    public Optional<Output<String>> sslPolicy() {
+        return Optional.ofNullable(this.sslPolicy);
     }
 
-    public ListenerArgs(
-        @Nullable Output<List<String>> alpnPolicy,
-        @Nullable Output<List<ListenerCertificateArgs>> certificates,
-        Output<List<ListenerActionArgs>> defaultActions,
-        Output<String> loadBalancerArn,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> protocol,
-        @Nullable Output<String> sslPolicy) {
-        this.alpnPolicy = alpnPolicy;
-        this.certificates = certificates;
-        this.defaultActions = Objects.requireNonNull(defaultActions, "expected parameter 'defaultActions' to be non-null");
-        this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn, "expected parameter 'loadBalancerArn' to be non-null");
-        this.port = port;
-        this.protocol = protocol;
-        this.sslPolicy = sslPolicy;
-    }
+    private ListenerArgs() {}
 
-    private ListenerArgs() {
-        this.alpnPolicy = Codegen.empty();
-        this.certificates = Codegen.empty();
-        this.defaultActions = Codegen.empty();
-        this.loadBalancerArn = Codegen.empty();
-        this.port = Codegen.empty();
-        this.protocol = Codegen.empty();
-        this.sslPolicy = Codegen.empty();
+    private ListenerArgs(ListenerArgs $) {
+        this.alpnPolicy = $.alpnPolicy;
+        this.certificates = $.certificates;
+        this.defaultActions = $.defaultActions;
+        this.loadBalancerArn = $.loadBalancerArn;
+        this.port = $.port;
+        this.protocol = $.protocol;
+        this.sslPolicy = $.sslPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListenerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> alpnPolicy;
-        private @Nullable Output<List<ListenerCertificateArgs>> certificates;
-        private Output<List<ListenerActionArgs>> defaultActions;
-        private Output<String> loadBalancerArn;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> protocol;
-        private @Nullable Output<String> sslPolicy;
+        private ListenerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListenerArgs();
         }
 
         public Builder(ListenerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alpnPolicy = defaults.alpnPolicy;
-    	      this.certificates = defaults.certificates;
-    	      this.defaultActions = defaults.defaultActions;
-    	      this.loadBalancerArn = defaults.loadBalancerArn;
-    	      this.port = defaults.port;
-    	      this.protocol = defaults.protocol;
-    	      this.sslPolicy = defaults.sslPolicy;
+            $ = new ListenerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alpnPolicy(@Nullable Output<List<String>> alpnPolicy) {
-            this.alpnPolicy = alpnPolicy;
+            $.alpnPolicy = alpnPolicy;
             return this;
         }
-        public Builder alpnPolicy(@Nullable List<String> alpnPolicy) {
-            this.alpnPolicy = Codegen.ofNullable(alpnPolicy);
-            return this;
+
+        public Builder alpnPolicy(List<String> alpnPolicy) {
+            return alpnPolicy(Output.of(alpnPolicy));
         }
+
         public Builder alpnPolicy(String... alpnPolicy) {
             return alpnPolicy(List.of(alpnPolicy));
         }
+
         public Builder certificates(@Nullable Output<List<ListenerCertificateArgs>> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
-        public Builder certificates(@Nullable List<ListenerCertificateArgs> certificates) {
-            this.certificates = Codegen.ofNullable(certificates);
-            return this;
+
+        public Builder certificates(List<ListenerCertificateArgs> certificates) {
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(ListenerCertificateArgs... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder defaultActions(Output<List<ListenerActionArgs>> defaultActions) {
-            this.defaultActions = Objects.requireNonNull(defaultActions);
+            $.defaultActions = defaultActions;
             return this;
         }
+
         public Builder defaultActions(List<ListenerActionArgs> defaultActions) {
-            this.defaultActions = Output.of(Objects.requireNonNull(defaultActions));
-            return this;
+            return defaultActions(Output.of(defaultActions));
         }
+
         public Builder defaultActions(ListenerActionArgs... defaultActions) {
             return defaultActions(List.of(defaultActions));
         }
+
         public Builder loadBalancerArn(Output<String> loadBalancerArn) {
-            this.loadBalancerArn = Objects.requireNonNull(loadBalancerArn);
+            $.loadBalancerArn = loadBalancerArn;
             return this;
         }
+
         public Builder loadBalancerArn(String loadBalancerArn) {
-            this.loadBalancerArn = Output.of(Objects.requireNonNull(loadBalancerArn));
-            return this;
+            return loadBalancerArn(Output.of(loadBalancerArn));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
         }
+
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
-            this.sslPolicy = sslPolicy;
+            $.sslPolicy = sslPolicy;
             return this;
         }
-        public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Codegen.ofNullable(sslPolicy);
-            return this;
-        }        public ListenerArgs build() {
-            return new ListenerArgs(alpnPolicy, certificates, defaultActions, loadBalancerArn, port, protocol, sslPolicy);
+
+        public Builder sslPolicy(String sslPolicy) {
+            return sslPolicy(Output.of(sslPolicy));
+        }
+
+        public ListenerArgs build() {
+            $.defaultActions = Objects.requireNonNull($.defaultActions, "expected parameter 'defaultActions' to be non-null");
+            $.loadBalancerArn = Objects.requireNonNull($.loadBalancerArn, "expected parameter 'loadBalancerArn' to be non-null");
+            return $;
         }
     }
+
 }

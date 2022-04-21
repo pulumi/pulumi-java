@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="headerName")
-      private final @Nullable Output<String> headerName;
+    private @Nullable Output<String> headerName;
 
-    public Output<String> headerName() {
-        return this.headerName == null ? Codegen.empty() : this.headerName;
+    public Optional<Output<String>> headerName() {
+        return Optional.ofNullable(this.headerName);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends com.pulumi.
      * 
      */
     @Import(name="headerValue")
-      private final @Nullable Output<String> headerValue;
+    private @Nullable Output<String> headerValue;
 
-    public Output<String> headerValue() {
-        return this.headerValue == null ? Codegen.empty() : this.headerValue;
+    public Optional<Output<String>> headerValue() {
+        return Optional.ofNullable(this.headerValue);
     }
 
-    public ApplicationGatewayHeaderConfigurationArgs(
-        @Nullable Output<String> headerName,
-        @Nullable Output<String> headerValue) {
-        this.headerName = headerName;
-        this.headerValue = headerValue;
-    }
+    private ApplicationGatewayHeaderConfigurationArgs() {}
 
-    private ApplicationGatewayHeaderConfigurationArgs() {
-        this.headerName = Codegen.empty();
-        this.headerValue = Codegen.empty();
+    private ApplicationGatewayHeaderConfigurationArgs(ApplicationGatewayHeaderConfigurationArgs $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewayHeaderConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> headerName;
-        private @Nullable Output<String> headerValue;
+        private ApplicationGatewayHeaderConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewayHeaderConfigurationArgs();
         }
 
         public Builder(ApplicationGatewayHeaderConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
+            $ = new ApplicationGatewayHeaderConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(@Nullable Output<String> headerName) {
-            this.headerName = headerName;
+            $.headerName = headerName;
             return this;
         }
-        public Builder headerName(@Nullable String headerName) {
-            this.headerName = Codegen.ofNullable(headerName);
-            return this;
+
+        public Builder headerName(String headerName) {
+            return headerName(Output.of(headerName));
         }
+
         public Builder headerValue(@Nullable Output<String> headerValue) {
-            this.headerValue = headerValue;
+            $.headerValue = headerValue;
             return this;
         }
-        public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Codegen.ofNullable(headerValue);
-            return this;
-        }        public ApplicationGatewayHeaderConfigurationArgs build() {
-            return new ApplicationGatewayHeaderConfigurationArgs(headerName, headerValue);
+
+        public Builder headerValue(String headerValue) {
+            return headerValue(Output.of(headerValue));
+        }
+
+        public ApplicationGatewayHeaderConfigurationArgs build() {
+            return $;
         }
     }
+
 }

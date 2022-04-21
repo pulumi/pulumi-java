@@ -23,10 +23,10 @@ public final class OrphanedUserInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseName")
-      private final @Nullable String databaseName;
+    private @Nullable String databaseName;
 
     public Optional<String> databaseName() {
-        return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
+        return Optional.ofNullable(this.databaseName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class OrphanedUserInfoResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public OrphanedUserInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String name) {
-        this.databaseName = databaseName;
-        this.name = name;
-    }
+    private OrphanedUserInfoResponse() {}
 
-    private OrphanedUserInfoResponse() {
-        this.databaseName = null;
-        this.name = null;
+    private OrphanedUserInfoResponse(OrphanedUserInfoResponse $) {
+        this.databaseName = $.databaseName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrphanedUserInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String databaseName;
-        private @Nullable String name;
+        private OrphanedUserInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrphanedUserInfoResponse();
         }
 
         public Builder(OrphanedUserInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.name = defaults.name;
+            $ = new OrphanedUserInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = databaseName;
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public OrphanedUserInfoResponse build() {
-            return new OrphanedUserInfoResponse(databaseName, name);
+        }
+
+        public OrphanedUserInfoResponse build() {
+            return $;
         }
     }
+
 }

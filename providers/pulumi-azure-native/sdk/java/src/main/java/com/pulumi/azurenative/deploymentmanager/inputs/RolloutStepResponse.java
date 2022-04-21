@@ -27,7 +27,7 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="messages", required=true)
-      private final List<MessageResponse> messages;
+    private List<MessageResponse> messages;
 
     public List<MessageResponse> messages() {
         return this.messages;
@@ -38,7 +38,7 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -49,7 +49,7 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operationInfo", required=true)
-      private final StepOperationInfoResponse operationInfo;
+    private StepOperationInfoResponse operationInfo;
 
     public StepOperationInfoResponse operationInfo() {
         return this.operationInfo;
@@ -60,7 +60,7 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceOperations", required=true)
-      private final List<ResourceOperationResponse> resourceOperations;
+    private List<ResourceOperationResponse> resourceOperations;
 
     public List<ResourceOperationResponse> resourceOperations() {
         return this.resourceOperations;
@@ -71,7 +71,7 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -82,97 +82,87 @@ public final class RolloutStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepGroup")
-      private final @Nullable String stepGroup;
+    private @Nullable String stepGroup;
 
     public Optional<String> stepGroup() {
-        return this.stepGroup == null ? Optional.empty() : Optional.ofNullable(this.stepGroup);
+        return Optional.ofNullable(this.stepGroup);
     }
 
-    public RolloutStepResponse(
-        List<MessageResponse> messages,
-        String name,
-        StepOperationInfoResponse operationInfo,
-        List<ResourceOperationResponse> resourceOperations,
-        String status,
-        @Nullable String stepGroup) {
-        this.messages = Objects.requireNonNull(messages, "expected parameter 'messages' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.operationInfo = Objects.requireNonNull(operationInfo, "expected parameter 'operationInfo' to be non-null");
-        this.resourceOperations = Objects.requireNonNull(resourceOperations, "expected parameter 'resourceOperations' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.stepGroup = stepGroup;
-    }
+    private RolloutStepResponse() {}
 
-    private RolloutStepResponse() {
-        this.messages = List.of();
-        this.name = null;
-        this.operationInfo = null;
-        this.resourceOperations = List.of();
-        this.status = null;
-        this.stepGroup = null;
+    private RolloutStepResponse(RolloutStepResponse $) {
+        this.messages = $.messages;
+        this.name = $.name;
+        this.operationInfo = $.operationInfo;
+        this.resourceOperations = $.resourceOperations;
+        this.status = $.status;
+        this.stepGroup = $.stepGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolloutStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MessageResponse> messages;
-        private String name;
-        private StepOperationInfoResponse operationInfo;
-        private List<ResourceOperationResponse> resourceOperations;
-        private String status;
-        private @Nullable String stepGroup;
+        private RolloutStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolloutStepResponse();
         }
 
         public Builder(RolloutStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messages = defaults.messages;
-    	      this.name = defaults.name;
-    	      this.operationInfo = defaults.operationInfo;
-    	      this.resourceOperations = defaults.resourceOperations;
-    	      this.status = defaults.status;
-    	      this.stepGroup = defaults.stepGroup;
+            $ = new RolloutStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messages(List<MessageResponse> messages) {
-            this.messages = Objects.requireNonNull(messages);
+            $.messages = messages;
             return this;
         }
+
         public Builder messages(MessageResponse... messages) {
             return messages(List.of(messages));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder operationInfo(StepOperationInfoResponse operationInfo) {
-            this.operationInfo = Objects.requireNonNull(operationInfo);
+            $.operationInfo = operationInfo;
             return this;
         }
+
         public Builder resourceOperations(List<ResourceOperationResponse> resourceOperations) {
-            this.resourceOperations = Objects.requireNonNull(resourceOperations);
+            $.resourceOperations = resourceOperations;
             return this;
         }
+
         public Builder resourceOperations(ResourceOperationResponse... resourceOperations) {
             return resourceOperations(List.of(resourceOperations));
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder stepGroup(@Nullable String stepGroup) {
-            this.stepGroup = stepGroup;
+            $.stepGroup = stepGroup;
             return this;
-        }        public RolloutStepResponse build() {
-            return new RolloutStepResponse(messages, name, operationInfo, resourceOperations, status, stepGroup);
+        }
+
+        public RolloutStepResponse build() {
+            $.messages = Objects.requireNonNull($.messages, "expected parameter 'messages' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.operationInfo = Objects.requireNonNull($.operationInfo, "expected parameter 'operationInfo' to be non-null");
+            $.resourceOperations = Objects.requireNonNull($.resourceOperations, "expected parameter 'resourceOperations' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

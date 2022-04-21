@@ -7,9 +7,9 @@ import com.pulumi.azurenative.costmanagement.enums.PivotTypeType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class PivotPropertiesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,PivotTypeType>> type;
+    private @Nullable Output<Either<String,PivotTypeType>> type;
 
-    public Output<Either<String,PivotTypeType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,PivotTypeType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public PivotPropertiesArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Either<String,PivotTypeType>> type) {
-        this.name = name;
-        this.type = type;
-    }
+    private PivotPropertiesArgs() {}
 
-    private PivotPropertiesArgs() {
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private PivotPropertiesArgs(PivotPropertiesArgs $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PivotPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Either<String,PivotTypeType>> type;
+        private PivotPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PivotPropertiesArgs();
         }
 
         public Builder(PivotPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new PivotPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder type(@Nullable Output<Either<String,PivotTypeType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,PivotTypeType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public PivotPropertiesArgs build() {
-            return new PivotPropertiesArgs(name, type);
+
+        public Builder type(Either<String,PivotTypeType> type) {
+            return type(Output.of(type));
+        }
+
+        public PivotPropertiesArgs build() {
+            return $;
         }
     }
+
 }

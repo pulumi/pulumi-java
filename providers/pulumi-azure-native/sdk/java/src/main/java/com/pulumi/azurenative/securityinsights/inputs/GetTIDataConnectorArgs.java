@@ -17,7 +17,7 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dataConnectorId", required=true)
-      private final String dataConnectorId;
+    private String dataConnectorId;
 
     public String dataConnectorId() {
         return this.dataConnectorId;
@@ -28,7 +28,7 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetTIDataConnectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetTIDataConnectorArgs(
-        String dataConnectorId,
-        String resourceGroupName,
-        String workspaceName) {
-        this.dataConnectorId = Objects.requireNonNull(dataConnectorId, "expected parameter 'dataConnectorId' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetTIDataConnectorArgs() {}
 
-    private GetTIDataConnectorArgs() {
-        this.dataConnectorId = null;
-        this.resourceGroupName = null;
-        this.workspaceName = null;
+    private GetTIDataConnectorArgs(GetTIDataConnectorArgs $) {
+        this.dataConnectorId = $.dataConnectorId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTIDataConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataConnectorId;
-        private String resourceGroupName;
-        private String workspaceName;
+        private GetTIDataConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTIDataConnectorArgs();
         }
 
         public Builder(GetTIDataConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataConnectorId = defaults.dataConnectorId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetTIDataConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataConnectorId(String dataConnectorId) {
-            this.dataConnectorId = Objects.requireNonNull(dataConnectorId);
+            $.dataConnectorId = dataConnectorId;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetTIDataConnectorArgs build() {
-            return new GetTIDataConnectorArgs(dataConnectorId, resourceGroupName, workspaceName);
+        }
+
+        public GetTIDataConnectorArgs build() {
+            $.dataConnectorId = Objects.requireNonNull($.dataConnectorId, "expected parameter 'dataConnectorId' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

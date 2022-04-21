@@ -18,48 +18,49 @@ public final class AllowedConfigListResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="allowedConfigValues", required=true)
-      private final List<ReusableConfigWrapperResponse> allowedConfigValues;
+    private List<ReusableConfigWrapperResponse> allowedConfigValues;
 
     public List<ReusableConfigWrapperResponse> allowedConfigValues() {
         return this.allowedConfigValues;
     }
 
-    public AllowedConfigListResponse(List<ReusableConfigWrapperResponse> allowedConfigValues) {
-        this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues, "expected parameter 'allowedConfigValues' to be non-null");
-    }
+    private AllowedConfigListResponse() {}
 
-    private AllowedConfigListResponse() {
-        this.allowedConfigValues = List.of();
+    private AllowedConfigListResponse(AllowedConfigListResponse $) {
+        this.allowedConfigValues = $.allowedConfigValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllowedConfigListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ReusableConfigWrapperResponse> allowedConfigValues;
+        private AllowedConfigListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllowedConfigListResponse();
         }
 
         public Builder(AllowedConfigListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedConfigValues = defaults.allowedConfigValues;
+            $ = new AllowedConfigListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
-            this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
+            $.allowedConfigValues = allowedConfigValues;
             return this;
         }
+
         public Builder allowedConfigValues(ReusableConfigWrapperResponse... allowedConfigValues) {
             return allowedConfigValues(List.of(allowedConfigValues));
-        }        public AllowedConfigListResponse build() {
-            return new AllowedConfigListResponse(allowedConfigValues);
+        }
+
+        public AllowedConfigListResponse build() {
+            $.allowedConfigValues = Objects.requireNonNull($.allowedConfigValues, "expected parameter 'allowedConfigValues' to be non-null");
+            return $;
         }
     }
+
 }

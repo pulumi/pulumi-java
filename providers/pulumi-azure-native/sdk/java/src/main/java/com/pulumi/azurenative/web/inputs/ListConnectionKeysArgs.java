@@ -20,7 +20,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="connectionName", required=true)
-      private final String connectionName;
+    private String connectionName;
 
     public String connectionName() {
         return this.connectionName;
@@ -31,10 +31,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -86,10 +86,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -108,118 +108,94 @@ public final class ListConnectionKeysArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="validityTimeSpan")
-      private final @Nullable String validityTimeSpan;
+    private @Nullable String validityTimeSpan;
 
     public Optional<String> validityTimeSpan() {
-        return this.validityTimeSpan == null ? Optional.empty() : Optional.ofNullable(this.validityTimeSpan);
+        return Optional.ofNullable(this.validityTimeSpan);
     }
 
-    public ListConnectionKeysArgs(
-        String connectionName,
-        @Nullable String id,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String name,
-        String resourceGroupName,
-        @Nullable Map<String,String> tags,
-        @Nullable String type,
-        @Nullable String validityTimeSpan) {
-        this.connectionName = Objects.requireNonNull(connectionName, "expected parameter 'connectionName' to be non-null");
-        this.id = id;
-        this.kind = kind;
-        this.location = location;
-        this.name = name;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.type = type;
-        this.validityTimeSpan = validityTimeSpan;
-    }
+    private ListConnectionKeysArgs() {}
 
-    private ListConnectionKeysArgs() {
-        this.connectionName = null;
-        this.id = null;
-        this.kind = null;
-        this.location = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.tags = Map.of();
-        this.type = null;
-        this.validityTimeSpan = null;
+    private ListConnectionKeysArgs(ListConnectionKeysArgs $) {
+        this.connectionName = $.connectionName;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.type = $.type;
+        this.validityTimeSpan = $.validityTimeSpan;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListConnectionKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionName;
-        private @Nullable String id;
-        private @Nullable String kind;
-        private @Nullable String location;
-        private @Nullable String name;
-        private String resourceGroupName;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String type;
-        private @Nullable String validityTimeSpan;
+        private ListConnectionKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListConnectionKeysArgs();
         }
 
         public Builder(ListConnectionKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionName = defaults.connectionName;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
-    	      this.validityTimeSpan = defaults.validityTimeSpan;
+            $ = new ListConnectionKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionName(String connectionName) {
-            this.connectionName = Objects.requireNonNull(connectionName);
+            $.connectionName = connectionName;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder validityTimeSpan(@Nullable String validityTimeSpan) {
-            this.validityTimeSpan = validityTimeSpan;
+            $.validityTimeSpan = validityTimeSpan;
             return this;
-        }        public ListConnectionKeysArgs build() {
-            return new ListConnectionKeysArgs(connectionName, id, kind, location, name, resourceGroupName, tags, type, validityTimeSpan);
+        }
+
+        public ListConnectionKeysArgs build() {
+            $.connectionName = Objects.requireNonNull($.connectionName, "expected parameter 'connectionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

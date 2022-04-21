@@ -24,48 +24,48 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs extends 
      * 
      */
     @Import(name="publicIPs")
-      private final @Nullable List<ResourceReferenceResponse> publicIPs;
+    private @Nullable List<ResourceReferenceResponse> publicIPs;
 
-    public List<ResourceReferenceResponse> publicIPs() {
-        return this.publicIPs == null ? List.of() : this.publicIPs;
+    public Optional<List<ResourceReferenceResponse>> publicIPs() {
+        return Optional.ofNullable(this.publicIPs);
     }
 
-    public ManagedClusterLoadBalancerProfileResponseOutboundIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
-        this.publicIPs = publicIPs;
-    }
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPs() {}
 
-    private ManagedClusterLoadBalancerProfileResponseOutboundIPs() {
-        this.publicIPs = List.of();
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPs(ManagedClusterLoadBalancerProfileResponseOutboundIPs $) {
+        this.publicIPs = $.publicIPs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterLoadBalancerProfileResponseOutboundIPs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ResourceReferenceResponse> publicIPs;
+        private ManagedClusterLoadBalancerProfileResponseOutboundIPs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterLoadBalancerProfileResponseOutboundIPs();
         }
 
         public Builder(ManagedClusterLoadBalancerProfileResponseOutboundIPs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicIPs = defaults.publicIPs;
+            $ = new ManagedClusterLoadBalancerProfileResponseOutboundIPs(Objects.requireNonNull(defaults));
         }
 
         public Builder publicIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
-            this.publicIPs = publicIPs;
+            $.publicIPs = publicIPs;
             return this;
         }
+
         public Builder publicIPs(ResourceReferenceResponse... publicIPs) {
             return publicIPs(List.of(publicIPs));
-        }        public ManagedClusterLoadBalancerProfileResponseOutboundIPs build() {
-            return new ManagedClusterLoadBalancerProfileResponseOutboundIPs(publicIPs);
+        }
+
+        public ManagedClusterLoadBalancerProfileResponseOutboundIPs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointScopeItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="exclude")
-      private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
+    private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
-    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude() {
-        return this.exclude == null ? Codegen.empty() : this.exclude;
+    public Optional<Output<List<ConnectionMonitorEndpointScopeItemArgs>>> exclude() {
+        return Optional.ofNullable(this.exclude);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="include")
-      private final @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
+    private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
-    public Output<List<ConnectionMonitorEndpointScopeItemArgs>> include() {
-        return this.include == null ? Codegen.empty() : this.include;
+    public Optional<Output<List<ConnectionMonitorEndpointScopeItemArgs>>> include() {
+        return Optional.ofNullable(this.include);
     }
 
-    public ConnectionMonitorEndpointScopeArgs(
-        @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude,
-        @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
-        this.exclude = exclude;
-        this.include = include;
-    }
+    private ConnectionMonitorEndpointScopeArgs() {}
 
-    private ConnectionMonitorEndpointScopeArgs() {
-        this.exclude = Codegen.empty();
-        this.include = Codegen.empty();
+    private ConnectionMonitorEndpointScopeArgs(ConnectionMonitorEndpointScopeArgs $) {
+        this.exclude = $.exclude;
+        this.include = $.include;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorEndpointScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
-        private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
+        private ConnectionMonitorEndpointScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorEndpointScopeArgs();
         }
 
         public Builder(ConnectionMonitorEndpointScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclude = defaults.exclude;
-    	      this.include = defaults.include;
+            $ = new ConnectionMonitorEndpointScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exclude(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude) {
-            this.exclude = exclude;
+            $.exclude = exclude;
             return this;
         }
-        public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
-            this.exclude = Codegen.ofNullable(exclude);
-            return this;
+
+        public Builder exclude(List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
+            return exclude(Output.of(exclude));
         }
+
         public Builder exclude(ConnectionMonitorEndpointScopeItemArgs... exclude) {
             return exclude(List.of(exclude));
         }
+
         public Builder include(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
-            this.include = include;
+            $.include = include;
             return this;
         }
-        public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemArgs> include) {
-            this.include = Codegen.ofNullable(include);
-            return this;
+
+        public Builder include(List<ConnectionMonitorEndpointScopeItemArgs> include) {
+            return include(Output.of(include));
         }
+
         public Builder include(ConnectionMonitorEndpointScopeItemArgs... include) {
             return include(List.of(include));
-        }        public ConnectionMonitorEndpointScopeArgs build() {
-            return new ConnectionMonitorEndpointScopeArgs(exclude, include);
+        }
+
+        public ConnectionMonitorEndpointScopeArgs build() {
+            return $;
         }
     }
+
 }

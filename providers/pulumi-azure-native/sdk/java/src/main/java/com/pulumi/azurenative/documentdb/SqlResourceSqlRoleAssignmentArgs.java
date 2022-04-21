@@ -5,9 +5,9 @@ package com.pulumi.azurenative.documentdb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="accountName", required=true)
-      private final Output<String> accountName;
+    private Output<String> accountName;
 
     public Output<String> accountName() {
         return this.accountName;
@@ -31,10 +31,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="principalId")
-      private final @Nullable Output<String> principalId;
+    private @Nullable Output<String> principalId;
 
-    public Output<String> principalId() {
-        return this.principalId == null ? Codegen.empty() : this.principalId;
+    public Optional<Output<String>> principalId() {
+        return Optional.ofNullable(this.principalId);
     }
 
     /**
@@ -42,7 +42,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -53,10 +53,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="roleAssignmentId")
-      private final @Nullable Output<String> roleAssignmentId;
+    private @Nullable Output<String> roleAssignmentId;
 
-    public Output<String> roleAssignmentId() {
-        return this.roleAssignmentId == null ? Codegen.empty() : this.roleAssignmentId;
+    public Optional<Output<String>> roleAssignmentId() {
+        return Optional.ofNullable(this.roleAssignmentId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="roleDefinitionId")
-      private final @Nullable Output<String> roleDefinitionId;
+    private @Nullable Output<String> roleDefinitionId;
 
-    public Output<String> roleDefinitionId() {
-        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
+    public Optional<Output<String>> roleDefinitionId() {
+        return Optional.ofNullable(this.roleDefinitionId);
     }
 
     /**
@@ -75,115 +75,100 @@ public final class SqlResourceSqlRoleAssignmentArgs extends com.pulumi.resources
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public SqlResourceSqlRoleAssignmentArgs(
-        Output<String> accountName,
-        @Nullable Output<String> principalId,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> roleAssignmentId,
-        @Nullable Output<String> roleDefinitionId,
-        @Nullable Output<String> scope) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.principalId = principalId;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.roleAssignmentId = roleAssignmentId;
-        this.roleDefinitionId = roleDefinitionId;
-        this.scope = scope;
-    }
+    private SqlResourceSqlRoleAssignmentArgs() {}
 
-    private SqlResourceSqlRoleAssignmentArgs() {
-        this.accountName = Codegen.empty();
-        this.principalId = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.roleAssignmentId = Codegen.empty();
-        this.roleDefinitionId = Codegen.empty();
-        this.scope = Codegen.empty();
+    private SqlResourceSqlRoleAssignmentArgs(SqlResourceSqlRoleAssignmentArgs $) {
+        this.accountName = $.accountName;
+        this.principalId = $.principalId;
+        this.resourceGroupName = $.resourceGroupName;
+        this.roleAssignmentId = $.roleAssignmentId;
+        this.roleDefinitionId = $.roleDefinitionId;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlResourceSqlRoleAssignmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountName;
-        private @Nullable Output<String> principalId;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> roleAssignmentId;
-        private @Nullable Output<String> roleDefinitionId;
-        private @Nullable Output<String> scope;
+        private SqlResourceSqlRoleAssignmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlResourceSqlRoleAssignmentArgs();
         }
 
         public Builder(SqlResourceSqlRoleAssignmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.principalId = defaults.principalId;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.roleAssignmentId = defaults.roleAssignmentId;
-    	      this.roleDefinitionId = defaults.roleDefinitionId;
-    	      this.scope = defaults.scope;
+            $ = new SqlResourceSqlRoleAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(Output<String> accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder accountName(String accountName) {
-            this.accountName = Output.of(Objects.requireNonNull(accountName));
-            return this;
+            return accountName(Output.of(accountName));
         }
+
         public Builder principalId(@Nullable Output<String> principalId) {
-            this.principalId = principalId;
+            $.principalId = principalId;
             return this;
         }
-        public Builder principalId(@Nullable String principalId) {
-            this.principalId = Codegen.ofNullable(principalId);
-            return this;
+
+        public Builder principalId(String principalId) {
+            return principalId(Output.of(principalId));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder roleAssignmentId(@Nullable Output<String> roleAssignmentId) {
-            this.roleAssignmentId = roleAssignmentId;
+            $.roleAssignmentId = roleAssignmentId;
             return this;
         }
-        public Builder roleAssignmentId(@Nullable String roleAssignmentId) {
-            this.roleAssignmentId = Codegen.ofNullable(roleAssignmentId);
-            return this;
+
+        public Builder roleAssignmentId(String roleAssignmentId) {
+            return roleAssignmentId(Output.of(roleAssignmentId));
         }
+
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
-            this.roleDefinitionId = roleDefinitionId;
+            $.roleDefinitionId = roleDefinitionId;
             return this;
         }
-        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
-            return this;
+
+        public Builder roleDefinitionId(String roleDefinitionId) {
+            return roleDefinitionId(Output.of(roleDefinitionId));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public SqlResourceSqlRoleAssignmentArgs build() {
-            return new SqlResourceSqlRoleAssignmentArgs(accountName, principalId, resourceGroupName, roleAssignmentId, roleDefinitionId, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public SqlResourceSqlRoleAssignmentArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

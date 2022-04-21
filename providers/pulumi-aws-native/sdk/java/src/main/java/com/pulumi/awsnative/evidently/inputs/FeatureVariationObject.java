@@ -17,110 +17,96 @@ public final class FeatureVariationObject extends com.pulumi.resources.InvokeArg
     public static final FeatureVariationObject Empty = new FeatureVariationObject();
 
     @Import(name="booleanValue")
-      private final @Nullable Boolean booleanValue;
+    private @Nullable Boolean booleanValue;
 
     public Optional<Boolean> booleanValue() {
-        return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
+        return Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Double doubleValue;
+    private @Nullable Double doubleValue;
 
     public Optional<Double> doubleValue() {
-        return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="longValue")
-      private final @Nullable Double longValue;
+    private @Nullable Double longValue;
 
     public Optional<Double> longValue() {
-        return this.longValue == null ? Optional.empty() : Optional.ofNullable(this.longValue);
+        return Optional.ofNullable(this.longValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable String stringValue;
+    private @Nullable String stringValue;
 
     public Optional<String> stringValue() {
-        return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
+        return Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="variationName")
-      private final @Nullable String variationName;
+    private @Nullable String variationName;
 
     public Optional<String> variationName() {
-        return this.variationName == null ? Optional.empty() : Optional.ofNullable(this.variationName);
+        return Optional.ofNullable(this.variationName);
     }
 
-    public FeatureVariationObject(
-        @Nullable Boolean booleanValue,
-        @Nullable Double doubleValue,
-        @Nullable Double longValue,
-        @Nullable String stringValue,
-        @Nullable String variationName) {
-        this.booleanValue = booleanValue;
-        this.doubleValue = doubleValue;
-        this.longValue = longValue;
-        this.stringValue = stringValue;
-        this.variationName = variationName;
-    }
+    private FeatureVariationObject() {}
 
-    private FeatureVariationObject() {
-        this.booleanValue = null;
-        this.doubleValue = null;
-        this.longValue = null;
-        this.stringValue = null;
-        this.variationName = null;
+    private FeatureVariationObject(FeatureVariationObject $) {
+        this.booleanValue = $.booleanValue;
+        this.doubleValue = $.doubleValue;
+        this.longValue = $.longValue;
+        this.stringValue = $.stringValue;
+        this.variationName = $.variationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureVariationObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean booleanValue;
-        private @Nullable Double doubleValue;
-        private @Nullable Double longValue;
-        private @Nullable String stringValue;
-        private @Nullable String variationName;
+        private FeatureVariationObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureVariationObject();
         }
 
         public Builder(FeatureVariationObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.longValue = defaults.longValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.variationName = defaults.variationName;
+            $ = new FeatureVariationObject(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
+
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
+
         public Builder longValue(@Nullable Double longValue) {
-            this.longValue = longValue;
+            $.longValue = longValue;
             return this;
         }
+
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
+
         public Builder variationName(@Nullable String variationName) {
-            this.variationName = variationName;
+            $.variationName = variationName;
             return this;
-        }        public FeatureVariationObject build() {
-            return new FeatureVariationObject(booleanValue, doubleValue, longValue, stringValue, variationName);
+        }
+
+        public FeatureVariationObject build() {
+            return $;
         }
     }
+
 }

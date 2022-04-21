@@ -17,7 +17,7 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="databaseName", required=true)
-      private final String databaseName;
+    private String databaseName;
 
     public String databaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="serverName", required=true)
-      private final String serverName;
+    private String serverName;
 
     public String serverName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="workloadClassifierName", required=true)
-      private final String workloadClassifierName;
+    private String workloadClassifierName;
 
     public String workloadClassifierName() {
         return this.workloadClassifierName;
@@ -61,82 +61,73 @@ public final class GetWorkloadClassifierArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="workloadGroupName", required=true)
-      private final String workloadGroupName;
+    private String workloadGroupName;
 
     public String workloadGroupName() {
         return this.workloadGroupName;
     }
 
-    public GetWorkloadClassifierArgs(
-        String databaseName,
-        String resourceGroupName,
-        String serverName,
-        String workloadClassifierName,
-        String workloadGroupName) {
-        this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
-        this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName, "expected parameter 'workloadClassifierName' to be non-null");
-        this.workloadGroupName = Objects.requireNonNull(workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
-    }
+    private GetWorkloadClassifierArgs() {}
 
-    private GetWorkloadClassifierArgs() {
-        this.databaseName = null;
-        this.resourceGroupName = null;
-        this.serverName = null;
-        this.workloadClassifierName = null;
-        this.workloadGroupName = null;
+    private GetWorkloadClassifierArgs(GetWorkloadClassifierArgs $) {
+        this.databaseName = $.databaseName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.serverName = $.serverName;
+        this.workloadClassifierName = $.workloadClassifierName;
+        this.workloadGroupName = $.workloadGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWorkloadClassifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseName;
-        private String resourceGroupName;
-        private String serverName;
-        private String workloadClassifierName;
-        private String workloadGroupName;
+        private GetWorkloadClassifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWorkloadClassifierArgs();
         }
 
         public Builder(GetWorkloadClassifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseName = defaults.databaseName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.serverName = defaults.serverName;
-    	      this.workloadClassifierName = defaults.workloadClassifierName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
+            $ = new GetWorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseName(String databaseName) {
-            this.databaseName = Objects.requireNonNull(databaseName);
+            $.databaseName = databaseName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder serverName(String serverName) {
-            this.serverName = Objects.requireNonNull(serverName);
+            $.serverName = serverName;
             return this;
         }
+
         public Builder workloadClassifierName(String workloadClassifierName) {
-            this.workloadClassifierName = Objects.requireNonNull(workloadClassifierName);
+            $.workloadClassifierName = workloadClassifierName;
             return this;
         }
+
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
+            $.workloadGroupName = workloadGroupName;
             return this;
-        }        public GetWorkloadClassifierArgs build() {
-            return new GetWorkloadClassifierArgs(databaseName, resourceGroupName, serverName, workloadClassifierName, workloadGroupName);
+        }
+
+        public GetWorkloadClassifierArgs build() {
+            $.databaseName = Objects.requireNonNull($.databaseName, "expected parameter 'databaseName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.serverName = Objects.requireNonNull($.serverName, "expected parameter 'serverName' to be non-null");
+            $.workloadClassifierName = Objects.requireNonNull($.workloadClassifierName, "expected parameter 'workloadClassifierName' to be non-null");
+            $.workloadGroupName = Objects.requireNonNull($.workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
+            return $;
         }
     }
+
 }

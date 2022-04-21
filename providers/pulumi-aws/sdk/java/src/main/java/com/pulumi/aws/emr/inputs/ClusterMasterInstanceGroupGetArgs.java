@@ -6,11 +6,11 @@ package com.pulumi.aws.emr.inputs;
 import com.pulumi.aws.emr.inputs.ClusterMasterInstanceGroupEbsConfigGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="bidPrice")
-      private final @Nullable Output<String> bidPrice;
+    private @Nullable Output<String> bidPrice;
 
-    public Output<String> bidPrice() {
-        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
+    public Optional<Output<String>> bidPrice() {
+        return Optional.ofNullable(this.bidPrice);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ebsConfigs")
-      private final @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs;
+    private @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
-    public Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs() {
-        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
+    public Optional<Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>>> ebsConfigs() {
+        return Optional.ofNullable(this.ebsConfigs);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Output<Integer> instanceCount;
+    private @Nullable Output<Integer> instanceCount;
 
-    public Output<Integer> instanceCount() {
-        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
+    public Optional<Output<Integer>> instanceCount() {
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -78,118 +78,103 @@ public final class ClusterMasterInstanceGroupGetArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ClusterMasterInstanceGroupGetArgs(
-        @Nullable Output<String> bidPrice,
-        @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs,
-        @Nullable Output<String> id,
-        @Nullable Output<Integer> instanceCount,
-        Output<String> instanceType,
-        @Nullable Output<String> name) {
-        this.bidPrice = bidPrice;
-        this.ebsConfigs = ebsConfigs;
-        this.id = id;
-        this.instanceCount = instanceCount;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.name = name;
-    }
+    private ClusterMasterInstanceGroupGetArgs() {}
 
-    private ClusterMasterInstanceGroupGetArgs() {
-        this.bidPrice = Codegen.empty();
-        this.ebsConfigs = Codegen.empty();
-        this.id = Codegen.empty();
-        this.instanceCount = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClusterMasterInstanceGroupGetArgs(ClusterMasterInstanceGroupGetArgs $) {
+        this.bidPrice = $.bidPrice;
+        this.ebsConfigs = $.ebsConfigs;
+        this.id = $.id;
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMasterInstanceGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bidPrice;
-        private @Nullable Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Integer> instanceCount;
-        private Output<String> instanceType;
-        private @Nullable Output<String> name;
+        private ClusterMasterInstanceGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMasterInstanceGroupGetArgs();
         }
 
         public Builder(ClusterMasterInstanceGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bidPrice = defaults.bidPrice;
-    	      this.ebsConfigs = defaults.ebsConfigs;
-    	      this.id = defaults.id;
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.name = defaults.name;
+            $ = new ClusterMasterInstanceGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
-            this.bidPrice = bidPrice;
+            $.bidPrice = bidPrice;
             return this;
         }
-        public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Codegen.ofNullable(bidPrice);
-            return this;
+
+        public Builder bidPrice(String bidPrice) {
+            return bidPrice(Output.of(bidPrice));
         }
+
         public Builder ebsConfigs(@Nullable Output<List<ClusterMasterInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
-            this.ebsConfigs = ebsConfigs;
+            $.ebsConfigs = ebsConfigs;
             return this;
         }
-        public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
-            return this;
+
+        public Builder ebsConfigs(List<ClusterMasterInstanceGroupEbsConfigGetArgs> ebsConfigs) {
+            return ebsConfigs(Output.of(ebsConfigs));
         }
+
         public Builder ebsConfigs(ClusterMasterInstanceGroupEbsConfigGetArgs... ebsConfigs) {
             return ebsConfigs(List.of(ebsConfigs));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
-        public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Codegen.ofNullable(instanceCount);
-            return this;
+
+        public Builder instanceCount(Integer instanceCount) {
+            return instanceCount(Output.of(instanceCount));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ClusterMasterInstanceGroupGetArgs build() {
-            return new ClusterMasterInstanceGroupGetArgs(bidPrice, ebsConfigs, id, instanceCount, instanceType, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ClusterMasterInstanceGroupGetArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            return $;
         }
     }
+
 }

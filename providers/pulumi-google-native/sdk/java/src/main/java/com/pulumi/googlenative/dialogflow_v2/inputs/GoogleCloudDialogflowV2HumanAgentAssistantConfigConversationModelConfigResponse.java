@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
      * 
      */
     @Import(name="model", required=true)
-      private final String model;
+    private String model;
 
     public String model() {
         return this.model;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse(String model) {
-        this.model = Objects.requireNonNull(model, "expected parameter 'model' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse() {
-        this.model = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse $) {
+        this.model = $.model;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String model;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder model(String model) {
-            this.model = Objects.requireNonNull(model);
+            $.model = model;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse(model);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigResponse build() {
+            $.model = Objects.requireNonNull($.model, "expected parameter 'model' to be non-null");
+            return $;
         }
     }
+
 }

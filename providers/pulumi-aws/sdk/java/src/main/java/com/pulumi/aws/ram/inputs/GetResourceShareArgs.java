@@ -22,10 +22,10 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetResourceShareFilter> filters;
+    private @Nullable List<GetResourceShareFilter> filters;
 
-    public List<GetResourceShareFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetResourceShareFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,7 +44,7 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceOwner", required=true)
-      private final String resourceOwner;
+    private String resourceOwner;
 
     public String resourceOwner() {
         return this.resourceOwner;
@@ -55,76 +55,68 @@ public final class GetResourceShareArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetResourceShareArgs(
-        @Nullable List<GetResourceShareFilter> filters,
-        String name,
-        String resourceOwner,
-        @Nullable Map<String,String> tags) {
-        this.filters = filters;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceOwner = Objects.requireNonNull(resourceOwner, "expected parameter 'resourceOwner' to be non-null");
-        this.tags = tags;
-    }
+    private GetResourceShareArgs() {}
 
-    private GetResourceShareArgs() {
-        this.filters = List.of();
-        this.name = null;
-        this.resourceOwner = null;
-        this.tags = Map.of();
+    private GetResourceShareArgs(GetResourceShareArgs $) {
+        this.filters = $.filters;
+        this.name = $.name;
+        this.resourceOwner = $.resourceOwner;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResourceShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetResourceShareFilter> filters;
-        private String name;
-        private String resourceOwner;
-        private @Nullable Map<String,String> tags;
+        private GetResourceShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResourceShareArgs();
         }
 
         public Builder(GetResourceShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.name = defaults.name;
-    	      this.resourceOwner = defaults.resourceOwner;
-    	      this.tags = defaults.tags;
+            $ = new GetResourceShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetResourceShareFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceOwner(String resourceOwner) {
-            this.resourceOwner = Objects.requireNonNull(resourceOwner);
+            $.resourceOwner = resourceOwner;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetResourceShareArgs build() {
-            return new GetResourceShareArgs(filters, name, resourceOwner, tags);
+        }
+
+        public GetResourceShareArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceOwner = Objects.requireNonNull($.resourceOwner, "expected parameter 'resourceOwner' to be non-null");
+            return $;
         }
     }
+
 }

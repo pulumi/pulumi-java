@@ -20,45 +20,44 @@ public final class GetDefaultTagsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetDefaultTagsArgs(@Nullable Map<String,String> tags) {
-        this.tags = tags;
-    }
+    private GetDefaultTagsArgs() {}
 
-    private GetDefaultTagsArgs() {
-        this.tags = Map.of();
+    private GetDefaultTagsArgs(GetDefaultTagsArgs $) {
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDefaultTagsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> tags;
+        private GetDefaultTagsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDefaultTagsArgs();
         }
 
         public Builder(GetDefaultTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tags = defaults.tags;
+            $ = new GetDefaultTagsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetDefaultTagsArgs build() {
-            return new GetDefaultTagsArgs(tags);
+        }
+
+        public GetDefaultTagsArgs build() {
+            return $;
         }
     }
+
 }

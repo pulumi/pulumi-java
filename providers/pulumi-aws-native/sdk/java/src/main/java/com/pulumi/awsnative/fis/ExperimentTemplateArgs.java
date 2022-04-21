@@ -8,11 +8,11 @@ import com.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import com.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,153 +21,142 @@ public final class ExperimentTemplateArgs extends com.pulumi.resources.ResourceA
     public static final ExperimentTemplateArgs Empty = new ExperimentTemplateArgs();
 
     @Import(name="actions")
-      private final @Nullable Output<ExperimentTemplateActionMapArgs> actions;
+    private @Nullable Output<ExperimentTemplateActionMapArgs> actions;
 
-    public Output<ExperimentTemplateActionMapArgs> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<ExperimentTemplateActionMapArgs>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     @Import(name="description", required=true)
-      private final Output<String> description;
+    private Output<String> description;
 
     public Output<String> description() {
         return this.description;
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
     @Import(name="stopConditions", required=true)
-      private final Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
+    private Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
 
     public Output<List<ExperimentTemplateStopConditionArgs>> stopConditions() {
         return this.stopConditions;
     }
 
     @Import(name="tags", required=true)
-      private final Output<Object> tags;
+    private Output<Object> tags;
 
     public Output<Object> tags() {
         return this.tags;
     }
 
     @Import(name="targets", required=true)
-      private final Output<ExperimentTemplateTargetMapArgs> targets;
+    private Output<ExperimentTemplateTargetMapArgs> targets;
 
     public Output<ExperimentTemplateTargetMapArgs> targets() {
         return this.targets;
     }
 
-    public ExperimentTemplateArgs(
-        @Nullable Output<ExperimentTemplateActionMapArgs> actions,
-        Output<String> description,
-        Output<String> roleArn,
-        Output<List<ExperimentTemplateStopConditionArgs>> stopConditions,
-        Output<Object> tags,
-        Output<ExperimentTemplateTargetMapArgs> targets) {
-        this.actions = actions;
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.stopConditions = Objects.requireNonNull(stopConditions, "expected parameter 'stopConditions' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-    }
+    private ExperimentTemplateArgs() {}
 
-    private ExperimentTemplateArgs() {
-        this.actions = Codegen.empty();
-        this.description = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.stopConditions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.targets = Codegen.empty();
+    private ExperimentTemplateArgs(ExperimentTemplateArgs $) {
+        this.actions = $.actions;
+        this.description = $.description;
+        this.roleArn = $.roleArn;
+        this.stopConditions = $.stopConditions;
+        this.tags = $.tags;
+        this.targets = $.targets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ExperimentTemplateActionMapArgs> actions;
-        private Output<String> description;
-        private Output<String> roleArn;
-        private Output<List<ExperimentTemplateStopConditionArgs>> stopConditions;
-        private Output<Object> tags;
-        private Output<ExperimentTemplateTargetMapArgs> targets;
+        private ExperimentTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentTemplateArgs();
         }
 
         public Builder(ExperimentTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.description = defaults.description;
-    	      this.roleArn = defaults.roleArn;
-    	      this.stopConditions = defaults.stopConditions;
-    	      this.tags = defaults.tags;
-    	      this.targets = defaults.targets;
+            $ = new ExperimentTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<ExperimentTemplateActionMapArgs> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable ExperimentTemplateActionMapArgs actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(ExperimentTemplateActionMapArgs actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder description(Output<String> description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Output.of(Objects.requireNonNull(description));
-            return this;
+            return description(Output.of(description));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder stopConditions(Output<List<ExperimentTemplateStopConditionArgs>> stopConditions) {
-            this.stopConditions = Objects.requireNonNull(stopConditions);
+            $.stopConditions = stopConditions;
             return this;
         }
+
         public Builder stopConditions(List<ExperimentTemplateStopConditionArgs> stopConditions) {
-            this.stopConditions = Output.of(Objects.requireNonNull(stopConditions));
-            return this;
+            return stopConditions(Output.of(stopConditions));
         }
+
         public Builder stopConditions(ExperimentTemplateStopConditionArgs... stopConditions) {
             return stopConditions(List.of(stopConditions));
         }
+
         public Builder tags(Output<Object> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(Object tags) {
-            this.tags = Output.of(Objects.requireNonNull(tags));
-            return this;
+            return tags(Output.of(tags));
         }
+
         public Builder targets(Output<ExperimentTemplateTargetMapArgs> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(ExperimentTemplateTargetMapArgs targets) {
-            this.targets = Output.of(Objects.requireNonNull(targets));
-            return this;
-        }        public ExperimentTemplateArgs build() {
-            return new ExperimentTemplateArgs(actions, description, roleArn, stopConditions, tags, targets);
+            return targets(Output.of(targets));
+        }
+
+        public ExperimentTemplateArgs build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.stopConditions = Objects.requireNonNull($.stopConditions, "expected parameter 'stopConditions' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            return $;
         }
     }
+
 }

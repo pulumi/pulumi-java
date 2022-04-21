@@ -5,10 +5,10 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxSurgeFixed")
-      private final @Nullable Output<Integer> maxSurgeFixed;
+    private @Nullable Output<Integer> maxSurgeFixed;
 
-    public Output<Integer> maxSurgeFixed() {
-        return this.maxSurgeFixed == null ? Codegen.empty() : this.maxSurgeFixed;
+    public Optional<Output<Integer>> maxSurgeFixed() {
+        return Optional.ofNullable(this.maxSurgeFixed);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxSurgePercent")
-      private final @Nullable Output<Integer> maxSurgePercent;
+    private @Nullable Output<Integer> maxSurgePercent;
 
-    public Output<Integer> maxSurgePercent() {
-        return this.maxSurgePercent == null ? Codegen.empty() : this.maxSurgePercent;
+    public Optional<Output<Integer>> maxSurgePercent() {
+        return Optional.ofNullable(this.maxSurgePercent);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxUnavailableFixed")
-      private final @Nullable Output<Integer> maxUnavailableFixed;
+    private @Nullable Output<Integer> maxUnavailableFixed;
 
-    public Output<Integer> maxUnavailableFixed() {
-        return this.maxUnavailableFixed == null ? Codegen.empty() : this.maxUnavailableFixed;
+    public Optional<Output<Integer>> maxUnavailableFixed() {
+        return Optional.ofNullable(this.maxUnavailableFixed);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="maxUnavailablePercent")
-      private final @Nullable Output<Integer> maxUnavailablePercent;
+    private @Nullable Output<Integer> maxUnavailablePercent;
 
-    public Output<Integer> maxUnavailablePercent() {
-        return this.maxUnavailablePercent == null ? Codegen.empty() : this.maxUnavailablePercent;
+    public Optional<Output<Integer>> maxUnavailablePercent() {
+        return Optional.ofNullable(this.maxUnavailablePercent);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minReadySec")
-      private final @Nullable Output<Integer> minReadySec;
+    private @Nullable Output<Integer> minReadySec;
 
-    public Output<Integer> minReadySec() {
-        return this.minReadySec == null ? Codegen.empty() : this.minReadySec;
+    public Optional<Output<Integer>> minReadySec() {
+        return Optional.ofNullable(this.minReadySec);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minimalAction", required=true)
-      private final Output<String> minimalAction;
+    private Output<String> minimalAction;
 
     public Output<String> minimalAction() {
         return this.minimalAction;
@@ -88,10 +88,10 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="replacementMethod")
-      private final @Nullable Output<String> replacementMethod;
+    private @Nullable Output<String> replacementMethod;
 
-    public Output<String> replacementMethod() {
-        return this.replacementMethod == null ? Codegen.empty() : this.replacementMethod;
+    public Optional<Output<String>> replacementMethod() {
+        return Optional.ofNullable(this.replacementMethod);
     }
 
     /**
@@ -99,141 +99,120 @@ public final class InstanceGroupManagerUpdatePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public InstanceGroupManagerUpdatePolicyArgs(
-        @Nullable Output<Integer> maxSurgeFixed,
-        @Nullable Output<Integer> maxSurgePercent,
-        @Nullable Output<Integer> maxUnavailableFixed,
-        @Nullable Output<Integer> maxUnavailablePercent,
-        @Nullable Output<Integer> minReadySec,
-        Output<String> minimalAction,
-        @Nullable Output<String> replacementMethod,
-        Output<String> type) {
-        this.maxSurgeFixed = maxSurgeFixed;
-        this.maxSurgePercent = maxSurgePercent;
-        this.maxUnavailableFixed = maxUnavailableFixed;
-        this.maxUnavailablePercent = maxUnavailablePercent;
-        this.minReadySec = minReadySec;
-        this.minimalAction = Objects.requireNonNull(minimalAction, "expected parameter 'minimalAction' to be non-null");
-        this.replacementMethod = replacementMethod;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceGroupManagerUpdatePolicyArgs() {}
 
-    private InstanceGroupManagerUpdatePolicyArgs() {
-        this.maxSurgeFixed = Codegen.empty();
-        this.maxSurgePercent = Codegen.empty();
-        this.maxUnavailableFixed = Codegen.empty();
-        this.maxUnavailablePercent = Codegen.empty();
-        this.minReadySec = Codegen.empty();
-        this.minimalAction = Codegen.empty();
-        this.replacementMethod = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceGroupManagerUpdatePolicyArgs(InstanceGroupManagerUpdatePolicyArgs $) {
+        this.maxSurgeFixed = $.maxSurgeFixed;
+        this.maxSurgePercent = $.maxSurgePercent;
+        this.maxUnavailableFixed = $.maxUnavailableFixed;
+        this.maxUnavailablePercent = $.maxUnavailablePercent;
+        this.minReadySec = $.minReadySec;
+        this.minimalAction = $.minimalAction;
+        this.replacementMethod = $.replacementMethod;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerUpdatePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxSurgeFixed;
-        private @Nullable Output<Integer> maxSurgePercent;
-        private @Nullable Output<Integer> maxUnavailableFixed;
-        private @Nullable Output<Integer> maxUnavailablePercent;
-        private @Nullable Output<Integer> minReadySec;
-        private Output<String> minimalAction;
-        private @Nullable Output<String> replacementMethod;
-        private Output<String> type;
+        private InstanceGroupManagerUpdatePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerUpdatePolicyArgs();
         }
 
         public Builder(InstanceGroupManagerUpdatePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurgeFixed = defaults.maxSurgeFixed;
-    	      this.maxSurgePercent = defaults.maxSurgePercent;
-    	      this.maxUnavailableFixed = defaults.maxUnavailableFixed;
-    	      this.maxUnavailablePercent = defaults.maxUnavailablePercent;
-    	      this.minReadySec = defaults.minReadySec;
-    	      this.minimalAction = defaults.minimalAction;
-    	      this.replacementMethod = defaults.replacementMethod;
-    	      this.type = defaults.type;
+            $ = new InstanceGroupManagerUpdatePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurgeFixed(@Nullable Output<Integer> maxSurgeFixed) {
-            this.maxSurgeFixed = maxSurgeFixed;
+            $.maxSurgeFixed = maxSurgeFixed;
             return this;
         }
-        public Builder maxSurgeFixed(@Nullable Integer maxSurgeFixed) {
-            this.maxSurgeFixed = Codegen.ofNullable(maxSurgeFixed);
-            return this;
+
+        public Builder maxSurgeFixed(Integer maxSurgeFixed) {
+            return maxSurgeFixed(Output.of(maxSurgeFixed));
         }
+
         public Builder maxSurgePercent(@Nullable Output<Integer> maxSurgePercent) {
-            this.maxSurgePercent = maxSurgePercent;
+            $.maxSurgePercent = maxSurgePercent;
             return this;
         }
-        public Builder maxSurgePercent(@Nullable Integer maxSurgePercent) {
-            this.maxSurgePercent = Codegen.ofNullable(maxSurgePercent);
-            return this;
+
+        public Builder maxSurgePercent(Integer maxSurgePercent) {
+            return maxSurgePercent(Output.of(maxSurgePercent));
         }
+
         public Builder maxUnavailableFixed(@Nullable Output<Integer> maxUnavailableFixed) {
-            this.maxUnavailableFixed = maxUnavailableFixed;
+            $.maxUnavailableFixed = maxUnavailableFixed;
             return this;
         }
-        public Builder maxUnavailableFixed(@Nullable Integer maxUnavailableFixed) {
-            this.maxUnavailableFixed = Codegen.ofNullable(maxUnavailableFixed);
-            return this;
+
+        public Builder maxUnavailableFixed(Integer maxUnavailableFixed) {
+            return maxUnavailableFixed(Output.of(maxUnavailableFixed));
         }
+
         public Builder maxUnavailablePercent(@Nullable Output<Integer> maxUnavailablePercent) {
-            this.maxUnavailablePercent = maxUnavailablePercent;
+            $.maxUnavailablePercent = maxUnavailablePercent;
             return this;
         }
-        public Builder maxUnavailablePercent(@Nullable Integer maxUnavailablePercent) {
-            this.maxUnavailablePercent = Codegen.ofNullable(maxUnavailablePercent);
-            return this;
+
+        public Builder maxUnavailablePercent(Integer maxUnavailablePercent) {
+            return maxUnavailablePercent(Output.of(maxUnavailablePercent));
         }
+
         public Builder minReadySec(@Nullable Output<Integer> minReadySec) {
-            this.minReadySec = minReadySec;
+            $.minReadySec = minReadySec;
             return this;
         }
-        public Builder minReadySec(@Nullable Integer minReadySec) {
-            this.minReadySec = Codegen.ofNullable(minReadySec);
-            return this;
+
+        public Builder minReadySec(Integer minReadySec) {
+            return minReadySec(Output.of(minReadySec));
         }
+
         public Builder minimalAction(Output<String> minimalAction) {
-            this.minimalAction = Objects.requireNonNull(minimalAction);
+            $.minimalAction = minimalAction;
             return this;
         }
+
         public Builder minimalAction(String minimalAction) {
-            this.minimalAction = Output.of(Objects.requireNonNull(minimalAction));
-            return this;
+            return minimalAction(Output.of(minimalAction));
         }
+
         public Builder replacementMethod(@Nullable Output<String> replacementMethod) {
-            this.replacementMethod = replacementMethod;
+            $.replacementMethod = replacementMethod;
             return this;
         }
-        public Builder replacementMethod(@Nullable String replacementMethod) {
-            this.replacementMethod = Codegen.ofNullable(replacementMethod);
-            return this;
+
+        public Builder replacementMethod(String replacementMethod) {
+            return replacementMethod(Output.of(replacementMethod));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public InstanceGroupManagerUpdatePolicyArgs build() {
-            return new InstanceGroupManagerUpdatePolicyArgs(maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
+            return type(Output.of(type));
+        }
+
+        public InstanceGroupManagerUpdatePolicyArgs build() {
+            $.minimalAction = Objects.requireNonNull($.minimalAction, "expected parameter 'minimalAction' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

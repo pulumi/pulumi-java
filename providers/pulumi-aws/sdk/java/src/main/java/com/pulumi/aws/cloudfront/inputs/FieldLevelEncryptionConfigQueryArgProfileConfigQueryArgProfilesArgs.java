@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,52 +17,52 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
     public static final FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs Empty = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs();
 
     @Import(name="items")
-      private final @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items;
+    private @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items;
 
-    public Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
-    public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(@Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items) {
-        this.items = items;
-    }
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs() {}
 
-    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs() {
-        this.items = Codegen.empty();
+    private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs $) {
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items;
+        private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs();
         }
 
         public Builder(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.items = defaults.items;
+            $ = new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder items(@Nullable Output<List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItemArgs... items) {
             return items(List.of(items));
-        }        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs build() {
-            return new FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs(items);
+        }
+
+        public FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesArgs build() {
+            return $;
         }
     }
+
 }

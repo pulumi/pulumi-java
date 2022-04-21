@@ -5,9 +5,9 @@ package com.pulumi.aws.lightsail.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class StaticIpAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="instanceName")
-      private final @Nullable Output<String> instanceName;
+    private @Nullable Output<String> instanceName;
 
-    public Output<String> instanceName() {
-        return this.instanceName == null ? Codegen.empty() : this.instanceName;
+    public Optional<Output<String>> instanceName() {
+        return Optional.ofNullable(this.instanceName);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class StaticIpAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class StaticIpAttachmentState extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="staticIpName")
-      private final @Nullable Output<String> staticIpName;
+    private @Nullable Output<String> staticIpName;
 
-    public Output<String> staticIpName() {
-        return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
+    public Optional<Output<String>> staticIpName() {
+        return Optional.ofNullable(this.staticIpName);
     }
 
-    public StaticIpAttachmentState(
-        @Nullable Output<String> instanceName,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> staticIpName) {
-        this.instanceName = instanceName;
-        this.ipAddress = ipAddress;
-        this.staticIpName = staticIpName;
-    }
+    private StaticIpAttachmentState() {}
 
-    private StaticIpAttachmentState() {
-        this.instanceName = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.staticIpName = Codegen.empty();
+    private StaticIpAttachmentState(StaticIpAttachmentState $) {
+        this.instanceName = $.instanceName;
+        this.ipAddress = $.ipAddress;
+        this.staticIpName = $.staticIpName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticIpAttachmentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> instanceName;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> staticIpName;
+        private StaticIpAttachmentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticIpAttachmentState();
         }
 
         public Builder(StaticIpAttachmentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceName = defaults.instanceName;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.staticIpName = defaults.staticIpName;
+            $ = new StaticIpAttachmentState(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceName(@Nullable Output<String> instanceName) {
-            this.instanceName = instanceName;
+            $.instanceName = instanceName;
             return this;
         }
-        public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Codegen.ofNullable(instanceName);
-            return this;
+
+        public Builder instanceName(String instanceName) {
+            return instanceName(Output.of(instanceName));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
-            this.staticIpName = staticIpName;
+            $.staticIpName = staticIpName;
             return this;
         }
-        public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Codegen.ofNullable(staticIpName);
-            return this;
-        }        public StaticIpAttachmentState build() {
-            return new StaticIpAttachmentState(instanceName, ipAddress, staticIpName);
+
+        public Builder staticIpName(String staticIpName) {
+            return staticIpName(Output.of(staticIpName));
+        }
+
+        public StaticIpAttachmentState build() {
+            return $;
         }
     }
+
 }

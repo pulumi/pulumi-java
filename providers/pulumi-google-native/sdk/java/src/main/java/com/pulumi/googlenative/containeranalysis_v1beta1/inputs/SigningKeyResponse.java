@@ -21,7 +21,7 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
@@ -32,7 +32,7 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyScheme", required=true)
-      private final String keyScheme;
+    private String keyScheme;
 
     public String keyScheme() {
         return this.keyScheme;
@@ -43,7 +43,7 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyType", required=true)
-      private final String keyType;
+    private String keyType;
 
     public String keyType() {
         return this.keyType;
@@ -54,73 +54,66 @@ public final class SigningKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="publicKeyValue", required=true)
-      private final String publicKeyValue;
+    private String publicKeyValue;
 
     public String publicKeyValue() {
         return this.publicKeyValue;
     }
 
-    public SigningKeyResponse(
-        String keyId,
-        String keyScheme,
-        String keyType,
-        String publicKeyValue) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.keyScheme = Objects.requireNonNull(keyScheme, "expected parameter 'keyScheme' to be non-null");
-        this.keyType = Objects.requireNonNull(keyType, "expected parameter 'keyType' to be non-null");
-        this.publicKeyValue = Objects.requireNonNull(publicKeyValue, "expected parameter 'publicKeyValue' to be non-null");
-    }
+    private SigningKeyResponse() {}
 
-    private SigningKeyResponse() {
-        this.keyId = null;
-        this.keyScheme = null;
-        this.keyType = null;
-        this.publicKeyValue = null;
+    private SigningKeyResponse(SigningKeyResponse $) {
+        this.keyId = $.keyId;
+        this.keyScheme = $.keyScheme;
+        this.keyType = $.keyType;
+        this.publicKeyValue = $.publicKeyValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SigningKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private String keyScheme;
-        private String keyType;
-        private String publicKeyValue;
+        private SigningKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SigningKeyResponse();
         }
 
         public Builder(SigningKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.keyScheme = defaults.keyScheme;
-    	      this.keyType = defaults.keyType;
-    	      this.publicKeyValue = defaults.publicKeyValue;
+            $ = new SigningKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder keyScheme(String keyScheme) {
-            this.keyScheme = Objects.requireNonNull(keyScheme);
+            $.keyScheme = keyScheme;
             return this;
         }
+
         public Builder keyType(String keyType) {
-            this.keyType = Objects.requireNonNull(keyType);
+            $.keyType = keyType;
             return this;
         }
+
         public Builder publicKeyValue(String publicKeyValue) {
-            this.publicKeyValue = Objects.requireNonNull(publicKeyValue);
+            $.publicKeyValue = publicKeyValue;
             return this;
-        }        public SigningKeyResponse build() {
-            return new SigningKeyResponse(keyId, keyScheme, keyType, publicKeyValue);
+        }
+
+        public SigningKeyResponse build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.keyScheme = Objects.requireNonNull($.keyScheme, "expected parameter 'keyScheme' to be non-null");
+            $.keyType = Objects.requireNonNull($.keyType, "expected parameter 'keyType' to be non-null");
+            $.publicKeyValue = Objects.requireNonNull($.publicKeyValue, "expected parameter 'publicKeyValue' to be non-null");
+            return $;
         }
     }
+
 }

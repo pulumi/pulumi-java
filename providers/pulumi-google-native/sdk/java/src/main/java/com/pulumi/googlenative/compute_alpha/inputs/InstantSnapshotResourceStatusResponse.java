@@ -17,45 +17,45 @@ public final class InstantSnapshotResourceStatusResponse extends com.pulumi.reso
      * 
      */
     @Import(name="storageSizeBytes", required=true)
-      private final String storageSizeBytes;
+    private String storageSizeBytes;
 
     public String storageSizeBytes() {
         return this.storageSizeBytes;
     }
 
-    public InstantSnapshotResourceStatusResponse(String storageSizeBytes) {
-        this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes, "expected parameter 'storageSizeBytes' to be non-null");
-    }
+    private InstantSnapshotResourceStatusResponse() {}
 
-    private InstantSnapshotResourceStatusResponse() {
-        this.storageSizeBytes = null;
+    private InstantSnapshotResourceStatusResponse(InstantSnapshotResourceStatusResponse $) {
+        this.storageSizeBytes = $.storageSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstantSnapshotResourceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String storageSizeBytes;
+        private InstantSnapshotResourceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstantSnapshotResourceStatusResponse();
         }
 
         public Builder(InstantSnapshotResourceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageSizeBytes = defaults.storageSizeBytes;
+            $ = new InstantSnapshotResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder storageSizeBytes(String storageSizeBytes) {
-            this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes);
+            $.storageSizeBytes = storageSizeBytes;
             return this;
-        }        public InstantSnapshotResourceStatusResponse build() {
-            return new InstantSnapshotResourceStatusResponse(storageSizeBytes);
+        }
+
+        public InstantSnapshotResourceStatusResponse build() {
+            $.storageSizeBytes = Objects.requireNonNull($.storageSizeBytes, "expected parameter 'storageSizeBytes' to be non-null");
+            return $;
         }
     }
+
 }

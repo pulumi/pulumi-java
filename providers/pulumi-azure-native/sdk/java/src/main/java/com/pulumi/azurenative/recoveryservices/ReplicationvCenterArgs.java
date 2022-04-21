@@ -6,9 +6,9 @@ package com.pulumi.azurenative.recoveryservices;
 import com.pulumi.azurenative.recoveryservices.inputs.AddVCenterRequestPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fabricName", required=true)
-      private final Output<String> fabricName;
+    private Output<String> fabricName;
 
     public Output<String> fabricName() {
         return this.fabricName;
@@ -32,10 +32,10 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
+    private @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
 
-    public Output<AddVCenterRequestPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<AddVCenterRequestPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -65,102 +65,91 @@ public final class ReplicationvCenterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="vCenterName")
-      private final @Nullable Output<String> vCenterName;
+    private @Nullable Output<String> vCenterName;
 
-    public Output<String> vCenterName() {
-        return this.vCenterName == null ? Codegen.empty() : this.vCenterName;
+    public Optional<Output<String>> vCenterName() {
+        return Optional.ofNullable(this.vCenterName);
     }
 
-    public ReplicationvCenterArgs(
-        Output<String> fabricName,
-        @Nullable Output<AddVCenterRequestPropertiesArgs> properties,
-        Output<String> resourceGroupName,
-        Output<String> resourceName,
-        @Nullable Output<String> vCenterName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.properties = properties;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.vCenterName = vCenterName;
-    }
+    private ReplicationvCenterArgs() {}
 
-    private ReplicationvCenterArgs() {
-        this.fabricName = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.vCenterName = Codegen.empty();
+    private ReplicationvCenterArgs(ReplicationvCenterArgs $) {
+        this.fabricName = $.fabricName;
+        this.properties = $.properties;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.vCenterName = $.vCenterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationvCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fabricName;
-        private @Nullable Output<AddVCenterRequestPropertiesArgs> properties;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
-        private @Nullable Output<String> vCenterName;
+        private ReplicationvCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationvCenterArgs();
         }
 
         public Builder(ReplicationvCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.properties = defaults.properties;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.vCenterName = defaults.vCenterName;
+            $ = new ReplicationvCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(Output<String> fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder fabricName(String fabricName) {
-            this.fabricName = Output.of(Objects.requireNonNull(fabricName));
-            return this;
+            return fabricName(Output.of(fabricName));
         }
+
         public Builder properties(@Nullable Output<AddVCenterRequestPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable AddVCenterRequestPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(AddVCenterRequestPropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder vCenterName(@Nullable Output<String> vCenterName) {
-            this.vCenterName = vCenterName;
+            $.vCenterName = vCenterName;
             return this;
         }
-        public Builder vCenterName(@Nullable String vCenterName) {
-            this.vCenterName = Codegen.ofNullable(vCenterName);
-            return this;
-        }        public ReplicationvCenterArgs build() {
-            return new ReplicationvCenterArgs(fabricName, properties, resourceGroupName, resourceName, vCenterName);
+
+        public Builder vCenterName(String vCenterName) {
+            return vCenterName(Output.of(vCenterName));
+        }
+
+        public ReplicationvCenterArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

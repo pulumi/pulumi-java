@@ -24,7 +24,7 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="carrierName", required=true)
-      private final String carrierName;
+    private String carrierName;
 
     public String carrierName() {
         return this.carrierName;
@@ -35,10 +35,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="driveCount")
-      private final @Nullable Double driveCount;
+    private @Nullable Double driveCount;
 
     public Optional<Double> driveCount() {
-        return this.driveCount == null ? Optional.empty() : Optional.ofNullable(this.driveCount);
+        return Optional.ofNullable(this.driveCount);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="shipDate")
-      private final @Nullable String shipDate;
+    private @Nullable String shipDate;
 
     public Optional<String> shipDate() {
-        return this.shipDate == null ? Optional.empty() : Optional.ofNullable(this.shipDate);
+        return Optional.ofNullable(this.shipDate);
     }
 
     /**
@@ -57,73 +57,64 @@ public final class DeliveryPackageInformationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="trackingNumber", required=true)
-      private final String trackingNumber;
+    private String trackingNumber;
 
     public String trackingNumber() {
         return this.trackingNumber;
     }
 
-    public DeliveryPackageInformationResponse(
-        String carrierName,
-        @Nullable Double driveCount,
-        @Nullable String shipDate,
-        String trackingNumber) {
-        this.carrierName = Objects.requireNonNull(carrierName, "expected parameter 'carrierName' to be non-null");
-        this.driveCount = driveCount;
-        this.shipDate = shipDate;
-        this.trackingNumber = Objects.requireNonNull(trackingNumber, "expected parameter 'trackingNumber' to be non-null");
-    }
+    private DeliveryPackageInformationResponse() {}
 
-    private DeliveryPackageInformationResponse() {
-        this.carrierName = null;
-        this.driveCount = null;
-        this.shipDate = null;
-        this.trackingNumber = null;
+    private DeliveryPackageInformationResponse(DeliveryPackageInformationResponse $) {
+        this.carrierName = $.carrierName;
+        this.driveCount = $.driveCount;
+        this.shipDate = $.shipDate;
+        this.trackingNumber = $.trackingNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryPackageInformationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String carrierName;
-        private @Nullable Double driveCount;
-        private @Nullable String shipDate;
-        private String trackingNumber;
+        private DeliveryPackageInformationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryPackageInformationResponse();
         }
 
         public Builder(DeliveryPackageInformationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.carrierName = defaults.carrierName;
-    	      this.driveCount = defaults.driveCount;
-    	      this.shipDate = defaults.shipDate;
-    	      this.trackingNumber = defaults.trackingNumber;
+            $ = new DeliveryPackageInformationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder carrierName(String carrierName) {
-            this.carrierName = Objects.requireNonNull(carrierName);
+            $.carrierName = carrierName;
             return this;
         }
+
         public Builder driveCount(@Nullable Double driveCount) {
-            this.driveCount = driveCount;
+            $.driveCount = driveCount;
             return this;
         }
+
         public Builder shipDate(@Nullable String shipDate) {
-            this.shipDate = shipDate;
+            $.shipDate = shipDate;
             return this;
         }
+
         public Builder trackingNumber(String trackingNumber) {
-            this.trackingNumber = Objects.requireNonNull(trackingNumber);
+            $.trackingNumber = trackingNumber;
             return this;
-        }        public DeliveryPackageInformationResponse build() {
-            return new DeliveryPackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
+        }
+
+        public DeliveryPackageInformationResponse build() {
+            $.carrierName = Objects.requireNonNull($.carrierName, "expected parameter 'carrierName' to be non-null");
+            $.trackingNumber = Objects.requireNonNull($.trackingNumber, "expected parameter 'trackingNumber' to be non-null");
+            return $;
         }
     }
+
 }

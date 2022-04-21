@@ -15,78 +15,72 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
     @Import(name="configId", required=true)
-      private final String configId;
+    private String configId;
 
     public String configId() {
         return this.configId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="variableId", required=true)
-      private final String variableId;
+    private String variableId;
 
     public String variableId() {
         return this.variableId;
     }
 
-    public GetVariableArgs(
-        String configId,
-        @Nullable String project,
-        String variableId) {
-        this.configId = Objects.requireNonNull(configId, "expected parameter 'configId' to be non-null");
-        this.project = project;
-        this.variableId = Objects.requireNonNull(variableId, "expected parameter 'variableId' to be non-null");
-    }
+    private GetVariableArgs() {}
 
-    private GetVariableArgs() {
-        this.configId = null;
-        this.project = null;
-        this.variableId = null;
+    private GetVariableArgs(GetVariableArgs $) {
+        this.configId = $.configId;
+        this.project = $.project;
+        this.variableId = $.variableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVariableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configId;
-        private @Nullable String project;
-        private String variableId;
+        private GetVariableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVariableArgs();
         }
 
         public Builder(GetVariableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.project = defaults.project;
-    	      this.variableId = defaults.variableId;
+            $ = new GetVariableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(String configId) {
-            this.configId = Objects.requireNonNull(configId);
+            $.configId = configId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder variableId(String variableId) {
-            this.variableId = Objects.requireNonNull(variableId);
+            $.variableId = variableId;
             return this;
-        }        public GetVariableArgs build() {
-            return new GetVariableArgs(configId, project, variableId);
+        }
+
+        public GetVariableArgs build() {
+            $.configId = Objects.requireNonNull($.configId, "expected parameter 'configId' to be non-null");
+            $.variableId = Objects.requireNonNull($.variableId, "expected parameter 'variableId' to be non-null");
+            return $;
         }
     }
+
 }

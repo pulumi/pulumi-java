@@ -6,8 +6,8 @@ package com.pulumi.awsnative.lex.inputs;
 import com.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSettingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class BotExternalSourceSettingArgs extends com.pulumi.resources.Res
     public static final BotExternalSourceSettingArgs Empty = new BotExternalSourceSettingArgs();
 
     @Import(name="grammarSlotTypeSetting")
-      private final @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
+    private @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
-    public Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting() {
-        return this.grammarSlotTypeSetting == null ? Codegen.empty() : this.grammarSlotTypeSetting;
+    public Optional<Output<BotGrammarSlotTypeSettingArgs>> grammarSlotTypeSetting() {
+        return Optional.ofNullable(this.grammarSlotTypeSetting);
     }
 
-    public BotExternalSourceSettingArgs(@Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
-        this.grammarSlotTypeSetting = grammarSlotTypeSetting;
-    }
+    private BotExternalSourceSettingArgs() {}
 
-    private BotExternalSourceSettingArgs() {
-        this.grammarSlotTypeSetting = Codegen.empty();
+    private BotExternalSourceSettingArgs(BotExternalSourceSettingArgs $) {
+        this.grammarSlotTypeSetting = $.grammarSlotTypeSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotExternalSourceSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
+        private BotExternalSourceSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotExternalSourceSettingArgs();
         }
 
         public Builder(BotExternalSourceSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grammarSlotTypeSetting = defaults.grammarSlotTypeSetting;
+            $ = new BotExternalSourceSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grammarSlotTypeSetting(@Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting) {
-            this.grammarSlotTypeSetting = grammarSlotTypeSetting;
+            $.grammarSlotTypeSetting = grammarSlotTypeSetting;
             return this;
         }
-        public Builder grammarSlotTypeSetting(@Nullable BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
-            this.grammarSlotTypeSetting = Codegen.ofNullable(grammarSlotTypeSetting);
-            return this;
-        }        public BotExternalSourceSettingArgs build() {
-            return new BotExternalSourceSettingArgs(grammarSlotTypeSetting);
+
+        public Builder grammarSlotTypeSetting(BotGrammarSlotTypeSettingArgs grammarSlotTypeSetting) {
+            return grammarSlotTypeSetting(Output.of(grammarSlotTypeSetting));
+        }
+
+        public BotExternalSourceSettingArgs build() {
+            return $;
         }
     }
+
 }

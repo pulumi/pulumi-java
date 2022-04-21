@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.VolumeProjectionArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ProjectedVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="defaultMode")
-      private final @Nullable Output<Integer> defaultMode;
+    private @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> defaultMode() {
-        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
+    public Optional<Output<Integer>> defaultMode() {
+        return Optional.ofNullable(this.defaultMode);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class ProjectedVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sources", required=true)
-      private final Output<List<VolumeProjectionArgs>> sources;
+    private Output<List<VolumeProjectionArgs>> sources;
 
     public Output<List<VolumeProjectionArgs>> sources() {
         return this.sources;
     }
 
-    public ProjectedVolumeSourceArgs(
-        @Nullable Output<Integer> defaultMode,
-        Output<List<VolumeProjectionArgs>> sources) {
-        this.defaultMode = defaultMode;
-        this.sources = Objects.requireNonNull(sources, "expected parameter 'sources' to be non-null");
-    }
+    private ProjectedVolumeSourceArgs() {}
 
-    private ProjectedVolumeSourceArgs() {
-        this.defaultMode = Codegen.empty();
-        this.sources = Codegen.empty();
+    private ProjectedVolumeSourceArgs(ProjectedVolumeSourceArgs $) {
+        this.defaultMode = $.defaultMode;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectedVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultMode;
-        private Output<List<VolumeProjectionArgs>> sources;
+        private ProjectedVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectedVolumeSourceArgs();
         }
 
         public Builder(ProjectedVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.sources = defaults.sources;
+            $ = new ProjectedVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
-            this.defaultMode = defaultMode;
+            $.defaultMode = defaultMode;
             return this;
         }
-        public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Codegen.ofNullable(defaultMode);
-            return this;
+
+        public Builder defaultMode(Integer defaultMode) {
+            return defaultMode(Output.of(defaultMode));
         }
+
         public Builder sources(Output<List<VolumeProjectionArgs>> sources) {
-            this.sources = Objects.requireNonNull(sources);
+            $.sources = sources;
             return this;
         }
+
         public Builder sources(List<VolumeProjectionArgs> sources) {
-            this.sources = Output.of(Objects.requireNonNull(sources));
-            return this;
+            return sources(Output.of(sources));
         }
+
         public Builder sources(VolumeProjectionArgs... sources) {
             return sources(List.of(sources));
-        }        public ProjectedVolumeSourceArgs build() {
-            return new ProjectedVolumeSourceArgs(defaultMode, sources);
+        }
+
+        public ProjectedVolumeSourceArgs build() {
+            $.sources = Objects.requireNonNull($.sources, "expected parameter 'sources' to be non-null");
+            return $;
         }
     }
+
 }

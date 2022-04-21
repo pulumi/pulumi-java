@@ -5,7 +5,6 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationGetArgs ex
      * 
      */
     @Import(name="eventType", required=true)
-      private final Output<String> eventType;
+    private Output<String> eventType;
 
     public Output<String> eventType() {
         return this.eventType;
@@ -31,63 +30,60 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationGetArgs ex
      * 
      */
     @Import(name="functionArn", required=true)
-      private final Output<String> functionArn;
+    private Output<String> functionArn;
 
     public Output<String> functionArn() {
         return this.functionArn;
     }
 
-    public DistributionOrderedCacheBehaviorFunctionAssociationGetArgs(
-        Output<String> eventType,
-        Output<String> functionArn) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.functionArn = Objects.requireNonNull(functionArn, "expected parameter 'functionArn' to be non-null");
-    }
+    private DistributionOrderedCacheBehaviorFunctionAssociationGetArgs() {}
 
-    private DistributionOrderedCacheBehaviorFunctionAssociationGetArgs() {
-        this.eventType = Codegen.empty();
-        this.functionArn = Codegen.empty();
+    private DistributionOrderedCacheBehaviorFunctionAssociationGetArgs(DistributionOrderedCacheBehaviorFunctionAssociationGetArgs $) {
+        this.eventType = $.eventType;
+        this.functionArn = $.functionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionOrderedCacheBehaviorFunctionAssociationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> eventType;
-        private Output<String> functionArn;
+        private DistributionOrderedCacheBehaviorFunctionAssociationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionOrderedCacheBehaviorFunctionAssociationGetArgs();
         }
 
         public Builder(DistributionOrderedCacheBehaviorFunctionAssociationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.functionArn = defaults.functionArn;
+            $ = new DistributionOrderedCacheBehaviorFunctionAssociationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(Output<String> eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder eventType(String eventType) {
-            this.eventType = Output.of(Objects.requireNonNull(eventType));
-            return this;
+            return eventType(Output.of(eventType));
         }
+
         public Builder functionArn(Output<String> functionArn) {
-            this.functionArn = Objects.requireNonNull(functionArn);
+            $.functionArn = functionArn;
             return this;
         }
+
         public Builder functionArn(String functionArn) {
-            this.functionArn = Output.of(Objects.requireNonNull(functionArn));
-            return this;
-        }        public DistributionOrderedCacheBehaviorFunctionAssociationGetArgs build() {
-            return new DistributionOrderedCacheBehaviorFunctionAssociationGetArgs(eventType, functionArn);
+            return functionArn(Output.of(functionArn));
+        }
+
+        public DistributionOrderedCacheBehaviorFunctionAssociationGetArgs build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.functionArn = Objects.requireNonNull($.functionArn, "expected parameter 'functionArn' to be non-null");
+            return $;
         }
     }
+
 }

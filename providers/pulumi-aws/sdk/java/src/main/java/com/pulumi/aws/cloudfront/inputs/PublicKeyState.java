@@ -5,9 +5,9 @@ package com.pulumi.aws.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="callerReference")
-      private final @Nullable Output<String> callerReference;
+    private @Nullable Output<String> callerReference;
 
-    public Output<String> callerReference() {
-        return this.callerReference == null ? Codegen.empty() : this.callerReference;
+    public Optional<Output<String>> callerReference() {
+        return Optional.ofNullable(this.callerReference);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encodedKey")
-      private final @Nullable Output<String> encodedKey;
+    private @Nullable Output<String> encodedKey;
 
-    public Output<String> encodedKey() {
-        return this.encodedKey == null ? Codegen.empty() : this.encodedKey;
+    public Optional<Output<String>> encodedKey() {
+        return Optional.ofNullable(this.encodedKey);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -75,115 +75,98 @@ public final class PublicKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namePrefix")
-      private final @Nullable Output<String> namePrefix;
+    private @Nullable Output<String> namePrefix;
 
-    public Output<String> namePrefix() {
-        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
+    public Optional<Output<String>> namePrefix() {
+        return Optional.ofNullable(this.namePrefix);
     }
 
-    public PublicKeyState(
-        @Nullable Output<String> callerReference,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> encodedKey,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> name,
-        @Nullable Output<String> namePrefix) {
-        this.callerReference = callerReference;
-        this.comment = comment;
-        this.encodedKey = encodedKey;
-        this.etag = etag;
-        this.name = name;
-        this.namePrefix = namePrefix;
-    }
+    private PublicKeyState() {}
 
-    private PublicKeyState() {
-        this.callerReference = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.encodedKey = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namePrefix = Codegen.empty();
+    private PublicKeyState(PublicKeyState $) {
+        this.callerReference = $.callerReference;
+        this.comment = $.comment;
+        this.encodedKey = $.encodedKey;
+        this.etag = $.etag;
+        this.name = $.name;
+        this.namePrefix = $.namePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> callerReference;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> encodedKey;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> namePrefix;
+        private PublicKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyState();
         }
 
         public Builder(PublicKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callerReference = defaults.callerReference;
-    	      this.comment = defaults.comment;
-    	      this.encodedKey = defaults.encodedKey;
-    	      this.etag = defaults.etag;
-    	      this.name = defaults.name;
-    	      this.namePrefix = defaults.namePrefix;
+            $ = new PublicKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder callerReference(@Nullable Output<String> callerReference) {
-            this.callerReference = callerReference;
+            $.callerReference = callerReference;
             return this;
         }
-        public Builder callerReference(@Nullable String callerReference) {
-            this.callerReference = Codegen.ofNullable(callerReference);
-            return this;
+
+        public Builder callerReference(String callerReference) {
+            return callerReference(Output.of(callerReference));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder encodedKey(@Nullable Output<String> encodedKey) {
-            this.encodedKey = encodedKey;
+            $.encodedKey = encodedKey;
             return this;
         }
-        public Builder encodedKey(@Nullable String encodedKey) {
-            this.encodedKey = Codegen.ofNullable(encodedKey);
-            return this;
+
+        public Builder encodedKey(String encodedKey) {
+            return encodedKey(Output.of(encodedKey));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
-            this.namePrefix = namePrefix;
+            $.namePrefix = namePrefix;
             return this;
         }
-        public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Codegen.ofNullable(namePrefix);
-            return this;
-        }        public PublicKeyState build() {
-            return new PublicKeyState(callerReference, comment, encodedKey, etag, name, namePrefix);
+
+        public Builder namePrefix(String namePrefix) {
+            return namePrefix(Output.of(namePrefix));
+        }
+
+        public PublicKeyState build() {
+            return $;
         }
     }
+
 }

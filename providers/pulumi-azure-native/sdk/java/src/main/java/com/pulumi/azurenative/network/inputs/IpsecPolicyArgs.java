@@ -12,7 +12,6 @@ import com.pulumi.azurenative.network.enums.PfsGroup;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +30,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dhGroup", required=true)
-      private final Output<Either<String,DhGroup>> dhGroup;
+    private Output<Either<String,DhGroup>> dhGroup;
 
     public Output<Either<String,DhGroup>> dhGroup() {
         return this.dhGroup;
@@ -42,7 +41,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ikeEncryption", required=true)
-      private final Output<Either<String,IkeEncryption>> ikeEncryption;
+    private Output<Either<String,IkeEncryption>> ikeEncryption;
 
     public Output<Either<String,IkeEncryption>> ikeEncryption() {
         return this.ikeEncryption;
@@ -53,7 +52,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ikeIntegrity", required=true)
-      private final Output<Either<String,IkeIntegrity>> ikeIntegrity;
+    private Output<Either<String,IkeIntegrity>> ikeIntegrity;
 
     public Output<Either<String,IkeIntegrity>> ikeIntegrity() {
         return this.ikeIntegrity;
@@ -64,7 +63,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipsecEncryption", required=true)
-      private final Output<Either<String,IpsecEncryption>> ipsecEncryption;
+    private Output<Either<String,IpsecEncryption>> ipsecEncryption;
 
     public Output<Either<String,IpsecEncryption>> ipsecEncryption() {
         return this.ipsecEncryption;
@@ -75,7 +74,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipsecIntegrity", required=true)
-      private final Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
+    private Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
     public Output<Either<String,IpsecIntegrity>> ipsecIntegrity() {
         return this.ipsecIntegrity;
@@ -86,7 +85,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pfsGroup", required=true)
-      private final Output<Either<String,PfsGroup>> pfsGroup;
+    private Output<Either<String,PfsGroup>> pfsGroup;
 
     public Output<Either<String,PfsGroup>> pfsGroup() {
         return this.pfsGroup;
@@ -97,7 +96,7 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="saDataSizeKilobytes", required=true)
-      private final Output<Integer> saDataSizeKilobytes;
+    private Output<Integer> saDataSizeKilobytes;
 
     public Output<Integer> saDataSizeKilobytes() {
         return this.saDataSizeKilobytes;
@@ -108,141 +107,126 @@ public final class IpsecPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="saLifeTimeSeconds", required=true)
-      private final Output<Integer> saLifeTimeSeconds;
+    private Output<Integer> saLifeTimeSeconds;
 
     public Output<Integer> saLifeTimeSeconds() {
         return this.saLifeTimeSeconds;
     }
 
-    public IpsecPolicyArgs(
-        Output<Either<String,DhGroup>> dhGroup,
-        Output<Either<String,IkeEncryption>> ikeEncryption,
-        Output<Either<String,IkeIntegrity>> ikeIntegrity,
-        Output<Either<String,IpsecEncryption>> ipsecEncryption,
-        Output<Either<String,IpsecIntegrity>> ipsecIntegrity,
-        Output<Either<String,PfsGroup>> pfsGroup,
-        Output<Integer> saDataSizeKilobytes,
-        Output<Integer> saLifeTimeSeconds) {
-        this.dhGroup = Objects.requireNonNull(dhGroup, "expected parameter 'dhGroup' to be non-null");
-        this.ikeEncryption = Objects.requireNonNull(ikeEncryption, "expected parameter 'ikeEncryption' to be non-null");
-        this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity, "expected parameter 'ikeIntegrity' to be non-null");
-        this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption, "expected parameter 'ipsecEncryption' to be non-null");
-        this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity, "expected parameter 'ipsecIntegrity' to be non-null");
-        this.pfsGroup = Objects.requireNonNull(pfsGroup, "expected parameter 'pfsGroup' to be non-null");
-        this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes, "expected parameter 'saDataSizeKilobytes' to be non-null");
-        this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds, "expected parameter 'saLifeTimeSeconds' to be non-null");
-    }
+    private IpsecPolicyArgs() {}
 
-    private IpsecPolicyArgs() {
-        this.dhGroup = Codegen.empty();
-        this.ikeEncryption = Codegen.empty();
-        this.ikeIntegrity = Codegen.empty();
-        this.ipsecEncryption = Codegen.empty();
-        this.ipsecIntegrity = Codegen.empty();
-        this.pfsGroup = Codegen.empty();
-        this.saDataSizeKilobytes = Codegen.empty();
-        this.saLifeTimeSeconds = Codegen.empty();
+    private IpsecPolicyArgs(IpsecPolicyArgs $) {
+        this.dhGroup = $.dhGroup;
+        this.ikeEncryption = $.ikeEncryption;
+        this.ikeIntegrity = $.ikeIntegrity;
+        this.ipsecEncryption = $.ipsecEncryption;
+        this.ipsecIntegrity = $.ipsecIntegrity;
+        this.pfsGroup = $.pfsGroup;
+        this.saDataSizeKilobytes = $.saDataSizeKilobytes;
+        this.saLifeTimeSeconds = $.saLifeTimeSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpsecPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,DhGroup>> dhGroup;
-        private Output<Either<String,IkeEncryption>> ikeEncryption;
-        private Output<Either<String,IkeIntegrity>> ikeIntegrity;
-        private Output<Either<String,IpsecEncryption>> ipsecEncryption;
-        private Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
-        private Output<Either<String,PfsGroup>> pfsGroup;
-        private Output<Integer> saDataSizeKilobytes;
-        private Output<Integer> saLifeTimeSeconds;
+        private IpsecPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpsecPolicyArgs();
         }
 
         public Builder(IpsecPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dhGroup = defaults.dhGroup;
-    	      this.ikeEncryption = defaults.ikeEncryption;
-    	      this.ikeIntegrity = defaults.ikeIntegrity;
-    	      this.ipsecEncryption = defaults.ipsecEncryption;
-    	      this.ipsecIntegrity = defaults.ipsecIntegrity;
-    	      this.pfsGroup = defaults.pfsGroup;
-    	      this.saDataSizeKilobytes = defaults.saDataSizeKilobytes;
-    	      this.saLifeTimeSeconds = defaults.saLifeTimeSeconds;
+            $ = new IpsecPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dhGroup(Output<Either<String,DhGroup>> dhGroup) {
-            this.dhGroup = Objects.requireNonNull(dhGroup);
+            $.dhGroup = dhGroup;
             return this;
         }
+
         public Builder dhGroup(Either<String,DhGroup> dhGroup) {
-            this.dhGroup = Output.of(Objects.requireNonNull(dhGroup));
-            return this;
+            return dhGroup(Output.of(dhGroup));
         }
+
         public Builder ikeEncryption(Output<Either<String,IkeEncryption>> ikeEncryption) {
-            this.ikeEncryption = Objects.requireNonNull(ikeEncryption);
+            $.ikeEncryption = ikeEncryption;
             return this;
         }
+
         public Builder ikeEncryption(Either<String,IkeEncryption> ikeEncryption) {
-            this.ikeEncryption = Output.of(Objects.requireNonNull(ikeEncryption));
-            return this;
+            return ikeEncryption(Output.of(ikeEncryption));
         }
+
         public Builder ikeIntegrity(Output<Either<String,IkeIntegrity>> ikeIntegrity) {
-            this.ikeIntegrity = Objects.requireNonNull(ikeIntegrity);
+            $.ikeIntegrity = ikeIntegrity;
             return this;
         }
+
         public Builder ikeIntegrity(Either<String,IkeIntegrity> ikeIntegrity) {
-            this.ikeIntegrity = Output.of(Objects.requireNonNull(ikeIntegrity));
-            return this;
+            return ikeIntegrity(Output.of(ikeIntegrity));
         }
+
         public Builder ipsecEncryption(Output<Either<String,IpsecEncryption>> ipsecEncryption) {
-            this.ipsecEncryption = Objects.requireNonNull(ipsecEncryption);
+            $.ipsecEncryption = ipsecEncryption;
             return this;
         }
+
         public Builder ipsecEncryption(Either<String,IpsecEncryption> ipsecEncryption) {
-            this.ipsecEncryption = Output.of(Objects.requireNonNull(ipsecEncryption));
-            return this;
+            return ipsecEncryption(Output.of(ipsecEncryption));
         }
+
         public Builder ipsecIntegrity(Output<Either<String,IpsecIntegrity>> ipsecIntegrity) {
-            this.ipsecIntegrity = Objects.requireNonNull(ipsecIntegrity);
+            $.ipsecIntegrity = ipsecIntegrity;
             return this;
         }
+
         public Builder ipsecIntegrity(Either<String,IpsecIntegrity> ipsecIntegrity) {
-            this.ipsecIntegrity = Output.of(Objects.requireNonNull(ipsecIntegrity));
-            return this;
+            return ipsecIntegrity(Output.of(ipsecIntegrity));
         }
+
         public Builder pfsGroup(Output<Either<String,PfsGroup>> pfsGroup) {
-            this.pfsGroup = Objects.requireNonNull(pfsGroup);
+            $.pfsGroup = pfsGroup;
             return this;
         }
+
         public Builder pfsGroup(Either<String,PfsGroup> pfsGroup) {
-            this.pfsGroup = Output.of(Objects.requireNonNull(pfsGroup));
-            return this;
+            return pfsGroup(Output.of(pfsGroup));
         }
+
         public Builder saDataSizeKilobytes(Output<Integer> saDataSizeKilobytes) {
-            this.saDataSizeKilobytes = Objects.requireNonNull(saDataSizeKilobytes);
+            $.saDataSizeKilobytes = saDataSizeKilobytes;
             return this;
         }
+
         public Builder saDataSizeKilobytes(Integer saDataSizeKilobytes) {
-            this.saDataSizeKilobytes = Output.of(Objects.requireNonNull(saDataSizeKilobytes));
-            return this;
+            return saDataSizeKilobytes(Output.of(saDataSizeKilobytes));
         }
+
         public Builder saLifeTimeSeconds(Output<Integer> saLifeTimeSeconds) {
-            this.saLifeTimeSeconds = Objects.requireNonNull(saLifeTimeSeconds);
+            $.saLifeTimeSeconds = saLifeTimeSeconds;
             return this;
         }
+
         public Builder saLifeTimeSeconds(Integer saLifeTimeSeconds) {
-            this.saLifeTimeSeconds = Output.of(Objects.requireNonNull(saLifeTimeSeconds));
-            return this;
-        }        public IpsecPolicyArgs build() {
-            return new IpsecPolicyArgs(dhGroup, ikeEncryption, ikeIntegrity, ipsecEncryption, ipsecIntegrity, pfsGroup, saDataSizeKilobytes, saLifeTimeSeconds);
+            return saLifeTimeSeconds(Output.of(saLifeTimeSeconds));
+        }
+
+        public IpsecPolicyArgs build() {
+            $.dhGroup = Objects.requireNonNull($.dhGroup, "expected parameter 'dhGroup' to be non-null");
+            $.ikeEncryption = Objects.requireNonNull($.ikeEncryption, "expected parameter 'ikeEncryption' to be non-null");
+            $.ikeIntegrity = Objects.requireNonNull($.ikeIntegrity, "expected parameter 'ikeIntegrity' to be non-null");
+            $.ipsecEncryption = Objects.requireNonNull($.ipsecEncryption, "expected parameter 'ipsecEncryption' to be non-null");
+            $.ipsecIntegrity = Objects.requireNonNull($.ipsecIntegrity, "expected parameter 'ipsecIntegrity' to be non-null");
+            $.pfsGroup = Objects.requireNonNull($.pfsGroup, "expected parameter 'pfsGroup' to be non-null");
+            $.saDataSizeKilobytes = Objects.requireNonNull($.saDataSizeKilobytes, "expected parameter 'saDataSizeKilobytes' to be non-null");
+            $.saLifeTimeSeconds = Objects.requireNonNull($.saLifeTimeSeconds, "expected parameter 'saLifeTimeSeconds' to be non-null");
+            return $;
         }
     }
+
 }

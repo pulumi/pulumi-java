@@ -21,7 +21,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends com.p
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -32,55 +32,52 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends com.p
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public CacheActiveDirectorySettingsResponseCredentials(
-        String password,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private CacheActiveDirectorySettingsResponseCredentials() {}
 
-    private CacheActiveDirectorySettingsResponseCredentials() {
-        this.password = null;
-        this.username = null;
+    private CacheActiveDirectorySettingsResponseCredentials(CacheActiveDirectorySettingsResponseCredentials $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheActiveDirectorySettingsResponseCredentials defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String username;
+        private CacheActiveDirectorySettingsResponseCredentials $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheActiveDirectorySettingsResponseCredentials();
         }
 
         public Builder(CacheActiveDirectorySettingsResponseCredentials defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new CacheActiveDirectorySettingsResponseCredentials(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public CacheActiveDirectorySettingsResponseCredentials build() {
-            return new CacheActiveDirectorySettingsResponseCredentials(password, username);
+        }
+
+        public CacheActiveDirectorySettingsResponseCredentials build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

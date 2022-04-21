@@ -15,45 +15,44 @@ public final class GlobalTableWriteProvisionedThroughputSettings extends com.pul
     public static final GlobalTableWriteProvisionedThroughputSettings Empty = new GlobalTableWriteProvisionedThroughputSettings();
 
     @Import(name="writeCapacityAutoScalingSettings")
-      private final @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
+    private @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
 
     public Optional<GlobalTableCapacityAutoScalingSettings> writeCapacityAutoScalingSettings() {
-        return this.writeCapacityAutoScalingSettings == null ? Optional.empty() : Optional.ofNullable(this.writeCapacityAutoScalingSettings);
+        return Optional.ofNullable(this.writeCapacityAutoScalingSettings);
     }
 
-    public GlobalTableWriteProvisionedThroughputSettings(@Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
-        this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
-    }
+    private GlobalTableWriteProvisionedThroughputSettings() {}
 
-    private GlobalTableWriteProvisionedThroughputSettings() {
-        this.writeCapacityAutoScalingSettings = null;
+    private GlobalTableWriteProvisionedThroughputSettings(GlobalTableWriteProvisionedThroughputSettings $) {
+        this.writeCapacityAutoScalingSettings = $.writeCapacityAutoScalingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlobalTableWriteProvisionedThroughputSettings defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings;
+        private GlobalTableWriteProvisionedThroughputSettings $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlobalTableWriteProvisionedThroughputSettings();
         }
 
         public Builder(GlobalTableWriteProvisionedThroughputSettings defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.writeCapacityAutoScalingSettings = defaults.writeCapacityAutoScalingSettings;
+            $ = new GlobalTableWriteProvisionedThroughputSettings(Objects.requireNonNull(defaults));
         }
 
         public Builder writeCapacityAutoScalingSettings(@Nullable GlobalTableCapacityAutoScalingSettings writeCapacityAutoScalingSettings) {
-            this.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
+            $.writeCapacityAutoScalingSettings = writeCapacityAutoScalingSettings;
             return this;
-        }        public GlobalTableWriteProvisionedThroughputSettings build() {
-            return new GlobalTableWriteProvisionedThroughputSettings(writeCapacityAutoScalingSettings);
+        }
+
+        public GlobalTableWriteProvisionedThroughputSettings build() {
+            return $;
         }
     }
+
 }

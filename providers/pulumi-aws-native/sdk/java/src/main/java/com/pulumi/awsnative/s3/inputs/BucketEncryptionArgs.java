@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,52 +23,53 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serverSideEncryptionConfiguration", required=true)
-      private final Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
+    private Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
 
     public Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
     }
 
-    public BucketEncryptionArgs(Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
-        this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration, "expected parameter 'serverSideEncryptionConfiguration' to be non-null");
-    }
+    private BucketEncryptionArgs() {}
 
-    private BucketEncryptionArgs() {
-        this.serverSideEncryptionConfiguration = Codegen.empty();
+    private BucketEncryptionArgs(BucketEncryptionArgs $) {
+        this.serverSideEncryptionConfiguration = $.serverSideEncryptionConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration;
+        private BucketEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEncryptionArgs();
         }
 
         public Builder(BucketEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serverSideEncryptionConfiguration = defaults.serverSideEncryptionConfiguration;
+            $ = new BucketEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serverSideEncryptionConfiguration(Output<List<BucketServerSideEncryptionRuleArgs>> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
+            $.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
             return this;
         }
+
         public Builder serverSideEncryptionConfiguration(List<BucketServerSideEncryptionRuleArgs> serverSideEncryptionConfiguration) {
-            this.serverSideEncryptionConfiguration = Output.of(Objects.requireNonNull(serverSideEncryptionConfiguration));
-            return this;
+            return serverSideEncryptionConfiguration(Output.of(serverSideEncryptionConfiguration));
         }
+
         public Builder serverSideEncryptionConfiguration(BucketServerSideEncryptionRuleArgs... serverSideEncryptionConfiguration) {
             return serverSideEncryptionConfiguration(List.of(serverSideEncryptionConfiguration));
-        }        public BucketEncryptionArgs build() {
-            return new BucketEncryptionArgs(serverSideEncryptionConfiguration);
+        }
+
+        public BucketEncryptionArgs build() {
+            $.serverSideEncryptionConfiguration = Objects.requireNonNull($.serverSideEncryptionConfiguration, "expected parameter 'serverSideEncryptionConfiguration' to be non-null");
+            return $;
         }
     }
+
 }

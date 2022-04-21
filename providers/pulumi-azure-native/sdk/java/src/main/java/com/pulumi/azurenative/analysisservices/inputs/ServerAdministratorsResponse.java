@@ -24,48 +24,48 @@ public final class ServerAdministratorsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="members")
-      private final @Nullable List<String> members;
+    private @Nullable List<String> members;
 
-    public List<String> members() {
-        return this.members == null ? List.of() : this.members;
+    public Optional<List<String>> members() {
+        return Optional.ofNullable(this.members);
     }
 
-    public ServerAdministratorsResponse(@Nullable List<String> members) {
-        this.members = members;
-    }
+    private ServerAdministratorsResponse() {}
 
-    private ServerAdministratorsResponse() {
-        this.members = List.of();
+    private ServerAdministratorsResponse(ServerAdministratorsResponse $) {
+        this.members = $.members;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerAdministratorsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> members;
+        private ServerAdministratorsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerAdministratorsResponse();
         }
 
         public Builder(ServerAdministratorsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.members = defaults.members;
+            $ = new ServerAdministratorsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder members(@Nullable List<String> members) {
-            this.members = members;
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
-        }        public ServerAdministratorsResponse build() {
-            return new ServerAdministratorsResponse(members);
+        }
+
+        public ServerAdministratorsResponse build() {
+            return $;
         }
     }
+
 }

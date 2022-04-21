@@ -23,10 +23,10 @@ public final class ContentPathMapResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ContentPathMapResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="path")
-      private final @Nullable String path;
+    private @Nullable String path;
 
     public Optional<String> path() {
-        return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
+        return Optional.ofNullable(this.path);
     }
 
-    public ContentPathMapResponse(
-        @Nullable String contentType,
-        @Nullable String path) {
-        this.contentType = contentType;
-        this.path = path;
-    }
+    private ContentPathMapResponse() {}
 
-    private ContentPathMapResponse() {
-        this.contentType = null;
-        this.path = null;
+    private ContentPathMapResponse(ContentPathMapResponse $) {
+        this.contentType = $.contentType;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentPathMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentType;
-        private @Nullable String path;
+        private ContentPathMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentPathMapResponse();
         }
 
         public Builder(ContentPathMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.path = defaults.path;
+            $ = new ContentPathMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder path(@Nullable String path) {
-            this.path = path;
+            $.path = path;
             return this;
-        }        public ContentPathMapResponse build() {
-            return new ContentPathMapResponse(contentType, path);
+        }
+
+        public ContentPathMapResponse build() {
+            return $;
         }
     }
+
 }

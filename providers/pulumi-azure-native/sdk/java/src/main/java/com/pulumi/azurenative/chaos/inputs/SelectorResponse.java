@@ -23,7 +23,7 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,7 +34,7 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targets", required=true)
-      private final List<TargetReferenceResponse> targets;
+    private List<TargetReferenceResponse> targets;
 
     public List<TargetReferenceResponse> targets() {
         return this.targets;
@@ -45,67 +45,63 @@ public final class SelectorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SelectorResponse(
-        String id,
-        List<TargetReferenceResponse> targets,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.targets = Objects.requireNonNull(targets, "expected parameter 'targets' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SelectorResponse() {}
 
-    private SelectorResponse() {
-        this.id = null;
-        this.targets = List.of();
-        this.type = null;
+    private SelectorResponse(SelectorResponse $) {
+        this.id = $.id;
+        this.targets = $.targets;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private List<TargetReferenceResponse> targets;
-        private String type;
+        private SelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SelectorResponse();
         }
 
         public Builder(SelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.targets = defaults.targets;
-    	      this.type = defaults.type;
+            $ = new SelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder targets(List<TargetReferenceResponse> targets) {
-            this.targets = Objects.requireNonNull(targets);
+            $.targets = targets;
             return this;
         }
+
         public Builder targets(TargetReferenceResponse... targets) {
             return targets(List.of(targets));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SelectorResponse build() {
-            return new SelectorResponse(id, targets, type);
+        }
+
+        public SelectorResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.targets = Objects.requireNonNull($.targets, "expected parameter 'targets' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

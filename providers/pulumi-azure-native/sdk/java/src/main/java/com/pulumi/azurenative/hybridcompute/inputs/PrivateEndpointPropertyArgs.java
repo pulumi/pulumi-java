@@ -5,9 +5,9 @@ package com.pulumi.azurenative.hybridcompute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class PrivateEndpointPropertyArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public PrivateEndpointPropertyArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private PrivateEndpointPropertyArgs() {}
 
-    private PrivateEndpointPropertyArgs() {
-        this.id = Codegen.empty();
+    private PrivateEndpointPropertyArgs(PrivateEndpointPropertyArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateEndpointPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private PrivateEndpointPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateEndpointPropertyArgs();
         }
 
         public Builder(PrivateEndpointPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new PrivateEndpointPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public PrivateEndpointPropertyArgs build() {
-            return new PrivateEndpointPropertyArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public PrivateEndpointPropertyArgs build() {
+            return $;
         }
     }
+
 }

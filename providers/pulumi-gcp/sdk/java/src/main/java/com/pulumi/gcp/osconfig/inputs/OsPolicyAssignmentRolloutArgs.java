@@ -5,7 +5,6 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutDisruptionBudgetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class OsPolicyAssignmentRolloutArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="disruptionBudget", required=true)
-      private final Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget;
+    private Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget;
 
     public Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget() {
         return this.disruptionBudget;
@@ -31,63 +30,60 @@ public final class OsPolicyAssignmentRolloutArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minWaitDuration", required=true)
-      private final Output<String> minWaitDuration;
+    private Output<String> minWaitDuration;
 
     public Output<String> minWaitDuration() {
         return this.minWaitDuration;
     }
 
-    public OsPolicyAssignmentRolloutArgs(
-        Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget,
-        Output<String> minWaitDuration) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
-        this.minWaitDuration = Objects.requireNonNull(minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
-    }
+    private OsPolicyAssignmentRolloutArgs() {}
 
-    private OsPolicyAssignmentRolloutArgs() {
-        this.disruptionBudget = Codegen.empty();
-        this.minWaitDuration = Codegen.empty();
+    private OsPolicyAssignmentRolloutArgs(OsPolicyAssignmentRolloutArgs $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.minWaitDuration = $.minWaitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget;
-        private Output<String> minWaitDuration;
+        private OsPolicyAssignmentRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentRolloutArgs();
         }
 
         public Builder(OsPolicyAssignmentRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.minWaitDuration = defaults.minWaitDuration;
+            $ = new OsPolicyAssignmentRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(Output<OsPolicyAssignmentRolloutDisruptionBudgetArgs> disruptionBudget) {
-            this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
+
         public Builder disruptionBudget(OsPolicyAssignmentRolloutDisruptionBudgetArgs disruptionBudget) {
-            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
-            return this;
+            return disruptionBudget(Output.of(disruptionBudget));
         }
+
         public Builder minWaitDuration(Output<String> minWaitDuration) {
-            this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
+            $.minWaitDuration = minWaitDuration;
             return this;
         }
+
         public Builder minWaitDuration(String minWaitDuration) {
-            this.minWaitDuration = Output.of(Objects.requireNonNull(minWaitDuration));
-            return this;
-        }        public OsPolicyAssignmentRolloutArgs build() {
-            return new OsPolicyAssignmentRolloutArgs(disruptionBudget, minWaitDuration);
+            return minWaitDuration(Output.of(minWaitDuration));
+        }
+
+        public OsPolicyAssignmentRolloutArgs build() {
+            $.disruptionBudget = Objects.requireNonNull($.disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
+            $.minWaitDuration = Objects.requireNonNull($.minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
+            return $;
         }
     }
+
 }

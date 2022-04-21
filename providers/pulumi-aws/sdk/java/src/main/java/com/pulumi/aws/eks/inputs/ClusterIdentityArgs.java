@@ -6,9 +6,9 @@ package com.pulumi.aws.eks.inputs;
 import com.pulumi.aws.eks.inputs.ClusterIdentityOidcArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,52 +21,52 @@ public final class ClusterIdentityArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="oidcs")
-      private final @Nullable Output<List<ClusterIdentityOidcArgs>> oidcs;
+    private @Nullable Output<List<ClusterIdentityOidcArgs>> oidcs;
 
-    public Output<List<ClusterIdentityOidcArgs>> oidcs() {
-        return this.oidcs == null ? Codegen.empty() : this.oidcs;
+    public Optional<Output<List<ClusterIdentityOidcArgs>>> oidcs() {
+        return Optional.ofNullable(this.oidcs);
     }
 
-    public ClusterIdentityArgs(@Nullable Output<List<ClusterIdentityOidcArgs>> oidcs) {
-        this.oidcs = oidcs;
-    }
+    private ClusterIdentityArgs() {}
 
-    private ClusterIdentityArgs() {
-        this.oidcs = Codegen.empty();
+    private ClusterIdentityArgs(ClusterIdentityArgs $) {
+        this.oidcs = $.oidcs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClusterIdentityOidcArgs>> oidcs;
+        private ClusterIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterIdentityArgs();
         }
 
         public Builder(ClusterIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oidcs = defaults.oidcs;
+            $ = new ClusterIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oidcs(@Nullable Output<List<ClusterIdentityOidcArgs>> oidcs) {
-            this.oidcs = oidcs;
+            $.oidcs = oidcs;
             return this;
         }
-        public Builder oidcs(@Nullable List<ClusterIdentityOidcArgs> oidcs) {
-            this.oidcs = Codegen.ofNullable(oidcs);
-            return this;
+
+        public Builder oidcs(List<ClusterIdentityOidcArgs> oidcs) {
+            return oidcs(Output.of(oidcs));
         }
+
         public Builder oidcs(ClusterIdentityOidcArgs... oidcs) {
             return oidcs(List.of(oidcs));
-        }        public ClusterIdentityArgs build() {
-            return new ClusterIdentityArgs(oidcs);
+        }
+
+        public ClusterIdentityArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class MedianStoppingPolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="delayEvaluation")
-      private final @Nullable Integer delayEvaluation;
+    private @Nullable Integer delayEvaluation;
 
     public Optional<Integer> delayEvaluation() {
-        return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
+        return Optional.ofNullable(this.delayEvaluation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MedianStoppingPolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable Integer evaluationInterval;
+    private @Nullable Integer evaluationInterval;
 
     public Optional<Integer> evaluationInterval() {
-        return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     /**
@@ -47,64 +47,57 @@ public final class MedianStoppingPolicyResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="policyType", required=true)
-      private final String policyType;
+    private String policyType;
 
     public String policyType() {
         return this.policyType;
     }
 
-    public MedianStoppingPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType) {
-        this.delayEvaluation = delayEvaluation;
-        this.evaluationInterval = evaluationInterval;
-        this.policyType = Codegen.stringProp("policyType").arg(policyType).require();
-    }
+    private MedianStoppingPolicyResponse() {}
 
-    private MedianStoppingPolicyResponse() {
-        this.delayEvaluation = null;
-        this.evaluationInterval = null;
-        this.policyType = null;
+    private MedianStoppingPolicyResponse(MedianStoppingPolicyResponse $) {
+        this.delayEvaluation = $.delayEvaluation;
+        this.evaluationInterval = $.evaluationInterval;
+        this.policyType = $.policyType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MedianStoppingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer delayEvaluation;
-        private @Nullable Integer evaluationInterval;
-        private String policyType;
+        private MedianStoppingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MedianStoppingPolicyResponse();
         }
 
         public Builder(MedianStoppingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delayEvaluation = defaults.delayEvaluation;
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.policyType = defaults.policyType;
+            $ = new MedianStoppingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = delayEvaluation;
+            $.delayEvaluation = delayEvaluation;
             return this;
         }
+
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
+
         public Builder policyType(String policyType) {
-            this.policyType = Objects.requireNonNull(policyType);
+            $.policyType = policyType;
             return this;
-        }        public MedianStoppingPolicyResponse build() {
-            return new MedianStoppingPolicyResponse(delayEvaluation, evaluationInterval, policyType);
+        }
+
+        public MedianStoppingPolicyResponse build() {
+            $.policyType = Codegen.stringProp("policyType").arg($.policyType).require();
+            return $;
         }
     }
+
 }

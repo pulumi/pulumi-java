@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class ObbFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="obb", required=true)
-      private final Output<FileReferenceArgs> obb;
+    private Output<FileReferenceArgs> obb;
 
     public Output<FileReferenceArgs> obb() {
         return this.obb;
@@ -35,63 +34,60 @@ public final class ObbFileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="obbFileName", required=true)
-      private final Output<String> obbFileName;
+    private Output<String> obbFileName;
 
     public Output<String> obbFileName() {
         return this.obbFileName;
     }
 
-    public ObbFileArgs(
-        Output<FileReferenceArgs> obb,
-        Output<String> obbFileName) {
-        this.obb = Objects.requireNonNull(obb, "expected parameter 'obb' to be non-null");
-        this.obbFileName = Objects.requireNonNull(obbFileName, "expected parameter 'obbFileName' to be non-null");
-    }
+    private ObbFileArgs() {}
 
-    private ObbFileArgs() {
-        this.obb = Codegen.empty();
-        this.obbFileName = Codegen.empty();
+    private ObbFileArgs(ObbFileArgs $) {
+        this.obb = $.obb;
+        this.obbFileName = $.obbFileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObbFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FileReferenceArgs> obb;
-        private Output<String> obbFileName;
+        private ObbFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObbFileArgs();
         }
 
         public Builder(ObbFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.obb = defaults.obb;
-    	      this.obbFileName = defaults.obbFileName;
+            $ = new ObbFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder obb(Output<FileReferenceArgs> obb) {
-            this.obb = Objects.requireNonNull(obb);
+            $.obb = obb;
             return this;
         }
+
         public Builder obb(FileReferenceArgs obb) {
-            this.obb = Output.of(Objects.requireNonNull(obb));
-            return this;
+            return obb(Output.of(obb));
         }
+
         public Builder obbFileName(Output<String> obbFileName) {
-            this.obbFileName = Objects.requireNonNull(obbFileName);
+            $.obbFileName = obbFileName;
             return this;
         }
+
         public Builder obbFileName(String obbFileName) {
-            this.obbFileName = Output.of(Objects.requireNonNull(obbFileName));
-            return this;
-        }        public ObbFileArgs build() {
-            return new ObbFileArgs(obb, obbFileName);
+            return obbFileName(Output.of(obbFileName));
+        }
+
+        public ObbFileArgs build() {
+            $.obb = Objects.requireNonNull($.obb, "expected parameter 'obb' to be non-null");
+            $.obbFileName = Objects.requireNonNull($.obbFileName, "expected parameter 'obbFileName' to be non-null");
+            return $;
         }
     }
+
 }

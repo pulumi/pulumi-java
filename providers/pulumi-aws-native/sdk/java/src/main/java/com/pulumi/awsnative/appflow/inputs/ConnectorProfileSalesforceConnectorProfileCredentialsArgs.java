@@ -6,9 +6,9 @@ package com.pulumi.awsnative.appflow.inputs;
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="accessToken")
-      private final @Nullable Output<String> accessToken;
+    private @Nullable Output<String> accessToken;
 
-    public Output<String> accessToken() {
-        return this.accessToken == null ? Codegen.empty() : this.accessToken;
+    public Optional<Output<String>> accessToken() {
+        return Optional.ofNullable(this.accessToken);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="clientCredentialsArn")
-      private final @Nullable Output<String> clientCredentialsArn;
+    private @Nullable Output<String> clientCredentialsArn;
 
-    public Output<String> clientCredentialsArn() {
-        return this.clientCredentialsArn == null ? Codegen.empty() : this.clientCredentialsArn;
+    public Optional<Output<String>> clientCredentialsArn() {
+        return Optional.ofNullable(this.clientCredentialsArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="connectorOAuthRequest")
-      private final @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+    private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
-    public Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest() {
-        return this.connectorOAuthRequest == null ? Codegen.empty() : this.connectorOAuthRequest;
+    public Optional<Output<ConnectorProfileConnectorOAuthRequestArgs>> connectorOAuthRequest() {
+        return Optional.ofNullable(this.connectorOAuthRequest);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @Import(name="refreshToken")
-      private final @Nullable Output<String> refreshToken;
+    private @Nullable Output<String> refreshToken;
 
-    public Output<String> refreshToken() {
-        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
+    public Optional<Output<String>> refreshToken() {
+        return Optional.ofNullable(this.refreshToken);
     }
 
-    public ConnectorProfileSalesforceConnectorProfileCredentialsArgs(
-        @Nullable Output<String> accessToken,
-        @Nullable Output<String> clientCredentialsArn,
-        @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest,
-        @Nullable Output<String> refreshToken) {
-        this.accessToken = accessToken;
-        this.clientCredentialsArn = clientCredentialsArn;
-        this.connectorOAuthRequest = connectorOAuthRequest;
-        this.refreshToken = refreshToken;
-    }
+    private ConnectorProfileSalesforceConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileSalesforceConnectorProfileCredentialsArgs() {
-        this.accessToken = Codegen.empty();
-        this.clientCredentialsArn = Codegen.empty();
-        this.connectorOAuthRequest = Codegen.empty();
-        this.refreshToken = Codegen.empty();
+    private ConnectorProfileSalesforceConnectorProfileCredentialsArgs(ConnectorProfileSalesforceConnectorProfileCredentialsArgs $) {
+        this.accessToken = $.accessToken;
+        this.clientCredentialsArn = $.clientCredentialsArn;
+        this.connectorOAuthRequest = $.connectorOAuthRequest;
+        this.refreshToken = $.refreshToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileSalesforceConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessToken;
-        private @Nullable Output<String> clientCredentialsArn;
-        private @Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
-        private @Nullable Output<String> refreshToken;
+        private ConnectorProfileSalesforceConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileSalesforceConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileSalesforceConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessToken = defaults.accessToken;
-    	      this.clientCredentialsArn = defaults.clientCredentialsArn;
-    	      this.connectorOAuthRequest = defaults.connectorOAuthRequest;
-    	      this.refreshToken = defaults.refreshToken;
+            $ = new ConnectorProfileSalesforceConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessToken(@Nullable Output<String> accessToken) {
-            this.accessToken = accessToken;
+            $.accessToken = accessToken;
             return this;
         }
-        public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Codegen.ofNullable(accessToken);
-            return this;
+
+        public Builder accessToken(String accessToken) {
+            return accessToken(Output.of(accessToken));
         }
+
         public Builder clientCredentialsArn(@Nullable Output<String> clientCredentialsArn) {
-            this.clientCredentialsArn = clientCredentialsArn;
+            $.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
-        public Builder clientCredentialsArn(@Nullable String clientCredentialsArn) {
-            this.clientCredentialsArn = Codegen.ofNullable(clientCredentialsArn);
-            return this;
+
+        public Builder clientCredentialsArn(String clientCredentialsArn) {
+            return clientCredentialsArn(Output.of(clientCredentialsArn));
         }
+
         public Builder connectorOAuthRequest(@Nullable Output<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest) {
-            this.connectorOAuthRequest = connectorOAuthRequest;
+            $.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-        public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
-            this.connectorOAuthRequest = Codegen.ofNullable(connectorOAuthRequest);
-            return this;
+
+        public Builder connectorOAuthRequest(ConnectorProfileConnectorOAuthRequestArgs connectorOAuthRequest) {
+            return connectorOAuthRequest(Output.of(connectorOAuthRequest));
         }
+
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
-            this.refreshToken = refreshToken;
+            $.refreshToken = refreshToken;
             return this;
         }
-        public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Codegen.ofNullable(refreshToken);
-            return this;
-        }        public ConnectorProfileSalesforceConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileSalesforceConnectorProfileCredentialsArgs(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
+
+        public Builder refreshToken(String refreshToken) {
+            return refreshToken(Output.of(refreshToken));
+        }
+
+        public ConnectorProfileSalesforceConnectorProfileCredentialsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.SecretLabelGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<SecretLabelGetArgs>> labels;
+    private @Nullable Output<List<SecretLabelGetArgs>> labels;
 
-    public Output<List<SecretLabelGetArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<SecretLabelGetArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -44,79 +44,72 @@ public final class SecretState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecretState(
-        @Nullable Output<String> data,
-        @Nullable Output<List<SecretLabelGetArgs>> labels,
-        @Nullable Output<String> name) {
-        this.data = data;
-        this.labels = labels;
-        this.name = name;
-    }
+    private SecretState() {}
 
-    private SecretState() {
-        this.data = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecretState(SecretState $) {
+        this.data = $.data;
+        this.labels = $.labels;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<List<SecretLabelGetArgs>> labels;
-        private @Nullable Output<String> name;
+        private SecretState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretState();
         }
 
         public Builder(SecretState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
+            $ = new SecretState(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder labels(@Nullable Output<List<SecretLabelGetArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<SecretLabelGetArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<SecretLabelGetArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(SecretLabelGetArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecretState build() {
-            return new SecretState(data, labels, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecretState build() {
+            return $;
         }
     }
+
 }

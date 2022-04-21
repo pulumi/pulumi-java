@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.InstallationArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GrafeasV1beta1PackageDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="installation", required=true)
-      private final Output<InstallationArgs> installation;
+    private Output<InstallationArgs> installation;
 
     public Output<InstallationArgs> installation() {
         return this.installation;
     }
 
-    public GrafeasV1beta1PackageDetailsArgs(Output<InstallationArgs> installation) {
-        this.installation = Objects.requireNonNull(installation, "expected parameter 'installation' to be non-null");
-    }
+    private GrafeasV1beta1PackageDetailsArgs() {}
 
-    private GrafeasV1beta1PackageDetailsArgs() {
-        this.installation = Codegen.empty();
+    private GrafeasV1beta1PackageDetailsArgs(GrafeasV1beta1PackageDetailsArgs $) {
+        this.installation = $.installation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1PackageDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<InstallationArgs> installation;
+        private GrafeasV1beta1PackageDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1PackageDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1PackageDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.installation = defaults.installation;
+            $ = new GrafeasV1beta1PackageDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder installation(Output<InstallationArgs> installation) {
-            this.installation = Objects.requireNonNull(installation);
+            $.installation = installation;
             return this;
         }
+
         public Builder installation(InstallationArgs installation) {
-            this.installation = Output.of(Objects.requireNonNull(installation));
-            return this;
-        }        public GrafeasV1beta1PackageDetailsArgs build() {
-            return new GrafeasV1beta1PackageDetailsArgs(installation);
+            return installation(Output.of(installation));
+        }
+
+        public GrafeasV1beta1PackageDetailsArgs build() {
+            $.installation = Objects.requireNonNull($.installation, "expected parameter 'installation' to be non-null");
+            return $;
         }
     }
+
 }

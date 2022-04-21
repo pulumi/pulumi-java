@@ -23,10 +23,10 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="end")
-      private final @Nullable String end;
+    private @Nullable String end;
 
     public Optional<String> end() {
-        return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class TimeSpanResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start")
-      private final @Nullable String start;
+    private @Nullable String start;
 
     public Optional<String> start() {
-        return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
+        return Optional.ofNullable(this.start);
     }
 
-    public TimeSpanResponse(
-        @Nullable String end,
-        @Nullable String start) {
-        this.end = end;
-        this.start = start;
-    }
+    private TimeSpanResponse() {}
 
-    private TimeSpanResponse() {
-        this.end = null;
-        this.start = null;
+    private TimeSpanResponse(TimeSpanResponse $) {
+        this.end = $.end;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSpanResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String end;
-        private @Nullable String start;
+        private TimeSpanResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSpanResponse();
         }
 
         public Builder(TimeSpanResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.start = defaults.start;
+            $ = new TimeSpanResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable String end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
+
         public Builder start(@Nullable String start) {
-            this.start = start;
+            $.start = start;
             return this;
-        }        public TimeSpanResponse build() {
-            return new TimeSpanResponse(end, start);
+        }
+
+        public TimeSpanResponse build() {
+            return $;
         }
     }
+
 }

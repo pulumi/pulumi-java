@@ -6,9 +6,9 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.BucketOwnershipControlsRuleGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class BucketOwnershipControlsState extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rule")
-      private final @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
+    private @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
 
-    public Output<BucketOwnershipControlsRuleGetArgs> rule() {
-        return this.rule == null ? Codegen.empty() : this.rule;
+    public Optional<Output<BucketOwnershipControlsRuleGetArgs>> rule() {
+        return Optional.ofNullable(this.rule);
     }
 
-    public BucketOwnershipControlsState(
-        @Nullable Output<String> bucket,
-        @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
-        this.bucket = bucket;
-        this.rule = rule;
-    }
+    private BucketOwnershipControlsState() {}
 
-    private BucketOwnershipControlsState() {
-        this.bucket = Codegen.empty();
-        this.rule = Codegen.empty();
+    private BucketOwnershipControlsState(BucketOwnershipControlsState $) {
+        this.bucket = $.bucket;
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketOwnershipControlsState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<BucketOwnershipControlsRuleGetArgs> rule;
+        private BucketOwnershipControlsState $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketOwnershipControlsState();
         }
 
         public Builder(BucketOwnershipControlsState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.rule = defaults.rule;
+            $ = new BucketOwnershipControlsState(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder rule(@Nullable Output<BucketOwnershipControlsRuleGetArgs> rule) {
-            this.rule = rule;
+            $.rule = rule;
             return this;
         }
-        public Builder rule(@Nullable BucketOwnershipControlsRuleGetArgs rule) {
-            this.rule = Codegen.ofNullable(rule);
-            return this;
-        }        public BucketOwnershipControlsState build() {
-            return new BucketOwnershipControlsState(bucket, rule);
+
+        public Builder rule(BucketOwnershipControlsRuleGetArgs rule) {
+            return rule(Output.of(rule));
+        }
+
+        public BucketOwnershipControlsState build() {
+            return $;
         }
     }
+
 }

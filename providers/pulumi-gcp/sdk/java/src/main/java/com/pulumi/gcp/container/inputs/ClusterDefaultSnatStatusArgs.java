@@ -5,7 +5,6 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ClusterDefaultSnatStatusArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="disabled", required=true)
-      private final Output<Boolean> disabled;
+    private Output<Boolean> disabled;
 
     public Output<Boolean> disabled() {
         return this.disabled;
     }
 
-    public ClusterDefaultSnatStatusArgs(Output<Boolean> disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private ClusterDefaultSnatStatusArgs() {}
 
-    private ClusterDefaultSnatStatusArgs() {
-        this.disabled = Codegen.empty();
+    private ClusterDefaultSnatStatusArgs(ClusterDefaultSnatStatusArgs $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterDefaultSnatStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> disabled;
+        private ClusterDefaultSnatStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterDefaultSnatStatusArgs();
         }
 
         public Builder(ClusterDefaultSnatStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new ClusterDefaultSnatStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Output<Boolean> disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder disabled(Boolean disabled) {
-            this.disabled = Output.of(Objects.requireNonNull(disabled));
-            return this;
-        }        public ClusterDefaultSnatStatusArgs build() {
-            return new ClusterDefaultSnatStatusArgs(disabled);
+            return disabled(Output.of(disabled));
+        }
+
+        public ClusterDefaultSnatStatusArgs build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

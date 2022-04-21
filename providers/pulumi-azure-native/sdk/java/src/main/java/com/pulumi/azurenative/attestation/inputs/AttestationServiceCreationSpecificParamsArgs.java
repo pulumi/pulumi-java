@@ -6,8 +6,8 @@ package com.pulumi.azurenative.attestation.inputs;
 import com.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AttestationServiceCreationSpecificParamsArgs extends com.pulu
      * 
      */
     @Import(name="policySigningCertificates")
-      private final @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
+    private @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
-    public Output<JSONWebKeySetArgs> policySigningCertificates() {
-        return this.policySigningCertificates == null ? Codegen.empty() : this.policySigningCertificates;
+    public Optional<Output<JSONWebKeySetArgs>> policySigningCertificates() {
+        return Optional.ofNullable(this.policySigningCertificates);
     }
 
-    public AttestationServiceCreationSpecificParamsArgs(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
-        this.policySigningCertificates = policySigningCertificates;
-    }
+    private AttestationServiceCreationSpecificParamsArgs() {}
 
-    private AttestationServiceCreationSpecificParamsArgs() {
-        this.policySigningCertificates = Codegen.empty();
+    private AttestationServiceCreationSpecificParamsArgs(AttestationServiceCreationSpecificParamsArgs $) {
+        this.policySigningCertificates = $.policySigningCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationServiceCreationSpecificParamsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
+        private AttestationServiceCreationSpecificParamsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationServiceCreationSpecificParamsArgs();
         }
 
         public Builder(AttestationServiceCreationSpecificParamsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policySigningCertificates = defaults.policySigningCertificates;
+            $ = new AttestationServiceCreationSpecificParamsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policySigningCertificates(@Nullable Output<JSONWebKeySetArgs> policySigningCertificates) {
-            this.policySigningCertificates = policySigningCertificates;
+            $.policySigningCertificates = policySigningCertificates;
             return this;
         }
-        public Builder policySigningCertificates(@Nullable JSONWebKeySetArgs policySigningCertificates) {
-            this.policySigningCertificates = Codegen.ofNullable(policySigningCertificates);
-            return this;
-        }        public AttestationServiceCreationSpecificParamsArgs build() {
-            return new AttestationServiceCreationSpecificParamsArgs(policySigningCertificates);
+
+        public Builder policySigningCertificates(JSONWebKeySetArgs policySigningCertificates) {
+            return policySigningCertificates(Output.of(policySigningCertificates));
+        }
+
+        public AttestationServiceCreationSpecificParamsArgs build() {
+            return $;
         }
     }
+
 }

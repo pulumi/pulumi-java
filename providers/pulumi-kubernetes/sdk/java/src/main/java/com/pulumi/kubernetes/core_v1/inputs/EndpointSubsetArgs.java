@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.EndpointAddressArgs;
 import com.pulumi.kubernetes.core_v1.inputs.EndpointPortArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="addresses")
-      private final @Nullable Output<List<EndpointAddressArgs>> addresses;
+    private @Nullable Output<List<EndpointAddressArgs>> addresses;
 
-    public Output<List<EndpointAddressArgs>> addresses() {
-        return this.addresses == null ? Codegen.empty() : this.addresses;
+    public Optional<Output<List<EndpointAddressArgs>>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="notReadyAddresses")
-      private final @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
+    private @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
 
-    public Output<List<EndpointAddressArgs>> notReadyAddresses() {
-        return this.notReadyAddresses == null ? Codegen.empty() : this.notReadyAddresses;
+    public Optional<Output<List<EndpointAddressArgs>>> notReadyAddresses() {
+        return Optional.ofNullable(this.notReadyAddresses);
     }
 
     /**
@@ -55,85 +55,80 @@ public final class EndpointSubsetArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<EndpointPortArgs>> ports;
+    private @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Output<List<EndpointPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<EndpointPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public EndpointSubsetArgs(
-        @Nullable Output<List<EndpointAddressArgs>> addresses,
-        @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses,
-        @Nullable Output<List<EndpointPortArgs>> ports) {
-        this.addresses = addresses;
-        this.notReadyAddresses = notReadyAddresses;
-        this.ports = ports;
-    }
+    private EndpointSubsetArgs() {}
 
-    private EndpointSubsetArgs() {
-        this.addresses = Codegen.empty();
-        this.notReadyAddresses = Codegen.empty();
-        this.ports = Codegen.empty();
+    private EndpointSubsetArgs(EndpointSubsetArgs $) {
+        this.addresses = $.addresses;
+        this.notReadyAddresses = $.notReadyAddresses;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointSubsetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EndpointAddressArgs>> addresses;
-        private @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
-        private @Nullable Output<List<EndpointPortArgs>> ports;
+        private EndpointSubsetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointSubsetArgs();
         }
 
         public Builder(EndpointSubsetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.notReadyAddresses = defaults.notReadyAddresses;
-    	      this.ports = defaults.ports;
+            $ = new EndpointSubsetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable Output<List<EndpointAddressArgs>> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
-        public Builder addresses(@Nullable List<EndpointAddressArgs> addresses) {
-            this.addresses = Codegen.ofNullable(addresses);
-            return this;
+
+        public Builder addresses(List<EndpointAddressArgs> addresses) {
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(EndpointAddressArgs... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder notReadyAddresses(@Nullable Output<List<EndpointAddressArgs>> notReadyAddresses) {
-            this.notReadyAddresses = notReadyAddresses;
+            $.notReadyAddresses = notReadyAddresses;
             return this;
         }
-        public Builder notReadyAddresses(@Nullable List<EndpointAddressArgs> notReadyAddresses) {
-            this.notReadyAddresses = Codegen.ofNullable(notReadyAddresses);
-            return this;
+
+        public Builder notReadyAddresses(List<EndpointAddressArgs> notReadyAddresses) {
+            return notReadyAddresses(Output.of(notReadyAddresses));
         }
+
         public Builder notReadyAddresses(EndpointAddressArgs... notReadyAddresses) {
             return notReadyAddresses(List.of(notReadyAddresses));
         }
+
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<EndpointPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<EndpointPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(EndpointPortArgs... ports) {
             return ports(List.of(ports));
-        }        public EndpointSubsetArgs build() {
-            return new EndpointSubsetArgs(addresses, notReadyAddresses, ports);
+        }
+
+        public EndpointSubsetArgs build() {
+            return $;
         }
     }
+
 }

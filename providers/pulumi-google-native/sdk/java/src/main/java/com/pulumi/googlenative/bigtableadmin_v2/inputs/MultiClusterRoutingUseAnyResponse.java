@@ -22,48 +22,49 @@ public final class MultiClusterRoutingUseAnyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clusterIds", required=true)
-      private final List<String> clusterIds;
+    private List<String> clusterIds;
 
     public List<String> clusterIds() {
         return this.clusterIds;
     }
 
-    public MultiClusterRoutingUseAnyResponse(List<String> clusterIds) {
-        this.clusterIds = Objects.requireNonNull(clusterIds, "expected parameter 'clusterIds' to be non-null");
-    }
+    private MultiClusterRoutingUseAnyResponse() {}
 
-    private MultiClusterRoutingUseAnyResponse() {
-        this.clusterIds = List.of();
+    private MultiClusterRoutingUseAnyResponse(MultiClusterRoutingUseAnyResponse $) {
+        this.clusterIds = $.clusterIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiClusterRoutingUseAnyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> clusterIds;
+        private MultiClusterRoutingUseAnyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiClusterRoutingUseAnyResponse();
         }
 
         public Builder(MultiClusterRoutingUseAnyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIds = defaults.clusterIds;
+            $ = new MultiClusterRoutingUseAnyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIds(List<String> clusterIds) {
-            this.clusterIds = Objects.requireNonNull(clusterIds);
+            $.clusterIds = clusterIds;
             return this;
         }
+
         public Builder clusterIds(String... clusterIds) {
             return clusterIds(List.of(clusterIds));
-        }        public MultiClusterRoutingUseAnyResponse build() {
-            return new MultiClusterRoutingUseAnyResponse(clusterIds);
+        }
+
+        public MultiClusterRoutingUseAnyResponse build() {
+            $.clusterIds = Objects.requireNonNull($.clusterIds, "expected parameter 'clusterIds' to be non-null");
+            return $;
         }
     }
+
 }

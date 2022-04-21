@@ -21,45 +21,45 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
      * 
      */
     @Import(name="labelName", required=true)
-      private final String labelName;
+    private String labelName;
 
     public String labelName() {
         return this.labelName;
     }
 
-    public LoggingConfigurationConditionLabelNameConditionProperties(String labelName) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-    }
+    private LoggingConfigurationConditionLabelNameConditionProperties() {}
 
-    private LoggingConfigurationConditionLabelNameConditionProperties() {
-        this.labelName = null;
+    private LoggingConfigurationConditionLabelNameConditionProperties(LoggingConfigurationConditionLabelNameConditionProperties $) {
+        this.labelName = $.labelName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigurationConditionLabelNameConditionProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labelName;
+        private LoggingConfigurationConditionLabelNameConditionProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigurationConditionLabelNameConditionProperties();
         }
 
         public Builder(LoggingConfigurationConditionLabelNameConditionProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
+            $ = new LoggingConfigurationConditionLabelNameConditionProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(String labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
-        }        public LoggingConfigurationConditionLabelNameConditionProperties build() {
-            return new LoggingConfigurationConditionLabelNameConditionProperties(labelName);
+        }
+
+        public LoggingConfigurationConditionLabelNameConditionProperties build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            return $;
         }
     }
+
 }

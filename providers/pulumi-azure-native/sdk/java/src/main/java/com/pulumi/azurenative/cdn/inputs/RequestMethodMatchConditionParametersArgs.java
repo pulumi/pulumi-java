@@ -7,11 +7,11 @@ import com.pulumi.azurenative.cdn.enums.RequestMethodOperator;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class RequestMethodMatchConditionParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="matchValues")
-      private final @Nullable Output<List<String>> matchValues;
+    private @Nullable Output<List<String>> matchValues;
 
-    public Output<List<String>> matchValues() {
-        return this.matchValues == null ? Codegen.empty() : this.matchValues;
+    public Optional<Output<List<String>>> matchValues() {
+        return Optional.ofNullable(this.matchValues);
     }
 
     /**
@@ -39,14 +39,14 @@ public final class RequestMethodMatchConditionParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="negateCondition")
-      private final @Nullable Output<Boolean> negateCondition;
+    private @Nullable Output<Boolean> negateCondition;
 
-    public Output<Boolean> negateCondition() {
-        return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
+    public Optional<Output<Boolean>> negateCondition() {
+        return Optional.ofNullable(this.negateCondition);
     }
 
     @Import(name="odataType", required=true)
-      private final Output<String> odataType;
+    private Output<String> odataType;
 
     public Output<String> odataType() {
         return this.odataType;
@@ -57,92 +57,84 @@ public final class RequestMethodMatchConditionParametersArgs extends com.pulumi.
      * 
      */
     @Import(name="operator", required=true)
-      private final Output<Either<String,RequestMethodOperator>> operator;
+    private Output<Either<String,RequestMethodOperator>> operator;
 
     public Output<Either<String,RequestMethodOperator>> operator() {
         return this.operator;
     }
 
-    public RequestMethodMatchConditionParametersArgs(
-        @Nullable Output<List<String>> matchValues,
-        @Nullable Output<Boolean> negateCondition,
-        Output<String> odataType,
-        Output<Either<String,RequestMethodOperator>> operator) {
-        this.matchValues = matchValues;
-        this.negateCondition = negateCondition;
-        this.odataType = Objects.requireNonNull(odataType, "expected parameter 'odataType' to be non-null");
-        this.operator = Objects.requireNonNull(operator, "expected parameter 'operator' to be non-null");
-    }
+    private RequestMethodMatchConditionParametersArgs() {}
 
-    private RequestMethodMatchConditionParametersArgs() {
-        this.matchValues = Codegen.empty();
-        this.negateCondition = Codegen.empty();
-        this.odataType = Codegen.empty();
-        this.operator = Codegen.empty();
+    private RequestMethodMatchConditionParametersArgs(RequestMethodMatchConditionParametersArgs $) {
+        this.matchValues = $.matchValues;
+        this.negateCondition = $.negateCondition;
+        this.odataType = $.odataType;
+        this.operator = $.operator;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RequestMethodMatchConditionParametersArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> matchValues;
-        private @Nullable Output<Boolean> negateCondition;
-        private Output<String> odataType;
-        private Output<Either<String,RequestMethodOperator>> operator;
+        private RequestMethodMatchConditionParametersArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RequestMethodMatchConditionParametersArgs();
         }
 
         public Builder(RequestMethodMatchConditionParametersArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchValues = defaults.matchValues;
-    	      this.negateCondition = defaults.negateCondition;
-    	      this.odataType = defaults.odataType;
-    	      this.operator = defaults.operator;
+            $ = new RequestMethodMatchConditionParametersArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchValues(@Nullable Output<List<String>> matchValues) {
-            this.matchValues = matchValues;
+            $.matchValues = matchValues;
             return this;
         }
-        public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = Codegen.ofNullable(matchValues);
-            return this;
+
+        public Builder matchValues(List<String> matchValues) {
+            return matchValues(Output.of(matchValues));
         }
+
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
+
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
-            this.negateCondition = negateCondition;
+            $.negateCondition = negateCondition;
             return this;
         }
-        public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Codegen.ofNullable(negateCondition);
-            return this;
+
+        public Builder negateCondition(Boolean negateCondition) {
+            return negateCondition(Output.of(negateCondition));
         }
+
         public Builder odataType(Output<String> odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Output.of(Objects.requireNonNull(odataType));
-            return this;
+            return odataType(Output.of(odataType));
         }
+
         public Builder operator(Output<Either<String,RequestMethodOperator>> operator) {
-            this.operator = Objects.requireNonNull(operator);
+            $.operator = operator;
             return this;
         }
+
         public Builder operator(Either<String,RequestMethodOperator> operator) {
-            this.operator = Output.of(Objects.requireNonNull(operator));
-            return this;
-        }        public RequestMethodMatchConditionParametersArgs build() {
-            return new RequestMethodMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator);
+            return operator(Output.of(operator));
+        }
+
+        public RequestMethodMatchConditionParametersArgs build() {
+            $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
+            $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");
+            return $;
         }
     }
+
 }

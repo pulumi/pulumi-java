@@ -6,7 +6,6 @@ package com.pulumi.awsnative.devopsguru;
 import com.pulumi.awsnative.devopsguru.inputs.ResourceCollectionFilterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -15,49 +14,49 @@ public final class ResourceCollectionArgs extends com.pulumi.resources.ResourceA
     public static final ResourceCollectionArgs Empty = new ResourceCollectionArgs();
 
     @Import(name="resourceCollectionFilter", required=true)
-      private final Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
+    private Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
     public Output<ResourceCollectionFilterArgs> resourceCollectionFilter() {
         return this.resourceCollectionFilter;
     }
 
-    public ResourceCollectionArgs(Output<ResourceCollectionFilterArgs> resourceCollectionFilter) {
-        this.resourceCollectionFilter = Objects.requireNonNull(resourceCollectionFilter, "expected parameter 'resourceCollectionFilter' to be non-null");
-    }
+    private ResourceCollectionArgs() {}
 
-    private ResourceCollectionArgs() {
-        this.resourceCollectionFilter = Codegen.empty();
+    private ResourceCollectionArgs(ResourceCollectionArgs $) {
+        this.resourceCollectionFilter = $.resourceCollectionFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceCollectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
+        private ResourceCollectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceCollectionArgs();
         }
 
         public Builder(ResourceCollectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceCollectionFilter = defaults.resourceCollectionFilter;
+            $ = new ResourceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceCollectionFilter(Output<ResourceCollectionFilterArgs> resourceCollectionFilter) {
-            this.resourceCollectionFilter = Objects.requireNonNull(resourceCollectionFilter);
+            $.resourceCollectionFilter = resourceCollectionFilter;
             return this;
         }
+
         public Builder resourceCollectionFilter(ResourceCollectionFilterArgs resourceCollectionFilter) {
-            this.resourceCollectionFilter = Output.of(Objects.requireNonNull(resourceCollectionFilter));
-            return this;
-        }        public ResourceCollectionArgs build() {
-            return new ResourceCollectionArgs(resourceCollectionFilter);
+            return resourceCollectionFilter(Output.of(resourceCollectionFilter));
+        }
+
+        public ResourceCollectionArgs build() {
+            $.resourceCollectionFilter = Objects.requireNonNull($.resourceCollectionFilter, "expected parameter 'resourceCollectionFilter' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.cloudfront;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="code", required=true)
-      private final Output<String> code;
+    private Output<String> code;
 
     public Output<String> code() {
         return this.code;
@@ -32,10 +32,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publish")
-      private final @Nullable Output<Boolean> publish;
+    private @Nullable Output<Boolean> publish;
 
-    public Output<Boolean> publish() {
-        return this.publish == null ? Codegen.empty() : this.publish;
+    public Optional<Output<Boolean>> publish() {
+        return Optional.ofNullable(this.publish);
     }
 
     /**
@@ -65,102 +65,90 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtime", required=true)
-      private final Output<String> runtime;
+    private Output<String> runtime;
 
     public Output<String> runtime() {
         return this.runtime;
     }
 
-    public FunctionArgs(
-        Output<String> code,
-        @Nullable Output<String> comment,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> publish,
-        Output<String> runtime) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.comment = comment;
-        this.name = name;
-        this.publish = publish;
-        this.runtime = Objects.requireNonNull(runtime, "expected parameter 'runtime' to be non-null");
-    }
+    private FunctionArgs() {}
 
-    private FunctionArgs() {
-        this.code = Codegen.empty();
-        this.comment = Codegen.empty();
-        this.name = Codegen.empty();
-        this.publish = Codegen.empty();
-        this.runtime = Codegen.empty();
+    private FunctionArgs(FunctionArgs $) {
+        this.code = $.code;
+        this.comment = $.comment;
+        this.name = $.name;
+        this.publish = $.publish;
+        this.runtime = $.runtime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> code;
-        private @Nullable Output<String> comment;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> publish;
-        private Output<String> runtime;
+        private FunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FunctionArgs();
         }
 
         public Builder(FunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.comment = defaults.comment;
-    	      this.name = defaults.name;
-    	      this.publish = defaults.publish;
-    	      this.runtime = defaults.runtime;
+            $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder code(Output<String> code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder code(String code) {
-            this.code = Output.of(Objects.requireNonNull(code));
-            return this;
+            return code(Output.of(code));
         }
+
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder publish(@Nullable Output<Boolean> publish) {
-            this.publish = publish;
+            $.publish = publish;
             return this;
         }
-        public Builder publish(@Nullable Boolean publish) {
-            this.publish = Codegen.ofNullable(publish);
-            return this;
+
+        public Builder publish(Boolean publish) {
+            return publish(Output.of(publish));
         }
+
         public Builder runtime(Output<String> runtime) {
-            this.runtime = Objects.requireNonNull(runtime);
+            $.runtime = runtime;
             return this;
         }
+
         public Builder runtime(String runtime) {
-            this.runtime = Output.of(Objects.requireNonNull(runtime));
-            return this;
-        }        public FunctionArgs build() {
-            return new FunctionArgs(code, comment, name, publish, runtime);
+            return runtime(Output.of(runtime));
+        }
+
+        public FunctionArgs build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.runtime = Objects.requireNonNull($.runtime, "expected parameter 'runtime' to be non-null");
+            return $;
         }
     }
+
 }

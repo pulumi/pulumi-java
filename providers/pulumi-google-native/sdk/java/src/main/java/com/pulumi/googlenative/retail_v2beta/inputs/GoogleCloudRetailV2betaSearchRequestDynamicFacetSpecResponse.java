@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse 
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
     }
 
-    public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(String mode) {
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-    }
+    private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse() {}
 
-    private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse() {
-        this.mode = null;
+    private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mode;
+        private GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
-        }        public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse build() {
-            return new GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse(mode);
+        }
+
+        public GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse build() {
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            return $;
         }
     }
+
 }

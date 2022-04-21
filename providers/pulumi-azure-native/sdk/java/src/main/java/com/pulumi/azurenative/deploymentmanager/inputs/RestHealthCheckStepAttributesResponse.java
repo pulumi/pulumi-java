@@ -26,7 +26,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="healthChecks", required=true)
-      private final List<RestHealthCheckResponse> healthChecks;
+    private List<RestHealthCheckResponse> healthChecks;
 
     public List<RestHealthCheckResponse> healthChecks() {
         return this.healthChecks;
@@ -37,7 +37,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="healthyStateDuration", required=true)
-      private final String healthyStateDuration;
+    private String healthyStateDuration;
 
     public String healthyStateDuration() {
         return this.healthyStateDuration;
@@ -48,10 +48,10 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="maxElasticDuration")
-      private final @Nullable String maxElasticDuration;
+    private @Nullable String maxElasticDuration;
 
     public Optional<String> maxElasticDuration() {
-        return this.maxElasticDuration == null ? Optional.empty() : Optional.ofNullable(this.maxElasticDuration);
+        return Optional.ofNullable(this.maxElasticDuration);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -71,85 +71,75 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
      * 
      */
     @Import(name="waitDuration")
-      private final @Nullable String waitDuration;
+    private @Nullable String waitDuration;
 
     public Optional<String> waitDuration() {
-        return this.waitDuration == null ? Optional.empty() : Optional.ofNullable(this.waitDuration);
+        return Optional.ofNullable(this.waitDuration);
     }
 
-    public RestHealthCheckStepAttributesResponse(
-        List<RestHealthCheckResponse> healthChecks,
-        String healthyStateDuration,
-        @Nullable String maxElasticDuration,
-        String type,
-        @Nullable String waitDuration) {
-        this.healthChecks = Objects.requireNonNull(healthChecks, "expected parameter 'healthChecks' to be non-null");
-        this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
-        this.maxElasticDuration = maxElasticDuration;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.waitDuration = waitDuration;
-    }
+    private RestHealthCheckStepAttributesResponse() {}
 
-    private RestHealthCheckStepAttributesResponse() {
-        this.healthChecks = List.of();
-        this.healthyStateDuration = null;
-        this.maxElasticDuration = null;
-        this.type = null;
-        this.waitDuration = null;
+    private RestHealthCheckStepAttributesResponse(RestHealthCheckStepAttributesResponse $) {
+        this.healthChecks = $.healthChecks;
+        this.healthyStateDuration = $.healthyStateDuration;
+        this.maxElasticDuration = $.maxElasticDuration;
+        this.type = $.type;
+        this.waitDuration = $.waitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestHealthCheckStepAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RestHealthCheckResponse> healthChecks;
-        private String healthyStateDuration;
-        private @Nullable String maxElasticDuration;
-        private String type;
-        private @Nullable String waitDuration;
+        private RestHealthCheckStepAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestHealthCheckStepAttributesResponse();
         }
 
         public Builder(RestHealthCheckStepAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthChecks = defaults.healthChecks;
-    	      this.healthyStateDuration = defaults.healthyStateDuration;
-    	      this.maxElasticDuration = defaults.maxElasticDuration;
-    	      this.type = defaults.type;
-    	      this.waitDuration = defaults.waitDuration;
+            $ = new RestHealthCheckStepAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder healthChecks(List<RestHealthCheckResponse> healthChecks) {
-            this.healthChecks = Objects.requireNonNull(healthChecks);
+            $.healthChecks = healthChecks;
             return this;
         }
+
         public Builder healthChecks(RestHealthCheckResponse... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
+
         public Builder healthyStateDuration(String healthyStateDuration) {
-            this.healthyStateDuration = Objects.requireNonNull(healthyStateDuration);
+            $.healthyStateDuration = healthyStateDuration;
             return this;
         }
+
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
-            this.maxElasticDuration = maxElasticDuration;
+            $.maxElasticDuration = maxElasticDuration;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = waitDuration;
+            $.waitDuration = waitDuration;
             return this;
-        }        public RestHealthCheckStepAttributesResponse build() {
-            return new RestHealthCheckStepAttributesResponse(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
+        }
+
+        public RestHealthCheckStepAttributesResponse build() {
+            $.healthChecks = Objects.requireNonNull($.healthChecks, "expected parameter 'healthChecks' to be non-null");
+            $.healthyStateDuration = Objects.requireNonNull($.healthyStateDuration, "expected parameter 'healthyStateDuration' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

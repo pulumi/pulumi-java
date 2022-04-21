@@ -24,10 +24,10 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configuration")
-      private final @Nullable ExportDatasetConfigurationResponse configuration;
+    private @Nullable ExportDatasetConfigurationResponse configuration;
 
     public Optional<ExportDatasetConfigurationResponse> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ExportDatasetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="granularity")
-      private final @Nullable String granularity;
+    private @Nullable String granularity;
 
     public Optional<String> granularity() {
-        return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
+        return Optional.ofNullable(this.granularity);
     }
 
-    public ExportDatasetResponse(
-        @Nullable ExportDatasetConfigurationResponse configuration,
-        @Nullable String granularity) {
-        this.configuration = configuration;
-        this.granularity = granularity;
-    }
+    private ExportDatasetResponse() {}
 
-    private ExportDatasetResponse() {
-        this.configuration = null;
-        this.granularity = null;
+    private ExportDatasetResponse(ExportDatasetResponse $) {
+        this.configuration = $.configuration;
+        this.granularity = $.granularity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportDatasetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ExportDatasetConfigurationResponse configuration;
-        private @Nullable String granularity;
+        private ExportDatasetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportDatasetResponse();
         }
 
         public Builder(ExportDatasetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configuration = defaults.configuration;
-    	      this.granularity = defaults.granularity;
+            $ = new ExportDatasetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configuration(@Nullable ExportDatasetConfigurationResponse configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder granularity(@Nullable String granularity) {
-            this.granularity = granularity;
+            $.granularity = granularity;
             return this;
-        }        public ExportDatasetResponse build() {
-            return new ExportDatasetResponse(configuration, granularity);
+        }
+
+        public ExportDatasetResponse build() {
+            return $;
         }
     }
+
 }

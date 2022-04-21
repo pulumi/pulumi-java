@@ -5,7 +5,6 @@ package com.pulumi.azurenative.datamigration.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class BlobShareArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sasUri", required=true)
-      private final Output<String> sasUri;
+    private Output<String> sasUri;
 
     public Output<String> sasUri() {
         return this.sasUri;
     }
 
-    public BlobShareArgs(Output<String> sasUri) {
-        this.sasUri = Objects.requireNonNull(sasUri, "expected parameter 'sasUri' to be non-null");
-    }
+    private BlobShareArgs() {}
 
-    private BlobShareArgs() {
-        this.sasUri = Codegen.empty();
+    private BlobShareArgs(BlobShareArgs $) {
+        this.sasUri = $.sasUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobShareArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sasUri;
+        private BlobShareArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobShareArgs();
         }
 
         public Builder(BlobShareArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasUri = defaults.sasUri;
+            $ = new BlobShareArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sasUri(Output<String> sasUri) {
-            this.sasUri = Objects.requireNonNull(sasUri);
+            $.sasUri = sasUri;
             return this;
         }
+
         public Builder sasUri(String sasUri) {
-            this.sasUri = Output.of(Objects.requireNonNull(sasUri));
-            return this;
-        }        public BlobShareArgs build() {
-            return new BlobShareArgs(sasUri);
+            return sasUri(Output.of(sasUri));
+        }
+
+        public BlobShareArgs build() {
+            $.sasUri = Objects.requireNonNull($.sasUri, "expected parameter 'sasUri' to be non-null");
+            return $;
         }
     }
+
 }

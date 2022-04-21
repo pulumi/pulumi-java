@@ -18,7 +18,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -29,14 +29,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="rrdatas", required=true)
-      private final List<String> rrdatas;
+    private List<String> rrdatas;
 
     public List<String> rrdatas() {
         return this.rrdatas;
@@ -47,79 +47,74 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse extends com.
      * 
      */
     @Import(name="signatureRrdatas", required=true)
-      private final List<String> signatureRrdatas;
+    private List<String> signatureRrdatas;
 
     public List<String> signatureRrdatas() {
         return this.signatureRrdatas;
     }
 
-    public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(
-        String kind,
-        String location,
-        List<String> rrdatas,
-        List<String> signatureRrdatas) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.rrdatas = Objects.requireNonNull(rrdatas, "expected parameter 'rrdatas' to be non-null");
-        this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas, "expected parameter 'signatureRrdatas' to be non-null");
-    }
+    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse() {}
 
-    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse() {
-        this.kind = null;
-        this.location = null;
-        this.rrdatas = List.of();
-        this.signatureRrdatas = List.of();
+    private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse $) {
+        this.kind = $.kind;
+        this.location = $.location;
+        this.rrdatas = $.rrdatas;
+        this.signatureRrdatas = $.signatureRrdatas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String location;
-        private List<String> rrdatas;
-        private List<String> signatureRrdatas;
+        private RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse();
         }
 
         public Builder(RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.rrdatas = defaults.rrdatas;
-    	      this.signatureRrdatas = defaults.signatureRrdatas;
+            $ = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder rrdatas(List<String> rrdatas) {
-            this.rrdatas = Objects.requireNonNull(rrdatas);
+            $.rrdatas = rrdatas;
             return this;
         }
+
         public Builder rrdatas(String... rrdatas) {
             return rrdatas(List.of(rrdatas));
         }
+
         public Builder signatureRrdatas(List<String> signatureRrdatas) {
-            this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
+            $.signatureRrdatas = signatureRrdatas;
             return this;
         }
+
         public Builder signatureRrdatas(String... signatureRrdatas) {
             return signatureRrdatas(List.of(signatureRrdatas));
-        }        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse build() {
-            return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse(kind, location, rrdatas, signatureRrdatas);
+        }
+
+        public RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.rrdatas = Objects.requireNonNull($.rrdatas, "expected parameter 'rrdatas' to be non-null");
+            $.signatureRrdatas = Objects.requireNonNull($.signatureRrdatas, "expected parameter 'signatureRrdatas' to be non-null");
+            return $;
         }
     }
+
 }

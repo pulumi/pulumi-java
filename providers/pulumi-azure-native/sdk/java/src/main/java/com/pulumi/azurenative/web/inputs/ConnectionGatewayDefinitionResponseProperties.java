@@ -22,10 +22,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="backendUri")
-      private final @Nullable String backendUri;
+    private @Nullable String backendUri;
 
     public Optional<String> backendUri() {
-        return this.backendUri == null ? Optional.empty() : Optional.ofNullable(this.backendUri);
+        return Optional.ofNullable(this.backendUri);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="connectionGatewayInstallation")
-      private final @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
+    private @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
 
     public Optional<ConnectionGatewayReferenceResponse> connectionGatewayInstallation() {
-        return this.connectionGatewayInstallation == null ? Optional.empty() : Optional.ofNullable(this.connectionGatewayInstallation);
+        return Optional.ofNullable(this.connectionGatewayInstallation);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="contactInformation")
-      private final @Nullable List<String> contactInformation;
+    private @Nullable List<String> contactInformation;
 
-    public List<String> contactInformation() {
-        return this.contactInformation == null ? List.of() : this.contactInformation;
+    public Optional<List<String>> contactInformation() {
+        return Optional.ofNullable(this.contactInformation);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="machineName")
-      private final @Nullable String machineName;
+    private @Nullable String machineName;
 
     public Optional<String> machineName() {
-        return this.machineName == null ? Optional.empty() : Optional.ofNullable(this.machineName);
+        return Optional.ofNullable(this.machineName);
     }
 
     /**
@@ -88,103 +88,84 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
      * 
      */
     @Import(name="status")
-      private final @Nullable Object status;
+    private @Nullable Object status;
 
     public Optional<Object> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public ConnectionGatewayDefinitionResponseProperties(
-        @Nullable String backendUri,
-        @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
-        @Nullable List<String> contactInformation,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String machineName,
-        @Nullable Object status) {
-        this.backendUri = backendUri;
-        this.connectionGatewayInstallation = connectionGatewayInstallation;
-        this.contactInformation = contactInformation;
-        this.description = description;
-        this.displayName = displayName;
-        this.machineName = machineName;
-        this.status = status;
-    }
+    private ConnectionGatewayDefinitionResponseProperties() {}
 
-    private ConnectionGatewayDefinitionResponseProperties() {
-        this.backendUri = null;
-        this.connectionGatewayInstallation = null;
-        this.contactInformation = List.of();
-        this.description = null;
-        this.displayName = null;
-        this.machineName = null;
-        this.status = null;
+    private ConnectionGatewayDefinitionResponseProperties(ConnectionGatewayDefinitionResponseProperties $) {
+        this.backendUri = $.backendUri;
+        this.connectionGatewayInstallation = $.connectionGatewayInstallation;
+        this.contactInformation = $.contactInformation;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.machineName = $.machineName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionGatewayDefinitionResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backendUri;
-        private @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
-        private @Nullable List<String> contactInformation;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String machineName;
-        private @Nullable Object status;
+        private ConnectionGatewayDefinitionResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionGatewayDefinitionResponseProperties();
         }
 
         public Builder(ConnectionGatewayDefinitionResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendUri = defaults.backendUri;
-    	      this.connectionGatewayInstallation = defaults.connectionGatewayInstallation;
-    	      this.contactInformation = defaults.contactInformation;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.machineName = defaults.machineName;
-    	      this.status = defaults.status;
+            $ = new ConnectionGatewayDefinitionResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder backendUri(@Nullable String backendUri) {
-            this.backendUri = backendUri;
+            $.backendUri = backendUri;
             return this;
         }
+
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation) {
-            this.connectionGatewayInstallation = connectionGatewayInstallation;
+            $.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
+
         public Builder contactInformation(@Nullable List<String> contactInformation) {
-            this.contactInformation = contactInformation;
+            $.contactInformation = contactInformation;
             return this;
         }
+
         public Builder contactInformation(String... contactInformation) {
             return contactInformation(List.of(contactInformation));
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder machineName(@Nullable String machineName) {
-            this.machineName = machineName;
+            $.machineName = machineName;
             return this;
         }
+
         public Builder status(@Nullable Object status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public ConnectionGatewayDefinitionResponseProperties build() {
-            return new ConnectionGatewayDefinitionResponseProperties(backendUri, connectionGatewayInstallation, contactInformation, description, displayName, machineName, status);
+        }
+
+        public ConnectionGatewayDefinitionResponseProperties build() {
+            return $;
         }
     }
+
 }

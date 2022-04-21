@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +28,10 @@ public final class LoggingPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="auditLogStatus")
-      private final @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
+    private @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
 
-    public Output<Either<String,AuditLogStatus>> auditLogStatus() {
-        return this.auditLogStatus == null ? Codegen.empty() : this.auditLogStatus;
+    public Optional<Output<Either<String,AuditLogStatus>>> auditLogStatus() {
+        return Optional.ofNullable(this.auditLogStatus);
     }
 
     /**
@@ -38,63 +39,60 @@ public final class LoggingPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="logLevel")
-      private final @Nullable Output<Either<String,LogLevel>> logLevel;
+    private @Nullable Output<Either<String,LogLevel>> logLevel;
 
-    public Output<Either<String,LogLevel>> logLevel() {
-        return this.logLevel == null ? Codegen.empty() : this.logLevel;
+    public Optional<Output<Either<String,LogLevel>>> logLevel() {
+        return Optional.ofNullable(this.logLevel);
     }
 
-    public LoggingPropertiesArgs(
-        @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus,
-        @Nullable Output<Either<String,LogLevel>> logLevel) {
-        this.auditLogStatus = Codegen.stringProp("auditLogStatus").left(AuditLogStatus.class).output().arg(auditLogStatus).def("Disabled").getNullable();
-        this.logLevel = Codegen.stringProp("logLevel").left(LogLevel.class).output().arg(logLevel).def("Information").getNullable();
-    }
+    private LoggingPropertiesArgs() {}
 
-    private LoggingPropertiesArgs() {
-        this.auditLogStatus = Codegen.empty();
-        this.logLevel = Codegen.empty();
+    private LoggingPropertiesArgs(LoggingPropertiesArgs $) {
+        this.auditLogStatus = $.auditLogStatus;
+        this.logLevel = $.logLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,AuditLogStatus>> auditLogStatus;
-        private @Nullable Output<Either<String,LogLevel>> logLevel;
+        private LoggingPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingPropertiesArgs();
         }
 
         public Builder(LoggingPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogStatus = defaults.auditLogStatus;
-    	      this.logLevel = defaults.logLevel;
+            $ = new LoggingPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogStatus(@Nullable Output<Either<String,AuditLogStatus>> auditLogStatus) {
-            this.auditLogStatus = auditLogStatus;
+            $.auditLogStatus = auditLogStatus;
             return this;
         }
-        public Builder auditLogStatus(@Nullable Either<String,AuditLogStatus> auditLogStatus) {
-            this.auditLogStatus = Codegen.ofNullable(auditLogStatus);
-            return this;
+
+        public Builder auditLogStatus(Either<String,AuditLogStatus> auditLogStatus) {
+            return auditLogStatus(Output.of(auditLogStatus));
         }
+
         public Builder logLevel(@Nullable Output<Either<String,LogLevel>> logLevel) {
-            this.logLevel = logLevel;
+            $.logLevel = logLevel;
             return this;
         }
-        public Builder logLevel(@Nullable Either<String,LogLevel> logLevel) {
-            this.logLevel = Codegen.ofNullable(logLevel);
-            return this;
-        }        public LoggingPropertiesArgs build() {
-            return new LoggingPropertiesArgs(auditLogStatus, logLevel);
+
+        public Builder logLevel(Either<String,LogLevel> logLevel) {
+            return logLevel(Output.of(logLevel));
+        }
+
+        public LoggingPropertiesArgs build() {
+            $.auditLogStatus = Codegen.stringProp("auditLogStatus").left(AuditLogStatus.class).output().arg($.auditLogStatus).def("Disabled").getNullable();
+            $.logLevel = Codegen.stringProp("logLevel").left(LogLevel.class).output().arg($.logLevel).def("Information").getNullable();
+            return $;
         }
     }
+
 }

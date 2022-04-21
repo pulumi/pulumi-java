@@ -5,11 +5,11 @@ package com.pulumi.aws.cloudwatch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable Output<Map<String,String>> dimensions;
+    private @Nullable Output<Map<String,String>> dimensions;
 
-    public Output<Map<String,String>> dimensions() {
-        return this.dimensions == null ? Codegen.empty() : this.dimensions;
+    public Optional<Output<Map<String,String>>> dimensions() {
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -46,10 +46,10 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="period", required=true)
-      private final Output<Integer> period;
+    private Output<Integer> period;
 
     public Output<Integer> period() {
         return this.period;
@@ -69,7 +69,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="stat", required=true)
-      private final Output<String> stat;
+    private Output<String> stat;
 
     public Output<String> stat() {
         return this.stat;
@@ -80,115 +80,101 @@ public final class MetricAlarmMetricQueryMetricArgs extends com.pulumi.resources
      * 
      */
     @Import(name="unit")
-      private final @Nullable Output<String> unit;
+    private @Nullable Output<String> unit;
 
-    public Output<String> unit() {
-        return this.unit == null ? Codegen.empty() : this.unit;
+    public Optional<Output<String>> unit() {
+        return Optional.ofNullable(this.unit);
     }
 
-    public MetricAlarmMetricQueryMetricArgs(
-        @Nullable Output<Map<String,String>> dimensions,
-        Output<String> metricName,
-        @Nullable Output<String> namespace,
-        Output<Integer> period,
-        Output<String> stat,
-        @Nullable Output<String> unit) {
-        this.dimensions = dimensions;
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.namespace = namespace;
-        this.period = Objects.requireNonNull(period, "expected parameter 'period' to be non-null");
-        this.stat = Objects.requireNonNull(stat, "expected parameter 'stat' to be non-null");
-        this.unit = unit;
-    }
+    private MetricAlarmMetricQueryMetricArgs() {}
 
-    private MetricAlarmMetricQueryMetricArgs() {
-        this.dimensions = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.period = Codegen.empty();
-        this.stat = Codegen.empty();
-        this.unit = Codegen.empty();
+    private MetricAlarmMetricQueryMetricArgs(MetricAlarmMetricQueryMetricArgs $) {
+        this.dimensions = $.dimensions;
+        this.metricName = $.metricName;
+        this.namespace = $.namespace;
+        this.period = $.period;
+        this.stat = $.stat;
+        this.unit = $.unit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAlarmMetricQueryMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> dimensions;
-        private Output<String> metricName;
-        private @Nullable Output<String> namespace;
-        private Output<Integer> period;
-        private Output<String> stat;
-        private @Nullable Output<String> unit;
+        private MetricAlarmMetricQueryMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAlarmMetricQueryMetricArgs();
         }
 
         public Builder(MetricAlarmMetricQueryMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dimensions = defaults.dimensions;
-    	      this.metricName = defaults.metricName;
-    	      this.namespace = defaults.namespace;
-    	      this.period = defaults.period;
-    	      this.stat = defaults.stat;
-    	      this.unit = defaults.unit;
+            $ = new MetricAlarmMetricQueryMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dimensions(@Nullable Output<Map<String,String>> dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
-        public Builder dimensions(@Nullable Map<String,String> dimensions) {
-            this.dimensions = Codegen.ofNullable(dimensions);
-            return this;
+
+        public Builder dimensions(Map<String,String> dimensions) {
+            return dimensions(Output.of(dimensions));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder period(Output<Integer> period) {
-            this.period = Objects.requireNonNull(period);
+            $.period = period;
             return this;
         }
+
         public Builder period(Integer period) {
-            this.period = Output.of(Objects.requireNonNull(period));
-            return this;
+            return period(Output.of(period));
         }
+
         public Builder stat(Output<String> stat) {
-            this.stat = Objects.requireNonNull(stat);
+            $.stat = stat;
             return this;
         }
+
         public Builder stat(String stat) {
-            this.stat = Output.of(Objects.requireNonNull(stat));
-            return this;
+            return stat(Output.of(stat));
         }
+
         public Builder unit(@Nullable Output<String> unit) {
-            this.unit = unit;
+            $.unit = unit;
             return this;
         }
-        public Builder unit(@Nullable String unit) {
-            this.unit = Codegen.ofNullable(unit);
-            return this;
-        }        public MetricAlarmMetricQueryMetricArgs build() {
-            return new MetricAlarmMetricQueryMetricArgs(dimensions, metricName, namespace, period, stat, unit);
+
+        public Builder unit(String unit) {
+            return unit(Output.of(unit));
+        }
+
+        public MetricAlarmMetricQueryMetricArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            $.period = Objects.requireNonNull($.period, "expected parameter 'period' to be non-null");
+            $.stat = Objects.requireNonNull($.stat, "expected parameter 'stat' to be non-null");
+            return $;
         }
     }
+
 }

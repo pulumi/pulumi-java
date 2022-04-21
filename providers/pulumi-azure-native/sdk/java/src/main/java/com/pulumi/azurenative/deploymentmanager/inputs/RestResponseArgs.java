@@ -6,10 +6,10 @@ package com.pulumi.azurenative.deploymentmanager.inputs;
 import com.pulumi.azurenative.deploymentmanager.inputs.RestResponseRegexArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regex")
-      private final @Nullable Output<RestResponseRegexArgs> regex;
+    private @Nullable Output<RestResponseRegexArgs> regex;
 
-    public Output<RestResponseRegexArgs> regex() {
-        return this.regex == null ? Codegen.empty() : this.regex;
+    public Optional<Output<RestResponseRegexArgs>> regex() {
+        return Optional.ofNullable(this.regex);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class RestResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="successStatusCodes")
-      private final @Nullable Output<List<String>> successStatusCodes;
+    private @Nullable Output<List<String>> successStatusCodes;
 
-    public Output<List<String>> successStatusCodes() {
-        return this.successStatusCodes == null ? Codegen.empty() : this.successStatusCodes;
+    public Optional<Output<List<String>>> successStatusCodes() {
+        return Optional.ofNullable(this.successStatusCodes);
     }
 
-    public RestResponseArgs(
-        @Nullable Output<RestResponseRegexArgs> regex,
-        @Nullable Output<List<String>> successStatusCodes) {
-        this.regex = regex;
-        this.successStatusCodes = successStatusCodes;
-    }
+    private RestResponseArgs() {}
 
-    private RestResponseArgs() {
-        this.regex = Codegen.empty();
-        this.successStatusCodes = Codegen.empty();
+    private RestResponseArgs(RestResponseArgs $) {
+        this.regex = $.regex;
+        this.successStatusCodes = $.successStatusCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<RestResponseRegexArgs> regex;
-        private @Nullable Output<List<String>> successStatusCodes;
+        private RestResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestResponseArgs();
         }
 
         public Builder(RestResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regex = defaults.regex;
-    	      this.successStatusCodes = defaults.successStatusCodes;
+            $ = new RestResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regex(@Nullable Output<RestResponseRegexArgs> regex) {
-            this.regex = regex;
+            $.regex = regex;
             return this;
         }
-        public Builder regex(@Nullable RestResponseRegexArgs regex) {
-            this.regex = Codegen.ofNullable(regex);
-            return this;
+
+        public Builder regex(RestResponseRegexArgs regex) {
+            return regex(Output.of(regex));
         }
+
         public Builder successStatusCodes(@Nullable Output<List<String>> successStatusCodes) {
-            this.successStatusCodes = successStatusCodes;
+            $.successStatusCodes = successStatusCodes;
             return this;
         }
-        public Builder successStatusCodes(@Nullable List<String> successStatusCodes) {
-            this.successStatusCodes = Codegen.ofNullable(successStatusCodes);
-            return this;
+
+        public Builder successStatusCodes(List<String> successStatusCodes) {
+            return successStatusCodes(Output.of(successStatusCodes));
         }
+
         public Builder successStatusCodes(String... successStatusCodes) {
             return successStatusCodes(List.of(successStatusCodes));
-        }        public RestResponseArgs build() {
-            return new RestResponseArgs(regex, successStatusCodes);
+        }
+
+        public RestResponseArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.osconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRe
      * 
      */
     @Import(name="sha256Checksum")
-      private final @Nullable Output<String> sha256Checksum;
+    private @Nullable Output<String> sha256Checksum;
 
-    public Output<String> sha256Checksum() {
-        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
+    public Optional<Output<String>> sha256Checksum() {
+        return Optional.ofNullable(this.sha256Checksum);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRe
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs(
-        @Nullable Output<String> sha256Checksum,
-        Output<String> uri) {
-        this.sha256Checksum = sha256Checksum;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs() {}
 
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs() {
-        this.sha256Checksum = Codegen.empty();
-        this.uri = Codegen.empty();
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs $) {
+        this.sha256Checksum = $.sha256Checksum;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sha256Checksum;
-        private Output<String> uri;
+        private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs();
         }
 
         public Builder(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sha256Checksum = defaults.sha256Checksum;
-    	      this.uri = defaults.uri;
+            $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
-            this.sha256Checksum = sha256Checksum;
+            $.sha256Checksum = sha256Checksum;
             return this;
         }
-        public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
-            return this;
+
+        public Builder sha256Checksum(String sha256Checksum) {
+            return sha256Checksum(Output.of(sha256Checksum));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs build() {
-            return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs(sha256Checksum, uri);
+            return uri(Output.of(uri));
+        }
+
+        public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceRemoteGetArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

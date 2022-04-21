@@ -6,8 +6,8 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class VirtualNodeSpecBackendDefaultsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="clientPolicy")
-      private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy;
+    private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy;
 
-    public Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy() {
-        return this.clientPolicy == null ? Codegen.empty() : this.clientPolicy;
+    public Optional<Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs>> clientPolicy() {
+        return Optional.ofNullable(this.clientPolicy);
     }
 
-    public VirtualNodeSpecBackendDefaultsArgs(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy) {
-        this.clientPolicy = clientPolicy;
-    }
+    private VirtualNodeSpecBackendDefaultsArgs() {}
 
-    private VirtualNodeSpecBackendDefaultsArgs() {
-        this.clientPolicy = Codegen.empty();
+    private VirtualNodeSpecBackendDefaultsArgs(VirtualNodeSpecBackendDefaultsArgs $) {
+        this.clientPolicy = $.clientPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNodeSpecBackendDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy;
+        private VirtualNodeSpecBackendDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNodeSpecBackendDefaultsArgs();
         }
 
         public Builder(VirtualNodeSpecBackendDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientPolicy = defaults.clientPolicy;
+            $ = new VirtualNodeSpecBackendDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientPolicy(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyArgs> clientPolicy) {
-            this.clientPolicy = clientPolicy;
+            $.clientPolicy = clientPolicy;
             return this;
         }
-        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyArgs clientPolicy) {
-            this.clientPolicy = Codegen.ofNullable(clientPolicy);
-            return this;
-        }        public VirtualNodeSpecBackendDefaultsArgs build() {
-            return new VirtualNodeSpecBackendDefaultsArgs(clientPolicy);
+
+        public Builder clientPolicy(VirtualNodeSpecBackendDefaultsClientPolicyArgs clientPolicy) {
+            return clientPolicy(Output.of(clientPolicy));
+        }
+
+        public VirtualNodeSpecBackendDefaultsArgs build() {
+            return $;
         }
     }
+
 }

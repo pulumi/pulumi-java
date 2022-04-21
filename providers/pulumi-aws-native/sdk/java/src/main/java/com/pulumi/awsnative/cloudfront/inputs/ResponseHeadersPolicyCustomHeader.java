@@ -14,78 +14,73 @@ public final class ResponseHeadersPolicyCustomHeader extends com.pulumi.resource
     public static final ResponseHeadersPolicyCustomHeader Empty = new ResponseHeadersPolicyCustomHeader();
 
     @Import(name="header", required=true)
-      private final String header;
+    private String header;
 
     public String header() {
         return this.header;
     }
 
     @Import(name="override", required=true)
-      private final Boolean override;
+    private Boolean override;
 
     public Boolean override() {
         return this.override;
     }
 
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public ResponseHeadersPolicyCustomHeader(
-        String header,
-        Boolean override,
-        String value) {
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.override = Objects.requireNonNull(override, "expected parameter 'override' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ResponseHeadersPolicyCustomHeader() {}
 
-    private ResponseHeadersPolicyCustomHeader() {
-        this.header = null;
-        this.override = null;
-        this.value = null;
+    private ResponseHeadersPolicyCustomHeader(ResponseHeadersPolicyCustomHeader $) {
+        this.header = $.header;
+        this.override = $.override;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponseHeadersPolicyCustomHeader defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String header;
-        private Boolean override;
-        private String value;
+        private ResponseHeadersPolicyCustomHeader $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponseHeadersPolicyCustomHeader();
         }
 
         public Builder(ResponseHeadersPolicyCustomHeader defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.override = defaults.override;
-    	      this.value = defaults.value;
+            $ = new ResponseHeadersPolicyCustomHeader(Objects.requireNonNull(defaults));
         }
 
         public Builder header(String header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder override(Boolean override) {
-            this.override = Objects.requireNonNull(override);
+            $.override = override;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ResponseHeadersPolicyCustomHeader build() {
-            return new ResponseHeadersPolicyCustomHeader(header, override, value);
+        }
+
+        public ResponseHeadersPolicyCustomHeader build() {
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            $.override = Objects.requireNonNull($.override, "expected parameter 'override' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

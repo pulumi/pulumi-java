@@ -5,9 +5,9 @@ package com.pulumi.azurenative.providerhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceTreeInfoArgs extends com.pulumi.resources.ResourceArgs
     public static final ServiceTreeInfoArgs Empty = new ServiceTreeInfoArgs();
 
     @Import(name="componentId")
-      private final @Nullable Output<String> componentId;
+    private @Nullable Output<String> componentId;
 
-    public Output<String> componentId() {
-        return this.componentId == null ? Codegen.empty() : this.componentId;
+    public Optional<Output<String>> componentId() {
+        return Optional.ofNullable(this.componentId);
     }
 
     @Import(name="serviceId")
-      private final @Nullable Output<String> serviceId;
+    private @Nullable Output<String> serviceId;
 
-    public Output<String> serviceId() {
-        return this.serviceId == null ? Codegen.empty() : this.serviceId;
+    public Optional<Output<String>> serviceId() {
+        return Optional.ofNullable(this.serviceId);
     }
 
-    public ServiceTreeInfoArgs(
-        @Nullable Output<String> componentId,
-        @Nullable Output<String> serviceId) {
-        this.componentId = componentId;
-        this.serviceId = serviceId;
-    }
+    private ServiceTreeInfoArgs() {}
 
-    private ServiceTreeInfoArgs() {
-        this.componentId = Codegen.empty();
-        this.serviceId = Codegen.empty();
+    private ServiceTreeInfoArgs(ServiceTreeInfoArgs $) {
+        this.componentId = $.componentId;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTreeInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> componentId;
-        private @Nullable Output<String> serviceId;
+        private ServiceTreeInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTreeInfoArgs();
         }
 
         public Builder(ServiceTreeInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentId = defaults.componentId;
-    	      this.serviceId = defaults.serviceId;
+            $ = new ServiceTreeInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentId(@Nullable Output<String> componentId) {
-            this.componentId = componentId;
+            $.componentId = componentId;
             return this;
         }
-        public Builder componentId(@Nullable String componentId) {
-            this.componentId = Codegen.ofNullable(componentId);
-            return this;
+
+        public Builder componentId(String componentId) {
+            return componentId(Output.of(componentId));
         }
+
         public Builder serviceId(@Nullable Output<String> serviceId) {
-            this.serviceId = serviceId;
+            $.serviceId = serviceId;
             return this;
         }
-        public Builder serviceId(@Nullable String serviceId) {
-            this.serviceId = Codegen.ofNullable(serviceId);
-            return this;
-        }        public ServiceTreeInfoArgs build() {
-            return new ServiceTreeInfoArgs(componentId, serviceId);
+
+        public Builder serviceId(String serviceId) {
+            return serviceId(Output.of(serviceId));
+        }
+
+        public ServiceTreeInfoArgs build() {
+            return $;
         }
     }
+
 }

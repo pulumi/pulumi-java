@@ -6,7 +6,6 @@ package com.pulumi.awsnative.s3.inputs;
 import com.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelStorageMetricsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class StorageLensPrefixLevelArgs extends com.pulumi.resources.Resou
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();
 
     @Import(name="storageMetrics", required=true)
-      private final Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
+    private Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
     public Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics() {
         return this.storageMetrics;
     }
 
-    public StorageLensPrefixLevelArgs(Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
-        this.storageMetrics = Objects.requireNonNull(storageMetrics, "expected parameter 'storageMetrics' to be non-null");
-    }
+    private StorageLensPrefixLevelArgs() {}
 
-    private StorageLensPrefixLevelArgs() {
-        this.storageMetrics = Codegen.empty();
+    private StorageLensPrefixLevelArgs(StorageLensPrefixLevelArgs $) {
+        this.storageMetrics = $.storageMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageLensPrefixLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
+        private StorageLensPrefixLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageLensPrefixLevelArgs();
         }
 
         public Builder(StorageLensPrefixLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageMetrics = defaults.storageMetrics;
+            $ = new StorageLensPrefixLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageMetrics(Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics) {
-            this.storageMetrics = Objects.requireNonNull(storageMetrics);
+            $.storageMetrics = storageMetrics;
             return this;
         }
+
         public Builder storageMetrics(StorageLensPrefixLevelStorageMetricsArgs storageMetrics) {
-            this.storageMetrics = Output.of(Objects.requireNonNull(storageMetrics));
-            return this;
-        }        public StorageLensPrefixLevelArgs build() {
-            return new StorageLensPrefixLevelArgs(storageMetrics);
+            return storageMetrics(Output.of(storageMetrics));
+        }
+
+        public StorageLensPrefixLevelArgs build() {
+            $.storageMetrics = Objects.requireNonNull($.storageMetrics, "expected parameter 'storageMetrics' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.dynamodb;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hashKey", required=true)
-      private final Output<String> hashKey;
+    private Output<String> hashKey;
 
     public Output<String> hashKey() {
         return this.hashKey;
@@ -32,7 +32,7 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="item", required=true)
-      private final Output<String> item;
+    private Output<String> item;
 
     public Output<String> item() {
         return this.item;
@@ -43,10 +43,10 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rangeKey")
-      private final @Nullable Output<String> rangeKey;
+    private @Nullable Output<String> rangeKey;
 
-    public Output<String> rangeKey() {
-        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
+    public Optional<Output<String>> rangeKey() {
+        return Optional.ofNullable(this.rangeKey);
     }
 
     /**
@@ -54,89 +54,81 @@ public final class TableItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableName", required=true)
-      private final Output<String> tableName;
+    private Output<String> tableName;
 
     public Output<String> tableName() {
         return this.tableName;
     }
 
-    public TableItemArgs(
-        Output<String> hashKey,
-        Output<String> item,
-        @Nullable Output<String> rangeKey,
-        Output<String> tableName) {
-        this.hashKey = Objects.requireNonNull(hashKey, "expected parameter 'hashKey' to be non-null");
-        this.item = Objects.requireNonNull(item, "expected parameter 'item' to be non-null");
-        this.rangeKey = rangeKey;
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private TableItemArgs() {}
 
-    private TableItemArgs() {
-        this.hashKey = Codegen.empty();
-        this.item = Codegen.empty();
-        this.rangeKey = Codegen.empty();
-        this.tableName = Codegen.empty();
+    private TableItemArgs(TableItemArgs $) {
+        this.hashKey = $.hashKey;
+        this.item = $.item;
+        this.rangeKey = $.rangeKey;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hashKey;
-        private Output<String> item;
-        private @Nullable Output<String> rangeKey;
-        private Output<String> tableName;
+        private TableItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableItemArgs();
         }
 
         public Builder(TableItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hashKey = defaults.hashKey;
-    	      this.item = defaults.item;
-    	      this.rangeKey = defaults.rangeKey;
-    	      this.tableName = defaults.tableName;
+            $ = new TableItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hashKey(Output<String> hashKey) {
-            this.hashKey = Objects.requireNonNull(hashKey);
+            $.hashKey = hashKey;
             return this;
         }
+
         public Builder hashKey(String hashKey) {
-            this.hashKey = Output.of(Objects.requireNonNull(hashKey));
-            return this;
+            return hashKey(Output.of(hashKey));
         }
+
         public Builder item(Output<String> item) {
-            this.item = Objects.requireNonNull(item);
+            $.item = item;
             return this;
         }
+
         public Builder item(String item) {
-            this.item = Output.of(Objects.requireNonNull(item));
-            return this;
+            return item(Output.of(item));
         }
+
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
-            this.rangeKey = rangeKey;
+            $.rangeKey = rangeKey;
             return this;
         }
-        public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Codegen.ofNullable(rangeKey);
-            return this;
+
+        public Builder rangeKey(String rangeKey) {
+            return rangeKey(Output.of(rangeKey));
         }
+
         public Builder tableName(Output<String> tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Output.of(Objects.requireNonNull(tableName));
-            return this;
-        }        public TableItemArgs build() {
-            return new TableItemArgs(hashKey, item, rangeKey, tableName);
+            return tableName(Output.of(tableName));
+        }
+
+        public TableItemArgs build() {
+            $.hashKey = Objects.requireNonNull($.hashKey, "expected parameter 'hashKey' to be non-null");
+            $.item = Objects.requireNonNull($.item, "expected parameter 'item' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

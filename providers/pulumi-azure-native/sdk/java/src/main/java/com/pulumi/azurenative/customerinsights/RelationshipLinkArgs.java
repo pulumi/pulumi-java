@@ -7,11 +7,11 @@ import com.pulumi.azurenative.customerinsights.inputs.ParticipantProfileProperty
 import com.pulumi.azurenative.customerinsights.inputs.RelationshipLinkFieldMappingArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<Map<String,String>> description;
+    private @Nullable Output<Map<String,String>> description;
 
-    public Output<Map<String,String>> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<Map<String,String>>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<Map<String,String>> displayName;
+    private @Nullable Output<Map<String,String>> displayName;
 
-    public Output<Map<String,String>> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<Map<String,String>>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -57,7 +57,7 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="interactionType", required=true)
-      private final Output<String> interactionType;
+    private Output<String> interactionType;
 
     public Output<String> interactionType() {
         return this.interactionType;
@@ -68,10 +68,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mappings")
-      private final @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
+    private @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
 
-    public Output<List<RelationshipLinkFieldMappingArgs>> mappings() {
-        return this.mappings == null ? Codegen.empty() : this.mappings;
+    public Optional<Output<List<RelationshipLinkFieldMappingArgs>>> mappings() {
+        return Optional.ofNullable(this.mappings);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="profilePropertyReferences", required=true)
-      private final Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
+    private Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
     public Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences() {
         return this.profilePropertyReferences;
@@ -90,7 +90,7 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relatedProfilePropertyReferences", required=true)
-      private final Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
+    private Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
     public Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
@@ -101,10 +101,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relationshipLinkName")
-      private final @Nullable Output<String> relationshipLinkName;
+    private @Nullable Output<String> relationshipLinkName;
 
-    public Output<String> relationshipLinkName() {
-        return this.relationshipLinkName == null ? Codegen.empty() : this.relationshipLinkName;
+    public Optional<Output<String>> relationshipLinkName() {
+        return Optional.ofNullable(this.relationshipLinkName);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="relationshipName", required=true)
-      private final Output<String> relationshipName;
+    private Output<String> relationshipName;
 
     public Output<String> relationshipName() {
         return this.relationshipName;
@@ -123,176 +123,156 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public RelationshipLinkArgs(
-        @Nullable Output<Map<String,String>> description,
-        @Nullable Output<Map<String,String>> displayName,
-        Output<String> hubName,
-        Output<String> interactionType,
-        @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings,
-        Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences,
-        Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences,
-        @Nullable Output<String> relationshipLinkName,
-        Output<String> relationshipName,
-        Output<String> resourceGroupName) {
-        this.description = description;
-        this.displayName = displayName;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.interactionType = Objects.requireNonNull(interactionType, "expected parameter 'interactionType' to be non-null");
-        this.mappings = mappings;
-        this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences, "expected parameter 'profilePropertyReferences' to be non-null");
-        this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences, "expected parameter 'relatedProfilePropertyReferences' to be non-null");
-        this.relationshipLinkName = relationshipLinkName;
-        this.relationshipName = Objects.requireNonNull(relationshipName, "expected parameter 'relationshipName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private RelationshipLinkArgs() {}
 
-    private RelationshipLinkArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.interactionType = Codegen.empty();
-        this.mappings = Codegen.empty();
-        this.profilePropertyReferences = Codegen.empty();
-        this.relatedProfilePropertyReferences = Codegen.empty();
-        this.relationshipLinkName = Codegen.empty();
-        this.relationshipName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private RelationshipLinkArgs(RelationshipLinkArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.hubName = $.hubName;
+        this.interactionType = $.interactionType;
+        this.mappings = $.mappings;
+        this.profilePropertyReferences = $.profilePropertyReferences;
+        this.relatedProfilePropertyReferences = $.relatedProfilePropertyReferences;
+        this.relationshipLinkName = $.relationshipLinkName;
+        this.relationshipName = $.relationshipName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RelationshipLinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> description;
-        private @Nullable Output<Map<String,String>> displayName;
-        private Output<String> hubName;
-        private Output<String> interactionType;
-        private @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
-        private Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
-        private Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
-        private @Nullable Output<String> relationshipLinkName;
-        private Output<String> relationshipName;
-        private Output<String> resourceGroupName;
+        private RelationshipLinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RelationshipLinkArgs();
         }
 
         public Builder(RelationshipLinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.hubName = defaults.hubName;
-    	      this.interactionType = defaults.interactionType;
-    	      this.mappings = defaults.mappings;
-    	      this.profilePropertyReferences = defaults.profilePropertyReferences;
-    	      this.relatedProfilePropertyReferences = defaults.relatedProfilePropertyReferences;
-    	      this.relationshipLinkName = defaults.relationshipLinkName;
-    	      this.relationshipName = defaults.relationshipName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new RelationshipLinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<Map<String,String>> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable Map<String,String> description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(Map<String,String> description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(Map<String,String> displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder interactionType(Output<String> interactionType) {
-            this.interactionType = Objects.requireNonNull(interactionType);
+            $.interactionType = interactionType;
             return this;
         }
+
         public Builder interactionType(String interactionType) {
-            this.interactionType = Output.of(Objects.requireNonNull(interactionType));
-            return this;
+            return interactionType(Output.of(interactionType));
         }
+
         public Builder mappings(@Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings) {
-            this.mappings = mappings;
+            $.mappings = mappings;
             return this;
         }
-        public Builder mappings(@Nullable List<RelationshipLinkFieldMappingArgs> mappings) {
-            this.mappings = Codegen.ofNullable(mappings);
-            return this;
+
+        public Builder mappings(List<RelationshipLinkFieldMappingArgs> mappings) {
+            return mappings(Output.of(mappings));
         }
+
         public Builder mappings(RelationshipLinkFieldMappingArgs... mappings) {
             return mappings(List.of(mappings));
         }
+
         public Builder profilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences) {
-            this.profilePropertyReferences = Objects.requireNonNull(profilePropertyReferences);
+            $.profilePropertyReferences = profilePropertyReferences;
             return this;
         }
+
         public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> profilePropertyReferences) {
-            this.profilePropertyReferences = Output.of(Objects.requireNonNull(profilePropertyReferences));
-            return this;
+            return profilePropertyReferences(Output.of(profilePropertyReferences));
         }
+
         public Builder profilePropertyReferences(ParticipantProfilePropertyReferenceArgs... profilePropertyReferences) {
             return profilePropertyReferences(List.of(profilePropertyReferences));
         }
+
         public Builder relatedProfilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences) {
-            this.relatedProfilePropertyReferences = Objects.requireNonNull(relatedProfilePropertyReferences);
+            $.relatedProfilePropertyReferences = relatedProfilePropertyReferences;
             return this;
         }
+
         public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> relatedProfilePropertyReferences) {
-            this.relatedProfilePropertyReferences = Output.of(Objects.requireNonNull(relatedProfilePropertyReferences));
-            return this;
+            return relatedProfilePropertyReferences(Output.of(relatedProfilePropertyReferences));
         }
+
         public Builder relatedProfilePropertyReferences(ParticipantProfilePropertyReferenceArgs... relatedProfilePropertyReferences) {
             return relatedProfilePropertyReferences(List.of(relatedProfilePropertyReferences));
         }
+
         public Builder relationshipLinkName(@Nullable Output<String> relationshipLinkName) {
-            this.relationshipLinkName = relationshipLinkName;
+            $.relationshipLinkName = relationshipLinkName;
             return this;
         }
-        public Builder relationshipLinkName(@Nullable String relationshipLinkName) {
-            this.relationshipLinkName = Codegen.ofNullable(relationshipLinkName);
-            return this;
+
+        public Builder relationshipLinkName(String relationshipLinkName) {
+            return relationshipLinkName(Output.of(relationshipLinkName));
         }
+
         public Builder relationshipName(Output<String> relationshipName) {
-            this.relationshipName = Objects.requireNonNull(relationshipName);
+            $.relationshipName = relationshipName;
             return this;
         }
+
         public Builder relationshipName(String relationshipName) {
-            this.relationshipName = Output.of(Objects.requireNonNull(relationshipName));
-            return this;
+            return relationshipName(Output.of(relationshipName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public RelationshipLinkArgs build() {
-            return new RelationshipLinkArgs(description, displayName, hubName, interactionType, mappings, profilePropertyReferences, relatedProfilePropertyReferences, relationshipLinkName, relationshipName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public RelationshipLinkArgs build() {
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.interactionType = Objects.requireNonNull($.interactionType, "expected parameter 'interactionType' to be non-null");
+            $.profilePropertyReferences = Objects.requireNonNull($.profilePropertyReferences, "expected parameter 'profilePropertyReferences' to be non-null");
+            $.relatedProfilePropertyReferences = Objects.requireNonNull($.relatedProfilePropertyReferences, "expected parameter 'relatedProfilePropertyReferences' to be non-null");
+            $.relationshipName = Objects.requireNonNull($.relationshipName, "expected parameter 'relationshipName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

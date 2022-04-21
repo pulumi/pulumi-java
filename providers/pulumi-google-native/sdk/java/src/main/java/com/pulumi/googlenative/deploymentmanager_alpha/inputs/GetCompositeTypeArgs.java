@@ -15,62 +15,58 @@ public final class GetCompositeTypeArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetCompositeTypeArgs Empty = new GetCompositeTypeArgs();
 
     @Import(name="compositeType", required=true)
-      private final String compositeType;
+    private String compositeType;
 
     public String compositeType() {
         return this.compositeType;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCompositeTypeArgs(
-        String compositeType,
-        @Nullable String project) {
-        this.compositeType = Objects.requireNonNull(compositeType, "expected parameter 'compositeType' to be non-null");
-        this.project = project;
-    }
+    private GetCompositeTypeArgs() {}
 
-    private GetCompositeTypeArgs() {
-        this.compositeType = null;
-        this.project = null;
+    private GetCompositeTypeArgs(GetCompositeTypeArgs $) {
+        this.compositeType = $.compositeType;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCompositeTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String compositeType;
-        private @Nullable String project;
+        private GetCompositeTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCompositeTypeArgs();
         }
 
         public Builder(GetCompositeTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compositeType = defaults.compositeType;
-    	      this.project = defaults.project;
+            $ = new GetCompositeTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder compositeType(String compositeType) {
-            this.compositeType = Objects.requireNonNull(compositeType);
+            $.compositeType = compositeType;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCompositeTypeArgs build() {
-            return new GetCompositeTypeArgs(compositeType, project);
+        }
+
+        public GetCompositeTypeArgs build() {
+            $.compositeType = Objects.requireNonNull($.compositeType, "expected parameter 'compositeType' to be non-null");
+            return $;
         }
     }
+
 }

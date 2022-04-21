@@ -16,78 +16,72 @@ public final class EtwEventConfigurationResponse extends com.pulumi.resources.In
     public static final EtwEventConfigurationResponse Empty = new EtwEventConfigurationResponse();
 
     @Import(name="filter")
-      private final @Nullable String filter;
+    private @Nullable String filter;
 
     public Optional<String> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="id", required=true)
-      private final Integer id;
+    private Integer id;
 
     public Integer id() {
         return this.id;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public EtwEventConfigurationResponse(
-        @Nullable String filter,
-        Integer id,
-        String name) {
-        this.filter = filter;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private EtwEventConfigurationResponse() {}
 
-    private EtwEventConfigurationResponse() {
-        this.filter = null;
-        this.id = null;
-        this.name = null;
+    private EtwEventConfigurationResponse(EtwEventConfigurationResponse $) {
+        this.filter = $.filter;
+        this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EtwEventConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String filter;
-        private Integer id;
-        private String name;
+        private EtwEventConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EtwEventConfigurationResponse();
         }
 
         public Builder(EtwEventConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
+            $ = new EtwEventConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable String filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder id(Integer id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public EtwEventConfigurationResponse build() {
-            return new EtwEventConfigurationResponse(filter, id, name);
+        }
+
+        public EtwEventConfigurationResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

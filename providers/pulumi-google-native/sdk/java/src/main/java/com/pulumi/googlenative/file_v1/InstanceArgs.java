@@ -5,7 +5,6 @@ package com.pulumi.googlenative.file_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.file_v1.enums.InstanceTier;
 import com.pulumi.googlenative.file_v1.inputs.FileShareConfigArgs;
 import com.pulumi.googlenative.file_v1.inputs.NetworkConfigArgs;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -47,14 +47,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileShares")
-      private final @Nullable Output<List<FileShareConfigArgs>> fileShares;
+    private @Nullable Output<List<FileShareConfigArgs>> fileShares;
 
-    public Output<List<FileShareConfigArgs>> fileShares() {
-        return this.fileShares == null ? Codegen.empty() : this.fileShares;
+    public Optional<Output<List<FileShareConfigArgs>>> fileShares() {
+        return Optional.ofNullable(this.fileShares);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -65,10 +65,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -76,17 +76,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -94,17 +94,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networks")
-      private final @Nullable Output<List<NetworkConfigArgs>> networks;
+    private @Nullable Output<List<NetworkConfigArgs>> networks;
 
-    public Output<List<NetworkConfigArgs>> networks() {
-        return this.networks == null ? Codegen.empty() : this.networks;
+    public Optional<Output<List<NetworkConfigArgs>>> networks() {
+        return Optional.ofNullable(this.networks);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -112,173 +112,147 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<InstanceTier> tier;
+    private @Nullable Output<InstanceTier> tier;
 
-    public Output<InstanceTier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<InstanceTier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<FileShareConfigArgs>> fileShares,
-        Output<String> instanceId,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<List<NetworkConfigArgs>> networks,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceTier> tier) {
-        this.description = description;
-        this.etag = etag;
-        this.fileShares = fileShares;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.kmsKeyName = kmsKeyName;
-        this.labels = labels;
-        this.location = location;
-        this.networks = networks;
-        this.project = project;
-        this.tier = tier;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.fileShares = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networks = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tier = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.description = $.description;
+        this.etag = $.etag;
+        this.fileShares = $.fileShares;
+        this.instanceId = $.instanceId;
+        this.kmsKeyName = $.kmsKeyName;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.networks = $.networks;
+        this.project = $.project;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<FileShareConfigArgs>> fileShares;
-        private Output<String> instanceId;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<List<NetworkConfigArgs>> networks;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceTier> tier;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.fileShares = defaults.fileShares;
-    	      this.instanceId = defaults.instanceId;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.networks = defaults.networks;
-    	      this.project = defaults.project;
-    	      this.tier = defaults.tier;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder fileShares(@Nullable Output<List<FileShareConfigArgs>> fileShares) {
-            this.fileShares = fileShares;
+            $.fileShares = fileShares;
             return this;
         }
-        public Builder fileShares(@Nullable List<FileShareConfigArgs> fileShares) {
-            this.fileShares = Codegen.ofNullable(fileShares);
-            return this;
+
+        public Builder fileShares(List<FileShareConfigArgs> fileShares) {
+            return fileShares(Output.of(fileShares));
         }
+
         public Builder fileShares(FileShareConfigArgs... fileShares) {
             return fileShares(List.of(fileShares));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networks(@Nullable Output<List<NetworkConfigArgs>> networks) {
-            this.networks = networks;
+            $.networks = networks;
             return this;
         }
-        public Builder networks(@Nullable List<NetworkConfigArgs> networks) {
-            this.networks = Codegen.ofNullable(networks);
-            return this;
+
+        public Builder networks(List<NetworkConfigArgs> networks) {
+            return networks(Output.of(networks));
         }
+
         public Builder networks(NetworkConfigArgs... networks) {
             return networks(List.of(networks));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tier(@Nullable Output<InstanceTier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable InstanceTier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(description, etag, fileShares, instanceId, kmsKeyName, labels, location, networks, project, tier);
+
+        public Builder tier(InstanceTier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public InstanceArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

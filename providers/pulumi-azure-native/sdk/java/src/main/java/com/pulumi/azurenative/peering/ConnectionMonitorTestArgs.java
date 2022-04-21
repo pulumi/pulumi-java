@@ -5,10 +5,10 @@ package com.pulumi.azurenative.peering;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="connectionMonitorTestName")
-      private final @Nullable Output<String> connectionMonitorTestName;
+    private @Nullable Output<String> connectionMonitorTestName;
 
-    public Output<String> connectionMonitorTestName() {
-        return this.connectionMonitorTestName == null ? Codegen.empty() : this.connectionMonitorTestName;
+    public Optional<Output<String>> connectionMonitorTestName() {
+        return Optional.ofNullable(this.connectionMonitorTestName);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destination")
-      private final @Nullable Output<String> destination;
+    private @Nullable Output<String> destination;
 
-    public Output<String> destination() {
-        return this.destination == null ? Codegen.empty() : this.destination;
+    public Optional<Output<String>> destination() {
+        return Optional.ofNullable(this.destination);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="destinationPort")
-      private final @Nullable Output<Integer> destinationPort;
+    private @Nullable Output<Integer> destinationPort;
 
-    public Output<Integer> destinationPort() {
-        return this.destinationPort == null ? Codegen.empty() : this.destinationPort;
+    public Optional<Output<Integer>> destinationPort() {
+        return Optional.ofNullable(this.destinationPort);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="peeringServiceName", required=true)
-      private final Output<String> peeringServiceName;
+    private Output<String> peeringServiceName;
 
     public Output<String> peeringServiceName() {
         return this.peeringServiceName;
@@ -65,7 +65,7 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -76,10 +76,10 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sourceAgent")
-      private final @Nullable Output<String> sourceAgent;
+    private @Nullable Output<String> sourceAgent;
 
-    public Output<String> sourceAgent() {
-        return this.sourceAgent == null ? Codegen.empty() : this.sourceAgent;
+    public Optional<Output<String>> sourceAgent() {
+        return Optional.ofNullable(this.sourceAgent);
     }
 
     /**
@@ -87,128 +87,110 @@ public final class ConnectionMonitorTestArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="testFrequencyInSec")
-      private final @Nullable Output<Integer> testFrequencyInSec;
+    private @Nullable Output<Integer> testFrequencyInSec;
 
-    public Output<Integer> testFrequencyInSec() {
-        return this.testFrequencyInSec == null ? Codegen.empty() : this.testFrequencyInSec;
+    public Optional<Output<Integer>> testFrequencyInSec() {
+        return Optional.ofNullable(this.testFrequencyInSec);
     }
 
-    public ConnectionMonitorTestArgs(
-        @Nullable Output<String> connectionMonitorTestName,
-        @Nullable Output<String> destination,
-        @Nullable Output<Integer> destinationPort,
-        Output<String> peeringServiceName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> sourceAgent,
-        @Nullable Output<Integer> testFrequencyInSec) {
-        this.connectionMonitorTestName = connectionMonitorTestName;
-        this.destination = destination;
-        this.destinationPort = destinationPort;
-        this.peeringServiceName = Objects.requireNonNull(peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceAgent = sourceAgent;
-        this.testFrequencyInSec = testFrequencyInSec;
-    }
+    private ConnectionMonitorTestArgs() {}
 
-    private ConnectionMonitorTestArgs() {
-        this.connectionMonitorTestName = Codegen.empty();
-        this.destination = Codegen.empty();
-        this.destinationPort = Codegen.empty();
-        this.peeringServiceName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sourceAgent = Codegen.empty();
-        this.testFrequencyInSec = Codegen.empty();
+    private ConnectionMonitorTestArgs(ConnectionMonitorTestArgs $) {
+        this.connectionMonitorTestName = $.connectionMonitorTestName;
+        this.destination = $.destination;
+        this.destinationPort = $.destinationPort;
+        this.peeringServiceName = $.peeringServiceName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceAgent = $.sourceAgent;
+        this.testFrequencyInSec = $.testFrequencyInSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionMonitorTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectionMonitorTestName;
-        private @Nullable Output<String> destination;
-        private @Nullable Output<Integer> destinationPort;
-        private Output<String> peeringServiceName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> sourceAgent;
-        private @Nullable Output<Integer> testFrequencyInSec;
+        private ConnectionMonitorTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionMonitorTestArgs();
         }
 
         public Builder(ConnectionMonitorTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionMonitorTestName = defaults.connectionMonitorTestName;
-    	      this.destination = defaults.destination;
-    	      this.destinationPort = defaults.destinationPort;
-    	      this.peeringServiceName = defaults.peeringServiceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceAgent = defaults.sourceAgent;
-    	      this.testFrequencyInSec = defaults.testFrequencyInSec;
+            $ = new ConnectionMonitorTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionMonitorTestName(@Nullable Output<String> connectionMonitorTestName) {
-            this.connectionMonitorTestName = connectionMonitorTestName;
+            $.connectionMonitorTestName = connectionMonitorTestName;
             return this;
         }
-        public Builder connectionMonitorTestName(@Nullable String connectionMonitorTestName) {
-            this.connectionMonitorTestName = Codegen.ofNullable(connectionMonitorTestName);
-            return this;
+
+        public Builder connectionMonitorTestName(String connectionMonitorTestName) {
+            return connectionMonitorTestName(Output.of(connectionMonitorTestName));
         }
+
         public Builder destination(@Nullable Output<String> destination) {
-            this.destination = destination;
+            $.destination = destination;
             return this;
         }
-        public Builder destination(@Nullable String destination) {
-            this.destination = Codegen.ofNullable(destination);
-            return this;
+
+        public Builder destination(String destination) {
+            return destination(Output.of(destination));
         }
+
         public Builder destinationPort(@Nullable Output<Integer> destinationPort) {
-            this.destinationPort = destinationPort;
+            $.destinationPort = destinationPort;
             return this;
         }
-        public Builder destinationPort(@Nullable Integer destinationPort) {
-            this.destinationPort = Codegen.ofNullable(destinationPort);
-            return this;
+
+        public Builder destinationPort(Integer destinationPort) {
+            return destinationPort(Output.of(destinationPort));
         }
+
         public Builder peeringServiceName(Output<String> peeringServiceName) {
-            this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
+            $.peeringServiceName = peeringServiceName;
             return this;
         }
+
         public Builder peeringServiceName(String peeringServiceName) {
-            this.peeringServiceName = Output.of(Objects.requireNonNull(peeringServiceName));
-            return this;
+            return peeringServiceName(Output.of(peeringServiceName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sourceAgent(@Nullable Output<String> sourceAgent) {
-            this.sourceAgent = sourceAgent;
+            $.sourceAgent = sourceAgent;
             return this;
         }
-        public Builder sourceAgent(@Nullable String sourceAgent) {
-            this.sourceAgent = Codegen.ofNullable(sourceAgent);
-            return this;
+
+        public Builder sourceAgent(String sourceAgent) {
+            return sourceAgent(Output.of(sourceAgent));
         }
+
         public Builder testFrequencyInSec(@Nullable Output<Integer> testFrequencyInSec) {
-            this.testFrequencyInSec = testFrequencyInSec;
+            $.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
-        public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
-            this.testFrequencyInSec = Codegen.ofNullable(testFrequencyInSec);
-            return this;
-        }        public ConnectionMonitorTestArgs build() {
-            return new ConnectionMonitorTestArgs(connectionMonitorTestName, destination, destinationPort, peeringServiceName, resourceGroupName, sourceAgent, testFrequencyInSec);
+
+        public Builder testFrequencyInSec(Integer testFrequencyInSec) {
+            return testFrequencyInSec(Output.of(testFrequencyInSec));
+        }
+
+        public ConnectionMonitorTestArgs build() {
+            $.peeringServiceName = Objects.requireNonNull($.peeringServiceName, "expected parameter 'peeringServiceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

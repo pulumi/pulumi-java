@@ -5,9 +5,9 @@ package com.pulumi.awsnative.cloudfront.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,66 @@ public final class DistributionLegacyS3OriginArgs extends com.pulumi.resources.R
     public static final DistributionLegacyS3OriginArgs Empty = new DistributionLegacyS3OriginArgs();
 
     @Import(name="dNSName", required=true)
-      private final Output<String> dNSName;
+    private Output<String> dNSName;
 
     public Output<String> dNSName() {
         return this.dNSName;
     }
 
     @Import(name="originAccessIdentity")
-      private final @Nullable Output<String> originAccessIdentity;
+    private @Nullable Output<String> originAccessIdentity;
 
-    public Output<String> originAccessIdentity() {
-        return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
+    public Optional<Output<String>> originAccessIdentity() {
+        return Optional.ofNullable(this.originAccessIdentity);
     }
 
-    public DistributionLegacyS3OriginArgs(
-        Output<String> dNSName,
-        @Nullable Output<String> originAccessIdentity) {
-        this.dNSName = Objects.requireNonNull(dNSName, "expected parameter 'dNSName' to be non-null");
-        this.originAccessIdentity = originAccessIdentity;
-    }
+    private DistributionLegacyS3OriginArgs() {}
 
-    private DistributionLegacyS3OriginArgs() {
-        this.dNSName = Codegen.empty();
-        this.originAccessIdentity = Codegen.empty();
+    private DistributionLegacyS3OriginArgs(DistributionLegacyS3OriginArgs $) {
+        this.dNSName = $.dNSName;
+        this.originAccessIdentity = $.originAccessIdentity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionLegacyS3OriginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dNSName;
-        private @Nullable Output<String> originAccessIdentity;
+        private DistributionLegacyS3OriginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionLegacyS3OriginArgs();
         }
 
         public Builder(DistributionLegacyS3OriginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dNSName = defaults.dNSName;
-    	      this.originAccessIdentity = defaults.originAccessIdentity;
+            $ = new DistributionLegacyS3OriginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dNSName(Output<String> dNSName) {
-            this.dNSName = Objects.requireNonNull(dNSName);
+            $.dNSName = dNSName;
             return this;
         }
+
         public Builder dNSName(String dNSName) {
-            this.dNSName = Output.of(Objects.requireNonNull(dNSName));
-            return this;
+            return dNSName(Output.of(dNSName));
         }
+
         public Builder originAccessIdentity(@Nullable Output<String> originAccessIdentity) {
-            this.originAccessIdentity = originAccessIdentity;
+            $.originAccessIdentity = originAccessIdentity;
             return this;
         }
-        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = Codegen.ofNullable(originAccessIdentity);
-            return this;
-        }        public DistributionLegacyS3OriginArgs build() {
-            return new DistributionLegacyS3OriginArgs(dNSName, originAccessIdentity);
+
+        public Builder originAccessIdentity(String originAccessIdentity) {
+            return originAccessIdentity(Output.of(originAccessIdentity));
+        }
+
+        public DistributionLegacyS3OriginArgs build() {
+            $.dNSName = Objects.requireNonNull($.dNSName, "expected parameter 'dNSName' to be non-null");
+            return $;
         }
     }
+
 }

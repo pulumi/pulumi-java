@@ -21,7 +21,7 @@ public final class PullMessageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="payload", required=true)
-      private final String payload;
+    private String payload;
 
     public String payload() {
         return this.payload;
@@ -32,55 +32,52 @@ public final class PullMessageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public PullMessageResponse(
-        String payload,
-        String tag) {
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private PullMessageResponse() {}
 
-    private PullMessageResponse() {
-        this.payload = null;
-        this.tag = null;
+    private PullMessageResponse(PullMessageResponse $) {
+        this.payload = $.payload;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PullMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String payload;
-        private String tag;
+        private PullMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PullMessageResponse();
         }
 
         public Builder(PullMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.payload = defaults.payload;
-    	      this.tag = defaults.tag;
+            $ = new PullMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder payload(String payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public PullMessageResponse build() {
-            return new PullMessageResponse(payload, tag);
+        }
+
+        public PullMessageResponse build() {
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

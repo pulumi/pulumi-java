@@ -22,7 +22,7 @@ public final class AnimationStaticResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
@@ -33,55 +33,52 @@ public final class AnimationStaticResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="xy", required=true)
-      private final NormalizedCoordinateResponse xy;
+    private NormalizedCoordinateResponse xy;
 
     public NormalizedCoordinateResponse xy() {
         return this.xy;
     }
 
-    public AnimationStaticResponse(
-        String startTimeOffset,
-        NormalizedCoordinateResponse xy) {
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-        this.xy = Objects.requireNonNull(xy, "expected parameter 'xy' to be non-null");
-    }
+    private AnimationStaticResponse() {}
 
-    private AnimationStaticResponse() {
-        this.startTimeOffset = null;
-        this.xy = null;
+    private AnimationStaticResponse(AnimationStaticResponse $) {
+        this.startTimeOffset = $.startTimeOffset;
+        this.xy = $.xy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationStaticResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String startTimeOffset;
-        private NormalizedCoordinateResponse xy;
+        private AnimationStaticResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationStaticResponse();
         }
 
         public Builder(AnimationStaticResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.xy = defaults.xy;
+            $ = new AnimationStaticResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
+
         public Builder xy(NormalizedCoordinateResponse xy) {
-            this.xy = Objects.requireNonNull(xy);
+            $.xy = xy;
             return this;
-        }        public AnimationStaticResponse build() {
-            return new AnimationStaticResponse(startTimeOffset, xy);
+        }
+
+        public AnimationStaticResponse build() {
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            $.xy = Objects.requireNonNull($.xy, "expected parameter 'xy' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +32,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dnsServiceIP")
-      private final @Nullable Output<String> dnsServiceIP;
+    private @Nullable Output<String> dnsServiceIP;
 
-    public Output<String> dnsServiceIP() {
-        return this.dnsServiceIP == null ? Codegen.empty() : this.dnsServiceIP;
+    public Optional<Output<String>> dnsServiceIP() {
+        return Optional.ofNullable(this.dnsServiceIP);
     }
 
     /**
@@ -42,10 +43,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="dockerBridgeCidr")
-      private final @Nullable Output<String> dockerBridgeCidr;
+    private @Nullable Output<String> dockerBridgeCidr;
 
-    public Output<String> dockerBridgeCidr() {
-        return this.dockerBridgeCidr == null ? Codegen.empty() : this.dockerBridgeCidr;
+    public Optional<Output<String>> dockerBridgeCidr() {
+        return Optional.ofNullable(this.dockerBridgeCidr);
     }
 
     /**
@@ -53,10 +54,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="loadBalancerProfile")
-      private final @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
+    private @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
 
-    public Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile() {
-        return this.loadBalancerProfile == null ? Codegen.empty() : this.loadBalancerProfile;
+    public Optional<Output<ManagedClusterLoadBalancerProfileArgs>> loadBalancerProfile() {
+        return Optional.ofNullable(this.loadBalancerProfile);
     }
 
     /**
@@ -64,10 +65,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="loadBalancerSku")
-      private final @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
+    private @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
 
-    public Output<Either<String,LoadBalancerSku>> loadBalancerSku() {
-        return this.loadBalancerSku == null ? Codegen.empty() : this.loadBalancerSku;
+    public Optional<Output<Either<String,LoadBalancerSku>>> loadBalancerSku() {
+        return Optional.ofNullable(this.loadBalancerSku);
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networkMode")
-      private final @Nullable Output<Either<String,NetworkMode>> networkMode;
+    private @Nullable Output<Either<String,NetworkMode>> networkMode;
 
-    public Output<Either<String,NetworkMode>> networkMode() {
-        return this.networkMode == null ? Codegen.empty() : this.networkMode;
+    public Optional<Output<Either<String,NetworkMode>>> networkMode() {
+        return Optional.ofNullable(this.networkMode);
     }
 
     /**
@@ -86,10 +87,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networkPlugin")
-      private final @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
+    private @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
 
-    public Output<Either<String,NetworkPlugin>> networkPlugin() {
-        return this.networkPlugin == null ? Codegen.empty() : this.networkPlugin;
+    public Optional<Output<Either<String,NetworkPlugin>>> networkPlugin() {
+        return Optional.ofNullable(this.networkPlugin);
     }
 
     /**
@@ -97,10 +98,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="networkPolicy")
-      private final @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
+    private @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
 
-    public Output<Either<String,NetworkPolicy>> networkPolicy() {
-        return this.networkPolicy == null ? Codegen.empty() : this.networkPolicy;
+    public Optional<Output<Either<String,NetworkPolicy>>> networkPolicy() {
+        return Optional.ofNullable(this.networkPolicy);
     }
 
     /**
@@ -108,10 +109,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="outboundType")
-      private final @Nullable Output<Either<String,OutboundType>> outboundType;
+    private @Nullable Output<Either<String,OutboundType>> outboundType;
 
-    public Output<Either<String,OutboundType>> outboundType() {
-        return this.outboundType == null ? Codegen.empty() : this.outboundType;
+    public Optional<Output<Either<String,OutboundType>>> outboundType() {
+        return Optional.ofNullable(this.outboundType);
     }
 
     /**
@@ -119,10 +120,10 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="podCidr")
-      private final @Nullable Output<String> podCidr;
+    private @Nullable Output<String> podCidr;
 
-    public Output<String> podCidr() {
-        return this.podCidr == null ? Codegen.empty() : this.podCidr;
+    public Optional<Output<String>> podCidr() {
+        return Optional.ofNullable(this.podCidr);
     }
 
     /**
@@ -130,167 +131,144 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="serviceCidr")
-      private final @Nullable Output<String> serviceCidr;
+    private @Nullable Output<String> serviceCidr;
 
-    public Output<String> serviceCidr() {
-        return this.serviceCidr == null ? Codegen.empty() : this.serviceCidr;
+    public Optional<Output<String>> serviceCidr() {
+        return Optional.ofNullable(this.serviceCidr);
     }
 
-    public ContainerServiceNetworkProfileArgs(
-        @Nullable Output<String> dnsServiceIP,
-        @Nullable Output<String> dockerBridgeCidr,
-        @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile,
-        @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku,
-        @Nullable Output<Either<String,NetworkMode>> networkMode,
-        @Nullable Output<Either<String,NetworkPlugin>> networkPlugin,
-        @Nullable Output<Either<String,NetworkPolicy>> networkPolicy,
-        @Nullable Output<Either<String,OutboundType>> outboundType,
-        @Nullable Output<String> podCidr,
-        @Nullable Output<String> serviceCidr) {
-        this.dnsServiceIP = Codegen.stringProp("dnsServiceIP").output().arg(dnsServiceIP).def("10.0.0.10").getNullable();
-        this.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").output().arg(dockerBridgeCidr).def("172.17.0.1/16").getNullable();
-        this.loadBalancerProfile = loadBalancerProfile;
-        this.loadBalancerSku = loadBalancerSku;
-        this.networkMode = networkMode;
-        this.networkPlugin = Codegen.stringProp("networkPlugin").left(NetworkPlugin.class).output().arg(networkPlugin).def("kubenet").getNullable();
-        this.networkPolicy = networkPolicy;
-        this.outboundType = Codegen.stringProp("outboundType").left(OutboundType.class).output().arg(outboundType).def("loadBalancer").getNullable();
-        this.podCidr = Codegen.stringProp("podCidr").output().arg(podCidr).def("10.244.0.0/16").getNullable();
-        this.serviceCidr = Codegen.stringProp("serviceCidr").output().arg(serviceCidr).def("10.0.0.0/16").getNullable();
-    }
+    private ContainerServiceNetworkProfileArgs() {}
 
-    private ContainerServiceNetworkProfileArgs() {
-        this.dnsServiceIP = Codegen.empty();
-        this.dockerBridgeCidr = Codegen.empty();
-        this.loadBalancerProfile = Codegen.empty();
-        this.loadBalancerSku = Codegen.empty();
-        this.networkMode = Codegen.empty();
-        this.networkPlugin = Codegen.empty();
-        this.networkPolicy = Codegen.empty();
-        this.outboundType = Codegen.empty();
-        this.podCidr = Codegen.empty();
-        this.serviceCidr = Codegen.empty();
+    private ContainerServiceNetworkProfileArgs(ContainerServiceNetworkProfileArgs $) {
+        this.dnsServiceIP = $.dnsServiceIP;
+        this.dockerBridgeCidr = $.dockerBridgeCidr;
+        this.loadBalancerProfile = $.loadBalancerProfile;
+        this.loadBalancerSku = $.loadBalancerSku;
+        this.networkMode = $.networkMode;
+        this.networkPlugin = $.networkPlugin;
+        this.networkPolicy = $.networkPolicy;
+        this.outboundType = $.outboundType;
+        this.podCidr = $.podCidr;
+        this.serviceCidr = $.serviceCidr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerServiceNetworkProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dnsServiceIP;
-        private @Nullable Output<String> dockerBridgeCidr;
-        private @Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile;
-        private @Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku;
-        private @Nullable Output<Either<String,NetworkMode>> networkMode;
-        private @Nullable Output<Either<String,NetworkPlugin>> networkPlugin;
-        private @Nullable Output<Either<String,NetworkPolicy>> networkPolicy;
-        private @Nullable Output<Either<String,OutboundType>> outboundType;
-        private @Nullable Output<String> podCidr;
-        private @Nullable Output<String> serviceCidr;
+        private ContainerServiceNetworkProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerServiceNetworkProfileArgs();
         }
 
         public Builder(ContainerServiceNetworkProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dnsServiceIP = defaults.dnsServiceIP;
-    	      this.dockerBridgeCidr = defaults.dockerBridgeCidr;
-    	      this.loadBalancerProfile = defaults.loadBalancerProfile;
-    	      this.loadBalancerSku = defaults.loadBalancerSku;
-    	      this.networkMode = defaults.networkMode;
-    	      this.networkPlugin = defaults.networkPlugin;
-    	      this.networkPolicy = defaults.networkPolicy;
-    	      this.outboundType = defaults.outboundType;
-    	      this.podCidr = defaults.podCidr;
-    	      this.serviceCidr = defaults.serviceCidr;
+            $ = new ContainerServiceNetworkProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dnsServiceIP(@Nullable Output<String> dnsServiceIP) {
-            this.dnsServiceIP = dnsServiceIP;
+            $.dnsServiceIP = dnsServiceIP;
             return this;
         }
-        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
-            this.dnsServiceIP = Codegen.ofNullable(dnsServiceIP);
-            return this;
+
+        public Builder dnsServiceIP(String dnsServiceIP) {
+            return dnsServiceIP(Output.of(dnsServiceIP));
         }
+
         public Builder dockerBridgeCidr(@Nullable Output<String> dockerBridgeCidr) {
-            this.dockerBridgeCidr = dockerBridgeCidr;
+            $.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
-        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
-            this.dockerBridgeCidr = Codegen.ofNullable(dockerBridgeCidr);
-            return this;
+
+        public Builder dockerBridgeCidr(String dockerBridgeCidr) {
+            return dockerBridgeCidr(Output.of(dockerBridgeCidr));
         }
+
         public Builder loadBalancerProfile(@Nullable Output<ManagedClusterLoadBalancerProfileArgs> loadBalancerProfile) {
-            this.loadBalancerProfile = loadBalancerProfile;
+            $.loadBalancerProfile = loadBalancerProfile;
             return this;
         }
-        public Builder loadBalancerProfile(@Nullable ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
-            this.loadBalancerProfile = Codegen.ofNullable(loadBalancerProfile);
-            return this;
+
+        public Builder loadBalancerProfile(ManagedClusterLoadBalancerProfileArgs loadBalancerProfile) {
+            return loadBalancerProfile(Output.of(loadBalancerProfile));
         }
+
         public Builder loadBalancerSku(@Nullable Output<Either<String,LoadBalancerSku>> loadBalancerSku) {
-            this.loadBalancerSku = loadBalancerSku;
+            $.loadBalancerSku = loadBalancerSku;
             return this;
         }
-        public Builder loadBalancerSku(@Nullable Either<String,LoadBalancerSku> loadBalancerSku) {
-            this.loadBalancerSku = Codegen.ofNullable(loadBalancerSku);
-            return this;
+
+        public Builder loadBalancerSku(Either<String,LoadBalancerSku> loadBalancerSku) {
+            return loadBalancerSku(Output.of(loadBalancerSku));
         }
+
         public Builder networkMode(@Nullable Output<Either<String,NetworkMode>> networkMode) {
-            this.networkMode = networkMode;
+            $.networkMode = networkMode;
             return this;
         }
-        public Builder networkMode(@Nullable Either<String,NetworkMode> networkMode) {
-            this.networkMode = Codegen.ofNullable(networkMode);
-            return this;
+
+        public Builder networkMode(Either<String,NetworkMode> networkMode) {
+            return networkMode(Output.of(networkMode));
         }
+
         public Builder networkPlugin(@Nullable Output<Either<String,NetworkPlugin>> networkPlugin) {
-            this.networkPlugin = networkPlugin;
+            $.networkPlugin = networkPlugin;
             return this;
         }
-        public Builder networkPlugin(@Nullable Either<String,NetworkPlugin> networkPlugin) {
-            this.networkPlugin = Codegen.ofNullable(networkPlugin);
-            return this;
+
+        public Builder networkPlugin(Either<String,NetworkPlugin> networkPlugin) {
+            return networkPlugin(Output.of(networkPlugin));
         }
+
         public Builder networkPolicy(@Nullable Output<Either<String,NetworkPolicy>> networkPolicy) {
-            this.networkPolicy = networkPolicy;
+            $.networkPolicy = networkPolicy;
             return this;
         }
-        public Builder networkPolicy(@Nullable Either<String,NetworkPolicy> networkPolicy) {
-            this.networkPolicy = Codegen.ofNullable(networkPolicy);
-            return this;
+
+        public Builder networkPolicy(Either<String,NetworkPolicy> networkPolicy) {
+            return networkPolicy(Output.of(networkPolicy));
         }
+
         public Builder outboundType(@Nullable Output<Either<String,OutboundType>> outboundType) {
-            this.outboundType = outboundType;
+            $.outboundType = outboundType;
             return this;
         }
-        public Builder outboundType(@Nullable Either<String,OutboundType> outboundType) {
-            this.outboundType = Codegen.ofNullable(outboundType);
-            return this;
+
+        public Builder outboundType(Either<String,OutboundType> outboundType) {
+            return outboundType(Output.of(outboundType));
         }
+
         public Builder podCidr(@Nullable Output<String> podCidr) {
-            this.podCidr = podCidr;
+            $.podCidr = podCidr;
             return this;
         }
-        public Builder podCidr(@Nullable String podCidr) {
-            this.podCidr = Codegen.ofNullable(podCidr);
-            return this;
+
+        public Builder podCidr(String podCidr) {
+            return podCidr(Output.of(podCidr));
         }
+
         public Builder serviceCidr(@Nullable Output<String> serviceCidr) {
-            this.serviceCidr = serviceCidr;
+            $.serviceCidr = serviceCidr;
             return this;
         }
-        public Builder serviceCidr(@Nullable String serviceCidr) {
-            this.serviceCidr = Codegen.ofNullable(serviceCidr);
-            return this;
-        }        public ContainerServiceNetworkProfileArgs build() {
-            return new ContainerServiceNetworkProfileArgs(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
+
+        public Builder serviceCidr(String serviceCidr) {
+            return serviceCidr(Output.of(serviceCidr));
+        }
+
+        public ContainerServiceNetworkProfileArgs build() {
+            $.dnsServiceIP = Codegen.stringProp("dnsServiceIP").output().arg($.dnsServiceIP).def("10.0.0.10").getNullable();
+            $.dockerBridgeCidr = Codegen.stringProp("dockerBridgeCidr").output().arg($.dockerBridgeCidr).def("172.17.0.1/16").getNullable();
+            $.networkPlugin = Codegen.stringProp("networkPlugin").left(NetworkPlugin.class).output().arg($.networkPlugin).def("kubenet").getNullable();
+            $.outboundType = Codegen.stringProp("outboundType").left(OutboundType.class).output().arg($.outboundType).def("loadBalancer").getNullable();
+            $.podCidr = Codegen.stringProp("podCidr").output().arg($.podCidr).def("10.244.0.0/16").getNullable();
+            $.serviceCidr = Codegen.stringProp("serviceCidr").output().arg($.serviceCidr).def("10.0.0.0/16").getNullable();
+            return $;
         }
     }
+
 }

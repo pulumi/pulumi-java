@@ -23,45 +23,44 @@ public final class ProtocolSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="smb")
-      private final @Nullable SmbSettingResponse smb;
+    private @Nullable SmbSettingResponse smb;
 
     public Optional<SmbSettingResponse> smb() {
-        return this.smb == null ? Optional.empty() : Optional.ofNullable(this.smb);
+        return Optional.ofNullable(this.smb);
     }
 
-    public ProtocolSettingsResponse(@Nullable SmbSettingResponse smb) {
-        this.smb = smb;
-    }
+    private ProtocolSettingsResponse() {}
 
-    private ProtocolSettingsResponse() {
-        this.smb = null;
+    private ProtocolSettingsResponse(ProtocolSettingsResponse $) {
+        this.smb = $.smb;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProtocolSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SmbSettingResponse smb;
+        private ProtocolSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProtocolSettingsResponse();
         }
 
         public Builder(ProtocolSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.smb = defaults.smb;
+            $ = new ProtocolSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder smb(@Nullable SmbSettingResponse smb) {
-            this.smb = smb;
+            $.smb = smb;
             return this;
-        }        public ProtocolSettingsResponse build() {
-            return new ProtocolSettingsResponse(smb);
+        }
+
+        public ProtocolSettingsResponse build() {
+            return $;
         }
     }
+
 }

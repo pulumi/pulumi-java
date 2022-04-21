@@ -6,8 +6,8 @@ package com.pulumi.azurenative.providerhub.inputs;
 import com.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends c
     public static final DefaultRolloutSpecificationProviderRegistrationArgs Empty = new DefaultRolloutSpecificationProviderRegistrationArgs();
 
     @Import(name="properties")
-      private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
+    private @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
-    public Output<ProviderRegistrationPropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<ProviderRegistrationPropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
-    public DefaultRolloutSpecificationProviderRegistrationArgs(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
-        this.properties = properties;
-    }
+    private DefaultRolloutSpecificationProviderRegistrationArgs() {}
 
-    private DefaultRolloutSpecificationProviderRegistrationArgs() {
-        this.properties = Codegen.empty();
+    private DefaultRolloutSpecificationProviderRegistrationArgs(DefaultRolloutSpecificationProviderRegistrationArgs $) {
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefaultRolloutSpecificationProviderRegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
+        private DefaultRolloutSpecificationProviderRegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefaultRolloutSpecificationProviderRegistrationArgs();
         }
 
         public Builder(DefaultRolloutSpecificationProviderRegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
+            $ = new DefaultRolloutSpecificationProviderRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<ProviderRegistrationPropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
-        }        public DefaultRolloutSpecificationProviderRegistrationArgs build() {
-            return new DefaultRolloutSpecificationProviderRegistrationArgs(properties);
+
+        public Builder properties(ProviderRegistrationPropertiesArgs properties) {
+            return properties(Output.of(properties));
+        }
+
+        public DefaultRolloutSpecificationProviderRegistrationArgs build() {
+            return $;
         }
     }
+
 }

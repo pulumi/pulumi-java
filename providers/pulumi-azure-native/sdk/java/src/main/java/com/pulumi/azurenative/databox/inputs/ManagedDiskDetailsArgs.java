@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +26,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="dataAccountType", required=true)
-      private final Output<String> dataAccountType;
+    private Output<String> dataAccountType;
 
     public Output<String> dataAccountType() {
         return this.dataAccountType;
@@ -36,7 +37,7 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceGroupId", required=true)
-      private final Output<String> resourceGroupId;
+    private Output<String> resourceGroupId;
 
     public Output<String> resourceGroupId() {
         return this.resourceGroupId;
@@ -47,10 +48,10 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sharePassword")
-      private final @Nullable Output<String> sharePassword;
+    private @Nullable Output<String> sharePassword;
 
-    public Output<String> sharePassword() {
-        return this.sharePassword == null ? Codegen.empty() : this.sharePassword;
+    public Optional<Output<String>> sharePassword() {
+        return Optional.ofNullable(this.sharePassword);
     }
 
     /**
@@ -58,89 +59,81 @@ public final class ManagedDiskDetailsArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="stagingStorageAccountId", required=true)
-      private final Output<String> stagingStorageAccountId;
+    private Output<String> stagingStorageAccountId;
 
     public Output<String> stagingStorageAccountId() {
         return this.stagingStorageAccountId;
     }
 
-    public ManagedDiskDetailsArgs(
-        Output<String> dataAccountType,
-        Output<String> resourceGroupId,
-        @Nullable Output<String> sharePassword,
-        Output<String> stagingStorageAccountId) {
-        this.dataAccountType = Codegen.stringProp("dataAccountType").output().arg(dataAccountType).def("StorageAccount").require();
-        this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
-        this.sharePassword = sharePassword;
-        this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
-    }
+    private ManagedDiskDetailsArgs() {}
 
-    private ManagedDiskDetailsArgs() {
-        this.dataAccountType = Codegen.empty();
-        this.resourceGroupId = Codegen.empty();
-        this.sharePassword = Codegen.empty();
-        this.stagingStorageAccountId = Codegen.empty();
+    private ManagedDiskDetailsArgs(ManagedDiskDetailsArgs $) {
+        this.dataAccountType = $.dataAccountType;
+        this.resourceGroupId = $.resourceGroupId;
+        this.sharePassword = $.sharePassword;
+        this.stagingStorageAccountId = $.stagingStorageAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedDiskDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataAccountType;
-        private Output<String> resourceGroupId;
-        private @Nullable Output<String> sharePassword;
-        private Output<String> stagingStorageAccountId;
+        private ManagedDiskDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedDiskDetailsArgs();
         }
 
         public Builder(ManagedDiskDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataAccountType = defaults.dataAccountType;
-    	      this.resourceGroupId = defaults.resourceGroupId;
-    	      this.sharePassword = defaults.sharePassword;
-    	      this.stagingStorageAccountId = defaults.stagingStorageAccountId;
+            $ = new ManagedDiskDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataAccountType(Output<String> dataAccountType) {
-            this.dataAccountType = Objects.requireNonNull(dataAccountType);
+            $.dataAccountType = dataAccountType;
             return this;
         }
+
         public Builder dataAccountType(String dataAccountType) {
-            this.dataAccountType = Output.of(Objects.requireNonNull(dataAccountType));
-            return this;
+            return dataAccountType(Output.of(dataAccountType));
         }
+
         public Builder resourceGroupId(Output<String> resourceGroupId) {
-            this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
+            $.resourceGroupId = resourceGroupId;
             return this;
         }
+
         public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = Output.of(Objects.requireNonNull(resourceGroupId));
-            return this;
+            return resourceGroupId(Output.of(resourceGroupId));
         }
+
         public Builder sharePassword(@Nullable Output<String> sharePassword) {
-            this.sharePassword = sharePassword;
+            $.sharePassword = sharePassword;
             return this;
         }
-        public Builder sharePassword(@Nullable String sharePassword) {
-            this.sharePassword = Codegen.ofNullable(sharePassword);
-            return this;
+
+        public Builder sharePassword(String sharePassword) {
+            return sharePassword(Output.of(sharePassword));
         }
+
         public Builder stagingStorageAccountId(Output<String> stagingStorageAccountId) {
-            this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
+            $.stagingStorageAccountId = stagingStorageAccountId;
             return this;
         }
+
         public Builder stagingStorageAccountId(String stagingStorageAccountId) {
-            this.stagingStorageAccountId = Output.of(Objects.requireNonNull(stagingStorageAccountId));
-            return this;
-        }        public ManagedDiskDetailsArgs build() {
-            return new ManagedDiskDetailsArgs(dataAccountType, resourceGroupId, sharePassword, stagingStorageAccountId);
+            return stagingStorageAccountId(Output.of(stagingStorageAccountId));
+        }
+
+        public ManagedDiskDetailsArgs build() {
+            $.dataAccountType = Codegen.stringProp("dataAccountType").output().arg($.dataAccountType).def("StorageAccount").require();
+            $.resourceGroupId = Objects.requireNonNull($.resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
+            $.stagingStorageAccountId = Objects.requireNonNull($.stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
+            return $;
         }
     }
+
 }

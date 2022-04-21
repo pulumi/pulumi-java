@@ -5,10 +5,10 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.secretmanager_v1.inputs.AutomaticArgs;
 import com.pulumi.googlenative.secretmanager_v1.inputs.UserManagedArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Output<AutomaticArgs> automatic;
+    private @Nullable Output<AutomaticArgs> automatic;
 
-    public Output<AutomaticArgs> automatic() {
-        return this.automatic == null ? Codegen.empty() : this.automatic;
+    public Optional<Output<AutomaticArgs>> automatic() {
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ReplicationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userManaged")
-      private final @Nullable Output<UserManagedArgs> userManaged;
+    private @Nullable Output<UserManagedArgs> userManaged;
 
-    public Output<UserManagedArgs> userManaged() {
-        return this.userManaged == null ? Codegen.empty() : this.userManaged;
+    public Optional<Output<UserManagedArgs>> userManaged() {
+        return Optional.ofNullable(this.userManaged);
     }
 
-    public ReplicationArgs(
-        @Nullable Output<AutomaticArgs> automatic,
-        @Nullable Output<UserManagedArgs> userManaged) {
-        this.automatic = automatic;
-        this.userManaged = userManaged;
-    }
+    private ReplicationArgs() {}
 
-    private ReplicationArgs() {
-        this.automatic = Codegen.empty();
-        this.userManaged = Codegen.empty();
+    private ReplicationArgs(ReplicationArgs $) {
+        this.automatic = $.automatic;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutomaticArgs> automatic;
-        private @Nullable Output<UserManagedArgs> userManaged;
+        private ReplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationArgs();
         }
 
         public Builder(ReplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.userManaged = defaults.userManaged;
+            $ = new ReplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Output<AutomaticArgs> automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
-        public Builder automatic(@Nullable AutomaticArgs automatic) {
-            this.automatic = Codegen.ofNullable(automatic);
-            return this;
+
+        public Builder automatic(AutomaticArgs automatic) {
+            return automatic(Output.of(automatic));
         }
+
         public Builder userManaged(@Nullable Output<UserManagedArgs> userManaged) {
-            this.userManaged = userManaged;
+            $.userManaged = userManaged;
             return this;
         }
-        public Builder userManaged(@Nullable UserManagedArgs userManaged) {
-            this.userManaged = Codegen.ofNullable(userManaged);
-            return this;
-        }        public ReplicationArgs build() {
-            return new ReplicationArgs(automatic, userManaged);
+
+        public Builder userManaged(UserManagedArgs userManaged) {
+            return userManaged(Output.of(userManaged));
+        }
+
+        public ReplicationArgs build() {
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -35,10 +35,10 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -58,73 +58,64 @@ public final class PSCredentialExecutionParameterResponse extends com.pulumi.res
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public PSCredentialExecutionParameterResponse(
-        String name,
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.password = password;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private PSCredentialExecutionParameterResponse() {}
 
-    private PSCredentialExecutionParameterResponse() {
-        this.name = null;
-        this.password = null;
-        this.type = null;
-        this.username = null;
+    private PSCredentialExecutionParameterResponse(PSCredentialExecutionParameterResponse $) {
+        this.name = $.name;
+        this.password = $.password;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PSCredentialExecutionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private @Nullable String password;
-        private String type;
-        private @Nullable String username;
+        private PSCredentialExecutionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PSCredentialExecutionParameterResponse();
         }
 
         public Builder(PSCredentialExecutionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new PSCredentialExecutionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public PSCredentialExecutionParameterResponse build() {
-            return new PSCredentialExecutionParameterResponse(name, password, type, username);
+        }
+
+        public PSCredentialExecutionParameterResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

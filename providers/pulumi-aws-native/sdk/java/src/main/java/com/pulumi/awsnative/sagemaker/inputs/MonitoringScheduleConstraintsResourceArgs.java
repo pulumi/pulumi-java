@@ -5,9 +5,9 @@ package com.pulumi.awsnative.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MonitoringScheduleConstraintsResourceArgs extends com.pulumi.
      * 
      */
     @Import(name="s3Uri")
-      private final @Nullable Output<String> s3Uri;
+    private @Nullable Output<String> s3Uri;
 
-    public Output<String> s3Uri() {
-        return this.s3Uri == null ? Codegen.empty() : this.s3Uri;
+    public Optional<Output<String>> s3Uri() {
+        return Optional.ofNullable(this.s3Uri);
     }
 
-    public MonitoringScheduleConstraintsResourceArgs(@Nullable Output<String> s3Uri) {
-        this.s3Uri = s3Uri;
-    }
+    private MonitoringScheduleConstraintsResourceArgs() {}
 
-    private MonitoringScheduleConstraintsResourceArgs() {
-        this.s3Uri = Codegen.empty();
+    private MonitoringScheduleConstraintsResourceArgs(MonitoringScheduleConstraintsResourceArgs $) {
+        this.s3Uri = $.s3Uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleConstraintsResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> s3Uri;
+        private MonitoringScheduleConstraintsResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleConstraintsResourceArgs();
         }
 
         public Builder(MonitoringScheduleConstraintsResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.s3Uri = defaults.s3Uri;
+            $ = new MonitoringScheduleConstraintsResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder s3Uri(@Nullable Output<String> s3Uri) {
-            this.s3Uri = s3Uri;
+            $.s3Uri = s3Uri;
             return this;
         }
-        public Builder s3Uri(@Nullable String s3Uri) {
-            this.s3Uri = Codegen.ofNullable(s3Uri);
-            return this;
-        }        public MonitoringScheduleConstraintsResourceArgs build() {
-            return new MonitoringScheduleConstraintsResourceArgs(s3Uri);
+
+        public Builder s3Uri(String s3Uri) {
+            return s3Uri(Output.of(s3Uri));
+        }
+
+        public MonitoringScheduleConstraintsResourceArgs build() {
+            return $;
         }
     }
+
 }

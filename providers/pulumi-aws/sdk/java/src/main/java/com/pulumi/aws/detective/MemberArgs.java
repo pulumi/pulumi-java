@@ -5,10 +5,10 @@ package com.pulumi.aws.detective;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final Output<String> accountId;
+    private Output<String> accountId;
 
     public Output<String> accountId() {
         return this.accountId;
@@ -32,10 +32,10 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disableEmailNotification")
-      private final @Nullable Output<Boolean> disableEmailNotification;
+    private @Nullable Output<Boolean> disableEmailNotification;
 
-    public Output<Boolean> disableEmailNotification() {
-        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
+    public Optional<Output<Boolean>> disableEmailNotification() {
+        return Optional.ofNullable(this.disableEmailNotification);
     }
 
     /**
@@ -43,7 +43,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emailAddress", required=true)
-      private final Output<String> emailAddress;
+    private Output<String> emailAddress;
 
     public Output<String> emailAddress() {
         return this.emailAddress;
@@ -54,7 +54,7 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="graphArn", required=true)
-      private final Output<String> graphArn;
+    private Output<String> graphArn;
 
     public Output<String> graphArn() {
         return this.graphArn;
@@ -65,102 +65,91 @@ public final class MemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public MemberArgs(
-        Output<String> accountId,
-        @Nullable Output<Boolean> disableEmailNotification,
-        Output<String> emailAddress,
-        Output<String> graphArn,
-        @Nullable Output<String> message) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-        this.disableEmailNotification = disableEmailNotification;
-        this.emailAddress = Objects.requireNonNull(emailAddress, "expected parameter 'emailAddress' to be non-null");
-        this.graphArn = Objects.requireNonNull(graphArn, "expected parameter 'graphArn' to be non-null");
-        this.message = message;
-    }
+    private MemberArgs() {}
 
-    private MemberArgs() {
-        this.accountId = Codegen.empty();
-        this.disableEmailNotification = Codegen.empty();
-        this.emailAddress = Codegen.empty();
-        this.graphArn = Codegen.empty();
-        this.message = Codegen.empty();
+    private MemberArgs(MemberArgs $) {
+        this.accountId = $.accountId;
+        this.disableEmailNotification = $.disableEmailNotification;
+        this.emailAddress = $.emailAddress;
+        this.graphArn = $.graphArn;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accountId;
-        private @Nullable Output<Boolean> disableEmailNotification;
-        private Output<String> emailAddress;
-        private Output<String> graphArn;
-        private @Nullable Output<String> message;
+        private MemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MemberArgs();
         }
 
         public Builder(MemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
-    	      this.disableEmailNotification = defaults.disableEmailNotification;
-    	      this.emailAddress = defaults.emailAddress;
-    	      this.graphArn = defaults.graphArn;
-    	      this.message = defaults.message;
+            $ = new MemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(Output<String> accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
         }
+
         public Builder accountId(String accountId) {
-            this.accountId = Output.of(Objects.requireNonNull(accountId));
-            return this;
+            return accountId(Output.of(accountId));
         }
+
         public Builder disableEmailNotification(@Nullable Output<Boolean> disableEmailNotification) {
-            this.disableEmailNotification = disableEmailNotification;
+            $.disableEmailNotification = disableEmailNotification;
             return this;
         }
-        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
-            return this;
+
+        public Builder disableEmailNotification(Boolean disableEmailNotification) {
+            return disableEmailNotification(Output.of(disableEmailNotification));
         }
+
         public Builder emailAddress(Output<String> emailAddress) {
-            this.emailAddress = Objects.requireNonNull(emailAddress);
+            $.emailAddress = emailAddress;
             return this;
         }
+
         public Builder emailAddress(String emailAddress) {
-            this.emailAddress = Output.of(Objects.requireNonNull(emailAddress));
-            return this;
+            return emailAddress(Output.of(emailAddress));
         }
+
         public Builder graphArn(Output<String> graphArn) {
-            this.graphArn = Objects.requireNonNull(graphArn);
+            $.graphArn = graphArn;
             return this;
         }
+
         public Builder graphArn(String graphArn) {
-            this.graphArn = Output.of(Objects.requireNonNull(graphArn));
-            return this;
+            return graphArn(Output.of(graphArn));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public MemberArgs build() {
-            return new MemberArgs(accountId, disableEmailNotification, emailAddress, graphArn, message);
+
+        public Builder message(String message) {
+            return message(Output.of(message));
+        }
+
+        public MemberArgs build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            $.emailAddress = Objects.requireNonNull($.emailAddress, "expected parameter 'emailAddress' to be non-null");
+            $.graphArn = Objects.requireNonNull($.graphArn, "expected parameter 'graphArn' to be non-null");
+            return $;
         }
     }
+
 }

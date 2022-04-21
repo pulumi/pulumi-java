@@ -22,10 +22,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable String cidrBlock;
+    private @Nullable String cidrBlock;
 
     public Optional<String> cidrBlock() {
-        return this.cidrBlock == null ? Optional.empty() : Optional.ofNullable(this.cidrBlock);
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcPeeringConnectionFilter> filters;
+    private @Nullable List<GetVpcPeeringConnectionFilter> filters;
 
-    public List<GetVpcPeeringConnectionFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcPeeringConnectionFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="ownerId")
-      private final @Nullable String ownerId;
+    private @Nullable String ownerId;
 
     public Optional<String> ownerId() {
-        return this.ownerId == null ? Optional.empty() : Optional.ofNullable(this.ownerId);
+        return Optional.ofNullable(this.ownerId);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerCidrBlock")
-      private final @Nullable String peerCidrBlock;
+    private @Nullable String peerCidrBlock;
 
     public Optional<String> peerCidrBlock() {
-        return this.peerCidrBlock == null ? Optional.empty() : Optional.ofNullable(this.peerCidrBlock);
+        return Optional.ofNullable(this.peerCidrBlock);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerOwnerId")
-      private final @Nullable String peerOwnerId;
+    private @Nullable String peerOwnerId;
 
     public Optional<String> peerOwnerId() {
-        return this.peerOwnerId == null ? Optional.empty() : Optional.ofNullable(this.peerOwnerId);
+        return Optional.ofNullable(this.peerOwnerId);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerRegion")
-      private final @Nullable String peerRegion;
+    private @Nullable String peerRegion;
 
     public Optional<String> peerRegion() {
-        return this.peerRegion == null ? Optional.empty() : Optional.ofNullable(this.peerRegion);
+        return Optional.ofNullable(this.peerRegion);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="peerVpcId")
-      private final @Nullable String peerVpcId;
+    private @Nullable String peerVpcId;
 
     public Optional<String> peerVpcId() {
-        return this.peerVpcId == null ? Optional.empty() : Optional.ofNullable(this.peerVpcId);
+        return Optional.ofNullable(this.peerVpcId);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="region")
-      private final @Nullable String region;
+    private @Nullable String region;
 
     public Optional<String> region() {
-        return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -144,148 +144,114 @@ public final class GetVpcPeeringConnectionArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="vpcId")
-      private final @Nullable String vpcId;
+    private @Nullable String vpcId;
 
     public Optional<String> vpcId() {
-        return this.vpcId == null ? Optional.empty() : Optional.ofNullable(this.vpcId);
+        return Optional.ofNullable(this.vpcId);
     }
 
-    public GetVpcPeeringConnectionArgs(
-        @Nullable String cidrBlock,
-        @Nullable List<GetVpcPeeringConnectionFilter> filters,
-        @Nullable String id,
-        @Nullable String ownerId,
-        @Nullable String peerCidrBlock,
-        @Nullable String peerOwnerId,
-        @Nullable String peerRegion,
-        @Nullable String peerVpcId,
-        @Nullable String region,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String vpcId) {
-        this.cidrBlock = cidrBlock;
-        this.filters = filters;
-        this.id = id;
-        this.ownerId = ownerId;
-        this.peerCidrBlock = peerCidrBlock;
-        this.peerOwnerId = peerOwnerId;
-        this.peerRegion = peerRegion;
-        this.peerVpcId = peerVpcId;
-        this.region = region;
-        this.status = status;
-        this.tags = tags;
-        this.vpcId = vpcId;
-    }
+    private GetVpcPeeringConnectionArgs() {}
 
-    private GetVpcPeeringConnectionArgs() {
-        this.cidrBlock = null;
-        this.filters = List.of();
-        this.id = null;
-        this.ownerId = null;
-        this.peerCidrBlock = null;
-        this.peerOwnerId = null;
-        this.peerRegion = null;
-        this.peerVpcId = null;
-        this.region = null;
-        this.status = null;
-        this.tags = Map.of();
-        this.vpcId = null;
+    private GetVpcPeeringConnectionArgs(GetVpcPeeringConnectionArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.filters = $.filters;
+        this.id = $.id;
+        this.ownerId = $.ownerId;
+        this.peerCidrBlock = $.peerCidrBlock;
+        this.peerOwnerId = $.peerOwnerId;
+        this.peerRegion = $.peerRegion;
+        this.peerVpcId = $.peerVpcId;
+        this.region = $.region;
+        this.status = $.status;
+        this.tags = $.tags;
+        this.vpcId = $.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcPeeringConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String cidrBlock;
-        private @Nullable List<GetVpcPeeringConnectionFilter> filters;
-        private @Nullable String id;
-        private @Nullable String ownerId;
-        private @Nullable String peerCidrBlock;
-        private @Nullable String peerOwnerId;
-        private @Nullable String peerRegion;
-        private @Nullable String peerVpcId;
-        private @Nullable String region;
-        private @Nullable String status;
-        private @Nullable Map<String,String> tags;
-        private @Nullable String vpcId;
+        private GetVpcPeeringConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcPeeringConnectionArgs();
         }
 
         public Builder(GetVpcPeeringConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.ownerId = defaults.ownerId;
-    	      this.peerCidrBlock = defaults.peerCidrBlock;
-    	      this.peerOwnerId = defaults.peerOwnerId;
-    	      this.peerRegion = defaults.peerRegion;
-    	      this.peerVpcId = defaults.peerVpcId;
-    	      this.region = defaults.region;
-    	      this.status = defaults.status;
-    	      this.tags = defaults.tags;
-    	      this.vpcId = defaults.vpcId;
+            $ = new GetVpcPeeringConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
+
         public Builder filters(@Nullable List<GetVpcPeeringConnectionFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcPeeringConnectionFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = ownerId;
+            $.ownerId = ownerId;
             return this;
         }
+
         public Builder peerCidrBlock(@Nullable String peerCidrBlock) {
-            this.peerCidrBlock = peerCidrBlock;
+            $.peerCidrBlock = peerCidrBlock;
             return this;
         }
+
         public Builder peerOwnerId(@Nullable String peerOwnerId) {
-            this.peerOwnerId = peerOwnerId;
+            $.peerOwnerId = peerOwnerId;
             return this;
         }
+
         public Builder peerRegion(@Nullable String peerRegion) {
-            this.peerRegion = peerRegion;
+            $.peerRegion = peerRegion;
             return this;
         }
+
         public Builder peerVpcId(@Nullable String peerVpcId) {
-            this.peerVpcId = peerVpcId;
+            $.peerVpcId = peerVpcId;
             return this;
         }
+
         public Builder region(@Nullable String region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
+
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = vpcId;
+            $.vpcId = vpcId;
             return this;
-        }        public GetVpcPeeringConnectionArgs build() {
-            return new GetVpcPeeringConnectionArgs(cidrBlock, filters, id, ownerId, peerCidrBlock, peerOwnerId, peerRegion, peerVpcId, region, status, tags, vpcId);
+        }
+
+        public GetVpcPeeringConnectionArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.devtestlab.enums.TransportProtocol;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="backendPort")
-      private final @Nullable Output<Integer> backendPort;
+    private @Nullable Output<Integer> backendPort;
 
-    public Output<Integer> backendPort() {
-        return this.backendPort == null ? Codegen.empty() : this.backendPort;
+    public Optional<Output<Integer>> backendPort() {
+        return Optional.ofNullable(this.backendPort);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="frontendPort")
-      private final @Nullable Output<Integer> frontendPort;
+    private @Nullable Output<Integer> frontendPort;
 
-    public Output<Integer> frontendPort() {
-        return this.frontendPort == null ? Codegen.empty() : this.frontendPort;
+    public Optional<Output<Integer>> frontendPort() {
+        return Optional.ofNullable(this.frontendPort);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class InboundNatRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="transportProtocol")
-      private final @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
+    private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
 
-    public Output<Either<String,TransportProtocol>> transportProtocol() {
-        return this.transportProtocol == null ? Codegen.empty() : this.transportProtocol;
+    public Optional<Output<Either<String,TransportProtocol>>> transportProtocol() {
+        return Optional.ofNullable(this.transportProtocol);
     }
 
-    public InboundNatRuleArgs(
-        @Nullable Output<Integer> backendPort,
-        @Nullable Output<Integer> frontendPort,
-        @Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
-        this.backendPort = backendPort;
-        this.frontendPort = frontendPort;
-        this.transportProtocol = transportProtocol;
-    }
+    private InboundNatRuleArgs() {}
 
-    private InboundNatRuleArgs() {
-        this.backendPort = Codegen.empty();
-        this.frontendPort = Codegen.empty();
-        this.transportProtocol = Codegen.empty();
+    private InboundNatRuleArgs(InboundNatRuleArgs $) {
+        this.backendPort = $.backendPort;
+        this.frontendPort = $.frontendPort;
+        this.transportProtocol = $.transportProtocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InboundNatRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> backendPort;
-        private @Nullable Output<Integer> frontendPort;
-        private @Nullable Output<Either<String,TransportProtocol>> transportProtocol;
+        private InboundNatRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InboundNatRuleArgs();
         }
 
         public Builder(InboundNatRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendPort = defaults.backendPort;
-    	      this.frontendPort = defaults.frontendPort;
-    	      this.transportProtocol = defaults.transportProtocol;
+            $ = new InboundNatRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendPort(@Nullable Output<Integer> backendPort) {
-            this.backendPort = backendPort;
+            $.backendPort = backendPort;
             return this;
         }
-        public Builder backendPort(@Nullable Integer backendPort) {
-            this.backendPort = Codegen.ofNullable(backendPort);
-            return this;
+
+        public Builder backendPort(Integer backendPort) {
+            return backendPort(Output.of(backendPort));
         }
+
         public Builder frontendPort(@Nullable Output<Integer> frontendPort) {
-            this.frontendPort = frontendPort;
+            $.frontendPort = frontendPort;
             return this;
         }
-        public Builder frontendPort(@Nullable Integer frontendPort) {
-            this.frontendPort = Codegen.ofNullable(frontendPort);
-            return this;
+
+        public Builder frontendPort(Integer frontendPort) {
+            return frontendPort(Output.of(frontendPort));
         }
+
         public Builder transportProtocol(@Nullable Output<Either<String,TransportProtocol>> transportProtocol) {
-            this.transportProtocol = transportProtocol;
+            $.transportProtocol = transportProtocol;
             return this;
         }
-        public Builder transportProtocol(@Nullable Either<String,TransportProtocol> transportProtocol) {
-            this.transportProtocol = Codegen.ofNullable(transportProtocol);
-            return this;
-        }        public InboundNatRuleArgs build() {
-            return new InboundNatRuleArgs(backendPort, frontendPort, transportProtocol);
+
+        public Builder transportProtocol(Either<String,TransportProtocol> transportProtocol) {
+            return transportProtocol(Output.of(transportProtocol));
+        }
+
+        public InboundNatRuleArgs build() {
+            return $;
         }
     }
+
 }

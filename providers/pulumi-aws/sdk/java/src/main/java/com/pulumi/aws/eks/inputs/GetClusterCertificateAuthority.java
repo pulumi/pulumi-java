@@ -17,45 +17,45 @@ public final class GetClusterCertificateAuthority extends com.pulumi.resources.I
      * 
      */
     @Import(name="data", required=true)
-      private final String data;
+    private String data;
 
     public String data() {
         return this.data;
     }
 
-    public GetClusterCertificateAuthority(String data) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-    }
+    private GetClusterCertificateAuthority() {}
 
-    private GetClusterCertificateAuthority() {
-        this.data = null;
+    private GetClusterCertificateAuthority(GetClusterCertificateAuthority $) {
+        this.data = $.data;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterCertificateAuthority defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String data;
+        private GetClusterCertificateAuthority $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterCertificateAuthority();
         }
 
         public Builder(GetClusterCertificateAuthority defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
+            $ = new GetClusterCertificateAuthority(Objects.requireNonNull(defaults));
         }
 
         public Builder data(String data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
-        }        public GetClusterCertificateAuthority build() {
-            return new GetClusterCertificateAuthority(data);
+        }
+
+        public GetClusterCertificateAuthority build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            return $;
         }
     }
+
 }

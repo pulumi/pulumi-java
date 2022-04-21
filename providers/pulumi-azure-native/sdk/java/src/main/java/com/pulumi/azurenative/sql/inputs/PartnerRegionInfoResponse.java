@@ -23,10 +23,10 @@ public final class PartnerRegionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -34,55 +34,51 @@ public final class PartnerRegionInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="replicationRole", required=true)
-      private final String replicationRole;
+    private String replicationRole;
 
     public String replicationRole() {
         return this.replicationRole;
     }
 
-    public PartnerRegionInfoResponse(
-        @Nullable String location,
-        String replicationRole) {
-        this.location = location;
-        this.replicationRole = Objects.requireNonNull(replicationRole, "expected parameter 'replicationRole' to be non-null");
-    }
+    private PartnerRegionInfoResponse() {}
 
-    private PartnerRegionInfoResponse() {
-        this.location = null;
-        this.replicationRole = null;
+    private PartnerRegionInfoResponse(PartnerRegionInfoResponse $) {
+        this.location = $.location;
+        this.replicationRole = $.replicationRole;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartnerRegionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String location;
-        private String replicationRole;
+        private PartnerRegionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartnerRegionInfoResponse();
         }
 
         public Builder(PartnerRegionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.replicationRole = defaults.replicationRole;
+            $ = new PartnerRegionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder replicationRole(String replicationRole) {
-            this.replicationRole = Objects.requireNonNull(replicationRole);
+            $.replicationRole = replicationRole;
             return this;
-        }        public PartnerRegionInfoResponse build() {
-            return new PartnerRegionInfoResponse(location, replicationRole);
+        }
+
+        public PartnerRegionInfoResponse build() {
+            $.replicationRole = Objects.requireNonNull($.replicationRole, "expected parameter 'replicationRole' to be non-null");
+            return $;
         }
     }
+
 }

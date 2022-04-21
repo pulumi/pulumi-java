@@ -22,7 +22,7 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hasRows", required=true)
-      private final Boolean hasRows;
+    private Boolean hasRows;
 
     public Boolean hasRows() {
         return this.hasRows;
@@ -33,55 +33,52 @@ public final class DatabaseTableResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public DatabaseTableResponse(
-        Boolean hasRows,
-        String name) {
-        this.hasRows = Objects.requireNonNull(hasRows, "expected parameter 'hasRows' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private DatabaseTableResponse() {}
 
-    private DatabaseTableResponse() {
-        this.hasRows = null;
-        this.name = null;
+    private DatabaseTableResponse(DatabaseTableResponse $) {
+        this.hasRows = $.hasRows;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean hasRows;
-        private String name;
+        private DatabaseTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseTableResponse();
         }
 
         public Builder(DatabaseTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hasRows = defaults.hasRows;
-    	      this.name = defaults.name;
+            $ = new DatabaseTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hasRows(Boolean hasRows) {
-            this.hasRows = Objects.requireNonNull(hasRows);
+            $.hasRows = hasRows;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public DatabaseTableResponse build() {
-            return new DatabaseTableResponse(hasRows, name);
+        }
+
+        public DatabaseTableResponse build() {
+            $.hasRows = Objects.requireNonNull($.hasRows, "expected parameter 'hasRows' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

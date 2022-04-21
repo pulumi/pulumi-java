@@ -15,78 +15,70 @@ public final class TaskDefinitionLoRaWANGatewayVersion extends com.pulumi.resour
     public static final TaskDefinitionLoRaWANGatewayVersion Empty = new TaskDefinitionLoRaWANGatewayVersion();
 
     @Import(name="model")
-      private final @Nullable String model;
+    private @Nullable String model;
 
     public Optional<String> model() {
-        return this.model == null ? Optional.empty() : Optional.ofNullable(this.model);
+        return Optional.ofNullable(this.model);
     }
 
     @Import(name="packageVersion")
-      private final @Nullable String packageVersion;
+    private @Nullable String packageVersion;
 
     public Optional<String> packageVersion() {
-        return this.packageVersion == null ? Optional.empty() : Optional.ofNullable(this.packageVersion);
+        return Optional.ofNullable(this.packageVersion);
     }
 
     @Import(name="station")
-      private final @Nullable String station;
+    private @Nullable String station;
 
     public Optional<String> station() {
-        return this.station == null ? Optional.empty() : Optional.ofNullable(this.station);
+        return Optional.ofNullable(this.station);
     }
 
-    public TaskDefinitionLoRaWANGatewayVersion(
-        @Nullable String model,
-        @Nullable String packageVersion,
-        @Nullable String station) {
-        this.model = model;
-        this.packageVersion = packageVersion;
-        this.station = station;
-    }
+    private TaskDefinitionLoRaWANGatewayVersion() {}
 
-    private TaskDefinitionLoRaWANGatewayVersion() {
-        this.model = null;
-        this.packageVersion = null;
-        this.station = null;
+    private TaskDefinitionLoRaWANGatewayVersion(TaskDefinitionLoRaWANGatewayVersion $) {
+        this.model = $.model;
+        this.packageVersion = $.packageVersion;
+        this.station = $.station;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionLoRaWANGatewayVersion defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String model;
-        private @Nullable String packageVersion;
-        private @Nullable String station;
+        private TaskDefinitionLoRaWANGatewayVersion $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionLoRaWANGatewayVersion();
         }
 
         public Builder(TaskDefinitionLoRaWANGatewayVersion defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
-    	      this.packageVersion = defaults.packageVersion;
-    	      this.station = defaults.station;
+            $ = new TaskDefinitionLoRaWANGatewayVersion(Objects.requireNonNull(defaults));
         }
 
         public Builder model(@Nullable String model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
+
         public Builder packageVersion(@Nullable String packageVersion) {
-            this.packageVersion = packageVersion;
+            $.packageVersion = packageVersion;
             return this;
         }
+
         public Builder station(@Nullable String station) {
-            this.station = station;
+            $.station = station;
             return this;
-        }        public TaskDefinitionLoRaWANGatewayVersion build() {
-            return new TaskDefinitionLoRaWANGatewayVersion(model, packageVersion, station);
+        }
+
+        public TaskDefinitionLoRaWANGatewayVersion build() {
+            return $;
         }
     }
+
 }

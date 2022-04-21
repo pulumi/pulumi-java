@@ -26,7 +26,7 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="createOption", required=true)
-      private final String createOption;
+    private String createOption;
 
     public String createOption() {
         return this.createOption;
@@ -37,10 +37,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="galleryImageReference")
-      private final @Nullable ImageDiskReferenceResponse galleryImageReference;
+    private @Nullable ImageDiskReferenceResponse galleryImageReference;
 
     public Optional<ImageDiskReferenceResponse> galleryImageReference() {
-        return this.galleryImageReference == null ? Optional.empty() : Optional.ofNullable(this.galleryImageReference);
+        return Optional.ofNullable(this.galleryImageReference);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="imageReference")
-      private final @Nullable ImageDiskReferenceResponse imageReference;
+    private @Nullable ImageDiskReferenceResponse imageReference;
 
     public Optional<ImageDiskReferenceResponse> imageReference() {
-        return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
+        return Optional.ofNullable(this.imageReference);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="logicalSectorSize")
-      private final @Nullable Integer logicalSectorSize;
+    private @Nullable Integer logicalSectorSize;
 
     public Optional<Integer> logicalSectorSize() {
-        return this.logicalSectorSize == null ? Optional.empty() : Optional.ofNullable(this.logicalSectorSize);
+        return Optional.ofNullable(this.logicalSectorSize);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceResourceId")
-      private final @Nullable String sourceResourceId;
+    private @Nullable String sourceResourceId;
 
     public Optional<String> sourceResourceId() {
-        return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
+        return Optional.ofNullable(this.sourceResourceId);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceUniqueId", required=true)
-      private final String sourceUniqueId;
+    private String sourceUniqueId;
 
     public String sourceUniqueId() {
         return this.sourceUniqueId;
@@ -92,10 +92,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceUri")
-      private final @Nullable String sourceUri;
+    private @Nullable String sourceUri;
 
     public Optional<String> sourceUri() {
-        return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
+        return Optional.ofNullable(this.sourceUri);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="storageAccountId")
-      private final @Nullable String storageAccountId;
+    private @Nullable String storageAccountId;
 
     public Optional<String> storageAccountId() {
-        return this.storageAccountId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountId);
+        return Optional.ofNullable(this.storageAccountId);
     }
 
     /**
@@ -114,118 +114,94 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="uploadSizeBytes")
-      private final @Nullable Double uploadSizeBytes;
+    private @Nullable Double uploadSizeBytes;
 
     public Optional<Double> uploadSizeBytes() {
-        return this.uploadSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.uploadSizeBytes);
+        return Optional.ofNullable(this.uploadSizeBytes);
     }
 
-    public CreationDataResponse(
-        String createOption,
-        @Nullable ImageDiskReferenceResponse galleryImageReference,
-        @Nullable ImageDiskReferenceResponse imageReference,
-        @Nullable Integer logicalSectorSize,
-        @Nullable String sourceResourceId,
-        String sourceUniqueId,
-        @Nullable String sourceUri,
-        @Nullable String storageAccountId,
-        @Nullable Double uploadSizeBytes) {
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.galleryImageReference = galleryImageReference;
-        this.imageReference = imageReference;
-        this.logicalSectorSize = logicalSectorSize;
-        this.sourceResourceId = sourceResourceId;
-        this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId, "expected parameter 'sourceUniqueId' to be non-null");
-        this.sourceUri = sourceUri;
-        this.storageAccountId = storageAccountId;
-        this.uploadSizeBytes = uploadSizeBytes;
-    }
+    private CreationDataResponse() {}
 
-    private CreationDataResponse() {
-        this.createOption = null;
-        this.galleryImageReference = null;
-        this.imageReference = null;
-        this.logicalSectorSize = null;
-        this.sourceResourceId = null;
-        this.sourceUniqueId = null;
-        this.sourceUri = null;
-        this.storageAccountId = null;
-        this.uploadSizeBytes = null;
+    private CreationDataResponse(CreationDataResponse $) {
+        this.createOption = $.createOption;
+        this.galleryImageReference = $.galleryImageReference;
+        this.imageReference = $.imageReference;
+        this.logicalSectorSize = $.logicalSectorSize;
+        this.sourceResourceId = $.sourceResourceId;
+        this.sourceUniqueId = $.sourceUniqueId;
+        this.sourceUri = $.sourceUri;
+        this.storageAccountId = $.storageAccountId;
+        this.uploadSizeBytes = $.uploadSizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreationDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createOption;
-        private @Nullable ImageDiskReferenceResponse galleryImageReference;
-        private @Nullable ImageDiskReferenceResponse imageReference;
-        private @Nullable Integer logicalSectorSize;
-        private @Nullable String sourceResourceId;
-        private String sourceUniqueId;
-        private @Nullable String sourceUri;
-        private @Nullable String storageAccountId;
-        private @Nullable Double uploadSizeBytes;
+        private CreationDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreationDataResponse();
         }
 
         public Builder(CreationDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createOption = defaults.createOption;
-    	      this.galleryImageReference = defaults.galleryImageReference;
-    	      this.imageReference = defaults.imageReference;
-    	      this.logicalSectorSize = defaults.logicalSectorSize;
-    	      this.sourceResourceId = defaults.sourceResourceId;
-    	      this.sourceUniqueId = defaults.sourceUniqueId;
-    	      this.sourceUri = defaults.sourceUri;
-    	      this.storageAccountId = defaults.storageAccountId;
-    	      this.uploadSizeBytes = defaults.uploadSizeBytes;
+            $ = new CreationDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createOption(String createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder galleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
-            this.galleryImageReference = galleryImageReference;
+            $.galleryImageReference = galleryImageReference;
             return this;
         }
+
         public Builder imageReference(@Nullable ImageDiskReferenceResponse imageReference) {
-            this.imageReference = imageReference;
+            $.imageReference = imageReference;
             return this;
         }
+
         public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
-            this.logicalSectorSize = logicalSectorSize;
+            $.logicalSectorSize = logicalSectorSize;
             return this;
         }
+
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = sourceResourceId;
+            $.sourceResourceId = sourceResourceId;
             return this;
         }
+
         public Builder sourceUniqueId(String sourceUniqueId) {
-            this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId);
+            $.sourceUniqueId = sourceUniqueId;
             return this;
         }
+
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = sourceUri;
+            $.sourceUri = sourceUri;
             return this;
         }
+
         public Builder storageAccountId(@Nullable String storageAccountId) {
-            this.storageAccountId = storageAccountId;
+            $.storageAccountId = storageAccountId;
             return this;
         }
+
         public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
-            this.uploadSizeBytes = uploadSizeBytes;
+            $.uploadSizeBytes = uploadSizeBytes;
             return this;
-        }        public CreationDataResponse build() {
-            return new CreationDataResponse(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUniqueId, sourceUri, storageAccountId, uploadSizeBytes);
+        }
+
+        public CreationDataResponse build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            $.sourceUniqueId = Objects.requireNonNull($.sourceUniqueId, "expected parameter 'sourceUniqueId' to be non-null");
+            return $;
         }
     }
+
 }

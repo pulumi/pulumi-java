@@ -21,7 +21,7 @@ public final class QueryInterpretationConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="forceDisableSupplementalResults", required=true)
-      private final Boolean forceDisableSupplementalResults;
+    private Boolean forceDisableSupplementalResults;
 
     public Boolean forceDisableSupplementalResults() {
         return this.forceDisableSupplementalResults;
@@ -32,55 +32,52 @@ public final class QueryInterpretationConfigResponse extends com.pulumi.resource
      * 
      */
     @Import(name="forceVerbatimMode", required=true)
-      private final Boolean forceVerbatimMode;
+    private Boolean forceVerbatimMode;
 
     public Boolean forceVerbatimMode() {
         return this.forceVerbatimMode;
     }
 
-    public QueryInterpretationConfigResponse(
-        Boolean forceDisableSupplementalResults,
-        Boolean forceVerbatimMode) {
-        this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults, "expected parameter 'forceDisableSupplementalResults' to be non-null");
-        this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode, "expected parameter 'forceVerbatimMode' to be non-null");
-    }
+    private QueryInterpretationConfigResponse() {}
 
-    private QueryInterpretationConfigResponse() {
-        this.forceDisableSupplementalResults = null;
-        this.forceVerbatimMode = null;
+    private QueryInterpretationConfigResponse(QueryInterpretationConfigResponse $) {
+        this.forceDisableSupplementalResults = $.forceDisableSupplementalResults;
+        this.forceVerbatimMode = $.forceVerbatimMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryInterpretationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean forceDisableSupplementalResults;
-        private Boolean forceVerbatimMode;
+        private QueryInterpretationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryInterpretationConfigResponse();
         }
 
         public Builder(QueryInterpretationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forceDisableSupplementalResults = defaults.forceDisableSupplementalResults;
-    	      this.forceVerbatimMode = defaults.forceVerbatimMode;
+            $ = new QueryInterpretationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder forceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
-            this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
+            $.forceDisableSupplementalResults = forceDisableSupplementalResults;
             return this;
         }
+
         public Builder forceVerbatimMode(Boolean forceVerbatimMode) {
-            this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
+            $.forceVerbatimMode = forceVerbatimMode;
             return this;
-        }        public QueryInterpretationConfigResponse build() {
-            return new QueryInterpretationConfigResponse(forceDisableSupplementalResults, forceVerbatimMode);
+        }
+
+        public QueryInterpretationConfigResponse build() {
+            $.forceDisableSupplementalResults = Objects.requireNonNull($.forceDisableSupplementalResults, "expected parameter 'forceDisableSupplementalResults' to be non-null");
+            $.forceVerbatimMode = Objects.requireNonNull($.forceVerbatimMode, "expected parameter 'forceVerbatimMode' to be non-null");
+            return $;
         }
     }
+
 }

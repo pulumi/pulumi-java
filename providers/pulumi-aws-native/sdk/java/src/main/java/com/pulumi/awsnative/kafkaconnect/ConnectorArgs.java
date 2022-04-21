@@ -12,11 +12,11 @@ import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorPluginArgs;
 import com.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
     @Import(name="capacity", required=true)
-      private final Output<ConnectorCapacityArgs> capacity;
+    private Output<ConnectorCapacityArgs> capacity;
 
     public Output<ConnectorCapacityArgs> capacity() {
         return this.capacity;
@@ -36,7 +36,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorConfiguration", required=true)
-      private final Output<Object> connectorConfiguration;
+    private Output<Object> connectorConfiguration;
 
     public Output<Object> connectorConfiguration() {
         return this.connectorConfiguration;
@@ -47,10 +47,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorDescription")
-      private final @Nullable Output<String> connectorDescription;
+    private @Nullable Output<String> connectorDescription;
 
-    public Output<String> connectorDescription() {
-        return this.connectorDescription == null ? Codegen.empty() : this.connectorDescription;
+    public Optional<Output<String>> connectorDescription() {
+        return Optional.ofNullable(this.connectorDescription);
     }
 
     /**
@@ -58,28 +58,28 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorName")
-      private final @Nullable Output<String> connectorName;
+    private @Nullable Output<String> connectorName;
 
-    public Output<String> connectorName() {
-        return this.connectorName == null ? Codegen.empty() : this.connectorName;
+    public Optional<Output<String>> connectorName() {
+        return Optional.ofNullable(this.connectorName);
     }
 
     @Import(name="kafkaCluster", required=true)
-      private final Output<ConnectorKafkaClusterArgs> kafkaCluster;
+    private Output<ConnectorKafkaClusterArgs> kafkaCluster;
 
     public Output<ConnectorKafkaClusterArgs> kafkaCluster() {
         return this.kafkaCluster;
     }
 
     @Import(name="kafkaClusterClientAuthentication", required=true)
-      private final Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
+    private Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
 
     public Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
 
     @Import(name="kafkaClusterEncryptionInTransit", required=true)
-      private final Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
+    private Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
 
     public Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit() {
         return this.kafkaClusterEncryptionInTransit;
@@ -90,17 +90,17 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kafkaConnectVersion", required=true)
-      private final Output<String> kafkaConnectVersion;
+    private Output<String> kafkaConnectVersion;
 
     public Output<String> kafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
 
     @Import(name="logDelivery")
-      private final @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
+    private @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
 
-    public Output<ConnectorLogDeliveryArgs> logDelivery() {
-        return this.logDelivery == null ? Codegen.empty() : this.logDelivery;
+    public Optional<Output<ConnectorLogDeliveryArgs>> logDelivery() {
+        return Optional.ofNullable(this.logDelivery);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="plugins", required=true)
-      private final Output<List<ConnectorPluginArgs>> plugins;
+    private Output<List<ConnectorPluginArgs>> plugins;
 
     public Output<List<ConnectorPluginArgs>> plugins() {
         return this.plugins;
@@ -119,203 +119,177 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceExecutionRoleArn", required=true)
-      private final Output<String> serviceExecutionRoleArn;
+    private Output<String> serviceExecutionRoleArn;
 
     public Output<String> serviceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
 
     @Import(name="workerConfiguration")
-      private final @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
+    private @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
 
-    public Output<ConnectorWorkerConfigurationArgs> workerConfiguration() {
-        return this.workerConfiguration == null ? Codegen.empty() : this.workerConfiguration;
+    public Optional<Output<ConnectorWorkerConfigurationArgs>> workerConfiguration() {
+        return Optional.ofNullable(this.workerConfiguration);
     }
 
-    public ConnectorArgs(
-        Output<ConnectorCapacityArgs> capacity,
-        Output<Object> connectorConfiguration,
-        @Nullable Output<String> connectorDescription,
-        @Nullable Output<String> connectorName,
-        Output<ConnectorKafkaClusterArgs> kafkaCluster,
-        Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication,
-        Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit,
-        Output<String> kafkaConnectVersion,
-        @Nullable Output<ConnectorLogDeliveryArgs> logDelivery,
-        Output<List<ConnectorPluginArgs>> plugins,
-        Output<String> serviceExecutionRoleArn,
-        @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.connectorConfiguration = Objects.requireNonNull(connectorConfiguration, "expected parameter 'connectorConfiguration' to be non-null");
-        this.connectorDescription = connectorDescription;
-        this.connectorName = connectorName;
-        this.kafkaCluster = Objects.requireNonNull(kafkaCluster, "expected parameter 'kafkaCluster' to be non-null");
-        this.kafkaClusterClientAuthentication = Objects.requireNonNull(kafkaClusterClientAuthentication, "expected parameter 'kafkaClusterClientAuthentication' to be non-null");
-        this.kafkaClusterEncryptionInTransit = Objects.requireNonNull(kafkaClusterEncryptionInTransit, "expected parameter 'kafkaClusterEncryptionInTransit' to be non-null");
-        this.kafkaConnectVersion = Objects.requireNonNull(kafkaConnectVersion, "expected parameter 'kafkaConnectVersion' to be non-null");
-        this.logDelivery = logDelivery;
-        this.plugins = Objects.requireNonNull(plugins, "expected parameter 'plugins' to be non-null");
-        this.serviceExecutionRoleArn = Objects.requireNonNull(serviceExecutionRoleArn, "expected parameter 'serviceExecutionRoleArn' to be non-null");
-        this.workerConfiguration = workerConfiguration;
-    }
+    private ConnectorArgs() {}
 
-    private ConnectorArgs() {
-        this.capacity = Codegen.empty();
-        this.connectorConfiguration = Codegen.empty();
-        this.connectorDescription = Codegen.empty();
-        this.connectorName = Codegen.empty();
-        this.kafkaCluster = Codegen.empty();
-        this.kafkaClusterClientAuthentication = Codegen.empty();
-        this.kafkaClusterEncryptionInTransit = Codegen.empty();
-        this.kafkaConnectVersion = Codegen.empty();
-        this.logDelivery = Codegen.empty();
-        this.plugins = Codegen.empty();
-        this.serviceExecutionRoleArn = Codegen.empty();
-        this.workerConfiguration = Codegen.empty();
+    private ConnectorArgs(ConnectorArgs $) {
+        this.capacity = $.capacity;
+        this.connectorConfiguration = $.connectorConfiguration;
+        this.connectorDescription = $.connectorDescription;
+        this.connectorName = $.connectorName;
+        this.kafkaCluster = $.kafkaCluster;
+        this.kafkaClusterClientAuthentication = $.kafkaClusterClientAuthentication;
+        this.kafkaClusterEncryptionInTransit = $.kafkaClusterEncryptionInTransit;
+        this.kafkaConnectVersion = $.kafkaConnectVersion;
+        this.logDelivery = $.logDelivery;
+        this.plugins = $.plugins;
+        this.serviceExecutionRoleArn = $.serviceExecutionRoleArn;
+        this.workerConfiguration = $.workerConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorCapacityArgs> capacity;
-        private Output<Object> connectorConfiguration;
-        private @Nullable Output<String> connectorDescription;
-        private @Nullable Output<String> connectorName;
-        private Output<ConnectorKafkaClusterArgs> kafkaCluster;
-        private Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
-        private Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
-        private Output<String> kafkaConnectVersion;
-        private @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
-        private Output<List<ConnectorPluginArgs>> plugins;
-        private Output<String> serviceExecutionRoleArn;
-        private @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
+        private ConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorArgs();
         }
 
         public Builder(ConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.connectorConfiguration = defaults.connectorConfiguration;
-    	      this.connectorDescription = defaults.connectorDescription;
-    	      this.connectorName = defaults.connectorName;
-    	      this.kafkaCluster = defaults.kafkaCluster;
-    	      this.kafkaClusterClientAuthentication = defaults.kafkaClusterClientAuthentication;
-    	      this.kafkaClusterEncryptionInTransit = defaults.kafkaClusterEncryptionInTransit;
-    	      this.kafkaConnectVersion = defaults.kafkaConnectVersion;
-    	      this.logDelivery = defaults.logDelivery;
-    	      this.plugins = defaults.plugins;
-    	      this.serviceExecutionRoleArn = defaults.serviceExecutionRoleArn;
-    	      this.workerConfiguration = defaults.workerConfiguration;
+            $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<ConnectorCapacityArgs> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(ConnectorCapacityArgs capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder connectorConfiguration(Output<Object> connectorConfiguration) {
-            this.connectorConfiguration = Objects.requireNonNull(connectorConfiguration);
+            $.connectorConfiguration = connectorConfiguration;
             return this;
         }
+
         public Builder connectorConfiguration(Object connectorConfiguration) {
-            this.connectorConfiguration = Output.of(Objects.requireNonNull(connectorConfiguration));
-            return this;
+            return connectorConfiguration(Output.of(connectorConfiguration));
         }
+
         public Builder connectorDescription(@Nullable Output<String> connectorDescription) {
-            this.connectorDescription = connectorDescription;
+            $.connectorDescription = connectorDescription;
             return this;
         }
-        public Builder connectorDescription(@Nullable String connectorDescription) {
-            this.connectorDescription = Codegen.ofNullable(connectorDescription);
-            return this;
+
+        public Builder connectorDescription(String connectorDescription) {
+            return connectorDescription(Output.of(connectorDescription));
         }
+
         public Builder connectorName(@Nullable Output<String> connectorName) {
-            this.connectorName = connectorName;
+            $.connectorName = connectorName;
             return this;
         }
-        public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Codegen.ofNullable(connectorName);
-            return this;
+
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
         }
+
         public Builder kafkaCluster(Output<ConnectorKafkaClusterArgs> kafkaCluster) {
-            this.kafkaCluster = Objects.requireNonNull(kafkaCluster);
+            $.kafkaCluster = kafkaCluster;
             return this;
         }
+
         public Builder kafkaCluster(ConnectorKafkaClusterArgs kafkaCluster) {
-            this.kafkaCluster = Output.of(Objects.requireNonNull(kafkaCluster));
-            return this;
+            return kafkaCluster(Output.of(kafkaCluster));
         }
+
         public Builder kafkaClusterClientAuthentication(Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication) {
-            this.kafkaClusterClientAuthentication = Objects.requireNonNull(kafkaClusterClientAuthentication);
+            $.kafkaClusterClientAuthentication = kafkaClusterClientAuthentication;
             return this;
         }
+
         public Builder kafkaClusterClientAuthentication(ConnectorKafkaClusterClientAuthenticationArgs kafkaClusterClientAuthentication) {
-            this.kafkaClusterClientAuthentication = Output.of(Objects.requireNonNull(kafkaClusterClientAuthentication));
-            return this;
+            return kafkaClusterClientAuthentication(Output.of(kafkaClusterClientAuthentication));
         }
+
         public Builder kafkaClusterEncryptionInTransit(Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit) {
-            this.kafkaClusterEncryptionInTransit = Objects.requireNonNull(kafkaClusterEncryptionInTransit);
+            $.kafkaClusterEncryptionInTransit = kafkaClusterEncryptionInTransit;
             return this;
         }
+
         public Builder kafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransitArgs kafkaClusterEncryptionInTransit) {
-            this.kafkaClusterEncryptionInTransit = Output.of(Objects.requireNonNull(kafkaClusterEncryptionInTransit));
-            return this;
+            return kafkaClusterEncryptionInTransit(Output.of(kafkaClusterEncryptionInTransit));
         }
+
         public Builder kafkaConnectVersion(Output<String> kafkaConnectVersion) {
-            this.kafkaConnectVersion = Objects.requireNonNull(kafkaConnectVersion);
+            $.kafkaConnectVersion = kafkaConnectVersion;
             return this;
         }
+
         public Builder kafkaConnectVersion(String kafkaConnectVersion) {
-            this.kafkaConnectVersion = Output.of(Objects.requireNonNull(kafkaConnectVersion));
-            return this;
+            return kafkaConnectVersion(Output.of(kafkaConnectVersion));
         }
+
         public Builder logDelivery(@Nullable Output<ConnectorLogDeliveryArgs> logDelivery) {
-            this.logDelivery = logDelivery;
+            $.logDelivery = logDelivery;
             return this;
         }
-        public Builder logDelivery(@Nullable ConnectorLogDeliveryArgs logDelivery) {
-            this.logDelivery = Codegen.ofNullable(logDelivery);
-            return this;
+
+        public Builder logDelivery(ConnectorLogDeliveryArgs logDelivery) {
+            return logDelivery(Output.of(logDelivery));
         }
+
         public Builder plugins(Output<List<ConnectorPluginArgs>> plugins) {
-            this.plugins = Objects.requireNonNull(plugins);
+            $.plugins = plugins;
             return this;
         }
+
         public Builder plugins(List<ConnectorPluginArgs> plugins) {
-            this.plugins = Output.of(Objects.requireNonNull(plugins));
-            return this;
+            return plugins(Output.of(plugins));
         }
+
         public Builder plugins(ConnectorPluginArgs... plugins) {
             return plugins(List.of(plugins));
         }
+
         public Builder serviceExecutionRoleArn(Output<String> serviceExecutionRoleArn) {
-            this.serviceExecutionRoleArn = Objects.requireNonNull(serviceExecutionRoleArn);
+            $.serviceExecutionRoleArn = serviceExecutionRoleArn;
             return this;
         }
+
         public Builder serviceExecutionRoleArn(String serviceExecutionRoleArn) {
-            this.serviceExecutionRoleArn = Output.of(Objects.requireNonNull(serviceExecutionRoleArn));
-            return this;
+            return serviceExecutionRoleArn(Output.of(serviceExecutionRoleArn));
         }
+
         public Builder workerConfiguration(@Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration) {
-            this.workerConfiguration = workerConfiguration;
+            $.workerConfiguration = workerConfiguration;
             return this;
         }
-        public Builder workerConfiguration(@Nullable ConnectorWorkerConfigurationArgs workerConfiguration) {
-            this.workerConfiguration = Codegen.ofNullable(workerConfiguration);
-            return this;
-        }        public ConnectorArgs build() {
-            return new ConnectorArgs(capacity, connectorConfiguration, connectorDescription, connectorName, kafkaCluster, kafkaClusterClientAuthentication, kafkaClusterEncryptionInTransit, kafkaConnectVersion, logDelivery, plugins, serviceExecutionRoleArn, workerConfiguration);
+
+        public Builder workerConfiguration(ConnectorWorkerConfigurationArgs workerConfiguration) {
+            return workerConfiguration(Output.of(workerConfiguration));
+        }
+
+        public ConnectorArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.connectorConfiguration = Objects.requireNonNull($.connectorConfiguration, "expected parameter 'connectorConfiguration' to be non-null");
+            $.kafkaCluster = Objects.requireNonNull($.kafkaCluster, "expected parameter 'kafkaCluster' to be non-null");
+            $.kafkaClusterClientAuthentication = Objects.requireNonNull($.kafkaClusterClientAuthentication, "expected parameter 'kafkaClusterClientAuthentication' to be non-null");
+            $.kafkaClusterEncryptionInTransit = Objects.requireNonNull($.kafkaClusterEncryptionInTransit, "expected parameter 'kafkaClusterEncryptionInTransit' to be non-null");
+            $.kafkaConnectVersion = Objects.requireNonNull($.kafkaConnectVersion, "expected parameter 'kafkaConnectVersion' to be non-null");
+            $.plugins = Objects.requireNonNull($.plugins, "expected parameter 'plugins' to be non-null");
+            $.serviceExecutionRoleArn = Objects.requireNonNull($.serviceExecutionRoleArn, "expected parameter 'serviceExecutionRoleArn' to be non-null");
+            return $;
         }
     }
+
 }

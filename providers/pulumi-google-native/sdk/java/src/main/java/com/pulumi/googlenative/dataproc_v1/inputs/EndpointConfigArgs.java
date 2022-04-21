@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EndpointConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="enableHttpPortAccess")
-      private final @Nullable Output<Boolean> enableHttpPortAccess;
+    private @Nullable Output<Boolean> enableHttpPortAccess;
 
-    public Output<Boolean> enableHttpPortAccess() {
-        return this.enableHttpPortAccess == null ? Codegen.empty() : this.enableHttpPortAccess;
+    public Optional<Output<Boolean>> enableHttpPortAccess() {
+        return Optional.ofNullable(this.enableHttpPortAccess);
     }
 
-    public EndpointConfigArgs(@Nullable Output<Boolean> enableHttpPortAccess) {
-        this.enableHttpPortAccess = enableHttpPortAccess;
-    }
+    private EndpointConfigArgs() {}
 
-    private EndpointConfigArgs() {
-        this.enableHttpPortAccess = Codegen.empty();
+    private EndpointConfigArgs(EndpointConfigArgs $) {
+        this.enableHttpPortAccess = $.enableHttpPortAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableHttpPortAccess;
+        private EndpointConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigArgs();
         }
 
         public Builder(EndpointConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHttpPortAccess = defaults.enableHttpPortAccess;
+            $ = new EndpointConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHttpPortAccess(@Nullable Output<Boolean> enableHttpPortAccess) {
-            this.enableHttpPortAccess = enableHttpPortAccess;
+            $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
-        public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Codegen.ofNullable(enableHttpPortAccess);
-            return this;
-        }        public EndpointConfigArgs build() {
-            return new EndpointConfigArgs(enableHttpPortAccess);
+
+        public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
+            return enableHttpPortAccess(Output.of(enableHttpPortAccess));
+        }
+
+        public EndpointConfigArgs build() {
+            return $;
         }
     }
+
 }

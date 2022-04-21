@@ -17,7 +17,7 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="notebookWorkspaceName", required=true)
-      private final String notebookWorkspaceName;
+    private String notebookWorkspaceName;
 
     public String notebookWorkspaceName() {
         return this.notebookWorkspaceName;
@@ -39,64 +39,59 @@ public final class GetNotebookWorkspaceArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetNotebookWorkspaceArgs(
-        String accountName,
-        String notebookWorkspaceName,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName, "expected parameter 'notebookWorkspaceName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetNotebookWorkspaceArgs() {}
 
-    private GetNotebookWorkspaceArgs() {
-        this.accountName = null;
-        this.notebookWorkspaceName = null;
-        this.resourceGroupName = null;
+    private GetNotebookWorkspaceArgs(GetNotebookWorkspaceArgs $) {
+        this.accountName = $.accountName;
+        this.notebookWorkspaceName = $.notebookWorkspaceName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNotebookWorkspaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String notebookWorkspaceName;
-        private String resourceGroupName;
+        private GetNotebookWorkspaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNotebookWorkspaceArgs();
         }
 
         public Builder(GetNotebookWorkspaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.notebookWorkspaceName = defaults.notebookWorkspaceName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetNotebookWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder notebookWorkspaceName(String notebookWorkspaceName) {
-            this.notebookWorkspaceName = Objects.requireNonNull(notebookWorkspaceName);
+            $.notebookWorkspaceName = notebookWorkspaceName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetNotebookWorkspaceArgs build() {
-            return new GetNotebookWorkspaceArgs(accountName, notebookWorkspaceName, resourceGroupName);
+        }
+
+        public GetNotebookWorkspaceArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.notebookWorkspaceName = Objects.requireNonNull($.notebookWorkspaceName, "expected parameter 'notebookWorkspaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

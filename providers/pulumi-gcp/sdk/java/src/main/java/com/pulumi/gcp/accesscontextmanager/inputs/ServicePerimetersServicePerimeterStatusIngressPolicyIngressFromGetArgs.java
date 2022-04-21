@@ -5,11 +5,11 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @Import(name="identities")
-      private final @Nullable Output<List<String>> identities;
+    private @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> identities() {
-        return this.identities == null ? Codegen.empty() : this.identities;
+    public Optional<Output<List<String>>> identities() {
+        return Optional.ofNullable(this.identities);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @Import(name="identityType")
-      private final @Nullable Output<String> identityType;
+    private @Nullable Output<String> identityType;
 
-    public Output<String> identityType() {
-        return this.identityType == null ? Codegen.empty() : this.identityType;
+    public Optional<Output<String>> identityType() {
+        return Optional.ofNullable(this.identityType);
     }
 
     /**
@@ -50,82 +50,76 @@ public final class ServicePerimetersServicePerimeterStatusIngressPolicyIngressFr
      * 
      */
     @Import(name="sources")
-      private final @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources;
+    private @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources;
 
-    public Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources() {
-        return this.sources == null ? Codegen.empty() : this.sources;
+    public Optional<Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
-    public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs(
-        @Nullable Output<List<String>> identities,
-        @Nullable Output<String> identityType,
-        @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources) {
-        this.identities = identities;
-        this.identityType = identityType;
-        this.sources = sources;
-    }
+    private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs() {}
 
-    private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs() {
-        this.identities = Codegen.empty();
-        this.identityType = Codegen.empty();
-        this.sources = Codegen.empty();
+    private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs(ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs $) {
+        this.identities = $.identities;
+        this.identityType = $.identityType;
+        this.sources = $.sources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> identities;
-        private @Nullable Output<String> identityType;
-        private @Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources;
+        private ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs();
         }
 
         public Builder(ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identities = defaults.identities;
-    	      this.identityType = defaults.identityType;
-    	      this.sources = defaults.sources;
+            $ = new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identities(@Nullable Output<List<String>> identities) {
-            this.identities = identities;
+            $.identities = identities;
             return this;
         }
-        public Builder identities(@Nullable List<String> identities) {
-            this.identities = Codegen.ofNullable(identities);
-            return this;
+
+        public Builder identities(List<String> identities) {
+            return identities(Output.of(identities));
         }
+
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
+
         public Builder identityType(@Nullable Output<String> identityType) {
-            this.identityType = identityType;
+            $.identityType = identityType;
             return this;
         }
-        public Builder identityType(@Nullable String identityType) {
-            this.identityType = Codegen.ofNullable(identityType);
-            return this;
+
+        public Builder identityType(String identityType) {
+            return identityType(Output.of(identityType));
         }
+
         public Builder sources(@Nullable Output<List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs>> sources) {
-            this.sources = sources;
+            $.sources = sources;
             return this;
         }
-        public Builder sources(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs> sources) {
-            this.sources = Codegen.ofNullable(sources);
-            return this;
+
+        public Builder sources(List<ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs> sources) {
+            return sources(Output.of(sources));
         }
+
         public Builder sources(ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromSourceGetArgs... sources) {
             return sources(List.of(sources));
-        }        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs build() {
-            return new ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs(identities, identityType, sources);
+        }
+
+        public ServicePerimetersServicePerimeterStatusIngressPolicyIngressFromGetArgs build() {
+            return $;
         }
     }
+
 }

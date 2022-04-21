@@ -19,10 +19,10 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="annotationType")
-      private final @Nullable String annotationType;
+    private @Nullable String annotationType;
 
     public Optional<String> annotationType() {
-        return this.annotationType == null ? Optional.empty() : Optional.ofNullable(this.annotationType);
+        return Optional.ofNullable(this.annotationType);
     }
 
     /**
@@ -30,55 +30,51 @@ public final class LabelingJobImagePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="mediaType", required=true)
-      private final String mediaType;
+    private String mediaType;
 
     public String mediaType() {
         return this.mediaType;
     }
 
-    public LabelingJobImagePropertiesResponse(
-        @Nullable String annotationType,
-        String mediaType) {
-        this.annotationType = annotationType;
-        this.mediaType = Objects.requireNonNull(mediaType, "expected parameter 'mediaType' to be non-null");
-    }
+    private LabelingJobImagePropertiesResponse() {}
 
-    private LabelingJobImagePropertiesResponse() {
-        this.annotationType = null;
-        this.mediaType = null;
+    private LabelingJobImagePropertiesResponse(LabelingJobImagePropertiesResponse $) {
+        this.annotationType = $.annotationType;
+        this.mediaType = $.mediaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelingJobImagePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String annotationType;
-        private String mediaType;
+        private LabelingJobImagePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelingJobImagePropertiesResponse();
         }
 
         public Builder(LabelingJobImagePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationType = defaults.annotationType;
-    	      this.mediaType = defaults.mediaType;
+            $ = new LabelingJobImagePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationType(@Nullable String annotationType) {
-            this.annotationType = annotationType;
+            $.annotationType = annotationType;
             return this;
         }
+
         public Builder mediaType(String mediaType) {
-            this.mediaType = Objects.requireNonNull(mediaType);
+            $.mediaType = mediaType;
             return this;
-        }        public LabelingJobImagePropertiesResponse build() {
-            return new LabelingJobImagePropertiesResponse(annotationType, mediaType);
+        }
+
+        public LabelingJobImagePropertiesResponse build() {
+            $.mediaType = Objects.requireNonNull($.mediaType, "expected parameter 'mediaType' to be non-null");
+            return $;
         }
     }
+
 }

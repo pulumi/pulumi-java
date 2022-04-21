@@ -21,45 +21,45 @@ public final class DebugOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableHotKeyLogging", required=true)
-      private final Boolean enableHotKeyLogging;
+    private Boolean enableHotKeyLogging;
 
     public Boolean enableHotKeyLogging() {
         return this.enableHotKeyLogging;
     }
 
-    public DebugOptionsResponse(Boolean enableHotKeyLogging) {
-        this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging, "expected parameter 'enableHotKeyLogging' to be non-null");
-    }
+    private DebugOptionsResponse() {}
 
-    private DebugOptionsResponse() {
-        this.enableHotKeyLogging = null;
+    private DebugOptionsResponse(DebugOptionsResponse $) {
+        this.enableHotKeyLogging = $.enableHotKeyLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DebugOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableHotKeyLogging;
+        private DebugOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DebugOptionsResponse();
         }
 
         public Builder(DebugOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHotKeyLogging = defaults.enableHotKeyLogging;
+            $ = new DebugOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHotKeyLogging(Boolean enableHotKeyLogging) {
-            this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging);
+            $.enableHotKeyLogging = enableHotKeyLogging;
             return this;
-        }        public DebugOptionsResponse build() {
-            return new DebugOptionsResponse(enableHotKeyLogging);
+        }
+
+        public DebugOptionsResponse build() {
+            $.enableHotKeyLogging = Objects.requireNonNull($.enableHotKeyLogging, "expected parameter 'enableHotKeyLogging' to be non-null");
+            return $;
         }
     }
+
 }

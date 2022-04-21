@@ -5,9 +5,9 @@ package com.pulumi.azurenative.synapse;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<String> context;
+    private @Nullable Output<String> context;
 
-    public Output<String> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<String>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="importance")
-      private final @Nullable Output<String> importance;
+    private @Nullable Output<String> importance;
 
-    public Output<String> importance() {
-        return this.importance == null ? Codegen.empty() : this.importance;
+    public Optional<Output<String>> importance() {
+        return Optional.ofNullable(this.importance);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -64,7 +64,7 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="memberName", required=true)
-      private final Output<String> memberName;
+    private Output<String> memberName;
 
     public Output<String> memberName() {
         return this.memberName;
@@ -75,7 +75,7 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final Output<String> sqlPoolName;
+    private Output<String> sqlPoolName;
 
     public Output<String> sqlPoolName() {
         return this.sqlPoolName;
@@ -97,10 +97,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="workloadClassifierName")
-      private final @Nullable Output<String> workloadClassifierName;
+    private @Nullable Output<String> workloadClassifierName;
 
-    public Output<String> workloadClassifierName() {
-        return this.workloadClassifierName == null ? Codegen.empty() : this.workloadClassifierName;
+    public Optional<Output<String>> workloadClassifierName() {
+        return Optional.ofNullable(this.workloadClassifierName);
     }
 
     /**
@@ -119,7 +119,7 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="workloadGroupName", required=true)
-      private final Output<String> workloadGroupName;
+    private Output<String> workloadGroupName;
 
     public Output<String> workloadGroupName() {
         return this.workloadGroupName;
@@ -130,180 +130,153 @@ public final class SqlPoolWorkloadClassifierArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public SqlPoolWorkloadClassifierArgs(
-        @Nullable Output<String> context,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> importance,
-        @Nullable Output<String> label,
-        Output<String> memberName,
-        Output<String> resourceGroupName,
-        Output<String> sqlPoolName,
-        @Nullable Output<String> startTime,
-        @Nullable Output<String> workloadClassifierName,
-        Output<String> workloadGroupName,
-        Output<String> workspaceName) {
-        this.context = context;
-        this.endTime = endTime;
-        this.importance = importance;
-        this.label = label;
-        this.memberName = Objects.requireNonNull(memberName, "expected parameter 'memberName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.startTime = startTime;
-        this.workloadClassifierName = workloadClassifierName;
-        this.workloadGroupName = Objects.requireNonNull(workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private SqlPoolWorkloadClassifierArgs() {}
 
-    private SqlPoolWorkloadClassifierArgs() {
-        this.context = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.importance = Codegen.empty();
-        this.label = Codegen.empty();
-        this.memberName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.sqlPoolName = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.workloadClassifierName = Codegen.empty();
-        this.workloadGroupName = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private SqlPoolWorkloadClassifierArgs(SqlPoolWorkloadClassifierArgs $) {
+        this.context = $.context;
+        this.endTime = $.endTime;
+        this.importance = $.importance;
+        this.label = $.label;
+        this.memberName = $.memberName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.startTime = $.startTime;
+        this.workloadClassifierName = $.workloadClassifierName;
+        this.workloadGroupName = $.workloadGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlPoolWorkloadClassifierArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> context;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> importance;
-        private @Nullable Output<String> label;
-        private Output<String> memberName;
-        private Output<String> resourceGroupName;
-        private Output<String> sqlPoolName;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<String> workloadClassifierName;
-        private Output<String> workloadGroupName;
-        private Output<String> workspaceName;
+        private SqlPoolWorkloadClassifierArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlPoolWorkloadClassifierArgs();
         }
 
         public Builder(SqlPoolWorkloadClassifierArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.endTime = defaults.endTime;
-    	      this.importance = defaults.importance;
-    	      this.label = defaults.label;
-    	      this.memberName = defaults.memberName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.startTime = defaults.startTime;
-    	      this.workloadClassifierName = defaults.workloadClassifierName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new SqlPoolWorkloadClassifierArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<String> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable String context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(String context) {
+            return context(Output.of(context));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder importance(@Nullable Output<String> importance) {
-            this.importance = importance;
+            $.importance = importance;
             return this;
         }
-        public Builder importance(@Nullable String importance) {
-            this.importance = Codegen.ofNullable(importance);
-            return this;
+
+        public Builder importance(String importance) {
+            return importance(Output.of(importance));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder memberName(Output<String> memberName) {
-            this.memberName = Objects.requireNonNull(memberName);
+            $.memberName = memberName;
             return this;
         }
+
         public Builder memberName(String memberName) {
-            this.memberName = Output.of(Objects.requireNonNull(memberName));
-            return this;
+            return memberName(Output.of(memberName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder sqlPoolName(Output<String> sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Output.of(Objects.requireNonNull(sqlPoolName));
-            return this;
+            return sqlPoolName(Output.of(sqlPoolName));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
-            this.workloadClassifierName = workloadClassifierName;
+            $.workloadClassifierName = workloadClassifierName;
             return this;
         }
-        public Builder workloadClassifierName(@Nullable String workloadClassifierName) {
-            this.workloadClassifierName = Codegen.ofNullable(workloadClassifierName);
-            return this;
+
+        public Builder workloadClassifierName(String workloadClassifierName) {
+            return workloadClassifierName(Output.of(workloadClassifierName));
         }
+
         public Builder workloadGroupName(Output<String> workloadGroupName) {
-            this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
+
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Output.of(Objects.requireNonNull(workloadGroupName));
-            return this;
+            return workloadGroupName(Output.of(workloadGroupName));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public SqlPoolWorkloadClassifierArgs build() {
-            return new SqlPoolWorkloadClassifierArgs(context, endTime, importance, label, memberName, resourceGroupName, sqlPoolName, startTime, workloadClassifierName, workloadGroupName, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public SqlPoolWorkloadClassifierArgs build() {
+            $.memberName = Objects.requireNonNull($.memberName, "expected parameter 'memberName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workloadGroupName = Objects.requireNonNull($.workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

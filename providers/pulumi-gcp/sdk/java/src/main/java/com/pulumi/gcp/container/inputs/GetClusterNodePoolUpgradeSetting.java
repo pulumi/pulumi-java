@@ -13,62 +13,59 @@ public final class GetClusterNodePoolUpgradeSetting extends com.pulumi.resources
     public static final GetClusterNodePoolUpgradeSetting Empty = new GetClusterNodePoolUpgradeSetting();
 
     @Import(name="maxSurge", required=true)
-      private final Integer maxSurge;
+    private Integer maxSurge;
 
     public Integer maxSurge() {
         return this.maxSurge;
     }
 
     @Import(name="maxUnavailable", required=true)
-      private final Integer maxUnavailable;
+    private Integer maxUnavailable;
 
     public Integer maxUnavailable() {
         return this.maxUnavailable;
     }
 
-    public GetClusterNodePoolUpgradeSetting(
-        Integer maxSurge,
-        Integer maxUnavailable) {
-        this.maxSurge = Objects.requireNonNull(maxSurge, "expected parameter 'maxSurge' to be non-null");
-        this.maxUnavailable = Objects.requireNonNull(maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
-    }
+    private GetClusterNodePoolUpgradeSetting() {}
 
-    private GetClusterNodePoolUpgradeSetting() {
-        this.maxSurge = null;
-        this.maxUnavailable = null;
+    private GetClusterNodePoolUpgradeSetting(GetClusterNodePoolUpgradeSetting $) {
+        this.maxSurge = $.maxSurge;
+        this.maxUnavailable = $.maxUnavailable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterNodePoolUpgradeSetting defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxSurge;
-        private Integer maxUnavailable;
+        private GetClusterNodePoolUpgradeSetting $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterNodePoolUpgradeSetting();
         }
 
         public Builder(GetClusterNodePoolUpgradeSetting defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxSurge = defaults.maxSurge;
-    	      this.maxUnavailable = defaults.maxUnavailable;
+            $ = new GetClusterNodePoolUpgradeSetting(Objects.requireNonNull(defaults));
         }
 
         public Builder maxSurge(Integer maxSurge) {
-            this.maxSurge = Objects.requireNonNull(maxSurge);
+            $.maxSurge = maxSurge;
             return this;
         }
+
         public Builder maxUnavailable(Integer maxUnavailable) {
-            this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
+            $.maxUnavailable = maxUnavailable;
             return this;
-        }        public GetClusterNodePoolUpgradeSetting build() {
-            return new GetClusterNodePoolUpgradeSetting(maxSurge, maxUnavailable);
+        }
+
+        public GetClusterNodePoolUpgradeSetting build() {
+            $.maxSurge = Objects.requireNonNull($.maxSurge, "expected parameter 'maxSurge' to be non-null");
+            $.maxUnavailable = Objects.requireNonNull($.maxUnavailable, "expected parameter 'maxUnavailable' to be non-null");
+            return $;
         }
     }
+
 }

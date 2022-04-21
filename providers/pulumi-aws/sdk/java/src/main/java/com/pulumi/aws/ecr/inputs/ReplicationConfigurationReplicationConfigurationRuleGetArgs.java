@@ -7,9 +7,9 @@ import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfiguratio
 import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * 
      */
     @Import(name="destinations", required=true)
-      private final Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
+    private Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
 
     public Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations() {
         return this.destinations;
@@ -33,69 +33,67 @@ public final class ReplicationConfigurationReplicationConfigurationRuleGetArgs e
      * 
      */
     @Import(name="repositoryFilters")
-      private final @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
+    private @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
 
-    public Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters() {
-        return this.repositoryFilters == null ? Codegen.empty() : this.repositoryFilters;
+    public Optional<Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>>> repositoryFilters() {
+        return Optional.ofNullable(this.repositoryFilters);
     }
 
-    public ReplicationConfigurationReplicationConfigurationRuleGetArgs(
-        Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations,
-        @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters) {
-        this.destinations = Objects.requireNonNull(destinations, "expected parameter 'destinations' to be non-null");
-        this.repositoryFilters = repositoryFilters;
-    }
+    private ReplicationConfigurationReplicationConfigurationRuleGetArgs() {}
 
-    private ReplicationConfigurationReplicationConfigurationRuleGetArgs() {
-        this.destinations = Codegen.empty();
-        this.repositoryFilters = Codegen.empty();
+    private ReplicationConfigurationReplicationConfigurationRuleGetArgs(ReplicationConfigurationReplicationConfigurationRuleGetArgs $) {
+        this.destinations = $.destinations;
+        this.repositoryFilters = $.repositoryFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationReplicationConfigurationRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations;
-        private @Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters;
+        private ReplicationConfigurationReplicationConfigurationRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationReplicationConfigurationRuleGetArgs();
         }
 
         public Builder(ReplicationConfigurationReplicationConfigurationRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinations = defaults.destinations;
-    	      this.repositoryFilters = defaults.repositoryFilters;
+            $ = new ReplicationConfigurationReplicationConfigurationRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinations(Output<List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs>> destinations) {
-            this.destinations = Objects.requireNonNull(destinations);
+            $.destinations = destinations;
             return this;
         }
+
         public Builder destinations(List<ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs> destinations) {
-            this.destinations = Output.of(Objects.requireNonNull(destinations));
-            return this;
+            return destinations(Output.of(destinations));
         }
+
         public Builder destinations(ReplicationConfigurationReplicationConfigurationRuleDestinationGetArgs... destinations) {
             return destinations(List.of(destinations));
         }
+
         public Builder repositoryFilters(@Nullable Output<List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs>> repositoryFilters) {
-            this.repositoryFilters = repositoryFilters;
+            $.repositoryFilters = repositoryFilters;
             return this;
         }
-        public Builder repositoryFilters(@Nullable List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs> repositoryFilters) {
-            this.repositoryFilters = Codegen.ofNullable(repositoryFilters);
-            return this;
+
+        public Builder repositoryFilters(List<ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs> repositoryFilters) {
+            return repositoryFilters(Output.of(repositoryFilters));
         }
+
         public Builder repositoryFilters(ReplicationConfigurationReplicationConfigurationRuleRepositoryFilterGetArgs... repositoryFilters) {
             return repositoryFilters(List.of(repositoryFilters));
-        }        public ReplicationConfigurationReplicationConfigurationRuleGetArgs build() {
-            return new ReplicationConfigurationReplicationConfigurationRuleGetArgs(destinations, repositoryFilters);
+        }
+
+        public ReplicationConfigurationReplicationConfigurationRuleGetArgs build() {
+            $.destinations = Objects.requireNonNull($.destinations, "expected parameter 'destinations' to be non-null");
+            return $;
         }
     }
+
 }

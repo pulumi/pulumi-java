@@ -5,10 +5,10 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends com.pulumi.res
      * 
      */
     @Import(name="pullDeps")
-      private final @Nullable Output<Boolean> pullDeps;
+    private @Nullable Output<Boolean> pullDeps;
 
-    public Output<Boolean> pullDeps() {
-        return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
+    public Optional<Output<Boolean>> pullDeps() {
+        return Optional.ofNullable(this.pullDeps);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends com.pulumi.res
      * 
      */
     @Import(name="source", required=true)
-      private final Output<OSPolicyResourceFileArgs> source;
+    private Output<OSPolicyResourceFileArgs> source;
 
     public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
 
-    public OSPolicyResourcePackageResourceRPMArgs(
-        @Nullable Output<Boolean> pullDeps,
-        Output<OSPolicyResourceFileArgs> source) {
-        this.pullDeps = pullDeps;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceRPMArgs() {}
 
-    private OSPolicyResourcePackageResourceRPMArgs() {
-        this.pullDeps = Codegen.empty();
-        this.source = Codegen.empty();
+    private OSPolicyResourcePackageResourceRPMArgs(OSPolicyResourcePackageResourceRPMArgs $) {
+        this.pullDeps = $.pullDeps;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceRPMArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> pullDeps;
-        private Output<OSPolicyResourceFileArgs> source;
+        private OSPolicyResourcePackageResourceRPMArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceRPMArgs();
         }
 
         public Builder(OSPolicyResourcePackageResourceRPMArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pullDeps = defaults.pullDeps;
-    	      this.source = defaults.source;
+            $ = new OSPolicyResourcePackageResourceRPMArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
-            this.pullDeps = pullDeps;
+            $.pullDeps = pullDeps;
             return this;
         }
-        public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Codegen.ofNullable(pullDeps);
-            return this;
+
+        public Builder pullDeps(Boolean pullDeps) {
+            return pullDeps(Output.of(pullDeps));
         }
+
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(OSPolicyResourceFileArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public OSPolicyResourcePackageResourceRPMArgs build() {
-            return new OSPolicyResourcePackageResourceRPMArgs(pullDeps, source);
+            return source(Output.of(source));
+        }
+
+        public OSPolicyResourcePackageResourceRPMArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class KeyVaultResourceSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
@@ -34,55 +34,52 @@ public final class KeyVaultResourceSettingsResponse extends com.pulumi.resources
      * 
      */
     @Import(name="targetResourceName", required=true)
-      private final String targetResourceName;
+    private String targetResourceName;
 
     public String targetResourceName() {
         return this.targetResourceName;
     }
 
-    public KeyVaultResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName) {
-        this.resourceType = Codegen.stringProp("resourceType").arg(resourceType).require();
-        this.targetResourceName = Objects.requireNonNull(targetResourceName, "expected parameter 'targetResourceName' to be non-null");
-    }
+    private KeyVaultResourceSettingsResponse() {}
 
-    private KeyVaultResourceSettingsResponse() {
-        this.resourceType = null;
-        this.targetResourceName = null;
+    private KeyVaultResourceSettingsResponse(KeyVaultResourceSettingsResponse $) {
+        this.resourceType = $.resourceType;
+        this.targetResourceName = $.targetResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVaultResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceType;
-        private String targetResourceName;
+        private KeyVaultResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVaultResourceSettingsResponse();
         }
 
         public Builder(KeyVaultResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
-    	      this.targetResourceName = defaults.targetResourceName;
+            $ = new KeyVaultResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
         }
+
         public Builder targetResourceName(String targetResourceName) {
-            this.targetResourceName = Objects.requireNonNull(targetResourceName);
+            $.targetResourceName = targetResourceName;
             return this;
-        }        public KeyVaultResourceSettingsResponse build() {
-            return new KeyVaultResourceSettingsResponse(resourceType, targetResourceName);
+        }
+
+        public KeyVaultResourceSettingsResponse build() {
+            $.resourceType = Codegen.stringProp("resourceType").arg($.resourceType).require();
+            $.targetResourceName = Objects.requireNonNull($.targetResourceName, "expected parameter 'targetResourceName' to be non-null");
+            return $;
         }
     }
+
 }

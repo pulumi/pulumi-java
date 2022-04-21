@@ -22,7 +22,7 @@ public final class PackageStoreResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,55 +33,52 @@ public final class PackageStoreResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="packageStoreLinkedService", required=true)
-      private final EntityReferenceResponse packageStoreLinkedService;
+    private EntityReferenceResponse packageStoreLinkedService;
 
     public EntityReferenceResponse packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
 
-    public PackageStoreResponse(
-        String name,
-        EntityReferenceResponse packageStoreLinkedService) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService, "expected parameter 'packageStoreLinkedService' to be non-null");
-    }
+    private PackageStoreResponse() {}
 
-    private PackageStoreResponse() {
-        this.name = null;
-        this.packageStoreLinkedService = null;
+    private PackageStoreResponse(PackageStoreResponse $) {
+        this.name = $.name;
+        this.packageStoreLinkedService = $.packageStoreLinkedService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageStoreResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private EntityReferenceResponse packageStoreLinkedService;
+        private PackageStoreResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageStoreResponse();
         }
 
         public Builder(PackageStoreResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.packageStoreLinkedService = defaults.packageStoreLinkedService;
+            $ = new PackageStoreResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder packageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
-            this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
+            $.packageStoreLinkedService = packageStoreLinkedService;
             return this;
-        }        public PackageStoreResponse build() {
-            return new PackageStoreResponse(name, packageStoreLinkedService);
+        }
+
+        public PackageStoreResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.packageStoreLinkedService = Objects.requireNonNull($.packageStoreLinkedService, "expected parameter 'packageStoreLinkedService' to be non-null");
+            return $;
         }
     }
+
 }

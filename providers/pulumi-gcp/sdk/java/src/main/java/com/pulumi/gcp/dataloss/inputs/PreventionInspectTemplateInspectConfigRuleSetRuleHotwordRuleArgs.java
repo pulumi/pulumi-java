@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs;
 import com.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs;
@@ -22,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * 
      */
     @Import(name="hotwordRegex", required=true)
-      private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex;
+    private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex() {
         return this.hotwordRegex;
@@ -34,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * 
      */
     @Import(name="likelihoodAdjustment", required=true)
-      private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment;
+    private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment() {
         return this.likelihoodAdjustment;
@@ -50,76 +49,71 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * 
      */
     @Import(name="proximity", required=true)
-      private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity;
+    private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity() {
         return this.proximity;
     }
 
-    public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(
-        Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex,
-        Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment,
-        Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity) {
-        this.hotwordRegex = Objects.requireNonNull(hotwordRegex, "expected parameter 'hotwordRegex' to be non-null");
-        this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment, "expected parameter 'likelihoodAdjustment' to be non-null");
-        this.proximity = Objects.requireNonNull(proximity, "expected parameter 'proximity' to be non-null");
-    }
+    private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs() {}
 
-    private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs() {
-        this.hotwordRegex = Codegen.empty();
-        this.likelihoodAdjustment = Codegen.empty();
-        this.proximity = Codegen.empty();
+    private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs $) {
+        this.hotwordRegex = $.hotwordRegex;
+        this.likelihoodAdjustment = $.likelihoodAdjustment;
+        this.proximity = $.proximity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex;
-        private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment;
-        private Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity;
+        private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs();
         }
 
         public Builder(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hotwordRegex = defaults.hotwordRegex;
-    	      this.likelihoodAdjustment = defaults.likelihoodAdjustment;
-    	      this.proximity = defaults.proximity;
+            $ = new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hotwordRegex(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex) {
-            this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
+            $.hotwordRegex = hotwordRegex;
             return this;
         }
+
         public Builder hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs hotwordRegex) {
-            this.hotwordRegex = Output.of(Objects.requireNonNull(hotwordRegex));
-            return this;
+            return hotwordRegex(Output.of(hotwordRegex));
         }
+
         public Builder likelihoodAdjustment(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment) {
-            this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
+            $.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
+
         public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs likelihoodAdjustment) {
-            this.likelihoodAdjustment = Output.of(Objects.requireNonNull(likelihoodAdjustment));
-            return this;
+            return likelihoodAdjustment(Output.of(likelihoodAdjustment));
         }
+
         public Builder proximity(Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity) {
-            this.proximity = Objects.requireNonNull(proximity);
+            $.proximity = proximity;
             return this;
         }
+
         public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs proximity) {
-            this.proximity = Output.of(Objects.requireNonNull(proximity));
-            return this;
-        }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs build() {
-            return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs(hotwordRegex, likelihoodAdjustment, proximity);
+            return proximity(Output.of(proximity));
+        }
+
+        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs build() {
+            $.hotwordRegex = Objects.requireNonNull($.hotwordRegex, "expected parameter 'hotwordRegex' to be non-null");
+            $.likelihoodAdjustment = Objects.requireNonNull($.likelihoodAdjustment, "expected parameter 'likelihoodAdjustment' to be non-null");
+            $.proximity = Objects.requireNonNull($.proximity, "expected parameter 'proximity' to be non-null");
+            return $;
         }
     }
+
 }

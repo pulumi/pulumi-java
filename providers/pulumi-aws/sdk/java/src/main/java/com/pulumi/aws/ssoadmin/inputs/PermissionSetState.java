@@ -5,10 +5,10 @@ package com.pulumi.aws.ssoadmin.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="createdDate")
-      private final @Nullable Output<String> createdDate;
+    private @Nullable Output<String> createdDate;
 
-    public Output<String> createdDate() {
-        return this.createdDate == null ? Codegen.empty() : this.createdDate;
+    public Optional<Output<String>> createdDate() {
+        return Optional.ofNullable(this.createdDate);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="instanceArn")
-      private final @Nullable Output<String> instanceArn;
+    private @Nullable Output<String> instanceArn;
 
-    public Output<String> instanceArn() {
-        return this.instanceArn == null ? Codegen.empty() : this.instanceArn;
+    public Optional<Output<String>> instanceArn() {
+        return Optional.ofNullable(this.instanceArn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="relayState")
-      private final @Nullable Output<String> relayState;
+    private @Nullable Output<String> relayState;
 
-    public Output<String> relayState() {
-        return this.relayState == null ? Codegen.empty() : this.relayState;
+    public Optional<Output<String>> relayState() {
+        return Optional.ofNullable(this.relayState);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sessionDuration")
-      private final @Nullable Output<String> sessionDuration;
+    private @Nullable Output<String> sessionDuration;
 
-    public Output<String> sessionDuration() {
-        return this.sessionDuration == null ? Codegen.empty() : this.sessionDuration;
+    public Optional<Output<String>> sessionDuration() {
+        return Optional.ofNullable(this.sessionDuration);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -109,154 +109,128 @@ public final class PermissionSetState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
-    public PermissionSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> createdDate,
-        @Nullable Output<String> description,
-        @Nullable Output<String> instanceArn,
-        @Nullable Output<String> name,
-        @Nullable Output<String> relayState,
-        @Nullable Output<String> sessionDuration,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll) {
-        this.arn = arn;
-        this.createdDate = createdDate;
-        this.description = description;
-        this.instanceArn = instanceArn;
-        this.name = name;
-        this.relayState = relayState;
-        this.sessionDuration = sessionDuration;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-    }
+    private PermissionSetState() {}
 
-    private PermissionSetState() {
-        this.arn = Codegen.empty();
-        this.createdDate = Codegen.empty();
-        this.description = Codegen.empty();
-        this.instanceArn = Codegen.empty();
-        this.name = Codegen.empty();
-        this.relayState = Codegen.empty();
-        this.sessionDuration = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
+    private PermissionSetState(PermissionSetState $) {
+        this.arn = $.arn;
+        this.createdDate = $.createdDate;
+        this.description = $.description;
+        this.instanceArn = $.instanceArn;
+        this.name = $.name;
+        this.relayState = $.relayState;
+        this.sessionDuration = $.sessionDuration;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> createdDate;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> instanceArn;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> relayState;
-        private @Nullable Output<String> sessionDuration;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
+        private PermissionSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionSetState();
         }
 
         public Builder(PermissionSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.createdDate = defaults.createdDate;
-    	      this.description = defaults.description;
-    	      this.instanceArn = defaults.instanceArn;
-    	      this.name = defaults.name;
-    	      this.relayState = defaults.relayState;
-    	      this.sessionDuration = defaults.sessionDuration;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
+            $ = new PermissionSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder createdDate(@Nullable Output<String> createdDate) {
-            this.createdDate = createdDate;
+            $.createdDate = createdDate;
             return this;
         }
-        public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Codegen.ofNullable(createdDate);
-            return this;
+
+        public Builder createdDate(String createdDate) {
+            return createdDate(Output.of(createdDate));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instanceArn(@Nullable Output<String> instanceArn) {
-            this.instanceArn = instanceArn;
+            $.instanceArn = instanceArn;
             return this;
         }
-        public Builder instanceArn(@Nullable String instanceArn) {
-            this.instanceArn = Codegen.ofNullable(instanceArn);
-            return this;
+
+        public Builder instanceArn(String instanceArn) {
+            return instanceArn(Output.of(instanceArn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder relayState(@Nullable Output<String> relayState) {
-            this.relayState = relayState;
+            $.relayState = relayState;
             return this;
         }
-        public Builder relayState(@Nullable String relayState) {
-            this.relayState = Codegen.ofNullable(relayState);
-            return this;
+
+        public Builder relayState(String relayState) {
+            return relayState(Output.of(relayState));
         }
+
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
-            this.sessionDuration = sessionDuration;
+            $.sessionDuration = sessionDuration;
             return this;
         }
-        public Builder sessionDuration(@Nullable String sessionDuration) {
-            this.sessionDuration = Codegen.ofNullable(sessionDuration);
-            return this;
+
+        public Builder sessionDuration(String sessionDuration) {
+            return sessionDuration(Output.of(sessionDuration));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
-        }        public PermissionSetState build() {
-            return new PermissionSetState(arn, createdDate, description, instanceArn, name, relayState, sessionDuration, tags, tagsAll);
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
+        }
+
+        public PermissionSetState build() {
+            return $;
         }
     }
+
 }

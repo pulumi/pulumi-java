@@ -5,10 +5,10 @@ package com.pulumi.aws.elb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AppCookieStickinessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="cookieName")
-      private final @Nullable Output<String> cookieName;
+    private @Nullable Output<String> cookieName;
 
-    public Output<String> cookieName() {
-        return this.cookieName == null ? Codegen.empty() : this.cookieName;
+    public Optional<Output<String>> cookieName() {
+        return Optional.ofNullable(this.cookieName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class AppCookieStickinessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="lbPort")
-      private final @Nullable Output<Integer> lbPort;
+    private @Nullable Output<Integer> lbPort;
 
-    public Output<Integer> lbPort() {
-        return this.lbPort == null ? Codegen.empty() : this.lbPort;
+    public Optional<Output<Integer>> lbPort() {
+        return Optional.ofNullable(this.lbPort);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AppCookieStickinessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="loadBalancer")
-      private final @Nullable Output<String> loadBalancer;
+    private @Nullable Output<String> loadBalancer;
 
-    public Output<String> loadBalancer() {
-        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
+    public Optional<Output<String>> loadBalancer() {
+        return Optional.ofNullable(this.loadBalancer);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class AppCookieStickinessPolicyState extends com.pulumi.resources.R
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public AppCookieStickinessPolicyState(
-        @Nullable Output<String> cookieName,
-        @Nullable Output<Integer> lbPort,
-        @Nullable Output<String> loadBalancer,
-        @Nullable Output<String> name) {
-        this.cookieName = cookieName;
-        this.lbPort = lbPort;
-        this.loadBalancer = loadBalancer;
-        this.name = name;
-    }
+    private AppCookieStickinessPolicyState() {}
 
-    private AppCookieStickinessPolicyState() {
-        this.cookieName = Codegen.empty();
-        this.lbPort = Codegen.empty();
-        this.loadBalancer = Codegen.empty();
-        this.name = Codegen.empty();
+    private AppCookieStickinessPolicyState(AppCookieStickinessPolicyState $) {
+        this.cookieName = $.cookieName;
+        this.lbPort = $.lbPort;
+        this.loadBalancer = $.loadBalancer;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppCookieStickinessPolicyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cookieName;
-        private @Nullable Output<Integer> lbPort;
-        private @Nullable Output<String> loadBalancer;
-        private @Nullable Output<String> name;
+        private AppCookieStickinessPolicyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppCookieStickinessPolicyState();
         }
 
         public Builder(AppCookieStickinessPolicyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cookieName = defaults.cookieName;
-    	      this.lbPort = defaults.lbPort;
-    	      this.loadBalancer = defaults.loadBalancer;
-    	      this.name = defaults.name;
+            $ = new AppCookieStickinessPolicyState(Objects.requireNonNull(defaults));
         }
 
         public Builder cookieName(@Nullable Output<String> cookieName) {
-            this.cookieName = cookieName;
+            $.cookieName = cookieName;
             return this;
         }
-        public Builder cookieName(@Nullable String cookieName) {
-            this.cookieName = Codegen.ofNullable(cookieName);
-            return this;
+
+        public Builder cookieName(String cookieName) {
+            return cookieName(Output.of(cookieName));
         }
+
         public Builder lbPort(@Nullable Output<Integer> lbPort) {
-            this.lbPort = lbPort;
+            $.lbPort = lbPort;
             return this;
         }
-        public Builder lbPort(@Nullable Integer lbPort) {
-            this.lbPort = Codegen.ofNullable(lbPort);
-            return this;
+
+        public Builder lbPort(Integer lbPort) {
+            return lbPort(Output.of(lbPort));
         }
+
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
-            this.loadBalancer = loadBalancer;
+            $.loadBalancer = loadBalancer;
             return this;
         }
-        public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Codegen.ofNullable(loadBalancer);
-            return this;
+
+        public Builder loadBalancer(String loadBalancer) {
+            return loadBalancer(Output.of(loadBalancer));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public AppCookieStickinessPolicyState build() {
-            return new AppCookieStickinessPolicyState(cookieName, lbPort, loadBalancer, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public AppCookieStickinessPolicyState build() {
+            return $;
         }
     }
+
 }

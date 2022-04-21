@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +36,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clusterDefinition")
-      private final @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
+    private @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
 
-    public Output<ClusterDefinitionArgs> clusterDefinition() {
-        return this.clusterDefinition == null ? Codegen.empty() : this.clusterDefinition;
+    public Optional<Output<ClusterDefinitionArgs>> clusterDefinition() {
+        return Optional.ofNullable(this.clusterDefinition);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="clusterVersion")
-      private final @Nullable Output<String> clusterVersion;
+    private @Nullable Output<String> clusterVersion;
 
-    public Output<String> clusterVersion() {
-        return this.clusterVersion == null ? Codegen.empty() : this.clusterVersion;
+    public Optional<Output<String>> clusterVersion() {
+        return Optional.ofNullable(this.clusterVersion);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="computeIsolationProperties")
-      private final @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
+    private @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
-    public Output<ComputeIsolationPropertiesArgs> computeIsolationProperties() {
-        return this.computeIsolationProperties == null ? Codegen.empty() : this.computeIsolationProperties;
+    public Optional<Output<ComputeIsolationPropertiesArgs>> computeIsolationProperties() {
+        return Optional.ofNullable(this.computeIsolationProperties);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="computeProfile")
-      private final @Nullable Output<ComputeProfileArgs> computeProfile;
+    private @Nullable Output<ComputeProfileArgs> computeProfile;
 
-    public Output<ComputeProfileArgs> computeProfile() {
-        return this.computeProfile == null ? Codegen.empty() : this.computeProfile;
+    public Optional<Output<ComputeProfileArgs>> computeProfile() {
+        return Optional.ofNullable(this.computeProfile);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="diskEncryptionProperties")
-      private final @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
+    private @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
-    public Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties() {
-        return this.diskEncryptionProperties == null ? Codegen.empty() : this.diskEncryptionProperties;
+    public Optional<Output<DiskEncryptionPropertiesArgs>> diskEncryptionProperties() {
+        return Optional.ofNullable(this.diskEncryptionProperties);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="encryptionInTransitProperties")
-      private final @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
+    private @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
-    public Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties() {
-        return this.encryptionInTransitProperties == null ? Codegen.empty() : this.encryptionInTransitProperties;
+    public Optional<Output<EncryptionInTransitPropertiesArgs>> encryptionInTransitProperties() {
+        return Optional.ofNullable(this.encryptionInTransitProperties);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="kafkaRestProperties")
-      private final @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
+    private @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
 
-    public Output<KafkaRestPropertiesArgs> kafkaRestProperties() {
-        return this.kafkaRestProperties == null ? Codegen.empty() : this.kafkaRestProperties;
+    public Optional<Output<KafkaRestPropertiesArgs>> kafkaRestProperties() {
+        return Optional.ofNullable(this.kafkaRestProperties);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minSupportedTlsVersion")
-      private final @Nullable Output<String> minSupportedTlsVersion;
+    private @Nullable Output<String> minSupportedTlsVersion;
 
-    public Output<String> minSupportedTlsVersion() {
-        return this.minSupportedTlsVersion == null ? Codegen.empty() : this.minSupportedTlsVersion;
+    public Optional<Output<String>> minSupportedTlsVersion() {
+        return Optional.ofNullable(this.minSupportedTlsVersion);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="networkProperties")
-      private final @Nullable Output<NetworkPropertiesArgs> networkProperties;
+    private @Nullable Output<NetworkPropertiesArgs> networkProperties;
 
-    public Output<NetworkPropertiesArgs> networkProperties() {
-        return this.networkProperties == null ? Codegen.empty() : this.networkProperties;
+    public Optional<Output<NetworkPropertiesArgs>> networkProperties() {
+        return Optional.ofNullable(this.networkProperties);
     }
 
     /**
@@ -134,10 +135,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<OSType> osType;
+    private @Nullable Output<OSType> osType;
 
-    public Output<OSType> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<OSType>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -145,10 +146,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="securityProfile")
-      private final @Nullable Output<SecurityProfileArgs> securityProfile;
+    private @Nullable Output<SecurityProfileArgs> securityProfile;
 
-    public Output<SecurityProfileArgs> securityProfile() {
-        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
+    public Optional<Output<SecurityProfileArgs>> securityProfile() {
+        return Optional.ofNullable(this.securityProfile);
     }
 
     /**
@@ -156,10 +157,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="storageProfile")
-      private final @Nullable Output<StorageProfileArgs> storageProfile;
+    private @Nullable Output<StorageProfileArgs> storageProfile;
 
-    public Output<StorageProfileArgs> storageProfile() {
-        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
+    public Optional<Output<StorageProfileArgs>> storageProfile() {
+        return Optional.ofNullable(this.storageProfile);
     }
 
     /**
@@ -167,206 +168,169 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Tier> tier;
+    private @Nullable Output<Tier> tier;
 
-    public Output<Tier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Tier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ClusterCreatePropertiesArgs(
-        @Nullable Output<ClusterDefinitionArgs> clusterDefinition,
-        @Nullable Output<String> clusterVersion,
-        @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties,
-        @Nullable Output<ComputeProfileArgs> computeProfile,
-        @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties,
-        @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties,
-        @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties,
-        @Nullable Output<String> minSupportedTlsVersion,
-        @Nullable Output<NetworkPropertiesArgs> networkProperties,
-        @Nullable Output<OSType> osType,
-        @Nullable Output<SecurityProfileArgs> securityProfile,
-        @Nullable Output<StorageProfileArgs> storageProfile,
-        @Nullable Output<Tier> tier) {
-        this.clusterDefinition = clusterDefinition;
-        this.clusterVersion = clusterVersion;
-        this.computeIsolationProperties = computeIsolationProperties;
-        this.computeProfile = computeProfile;
-        this.diskEncryptionProperties = diskEncryptionProperties;
-        this.encryptionInTransitProperties = encryptionInTransitProperties;
-        this.kafkaRestProperties = kafkaRestProperties;
-        this.minSupportedTlsVersion = minSupportedTlsVersion;
-        this.networkProperties = networkProperties;
-        this.osType = osType;
-        this.securityProfile = securityProfile;
-        this.storageProfile = storageProfile;
-        this.tier = Codegen.objectProp("tier", Tier.class).output().arg(tier).def(Tier.Standard).getNullable();
-    }
+    private ClusterCreatePropertiesArgs() {}
 
-    private ClusterCreatePropertiesArgs() {
-        this.clusterDefinition = Codegen.empty();
-        this.clusterVersion = Codegen.empty();
-        this.computeIsolationProperties = Codegen.empty();
-        this.computeProfile = Codegen.empty();
-        this.diskEncryptionProperties = Codegen.empty();
-        this.encryptionInTransitProperties = Codegen.empty();
-        this.kafkaRestProperties = Codegen.empty();
-        this.minSupportedTlsVersion = Codegen.empty();
-        this.networkProperties = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.securityProfile = Codegen.empty();
-        this.storageProfile = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ClusterCreatePropertiesArgs(ClusterCreatePropertiesArgs $) {
+        this.clusterDefinition = $.clusterDefinition;
+        this.clusterVersion = $.clusterVersion;
+        this.computeIsolationProperties = $.computeIsolationProperties;
+        this.computeProfile = $.computeProfile;
+        this.diskEncryptionProperties = $.diskEncryptionProperties;
+        this.encryptionInTransitProperties = $.encryptionInTransitProperties;
+        this.kafkaRestProperties = $.kafkaRestProperties;
+        this.minSupportedTlsVersion = $.minSupportedTlsVersion;
+        this.networkProperties = $.networkProperties;
+        this.osType = $.osType;
+        this.securityProfile = $.securityProfile;
+        this.storageProfile = $.storageProfile;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterCreatePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
-        private @Nullable Output<String> clusterVersion;
-        private @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
-        private @Nullable Output<ComputeProfileArgs> computeProfile;
-        private @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
-        private @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
-        private @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
-        private @Nullable Output<String> minSupportedTlsVersion;
-        private @Nullable Output<NetworkPropertiesArgs> networkProperties;
-        private @Nullable Output<OSType> osType;
-        private @Nullable Output<SecurityProfileArgs> securityProfile;
-        private @Nullable Output<StorageProfileArgs> storageProfile;
-        private @Nullable Output<Tier> tier;
+        private ClusterCreatePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterCreatePropertiesArgs();
         }
 
         public Builder(ClusterCreatePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterDefinition = defaults.clusterDefinition;
-    	      this.clusterVersion = defaults.clusterVersion;
-    	      this.computeIsolationProperties = defaults.computeIsolationProperties;
-    	      this.computeProfile = defaults.computeProfile;
-    	      this.diskEncryptionProperties = defaults.diskEncryptionProperties;
-    	      this.encryptionInTransitProperties = defaults.encryptionInTransitProperties;
-    	      this.kafkaRestProperties = defaults.kafkaRestProperties;
-    	      this.minSupportedTlsVersion = defaults.minSupportedTlsVersion;
-    	      this.networkProperties = defaults.networkProperties;
-    	      this.osType = defaults.osType;
-    	      this.securityProfile = defaults.securityProfile;
-    	      this.storageProfile = defaults.storageProfile;
-    	      this.tier = defaults.tier;
+            $ = new ClusterCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterDefinition(@Nullable Output<ClusterDefinitionArgs> clusterDefinition) {
-            this.clusterDefinition = clusterDefinition;
+            $.clusterDefinition = clusterDefinition;
             return this;
         }
-        public Builder clusterDefinition(@Nullable ClusterDefinitionArgs clusterDefinition) {
-            this.clusterDefinition = Codegen.ofNullable(clusterDefinition);
-            return this;
+
+        public Builder clusterDefinition(ClusterDefinitionArgs clusterDefinition) {
+            return clusterDefinition(Output.of(clusterDefinition));
         }
+
         public Builder clusterVersion(@Nullable Output<String> clusterVersion) {
-            this.clusterVersion = clusterVersion;
+            $.clusterVersion = clusterVersion;
             return this;
         }
-        public Builder clusterVersion(@Nullable String clusterVersion) {
-            this.clusterVersion = Codegen.ofNullable(clusterVersion);
-            return this;
+
+        public Builder clusterVersion(String clusterVersion) {
+            return clusterVersion(Output.of(clusterVersion));
         }
+
         public Builder computeIsolationProperties(@Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties) {
-            this.computeIsolationProperties = computeIsolationProperties;
+            $.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
-        public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesArgs computeIsolationProperties) {
-            this.computeIsolationProperties = Codegen.ofNullable(computeIsolationProperties);
-            return this;
+
+        public Builder computeIsolationProperties(ComputeIsolationPropertiesArgs computeIsolationProperties) {
+            return computeIsolationProperties(Output.of(computeIsolationProperties));
         }
+
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
-            this.computeProfile = computeProfile;
+            $.computeProfile = computeProfile;
             return this;
         }
-        public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
-            this.computeProfile = Codegen.ofNullable(computeProfile);
-            return this;
+
+        public Builder computeProfile(ComputeProfileArgs computeProfile) {
+            return computeProfile(Output.of(computeProfile));
         }
+
         public Builder diskEncryptionProperties(@Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties) {
-            this.diskEncryptionProperties = diskEncryptionProperties;
+            $.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
-        public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesArgs diskEncryptionProperties) {
-            this.diskEncryptionProperties = Codegen.ofNullable(diskEncryptionProperties);
-            return this;
+
+        public Builder diskEncryptionProperties(DiskEncryptionPropertiesArgs diskEncryptionProperties) {
+            return diskEncryptionProperties(Output.of(diskEncryptionProperties));
         }
+
         public Builder encryptionInTransitProperties(@Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties) {
-            this.encryptionInTransitProperties = encryptionInTransitProperties;
+            $.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
-        public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
-            this.encryptionInTransitProperties = Codegen.ofNullable(encryptionInTransitProperties);
-            return this;
+
+        public Builder encryptionInTransitProperties(EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
+            return encryptionInTransitProperties(Output.of(encryptionInTransitProperties));
         }
+
         public Builder kafkaRestProperties(@Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties) {
-            this.kafkaRestProperties = kafkaRestProperties;
+            $.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
-        public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesArgs kafkaRestProperties) {
-            this.kafkaRestProperties = Codegen.ofNullable(kafkaRestProperties);
-            return this;
+
+        public Builder kafkaRestProperties(KafkaRestPropertiesArgs kafkaRestProperties) {
+            return kafkaRestProperties(Output.of(kafkaRestProperties));
         }
+
         public Builder minSupportedTlsVersion(@Nullable Output<String> minSupportedTlsVersion) {
-            this.minSupportedTlsVersion = minSupportedTlsVersion;
+            $.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
-        public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
-            this.minSupportedTlsVersion = Codegen.ofNullable(minSupportedTlsVersion);
-            return this;
+
+        public Builder minSupportedTlsVersion(String minSupportedTlsVersion) {
+            return minSupportedTlsVersion(Output.of(minSupportedTlsVersion));
         }
+
         public Builder networkProperties(@Nullable Output<NetworkPropertiesArgs> networkProperties) {
-            this.networkProperties = networkProperties;
+            $.networkProperties = networkProperties;
             return this;
         }
-        public Builder networkProperties(@Nullable NetworkPropertiesArgs networkProperties) {
-            this.networkProperties = Codegen.ofNullable(networkProperties);
-            return this;
+
+        public Builder networkProperties(NetworkPropertiesArgs networkProperties) {
+            return networkProperties(Output.of(networkProperties));
         }
+
         public Builder osType(@Nullable Output<OSType> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable OSType osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(OSType osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
-            this.securityProfile = securityProfile;
+            $.securityProfile = securityProfile;
             return this;
         }
-        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Codegen.ofNullable(securityProfile);
-            return this;
+
+        public Builder securityProfile(SecurityProfileArgs securityProfile) {
+            return securityProfile(Output.of(securityProfile));
         }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
-            this.storageProfile = storageProfile;
+            $.storageProfile = storageProfile;
             return this;
         }
-        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
-            this.storageProfile = Codegen.ofNullable(storageProfile);
-            return this;
+
+        public Builder storageProfile(StorageProfileArgs storageProfile) {
+            return storageProfile(Output.of(storageProfile));
         }
+
         public Builder tier(@Nullable Output<Tier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Tier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ClusterCreatePropertiesArgs build() {
-            return new ClusterCreatePropertiesArgs(clusterDefinition, clusterVersion, computeIsolationProperties, computeProfile, diskEncryptionProperties, encryptionInTransitProperties, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, securityProfile, storageProfile, tier);
+
+        public Builder tier(Tier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ClusterCreatePropertiesArgs build() {
+            $.tier = Codegen.objectProp("tier", Tier.class).output().arg($.tier).def(Tier.Standard).getNullable();
+            return $;
         }
     }
+
 }

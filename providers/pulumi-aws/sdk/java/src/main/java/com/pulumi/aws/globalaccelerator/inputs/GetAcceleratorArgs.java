@@ -20,10 +20,10 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable String arn;
+    private @Nullable String arn;
 
     public Optional<String> arn() {
-        return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,71 +31,63 @@ public final class GetAcceleratorArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetAcceleratorArgs(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.arn = arn;
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetAcceleratorArgs() {}
 
-    private GetAcceleratorArgs() {
-        this.arn = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetAcceleratorArgs(GetAcceleratorArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAcceleratorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String arn;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetAcceleratorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAcceleratorArgs();
         }
 
         public Builder(GetAcceleratorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetAcceleratorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable String arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetAcceleratorArgs build() {
-            return new GetAcceleratorArgs(arn, name, tags);
+        }
+
+        public GetAcceleratorArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="fileUri", required=true)
-      private final String fileUri;
+    private String fileUri;
 
     public String fileUri() {
         return this.fileUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="height", required=true)
-      private final String height;
+    private String height;
 
     public String height() {
         return this.height;
@@ -43,64 +43,59 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * 
      */
     @Import(name="thumbnailUri", required=true)
-      private final String thumbnailUri;
+    private String thumbnailUri;
 
     public String thumbnailUri() {
         return this.thumbnailUri;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(
-        String fileUri,
-        String height,
-        String thumbnailUri) {
-        this.fileUri = Objects.requireNonNull(fileUri, "expected parameter 'fileUri' to be non-null");
-        this.height = Objects.requireNonNull(height, "expected parameter 'height' to be non-null");
-        this.thumbnailUri = Objects.requireNonNull(thumbnailUri, "expected parameter 'thumbnailUri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse() {
-        this.fileUri = null;
-        this.height = null;
-        this.thumbnailUri = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse $) {
+        this.fileUri = $.fileUri;
+        this.height = $.height;
+        this.thumbnailUri = $.thumbnailUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileUri;
-        private String height;
-        private String thumbnailUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUri = defaults.fileUri;
-    	      this.height = defaults.height;
-    	      this.thumbnailUri = defaults.thumbnailUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUri(String fileUri) {
-            this.fileUri = Objects.requireNonNull(fileUri);
+            $.fileUri = fileUri;
             return this;
         }
+
         public Builder height(String height) {
-            this.height = Objects.requireNonNull(height);
+            $.height = height;
             return this;
         }
+
         public Builder thumbnailUri(String thumbnailUri) {
-            this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
+            $.thumbnailUri = thumbnailUri;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(fileUri, height, thumbnailUri);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse build() {
+            $.fileUri = Objects.requireNonNull($.fileUri, "expected parameter 'fileUri' to be non-null");
+            $.height = Objects.requireNonNull($.height, "expected parameter 'height' to be non-null");
+            $.thumbnailUri = Objects.requireNonNull($.thumbnailUri, "expected parameter 'thumbnailUri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
     public static final TrailEventSelector Empty = new TrailEventSelector();
 
     @Import(name="dataResources")
-      private final @Nullable List<TrailDataResource> dataResources;
+    private @Nullable List<TrailDataResource> dataResources;
 
-    public List<TrailDataResource> dataResources() {
-        return this.dataResources == null ? List.of() : this.dataResources;
+    public Optional<List<TrailDataResource>> dataResources() {
+        return Optional.ofNullable(this.dataResources);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="excludeManagementEventSources")
-      private final @Nullable List<String> excludeManagementEventSources;
+    private @Nullable List<String> excludeManagementEventSources;
 
-    public List<String> excludeManagementEventSources() {
-        return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
+    public Optional<List<String>> excludeManagementEventSources() {
+        return Optional.ofNullable(this.excludeManagementEventSources);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="includeManagementEvents")
-      private final @Nullable Boolean includeManagementEvents;
+    private @Nullable Boolean includeManagementEvents;
 
     public Optional<Boolean> includeManagementEvents() {
-        return this.includeManagementEvents == null ? Optional.empty() : Optional.ofNullable(this.includeManagementEvents);
+        return Optional.ofNullable(this.includeManagementEvents);
     }
 
     /**
@@ -56,79 +56,70 @@ public final class TrailEventSelector extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="readWriteType")
-      private final @Nullable TrailEventSelectorReadWriteType readWriteType;
+    private @Nullable TrailEventSelectorReadWriteType readWriteType;
 
     public Optional<TrailEventSelectorReadWriteType> readWriteType() {
-        return this.readWriteType == null ? Optional.empty() : Optional.ofNullable(this.readWriteType);
+        return Optional.ofNullable(this.readWriteType);
     }
 
-    public TrailEventSelector(
-        @Nullable List<TrailDataResource> dataResources,
-        @Nullable List<String> excludeManagementEventSources,
-        @Nullable Boolean includeManagementEvents,
-        @Nullable TrailEventSelectorReadWriteType readWriteType) {
-        this.dataResources = dataResources;
-        this.excludeManagementEventSources = excludeManagementEventSources;
-        this.includeManagementEvents = includeManagementEvents;
-        this.readWriteType = readWriteType;
-    }
+    private TrailEventSelector() {}
 
-    private TrailEventSelector() {
-        this.dataResources = List.of();
-        this.excludeManagementEventSources = List.of();
-        this.includeManagementEvents = null;
-        this.readWriteType = null;
+    private TrailEventSelector(TrailEventSelector $) {
+        this.dataResources = $.dataResources;
+        this.excludeManagementEventSources = $.excludeManagementEventSources;
+        this.includeManagementEvents = $.includeManagementEvents;
+        this.readWriteType = $.readWriteType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrailEventSelector defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<TrailDataResource> dataResources;
-        private @Nullable List<String> excludeManagementEventSources;
-        private @Nullable Boolean includeManagementEvents;
-        private @Nullable TrailEventSelectorReadWriteType readWriteType;
+        private TrailEventSelector $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrailEventSelector();
         }
 
         public Builder(TrailEventSelector defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataResources = defaults.dataResources;
-    	      this.excludeManagementEventSources = defaults.excludeManagementEventSources;
-    	      this.includeManagementEvents = defaults.includeManagementEvents;
-    	      this.readWriteType = defaults.readWriteType;
+            $ = new TrailEventSelector(Objects.requireNonNull(defaults));
         }
 
         public Builder dataResources(@Nullable List<TrailDataResource> dataResources) {
-            this.dataResources = dataResources;
+            $.dataResources = dataResources;
             return this;
         }
+
         public Builder dataResources(TrailDataResource... dataResources) {
             return dataResources(List.of(dataResources));
         }
+
         public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
-            this.excludeManagementEventSources = excludeManagementEventSources;
+            $.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
+
         public Builder excludeManagementEventSources(String... excludeManagementEventSources) {
             return excludeManagementEventSources(List.of(excludeManagementEventSources));
         }
+
         public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
-            this.includeManagementEvents = includeManagementEvents;
+            $.includeManagementEvents = includeManagementEvents;
             return this;
         }
+
         public Builder readWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
-            this.readWriteType = readWriteType;
+            $.readWriteType = readWriteType;
             return this;
-        }        public TrailEventSelector build() {
-            return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
+        }
+
+        public TrailEventSelector build() {
+            return $;
         }
     }
+
 }

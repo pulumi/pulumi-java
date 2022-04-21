@@ -8,10 +8,10 @@ import com.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="definition", required=true)
-      private final Output<ManagementPolicyDefinitionArgs> definition;
+    private Output<ManagementPolicyDefinitionArgs> definition;
 
     public Output<ManagementPolicyDefinitionArgs> definition() {
         return this.definition;
@@ -39,10 +39,10 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -61,89 +61,81 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,RuleType>> type;
+    private Output<Either<String,RuleType>> type;
 
     public Output<Either<String,RuleType>> type() {
         return this.type;
     }
 
-    public ManagementPolicyRuleArgs(
-        Output<ManagementPolicyDefinitionArgs> definition,
-        @Nullable Output<Boolean> enabled,
-        Output<String> name,
-        Output<Either<String,RuleType>> type) {
-        this.definition = Objects.requireNonNull(definition, "expected parameter 'definition' to be non-null");
-        this.enabled = enabled;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManagementPolicyRuleArgs() {}
 
-    private ManagementPolicyRuleArgs() {
-        this.definition = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.name = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManagementPolicyRuleArgs(ManagementPolicyRuleArgs $) {
+        this.definition = $.definition;
+        this.enabled = $.enabled;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagementPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ManagementPolicyDefinitionArgs> definition;
-        private @Nullable Output<Boolean> enabled;
-        private Output<String> name;
-        private Output<Either<String,RuleType>> type;
+        private ManagementPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagementPolicyRuleArgs();
         }
 
         public Builder(ManagementPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.definition = defaults.definition;
-    	      this.enabled = defaults.enabled;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new ManagementPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder definition(Output<ManagementPolicyDefinitionArgs> definition) {
-            this.definition = Objects.requireNonNull(definition);
+            $.definition = definition;
             return this;
         }
+
         public Builder definition(ManagementPolicyDefinitionArgs definition) {
-            this.definition = Output.of(Objects.requireNonNull(definition));
-            return this;
+            return definition(Output.of(definition));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder type(Output<Either<String,RuleType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,RuleType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManagementPolicyRuleArgs build() {
-            return new ManagementPolicyRuleArgs(definition, enabled, name, type);
+            return type(Output.of(type));
+        }
+
+        public ManagementPolicyRuleArgs build() {
+            $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

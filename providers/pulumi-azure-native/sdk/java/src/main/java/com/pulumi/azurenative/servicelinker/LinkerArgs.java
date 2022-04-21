@@ -12,10 +12,10 @@ import com.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoA
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authInfo")
-      private final @Nullable Output<Object> authInfo;
+    private @Nullable Output<Object> authInfo;
 
-    public Output<Object> authInfo() {
-        return this.authInfo == null ? Codegen.empty() : this.authInfo;
+    public Optional<Output<Object>> authInfo() {
+        return Optional.ofNullable(this.authInfo);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientType")
-      private final @Nullable Output<Either<String,ClientType>> clientType;
+    private @Nullable Output<Either<String,ClientType>> clientType;
 
-    public Output<Either<String,ClientType>> clientType() {
-        return this.clientType == null ? Codegen.empty() : this.clientType;
+    public Optional<Output<Either<String,ClientType>>> clientType() {
+        return Optional.ofNullable(this.clientType);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="linkerName")
-      private final @Nullable Output<String> linkerName;
+    private @Nullable Output<String> linkerName;
 
-    public Output<String> linkerName() {
-        return this.linkerName == null ? Codegen.empty() : this.linkerName;
+    public Optional<Output<String>> linkerName() {
+        return Optional.ofNullable(this.linkerName);
     }
 
     /**
@@ -61,7 +61,7 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<String> resourceUri;
+    private Output<String> resourceUri;
 
     public Output<String> resourceUri() {
         return this.resourceUri;
@@ -72,102 +72,89 @@ public final class LinkerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetId")
-      private final @Nullable Output<String> targetId;
+    private @Nullable Output<String> targetId;
 
-    public Output<String> targetId() {
-        return this.targetId == null ? Codegen.empty() : this.targetId;
+    public Optional<Output<String>> targetId() {
+        return Optional.ofNullable(this.targetId);
     }
 
-    public LinkerArgs(
-        @Nullable Output<Object> authInfo,
-        @Nullable Output<Either<String,ClientType>> clientType,
-        @Nullable Output<String> linkerName,
-        Output<String> resourceUri,
-        @Nullable Output<String> targetId) {
-        this.authInfo = authInfo;
-        this.clientType = clientType;
-        this.linkerName = linkerName;
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-        this.targetId = targetId;
-    }
+    private LinkerArgs() {}
 
-    private LinkerArgs() {
-        this.authInfo = Codegen.empty();
-        this.clientType = Codegen.empty();
-        this.linkerName = Codegen.empty();
-        this.resourceUri = Codegen.empty();
-        this.targetId = Codegen.empty();
+    private LinkerArgs(LinkerArgs $) {
+        this.authInfo = $.authInfo;
+        this.clientType = $.clientType;
+        this.linkerName = $.linkerName;
+        this.resourceUri = $.resourceUri;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> authInfo;
-        private @Nullable Output<Either<String,ClientType>> clientType;
-        private @Nullable Output<String> linkerName;
-        private Output<String> resourceUri;
-        private @Nullable Output<String> targetId;
+        private LinkerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkerArgs();
         }
 
         public Builder(LinkerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authInfo = defaults.authInfo;
-    	      this.clientType = defaults.clientType;
-    	      this.linkerName = defaults.linkerName;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.targetId = defaults.targetId;
+            $ = new LinkerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authInfo(@Nullable Output<Object> authInfo) {
-            this.authInfo = authInfo;
+            $.authInfo = authInfo;
             return this;
         }
-        public Builder authInfo(@Nullable Object authInfo) {
-            this.authInfo = Codegen.ofNullable(authInfo);
-            return this;
+
+        public Builder authInfo(Object authInfo) {
+            return authInfo(Output.of(authInfo));
         }
+
         public Builder clientType(@Nullable Output<Either<String,ClientType>> clientType) {
-            this.clientType = clientType;
+            $.clientType = clientType;
             return this;
         }
-        public Builder clientType(@Nullable Either<String,ClientType> clientType) {
-            this.clientType = Codegen.ofNullable(clientType);
-            return this;
+
+        public Builder clientType(Either<String,ClientType> clientType) {
+            return clientType(Output.of(clientType));
         }
+
         public Builder linkerName(@Nullable Output<String> linkerName) {
-            this.linkerName = linkerName;
+            $.linkerName = linkerName;
             return this;
         }
-        public Builder linkerName(@Nullable String linkerName) {
-            this.linkerName = Codegen.ofNullable(linkerName);
-            return this;
+
+        public Builder linkerName(String linkerName) {
+            return linkerName(Output.of(linkerName));
         }
+
         public Builder resourceUri(Output<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder targetId(@Nullable Output<String> targetId) {
-            this.targetId = targetId;
+            $.targetId = targetId;
             return this;
         }
-        public Builder targetId(@Nullable String targetId) {
-            this.targetId = Codegen.ofNullable(targetId);
-            return this;
-        }        public LinkerArgs build() {
-            return new LinkerArgs(authInfo, clientType, linkerName, resourceUri, targetId);
+
+        public Builder targetId(String targetId) {
+            return targetId(Output.of(targetId));
+        }
+
+        public LinkerArgs build() {
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

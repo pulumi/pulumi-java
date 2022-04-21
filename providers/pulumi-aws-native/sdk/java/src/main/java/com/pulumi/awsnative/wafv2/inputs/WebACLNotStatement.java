@@ -13,45 +13,45 @@ public final class WebACLNotStatement extends com.pulumi.resources.InvokeArgs {
     public static final WebACLNotStatement Empty = new WebACLNotStatement();
 
     @Import(name="statement", required=true)
-      private final WebACLStatement statement;
+    private WebACLStatement statement;
 
     public WebACLStatement statement() {
         return this.statement;
     }
 
-    public WebACLNotStatement(WebACLStatement statement) {
-        this.statement = Objects.requireNonNull(statement, "expected parameter 'statement' to be non-null");
-    }
+    private WebACLNotStatement() {}
 
-    private WebACLNotStatement() {
-        this.statement = null;
+    private WebACLNotStatement(WebACLNotStatement $) {
+        this.statement = $.statement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLNotStatement defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private WebACLStatement statement;
+        private WebACLNotStatement $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLNotStatement();
         }
 
         public Builder(WebACLNotStatement defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.statement = defaults.statement;
+            $ = new WebACLNotStatement(Objects.requireNonNull(defaults));
         }
 
         public Builder statement(WebACLStatement statement) {
-            this.statement = Objects.requireNonNull(statement);
+            $.statement = statement;
             return this;
-        }        public WebACLNotStatement build() {
-            return new WebACLNotStatement(statement);
+        }
+
+        public WebACLNotStatement build() {
+            $.statement = Objects.requireNonNull($.statement, "expected parameter 'statement' to be non-null");
+            return $;
         }
     }
+
 }

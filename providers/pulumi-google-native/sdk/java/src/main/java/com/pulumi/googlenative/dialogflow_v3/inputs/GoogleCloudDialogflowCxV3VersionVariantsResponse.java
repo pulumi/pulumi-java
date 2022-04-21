@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsResponse extends com.
      * 
      */
     @Import(name="variants", required=true)
-      private final List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
+    private List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
 
     public List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants() {
         return this.variants;
     }
 
-    public GoogleCloudDialogflowCxV3VersionVariantsResponse(List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
-        this.variants = Objects.requireNonNull(variants, "expected parameter 'variants' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3VersionVariantsResponse() {}
 
-    private GoogleCloudDialogflowCxV3VersionVariantsResponse() {
-        this.variants = List.of();
+    private GoogleCloudDialogflowCxV3VersionVariantsResponse(GoogleCloudDialogflowCxV3VersionVariantsResponse $) {
+        this.variants = $.variants;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3VersionVariantsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants;
+        private GoogleCloudDialogflowCxV3VersionVariantsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3VersionVariantsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3VersionVariantsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.variants = defaults.variants;
+            $ = new GoogleCloudDialogflowCxV3VersionVariantsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder variants(List<GoogleCloudDialogflowCxV3VersionVariantsVariantResponse> variants) {
-            this.variants = Objects.requireNonNull(variants);
+            $.variants = variants;
             return this;
         }
+
         public Builder variants(GoogleCloudDialogflowCxV3VersionVariantsVariantResponse... variants) {
             return variants(List.of(variants));
-        }        public GoogleCloudDialogflowCxV3VersionVariantsResponse build() {
-            return new GoogleCloudDialogflowCxV3VersionVariantsResponse(variants);
+        }
+
+        public GoogleCloudDialogflowCxV3VersionVariantsResponse build() {
+            $.variants = Objects.requireNonNull($.variants, "expected parameter 'variants' to be non-null");
+            return $;
         }
     }
+
 }

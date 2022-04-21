@@ -5,7 +5,6 @@ package com.pulumi.gcp.cloudasset.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudasset.inputs.OrganizationFeedFeedOutputConfigPubsubDestinationArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class OrganizationFeedFeedOutputConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="pubsubDestination", required=true)
-      private final Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
+    private Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
 
     public Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
 
-    public OrganizationFeedFeedOutputConfigArgs(Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination) {
-        this.pubsubDestination = Objects.requireNonNull(pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
-    }
+    private OrganizationFeedFeedOutputConfigArgs() {}
 
-    private OrganizationFeedFeedOutputConfigArgs() {
-        this.pubsubDestination = Codegen.empty();
+    private OrganizationFeedFeedOutputConfigArgs(OrganizationFeedFeedOutputConfigArgs $) {
+        this.pubsubDestination = $.pubsubDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationFeedFeedOutputConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination;
+        private OrganizationFeedFeedOutputConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationFeedFeedOutputConfigArgs();
         }
 
         public Builder(OrganizationFeedFeedOutputConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubDestination = defaults.pubsubDestination;
+            $ = new OrganizationFeedFeedOutputConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubDestination(Output<OrganizationFeedFeedOutputConfigPubsubDestinationArgs> pubsubDestination) {
-            this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
+            $.pubsubDestination = pubsubDestination;
             return this;
         }
+
         public Builder pubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Output.of(Objects.requireNonNull(pubsubDestination));
-            return this;
-        }        public OrganizationFeedFeedOutputConfigArgs build() {
-            return new OrganizationFeedFeedOutputConfigArgs(pubsubDestination);
+            return pubsubDestination(Output.of(pubsubDestination));
+        }
+
+        public OrganizationFeedFeedOutputConfigArgs build() {
+            $.pubsubDestination = Objects.requireNonNull($.pubsubDestination, "expected parameter 'pubsubDestination' to be non-null");
+            return $;
         }
     }
+
 }

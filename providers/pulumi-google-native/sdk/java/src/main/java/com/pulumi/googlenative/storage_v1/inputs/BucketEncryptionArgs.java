@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BucketEncryptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="defaultKmsKeyName")
-      private final @Nullable Output<String> defaultKmsKeyName;
+    private @Nullable Output<String> defaultKmsKeyName;
 
-    public Output<String> defaultKmsKeyName() {
-        return this.defaultKmsKeyName == null ? Codegen.empty() : this.defaultKmsKeyName;
+    public Optional<Output<String>> defaultKmsKeyName() {
+        return Optional.ofNullable(this.defaultKmsKeyName);
     }
 
-    public BucketEncryptionArgs(@Nullable Output<String> defaultKmsKeyName) {
-        this.defaultKmsKeyName = defaultKmsKeyName;
-    }
+    private BucketEncryptionArgs() {}
 
-    private BucketEncryptionArgs() {
-        this.defaultKmsKeyName = Codegen.empty();
+    private BucketEncryptionArgs(BucketEncryptionArgs $) {
+        this.defaultKmsKeyName = $.defaultKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> defaultKmsKeyName;
+        private BucketEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEncryptionArgs();
         }
 
         public Builder(BucketEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
+            $ = new BucketEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKmsKeyName(@Nullable Output<String> defaultKmsKeyName) {
-            this.defaultKmsKeyName = defaultKmsKeyName;
+            $.defaultKmsKeyName = defaultKmsKeyName;
             return this;
         }
-        public Builder defaultKmsKeyName(@Nullable String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Codegen.ofNullable(defaultKmsKeyName);
-            return this;
-        }        public BucketEncryptionArgs build() {
-            return new BucketEncryptionArgs(defaultKmsKeyName);
+
+        public Builder defaultKmsKeyName(String defaultKmsKeyName) {
+            return defaultKmsKeyName(Output.of(defaultKmsKeyName));
+        }
+
+        public BucketEncryptionArgs build() {
+            return $;
         }
     }
+
 }

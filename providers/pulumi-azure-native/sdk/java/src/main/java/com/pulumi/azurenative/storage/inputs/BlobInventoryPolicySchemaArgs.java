@@ -8,7 +8,6 @@ import com.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +27,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<String> destination;
+    private Output<String> destination;
 
     public Output<String> destination() {
         return this.destination;
@@ -39,7 +38,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -50,7 +49,7 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="rules", required=true)
-      private final Output<List<BlobInventoryPolicyRuleArgs>> rules;
+    private Output<List<BlobInventoryPolicyRuleArgs>> rules;
 
     public Output<List<BlobInventoryPolicyRuleArgs>> rules() {
         return this.rules;
@@ -61,92 +60,86 @@ public final class BlobInventoryPolicySchemaArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="type", required=true)
-      private final Output<Either<String,InventoryRuleType>> type;
+    private Output<Either<String,InventoryRuleType>> type;
 
     public Output<Either<String,InventoryRuleType>> type() {
         return this.type;
     }
 
-    public BlobInventoryPolicySchemaArgs(
-        Output<String> destination,
-        Output<Boolean> enabled,
-        Output<List<BlobInventoryPolicyRuleArgs>> rules,
-        Output<Either<String,InventoryRuleType>> type) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BlobInventoryPolicySchemaArgs() {}
 
-    private BlobInventoryPolicySchemaArgs() {
-        this.destination = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.type = Codegen.empty();
+    private BlobInventoryPolicySchemaArgs(BlobInventoryPolicySchemaArgs $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
+        this.rules = $.rules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicySchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destination;
-        private Output<Boolean> enabled;
-        private Output<List<BlobInventoryPolicyRuleArgs>> rules;
-        private Output<Either<String,InventoryRuleType>> type;
+        private BlobInventoryPolicySchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicySchemaArgs();
         }
 
         public Builder(BlobInventoryPolicySchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
-    	      this.rules = defaults.rules;
-    	      this.type = defaults.type;
+            $ = new BlobInventoryPolicySchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<String> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(String destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder rules(Output<List<BlobInventoryPolicyRuleArgs>> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(List<BlobInventoryPolicyRuleArgs> rules) {
-            this.rules = Output.of(Objects.requireNonNull(rules));
-            return this;
+            return rules(Output.of(rules));
         }
+
         public Builder rules(BlobInventoryPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder type(Output<Either<String,InventoryRuleType>> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(Either<String,InventoryRuleType> type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public BlobInventoryPolicySchemaArgs build() {
-            return new BlobInventoryPolicySchemaArgs(destination, enabled, rules, type);
+            return type(Output.of(type));
+        }
+
+        public BlobInventoryPolicySchemaArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

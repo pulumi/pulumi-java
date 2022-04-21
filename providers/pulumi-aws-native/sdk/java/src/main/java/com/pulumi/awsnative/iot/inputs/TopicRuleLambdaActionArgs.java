@@ -5,9 +5,9 @@ package com.pulumi.awsnative.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class TopicRuleLambdaActionArgs extends com.pulumi.resources.Resour
     public static final TopicRuleLambdaActionArgs Empty = new TopicRuleLambdaActionArgs();
 
     @Import(name="functionArn")
-      private final @Nullable Output<String> functionArn;
+    private @Nullable Output<String> functionArn;
 
-    public Output<String> functionArn() {
-        return this.functionArn == null ? Codegen.empty() : this.functionArn;
+    public Optional<Output<String>> functionArn() {
+        return Optional.ofNullable(this.functionArn);
     }
 
-    public TopicRuleLambdaActionArgs(@Nullable Output<String> functionArn) {
-        this.functionArn = functionArn;
-    }
+    private TopicRuleLambdaActionArgs() {}
 
-    private TopicRuleLambdaActionArgs() {
-        this.functionArn = Codegen.empty();
+    private TopicRuleLambdaActionArgs(TopicRuleLambdaActionArgs $) {
+        this.functionArn = $.functionArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicRuleLambdaActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> functionArn;
+        private TopicRuleLambdaActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicRuleLambdaActionArgs();
         }
 
         public Builder(TopicRuleLambdaActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionArn = defaults.functionArn;
+            $ = new TopicRuleLambdaActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionArn(@Nullable Output<String> functionArn) {
-            this.functionArn = functionArn;
+            $.functionArn = functionArn;
             return this;
         }
-        public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Codegen.ofNullable(functionArn);
-            return this;
-        }        public TopicRuleLambdaActionArgs build() {
-            return new TopicRuleLambdaActionArgs(functionArn);
+
+        public Builder functionArn(String functionArn) {
+            return functionArn(Output.of(functionArn));
+        }
+
+        public TopicRuleLambdaActionArgs build() {
+            return $;
         }
     }
+
 }

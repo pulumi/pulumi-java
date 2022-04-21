@@ -21,7 +21,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="lastKnownPowerState", required=true)
-      private final String lastKnownPowerState;
+    private String lastKnownPowerState;
 
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
@@ -32,7 +32,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -43,7 +43,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -54,7 +54,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rdpAuthority", required=true)
-      private final String rdpAuthority;
+    private String rdpAuthority;
 
     public String rdpAuthority() {
         return this.rdpAuthority;
@@ -65,7 +65,7 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sshAuthority", required=true)
-      private final String sshAuthority;
+    private String sshAuthority;
 
     public String sshAuthority() {
         return this.sshAuthority;
@@ -76,91 +76,80 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public VirtualMachineDetailsResponse(
-        String lastKnownPowerState,
-        String privateIpAddress,
-        String provisioningState,
-        String rdpAuthority,
-        String sshAuthority,
-        String userName) {
-        this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState, "expected parameter 'lastKnownPowerState' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.rdpAuthority = Objects.requireNonNull(rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
-        this.sshAuthority = Objects.requireNonNull(sshAuthority, "expected parameter 'sshAuthority' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private VirtualMachineDetailsResponse() {}
 
-    private VirtualMachineDetailsResponse() {
-        this.lastKnownPowerState = null;
-        this.privateIpAddress = null;
-        this.provisioningState = null;
-        this.rdpAuthority = null;
-        this.sshAuthority = null;
-        this.userName = null;
+    private VirtualMachineDetailsResponse(VirtualMachineDetailsResponse $) {
+        this.lastKnownPowerState = $.lastKnownPowerState;
+        this.privateIpAddress = $.privateIpAddress;
+        this.provisioningState = $.provisioningState;
+        this.rdpAuthority = $.rdpAuthority;
+        this.sshAuthority = $.sshAuthority;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastKnownPowerState;
-        private String privateIpAddress;
-        private String provisioningState;
-        private String rdpAuthority;
-        private String sshAuthority;
-        private String userName;
+        private VirtualMachineDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineDetailsResponse();
         }
 
         public Builder(VirtualMachineDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastKnownPowerState = defaults.lastKnownPowerState;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.rdpAuthority = defaults.rdpAuthority;
-    	      this.sshAuthority = defaults.sshAuthority;
-    	      this.userName = defaults.userName;
+            $ = new VirtualMachineDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastKnownPowerState(String lastKnownPowerState) {
-            this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
+            $.lastKnownPowerState = lastKnownPowerState;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder rdpAuthority(String rdpAuthority) {
-            this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
+            $.rdpAuthority = rdpAuthority;
             return this;
         }
+
         public Builder sshAuthority(String sshAuthority) {
-            this.sshAuthority = Objects.requireNonNull(sshAuthority);
+            $.sshAuthority = sshAuthority;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public VirtualMachineDetailsResponse build() {
-            return new VirtualMachineDetailsResponse(lastKnownPowerState, privateIpAddress, provisioningState, rdpAuthority, sshAuthority, userName);
+        }
+
+        public VirtualMachineDetailsResponse build() {
+            $.lastKnownPowerState = Objects.requireNonNull($.lastKnownPowerState, "expected parameter 'lastKnownPowerState' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.rdpAuthority = Objects.requireNonNull($.rdpAuthority, "expected parameter 'rdpAuthority' to be non-null");
+            $.sshAuthority = Objects.requireNonNull($.sshAuthority, "expected parameter 'sshAuthority' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

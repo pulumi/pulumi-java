@@ -5,7 +5,6 @@ package com.pulumi.aws.lambda.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EventSourceMappingDestinationConfigOnFailureGetArgs extends c
      * 
      */
     @Import(name="destinationArn", required=true)
-      private final Output<String> destinationArn;
+    private Output<String> destinationArn;
 
     public Output<String> destinationArn() {
         return this.destinationArn;
     }
 
-    public EventSourceMappingDestinationConfigOnFailureGetArgs(Output<String> destinationArn) {
-        this.destinationArn = Objects.requireNonNull(destinationArn, "expected parameter 'destinationArn' to be non-null");
-    }
+    private EventSourceMappingDestinationConfigOnFailureGetArgs() {}
 
-    private EventSourceMappingDestinationConfigOnFailureGetArgs() {
-        this.destinationArn = Codegen.empty();
+    private EventSourceMappingDestinationConfigOnFailureGetArgs(EventSourceMappingDestinationConfigOnFailureGetArgs $) {
+        this.destinationArn = $.destinationArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventSourceMappingDestinationConfigOnFailureGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> destinationArn;
+        private EventSourceMappingDestinationConfigOnFailureGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventSourceMappingDestinationConfigOnFailureGetArgs();
         }
 
         public Builder(EventSourceMappingDestinationConfigOnFailureGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationArn = defaults.destinationArn;
+            $ = new EventSourceMappingDestinationConfigOnFailureGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationArn(Output<String> destinationArn) {
-            this.destinationArn = Objects.requireNonNull(destinationArn);
+            $.destinationArn = destinationArn;
             return this;
         }
+
         public Builder destinationArn(String destinationArn) {
-            this.destinationArn = Output.of(Objects.requireNonNull(destinationArn));
-            return this;
-        }        public EventSourceMappingDestinationConfigOnFailureGetArgs build() {
-            return new EventSourceMappingDestinationConfigOnFailureGetArgs(destinationArn);
+            return destinationArn(Output.of(destinationArn));
+        }
+
+        public EventSourceMappingDestinationConfigOnFailureGetArgs build() {
+            $.destinationArn = Objects.requireNonNull($.destinationArn, "expected parameter 'destinationArn' to be non-null");
+            return $;
         }
     }
+
 }

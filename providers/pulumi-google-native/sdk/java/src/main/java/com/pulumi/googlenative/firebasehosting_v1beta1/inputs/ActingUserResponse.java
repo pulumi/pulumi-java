@@ -21,7 +21,7 @@ public final class ActingUserResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -32,55 +32,52 @@ public final class ActingUserResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="imageUrl", required=true)
-      private final String imageUrl;
+    private String imageUrl;
 
     public String imageUrl() {
         return this.imageUrl;
     }
 
-    public ActingUserResponse(
-        String email,
-        String imageUrl) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.imageUrl = Objects.requireNonNull(imageUrl, "expected parameter 'imageUrl' to be non-null");
-    }
+    private ActingUserResponse() {}
 
-    private ActingUserResponse() {
-        this.email = null;
-        this.imageUrl = null;
+    private ActingUserResponse(ActingUserResponse $) {
+        this.email = $.email;
+        this.imageUrl = $.imageUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ActingUserResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private String imageUrl;
+        private ActingUserResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ActingUserResponse();
         }
 
         public Builder(ActingUserResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.imageUrl = defaults.imageUrl;
+            $ = new ActingUserResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder imageUrl(String imageUrl) {
-            this.imageUrl = Objects.requireNonNull(imageUrl);
+            $.imageUrl = imageUrl;
             return this;
-        }        public ActingUserResponse build() {
-            return new ActingUserResponse(email, imageUrl);
+        }
+
+        public ActingUserResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.imageUrl = Objects.requireNonNull($.imageUrl, "expected parameter 'imageUrl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowNoResourceGroupMatch", required=true)
-      private final Boolean allowNoResourceGroupMatch;
+    private Boolean allowNoResourceGroupMatch;
 
     public Boolean allowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch;
@@ -35,7 +35,7 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -46,7 +46,7 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -57,76 +57,70 @@ public final class OSPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroups", required=true)
-      private final List<OSPolicyResourceGroupResponse> resourceGroups;
+    private List<OSPolicyResourceGroupResponse> resourceGroups;
 
     public List<OSPolicyResourceGroupResponse> resourceGroups() {
         return this.resourceGroups;
     }
 
-    public OSPolicyResponse(
-        Boolean allowNoResourceGroupMatch,
-        String description,
-        String mode,
-        List<OSPolicyResourceGroupResponse> resourceGroups) {
-        this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch, "expected parameter 'allowNoResourceGroupMatch' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.resourceGroups = Objects.requireNonNull(resourceGroups, "expected parameter 'resourceGroups' to be non-null");
-    }
+    private OSPolicyResponse() {}
 
-    private OSPolicyResponse() {
-        this.allowNoResourceGroupMatch = null;
-        this.description = null;
-        this.mode = null;
-        this.resourceGroups = List.of();
+    private OSPolicyResponse(OSPolicyResponse $) {
+        this.allowNoResourceGroupMatch = $.allowNoResourceGroupMatch;
+        this.description = $.description;
+        this.mode = $.mode;
+        this.resourceGroups = $.resourceGroups;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowNoResourceGroupMatch;
-        private String description;
-        private String mode;
-        private List<OSPolicyResourceGroupResponse> resourceGroups;
+        private OSPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResponse();
         }
 
         public Builder(OSPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowNoResourceGroupMatch = defaults.allowNoResourceGroupMatch;
-    	      this.description = defaults.description;
-    	      this.mode = defaults.mode;
-    	      this.resourceGroups = defaults.resourceGroups;
+            $ = new OSPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
-            this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch);
+            $.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder resourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
-            this.resourceGroups = Objects.requireNonNull(resourceGroups);
+            $.resourceGroups = resourceGroups;
             return this;
         }
+
         public Builder resourceGroups(OSPolicyResourceGroupResponse... resourceGroups) {
             return resourceGroups(List.of(resourceGroups));
-        }        public OSPolicyResponse build() {
-            return new OSPolicyResponse(allowNoResourceGroupMatch, description, mode, resourceGroups);
+        }
+
+        public OSPolicyResponse build() {
+            $.allowNoResourceGroupMatch = Objects.requireNonNull($.allowNoResourceGroupMatch, "expected parameter 'allowNoResourceGroupMatch' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.resourceGroups = Objects.requireNonNull($.resourceGroups, "expected parameter 'resourceGroups' to be non-null");
+            return $;
         }
     }
+
 }

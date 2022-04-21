@@ -5,11 +5,11 @@ package com.pulumi.gcp.composer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
     public static final EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs Empty = new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs();
 
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
+    private @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
-    public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
     }
 
-    public EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs(
-        @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks,
-        Output<Boolean> enabled) {
-        this.cidrBlocks = cidrBlocks;
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs() {}
 
-    private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs() {
-        this.cidrBlocks = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs(EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
-        private Output<Boolean> enabled;
+        private EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs();
         }
 
         public Builder(EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.enabled = defaults.enabled;
+            $ = new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(@Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
-        }        public EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs build() {
-            return new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs(cidrBlocks, enabled);
+            return enabled(Output.of(enabled));
+        }
+
+        public EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

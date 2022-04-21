@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,90 +16,83 @@ public final class ContainerDeviceArgs extends com.pulumi.resources.ResourceArgs
     public static final ContainerDeviceArgs Empty = new ContainerDeviceArgs();
 
     @Import(name="containerPath")
-      private final @Nullable Output<String> containerPath;
+    private @Nullable Output<String> containerPath;
 
-    public Output<String> containerPath() {
-        return this.containerPath == null ? Codegen.empty() : this.containerPath;
+    public Optional<Output<String>> containerPath() {
+        return Optional.ofNullable(this.containerPath);
     }
 
     @Import(name="hostPath", required=true)
-      private final Output<String> hostPath;
+    private Output<String> hostPath;
 
     public Output<String> hostPath() {
         return this.hostPath;
     }
 
     @Import(name="permissions")
-      private final @Nullable Output<String> permissions;
+    private @Nullable Output<String> permissions;
 
-    public Output<String> permissions() {
-        return this.permissions == null ? Codegen.empty() : this.permissions;
+    public Optional<Output<String>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
-    public ContainerDeviceArgs(
-        @Nullable Output<String> containerPath,
-        Output<String> hostPath,
-        @Nullable Output<String> permissions) {
-        this.containerPath = containerPath;
-        this.hostPath = Objects.requireNonNull(hostPath, "expected parameter 'hostPath' to be non-null");
-        this.permissions = permissions;
-    }
+    private ContainerDeviceArgs() {}
 
-    private ContainerDeviceArgs() {
-        this.containerPath = Codegen.empty();
-        this.hostPath = Codegen.empty();
-        this.permissions = Codegen.empty();
+    private ContainerDeviceArgs(ContainerDeviceArgs $) {
+        this.containerPath = $.containerPath;
+        this.hostPath = $.hostPath;
+        this.permissions = $.permissions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerPath;
-        private Output<String> hostPath;
-        private @Nullable Output<String> permissions;
+        private ContainerDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerDeviceArgs();
         }
 
         public Builder(ContainerDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPath = defaults.containerPath;
-    	      this.hostPath = defaults.hostPath;
-    	      this.permissions = defaults.permissions;
+            $ = new ContainerDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPath(@Nullable Output<String> containerPath) {
-            this.containerPath = containerPath;
+            $.containerPath = containerPath;
             return this;
         }
-        public Builder containerPath(@Nullable String containerPath) {
-            this.containerPath = Codegen.ofNullable(containerPath);
-            return this;
+
+        public Builder containerPath(String containerPath) {
+            return containerPath(Output.of(containerPath));
         }
+
         public Builder hostPath(Output<String> hostPath) {
-            this.hostPath = Objects.requireNonNull(hostPath);
+            $.hostPath = hostPath;
             return this;
         }
+
         public Builder hostPath(String hostPath) {
-            this.hostPath = Output.of(Objects.requireNonNull(hostPath));
-            return this;
+            return hostPath(Output.of(hostPath));
         }
+
         public Builder permissions(@Nullable Output<String> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
-        public Builder permissions(@Nullable String permissions) {
-            this.permissions = Codegen.ofNullable(permissions);
-            return this;
-        }        public ContainerDeviceArgs build() {
-            return new ContainerDeviceArgs(containerPath, hostPath, permissions);
+
+        public Builder permissions(String permissions) {
+            return permissions(Output.of(permissions));
+        }
+
+        public ContainerDeviceArgs build() {
+            $.hostPath = Objects.requireNonNull($.hostPath, "expected parameter 'hostPath' to be non-null");
+            return $;
         }
     }
+
 }

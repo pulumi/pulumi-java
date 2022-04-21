@@ -9,6 +9,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +27,7 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="distributionType", required=true)
-      private final Output<String> distributionType;
+    private Output<String> distributionType;
 
     public Output<String> distributionType() {
         return this.distributionType;
@@ -37,63 +38,59 @@ public final class PyTorchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="processCount")
-      private final @Nullable Output<Integer> processCount;
+    private @Nullable Output<Integer> processCount;
 
-    public Output<Integer> processCount() {
-        return this.processCount == null ? Codegen.empty() : this.processCount;
+    public Optional<Output<Integer>> processCount() {
+        return Optional.ofNullable(this.processCount);
     }
 
-    public PyTorchArgs(
-        Output<String> distributionType,
-        @Nullable Output<Integer> processCount) {
-        this.distributionType = Codegen.stringProp("distributionType").output().arg(distributionType).require();
-        this.processCount = processCount;
-    }
+    private PyTorchArgs() {}
 
-    private PyTorchArgs() {
-        this.distributionType = Codegen.empty();
-        this.processCount = Codegen.empty();
+    private PyTorchArgs(PyTorchArgs $) {
+        this.distributionType = $.distributionType;
+        this.processCount = $.processCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PyTorchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> distributionType;
-        private @Nullable Output<Integer> processCount;
+        private PyTorchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PyTorchArgs();
         }
 
         public Builder(PyTorchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionType = defaults.distributionType;
-    	      this.processCount = defaults.processCount;
+            $ = new PyTorchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionType(Output<String> distributionType) {
-            this.distributionType = Objects.requireNonNull(distributionType);
+            $.distributionType = distributionType;
             return this;
         }
+
         public Builder distributionType(String distributionType) {
-            this.distributionType = Output.of(Objects.requireNonNull(distributionType));
-            return this;
+            return distributionType(Output.of(distributionType));
         }
+
         public Builder processCount(@Nullable Output<Integer> processCount) {
-            this.processCount = processCount;
+            $.processCount = processCount;
             return this;
         }
-        public Builder processCount(@Nullable Integer processCount) {
-            this.processCount = Codegen.ofNullable(processCount);
-            return this;
-        }        public PyTorchArgs build() {
-            return new PyTorchArgs(distributionType, processCount);
+
+        public Builder processCount(Integer processCount) {
+            return processCount(Output.of(processCount));
+        }
+
+        public PyTorchArgs build() {
+            $.distributionType = Codegen.stringProp("distributionType").output().arg($.distributionType).require();
+            return $;
         }
     }
+
 }

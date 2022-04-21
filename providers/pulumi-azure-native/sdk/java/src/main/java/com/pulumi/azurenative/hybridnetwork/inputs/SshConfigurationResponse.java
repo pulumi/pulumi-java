@@ -24,48 +24,48 @@ public final class SshConfigurationResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="publicKeys")
-      private final @Nullable List<SshPublicKeyResponse> publicKeys;
+    private @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    public List<SshPublicKeyResponse> publicKeys() {
-        return this.publicKeys == null ? List.of() : this.publicKeys;
+    public Optional<List<SshPublicKeyResponse>> publicKeys() {
+        return Optional.ofNullable(this.publicKeys);
     }
 
-    public SshConfigurationResponse(@Nullable List<SshPublicKeyResponse> publicKeys) {
-        this.publicKeys = publicKeys;
-    }
+    private SshConfigurationResponse() {}
 
-    private SshConfigurationResponse() {
-        this.publicKeys = List.of();
+    private SshConfigurationResponse(SshConfigurationResponse $) {
+        this.publicKeys = $.publicKeys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<SshPublicKeyResponse> publicKeys;
+        private SshConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshConfigurationResponse();
         }
 
         public Builder(SshConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeys = defaults.publicKeys;
+            $ = new SshConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeys(@Nullable List<SshPublicKeyResponse> publicKeys) {
-            this.publicKeys = publicKeys;
+            $.publicKeys = publicKeys;
             return this;
         }
+
         public Builder publicKeys(SshPublicKeyResponse... publicKeys) {
             return publicKeys(List.of(publicKeys));
-        }        public SshConfigurationResponse build() {
-            return new SshConfigurationResponse(publicKeys);
+        }
+
+        public SshConfigurationResponse build() {
+            return $;
         }
     }
+
 }

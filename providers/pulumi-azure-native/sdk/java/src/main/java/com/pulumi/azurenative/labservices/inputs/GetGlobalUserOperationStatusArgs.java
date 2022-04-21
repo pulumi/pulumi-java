@@ -17,7 +17,7 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
      * 
      */
     @Import(name="operationUrl", required=true)
-      private final String operationUrl;
+    private String operationUrl;
 
     public String operationUrl() {
         return this.operationUrl;
@@ -28,55 +28,52 @@ public final class GetGlobalUserOperationStatusArgs extends com.pulumi.resources
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public GetGlobalUserOperationStatusArgs(
-        String operationUrl,
-        String userName) {
-        this.operationUrl = Objects.requireNonNull(operationUrl, "expected parameter 'operationUrl' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private GetGlobalUserOperationStatusArgs() {}
 
-    private GetGlobalUserOperationStatusArgs() {
-        this.operationUrl = null;
-        this.userName = null;
+    private GetGlobalUserOperationStatusArgs(GetGlobalUserOperationStatusArgs $) {
+        this.operationUrl = $.operationUrl;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalUserOperationStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operationUrl;
-        private String userName;
+        private GetGlobalUserOperationStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalUserOperationStatusArgs();
         }
 
         public Builder(GetGlobalUserOperationStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operationUrl = defaults.operationUrl;
-    	      this.userName = defaults.userName;
+            $ = new GetGlobalUserOperationStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operationUrl(String operationUrl) {
-            this.operationUrl = Objects.requireNonNull(operationUrl);
+            $.operationUrl = operationUrl;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public GetGlobalUserOperationStatusArgs build() {
-            return new GetGlobalUserOperationStatusArgs(operationUrl, userName);
+        }
+
+        public GetGlobalUserOperationStatusArgs build() {
+            $.operationUrl = Objects.requireNonNull($.operationUrl, "expected parameter 'operationUrl' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

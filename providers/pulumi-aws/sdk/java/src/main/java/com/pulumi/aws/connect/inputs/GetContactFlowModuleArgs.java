@@ -20,10 +20,10 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="contactFlowModuleId")
-      private final @Nullable String contactFlowModuleId;
+    private @Nullable String contactFlowModuleId;
 
     public Optional<String> contactFlowModuleId() {
-        return this.contactFlowModuleId == null ? Optional.empty() : Optional.ofNullable(this.contactFlowModuleId);
+        return Optional.ofNullable(this.contactFlowModuleId);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -42,10 +42,10 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,73 +53,63 @@ public final class GetContactFlowModuleArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetContactFlowModuleArgs(
-        @Nullable String contactFlowModuleId,
-        String instanceId,
-        @Nullable String name,
-        @Nullable Map<String,String> tags) {
-        this.contactFlowModuleId = contactFlowModuleId;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private GetContactFlowModuleArgs() {}
 
-    private GetContactFlowModuleArgs() {
-        this.contactFlowModuleId = null;
-        this.instanceId = null;
-        this.name = null;
-        this.tags = Map.of();
+    private GetContactFlowModuleArgs(GetContactFlowModuleArgs $) {
+        this.contactFlowModuleId = $.contactFlowModuleId;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetContactFlowModuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contactFlowModuleId;
-        private String instanceId;
-        private @Nullable String name;
-        private @Nullable Map<String,String> tags;
+        private GetContactFlowModuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetContactFlowModuleArgs();
         }
 
         public Builder(GetContactFlowModuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactFlowModuleId = defaults.contactFlowModuleId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new GetContactFlowModuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactFlowModuleId(@Nullable String contactFlowModuleId) {
-            this.contactFlowModuleId = contactFlowModuleId;
+            $.contactFlowModuleId = contactFlowModuleId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetContactFlowModuleArgs build() {
-            return new GetContactFlowModuleArgs(contactFlowModuleId, instanceId, name, tags);
+        }
+
+        public GetContactFlowModuleArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

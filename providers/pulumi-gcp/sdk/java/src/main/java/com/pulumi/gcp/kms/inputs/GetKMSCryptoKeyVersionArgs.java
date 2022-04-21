@@ -21,7 +21,7 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="cryptoKey", required=true)
-      private final String cryptoKey;
+    private String cryptoKey;
 
     public String cryptoKey() {
         return this.cryptoKey;
@@ -32,55 +32,51 @@ public final class GetKMSCryptoKeyVersionArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="version")
-      private final @Nullable Integer version;
+    private @Nullable Integer version;
 
     public Optional<Integer> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public GetKMSCryptoKeyVersionArgs(
-        String cryptoKey,
-        @Nullable Integer version) {
-        this.cryptoKey = Objects.requireNonNull(cryptoKey, "expected parameter 'cryptoKey' to be non-null");
-        this.version = version;
-    }
+    private GetKMSCryptoKeyVersionArgs() {}
 
-    private GetKMSCryptoKeyVersionArgs() {
-        this.cryptoKey = null;
-        this.version = null;
+    private GetKMSCryptoKeyVersionArgs(GetKMSCryptoKeyVersionArgs $) {
+        this.cryptoKey = $.cryptoKey;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKMSCryptoKeyVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cryptoKey;
-        private @Nullable Integer version;
+        private GetKMSCryptoKeyVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKMSCryptoKeyVersionArgs();
         }
 
         public Builder(GetKMSCryptoKeyVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.version = defaults.version;
+            $ = new GetKMSCryptoKeyVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKey(String cryptoKey) {
-            this.cryptoKey = Objects.requireNonNull(cryptoKey);
+            $.cryptoKey = cryptoKey;
             return this;
         }
+
         public Builder version(@Nullable Integer version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public GetKMSCryptoKeyVersionArgs build() {
-            return new GetKMSCryptoKeyVersionArgs(cryptoKey, version);
+        }
+
+        public GetKMSCryptoKeyVersionArgs build() {
+            $.cryptoKey = Objects.requireNonNull($.cryptoKey, "expected parameter 'cryptoKey' to be non-null");
+            return $;
         }
     }
+
 }

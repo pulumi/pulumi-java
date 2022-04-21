@@ -25,10 +25,10 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="delayEvaluation")
-      private final @Nullable Integer delayEvaluation;
+    private @Nullable Integer delayEvaluation;
 
     public Optional<Integer> delayEvaluation() {
-        return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
+        return Optional.ofNullable(this.delayEvaluation);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable Integer evaluationInterval;
+    private @Nullable Integer evaluationInterval;
 
     public Optional<Integer> evaluationInterval() {
-        return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="policyType", required=true)
-      private final String policyType;
+    private String policyType;
 
     public String policyType() {
         return this.policyType;
@@ -58,73 +58,63 @@ public final class TruncationSelectionPolicyResponse extends com.pulumi.resource
      * 
      */
     @Import(name="truncationPercentage")
-      private final @Nullable Integer truncationPercentage;
+    private @Nullable Integer truncationPercentage;
 
     public Optional<Integer> truncationPercentage() {
-        return this.truncationPercentage == null ? Optional.empty() : Optional.ofNullable(this.truncationPercentage);
+        return Optional.ofNullable(this.truncationPercentage);
     }
 
-    public TruncationSelectionPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType,
-        @Nullable Integer truncationPercentage) {
-        this.delayEvaluation = delayEvaluation;
-        this.evaluationInterval = evaluationInterval;
-        this.policyType = Codegen.stringProp("policyType").arg(policyType).require();
-        this.truncationPercentage = truncationPercentage;
-    }
+    private TruncationSelectionPolicyResponse() {}
 
-    private TruncationSelectionPolicyResponse() {
-        this.delayEvaluation = null;
-        this.evaluationInterval = null;
-        this.policyType = null;
-        this.truncationPercentage = null;
+    private TruncationSelectionPolicyResponse(TruncationSelectionPolicyResponse $) {
+        this.delayEvaluation = $.delayEvaluation;
+        this.evaluationInterval = $.evaluationInterval;
+        this.policyType = $.policyType;
+        this.truncationPercentage = $.truncationPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TruncationSelectionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer delayEvaluation;
-        private @Nullable Integer evaluationInterval;
-        private String policyType;
-        private @Nullable Integer truncationPercentage;
+        private TruncationSelectionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TruncationSelectionPolicyResponse();
         }
 
         public Builder(TruncationSelectionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delayEvaluation = defaults.delayEvaluation;
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.policyType = defaults.policyType;
-    	      this.truncationPercentage = defaults.truncationPercentage;
+            $ = new TruncationSelectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = delayEvaluation;
+            $.delayEvaluation = delayEvaluation;
             return this;
         }
+
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
+
         public Builder policyType(String policyType) {
-            this.policyType = Objects.requireNonNull(policyType);
+            $.policyType = policyType;
             return this;
         }
+
         public Builder truncationPercentage(@Nullable Integer truncationPercentage) {
-            this.truncationPercentage = truncationPercentage;
+            $.truncationPercentage = truncationPercentage;
             return this;
-        }        public TruncationSelectionPolicyResponse build() {
-            return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
+        }
+
+        public TruncationSelectionPolicyResponse build() {
+            $.policyType = Codegen.stringProp("policyType").arg($.policyType).require();
+            return $;
         }
     }
+
 }

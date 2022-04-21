@@ -17,45 +17,45 @@ public final class GetReplicationSetArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetReplicationSetArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetReplicationSetArgs() {}
 
-    private GetReplicationSetArgs() {
-        this.arn = null;
+    private GetReplicationSetArgs(GetReplicationSetArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetReplicationSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationSetArgs();
         }
 
         public Builder(GetReplicationSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetReplicationSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetReplicationSetArgs build() {
-            return new GetReplicationSetArgs(arn);
+        }
+
+        public GetReplicationSetArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="externalIp", required=true)
-      private final String externalIp;
+    private String externalIp;
 
     public String externalIp() {
         return this.externalIp;
@@ -43,7 +43,7 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="internalIp", required=true)
-      private final String internalIp;
+    private String internalIp;
 
     public String internalIp() {
         return this.internalIp;
@@ -54,7 +54,7 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -65,7 +65,7 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -76,91 +76,80 @@ public final class CloudSQLInstanceInfoResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public CloudSQLInstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String internalIp,
-        String networkUri,
-        String region,
-        String uri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.externalIp = Objects.requireNonNull(externalIp, "expected parameter 'externalIp' to be non-null");
-        this.internalIp = Objects.requireNonNull(internalIp, "expected parameter 'internalIp' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private CloudSQLInstanceInfoResponse() {}
 
-    private CloudSQLInstanceInfoResponse() {
-        this.displayName = null;
-        this.externalIp = null;
-        this.internalIp = null;
-        this.networkUri = null;
-        this.region = null;
-        this.uri = null;
+    private CloudSQLInstanceInfoResponse(CloudSQLInstanceInfoResponse $) {
+        this.displayName = $.displayName;
+        this.externalIp = $.externalIp;
+        this.internalIp = $.internalIp;
+        this.networkUri = $.networkUri;
+        this.region = $.region;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSQLInstanceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String externalIp;
-        private String internalIp;
-        private String networkUri;
-        private String region;
-        private String uri;
+        private CloudSQLInstanceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSQLInstanceInfoResponse();
         }
 
         public Builder(CloudSQLInstanceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.externalIp = defaults.externalIp;
-    	      this.internalIp = defaults.internalIp;
-    	      this.networkUri = defaults.networkUri;
-    	      this.region = defaults.region;
-    	      this.uri = defaults.uri;
+            $ = new CloudSQLInstanceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder externalIp(String externalIp) {
-            this.externalIp = Objects.requireNonNull(externalIp);
+            $.externalIp = externalIp;
             return this;
         }
+
         public Builder internalIp(String internalIp) {
-            this.internalIp = Objects.requireNonNull(internalIp);
+            $.internalIp = internalIp;
             return this;
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public CloudSQLInstanceInfoResponse build() {
-            return new CloudSQLInstanceInfoResponse(displayName, externalIp, internalIp, networkUri, region, uri);
+        }
+
+        public CloudSQLInstanceInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.externalIp = Objects.requireNonNull($.externalIp, "expected parameter 'externalIp' to be non-null");
+            $.internalIp = Objects.requireNonNull($.internalIp, "expected parameter 'internalIp' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

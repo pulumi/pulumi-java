@@ -17,7 +17,7 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
      * 
      */
     @Import(name="ascLocation", required=true)
-      private final String ascLocation;
+    private String ascLocation;
 
     public String ascLocation() {
         return this.ascLocation;
@@ -28,55 +28,52 @@ public final class GetAdaptiveApplicationControlArgs extends com.pulumi.resource
      * 
      */
     @Import(name="groupName", required=true)
-      private final String groupName;
+    private String groupName;
 
     public String groupName() {
         return this.groupName;
     }
 
-    public GetAdaptiveApplicationControlArgs(
-        String ascLocation,
-        String groupName) {
-        this.ascLocation = Objects.requireNonNull(ascLocation, "expected parameter 'ascLocation' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-    }
+    private GetAdaptiveApplicationControlArgs() {}
 
-    private GetAdaptiveApplicationControlArgs() {
-        this.ascLocation = null;
-        this.groupName = null;
+    private GetAdaptiveApplicationControlArgs(GetAdaptiveApplicationControlArgs $) {
+        this.ascLocation = $.ascLocation;
+        this.groupName = $.groupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAdaptiveApplicationControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ascLocation;
-        private String groupName;
+        private GetAdaptiveApplicationControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAdaptiveApplicationControlArgs();
         }
 
         public Builder(GetAdaptiveApplicationControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ascLocation = defaults.ascLocation;
-    	      this.groupName = defaults.groupName;
+            $ = new GetAdaptiveApplicationControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ascLocation(String ascLocation) {
-            this.ascLocation = Objects.requireNonNull(ascLocation);
+            $.ascLocation = ascLocation;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
-        }        public GetAdaptiveApplicationControlArgs build() {
-            return new GetAdaptiveApplicationControlArgs(ascLocation, groupName);
+        }
+
+        public GetAdaptiveApplicationControlArgs build() {
+            $.ascLocation = Objects.requireNonNull($.ascLocation, "expected parameter 'ascLocation' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            return $;
         }
     }
+
 }

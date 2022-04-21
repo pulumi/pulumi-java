@@ -17,7 +17,7 @@ public final class GetImportCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="importCollectorName", required=true)
-      private final String importCollectorName;
+    private String importCollectorName;
 
     public String importCollectorName() {
         return this.importCollectorName;
@@ -28,7 +28,7 @@ public final class GetImportCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="projectName", required=true)
-      private final String projectName;
+    private String projectName;
 
     public String projectName() {
         return this.projectName;
@@ -39,64 +39,59 @@ public final class GetImportCollectorArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetImportCollectorArgs(
-        String importCollectorName,
-        String projectName,
-        String resourceGroupName) {
-        this.importCollectorName = Objects.requireNonNull(importCollectorName, "expected parameter 'importCollectorName' to be non-null");
-        this.projectName = Objects.requireNonNull(projectName, "expected parameter 'projectName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetImportCollectorArgs() {}
 
-    private GetImportCollectorArgs() {
-        this.importCollectorName = null;
-        this.projectName = null;
-        this.resourceGroupName = null;
+    private GetImportCollectorArgs(GetImportCollectorArgs $) {
+        this.importCollectorName = $.importCollectorName;
+        this.projectName = $.projectName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImportCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String importCollectorName;
-        private String projectName;
-        private String resourceGroupName;
+        private GetImportCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImportCollectorArgs();
         }
 
         public Builder(GetImportCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importCollectorName = defaults.importCollectorName;
-    	      this.projectName = defaults.projectName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetImportCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importCollectorName(String importCollectorName) {
-            this.importCollectorName = Objects.requireNonNull(importCollectorName);
+            $.importCollectorName = importCollectorName;
             return this;
         }
+
         public Builder projectName(String projectName) {
-            this.projectName = Objects.requireNonNull(projectName);
+            $.projectName = projectName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetImportCollectorArgs build() {
-            return new GetImportCollectorArgs(importCollectorName, projectName, resourceGroupName);
+        }
+
+        public GetImportCollectorArgs build() {
+            $.importCollectorName = Objects.requireNonNull($.importCollectorName, "expected parameter 'importCollectorName' to be non-null");
+            $.projectName = Objects.requireNonNull($.projectName, "expected parameter 'projectName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

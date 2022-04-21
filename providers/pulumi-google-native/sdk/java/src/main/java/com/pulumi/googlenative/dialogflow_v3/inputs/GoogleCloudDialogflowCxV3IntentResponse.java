@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="isFallback", required=true)
-      private final Boolean isFallback;
+    private Boolean isFallback;
 
     public Boolean isFallback() {
         return this.isFallback;
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters;
+    private List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters;
 
     public List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters() {
         return this.parameters;
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -104,115 +104,102 @@ public final class GoogleCloudDialogflowCxV3IntentResponse extends com.pulumi.re
      * 
      */
     @Import(name="trainingPhrases", required=true)
-      private final List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases;
+    private List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases;
 
     public List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases() {
         return this.trainingPhrases;
     }
 
-    public GoogleCloudDialogflowCxV3IntentResponse(
-        String description,
-        String displayName,
-        Boolean isFallback,
-        Map<String,String> labels,
-        String name,
-        List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters,
-        Integer priority,
-        List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.isFallback = Objects.requireNonNull(isFallback, "expected parameter 'isFallback' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.trainingPhrases = Objects.requireNonNull(trainingPhrases, "expected parameter 'trainingPhrases' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3IntentResponse() {}
 
-    private GoogleCloudDialogflowCxV3IntentResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.isFallback = null;
-        this.labels = Map.of();
-        this.name = null;
-        this.parameters = List.of();
-        this.priority = null;
-        this.trainingPhrases = List.of();
+    private GoogleCloudDialogflowCxV3IntentResponse(GoogleCloudDialogflowCxV3IntentResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.isFallback = $.isFallback;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.priority = $.priority;
+        this.trainingPhrases = $.trainingPhrases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3IntentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String displayName;
-        private Boolean isFallback;
-        private Map<String,String> labels;
-        private String name;
-        private List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters;
-        private Integer priority;
-        private List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases;
+        private GoogleCloudDialogflowCxV3IntentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3IntentResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3IntentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.isFallback = defaults.isFallback;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.priority = defaults.priority;
-    	      this.trainingPhrases = defaults.trainingPhrases;
+            $ = new GoogleCloudDialogflowCxV3IntentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder isFallback(Boolean isFallback) {
-            this.isFallback = Objects.requireNonNull(isFallback);
+            $.isFallback = isFallback;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(List<GoogleCloudDialogflowCxV3IntentParameterResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(GoogleCloudDialogflowCxV3IntentParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse> trainingPhrases) {
-            this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
+            $.trainingPhrases = trainingPhrases;
             return this;
         }
+
         public Builder trainingPhrases(GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse... trainingPhrases) {
             return trainingPhrases(List.of(trainingPhrases));
-        }        public GoogleCloudDialogflowCxV3IntentResponse build() {
-            return new GoogleCloudDialogflowCxV3IntentResponse(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
+        }
+
+        public GoogleCloudDialogflowCxV3IntentResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.isFallback = Objects.requireNonNull($.isFallback, "expected parameter 'isFallback' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.trainingPhrases = Objects.requireNonNull($.trainingPhrases, "expected parameter 'trainingPhrases' to be non-null");
+            return $;
         }
     }
+
 }

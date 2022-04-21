@@ -7,9 +7,9 @@ import com.pulumi.azurenative.media.inputs.DefaultKeyArgs;
 import com.pulumi.azurenative.media.inputs.StreamingPolicyContentKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StreamingPolicyContentKeysArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="defaultKey")
-      private final @Nullable Output<DefaultKeyArgs> defaultKey;
+    private @Nullable Output<DefaultKeyArgs> defaultKey;
 
-    public Output<DefaultKeyArgs> defaultKey() {
-        return this.defaultKey == null ? Codegen.empty() : this.defaultKey;
+    public Optional<Output<DefaultKeyArgs>> defaultKey() {
+        return Optional.ofNullable(this.defaultKey);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class StreamingPolicyContentKeysArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="keyToTrackMappings")
-      private final @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
+    private @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
 
-    public Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings() {
-        return this.keyToTrackMappings == null ? Codegen.empty() : this.keyToTrackMappings;
+    public Optional<Output<List<StreamingPolicyContentKeyArgs>>> keyToTrackMappings() {
+        return Optional.ofNullable(this.keyToTrackMappings);
     }
 
-    public StreamingPolicyContentKeysArgs(
-        @Nullable Output<DefaultKeyArgs> defaultKey,
-        @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
-        this.defaultKey = defaultKey;
-        this.keyToTrackMappings = keyToTrackMappings;
-    }
+    private StreamingPolicyContentKeysArgs() {}
 
-    private StreamingPolicyContentKeysArgs() {
-        this.defaultKey = Codegen.empty();
-        this.keyToTrackMappings = Codegen.empty();
+    private StreamingPolicyContentKeysArgs(StreamingPolicyContentKeysArgs $) {
+        this.defaultKey = $.defaultKey;
+        this.keyToTrackMappings = $.keyToTrackMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingPolicyContentKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DefaultKeyArgs> defaultKey;
-        private @Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings;
+        private StreamingPolicyContentKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingPolicyContentKeysArgs();
         }
 
         public Builder(StreamingPolicyContentKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKey = defaults.defaultKey;
-    	      this.keyToTrackMappings = defaults.keyToTrackMappings;
+            $ = new StreamingPolicyContentKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKey(@Nullable Output<DefaultKeyArgs> defaultKey) {
-            this.defaultKey = defaultKey;
+            $.defaultKey = defaultKey;
             return this;
         }
-        public Builder defaultKey(@Nullable DefaultKeyArgs defaultKey) {
-            this.defaultKey = Codegen.ofNullable(defaultKey);
-            return this;
+
+        public Builder defaultKey(DefaultKeyArgs defaultKey) {
+            return defaultKey(Output.of(defaultKey));
         }
+
         public Builder keyToTrackMappings(@Nullable Output<List<StreamingPolicyContentKeyArgs>> keyToTrackMappings) {
-            this.keyToTrackMappings = keyToTrackMappings;
+            $.keyToTrackMappings = keyToTrackMappings;
             return this;
         }
-        public Builder keyToTrackMappings(@Nullable List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
-            this.keyToTrackMappings = Codegen.ofNullable(keyToTrackMappings);
-            return this;
+
+        public Builder keyToTrackMappings(List<StreamingPolicyContentKeyArgs> keyToTrackMappings) {
+            return keyToTrackMappings(Output.of(keyToTrackMappings));
         }
+
         public Builder keyToTrackMappings(StreamingPolicyContentKeyArgs... keyToTrackMappings) {
             return keyToTrackMappings(List.of(keyToTrackMappings));
-        }        public StreamingPolicyContentKeysArgs build() {
-            return new StreamingPolicyContentKeysArgs(defaultKey, keyToTrackMappings);
+        }
+
+        public StreamingPolicyContentKeysArgs build() {
+            return $;
         }
     }
+
 }

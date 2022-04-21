@@ -5,9 +5,9 @@ package com.pulumi.azurenative.batch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,7 +16,7 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
     public static final ApplicationPackageReferenceArgs Empty = new ApplicationPackageReferenceArgs();
 
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -27,63 +27,59 @@ public final class ApplicationPackageReferenceArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ApplicationPackageReferenceArgs(
-        Output<String> id,
-        @Nullable Output<String> version) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.version = version;
-    }
+    private ApplicationPackageReferenceArgs() {}
 
-    private ApplicationPackageReferenceArgs() {
-        this.id = Codegen.empty();
-        this.version = Codegen.empty();
+    private ApplicationPackageReferenceArgs(ApplicationPackageReferenceArgs $) {
+        this.id = $.id;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationPackageReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> id;
-        private @Nullable Output<String> version;
+        private ApplicationPackageReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationPackageReferenceArgs();
         }
 
         public Builder(ApplicationPackageReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.version = defaults.version;
+            $ = new ApplicationPackageReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ApplicationPackageReferenceArgs build() {
-            return new ApplicationPackageReferenceArgs(id, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ApplicationPackageReferenceArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

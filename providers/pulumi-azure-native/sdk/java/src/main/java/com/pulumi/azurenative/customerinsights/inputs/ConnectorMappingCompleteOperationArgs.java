@@ -6,9 +6,9 @@ package com.pulumi.azurenative.customerinsights.inputs;
 import com.pulumi.azurenative.customerinsights.enums.CompletionOperationTypes;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="completionOperationType")
-      private final @Nullable Output<CompletionOperationTypes> completionOperationType;
+    private @Nullable Output<CompletionOperationTypes> completionOperationType;
 
-    public Output<CompletionOperationTypes> completionOperationType() {
-        return this.completionOperationType == null ? Codegen.empty() : this.completionOperationType;
+    public Optional<Output<CompletionOperationTypes>> completionOperationType() {
+        return Optional.ofNullable(this.completionOperationType);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ConnectorMappingCompleteOperationArgs extends com.pulumi.reso
      * 
      */
     @Import(name="destinationFolder")
-      private final @Nullable Output<String> destinationFolder;
+    private @Nullable Output<String> destinationFolder;
 
-    public Output<String> destinationFolder() {
-        return this.destinationFolder == null ? Codegen.empty() : this.destinationFolder;
+    public Optional<Output<String>> destinationFolder() {
+        return Optional.ofNullable(this.destinationFolder);
     }
 
-    public ConnectorMappingCompleteOperationArgs(
-        @Nullable Output<CompletionOperationTypes> completionOperationType,
-        @Nullable Output<String> destinationFolder) {
-        this.completionOperationType = completionOperationType;
-        this.destinationFolder = destinationFolder;
-    }
+    private ConnectorMappingCompleteOperationArgs() {}
 
-    private ConnectorMappingCompleteOperationArgs() {
-        this.completionOperationType = Codegen.empty();
-        this.destinationFolder = Codegen.empty();
+    private ConnectorMappingCompleteOperationArgs(ConnectorMappingCompleteOperationArgs $) {
+        this.completionOperationType = $.completionOperationType;
+        this.destinationFolder = $.destinationFolder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorMappingCompleteOperationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CompletionOperationTypes> completionOperationType;
-        private @Nullable Output<String> destinationFolder;
+        private ConnectorMappingCompleteOperationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorMappingCompleteOperationArgs();
         }
 
         public Builder(ConnectorMappingCompleteOperationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionOperationType = defaults.completionOperationType;
-    	      this.destinationFolder = defaults.destinationFolder;
+            $ = new ConnectorMappingCompleteOperationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder completionOperationType(@Nullable Output<CompletionOperationTypes> completionOperationType) {
-            this.completionOperationType = completionOperationType;
+            $.completionOperationType = completionOperationType;
             return this;
         }
-        public Builder completionOperationType(@Nullable CompletionOperationTypes completionOperationType) {
-            this.completionOperationType = Codegen.ofNullable(completionOperationType);
-            return this;
+
+        public Builder completionOperationType(CompletionOperationTypes completionOperationType) {
+            return completionOperationType(Output.of(completionOperationType));
         }
+
         public Builder destinationFolder(@Nullable Output<String> destinationFolder) {
-            this.destinationFolder = destinationFolder;
+            $.destinationFolder = destinationFolder;
             return this;
         }
-        public Builder destinationFolder(@Nullable String destinationFolder) {
-            this.destinationFolder = Codegen.ofNullable(destinationFolder);
-            return this;
-        }        public ConnectorMappingCompleteOperationArgs build() {
-            return new ConnectorMappingCompleteOperationArgs(completionOperationType, destinationFolder);
+
+        public Builder destinationFolder(String destinationFolder) {
+            return destinationFolder(Output.of(destinationFolder));
+        }
+
+        public ConnectorMappingCompleteOperationArgs build() {
+            return $;
         }
     }
+
 }

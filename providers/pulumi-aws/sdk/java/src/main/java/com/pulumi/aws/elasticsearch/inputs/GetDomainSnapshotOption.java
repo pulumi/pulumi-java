@@ -17,45 +17,45 @@ public final class GetDomainSnapshotOption extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="automatedSnapshotStartHour", required=true)
-      private final Integer automatedSnapshotStartHour;
+    private Integer automatedSnapshotStartHour;
 
     public Integer automatedSnapshotStartHour() {
         return this.automatedSnapshotStartHour;
     }
 
-    public GetDomainSnapshotOption(Integer automatedSnapshotStartHour) {
-        this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour, "expected parameter 'automatedSnapshotStartHour' to be non-null");
-    }
+    private GetDomainSnapshotOption() {}
 
-    private GetDomainSnapshotOption() {
-        this.automatedSnapshotStartHour = null;
+    private GetDomainSnapshotOption(GetDomainSnapshotOption $) {
+        this.automatedSnapshotStartHour = $.automatedSnapshotStartHour;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainSnapshotOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer automatedSnapshotStartHour;
+        private GetDomainSnapshotOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainSnapshotOption();
         }
 
         public Builder(GetDomainSnapshotOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
+            $ = new GetDomainSnapshotOption(Objects.requireNonNull(defaults));
         }
 
         public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
-            this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
+            $.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
-        }        public GetDomainSnapshotOption build() {
-            return new GetDomainSnapshotOption(automatedSnapshotStartHour);
+        }
+
+        public GetDomainSnapshotOption build() {
+            $.automatedSnapshotStartHour = Objects.requireNonNull($.automatedSnapshotStartHour, "expected parameter 'automatedSnapshotStartHour' to be non-null");
+            return $;
         }
     }
+
 }

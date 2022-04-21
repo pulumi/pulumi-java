@@ -5,12 +5,12 @@ package com.pulumi.googlenative.essentialcontacts_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactNotificationCategorySubscriptionsItem;
 import com.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactValidationState;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,14 +23,14 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
     }
 
     @Import(name="folderId", required=true)
-      private final Output<String> folderId;
+    private Output<String> folderId;
 
     public Output<String> folderId() {
         return this.folderId;
@@ -41,10 +41,10 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageTag")
-      private final @Nullable Output<String> languageTag;
+    private @Nullable Output<String> languageTag;
 
-    public Output<String> languageTag() {
-        return this.languageTag == null ? Codegen.empty() : this.languageTag;
+    public Optional<Output<String>> languageTag() {
+        return Optional.ofNullable(this.languageTag);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notificationCategorySubscriptions")
-      private final @Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
+    private @Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
-    public Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
+    public Optional<Output<List<FolderContactNotificationCategorySubscriptionsItem>>> notificationCategorySubscriptions() {
+        return Optional.ofNullable(this.notificationCategorySubscriptions);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validateTime")
-      private final @Nullable Output<String> validateTime;
+    private @Nullable Output<String> validateTime;
 
-    public Output<String> validateTime() {
-        return this.validateTime == null ? Codegen.empty() : this.validateTime;
+    public Optional<Output<String>> validateTime() {
+        return Optional.ofNullable(this.validateTime);
     }
 
     /**
@@ -85,131 +85,114 @@ public final class FolderContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationState")
-      private final @Nullable Output<FolderContactValidationState> validationState;
+    private @Nullable Output<FolderContactValidationState> validationState;
 
-    public Output<FolderContactValidationState> validationState() {
-        return this.validationState == null ? Codegen.empty() : this.validationState;
+    public Optional<Output<FolderContactValidationState>> validationState() {
+        return Optional.ofNullable(this.validationState);
     }
 
-    public FolderContactArgs(
-        Output<String> email,
-        Output<String> folderId,
-        @Nullable Output<String> languageTag,
-        @Nullable Output<String> name,
-        @Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions,
-        @Nullable Output<String> validateTime,
-        @Nullable Output<FolderContactValidationState> validationState) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.languageTag = languageTag;
-        this.name = name;
-        this.notificationCategorySubscriptions = notificationCategorySubscriptions;
-        this.validateTime = validateTime;
-        this.validationState = validationState;
-    }
+    private FolderContactArgs() {}
 
-    private FolderContactArgs() {
-        this.email = Codegen.empty();
-        this.folderId = Codegen.empty();
-        this.languageTag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.notificationCategorySubscriptions = Codegen.empty();
-        this.validateTime = Codegen.empty();
-        this.validationState = Codegen.empty();
+    private FolderContactArgs(FolderContactArgs $) {
+        this.email = $.email;
+        this.folderId = $.folderId;
+        this.languageTag = $.languageTag;
+        this.name = $.name;
+        this.notificationCategorySubscriptions = $.notificationCategorySubscriptions;
+        this.validateTime = $.validateTime;
+        this.validationState = $.validationState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
-        private Output<String> folderId;
-        private @Nullable Output<String> languageTag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
-        private @Nullable Output<String> validateTime;
-        private @Nullable Output<FolderContactValidationState> validationState;
+        private FolderContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderContactArgs();
         }
 
         public Builder(FolderContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.folderId = defaults.folderId;
-    	      this.languageTag = defaults.languageTag;
-    	      this.name = defaults.name;
-    	      this.notificationCategorySubscriptions = defaults.notificationCategorySubscriptions;
-    	      this.validateTime = defaults.validateTime;
-    	      this.validationState = defaults.validationState;
+            $ = new FolderContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder folderId(Output<String> folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder folderId(String folderId) {
-            this.folderId = Output.of(Objects.requireNonNull(folderId));
-            return this;
+            return folderId(Output.of(folderId));
         }
+
         public Builder languageTag(@Nullable Output<String> languageTag) {
-            this.languageTag = languageTag;
+            $.languageTag = languageTag;
             return this;
         }
-        public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Codegen.ofNullable(languageTag);
-            return this;
+
+        public Builder languageTag(String languageTag) {
+            return languageTag(Output.of(languageTag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder notificationCategorySubscriptions(@Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = notificationCategorySubscriptions;
+            $.notificationCategorySubscriptions = notificationCategorySubscriptions;
             return this;
         }
-        public Builder notificationCategorySubscriptions(@Nullable List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
-            return this;
+
+        public Builder notificationCategorySubscriptions(List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
+            return notificationCategorySubscriptions(Output.of(notificationCategorySubscriptions));
         }
+
         public Builder notificationCategorySubscriptions(FolderContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
             return notificationCategorySubscriptions(List.of(notificationCategorySubscriptions));
         }
+
         public Builder validateTime(@Nullable Output<String> validateTime) {
-            this.validateTime = validateTime;
+            $.validateTime = validateTime;
             return this;
         }
-        public Builder validateTime(@Nullable String validateTime) {
-            this.validateTime = Codegen.ofNullable(validateTime);
-            return this;
+
+        public Builder validateTime(String validateTime) {
+            return validateTime(Output.of(validateTime));
         }
+
         public Builder validationState(@Nullable Output<FolderContactValidationState> validationState) {
-            this.validationState = validationState;
+            $.validationState = validationState;
             return this;
         }
-        public Builder validationState(@Nullable FolderContactValidationState validationState) {
-            this.validationState = Codegen.ofNullable(validationState);
-            return this;
-        }        public FolderContactArgs build() {
-            return new FolderContactArgs(email, folderId, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);
+
+        public Builder validationState(FolderContactValidationState validationState) {
+            return validationState(Output.of(validationState));
+        }
+
+        public FolderContactArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

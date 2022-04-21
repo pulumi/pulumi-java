@@ -26,7 +26,7 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
      * 
      */
     @Import(name="authorizationType", required=true)
-      private final String authorizationType;
+    private String authorizationType;
 
     public String authorizationType() {
         return this.authorizationType;
@@ -37,10 +37,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -48,64 +48,58 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse extends com
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public LinkedIntegrationRuntimeRbacAuthorizationResponse(
-        String authorizationType,
-        @Nullable CredentialReferenceResponse credential,
-        String resourceId) {
-        this.authorizationType = Codegen.stringProp("authorizationType").arg(authorizationType).require();
-        this.credential = credential;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private LinkedIntegrationRuntimeRbacAuthorizationResponse() {}
 
-    private LinkedIntegrationRuntimeRbacAuthorizationResponse() {
-        this.authorizationType = null;
-        this.credential = null;
-        this.resourceId = null;
+    private LinkedIntegrationRuntimeRbacAuthorizationResponse(LinkedIntegrationRuntimeRbacAuthorizationResponse $) {
+        this.authorizationType = $.authorizationType;
+        this.credential = $.credential;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedIntegrationRuntimeRbacAuthorizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationType;
-        private @Nullable CredentialReferenceResponse credential;
-        private String resourceId;
+        private LinkedIntegrationRuntimeRbacAuthorizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedIntegrationRuntimeRbacAuthorizationResponse();
         }
 
         public Builder(LinkedIntegrationRuntimeRbacAuthorizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationType = defaults.authorizationType;
-    	      this.credential = defaults.credential;
-    	      this.resourceId = defaults.resourceId;
+            $ = new LinkedIntegrationRuntimeRbacAuthorizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationType(String authorizationType) {
-            this.authorizationType = Objects.requireNonNull(authorizationType);
+            $.authorizationType = authorizationType;
             return this;
         }
+
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
-            return new LinkedIntegrationRuntimeRbacAuthorizationResponse(authorizationType, credential, resourceId);
+        }
+
+        public LinkedIntegrationRuntimeRbacAuthorizationResponse build() {
+            $.authorizationType = Codegen.stringProp("authorizationType").arg($.authorizationType).require();
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -32,10 +32,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="accountKey")
-      private final @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
+    private @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> accountKey() {
-        return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
+        return Optional.ofNullable(this.accountKey);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="connectionString")
-      private final @Nullable Object connectionString;
+    private @Nullable Object connectionString;
 
     public Optional<Object> connectionString() {
-        return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
+        return Optional.ofNullable(this.connectionString);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="fileShare")
-      private final @Nullable Object fileShare;
+    private @Nullable Object fileShare;
 
     public Optional<Object> fileShare() {
-        return this.fileShare == null ? Optional.empty() : Optional.ofNullable(this.fileShare);
+        return Optional.ofNullable(this.fileShare);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="host")
-      private final @Nullable Object host;
+    private @Nullable Object host;
 
     public Optional<Object> host() {
-        return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
+    private @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
 
     public Optional<AzureKeyVaultSecretReferenceResponse> sasToken() {
-        return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
+        return Optional.ofNullable(this.sasToken);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="sasUri")
-      private final @Nullable Object sasUri;
+    private @Nullable Object sasUri;
 
     public Optional<Object> sasUri() {
-        return this.sasUri == null ? Optional.empty() : Optional.ofNullable(this.sasUri);
+        return Optional.ofNullable(this.sasUri);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="snapshot")
-      private final @Nullable Object snapshot;
+    private @Nullable Object snapshot;
 
     public Optional<Object> snapshot() {
-        return this.snapshot == null ? Optional.empty() : Optional.ofNullable(this.snapshot);
+        return Optional.ofNullable(this.snapshot);
     }
 
     /**
@@ -176,7 +176,7 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -187,175 +187,133 @@ public final class AzureFileStorageLinkedServiceResponse extends com.pulumi.reso
      * 
      */
     @Import(name="userId")
-      private final @Nullable Object userId;
+    private @Nullable Object userId;
 
     public Optional<Object> userId() {
-        return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
+        return Optional.ofNullable(this.userId);
     }
 
-    public AzureFileStorageLinkedServiceResponse(
-        @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object fileShare,
-        @Nullable Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @Nullable Object sasUri,
-        @Nullable Object snapshot,
-        String type,
-        @Nullable Object userId) {
-        this.accountKey = accountKey;
-        this.annotations = annotations;
-        this.connectVia = connectVia;
-        this.connectionString = connectionString;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.fileShare = fileShare;
-        this.host = host;
-        this.parameters = parameters;
-        this.password = password;
-        this.sasToken = sasToken;
-        this.sasUri = sasUri;
-        this.snapshot = snapshot;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userId = userId;
-    }
+    private AzureFileStorageLinkedServiceResponse() {}
 
-    private AzureFileStorageLinkedServiceResponse() {
-        this.accountKey = null;
-        this.annotations = List.of();
-        this.connectVia = null;
-        this.connectionString = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.fileShare = null;
-        this.host = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.sasToken = null;
-        this.sasUri = null;
-        this.snapshot = null;
-        this.type = null;
-        this.userId = null;
+    private AzureFileStorageLinkedServiceResponse(AzureFileStorageLinkedServiceResponse $) {
+        this.accountKey = $.accountKey;
+        this.annotations = $.annotations;
+        this.connectVia = $.connectVia;
+        this.connectionString = $.connectionString;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.fileShare = $.fileShare;
+        this.host = $.host;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.sasToken = $.sasToken;
+        this.sasUri = $.sasUri;
+        this.snapshot = $.snapshot;
+        this.type = $.type;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureFileStorageLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureKeyVaultSecretReferenceResponse accountKey;
-        private @Nullable List<Object> annotations;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable Object connectionString;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object fileShare;
-        private @Nullable Object host;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable AzureKeyVaultSecretReferenceResponse sasToken;
-        private @Nullable Object sasUri;
-        private @Nullable Object snapshot;
-        private String type;
-        private @Nullable Object userId;
+        private AzureFileStorageLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureFileStorageLinkedServiceResponse();
         }
 
         public Builder(AzureFileStorageLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountKey = defaults.accountKey;
-    	      this.annotations = defaults.annotations;
-    	      this.connectVia = defaults.connectVia;
-    	      this.connectionString = defaults.connectionString;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.fileShare = defaults.fileShare;
-    	      this.host = defaults.host;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.sasToken = defaults.sasToken;
-    	      this.sasUri = defaults.sasUri;
-    	      this.snapshot = defaults.snapshot;
-    	      this.type = defaults.type;
-    	      this.userId = defaults.userId;
+            $ = new AzureFileStorageLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceResponse accountKey) {
-            this.accountKey = accountKey;
+            $.accountKey = accountKey;
             return this;
         }
+
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder connectionString(@Nullable Object connectionString) {
-            this.connectionString = connectionString;
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder fileShare(@Nullable Object fileShare) {
-            this.fileShare = fileShare;
+            $.fileShare = fileShare;
             return this;
         }
+
         public Builder host(@Nullable Object host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
         }
+
         public Builder sasUri(@Nullable Object sasUri) {
-            this.sasUri = sasUri;
+            $.sasUri = sasUri;
             return this;
         }
+
         public Builder snapshot(@Nullable Object snapshot) {
-            this.snapshot = snapshot;
+            $.snapshot = snapshot;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userId(@Nullable Object userId) {
-            this.userId = userId;
+            $.userId = userId;
             return this;
-        }        public AzureFileStorageLinkedServiceResponse build() {
-            return new AzureFileStorageLinkedServiceResponse(accountKey, annotations, connectVia, connectionString, description, encryptedCredential, fileShare, host, parameters, password, sasToken, sasUri, snapshot, type, userId);
+        }
+
+        public AzureFileStorageLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

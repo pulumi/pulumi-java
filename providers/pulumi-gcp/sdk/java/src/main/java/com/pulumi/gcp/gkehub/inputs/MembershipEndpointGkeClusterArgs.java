@@ -5,7 +5,6 @@ package com.pulumi.gcp.gkehub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class MembershipEndpointGkeClusterArgs extends com.pulumi.resources
     public static final MembershipEndpointGkeClusterArgs Empty = new MembershipEndpointGkeClusterArgs();
 
     @Import(name="resourceLink", required=true)
-      private final Output<String> resourceLink;
+    private Output<String> resourceLink;
 
     public Output<String> resourceLink() {
         return this.resourceLink;
     }
 
-    public MembershipEndpointGkeClusterArgs(Output<String> resourceLink) {
-        this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
-    }
+    private MembershipEndpointGkeClusterArgs() {}
 
-    private MembershipEndpointGkeClusterArgs() {
-        this.resourceLink = Codegen.empty();
+    private MembershipEndpointGkeClusterArgs(MembershipEndpointGkeClusterArgs $) {
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipEndpointGkeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> resourceLink;
+        private MembershipEndpointGkeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipEndpointGkeClusterArgs();
         }
 
         public Builder(MembershipEndpointGkeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new MembershipEndpointGkeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceLink(Output<String> resourceLink) {
-            this.resourceLink = Objects.requireNonNull(resourceLink);
+            $.resourceLink = resourceLink;
             return this;
         }
+
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Output.of(Objects.requireNonNull(resourceLink));
-            return this;
-        }        public MembershipEndpointGkeClusterArgs build() {
-            return new MembershipEndpointGkeClusterArgs(resourceLink);
+            return resourceLink(Output.of(resourceLink));
+        }
+
+        public MembershipEndpointGkeClusterArgs build() {
+            $.resourceLink = Objects.requireNonNull($.resourceLink, "expected parameter 'resourceLink' to be non-null");
+            return $;
         }
     }
+
 }

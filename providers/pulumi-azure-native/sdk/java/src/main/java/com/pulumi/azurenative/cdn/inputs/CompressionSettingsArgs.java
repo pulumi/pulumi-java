@@ -5,11 +5,11 @@ package com.pulumi.azurenative.cdn.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="contentTypesToCompress")
-      private final @Nullable Output<List<String>> contentTypesToCompress;
+    private @Nullable Output<List<String>> contentTypesToCompress;
 
-    public Output<List<String>> contentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
+    public Optional<Output<List<String>>> contentTypesToCompress() {
+        return Optional.ofNullable(this.contentTypesToCompress);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class CompressionSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="isCompressionEnabled")
-      private final @Nullable Output<Boolean> isCompressionEnabled;
+    private @Nullable Output<Boolean> isCompressionEnabled;
 
-    public Output<Boolean> isCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
+    public Optional<Output<Boolean>> isCompressionEnabled() {
+        return Optional.ofNullable(this.isCompressionEnabled);
     }
 
-    public CompressionSettingsArgs(
-        @Nullable Output<List<String>> contentTypesToCompress,
-        @Nullable Output<Boolean> isCompressionEnabled) {
-        this.contentTypesToCompress = contentTypesToCompress;
-        this.isCompressionEnabled = isCompressionEnabled;
-    }
+    private CompressionSettingsArgs() {}
 
-    private CompressionSettingsArgs() {
-        this.contentTypesToCompress = Codegen.empty();
-        this.isCompressionEnabled = Codegen.empty();
+    private CompressionSettingsArgs(CompressionSettingsArgs $) {
+        this.contentTypesToCompress = $.contentTypesToCompress;
+        this.isCompressionEnabled = $.isCompressionEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompressionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> contentTypesToCompress;
-        private @Nullable Output<Boolean> isCompressionEnabled;
+        private CompressionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompressionSettingsArgs();
         }
 
         public Builder(CompressionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentTypesToCompress = defaults.contentTypesToCompress;
-    	      this.isCompressionEnabled = defaults.isCompressionEnabled;
+            $ = new CompressionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentTypesToCompress(@Nullable Output<List<String>> contentTypesToCompress) {
-            this.contentTypesToCompress = contentTypesToCompress;
+            $.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
-        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Codegen.ofNullable(contentTypesToCompress);
-            return this;
+
+        public Builder contentTypesToCompress(List<String> contentTypesToCompress) {
+            return contentTypesToCompress(Output.of(contentTypesToCompress));
         }
+
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
             return contentTypesToCompress(List.of(contentTypesToCompress));
         }
+
         public Builder isCompressionEnabled(@Nullable Output<Boolean> isCompressionEnabled) {
-            this.isCompressionEnabled = isCompressionEnabled;
+            $.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Codegen.ofNullable(isCompressionEnabled);
-            return this;
-        }        public CompressionSettingsArgs build() {
-            return new CompressionSettingsArgs(contentTypesToCompress, isCompressionEnabled);
+
+        public Builder isCompressionEnabled(Boolean isCompressionEnabled) {
+            return isCompressionEnabled(Output.of(isCompressionEnabled));
+        }
+
+        public CompressionSettingsArgs build() {
+            return $;
         }
     }
+
 }

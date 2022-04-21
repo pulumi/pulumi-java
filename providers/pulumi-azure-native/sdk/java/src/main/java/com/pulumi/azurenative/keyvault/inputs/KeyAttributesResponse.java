@@ -25,7 +25,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="created", required=true)
-      private final Double created;
+    private Double created;
 
     public Double created() {
         return this.created;
@@ -36,10 +36,10 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expires")
-      private final @Nullable Double expires;
+    private @Nullable Double expires;
 
     public Optional<Double> expires() {
-        return this.expires == null ? Optional.empty() : Optional.ofNullable(this.expires);
+        return Optional.ofNullable(this.expires);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notBefore")
-      private final @Nullable Double notBefore;
+    private @Nullable Double notBefore;
 
     public Optional<Double> notBefore() {
-        return this.notBefore == null ? Optional.empty() : Optional.ofNullable(this.notBefore);
+        return Optional.ofNullable(this.notBefore);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="recoveryLevel", required=true)
-      private final String recoveryLevel;
+    private String recoveryLevel;
 
     public String recoveryLevel() {
         return this.recoveryLevel;
@@ -80,91 +80,77 @@ public final class KeyAttributesResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="updated", required=true)
-      private final Double updated;
+    private Double updated;
 
     public Double updated() {
         return this.updated;
     }
 
-    public KeyAttributesResponse(
-        Double created,
-        @Nullable Boolean enabled,
-        @Nullable Double expires,
-        @Nullable Double notBefore,
-        String recoveryLevel,
-        Double updated) {
-        this.created = Objects.requireNonNull(created, "expected parameter 'created' to be non-null");
-        this.enabled = enabled;
-        this.expires = expires;
-        this.notBefore = notBefore;
-        this.recoveryLevel = Objects.requireNonNull(recoveryLevel, "expected parameter 'recoveryLevel' to be non-null");
-        this.updated = Objects.requireNonNull(updated, "expected parameter 'updated' to be non-null");
-    }
+    private KeyAttributesResponse() {}
 
-    private KeyAttributesResponse() {
-        this.created = null;
-        this.enabled = null;
-        this.expires = null;
-        this.notBefore = null;
-        this.recoveryLevel = null;
-        this.updated = null;
+    private KeyAttributesResponse(KeyAttributesResponse $) {
+        this.created = $.created;
+        this.enabled = $.enabled;
+        this.expires = $.expires;
+        this.notBefore = $.notBefore;
+        this.recoveryLevel = $.recoveryLevel;
+        this.updated = $.updated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyAttributesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double created;
-        private @Nullable Boolean enabled;
-        private @Nullable Double expires;
-        private @Nullable Double notBefore;
-        private String recoveryLevel;
-        private Double updated;
+        private KeyAttributesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyAttributesResponse();
         }
 
         public Builder(KeyAttributesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.created = defaults.created;
-    	      this.enabled = defaults.enabled;
-    	      this.expires = defaults.expires;
-    	      this.notBefore = defaults.notBefore;
-    	      this.recoveryLevel = defaults.recoveryLevel;
-    	      this.updated = defaults.updated;
+            $ = new KeyAttributesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder created(Double created) {
-            this.created = Objects.requireNonNull(created);
+            $.created = created;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
+
         public Builder expires(@Nullable Double expires) {
-            this.expires = expires;
+            $.expires = expires;
             return this;
         }
+
         public Builder notBefore(@Nullable Double notBefore) {
-            this.notBefore = notBefore;
+            $.notBefore = notBefore;
             return this;
         }
+
         public Builder recoveryLevel(String recoveryLevel) {
-            this.recoveryLevel = Objects.requireNonNull(recoveryLevel);
+            $.recoveryLevel = recoveryLevel;
             return this;
         }
+
         public Builder updated(Double updated) {
-            this.updated = Objects.requireNonNull(updated);
+            $.updated = updated;
             return this;
-        }        public KeyAttributesResponse build() {
-            return new KeyAttributesResponse(created, enabled, expires, notBefore, recoveryLevel, updated);
+        }
+
+        public KeyAttributesResponse build() {
+            $.created = Objects.requireNonNull($.created, "expected parameter 'created' to be non-null");
+            $.recoveryLevel = Objects.requireNonNull($.recoveryLevel, "expected parameter 'recoveryLevel' to be non-null");
+            $.updated = Objects.requireNonNull($.updated, "expected parameter 'updated' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.emr.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ClusterAutoTerminationPolicyArgs extends com.pulumi.resources
      * 
      */
     @Import(name="idleTimeout")
-      private final @Nullable Output<Integer> idleTimeout;
+    private @Nullable Output<Integer> idleTimeout;
 
-    public Output<Integer> idleTimeout() {
-        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
+    public Optional<Output<Integer>> idleTimeout() {
+        return Optional.ofNullable(this.idleTimeout);
     }
 
-    public ClusterAutoTerminationPolicyArgs(@Nullable Output<Integer> idleTimeout) {
-        this.idleTimeout = idleTimeout;
-    }
+    private ClusterAutoTerminationPolicyArgs() {}
 
-    private ClusterAutoTerminationPolicyArgs() {
-        this.idleTimeout = Codegen.empty();
+    private ClusterAutoTerminationPolicyArgs(ClusterAutoTerminationPolicyArgs $) {
+        this.idleTimeout = $.idleTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAutoTerminationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> idleTimeout;
+        private ClusterAutoTerminationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAutoTerminationPolicyArgs();
         }
 
         public Builder(ClusterAutoTerminationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.idleTimeout = defaults.idleTimeout;
+            $ = new ClusterAutoTerminationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder idleTimeout(@Nullable Output<Integer> idleTimeout) {
-            this.idleTimeout = idleTimeout;
+            $.idleTimeout = idleTimeout;
             return this;
         }
-        public Builder idleTimeout(@Nullable Integer idleTimeout) {
-            this.idleTimeout = Codegen.ofNullable(idleTimeout);
-            return this;
-        }        public ClusterAutoTerminationPolicyArgs build() {
-            return new ClusterAutoTerminationPolicyArgs(idleTimeout);
+
+        public Builder idleTimeout(Integer idleTimeout) {
+            return idleTimeout(Output.of(idleTimeout));
+        }
+
+        public ClusterAutoTerminationPolicyArgs build() {
+            return $;
         }
     }
+
 }

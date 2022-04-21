@@ -5,11 +5,11 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.ReservationShareSettingsProjectMapArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="projectMaps")
-      private final @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
+    private @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
 
-    public Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps() {
-        return this.projectMaps == null ? Codegen.empty() : this.projectMaps;
+    public Optional<Output<List<ReservationShareSettingsProjectMapArgs>>> projectMaps() {
+        return Optional.ofNullable(this.projectMaps);
     }
 
     /**
@@ -35,66 +35,62 @@ public final class ReservationShareSettingsArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="shareType")
-      private final @Nullable Output<String> shareType;
+    private @Nullable Output<String> shareType;
 
-    public Output<String> shareType() {
-        return this.shareType == null ? Codegen.empty() : this.shareType;
+    public Optional<Output<String>> shareType() {
+        return Optional.ofNullable(this.shareType);
     }
 
-    public ReservationShareSettingsArgs(
-        @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps,
-        @Nullable Output<String> shareType) {
-        this.projectMaps = projectMaps;
-        this.shareType = shareType;
-    }
+    private ReservationShareSettingsArgs() {}
 
-    private ReservationShareSettingsArgs() {
-        this.projectMaps = Codegen.empty();
-        this.shareType = Codegen.empty();
+    private ReservationShareSettingsArgs(ReservationShareSettingsArgs $) {
+        this.projectMaps = $.projectMaps;
+        this.shareType = $.shareType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationShareSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps;
-        private @Nullable Output<String> shareType;
+        private ReservationShareSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationShareSettingsArgs();
         }
 
         public Builder(ReservationShareSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectMaps = defaults.projectMaps;
-    	      this.shareType = defaults.shareType;
+            $ = new ReservationShareSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectMaps(@Nullable Output<List<ReservationShareSettingsProjectMapArgs>> projectMaps) {
-            this.projectMaps = projectMaps;
+            $.projectMaps = projectMaps;
             return this;
         }
-        public Builder projectMaps(@Nullable List<ReservationShareSettingsProjectMapArgs> projectMaps) {
-            this.projectMaps = Codegen.ofNullable(projectMaps);
-            return this;
+
+        public Builder projectMaps(List<ReservationShareSettingsProjectMapArgs> projectMaps) {
+            return projectMaps(Output.of(projectMaps));
         }
+
         public Builder projectMaps(ReservationShareSettingsProjectMapArgs... projectMaps) {
             return projectMaps(List.of(projectMaps));
         }
+
         public Builder shareType(@Nullable Output<String> shareType) {
-            this.shareType = shareType;
+            $.shareType = shareType;
             return this;
         }
-        public Builder shareType(@Nullable String shareType) {
-            this.shareType = Codegen.ofNullable(shareType);
-            return this;
-        }        public ReservationShareSettingsArgs build() {
-            return new ReservationShareSettingsArgs(projectMaps, shareType);
+
+        public Builder shareType(String shareType) {
+            return shareType(Output.of(shareType));
+        }
+
+        public ReservationShareSettingsArgs build() {
+            return $;
         }
     }
+
 }

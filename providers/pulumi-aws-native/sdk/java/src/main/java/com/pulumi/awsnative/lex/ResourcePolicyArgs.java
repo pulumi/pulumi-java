@@ -6,7 +6,6 @@ package com.pulumi.awsnative.lex;
 import com.pulumi.awsnative.lex.inputs.ResourcePolicyPolicyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,70 +15,67 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
     @Import(name="policy", required=true)
-      private final Output<ResourcePolicyPolicyArgs> policy;
+    private Output<ResourcePolicyPolicyArgs> policy;
 
     public Output<ResourcePolicyPolicyArgs> policy() {
         return this.policy;
     }
 
     @Import(name="resourceArn", required=true)
-      private final Output<String> resourceArn;
+    private Output<String> resourceArn;
 
     public Output<String> resourceArn() {
         return this.resourceArn;
     }
 
-    public ResourcePolicyArgs(
-        Output<ResourcePolicyPolicyArgs> policy,
-        Output<String> resourceArn) {
-        this.policy = Objects.requireNonNull(policy, "expected parameter 'policy' to be non-null");
-        this.resourceArn = Objects.requireNonNull(resourceArn, "expected parameter 'resourceArn' to be non-null");
-    }
+    private ResourcePolicyArgs() {}
 
-    private ResourcePolicyArgs() {
-        this.policy = Codegen.empty();
-        this.resourceArn = Codegen.empty();
+    private ResourcePolicyArgs(ResourcePolicyArgs $) {
+        this.policy = $.policy;
+        this.resourceArn = $.resourceArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResourcePolicyPolicyArgs> policy;
-        private Output<String> resourceArn;
+        private ResourcePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyArgs();
         }
 
         public Builder(ResourcePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.resourceArn = defaults.resourceArn;
+            $ = new ResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(Output<ResourcePolicyPolicyArgs> policy) {
-            this.policy = Objects.requireNonNull(policy);
+            $.policy = policy;
             return this;
         }
+
         public Builder policy(ResourcePolicyPolicyArgs policy) {
-            this.policy = Output.of(Objects.requireNonNull(policy));
-            return this;
+            return policy(Output.of(policy));
         }
+
         public Builder resourceArn(Output<String> resourceArn) {
-            this.resourceArn = Objects.requireNonNull(resourceArn);
+            $.resourceArn = resourceArn;
             return this;
         }
+
         public Builder resourceArn(String resourceArn) {
-            this.resourceArn = Output.of(Objects.requireNonNull(resourceArn));
-            return this;
-        }        public ResourcePolicyArgs build() {
-            return new ResourcePolicyArgs(policy, resourceArn);
+            return resourceArn(Output.of(resourceArn));
+        }
+
+        public ResourcePolicyArgs build() {
+            $.policy = Objects.requireNonNull($.policy, "expected parameter 'policy' to be non-null");
+            $.resourceArn = Objects.requireNonNull($.resourceArn, "expected parameter 'resourceArn' to be non-null");
+            return $;
         }
     }
+
 }

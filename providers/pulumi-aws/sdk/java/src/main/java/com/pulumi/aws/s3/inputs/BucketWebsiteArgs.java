@@ -6,10 +6,10 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorDocument")
-      private final @Nullable Output<String> errorDocument;
+    private @Nullable Output<String> errorDocument;
 
-    public Output<String> errorDocument() {
-        return this.errorDocument == null ? Codegen.empty() : this.errorDocument;
+    public Optional<Output<String>> errorDocument() {
+        return Optional.ofNullable(this.errorDocument);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="indexDocument")
-      private final @Nullable Output<String> indexDocument;
+    private @Nullable Output<String> indexDocument;
 
-    public Output<String> indexDocument() {
-        return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
+    public Optional<Output<String>> indexDocument() {
+        return Optional.ofNullable(this.indexDocument);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redirectAllRequestsTo")
-      private final @Nullable Output<String> redirectAllRequestsTo;
+    private @Nullable Output<String> redirectAllRequestsTo;
 
-    public Output<String> redirectAllRequestsTo() {
-        return this.redirectAllRequestsTo == null ? Codegen.empty() : this.redirectAllRequestsTo;
+    public Optional<Output<String>> redirectAllRequestsTo() {
+        return Optional.ofNullable(this.redirectAllRequestsTo);
     }
 
     /**
@@ -56,89 +56,78 @@ public final class BucketWebsiteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingRules")
-      private final @Nullable Output<Either<String,List<String>>> routingRules;
+    private @Nullable Output<Either<String,List<String>>> routingRules;
 
-    public Output<Either<String,List<String>>> routingRules() {
-        return this.routingRules == null ? Codegen.empty() : this.routingRules;
+    public Optional<Output<Either<String,List<String>>>> routingRules() {
+        return Optional.ofNullable(this.routingRules);
     }
 
-    public BucketWebsiteArgs(
-        @Nullable Output<String> errorDocument,
-        @Nullable Output<String> indexDocument,
-        @Nullable Output<String> redirectAllRequestsTo,
-        @Nullable Output<Either<String,List<String>>> routingRules) {
-        this.errorDocument = errorDocument;
-        this.indexDocument = indexDocument;
-        this.redirectAllRequestsTo = redirectAllRequestsTo;
-        this.routingRules = routingRules;
-    }
+    private BucketWebsiteArgs() {}
 
-    private BucketWebsiteArgs() {
-        this.errorDocument = Codegen.empty();
-        this.indexDocument = Codegen.empty();
-        this.redirectAllRequestsTo = Codegen.empty();
-        this.routingRules = Codegen.empty();
+    private BucketWebsiteArgs(BucketWebsiteArgs $) {
+        this.errorDocument = $.errorDocument;
+        this.indexDocument = $.indexDocument;
+        this.redirectAllRequestsTo = $.redirectAllRequestsTo;
+        this.routingRules = $.routingRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketWebsiteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> errorDocument;
-        private @Nullable Output<String> indexDocument;
-        private @Nullable Output<String> redirectAllRequestsTo;
-        private @Nullable Output<Either<String,List<String>>> routingRules;
+        private BucketWebsiteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketWebsiteArgs();
         }
 
         public Builder(BucketWebsiteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorDocument = defaults.errorDocument;
-    	      this.indexDocument = defaults.indexDocument;
-    	      this.redirectAllRequestsTo = defaults.redirectAllRequestsTo;
-    	      this.routingRules = defaults.routingRules;
+            $ = new BucketWebsiteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder errorDocument(@Nullable Output<String> errorDocument) {
-            this.errorDocument = errorDocument;
+            $.errorDocument = errorDocument;
             return this;
         }
-        public Builder errorDocument(@Nullable String errorDocument) {
-            this.errorDocument = Codegen.ofNullable(errorDocument);
-            return this;
+
+        public Builder errorDocument(String errorDocument) {
+            return errorDocument(Output.of(errorDocument));
         }
+
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
-            this.indexDocument = indexDocument;
+            $.indexDocument = indexDocument;
             return this;
         }
-        public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = Codegen.ofNullable(indexDocument);
-            return this;
+
+        public Builder indexDocument(String indexDocument) {
+            return indexDocument(Output.of(indexDocument));
         }
+
         public Builder redirectAllRequestsTo(@Nullable Output<String> redirectAllRequestsTo) {
-            this.redirectAllRequestsTo = redirectAllRequestsTo;
+            $.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
-        public Builder redirectAllRequestsTo(@Nullable String redirectAllRequestsTo) {
-            this.redirectAllRequestsTo = Codegen.ofNullable(redirectAllRequestsTo);
-            return this;
+
+        public Builder redirectAllRequestsTo(String redirectAllRequestsTo) {
+            return redirectAllRequestsTo(Output.of(redirectAllRequestsTo));
         }
+
         public Builder routingRules(@Nullable Output<Either<String,List<String>>> routingRules) {
-            this.routingRules = routingRules;
+            $.routingRules = routingRules;
             return this;
         }
-        public Builder routingRules(@Nullable Either<String,List<String>> routingRules) {
-            this.routingRules = Codegen.ofNullable(routingRules);
-            return this;
-        }        public BucketWebsiteArgs build() {
-            return new BucketWebsiteArgs(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
+
+        public Builder routingRules(Either<String,List<String>> routingRules) {
+            return routingRules(Output.of(routingRules));
+        }
+
+        public BucketWebsiteArgs build() {
+            return $;
         }
     }
+
 }

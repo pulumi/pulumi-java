@@ -24,45 +24,44 @@ public final class UnknownTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Map<String,String> attributes;
+    private @Nullable Map<String,String> attributes;
 
-    public Map<String,String> attributes() {
-        return this.attributes == null ? Map.of() : this.attributes;
+    public Optional<Map<String,String>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
-    public UnknownTargetResponse(@Nullable Map<String,String> attributes) {
-        this.attributes = attributes;
-    }
+    private UnknownTargetResponse() {}
 
-    private UnknownTargetResponse() {
-        this.attributes = Map.of();
+    private UnknownTargetResponse(UnknownTargetResponse $) {
+        this.attributes = $.attributes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UnknownTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> attributes;
+        private UnknownTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UnknownTargetResponse();
         }
 
         public Builder(UnknownTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
+            $ = new UnknownTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
-        }        public UnknownTargetResponse build() {
-            return new UnknownTargetResponse(attributes);
+        }
+
+        public UnknownTargetResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="fabricName", required=true)
-      private final String fabricName;
+    private String fabricName;
 
     public String fabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="mappingName", required=true)
-      private final String mappingName;
+    private String mappingName;
 
     public String mappingName() {
         return this.mappingName;
@@ -39,7 +39,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="protectionContainerName", required=true)
-      private final String protectionContainerName;
+    private String protectionContainerName;
 
     public String protectionContainerName() {
         return this.protectionContainerName;
@@ -50,7 +50,7 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetReplicationProtectionContainerMappingArgs extends com.pulu
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetReplicationProtectionContainerMappingArgs(
-        String fabricName,
-        String mappingName,
-        String protectionContainerName,
-        String resourceGroupName,
-        String resourceName) {
-        this.fabricName = Objects.requireNonNull(fabricName, "expected parameter 'fabricName' to be non-null");
-        this.mappingName = Objects.requireNonNull(mappingName, "expected parameter 'mappingName' to be non-null");
-        this.protectionContainerName = Objects.requireNonNull(protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetReplicationProtectionContainerMappingArgs() {}
 
-    private GetReplicationProtectionContainerMappingArgs() {
-        this.fabricName = null;
-        this.mappingName = null;
-        this.protectionContainerName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetReplicationProtectionContainerMappingArgs(GetReplicationProtectionContainerMappingArgs $) {
+        this.fabricName = $.fabricName;
+        this.mappingName = $.mappingName;
+        this.protectionContainerName = $.protectionContainerName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReplicationProtectionContainerMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fabricName;
-        private String mappingName;
-        private String protectionContainerName;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetReplicationProtectionContainerMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReplicationProtectionContainerMappingArgs();
         }
 
         public Builder(GetReplicationProtectionContainerMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fabricName = defaults.fabricName;
-    	      this.mappingName = defaults.mappingName;
-    	      this.protectionContainerName = defaults.protectionContainerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetReplicationProtectionContainerMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fabricName(String fabricName) {
-            this.fabricName = Objects.requireNonNull(fabricName);
+            $.fabricName = fabricName;
             return this;
         }
+
         public Builder mappingName(String mappingName) {
-            this.mappingName = Objects.requireNonNull(mappingName);
+            $.mappingName = mappingName;
             return this;
         }
+
         public Builder protectionContainerName(String protectionContainerName) {
-            this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
+            $.protectionContainerName = protectionContainerName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetReplicationProtectionContainerMappingArgs build() {
-            return new GetReplicationProtectionContainerMappingArgs(fabricName, mappingName, protectionContainerName, resourceGroupName, resourceName);
+        }
+
+        public GetReplicationProtectionContainerMappingArgs build() {
+            $.fabricName = Objects.requireNonNull($.fabricName, "expected parameter 'fabricName' to be non-null");
+            $.mappingName = Objects.requireNonNull($.mappingName, "expected parameter 'mappingName' to be non-null");
+            $.protectionContainerName = Objects.requireNonNull($.protectionContainerName, "expected parameter 'protectionContainerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

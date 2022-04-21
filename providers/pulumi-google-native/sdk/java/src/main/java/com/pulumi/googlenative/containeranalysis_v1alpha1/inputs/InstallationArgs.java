@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class InstallationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<List<LocationArgs>> location;
+    private @Nullable Output<List<LocationArgs>> location;
 
-    public Output<List<LocationArgs>> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<List<LocationArgs>>> location() {
+        return Optional.ofNullable(this.location);
     }
 
-    public InstallationArgs(@Nullable Output<List<LocationArgs>> location) {
-        this.location = location;
-    }
+    private InstallationArgs() {}
 
-    private InstallationArgs() {
-        this.location = Codegen.empty();
+    private InstallationArgs(InstallationArgs $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstallationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LocationArgs>> location;
+        private InstallationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstallationArgs();
         }
 
         public Builder(InstallationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new InstallationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<List<LocationArgs>> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable List<LocationArgs> location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(List<LocationArgs> location) {
+            return location(Output.of(location));
         }
+
         public Builder location(LocationArgs... location) {
             return location(List.of(location));
-        }        public InstallationArgs build() {
-            return new InstallationArgs(location);
+        }
+
+        public InstallationArgs build() {
+            return $;
         }
     }
+
 }

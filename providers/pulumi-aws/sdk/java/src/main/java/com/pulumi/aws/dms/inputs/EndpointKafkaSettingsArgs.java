@@ -5,11 +5,11 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="broker", required=true)
-      private final Output<String> broker;
+    private Output<String> broker;
 
     public Output<String> broker() {
         return this.broker;
@@ -33,10 +33,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="includeControlDetails")
-      private final @Nullable Output<Boolean> includeControlDetails;
+    private @Nullable Output<Boolean> includeControlDetails;
 
-    public Output<Boolean> includeControlDetails() {
-        return this.includeControlDetails == null ? Codegen.empty() : this.includeControlDetails;
+    public Optional<Output<Boolean>> includeControlDetails() {
+        return Optional.ofNullable(this.includeControlDetails);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="includeNullAndEmpty")
-      private final @Nullable Output<Boolean> includeNullAndEmpty;
+    private @Nullable Output<Boolean> includeNullAndEmpty;
 
-    public Output<Boolean> includeNullAndEmpty() {
-        return this.includeNullAndEmpty == null ? Codegen.empty() : this.includeNullAndEmpty;
+    public Optional<Output<Boolean>> includeNullAndEmpty() {
+        return Optional.ofNullable(this.includeNullAndEmpty);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="includePartitionValue")
-      private final @Nullable Output<Boolean> includePartitionValue;
+    private @Nullable Output<Boolean> includePartitionValue;
 
-    public Output<Boolean> includePartitionValue() {
-        return this.includePartitionValue == null ? Codegen.empty() : this.includePartitionValue;
+    public Optional<Output<Boolean>> includePartitionValue() {
+        return Optional.ofNullable(this.includePartitionValue);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="includeTableAlterOperations")
-      private final @Nullable Output<Boolean> includeTableAlterOperations;
+    private @Nullable Output<Boolean> includeTableAlterOperations;
 
-    public Output<Boolean> includeTableAlterOperations() {
-        return this.includeTableAlterOperations == null ? Codegen.empty() : this.includeTableAlterOperations;
+    public Optional<Output<Boolean>> includeTableAlterOperations() {
+        return Optional.ofNullable(this.includeTableAlterOperations);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="includeTransactionDetails")
-      private final @Nullable Output<Boolean> includeTransactionDetails;
+    private @Nullable Output<Boolean> includeTransactionDetails;
 
-    public Output<Boolean> includeTransactionDetails() {
-        return this.includeTransactionDetails == null ? Codegen.empty() : this.includeTransactionDetails;
+    public Optional<Output<Boolean>> includeTransactionDetails() {
+        return Optional.ofNullable(this.includeTransactionDetails);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="messageFormat")
-      private final @Nullable Output<String> messageFormat;
+    private @Nullable Output<String> messageFormat;
 
-    public Output<String> messageFormat() {
-        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
+    public Optional<Output<String>> messageFormat() {
+        return Optional.ofNullable(this.messageFormat);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="messageMaxBytes")
-      private final @Nullable Output<Integer> messageMaxBytes;
+    private @Nullable Output<Integer> messageMaxBytes;
 
-    public Output<Integer> messageMaxBytes() {
-        return this.messageMaxBytes == null ? Codegen.empty() : this.messageMaxBytes;
+    public Optional<Output<Integer>> messageMaxBytes() {
+        return Optional.ofNullable(this.messageMaxBytes);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="noHexPrefix")
-      private final @Nullable Output<Boolean> noHexPrefix;
+    private @Nullable Output<Boolean> noHexPrefix;
 
-    public Output<Boolean> noHexPrefix() {
-        return this.noHexPrefix == null ? Codegen.empty() : this.noHexPrefix;
+    public Optional<Output<Boolean>> noHexPrefix() {
+        return Optional.ofNullable(this.noHexPrefix);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="partitionIncludeSchemaTable")
-      private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
+    private @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
-    public Output<Boolean> partitionIncludeSchemaTable() {
-        return this.partitionIncludeSchemaTable == null ? Codegen.empty() : this.partitionIncludeSchemaTable;
+    public Optional<Output<Boolean>> partitionIncludeSchemaTable() {
+        return Optional.ofNullable(this.partitionIncludeSchemaTable);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="saslPassword")
-      private final @Nullable Output<String> saslPassword;
+    private @Nullable Output<String> saslPassword;
 
-    public Output<String> saslPassword() {
-        return this.saslPassword == null ? Codegen.empty() : this.saslPassword;
+    public Optional<Output<String>> saslPassword() {
+        return Optional.ofNullable(this.saslPassword);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="saslUsername")
-      private final @Nullable Output<String> saslUsername;
+    private @Nullable Output<String> saslUsername;
 
-    public Output<String> saslUsername() {
-        return this.saslUsername == null ? Codegen.empty() : this.saslUsername;
+    public Optional<Output<String>> saslUsername() {
+        return Optional.ofNullable(this.saslUsername);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="securityProtocol")
-      private final @Nullable Output<String> securityProtocol;
+    private @Nullable Output<String> securityProtocol;
 
-    public Output<String> securityProtocol() {
-        return this.securityProtocol == null ? Codegen.empty() : this.securityProtocol;
+    public Optional<Output<String>> securityProtocol() {
+        return Optional.ofNullable(this.securityProtocol);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sslCaCertificateArn")
-      private final @Nullable Output<String> sslCaCertificateArn;
+    private @Nullable Output<String> sslCaCertificateArn;
 
-    public Output<String> sslCaCertificateArn() {
-        return this.sslCaCertificateArn == null ? Codegen.empty() : this.sslCaCertificateArn;
+    public Optional<Output<String>> sslCaCertificateArn() {
+        return Optional.ofNullable(this.sslCaCertificateArn);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sslClientCertificateArn")
-      private final @Nullable Output<String> sslClientCertificateArn;
+    private @Nullable Output<String> sslClientCertificateArn;
 
-    public Output<String> sslClientCertificateArn() {
-        return this.sslClientCertificateArn == null ? Codegen.empty() : this.sslClientCertificateArn;
+    public Optional<Output<String>> sslClientCertificateArn() {
+        return Optional.ofNullable(this.sslClientCertificateArn);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sslClientKeyArn")
-      private final @Nullable Output<String> sslClientKeyArn;
+    private @Nullable Output<String> sslClientKeyArn;
 
-    public Output<String> sslClientKeyArn() {
-        return this.sslClientKeyArn == null ? Codegen.empty() : this.sslClientKeyArn;
+    public Optional<Output<String>> sslClientKeyArn() {
+        return Optional.ofNullable(this.sslClientKeyArn);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="sslClientKeyPassword")
-      private final @Nullable Output<String> sslClientKeyPassword;
+    private @Nullable Output<String> sslClientKeyPassword;
 
-    public Output<String> sslClientKeyPassword() {
-        return this.sslClientKeyPassword == null ? Codegen.empty() : this.sslClientKeyPassword;
+    public Optional<Output<String>> sslClientKeyPassword() {
+        return Optional.ofNullable(this.sslClientKeyPassword);
     }
 
     /**
@@ -209,271 +209,219 @@ public final class EndpointKafkaSettingsArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public EndpointKafkaSettingsArgs(
-        Output<String> broker,
-        @Nullable Output<Boolean> includeControlDetails,
-        @Nullable Output<Boolean> includeNullAndEmpty,
-        @Nullable Output<Boolean> includePartitionValue,
-        @Nullable Output<Boolean> includeTableAlterOperations,
-        @Nullable Output<Boolean> includeTransactionDetails,
-        @Nullable Output<String> messageFormat,
-        @Nullable Output<Integer> messageMaxBytes,
-        @Nullable Output<Boolean> noHexPrefix,
-        @Nullable Output<Boolean> partitionIncludeSchemaTable,
-        @Nullable Output<String> saslPassword,
-        @Nullable Output<String> saslUsername,
-        @Nullable Output<String> securityProtocol,
-        @Nullable Output<String> sslCaCertificateArn,
-        @Nullable Output<String> sslClientCertificateArn,
-        @Nullable Output<String> sslClientKeyArn,
-        @Nullable Output<String> sslClientKeyPassword,
-        @Nullable Output<String> topic) {
-        this.broker = Objects.requireNonNull(broker, "expected parameter 'broker' to be non-null");
-        this.includeControlDetails = includeControlDetails;
-        this.includeNullAndEmpty = includeNullAndEmpty;
-        this.includePartitionValue = includePartitionValue;
-        this.includeTableAlterOperations = includeTableAlterOperations;
-        this.includeTransactionDetails = includeTransactionDetails;
-        this.messageFormat = messageFormat;
-        this.messageMaxBytes = messageMaxBytes;
-        this.noHexPrefix = noHexPrefix;
-        this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
-        this.saslPassword = saslPassword;
-        this.saslUsername = saslUsername;
-        this.securityProtocol = securityProtocol;
-        this.sslCaCertificateArn = sslCaCertificateArn;
-        this.sslClientCertificateArn = sslClientCertificateArn;
-        this.sslClientKeyArn = sslClientKeyArn;
-        this.sslClientKeyPassword = sslClientKeyPassword;
-        this.topic = topic;
-    }
+    private EndpointKafkaSettingsArgs() {}
 
-    private EndpointKafkaSettingsArgs() {
-        this.broker = Codegen.empty();
-        this.includeControlDetails = Codegen.empty();
-        this.includeNullAndEmpty = Codegen.empty();
-        this.includePartitionValue = Codegen.empty();
-        this.includeTableAlterOperations = Codegen.empty();
-        this.includeTransactionDetails = Codegen.empty();
-        this.messageFormat = Codegen.empty();
-        this.messageMaxBytes = Codegen.empty();
-        this.noHexPrefix = Codegen.empty();
-        this.partitionIncludeSchemaTable = Codegen.empty();
-        this.saslPassword = Codegen.empty();
-        this.saslUsername = Codegen.empty();
-        this.securityProtocol = Codegen.empty();
-        this.sslCaCertificateArn = Codegen.empty();
-        this.sslClientCertificateArn = Codegen.empty();
-        this.sslClientKeyArn = Codegen.empty();
-        this.sslClientKeyPassword = Codegen.empty();
-        this.topic = Codegen.empty();
+    private EndpointKafkaSettingsArgs(EndpointKafkaSettingsArgs $) {
+        this.broker = $.broker;
+        this.includeControlDetails = $.includeControlDetails;
+        this.includeNullAndEmpty = $.includeNullAndEmpty;
+        this.includePartitionValue = $.includePartitionValue;
+        this.includeTableAlterOperations = $.includeTableAlterOperations;
+        this.includeTransactionDetails = $.includeTransactionDetails;
+        this.messageFormat = $.messageFormat;
+        this.messageMaxBytes = $.messageMaxBytes;
+        this.noHexPrefix = $.noHexPrefix;
+        this.partitionIncludeSchemaTable = $.partitionIncludeSchemaTable;
+        this.saslPassword = $.saslPassword;
+        this.saslUsername = $.saslUsername;
+        this.securityProtocol = $.securityProtocol;
+        this.sslCaCertificateArn = $.sslCaCertificateArn;
+        this.sslClientCertificateArn = $.sslClientCertificateArn;
+        this.sslClientKeyArn = $.sslClientKeyArn;
+        this.sslClientKeyPassword = $.sslClientKeyPassword;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointKafkaSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> broker;
-        private @Nullable Output<Boolean> includeControlDetails;
-        private @Nullable Output<Boolean> includeNullAndEmpty;
-        private @Nullable Output<Boolean> includePartitionValue;
-        private @Nullable Output<Boolean> includeTableAlterOperations;
-        private @Nullable Output<Boolean> includeTransactionDetails;
-        private @Nullable Output<String> messageFormat;
-        private @Nullable Output<Integer> messageMaxBytes;
-        private @Nullable Output<Boolean> noHexPrefix;
-        private @Nullable Output<Boolean> partitionIncludeSchemaTable;
-        private @Nullable Output<String> saslPassword;
-        private @Nullable Output<String> saslUsername;
-        private @Nullable Output<String> securityProtocol;
-        private @Nullable Output<String> sslCaCertificateArn;
-        private @Nullable Output<String> sslClientCertificateArn;
-        private @Nullable Output<String> sslClientKeyArn;
-        private @Nullable Output<String> sslClientKeyPassword;
-        private @Nullable Output<String> topic;
+        private EndpointKafkaSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointKafkaSettingsArgs();
         }
 
         public Builder(EndpointKafkaSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.broker = defaults.broker;
-    	      this.includeControlDetails = defaults.includeControlDetails;
-    	      this.includeNullAndEmpty = defaults.includeNullAndEmpty;
-    	      this.includePartitionValue = defaults.includePartitionValue;
-    	      this.includeTableAlterOperations = defaults.includeTableAlterOperations;
-    	      this.includeTransactionDetails = defaults.includeTransactionDetails;
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.messageMaxBytes = defaults.messageMaxBytes;
-    	      this.noHexPrefix = defaults.noHexPrefix;
-    	      this.partitionIncludeSchemaTable = defaults.partitionIncludeSchemaTable;
-    	      this.saslPassword = defaults.saslPassword;
-    	      this.saslUsername = defaults.saslUsername;
-    	      this.securityProtocol = defaults.securityProtocol;
-    	      this.sslCaCertificateArn = defaults.sslCaCertificateArn;
-    	      this.sslClientCertificateArn = defaults.sslClientCertificateArn;
-    	      this.sslClientKeyArn = defaults.sslClientKeyArn;
-    	      this.sslClientKeyPassword = defaults.sslClientKeyPassword;
-    	      this.topic = defaults.topic;
+            $ = new EndpointKafkaSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder broker(Output<String> broker) {
-            this.broker = Objects.requireNonNull(broker);
+            $.broker = broker;
             return this;
         }
+
         public Builder broker(String broker) {
-            this.broker = Output.of(Objects.requireNonNull(broker));
-            return this;
+            return broker(Output.of(broker));
         }
+
         public Builder includeControlDetails(@Nullable Output<Boolean> includeControlDetails) {
-            this.includeControlDetails = includeControlDetails;
+            $.includeControlDetails = includeControlDetails;
             return this;
         }
-        public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
-            this.includeControlDetails = Codegen.ofNullable(includeControlDetails);
-            return this;
+
+        public Builder includeControlDetails(Boolean includeControlDetails) {
+            return includeControlDetails(Output.of(includeControlDetails));
         }
+
         public Builder includeNullAndEmpty(@Nullable Output<Boolean> includeNullAndEmpty) {
-            this.includeNullAndEmpty = includeNullAndEmpty;
+            $.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
-        public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
-            this.includeNullAndEmpty = Codegen.ofNullable(includeNullAndEmpty);
-            return this;
+
+        public Builder includeNullAndEmpty(Boolean includeNullAndEmpty) {
+            return includeNullAndEmpty(Output.of(includeNullAndEmpty));
         }
+
         public Builder includePartitionValue(@Nullable Output<Boolean> includePartitionValue) {
-            this.includePartitionValue = includePartitionValue;
+            $.includePartitionValue = includePartitionValue;
             return this;
         }
-        public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
-            this.includePartitionValue = Codegen.ofNullable(includePartitionValue);
-            return this;
+
+        public Builder includePartitionValue(Boolean includePartitionValue) {
+            return includePartitionValue(Output.of(includePartitionValue));
         }
+
         public Builder includeTableAlterOperations(@Nullable Output<Boolean> includeTableAlterOperations) {
-            this.includeTableAlterOperations = includeTableAlterOperations;
+            $.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
-        public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
-            this.includeTableAlterOperations = Codegen.ofNullable(includeTableAlterOperations);
-            return this;
+
+        public Builder includeTableAlterOperations(Boolean includeTableAlterOperations) {
+            return includeTableAlterOperations(Output.of(includeTableAlterOperations));
         }
+
         public Builder includeTransactionDetails(@Nullable Output<Boolean> includeTransactionDetails) {
-            this.includeTransactionDetails = includeTransactionDetails;
+            $.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
-        public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
-            this.includeTransactionDetails = Codegen.ofNullable(includeTransactionDetails);
-            return this;
+
+        public Builder includeTransactionDetails(Boolean includeTransactionDetails) {
+            return includeTransactionDetails(Output.of(includeTransactionDetails));
         }
+
         public Builder messageFormat(@Nullable Output<String> messageFormat) {
-            this.messageFormat = messageFormat;
+            $.messageFormat = messageFormat;
             return this;
         }
-        public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Codegen.ofNullable(messageFormat);
-            return this;
+
+        public Builder messageFormat(String messageFormat) {
+            return messageFormat(Output.of(messageFormat));
         }
+
         public Builder messageMaxBytes(@Nullable Output<Integer> messageMaxBytes) {
-            this.messageMaxBytes = messageMaxBytes;
+            $.messageMaxBytes = messageMaxBytes;
             return this;
         }
-        public Builder messageMaxBytes(@Nullable Integer messageMaxBytes) {
-            this.messageMaxBytes = Codegen.ofNullable(messageMaxBytes);
-            return this;
+
+        public Builder messageMaxBytes(Integer messageMaxBytes) {
+            return messageMaxBytes(Output.of(messageMaxBytes));
         }
+
         public Builder noHexPrefix(@Nullable Output<Boolean> noHexPrefix) {
-            this.noHexPrefix = noHexPrefix;
+            $.noHexPrefix = noHexPrefix;
             return this;
         }
-        public Builder noHexPrefix(@Nullable Boolean noHexPrefix) {
-            this.noHexPrefix = Codegen.ofNullable(noHexPrefix);
-            return this;
+
+        public Builder noHexPrefix(Boolean noHexPrefix) {
+            return noHexPrefix(Output.of(noHexPrefix));
         }
+
         public Builder partitionIncludeSchemaTable(@Nullable Output<Boolean> partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
+            $.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
-        public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
-            this.partitionIncludeSchemaTable = Codegen.ofNullable(partitionIncludeSchemaTable);
-            return this;
+
+        public Builder partitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
+            return partitionIncludeSchemaTable(Output.of(partitionIncludeSchemaTable));
         }
+
         public Builder saslPassword(@Nullable Output<String> saslPassword) {
-            this.saslPassword = saslPassword;
+            $.saslPassword = saslPassword;
             return this;
         }
-        public Builder saslPassword(@Nullable String saslPassword) {
-            this.saslPassword = Codegen.ofNullable(saslPassword);
-            return this;
+
+        public Builder saslPassword(String saslPassword) {
+            return saslPassword(Output.of(saslPassword));
         }
+
         public Builder saslUsername(@Nullable Output<String> saslUsername) {
-            this.saslUsername = saslUsername;
+            $.saslUsername = saslUsername;
             return this;
         }
-        public Builder saslUsername(@Nullable String saslUsername) {
-            this.saslUsername = Codegen.ofNullable(saslUsername);
-            return this;
+
+        public Builder saslUsername(String saslUsername) {
+            return saslUsername(Output.of(saslUsername));
         }
+
         public Builder securityProtocol(@Nullable Output<String> securityProtocol) {
-            this.securityProtocol = securityProtocol;
+            $.securityProtocol = securityProtocol;
             return this;
         }
-        public Builder securityProtocol(@Nullable String securityProtocol) {
-            this.securityProtocol = Codegen.ofNullable(securityProtocol);
-            return this;
+
+        public Builder securityProtocol(String securityProtocol) {
+            return securityProtocol(Output.of(securityProtocol));
         }
+
         public Builder sslCaCertificateArn(@Nullable Output<String> sslCaCertificateArn) {
-            this.sslCaCertificateArn = sslCaCertificateArn;
+            $.sslCaCertificateArn = sslCaCertificateArn;
             return this;
         }
-        public Builder sslCaCertificateArn(@Nullable String sslCaCertificateArn) {
-            this.sslCaCertificateArn = Codegen.ofNullable(sslCaCertificateArn);
-            return this;
+
+        public Builder sslCaCertificateArn(String sslCaCertificateArn) {
+            return sslCaCertificateArn(Output.of(sslCaCertificateArn));
         }
+
         public Builder sslClientCertificateArn(@Nullable Output<String> sslClientCertificateArn) {
-            this.sslClientCertificateArn = sslClientCertificateArn;
+            $.sslClientCertificateArn = sslClientCertificateArn;
             return this;
         }
-        public Builder sslClientCertificateArn(@Nullable String sslClientCertificateArn) {
-            this.sslClientCertificateArn = Codegen.ofNullable(sslClientCertificateArn);
-            return this;
+
+        public Builder sslClientCertificateArn(String sslClientCertificateArn) {
+            return sslClientCertificateArn(Output.of(sslClientCertificateArn));
         }
+
         public Builder sslClientKeyArn(@Nullable Output<String> sslClientKeyArn) {
-            this.sslClientKeyArn = sslClientKeyArn;
+            $.sslClientKeyArn = sslClientKeyArn;
             return this;
         }
-        public Builder sslClientKeyArn(@Nullable String sslClientKeyArn) {
-            this.sslClientKeyArn = Codegen.ofNullable(sslClientKeyArn);
-            return this;
+
+        public Builder sslClientKeyArn(String sslClientKeyArn) {
+            return sslClientKeyArn(Output.of(sslClientKeyArn));
         }
+
         public Builder sslClientKeyPassword(@Nullable Output<String> sslClientKeyPassword) {
-            this.sslClientKeyPassword = sslClientKeyPassword;
+            $.sslClientKeyPassword = sslClientKeyPassword;
             return this;
         }
-        public Builder sslClientKeyPassword(@Nullable String sslClientKeyPassword) {
-            this.sslClientKeyPassword = Codegen.ofNullable(sslClientKeyPassword);
-            return this;
+
+        public Builder sslClientKeyPassword(String sslClientKeyPassword) {
+            return sslClientKeyPassword(Output.of(sslClientKeyPassword));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public EndpointKafkaSettingsArgs build() {
-            return new EndpointKafkaSettingsArgs(broker, includeControlDetails, includeNullAndEmpty, includePartitionValue, includeTableAlterOperations, includeTransactionDetails, messageFormat, messageMaxBytes, noHexPrefix, partitionIncludeSchemaTable, saslPassword, saslUsername, securityProtocol, sslCaCertificateArn, sslClientCertificateArn, sslClientKeyArn, sslClientKeyPassword, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public EndpointKafkaSettingsArgs build() {
+            $.broker = Objects.requireNonNull($.broker, "expected parameter 'broker' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class FleetTargetCapacitySpecificationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="defaultTargetCapacityType", required=true)
-      private final Output<String> defaultTargetCapacityType;
+    private Output<String> defaultTargetCapacityType;
 
     public Output<String> defaultTargetCapacityType() {
         return this.defaultTargetCapacityType;
@@ -32,10 +32,10 @@ public final class FleetTargetCapacitySpecificationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="onDemandTargetCapacity")
-      private final @Nullable Output<Integer> onDemandTargetCapacity;
+    private @Nullable Output<Integer> onDemandTargetCapacity;
 
-    public Output<Integer> onDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
+    public Optional<Output<Integer>> onDemandTargetCapacity() {
+        return Optional.ofNullable(this.onDemandTargetCapacity);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class FleetTargetCapacitySpecificationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="spotTargetCapacity")
-      private final @Nullable Output<Integer> spotTargetCapacity;
+    private @Nullable Output<Integer> spotTargetCapacity;
 
-    public Output<Integer> spotTargetCapacity() {
-        return this.spotTargetCapacity == null ? Codegen.empty() : this.spotTargetCapacity;
+    public Optional<Output<Integer>> spotTargetCapacity() {
+        return Optional.ofNullable(this.spotTargetCapacity);
     }
 
     /**
@@ -54,89 +54,80 @@ public final class FleetTargetCapacitySpecificationArgs extends com.pulumi.resou
      * 
      */
     @Import(name="totalTargetCapacity", required=true)
-      private final Output<Integer> totalTargetCapacity;
+    private Output<Integer> totalTargetCapacity;
 
     public Output<Integer> totalTargetCapacity() {
         return this.totalTargetCapacity;
     }
 
-    public FleetTargetCapacitySpecificationArgs(
-        Output<String> defaultTargetCapacityType,
-        @Nullable Output<Integer> onDemandTargetCapacity,
-        @Nullable Output<Integer> spotTargetCapacity,
-        Output<Integer> totalTargetCapacity) {
-        this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType, "expected parameter 'defaultTargetCapacityType' to be non-null");
-        this.onDemandTargetCapacity = onDemandTargetCapacity;
-        this.spotTargetCapacity = spotTargetCapacity;
-        this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity, "expected parameter 'totalTargetCapacity' to be non-null");
-    }
+    private FleetTargetCapacitySpecificationArgs() {}
 
-    private FleetTargetCapacitySpecificationArgs() {
-        this.defaultTargetCapacityType = Codegen.empty();
-        this.onDemandTargetCapacity = Codegen.empty();
-        this.spotTargetCapacity = Codegen.empty();
-        this.totalTargetCapacity = Codegen.empty();
+    private FleetTargetCapacitySpecificationArgs(FleetTargetCapacitySpecificationArgs $) {
+        this.defaultTargetCapacityType = $.defaultTargetCapacityType;
+        this.onDemandTargetCapacity = $.onDemandTargetCapacity;
+        this.spotTargetCapacity = $.spotTargetCapacity;
+        this.totalTargetCapacity = $.totalTargetCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetTargetCapacitySpecificationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> defaultTargetCapacityType;
-        private @Nullable Output<Integer> onDemandTargetCapacity;
-        private @Nullable Output<Integer> spotTargetCapacity;
-        private Output<Integer> totalTargetCapacity;
+        private FleetTargetCapacitySpecificationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetTargetCapacitySpecificationArgs();
         }
 
         public Builder(FleetTargetCapacitySpecificationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultTargetCapacityType = defaults.defaultTargetCapacityType;
-    	      this.onDemandTargetCapacity = defaults.onDemandTargetCapacity;
-    	      this.spotTargetCapacity = defaults.spotTargetCapacity;
-    	      this.totalTargetCapacity = defaults.totalTargetCapacity;
+            $ = new FleetTargetCapacitySpecificationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultTargetCapacityType(Output<String> defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = Objects.requireNonNull(defaultTargetCapacityType);
+            $.defaultTargetCapacityType = defaultTargetCapacityType;
             return this;
         }
+
         public Builder defaultTargetCapacityType(String defaultTargetCapacityType) {
-            this.defaultTargetCapacityType = Output.of(Objects.requireNonNull(defaultTargetCapacityType));
-            return this;
+            return defaultTargetCapacityType(Output.of(defaultTargetCapacityType));
         }
+
         public Builder onDemandTargetCapacity(@Nullable Output<Integer> onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = onDemandTargetCapacity;
+            $.onDemandTargetCapacity = onDemandTargetCapacity;
             return this;
         }
-        public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = Codegen.ofNullable(onDemandTargetCapacity);
-            return this;
+
+        public Builder onDemandTargetCapacity(Integer onDemandTargetCapacity) {
+            return onDemandTargetCapacity(Output.of(onDemandTargetCapacity));
         }
+
         public Builder spotTargetCapacity(@Nullable Output<Integer> spotTargetCapacity) {
-            this.spotTargetCapacity = spotTargetCapacity;
+            $.spotTargetCapacity = spotTargetCapacity;
             return this;
         }
-        public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
-            this.spotTargetCapacity = Codegen.ofNullable(spotTargetCapacity);
-            return this;
+
+        public Builder spotTargetCapacity(Integer spotTargetCapacity) {
+            return spotTargetCapacity(Output.of(spotTargetCapacity));
         }
+
         public Builder totalTargetCapacity(Output<Integer> totalTargetCapacity) {
-            this.totalTargetCapacity = Objects.requireNonNull(totalTargetCapacity);
+            $.totalTargetCapacity = totalTargetCapacity;
             return this;
         }
+
         public Builder totalTargetCapacity(Integer totalTargetCapacity) {
-            this.totalTargetCapacity = Output.of(Objects.requireNonNull(totalTargetCapacity));
-            return this;
-        }        public FleetTargetCapacitySpecificationArgs build() {
-            return new FleetTargetCapacitySpecificationArgs(defaultTargetCapacityType, onDemandTargetCapacity, spotTargetCapacity, totalTargetCapacity);
+            return totalTargetCapacity(Output.of(totalTargetCapacity));
+        }
+
+        public FleetTargetCapacitySpecificationArgs build() {
+            $.defaultTargetCapacityType = Objects.requireNonNull($.defaultTargetCapacityType, "expected parameter 'defaultTargetCapacityType' to be non-null");
+            $.totalTargetCapacity = Objects.requireNonNull($.totalTargetCapacity, "expected parameter 'totalTargetCapacity' to be non-null");
+            return $;
         }
     }
+
 }

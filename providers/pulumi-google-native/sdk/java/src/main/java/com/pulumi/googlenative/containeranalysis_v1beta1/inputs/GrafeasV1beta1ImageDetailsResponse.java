@@ -21,45 +21,45 @@ public final class GrafeasV1beta1ImageDetailsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="derivedImage", required=true)
-      private final DerivedResponse derivedImage;
+    private DerivedResponse derivedImage;
 
     public DerivedResponse derivedImage() {
         return this.derivedImage;
     }
 
-    public GrafeasV1beta1ImageDetailsResponse(DerivedResponse derivedImage) {
-        this.derivedImage = Objects.requireNonNull(derivedImage, "expected parameter 'derivedImage' to be non-null");
-    }
+    private GrafeasV1beta1ImageDetailsResponse() {}
 
-    private GrafeasV1beta1ImageDetailsResponse() {
-        this.derivedImage = null;
+    private GrafeasV1beta1ImageDetailsResponse(GrafeasV1beta1ImageDetailsResponse $) {
+        this.derivedImage = $.derivedImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1ImageDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DerivedResponse derivedImage;
+        private GrafeasV1beta1ImageDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1ImageDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1ImageDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.derivedImage = defaults.derivedImage;
+            $ = new GrafeasV1beta1ImageDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder derivedImage(DerivedResponse derivedImage) {
-            this.derivedImage = Objects.requireNonNull(derivedImage);
+            $.derivedImage = derivedImage;
             return this;
-        }        public GrafeasV1beta1ImageDetailsResponse build() {
-            return new GrafeasV1beta1ImageDetailsResponse(derivedImage);
+        }
+
+        public GrafeasV1beta1ImageDetailsResponse build() {
+            $.derivedImage = Objects.requireNonNull($.derivedImage, "expected parameter 'derivedImage' to be non-null");
+            return $;
         }
     }
+
 }

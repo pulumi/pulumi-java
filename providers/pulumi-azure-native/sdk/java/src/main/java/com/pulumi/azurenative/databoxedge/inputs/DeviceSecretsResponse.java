@@ -23,10 +23,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bmcDefaultUserPassword")
-      private final @Nullable SecretResponse bmcDefaultUserPassword;
+    private @Nullable SecretResponse bmcDefaultUserPassword;
 
     public Optional<SecretResponse> bmcDefaultUserPassword() {
-        return this.bmcDefaultUserPassword == null ? Optional.empty() : Optional.ofNullable(this.bmcDefaultUserPassword);
+        return Optional.ofNullable(this.bmcDefaultUserPassword);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hcsDataVolumeBitLockerExternalKey")
-      private final @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
+    private @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
 
     public Optional<SecretResponse> hcsDataVolumeBitLockerExternalKey() {
-        return this.hcsDataVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
+        return Optional.ofNullable(this.hcsDataVolumeBitLockerExternalKey);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="hcsInternalVolumeBitLockerExternalKey")
-      private final @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
+    private @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
 
     public Optional<SecretResponse> hcsInternalVolumeBitLockerExternalKey() {
-        return this.hcsInternalVolumeBitLockerExternalKey == null ? Optional.empty() : Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
+        return Optional.ofNullable(this.hcsInternalVolumeBitLockerExternalKey);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rotateKeyForDataVolumeBitlocker")
-      private final @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
+    private @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
 
     public Optional<SecretResponse> rotateKeyForDataVolumeBitlocker() {
-        return this.rotateKeyForDataVolumeBitlocker == null ? Optional.empty() : Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
+        return Optional.ofNullable(this.rotateKeyForDataVolumeBitlocker);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rotateKeysForSedDrivesSerialized")
-      private final @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
+    private @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
 
     public Optional<SecretResponse> rotateKeysForSedDrivesSerialized() {
-        return this.rotateKeysForSedDrivesSerialized == null ? Optional.empty() : Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
+        return Optional.ofNullable(this.rotateKeysForSedDrivesSerialized);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sedEncryptionExternalKey")
-      private final @Nullable SecretResponse sedEncryptionExternalKey;
+    private @Nullable SecretResponse sedEncryptionExternalKey;
 
     public Optional<SecretResponse> sedEncryptionExternalKey() {
-        return this.sedEncryptionExternalKey == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKey);
+        return Optional.ofNullable(this.sedEncryptionExternalKey);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sedEncryptionExternalKeyId")
-      private final @Nullable SecretResponse sedEncryptionExternalKeyId;
+    private @Nullable SecretResponse sedEncryptionExternalKeyId;
 
     public Optional<SecretResponse> sedEncryptionExternalKeyId() {
-        return this.sedEncryptionExternalKeyId == null ? Optional.empty() : Optional.ofNullable(this.sedEncryptionExternalKeyId);
+        return Optional.ofNullable(this.sedEncryptionExternalKeyId);
     }
 
     /**
@@ -100,109 +100,86 @@ public final class DeviceSecretsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="systemVolumeBitLockerRecoveryKey")
-      private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
+    private @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
     public Optional<SecretResponse> systemVolumeBitLockerRecoveryKey() {
-        return this.systemVolumeBitLockerRecoveryKey == null ? Optional.empty() : Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
+        return Optional.ofNullable(this.systemVolumeBitLockerRecoveryKey);
     }
 
-    public DeviceSecretsResponse(
-        @Nullable SecretResponse bmcDefaultUserPassword,
-        @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
-        @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
-        @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
-        @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
-        @Nullable SecretResponse sedEncryptionExternalKey,
-        @Nullable SecretResponse sedEncryptionExternalKeyId,
-        @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
-        this.bmcDefaultUserPassword = bmcDefaultUserPassword;
-        this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
-        this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
-        this.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
-        this.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
-        this.sedEncryptionExternalKey = sedEncryptionExternalKey;
-        this.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
-        this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
-    }
+    private DeviceSecretsResponse() {}
 
-    private DeviceSecretsResponse() {
-        this.bmcDefaultUserPassword = null;
-        this.hcsDataVolumeBitLockerExternalKey = null;
-        this.hcsInternalVolumeBitLockerExternalKey = null;
-        this.rotateKeyForDataVolumeBitlocker = null;
-        this.rotateKeysForSedDrivesSerialized = null;
-        this.sedEncryptionExternalKey = null;
-        this.sedEncryptionExternalKeyId = null;
-        this.systemVolumeBitLockerRecoveryKey = null;
+    private DeviceSecretsResponse(DeviceSecretsResponse $) {
+        this.bmcDefaultUserPassword = $.bmcDefaultUserPassword;
+        this.hcsDataVolumeBitLockerExternalKey = $.hcsDataVolumeBitLockerExternalKey;
+        this.hcsInternalVolumeBitLockerExternalKey = $.hcsInternalVolumeBitLockerExternalKey;
+        this.rotateKeyForDataVolumeBitlocker = $.rotateKeyForDataVolumeBitlocker;
+        this.rotateKeysForSedDrivesSerialized = $.rotateKeysForSedDrivesSerialized;
+        this.sedEncryptionExternalKey = $.sedEncryptionExternalKey;
+        this.sedEncryptionExternalKeyId = $.sedEncryptionExternalKeyId;
+        this.systemVolumeBitLockerRecoveryKey = $.systemVolumeBitLockerRecoveryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceSecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecretResponse bmcDefaultUserPassword;
-        private @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey;
-        private @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey;
-        private @Nullable SecretResponse rotateKeyForDataVolumeBitlocker;
-        private @Nullable SecretResponse rotateKeysForSedDrivesSerialized;
-        private @Nullable SecretResponse sedEncryptionExternalKey;
-        private @Nullable SecretResponse sedEncryptionExternalKeyId;
-        private @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
+        private DeviceSecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceSecretsResponse();
         }
 
         public Builder(DeviceSecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bmcDefaultUserPassword = defaults.bmcDefaultUserPassword;
-    	      this.hcsDataVolumeBitLockerExternalKey = defaults.hcsDataVolumeBitLockerExternalKey;
-    	      this.hcsInternalVolumeBitLockerExternalKey = defaults.hcsInternalVolumeBitLockerExternalKey;
-    	      this.rotateKeyForDataVolumeBitlocker = defaults.rotateKeyForDataVolumeBitlocker;
-    	      this.rotateKeysForSedDrivesSerialized = defaults.rotateKeysForSedDrivesSerialized;
-    	      this.sedEncryptionExternalKey = defaults.sedEncryptionExternalKey;
-    	      this.sedEncryptionExternalKeyId = defaults.sedEncryptionExternalKeyId;
-    	      this.systemVolumeBitLockerRecoveryKey = defaults.systemVolumeBitLockerRecoveryKey;
+            $ = new DeviceSecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bmcDefaultUserPassword(@Nullable SecretResponse bmcDefaultUserPassword) {
-            this.bmcDefaultUserPassword = bmcDefaultUserPassword;
+            $.bmcDefaultUserPassword = bmcDefaultUserPassword;
             return this;
         }
+
         public Builder hcsDataVolumeBitLockerExternalKey(@Nullable SecretResponse hcsDataVolumeBitLockerExternalKey) {
-            this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
+            $.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
             return this;
         }
+
         public Builder hcsInternalVolumeBitLockerExternalKey(@Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey) {
-            this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
+            $.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
             return this;
         }
+
         public Builder rotateKeyForDataVolumeBitlocker(@Nullable SecretResponse rotateKeyForDataVolumeBitlocker) {
-            this.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
+            $.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
             return this;
         }
+
         public Builder rotateKeysForSedDrivesSerialized(@Nullable SecretResponse rotateKeysForSedDrivesSerialized) {
-            this.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
+            $.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
             return this;
         }
+
         public Builder sedEncryptionExternalKey(@Nullable SecretResponse sedEncryptionExternalKey) {
-            this.sedEncryptionExternalKey = sedEncryptionExternalKey;
+            $.sedEncryptionExternalKey = sedEncryptionExternalKey;
             return this;
         }
+
         public Builder sedEncryptionExternalKeyId(@Nullable SecretResponse sedEncryptionExternalKeyId) {
-            this.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
+            $.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
             return this;
         }
+
         public Builder systemVolumeBitLockerRecoveryKey(@Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
-            this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
+            $.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;
-        }        public DeviceSecretsResponse build() {
-            return new DeviceSecretsResponse(bmcDefaultUserPassword, hcsDataVolumeBitLockerExternalKey, hcsInternalVolumeBitLockerExternalKey, rotateKeyForDataVolumeBitlocker, rotateKeysForSedDrivesSerialized, sedEncryptionExternalKey, sedEncryptionExternalKeyId, systemVolumeBitLockerRecoveryKey);
+        }
+
+        public DeviceSecretsResponse build() {
+            return $;
         }
     }
+
 }

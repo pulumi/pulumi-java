@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="creationTimestamp")
-      private final @Nullable Output<String> creationTimestamp;
+    private @Nullable Output<String> creationTimestamp;
 
-    public Output<String> creationTimestamp() {
-        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
+    public Optional<Output<String>> creationTimestamp() {
+        return Optional.ofNullable(this.creationTimestamp);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="instance")
-      private final @Nullable Output<String> instance;
+    private @Nullable Output<String> instance;
 
-    public Output<String> instance() {
-        return this.instance == null ? Codegen.empty() : this.instance;
+    public Optional<Output<String>> instance() {
+        return Optional.ofNullable(this.instance);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="natPolicy")
-      private final @Nullable Output<String> natPolicy;
+    private @Nullable Output<String> natPolicy;
 
-    public Output<String> natPolicy() {
-        return this.natPolicy == null ? Codegen.empty() : this.natPolicy;
+    public Optional<Output<String>> natPolicy() {
+        return Optional.ofNullable(this.natPolicy);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -123,154 +123,128 @@ public final class TargetInstanceState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public TargetInstanceState(
-        @Nullable Output<String> creationTimestamp,
-        @Nullable Output<String> description,
-        @Nullable Output<String> instance,
-        @Nullable Output<String> name,
-        @Nullable Output<String> natPolicy,
-        @Nullable Output<String> network,
-        @Nullable Output<String> project,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<String> zone) {
-        this.creationTimestamp = creationTimestamp;
-        this.description = description;
-        this.instance = instance;
-        this.name = name;
-        this.natPolicy = natPolicy;
-        this.network = network;
-        this.project = project;
-        this.selfLink = selfLink;
-        this.zone = zone;
-    }
+    private TargetInstanceState() {}
 
-    private TargetInstanceState() {
-        this.creationTimestamp = Codegen.empty();
-        this.description = Codegen.empty();
-        this.instance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.natPolicy = Codegen.empty();
-        this.network = Codegen.empty();
-        this.project = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.zone = Codegen.empty();
+    private TargetInstanceState(TargetInstanceState $) {
+        this.creationTimestamp = $.creationTimestamp;
+        this.description = $.description;
+        this.instance = $.instance;
+        this.name = $.name;
+        this.natPolicy = $.natPolicy;
+        this.network = $.network;
+        this.project = $.project;
+        this.selfLink = $.selfLink;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetInstanceState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> creationTimestamp;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> instance;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> natPolicy;
-        private @Nullable Output<String> network;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<String> zone;
+        private TargetInstanceState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetInstanceState();
         }
 
         public Builder(TargetInstanceState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTimestamp = defaults.creationTimestamp;
-    	      this.description = defaults.description;
-    	      this.instance = defaults.instance;
-    	      this.name = defaults.name;
-    	      this.natPolicy = defaults.natPolicy;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.selfLink = defaults.selfLink;
-    	      this.zone = defaults.zone;
+            $ = new TargetInstanceState(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
-            this.creationTimestamp = creationTimestamp;
+            $.creationTimestamp = creationTimestamp;
             return this;
         }
-        public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
-            return this;
+
+        public Builder creationTimestamp(String creationTimestamp) {
+            return creationTimestamp(Output.of(creationTimestamp));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder instance(@Nullable Output<String> instance) {
-            this.instance = instance;
+            $.instance = instance;
             return this;
         }
-        public Builder instance(@Nullable String instance) {
-            this.instance = Codegen.ofNullable(instance);
-            return this;
+
+        public Builder instance(String instance) {
+            return instance(Output.of(instance));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder natPolicy(@Nullable Output<String> natPolicy) {
-            this.natPolicy = natPolicy;
+            $.natPolicy = natPolicy;
             return this;
         }
-        public Builder natPolicy(@Nullable String natPolicy) {
-            this.natPolicy = Codegen.ofNullable(natPolicy);
-            return this;
+
+        public Builder natPolicy(String natPolicy) {
+            return natPolicy(Output.of(natPolicy));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public TargetInstanceState build() {
-            return new TargetInstanceState(creationTimestamp, description, instance, name, natPolicy, network, project, selfLink, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public TargetInstanceState build() {
+            return $;
         }
     }
+
 }

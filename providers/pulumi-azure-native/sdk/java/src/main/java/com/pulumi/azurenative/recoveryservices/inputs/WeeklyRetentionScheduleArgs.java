@@ -7,10 +7,10 @@ import com.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import com.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="daysOfTheWeek")
-      private final @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
+    private @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
 
-    public Output<List<DayOfWeek>> daysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
+    public Optional<Output<List<DayOfWeek>>> daysOfTheWeek() {
+        return Optional.ofNullable(this.daysOfTheWeek);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retentionDuration")
-      private final @Nullable Output<RetentionDurationArgs> retentionDuration;
+    private @Nullable Output<RetentionDurationArgs> retentionDuration;
 
-    public Output<RetentionDurationArgs> retentionDuration() {
-        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
+    public Optional<Output<RetentionDurationArgs>> retentionDuration() {
+        return Optional.ofNullable(this.retentionDuration);
     }
 
     /**
@@ -49,82 +49,76 @@ public final class WeeklyRetentionScheduleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retentionTimes")
-      private final @Nullable Output<List<String>> retentionTimes;
+    private @Nullable Output<List<String>> retentionTimes;
 
-    public Output<List<String>> retentionTimes() {
-        return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
+    public Optional<Output<List<String>>> retentionTimes() {
+        return Optional.ofNullable(this.retentionTimes);
     }
 
-    public WeeklyRetentionScheduleArgs(
-        @Nullable Output<List<DayOfWeek>> daysOfTheWeek,
-        @Nullable Output<RetentionDurationArgs> retentionDuration,
-        @Nullable Output<List<String>> retentionTimes) {
-        this.daysOfTheWeek = daysOfTheWeek;
-        this.retentionDuration = retentionDuration;
-        this.retentionTimes = retentionTimes;
-    }
+    private WeeklyRetentionScheduleArgs() {}
 
-    private WeeklyRetentionScheduleArgs() {
-        this.daysOfTheWeek = Codegen.empty();
-        this.retentionDuration = Codegen.empty();
-        this.retentionTimes = Codegen.empty();
+    private WeeklyRetentionScheduleArgs(WeeklyRetentionScheduleArgs $) {
+        this.daysOfTheWeek = $.daysOfTheWeek;
+        this.retentionDuration = $.retentionDuration;
+        this.retentionTimes = $.retentionTimes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyRetentionScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
-        private @Nullable Output<RetentionDurationArgs> retentionDuration;
-        private @Nullable Output<List<String>> retentionTimes;
+        private WeeklyRetentionScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyRetentionScheduleArgs();
         }
 
         public Builder(WeeklyRetentionScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysOfTheWeek = defaults.daysOfTheWeek;
-    	      this.retentionDuration = defaults.retentionDuration;
-    	      this.retentionTimes = defaults.retentionTimes;
+            $ = new WeeklyRetentionScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysOfTheWeek(@Nullable Output<List<DayOfWeek>> daysOfTheWeek) {
-            this.daysOfTheWeek = daysOfTheWeek;
+            $.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
-        public Builder daysOfTheWeek(@Nullable List<DayOfWeek> daysOfTheWeek) {
-            this.daysOfTheWeek = Codegen.ofNullable(daysOfTheWeek);
-            return this;
+
+        public Builder daysOfTheWeek(List<DayOfWeek> daysOfTheWeek) {
+            return daysOfTheWeek(Output.of(daysOfTheWeek));
         }
+
         public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
             return daysOfTheWeek(List.of(daysOfTheWeek));
         }
+
         public Builder retentionDuration(@Nullable Output<RetentionDurationArgs> retentionDuration) {
-            this.retentionDuration = retentionDuration;
+            $.retentionDuration = retentionDuration;
             return this;
         }
-        public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Codegen.ofNullable(retentionDuration);
-            return this;
+
+        public Builder retentionDuration(RetentionDurationArgs retentionDuration) {
+            return retentionDuration(Output.of(retentionDuration));
         }
+
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
-            this.retentionTimes = retentionTimes;
+            $.retentionTimes = retentionTimes;
             return this;
         }
-        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Codegen.ofNullable(retentionTimes);
-            return this;
+
+        public Builder retentionTimes(List<String> retentionTimes) {
+            return retentionTimes(Output.of(retentionTimes));
         }
+
         public Builder retentionTimes(String... retentionTimes) {
             return retentionTimes(List.of(retentionTimes));
-        }        public WeeklyRetentionScheduleArgs build() {
-            return new WeeklyRetentionScheduleArgs(daysOfTheWeek, retentionDuration, retentionTimes);
+        }
+
+        public WeeklyRetentionScheduleArgs build() {
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storagecache.inputs;
 import com.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="cacheNetBiosName", required=true)
-      private final Output<String> cacheNetBiosName;
+    private Output<String> cacheNetBiosName;
 
     public Output<String> cacheNetBiosName() {
         return this.cacheNetBiosName;
@@ -36,10 +36,10 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="credentials")
-      private final @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
+    private @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
 
-    public Output<CacheActiveDirectorySettingsCredentialsArgs> credentials() {
-        return this.credentials == null ? Codegen.empty() : this.credentials;
+    public Optional<Output<CacheActiveDirectorySettingsCredentialsArgs>> credentials() {
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -58,7 +58,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="domainNetBiosName", required=true)
-      private final Output<String> domainNetBiosName;
+    private Output<String> domainNetBiosName;
 
     public Output<String> domainNetBiosName() {
         return this.domainNetBiosName;
@@ -69,7 +69,7 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="primaryDnsIpAddress", required=true)
-      private final Output<String> primaryDnsIpAddress;
+    private Output<String> primaryDnsIpAddress;
 
     public Output<String> primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
@@ -80,115 +80,102 @@ public final class CacheActiveDirectorySettingsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="secondaryDnsIpAddress")
-      private final @Nullable Output<String> secondaryDnsIpAddress;
+    private @Nullable Output<String> secondaryDnsIpAddress;
 
-    public Output<String> secondaryDnsIpAddress() {
-        return this.secondaryDnsIpAddress == null ? Codegen.empty() : this.secondaryDnsIpAddress;
+    public Optional<Output<String>> secondaryDnsIpAddress() {
+        return Optional.ofNullable(this.secondaryDnsIpAddress);
     }
 
-    public CacheActiveDirectorySettingsArgs(
-        Output<String> cacheNetBiosName,
-        @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials,
-        Output<String> domainName,
-        Output<String> domainNetBiosName,
-        Output<String> primaryDnsIpAddress,
-        @Nullable Output<String> secondaryDnsIpAddress) {
-        this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName, "expected parameter 'cacheNetBiosName' to be non-null");
-        this.credentials = credentials;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName, "expected parameter 'domainNetBiosName' to be non-null");
-        this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress, "expected parameter 'primaryDnsIpAddress' to be non-null");
-        this.secondaryDnsIpAddress = secondaryDnsIpAddress;
-    }
+    private CacheActiveDirectorySettingsArgs() {}
 
-    private CacheActiveDirectorySettingsArgs() {
-        this.cacheNetBiosName = Codegen.empty();
-        this.credentials = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.domainNetBiosName = Codegen.empty();
-        this.primaryDnsIpAddress = Codegen.empty();
-        this.secondaryDnsIpAddress = Codegen.empty();
+    private CacheActiveDirectorySettingsArgs(CacheActiveDirectorySettingsArgs $) {
+        this.cacheNetBiosName = $.cacheNetBiosName;
+        this.credentials = $.credentials;
+        this.domainName = $.domainName;
+        this.domainNetBiosName = $.domainNetBiosName;
+        this.primaryDnsIpAddress = $.primaryDnsIpAddress;
+        this.secondaryDnsIpAddress = $.secondaryDnsIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheActiveDirectorySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cacheNetBiosName;
-        private @Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials;
-        private Output<String> domainName;
-        private Output<String> domainNetBiosName;
-        private Output<String> primaryDnsIpAddress;
-        private @Nullable Output<String> secondaryDnsIpAddress;
+        private CacheActiveDirectorySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheActiveDirectorySettingsArgs();
         }
 
         public Builder(CacheActiveDirectorySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheNetBiosName = defaults.cacheNetBiosName;
-    	      this.credentials = defaults.credentials;
-    	      this.domainName = defaults.domainName;
-    	      this.domainNetBiosName = defaults.domainNetBiosName;
-    	      this.primaryDnsIpAddress = defaults.primaryDnsIpAddress;
-    	      this.secondaryDnsIpAddress = defaults.secondaryDnsIpAddress;
+            $ = new CacheActiveDirectorySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheNetBiosName(Output<String> cacheNetBiosName) {
-            this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
+            $.cacheNetBiosName = cacheNetBiosName;
             return this;
         }
+
         public Builder cacheNetBiosName(String cacheNetBiosName) {
-            this.cacheNetBiosName = Output.of(Objects.requireNonNull(cacheNetBiosName));
-            return this;
+            return cacheNetBiosName(Output.of(cacheNetBiosName));
         }
+
         public Builder credentials(@Nullable Output<CacheActiveDirectorySettingsCredentialsArgs> credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
-        public Builder credentials(@Nullable CacheActiveDirectorySettingsCredentialsArgs credentials) {
-            this.credentials = Codegen.ofNullable(credentials);
-            return this;
+
+        public Builder credentials(CacheActiveDirectorySettingsCredentialsArgs credentials) {
+            return credentials(Output.of(credentials));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder domainNetBiosName(Output<String> domainNetBiosName) {
-            this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
+            $.domainNetBiosName = domainNetBiosName;
             return this;
         }
+
         public Builder domainNetBiosName(String domainNetBiosName) {
-            this.domainNetBiosName = Output.of(Objects.requireNonNull(domainNetBiosName));
-            return this;
+            return domainNetBiosName(Output.of(domainNetBiosName));
         }
+
         public Builder primaryDnsIpAddress(Output<String> primaryDnsIpAddress) {
-            this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
+            $.primaryDnsIpAddress = primaryDnsIpAddress;
             return this;
         }
+
         public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
-            this.primaryDnsIpAddress = Output.of(Objects.requireNonNull(primaryDnsIpAddress));
-            return this;
+            return primaryDnsIpAddress(Output.of(primaryDnsIpAddress));
         }
+
         public Builder secondaryDnsIpAddress(@Nullable Output<String> secondaryDnsIpAddress) {
-            this.secondaryDnsIpAddress = secondaryDnsIpAddress;
+            $.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-        public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
-            this.secondaryDnsIpAddress = Codegen.ofNullable(secondaryDnsIpAddress);
-            return this;
-        }        public CacheActiveDirectorySettingsArgs build() {
-            return new CacheActiveDirectorySettingsArgs(cacheNetBiosName, credentials, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
+
+        public Builder secondaryDnsIpAddress(String secondaryDnsIpAddress) {
+            return secondaryDnsIpAddress(Output.of(secondaryDnsIpAddress));
+        }
+
+        public CacheActiveDirectorySettingsArgs build() {
+            $.cacheNetBiosName = Objects.requireNonNull($.cacheNetBiosName, "expected parameter 'cacheNetBiosName' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.domainNetBiosName = Objects.requireNonNull($.domainNetBiosName, "expected parameter 'domainNetBiosName' to be non-null");
+            $.primaryDnsIpAddress = Objects.requireNonNull($.primaryDnsIpAddress, "expected parameter 'primaryDnsIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

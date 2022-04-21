@@ -5,11 +5,11 @@ package com.pulumi.googlenative.bigtableadmin_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigtableadmin_v2.enums.InstanceType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusters", required=true)
-      private final Output<Map<String,String>> clusters;
+    private Output<Map<String,String>> clusters;
 
     public Output<Map<String,String>> clusters() {
         return this.clusters;
@@ -33,7 +33,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -44,7 +44,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -55,7 +55,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Output<Map<String,String>> labels;
+    private Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> labels() {
         return this.labels;
@@ -66,10 +66,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,17 +77,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -95,141 +95,124 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<InstanceType> type;
+    private Output<InstanceType> type;
 
     public Output<InstanceType> type() {
         return this.type;
     }
 
-    public InstanceArgs(
-        Output<Map<String,String>> clusters,
-        Output<String> displayName,
-        Output<String> instanceId,
-        Output<Map<String,String>> labels,
-        @Nullable Output<String> name,
-        Output<String> parent,
-        @Nullable Output<String> project,
-        Output<InstanceType> type) {
-        this.clusters = Objects.requireNonNull(clusters, "expected parameter 'clusters' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.name = name;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.project = project;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.clusters = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.project = Codegen.empty();
-        this.type = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.clusters = $.clusters;
+        this.displayName = $.displayName;
+        this.instanceId = $.instanceId;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.project = $.project;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> clusters;
-        private Output<String> displayName;
-        private Output<String> instanceId;
-        private Output<Map<String,String>> labels;
-        private @Nullable Output<String> name;
-        private Output<String> parent;
-        private @Nullable Output<String> project;
-        private Output<InstanceType> type;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusters = defaults.clusters;
-    	      this.displayName = defaults.displayName;
-    	      this.instanceId = defaults.instanceId;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.project = defaults.project;
-    	      this.type = defaults.type;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusters(Output<Map<String,String>> clusters) {
-            this.clusters = Objects.requireNonNull(clusters);
+            $.clusters = clusters;
             return this;
         }
+
         public Builder clusters(Map<String,String> clusters) {
-            this.clusters = Output.of(Objects.requireNonNull(clusters));
-            return this;
+            return clusters(Output.of(clusters));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder labels(Output<Map<String,String>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
+            return labels(Output.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder type(Output<InstanceType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(InstanceType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(clusters, displayName, instanceId, labels, name, parent, project, type);
+            return type(Output.of(type));
+        }
+
+        public InstanceArgs build() {
+            $.clusters = Objects.requireNonNull($.clusters, "expected parameter 'clusters' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

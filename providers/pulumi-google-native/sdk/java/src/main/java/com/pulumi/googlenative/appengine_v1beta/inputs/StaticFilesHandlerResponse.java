@@ -23,7 +23,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="applicationReadable", required=true)
-      private final Boolean applicationReadable;
+    private Boolean applicationReadable;
 
     public Boolean applicationReadable() {
         return this.applicationReadable;
@@ -34,7 +34,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expiration", required=true)
-      private final String expiration;
+    private String expiration;
 
     public String expiration() {
         return this.expiration;
@@ -45,7 +45,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="httpHeaders", required=true)
-      private final Map<String,String> httpHeaders;
+    private Map<String,String> httpHeaders;
 
     public Map<String,String> httpHeaders() {
         return this.httpHeaders;
@@ -56,7 +56,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="mimeType", required=true)
-      private final String mimeType;
+    private String mimeType;
 
     public String mimeType() {
         return this.mimeType;
@@ -67,7 +67,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -78,7 +78,7 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="requireMatchingFile", required=true)
-      private final Boolean requireMatchingFile;
+    private Boolean requireMatchingFile;
 
     public Boolean requireMatchingFile() {
         return this.requireMatchingFile;
@@ -89,100 +89,87 @@ public final class StaticFilesHandlerResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="uploadPathRegex", required=true)
-      private final String uploadPathRegex;
+    private String uploadPathRegex;
 
     public String uploadPathRegex() {
         return this.uploadPathRegex;
     }
 
-    public StaticFilesHandlerResponse(
-        Boolean applicationReadable,
-        String expiration,
-        Map<String,String> httpHeaders,
-        String mimeType,
-        String path,
-        Boolean requireMatchingFile,
-        String uploadPathRegex) {
-        this.applicationReadable = Objects.requireNonNull(applicationReadable, "expected parameter 'applicationReadable' to be non-null");
-        this.expiration = Objects.requireNonNull(expiration, "expected parameter 'expiration' to be non-null");
-        this.httpHeaders = Objects.requireNonNull(httpHeaders, "expected parameter 'httpHeaders' to be non-null");
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.requireMatchingFile = Objects.requireNonNull(requireMatchingFile, "expected parameter 'requireMatchingFile' to be non-null");
-        this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex, "expected parameter 'uploadPathRegex' to be non-null");
-    }
+    private StaticFilesHandlerResponse() {}
 
-    private StaticFilesHandlerResponse() {
-        this.applicationReadable = null;
-        this.expiration = null;
-        this.httpHeaders = Map.of();
-        this.mimeType = null;
-        this.path = null;
-        this.requireMatchingFile = null;
-        this.uploadPathRegex = null;
+    private StaticFilesHandlerResponse(StaticFilesHandlerResponse $) {
+        this.applicationReadable = $.applicationReadable;
+        this.expiration = $.expiration;
+        this.httpHeaders = $.httpHeaders;
+        this.mimeType = $.mimeType;
+        this.path = $.path;
+        this.requireMatchingFile = $.requireMatchingFile;
+        this.uploadPathRegex = $.uploadPathRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StaticFilesHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean applicationReadable;
-        private String expiration;
-        private Map<String,String> httpHeaders;
-        private String mimeType;
-        private String path;
-        private Boolean requireMatchingFile;
-        private String uploadPathRegex;
+        private StaticFilesHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StaticFilesHandlerResponse();
         }
 
         public Builder(StaticFilesHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationReadable = defaults.applicationReadable;
-    	      this.expiration = defaults.expiration;
-    	      this.httpHeaders = defaults.httpHeaders;
-    	      this.mimeType = defaults.mimeType;
-    	      this.path = defaults.path;
-    	      this.requireMatchingFile = defaults.requireMatchingFile;
-    	      this.uploadPathRegex = defaults.uploadPathRegex;
+            $ = new StaticFilesHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationReadable(Boolean applicationReadable) {
-            this.applicationReadable = Objects.requireNonNull(applicationReadable);
+            $.applicationReadable = applicationReadable;
             return this;
         }
+
         public Builder expiration(String expiration) {
-            this.expiration = Objects.requireNonNull(expiration);
+            $.expiration = expiration;
             return this;
         }
+
         public Builder httpHeaders(Map<String,String> httpHeaders) {
-            this.httpHeaders = Objects.requireNonNull(httpHeaders);
+            $.httpHeaders = httpHeaders;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder requireMatchingFile(Boolean requireMatchingFile) {
-            this.requireMatchingFile = Objects.requireNonNull(requireMatchingFile);
+            $.requireMatchingFile = requireMatchingFile;
             return this;
         }
+
         public Builder uploadPathRegex(String uploadPathRegex) {
-            this.uploadPathRegex = Objects.requireNonNull(uploadPathRegex);
+            $.uploadPathRegex = uploadPathRegex;
             return this;
-        }        public StaticFilesHandlerResponse build() {
-            return new StaticFilesHandlerResponse(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
+        }
+
+        public StaticFilesHandlerResponse build() {
+            $.applicationReadable = Objects.requireNonNull($.applicationReadable, "expected parameter 'applicationReadable' to be non-null");
+            $.expiration = Objects.requireNonNull($.expiration, "expected parameter 'expiration' to be non-null");
+            $.httpHeaders = Objects.requireNonNull($.httpHeaders, "expected parameter 'httpHeaders' to be non-null");
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.requireMatchingFile = Objects.requireNonNull($.requireMatchingFile, "expected parameter 'requireMatchingFile' to be non-null");
+            $.uploadPathRegex = Objects.requireNonNull($.uploadPathRegex, "expected parameter 'uploadPathRegex' to be non-null");
+            return $;
         }
     }
+
 }

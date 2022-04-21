@@ -6,11 +6,11 @@ package com.pulumi.azurenative.machinelearningservices.inputs;
 import com.pulumi.azurenative.machinelearningservices.inputs.LabelClassArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowMultiSelect")
-      private final @Nullable Output<Boolean> allowMultiSelect;
+    private @Nullable Output<Boolean> allowMultiSelect;
 
-    public Output<Boolean> allowMultiSelect() {
-        return this.allowMultiSelect == null ? Codegen.empty() : this.allowMultiSelect;
+    public Optional<Output<Boolean>> allowMultiSelect() {
+        return Optional.ofNullable(this.allowMultiSelect);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classes", required=true)
-      private final Output<Map<String,LabelClassArgs>> classes;
+    private Output<Map<String,LabelClassArgs>> classes;
 
     public Output<Map<String,LabelClassArgs>> classes() {
         return this.classes;
@@ -49,76 +49,69 @@ public final class LabelCategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public LabelCategoryArgs(
-        @Nullable Output<Boolean> allowMultiSelect,
-        Output<Map<String,LabelClassArgs>> classes,
-        @Nullable Output<String> displayName) {
-        this.allowMultiSelect = allowMultiSelect;
-        this.classes = Objects.requireNonNull(classes, "expected parameter 'classes' to be non-null");
-        this.displayName = displayName;
-    }
+    private LabelCategoryArgs() {}
 
-    private LabelCategoryArgs() {
-        this.allowMultiSelect = Codegen.empty();
-        this.classes = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private LabelCategoryArgs(LabelCategoryArgs $) {
+        this.allowMultiSelect = $.allowMultiSelect;
+        this.classes = $.classes;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelCategoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowMultiSelect;
-        private Output<Map<String,LabelClassArgs>> classes;
-        private @Nullable Output<String> displayName;
+        private LabelCategoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelCategoryArgs();
         }
 
         public Builder(LabelCategoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowMultiSelect = defaults.allowMultiSelect;
-    	      this.classes = defaults.classes;
-    	      this.displayName = defaults.displayName;
+            $ = new LabelCategoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowMultiSelect(@Nullable Output<Boolean> allowMultiSelect) {
-            this.allowMultiSelect = allowMultiSelect;
+            $.allowMultiSelect = allowMultiSelect;
             return this;
         }
-        public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
-            this.allowMultiSelect = Codegen.ofNullable(allowMultiSelect);
-            return this;
+
+        public Builder allowMultiSelect(Boolean allowMultiSelect) {
+            return allowMultiSelect(Output.of(allowMultiSelect));
         }
+
         public Builder classes(Output<Map<String,LabelClassArgs>> classes) {
-            this.classes = Objects.requireNonNull(classes);
+            $.classes = classes;
             return this;
         }
+
         public Builder classes(Map<String,LabelClassArgs> classes) {
-            this.classes = Output.of(Objects.requireNonNull(classes));
-            return this;
+            return classes(Output.of(classes));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public LabelCategoryArgs build() {
-            return new LabelCategoryArgs(allowMultiSelect, classes, displayName);
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public LabelCategoryArgs build() {
+            $.classes = Objects.requireNonNull($.classes, "expected parameter 'classes' to be non-null");
+            return $;
         }
     }
+
 }

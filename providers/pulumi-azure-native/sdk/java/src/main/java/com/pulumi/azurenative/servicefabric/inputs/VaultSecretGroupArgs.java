@@ -7,7 +7,6 @@ import com.pulumi.azurenative.servicefabric.inputs.SubResourceArgs;
 import com.pulumi.azurenative.servicefabric.inputs.VaultCertificateArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +24,7 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceVault", required=true)
-      private final Output<SubResourceArgs> sourceVault;
+    private Output<SubResourceArgs> sourceVault;
 
     public Output<SubResourceArgs> sourceVault() {
         return this.sourceVault;
@@ -36,66 +35,64 @@ public final class VaultSecretGroupArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="vaultCertificates", required=true)
-      private final Output<List<VaultCertificateArgs>> vaultCertificates;
+    private Output<List<VaultCertificateArgs>> vaultCertificates;
 
     public Output<List<VaultCertificateArgs>> vaultCertificates() {
         return this.vaultCertificates;
     }
 
-    public VaultSecretGroupArgs(
-        Output<SubResourceArgs> sourceVault,
-        Output<List<VaultCertificateArgs>> vaultCertificates) {
-        this.sourceVault = Objects.requireNonNull(sourceVault, "expected parameter 'sourceVault' to be non-null");
-        this.vaultCertificates = Objects.requireNonNull(vaultCertificates, "expected parameter 'vaultCertificates' to be non-null");
-    }
+    private VaultSecretGroupArgs() {}
 
-    private VaultSecretGroupArgs() {
-        this.sourceVault = Codegen.empty();
-        this.vaultCertificates = Codegen.empty();
+    private VaultSecretGroupArgs(VaultSecretGroupArgs $) {
+        this.sourceVault = $.sourceVault;
+        this.vaultCertificates = $.vaultCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultSecretGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<SubResourceArgs> sourceVault;
-        private Output<List<VaultCertificateArgs>> vaultCertificates;
+        private VaultSecretGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultSecretGroupArgs();
         }
 
         public Builder(VaultSecretGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceVault = defaults.sourceVault;
-    	      this.vaultCertificates = defaults.vaultCertificates;
+            $ = new VaultSecretGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceVault(Output<SubResourceArgs> sourceVault) {
-            this.sourceVault = Objects.requireNonNull(sourceVault);
+            $.sourceVault = sourceVault;
             return this;
         }
+
         public Builder sourceVault(SubResourceArgs sourceVault) {
-            this.sourceVault = Output.of(Objects.requireNonNull(sourceVault));
-            return this;
+            return sourceVault(Output.of(sourceVault));
         }
+
         public Builder vaultCertificates(Output<List<VaultCertificateArgs>> vaultCertificates) {
-            this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
+            $.vaultCertificates = vaultCertificates;
             return this;
         }
+
         public Builder vaultCertificates(List<VaultCertificateArgs> vaultCertificates) {
-            this.vaultCertificates = Output.of(Objects.requireNonNull(vaultCertificates));
-            return this;
+            return vaultCertificates(Output.of(vaultCertificates));
         }
+
         public Builder vaultCertificates(VaultCertificateArgs... vaultCertificates) {
             return vaultCertificates(List.of(vaultCertificates));
-        }        public VaultSecretGroupArgs build() {
-            return new VaultSecretGroupArgs(sourceVault, vaultCertificates);
+        }
+
+        public VaultSecretGroupArgs build() {
+            $.sourceVault = Objects.requireNonNull($.sourceVault, "expected parameter 'sourceVault' to be non-null");
+            $.vaultCertificates = Objects.requireNonNull($.vaultCertificates, "expected parameter 'vaultCertificates' to be non-null");
+            return $;
         }
     }
+
 }

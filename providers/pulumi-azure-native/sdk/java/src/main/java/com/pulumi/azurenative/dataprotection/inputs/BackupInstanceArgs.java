@@ -8,9 +8,9 @@ import com.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import com.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataSourceInfo", required=true)
-      private final Output<DatasourceArgs> dataSourceInfo;
+    private Output<DatasourceArgs> dataSourceInfo;
 
     public Output<DatasourceArgs> dataSourceInfo() {
         return this.dataSourceInfo;
@@ -38,10 +38,10 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="dataSourceSetInfo")
-      private final @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
+    private @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
 
-    public Output<DatasourceSetArgs> dataSourceSetInfo() {
-        return this.dataSourceSetInfo == null ? Codegen.empty() : this.dataSourceSetInfo;
+    public Optional<Output<DatasourceSetArgs>> dataSourceSetInfo() {
+        return Optional.ofNullable(this.dataSourceSetInfo);
     }
 
     /**
@@ -49,14 +49,14 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     @Import(name="objectType", required=true)
-      private final Output<String> objectType;
+    private Output<String> objectType;
 
     public Output<String> objectType() {
         return this.objectType;
@@ -67,102 +67,91 @@ public final class BackupInstanceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="policyInfo", required=true)
-      private final Output<PolicyInfoArgs> policyInfo;
+    private Output<PolicyInfoArgs> policyInfo;
 
     public Output<PolicyInfoArgs> policyInfo() {
         return this.policyInfo;
     }
 
-    public BackupInstanceArgs(
-        Output<DatasourceArgs> dataSourceInfo,
-        @Nullable Output<DatasourceSetArgs> dataSourceSetInfo,
-        @Nullable Output<String> friendlyName,
-        Output<String> objectType,
-        Output<PolicyInfoArgs> policyInfo) {
-        this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo, "expected parameter 'dataSourceInfo' to be non-null");
-        this.dataSourceSetInfo = dataSourceSetInfo;
-        this.friendlyName = friendlyName;
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.policyInfo = Objects.requireNonNull(policyInfo, "expected parameter 'policyInfo' to be non-null");
-    }
+    private BackupInstanceArgs() {}
 
-    private BackupInstanceArgs() {
-        this.dataSourceInfo = Codegen.empty();
-        this.dataSourceSetInfo = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.objectType = Codegen.empty();
-        this.policyInfo = Codegen.empty();
+    private BackupInstanceArgs(BackupInstanceArgs $) {
+        this.dataSourceInfo = $.dataSourceInfo;
+        this.dataSourceSetInfo = $.dataSourceSetInfo;
+        this.friendlyName = $.friendlyName;
+        this.objectType = $.objectType;
+        this.policyInfo = $.policyInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DatasourceArgs> dataSourceInfo;
-        private @Nullable Output<DatasourceSetArgs> dataSourceSetInfo;
-        private @Nullable Output<String> friendlyName;
-        private Output<String> objectType;
-        private Output<PolicyInfoArgs> policyInfo;
+        private BackupInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupInstanceArgs();
         }
 
         public Builder(BackupInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceInfo = defaults.dataSourceInfo;
-    	      this.dataSourceSetInfo = defaults.dataSourceSetInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.objectType = defaults.objectType;
-    	      this.policyInfo = defaults.policyInfo;
+            $ = new BackupInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceInfo(Output<DatasourceArgs> dataSourceInfo) {
-            this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
+            $.dataSourceInfo = dataSourceInfo;
             return this;
         }
+
         public Builder dataSourceInfo(DatasourceArgs dataSourceInfo) {
-            this.dataSourceInfo = Output.of(Objects.requireNonNull(dataSourceInfo));
-            return this;
+            return dataSourceInfo(Output.of(dataSourceInfo));
         }
+
         public Builder dataSourceSetInfo(@Nullable Output<DatasourceSetArgs> dataSourceSetInfo) {
-            this.dataSourceSetInfo = dataSourceSetInfo;
+            $.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
-        public Builder dataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
-            this.dataSourceSetInfo = Codegen.ofNullable(dataSourceSetInfo);
-            return this;
+
+        public Builder dataSourceSetInfo(DatasourceSetArgs dataSourceSetInfo) {
+            return dataSourceSetInfo(Output.of(dataSourceSetInfo));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder objectType(Output<String> objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Output.of(Objects.requireNonNull(objectType));
-            return this;
+            return objectType(Output.of(objectType));
         }
+
         public Builder policyInfo(Output<PolicyInfoArgs> policyInfo) {
-            this.policyInfo = Objects.requireNonNull(policyInfo);
+            $.policyInfo = policyInfo;
             return this;
         }
+
         public Builder policyInfo(PolicyInfoArgs policyInfo) {
-            this.policyInfo = Output.of(Objects.requireNonNull(policyInfo));
-            return this;
-        }        public BackupInstanceArgs build() {
-            return new BackupInstanceArgs(dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo);
+            return policyInfo(Output.of(policyInfo));
+        }
+
+        public BackupInstanceArgs build() {
+            $.dataSourceInfo = Objects.requireNonNull($.dataSourceInfo, "expected parameter 'dataSourceInfo' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.policyInfo = Objects.requireNonNull($.policyInfo, "expected parameter 'policyInfo' to be non-null");
+            return $;
         }
     }
+
 }

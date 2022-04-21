@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends com.
      * 
      */
     @Import(name="valueFrequencyHistogramBuckets", required=true)
-      private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
+    private List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
     }
 
-    public GooglePrivacyDlpV2CategoricalStatsResultResponse(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
-        this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets, "expected parameter 'valueFrequencyHistogramBuckets' to be non-null");
-    }
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse() {}
 
-    private GooglePrivacyDlpV2CategoricalStatsResultResponse() {
-        this.valueFrequencyHistogramBuckets = List.of();
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse(GooglePrivacyDlpV2CategoricalStatsResultResponse $) {
+        this.valueFrequencyHistogramBuckets = $.valueFrequencyHistogramBuckets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CategoricalStatsResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
+        private GooglePrivacyDlpV2CategoricalStatsResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CategoricalStatsResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2CategoricalStatsResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.valueFrequencyHistogramBuckets = defaults.valueFrequencyHistogramBuckets;
+            $ = new GooglePrivacyDlpV2CategoricalStatsResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder valueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
-            this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
+            $.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
             return this;
         }
+
         public Builder valueFrequencyHistogramBuckets(GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse... valueFrequencyHistogramBuckets) {
             return valueFrequencyHistogramBuckets(List.of(valueFrequencyHistogramBuckets));
-        }        public GooglePrivacyDlpV2CategoricalStatsResultResponse build() {
-            return new GooglePrivacyDlpV2CategoricalStatsResultResponse(valueFrequencyHistogramBuckets);
+        }
+
+        public GooglePrivacyDlpV2CategoricalStatsResultResponse build() {
+            $.valueFrequencyHistogramBuckets = Objects.requireNonNull($.valueFrequencyHistogramBuckets, "expected parameter 'valueFrequencyHistogramBuckets' to be non-null");
+            return $;
         }
     }
+
 }

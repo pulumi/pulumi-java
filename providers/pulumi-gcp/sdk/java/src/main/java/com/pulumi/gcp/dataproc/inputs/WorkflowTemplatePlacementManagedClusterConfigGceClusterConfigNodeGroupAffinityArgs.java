@@ -5,7 +5,6 @@ package com.pulumi.gcp.dataproc.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * 
      */
     @Import(name="nodeGroup", required=true)
-      private final Output<String> nodeGroup;
+    private Output<String> nodeGroup;
 
     public Output<String> nodeGroup() {
         return this.nodeGroup;
     }
 
-    public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(Output<String> nodeGroup) {
-        this.nodeGroup = Objects.requireNonNull(nodeGroup, "expected parameter 'nodeGroup' to be non-null");
-    }
+    private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs() {}
 
-    private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs() {
-        this.nodeGroup = Codegen.empty();
+    private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs $) {
+        this.nodeGroup = $.nodeGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> nodeGroup;
+        private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs();
         }
 
         public Builder(WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeGroup = defaults.nodeGroup;
+            $ = new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeGroup(Output<String> nodeGroup) {
-            this.nodeGroup = Objects.requireNonNull(nodeGroup);
+            $.nodeGroup = nodeGroup;
             return this;
         }
+
         public Builder nodeGroup(String nodeGroup) {
-            this.nodeGroup = Output.of(Objects.requireNonNull(nodeGroup));
-            return this;
-        }        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs build() {
-            return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs(nodeGroup);
+            return nodeGroup(Output.of(nodeGroup));
+        }
+
+        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityArgs build() {
+            $.nodeGroup = Objects.requireNonNull($.nodeGroup, "expected parameter 'nodeGroup' to be non-null");
+            return $;
         }
     }
+
 }

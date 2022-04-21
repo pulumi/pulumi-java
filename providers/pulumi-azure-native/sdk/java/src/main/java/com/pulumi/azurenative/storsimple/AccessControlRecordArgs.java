@@ -6,9 +6,9 @@ package com.pulumi.azurenative.storsimple;
 import com.pulumi.azurenative.storsimple.enums.Kind;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accessControlRecordName")
-      private final @Nullable Output<String> accessControlRecordName;
+    private @Nullable Output<String> accessControlRecordName;
 
-    public Output<String> accessControlRecordName() {
-        return this.accessControlRecordName == null ? Codegen.empty() : this.accessControlRecordName;
+    public Optional<Output<String>> accessControlRecordName() {
+        return Optional.ofNullable(this.accessControlRecordName);
     }
 
     /**
@@ -32,7 +32,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="initiatorName", required=true)
-      private final Output<String> initiatorName;
+    private Output<String> initiatorName;
 
     public Output<String> initiatorName() {
         return this.initiatorName;
@@ -43,10 +43,10 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<Kind> kind;
+    private @Nullable Output<Kind> kind;
 
-    public Output<Kind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<Kind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="managerName", required=true)
-      private final Output<String> managerName;
+    private Output<String> managerName;
 
     public Output<String> managerName() {
         return this.managerName;
@@ -65,102 +65,91 @@ public final class AccessControlRecordArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public AccessControlRecordArgs(
-        @Nullable Output<String> accessControlRecordName,
-        Output<String> initiatorName,
-        @Nullable Output<Kind> kind,
-        Output<String> managerName,
-        Output<String> resourceGroupName) {
-        this.accessControlRecordName = accessControlRecordName;
-        this.initiatorName = Objects.requireNonNull(initiatorName, "expected parameter 'initiatorName' to be non-null");
-        this.kind = kind;
-        this.managerName = Objects.requireNonNull(managerName, "expected parameter 'managerName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private AccessControlRecordArgs() {}
 
-    private AccessControlRecordArgs() {
-        this.accessControlRecordName = Codegen.empty();
-        this.initiatorName = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.managerName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private AccessControlRecordArgs(AccessControlRecordArgs $) {
+        this.accessControlRecordName = $.accessControlRecordName;
+        this.initiatorName = $.initiatorName;
+        this.kind = $.kind;
+        this.managerName = $.managerName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessControlRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessControlRecordName;
-        private Output<String> initiatorName;
-        private @Nullable Output<Kind> kind;
-        private Output<String> managerName;
-        private Output<String> resourceGroupName;
+        private AccessControlRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessControlRecordArgs();
         }
 
         public Builder(AccessControlRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessControlRecordName = defaults.accessControlRecordName;
-    	      this.initiatorName = defaults.initiatorName;
-    	      this.kind = defaults.kind;
-    	      this.managerName = defaults.managerName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new AccessControlRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessControlRecordName(@Nullable Output<String> accessControlRecordName) {
-            this.accessControlRecordName = accessControlRecordName;
+            $.accessControlRecordName = accessControlRecordName;
             return this;
         }
-        public Builder accessControlRecordName(@Nullable String accessControlRecordName) {
-            this.accessControlRecordName = Codegen.ofNullable(accessControlRecordName);
-            return this;
+
+        public Builder accessControlRecordName(String accessControlRecordName) {
+            return accessControlRecordName(Output.of(accessControlRecordName));
         }
+
         public Builder initiatorName(Output<String> initiatorName) {
-            this.initiatorName = Objects.requireNonNull(initiatorName);
+            $.initiatorName = initiatorName;
             return this;
         }
+
         public Builder initiatorName(String initiatorName) {
-            this.initiatorName = Output.of(Objects.requireNonNull(initiatorName));
-            return this;
+            return initiatorName(Output.of(initiatorName));
         }
+
         public Builder kind(@Nullable Output<Kind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable Kind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(Kind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder managerName(Output<String> managerName) {
-            this.managerName = Objects.requireNonNull(managerName);
+            $.managerName = managerName;
             return this;
         }
+
         public Builder managerName(String managerName) {
-            this.managerName = Output.of(Objects.requireNonNull(managerName));
-            return this;
+            return managerName(Output.of(managerName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public AccessControlRecordArgs build() {
-            return new AccessControlRecordArgs(accessControlRecordName, initiatorName, kind, managerName, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public AccessControlRecordArgs build() {
+            $.initiatorName = Objects.requireNonNull($.initiatorName, "expected parameter 'initiatorName' to be non-null");
+            $.managerName = Objects.requireNonNull($.managerName, "expected parameter 'managerName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

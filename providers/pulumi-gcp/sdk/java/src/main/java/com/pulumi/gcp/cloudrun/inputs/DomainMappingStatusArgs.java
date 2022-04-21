@@ -5,13 +5,13 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionArgs;
 import com.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,116 +20,107 @@ public final class DomainMappingStatusArgs extends com.pulumi.resources.Resource
     public static final DomainMappingStatusArgs Empty = new DomainMappingStatusArgs();
 
     @Import(name="conditions")
-      private final @Nullable Output<List<DomainMappingStatusConditionArgs>> conditions;
+    private @Nullable Output<List<DomainMappingStatusConditionArgs>> conditions;
 
-    public Output<List<DomainMappingStatusConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<DomainMappingStatusConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     @Import(name="mappedRouteName")
-      private final @Nullable Output<String> mappedRouteName;
+    private @Nullable Output<String> mappedRouteName;
 
-    public Output<String> mappedRouteName() {
-        return this.mappedRouteName == null ? Codegen.empty() : this.mappedRouteName;
+    public Optional<Output<String>> mappedRouteName() {
+        return Optional.ofNullable(this.mappedRouteName);
     }
 
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     @Import(name="resourceRecords")
-      private final @Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
+    private @Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
 
-    public Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords() {
-        return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
+    public Optional<Output<List<DomainMappingStatusResourceRecordArgs>>> resourceRecords() {
+        return Optional.ofNullable(this.resourceRecords);
     }
 
-    public DomainMappingStatusArgs(
-        @Nullable Output<List<DomainMappingStatusConditionArgs>> conditions,
-        @Nullable Output<String> mappedRouteName,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords) {
-        this.conditions = conditions;
-        this.mappedRouteName = mappedRouteName;
-        this.observedGeneration = observedGeneration;
-        this.resourceRecords = resourceRecords;
-    }
+    private DomainMappingStatusArgs() {}
 
-    private DomainMappingStatusArgs() {
-        this.conditions = Codegen.empty();
-        this.mappedRouteName = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.resourceRecords = Codegen.empty();
+    private DomainMappingStatusArgs(DomainMappingStatusArgs $) {
+        this.conditions = $.conditions;
+        this.mappedRouteName = $.mappedRouteName;
+        this.observedGeneration = $.observedGeneration;
+        this.resourceRecords = $.resourceRecords;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DomainMappingStatusConditionArgs>> conditions;
-        private @Nullable Output<String> mappedRouteName;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
+        private DomainMappingStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingStatusArgs();
         }
 
         public Builder(DomainMappingStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.mappedRouteName = defaults.mappedRouteName;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.resourceRecords = defaults.resourceRecords;
+            $ = new DomainMappingStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<DomainMappingStatusConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<DomainMappingStatusConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<DomainMappingStatusConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(DomainMappingStatusConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder mappedRouteName(@Nullable Output<String> mappedRouteName) {
-            this.mappedRouteName = mappedRouteName;
+            $.mappedRouteName = mappedRouteName;
             return this;
         }
-        public Builder mappedRouteName(@Nullable String mappedRouteName) {
-            this.mappedRouteName = Codegen.ofNullable(mappedRouteName);
-            return this;
+
+        public Builder mappedRouteName(String mappedRouteName) {
+            return mappedRouteName(Output.of(mappedRouteName));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder resourceRecords(@Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords) {
-            this.resourceRecords = resourceRecords;
+            $.resourceRecords = resourceRecords;
             return this;
         }
-        public Builder resourceRecords(@Nullable List<DomainMappingStatusResourceRecordArgs> resourceRecords) {
-            this.resourceRecords = Codegen.ofNullable(resourceRecords);
-            return this;
+
+        public Builder resourceRecords(List<DomainMappingStatusResourceRecordArgs> resourceRecords) {
+            return resourceRecords(Output.of(resourceRecords));
         }
+
         public Builder resourceRecords(DomainMappingStatusResourceRecordArgs... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
-        }        public DomainMappingStatusArgs build() {
-            return new DomainMappingStatusArgs(conditions, mappedRouteName, observedGeneration, resourceRecords);
+        }
+
+        public DomainMappingStatusArgs build() {
+            return $;
         }
     }
+
 }

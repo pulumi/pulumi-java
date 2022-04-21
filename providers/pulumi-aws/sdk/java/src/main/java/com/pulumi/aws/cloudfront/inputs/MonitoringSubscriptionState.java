@@ -6,9 +6,9 @@ package com.pulumi.aws.cloudfront.inputs;
 import com.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionMonitoringSubscriptionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="distributionId")
-      private final @Nullable Output<String> distributionId;
+    private @Nullable Output<String> distributionId;
 
-    public Output<String> distributionId() {
-        return this.distributionId == null ? Codegen.empty() : this.distributionId;
+    public Optional<Output<String>> distributionId() {
+        return Optional.ofNullable(this.distributionId);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class MonitoringSubscriptionState extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="monitoringSubscription")
-      private final @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+    private @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
 
-    public Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription() {
-        return this.monitoringSubscription == null ? Codegen.empty() : this.monitoringSubscription;
+    public Optional<Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs>> monitoringSubscription() {
+        return Optional.ofNullable(this.monitoringSubscription);
     }
 
-    public MonitoringSubscriptionState(
-        @Nullable Output<String> distributionId,
-        @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
-        this.distributionId = distributionId;
-        this.monitoringSubscription = monitoringSubscription;
-    }
+    private MonitoringSubscriptionState() {}
 
-    private MonitoringSubscriptionState() {
-        this.distributionId = Codegen.empty();
-        this.monitoringSubscription = Codegen.empty();
+    private MonitoringSubscriptionState(MonitoringSubscriptionState $) {
+        this.distributionId = $.distributionId;
+        this.monitoringSubscription = $.monitoringSubscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringSubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> distributionId;
-        private @Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription;
+        private MonitoringSubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringSubscriptionState();
         }
 
         public Builder(MonitoringSubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionId = defaults.distributionId;
-    	      this.monitoringSubscription = defaults.monitoringSubscription;
+            $ = new MonitoringSubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionId(@Nullable Output<String> distributionId) {
-            this.distributionId = distributionId;
+            $.distributionId = distributionId;
             return this;
         }
-        public Builder distributionId(@Nullable String distributionId) {
-            this.distributionId = Codegen.ofNullable(distributionId);
-            return this;
+
+        public Builder distributionId(String distributionId) {
+            return distributionId(Output.of(distributionId));
         }
+
         public Builder monitoringSubscription(@Nullable Output<MonitoringSubscriptionMonitoringSubscriptionGetArgs> monitoringSubscription) {
-            this.monitoringSubscription = monitoringSubscription;
+            $.monitoringSubscription = monitoringSubscription;
             return this;
         }
-        public Builder monitoringSubscription(@Nullable MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
-            this.monitoringSubscription = Codegen.ofNullable(monitoringSubscription);
-            return this;
-        }        public MonitoringSubscriptionState build() {
-            return new MonitoringSubscriptionState(distributionId, monitoringSubscription);
+
+        public Builder monitoringSubscription(MonitoringSubscriptionMonitoringSubscriptionGetArgs monitoringSubscription) {
+            return monitoringSubscription(Output.of(monitoringSubscription));
+        }
+
+        public MonitoringSubscriptionState build() {
+            return $;
         }
     }
+
 }

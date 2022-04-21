@@ -21,10 +21,10 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetComponentsFilter> filters;
+    private @Nullable List<GetComponentsFilter> filters;
 
-    public List<GetComponentsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetComponentsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -32,58 +32,54 @@ public final class GetComponentsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable String owner;
+    private @Nullable String owner;
 
     public Optional<String> owner() {
-        return this.owner == null ? Optional.empty() : Optional.ofNullable(this.owner);
+        return Optional.ofNullable(this.owner);
     }
 
-    public GetComponentsArgs(
-        @Nullable List<GetComponentsFilter> filters,
-        @Nullable String owner) {
-        this.filters = filters;
-        this.owner = owner;
-    }
+    private GetComponentsArgs() {}
 
-    private GetComponentsArgs() {
-        this.filters = List.of();
-        this.owner = null;
+    private GetComponentsArgs(GetComponentsArgs $) {
+        this.filters = $.filters;
+        this.owner = $.owner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetComponentsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetComponentsFilter> filters;
-        private @Nullable String owner;
+        private GetComponentsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetComponentsArgs();
         }
 
         public Builder(GetComponentsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.owner = defaults.owner;
+            $ = new GetComponentsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetComponentsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetComponentsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder owner(@Nullable String owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
-        }        public GetComponentsArgs build() {
-            return new GetComponentsArgs(filters, owner);
+        }
+
+        public GetComponentsArgs build() {
+            return $;
         }
     }
+
 }

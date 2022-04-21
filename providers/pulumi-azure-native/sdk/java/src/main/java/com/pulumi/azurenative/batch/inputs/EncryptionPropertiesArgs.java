@@ -7,8 +7,8 @@ import com.pulumi.azurenative.batch.enums.KeySource;
 import com.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keySource")
-      private final @Nullable Output<KeySource> keySource;
+    private @Nullable Output<KeySource> keySource;
 
-    public Output<KeySource> keySource() {
-        return this.keySource == null ? Codegen.empty() : this.keySource;
+    public Optional<Output<KeySource>> keySource() {
+        return Optional.ofNullable(this.keySource);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EncryptionPropertiesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyVaultProperties")
-      private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+    private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
-    public Output<KeyVaultPropertiesArgs> keyVaultProperties() {
-        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
+    public Optional<Output<KeyVaultPropertiesArgs>> keyVaultProperties() {
+        return Optional.ofNullable(this.keyVaultProperties);
     }
 
-    public EncryptionPropertiesArgs(
-        @Nullable Output<KeySource> keySource,
-        @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-        this.keySource = keySource;
-        this.keyVaultProperties = keyVaultProperties;
-    }
+    private EncryptionPropertiesArgs() {}
 
-    private EncryptionPropertiesArgs() {
-        this.keySource = Codegen.empty();
-        this.keyVaultProperties = Codegen.empty();
+    private EncryptionPropertiesArgs(EncryptionPropertiesArgs $) {
+        this.keySource = $.keySource;
+        this.keyVaultProperties = $.keyVaultProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncryptionPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<KeySource> keySource;
-        private @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
+        private EncryptionPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncryptionPropertiesArgs();
         }
 
         public Builder(EncryptionPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keySource = defaults.keySource;
-    	      this.keyVaultProperties = defaults.keyVaultProperties;
+            $ = new EncryptionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keySource(@Nullable Output<KeySource> keySource) {
-            this.keySource = keySource;
+            $.keySource = keySource;
             return this;
         }
-        public Builder keySource(@Nullable KeySource keySource) {
-            this.keySource = Codegen.ofNullable(keySource);
-            return this;
+
+        public Builder keySource(KeySource keySource) {
+            return keySource(Output.of(keySource));
         }
+
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
-            this.keyVaultProperties = keyVaultProperties;
+            $.keyVaultProperties = keyVaultProperties;
             return this;
         }
-        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
-            return this;
-        }        public EncryptionPropertiesArgs build() {
-            return new EncryptionPropertiesArgs(keySource, keyVaultProperties);
+
+        public Builder keyVaultProperties(KeyVaultPropertiesArgs keyVaultProperties) {
+            return keyVaultProperties(Output.of(keyVaultProperties));
+        }
+
+        public EncryptionPropertiesArgs build() {
+            return $;
         }
     }
+
 }

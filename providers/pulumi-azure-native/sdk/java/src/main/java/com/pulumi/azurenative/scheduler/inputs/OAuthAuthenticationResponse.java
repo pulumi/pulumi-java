@@ -20,10 +20,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="audience")
-      private final @Nullable String audience;
+    private @Nullable String audience;
 
     public Optional<String> audience() {
-        return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="clientId")
-      private final @Nullable String clientId;
+    private @Nullable String clientId;
 
     public Optional<String> clientId() {
-        return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
+        return Optional.ofNullable(this.clientId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="secret")
-      private final @Nullable String secret;
+    private @Nullable String secret;
 
     public Optional<String> secret() {
-        return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="tenant")
-      private final @Nullable String tenant;
+    private @Nullable String tenant;
 
     public Optional<String> tenant() {
-        return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -65,82 +65,69 @@ public final class OAuthAuthenticationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public OAuthAuthenticationResponse(
-        @Nullable String audience,
-        @Nullable String clientId,
-        @Nullable String secret,
-        @Nullable String tenant,
-        String type) {
-        this.audience = audience;
-        this.clientId = clientId;
-        this.secret = secret;
-        this.tenant = tenant;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private OAuthAuthenticationResponse() {}
 
-    private OAuthAuthenticationResponse() {
-        this.audience = null;
-        this.clientId = null;
-        this.secret = null;
-        this.tenant = null;
-        this.type = null;
+    private OAuthAuthenticationResponse(OAuthAuthenticationResponse $) {
+        this.audience = $.audience;
+        this.clientId = $.clientId;
+        this.secret = $.secret;
+        this.tenant = $.tenant;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OAuthAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String audience;
-        private @Nullable String clientId;
-        private @Nullable String secret;
-        private @Nullable String tenant;
-        private String type;
+        private OAuthAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OAuthAuthenticationResponse();
         }
 
         public Builder(OAuthAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.clientId = defaults.clientId;
-    	      this.secret = defaults.secret;
-    	      this.tenant = defaults.tenant;
-    	      this.type = defaults.type;
+            $ = new OAuthAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable String audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
+
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = clientId;
+            $.clientId = clientId;
             return this;
         }
+
         public Builder secret(@Nullable String secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
+
         public Builder tenant(@Nullable String tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public OAuthAuthenticationResponse build() {
-            return new OAuthAuthenticationResponse(audience, clientId, secret, tenant, type);
+        }
+
+        public OAuthAuthenticationResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

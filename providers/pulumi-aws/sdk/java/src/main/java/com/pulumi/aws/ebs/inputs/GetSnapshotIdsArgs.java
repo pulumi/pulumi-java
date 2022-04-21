@@ -23,10 +23,10 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetSnapshotIdsFilter> filters;
+    private @Nullable List<GetSnapshotIdsFilter> filters;
 
-    public List<GetSnapshotIdsFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetSnapshotIdsFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="owners")
-      private final @Nullable List<String> owners;
+    private @Nullable List<String> owners;
 
-    public List<String> owners() {
-        return this.owners == null ? List.of() : this.owners;
+    public Optional<List<String>> owners() {
+        return Optional.ofNullable(this.owners);
     }
 
     /**
@@ -45,73 +45,68 @@ public final class GetSnapshotIdsArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="restorableByUserIds")
-      private final @Nullable List<String> restorableByUserIds;
+    private @Nullable List<String> restorableByUserIds;
 
-    public List<String> restorableByUserIds() {
-        return this.restorableByUserIds == null ? List.of() : this.restorableByUserIds;
+    public Optional<List<String>> restorableByUserIds() {
+        return Optional.ofNullable(this.restorableByUserIds);
     }
 
-    public GetSnapshotIdsArgs(
-        @Nullable List<GetSnapshotIdsFilter> filters,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds) {
-        this.filters = filters;
-        this.owners = owners;
-        this.restorableByUserIds = restorableByUserIds;
-    }
+    private GetSnapshotIdsArgs() {}
 
-    private GetSnapshotIdsArgs() {
-        this.filters = List.of();
-        this.owners = List.of();
-        this.restorableByUserIds = List.of();
+    private GetSnapshotIdsArgs(GetSnapshotIdsArgs $) {
+        this.filters = $.filters;
+        this.owners = $.owners;
+        this.restorableByUserIds = $.restorableByUserIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSnapshotIdsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<GetSnapshotIdsFilter> filters;
-        private @Nullable List<String> owners;
-        private @Nullable List<String> restorableByUserIds;
+        private GetSnapshotIdsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSnapshotIdsArgs();
         }
 
         public Builder(GetSnapshotIdsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filters = defaults.filters;
-    	      this.owners = defaults.owners;
-    	      this.restorableByUserIds = defaults.restorableByUserIds;
+            $ = new GetSnapshotIdsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filters(@Nullable List<GetSnapshotIdsFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetSnapshotIdsFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder owners(@Nullable List<String> owners) {
-            this.owners = owners;
+            $.owners = owners;
             return this;
         }
+
         public Builder owners(String... owners) {
             return owners(List.of(owners));
         }
+
         public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
-            this.restorableByUserIds = restorableByUserIds;
+            $.restorableByUserIds = restorableByUserIds;
             return this;
         }
+
         public Builder restorableByUserIds(String... restorableByUserIds) {
             return restorableByUserIds(List.of(restorableByUserIds));
-        }        public GetSnapshotIdsArgs build() {
-            return new GetSnapshotIdsArgs(filters, owners, restorableByUserIds);
+        }
+
+        public GetSnapshotIdsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleActionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="storageClass")
-      private final @Nullable Output<String> storageClass;
+    private @Nullable Output<String> storageClass;
 
-    public Output<String> storageClass() {
-        return this.storageClass == null ? Codegen.empty() : this.storageClass;
+    public Optional<Output<String>> storageClass() {
+        return Optional.ofNullable(this.storageClass);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class BucketLifecycleRuleActionGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public BucketLifecycleRuleActionGetArgs(
-        @Nullable Output<String> storageClass,
-        Output<String> type) {
-        this.storageClass = storageClass;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BucketLifecycleRuleActionGetArgs() {}
 
-    private BucketLifecycleRuleActionGetArgs() {
-        this.storageClass = Codegen.empty();
-        this.type = Codegen.empty();
+    private BucketLifecycleRuleActionGetArgs(BucketLifecycleRuleActionGetArgs $) {
+        this.storageClass = $.storageClass;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> storageClass;
-        private Output<String> type;
+        private BucketLifecycleRuleActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleActionGetArgs();
         }
 
         public Builder(BucketLifecycleRuleActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.storageClass = defaults.storageClass;
-    	      this.type = defaults.type;
+            $ = new BucketLifecycleRuleActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder storageClass(@Nullable Output<String> storageClass) {
-            this.storageClass = storageClass;
+            $.storageClass = storageClass;
             return this;
         }
-        public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Codegen.ofNullable(storageClass);
-            return this;
+
+        public Builder storageClass(String storageClass) {
+            return storageClass(Output.of(storageClass));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public BucketLifecycleRuleActionGetArgs build() {
-            return new BucketLifecycleRuleActionGetArgs(storageClass, type);
+            return type(Output.of(type));
+        }
+
+        public BucketLifecycleRuleActionGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

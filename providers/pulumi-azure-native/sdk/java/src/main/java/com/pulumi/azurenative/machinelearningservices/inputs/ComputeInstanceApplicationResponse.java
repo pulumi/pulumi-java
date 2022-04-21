@@ -23,10 +23,10 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ComputeInstanceApplicationResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="endpointUri")
-      private final @Nullable String endpointUri;
+    private @Nullable String endpointUri;
 
     public Optional<String> endpointUri() {
-        return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
+        return Optional.ofNullable(this.endpointUri);
     }
 
-    public ComputeInstanceApplicationResponse(
-        @Nullable String displayName,
-        @Nullable String endpointUri) {
-        this.displayName = displayName;
-        this.endpointUri = endpointUri;
-    }
+    private ComputeInstanceApplicationResponse() {}
 
-    private ComputeInstanceApplicationResponse() {
-        this.displayName = null;
-        this.endpointUri = null;
+    private ComputeInstanceApplicationResponse(ComputeInstanceApplicationResponse $) {
+        this.displayName = $.displayName;
+        this.endpointUri = $.endpointUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeInstanceApplicationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String displayName;
-        private @Nullable String endpointUri;
+        private ComputeInstanceApplicationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeInstanceApplicationResponse();
         }
 
         public Builder(ComputeInstanceApplicationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.endpointUri = defaults.endpointUri;
+            $ = new ComputeInstanceApplicationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = endpointUri;
+            $.endpointUri = endpointUri;
             return this;
-        }        public ComputeInstanceApplicationResponse build() {
-            return new ComputeInstanceApplicationResponse(displayName, endpointUri);
+        }
+
+        public ComputeInstanceApplicationResponse build() {
+            return $;
         }
     }
+
 }

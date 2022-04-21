@@ -24,10 +24,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="addressType")
-      private final @Nullable String addressType;
+    private @Nullable String addressType;
 
     public Optional<String> addressType() {
-        return this.addressType == null ? Optional.empty() : Optional.ofNullable(this.addressType);
+        return Optional.ofNullable(this.addressType);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="city")
-      private final @Nullable String city;
+    private @Nullable String city;
 
     public Optional<String> city() {
-        return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
+        return Optional.ofNullable(this.city);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="companyName")
-      private final @Nullable String companyName;
+    private @Nullable String companyName;
 
     public Optional<String> companyName() {
-        return this.companyName == null ? Optional.empty() : Optional.ofNullable(this.companyName);
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="country", required=true)
-      private final String country;
+    private String country;
 
     public String country() {
         return this.country;
@@ -68,10 +68,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable String postalCode;
+    private @Nullable String postalCode;
 
     public Optional<String> postalCode() {
-        return this.postalCode == null ? Optional.empty() : Optional.ofNullable(this.postalCode);
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="stateOrProvince")
-      private final @Nullable String stateOrProvince;
+    private @Nullable String stateOrProvince;
 
     public Optional<String> stateOrProvince() {
-        return this.stateOrProvince == null ? Optional.empty() : Optional.ofNullable(this.stateOrProvince);
+        return Optional.ofNullable(this.stateOrProvince);
     }
 
     /**
@@ -90,7 +90,7 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="streetAddress1", required=true)
-      private final String streetAddress1;
+    private String streetAddress1;
 
     public String streetAddress1() {
         return this.streetAddress1;
@@ -101,10 +101,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="streetAddress2")
-      private final @Nullable String streetAddress2;
+    private @Nullable String streetAddress2;
 
     public Optional<String> streetAddress2() {
-        return this.streetAddress2 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress2);
+        return Optional.ofNullable(this.streetAddress2);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="streetAddress3")
-      private final @Nullable String streetAddress3;
+    private @Nullable String streetAddress3;
 
     public Optional<String> streetAddress3() {
-        return this.streetAddress3 == null ? Optional.empty() : Optional.ofNullable(this.streetAddress3);
+        return Optional.ofNullable(this.streetAddress3);
     }
 
     /**
@@ -123,127 +123,101 @@ public final class ShippingAddressResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="zipExtendedCode")
-      private final @Nullable String zipExtendedCode;
+    private @Nullable String zipExtendedCode;
 
     public Optional<String> zipExtendedCode() {
-        return this.zipExtendedCode == null ? Optional.empty() : Optional.ofNullable(this.zipExtendedCode);
+        return Optional.ofNullable(this.zipExtendedCode);
     }
 
-    public ShippingAddressResponse(
-        @Nullable String addressType,
-        @Nullable String city,
-        @Nullable String companyName,
-        String country,
-        @Nullable String postalCode,
-        @Nullable String stateOrProvince,
-        String streetAddress1,
-        @Nullable String streetAddress2,
-        @Nullable String streetAddress3,
-        @Nullable String zipExtendedCode) {
-        this.addressType = Codegen.stringProp("addressType").arg(addressType).def("None").getNullable();
-        this.city = city;
-        this.companyName = companyName;
-        this.country = Objects.requireNonNull(country, "expected parameter 'country' to be non-null");
-        this.postalCode = postalCode;
-        this.stateOrProvince = stateOrProvince;
-        this.streetAddress1 = Objects.requireNonNull(streetAddress1, "expected parameter 'streetAddress1' to be non-null");
-        this.streetAddress2 = streetAddress2;
-        this.streetAddress3 = streetAddress3;
-        this.zipExtendedCode = zipExtendedCode;
-    }
+    private ShippingAddressResponse() {}
 
-    private ShippingAddressResponse() {
-        this.addressType = null;
-        this.city = null;
-        this.companyName = null;
-        this.country = null;
-        this.postalCode = null;
-        this.stateOrProvince = null;
-        this.streetAddress1 = null;
-        this.streetAddress2 = null;
-        this.streetAddress3 = null;
-        this.zipExtendedCode = null;
+    private ShippingAddressResponse(ShippingAddressResponse $) {
+        this.addressType = $.addressType;
+        this.city = $.city;
+        this.companyName = $.companyName;
+        this.country = $.country;
+        this.postalCode = $.postalCode;
+        this.stateOrProvince = $.stateOrProvince;
+        this.streetAddress1 = $.streetAddress1;
+        this.streetAddress2 = $.streetAddress2;
+        this.streetAddress3 = $.streetAddress3;
+        this.zipExtendedCode = $.zipExtendedCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShippingAddressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String addressType;
-        private @Nullable String city;
-        private @Nullable String companyName;
-        private String country;
-        private @Nullable String postalCode;
-        private @Nullable String stateOrProvince;
-        private String streetAddress1;
-        private @Nullable String streetAddress2;
-        private @Nullable String streetAddress3;
-        private @Nullable String zipExtendedCode;
+        private ShippingAddressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShippingAddressResponse();
         }
 
         public Builder(ShippingAddressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressType = defaults.addressType;
-    	      this.city = defaults.city;
-    	      this.companyName = defaults.companyName;
-    	      this.country = defaults.country;
-    	      this.postalCode = defaults.postalCode;
-    	      this.stateOrProvince = defaults.stateOrProvince;
-    	      this.streetAddress1 = defaults.streetAddress1;
-    	      this.streetAddress2 = defaults.streetAddress2;
-    	      this.streetAddress3 = defaults.streetAddress3;
-    	      this.zipExtendedCode = defaults.zipExtendedCode;
+            $ = new ShippingAddressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressType(@Nullable String addressType) {
-            this.addressType = addressType;
+            $.addressType = addressType;
             return this;
         }
+
         public Builder city(@Nullable String city) {
-            this.city = city;
+            $.city = city;
             return this;
         }
+
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = companyName;
+            $.companyName = companyName;
             return this;
         }
+
         public Builder country(String country) {
-            this.country = Objects.requireNonNull(country);
+            $.country = country;
             return this;
         }
+
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
+
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = stateOrProvince;
+            $.stateOrProvince = stateOrProvince;
             return this;
         }
+
         public Builder streetAddress1(String streetAddress1) {
-            this.streetAddress1 = Objects.requireNonNull(streetAddress1);
+            $.streetAddress1 = streetAddress1;
             return this;
         }
+
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = streetAddress2;
+            $.streetAddress2 = streetAddress2;
             return this;
         }
+
         public Builder streetAddress3(@Nullable String streetAddress3) {
-            this.streetAddress3 = streetAddress3;
+            $.streetAddress3 = streetAddress3;
             return this;
         }
+
         public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
-            this.zipExtendedCode = zipExtendedCode;
+            $.zipExtendedCode = zipExtendedCode;
             return this;
-        }        public ShippingAddressResponse build() {
-            return new ShippingAddressResponse(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);
+        }
+
+        public ShippingAddressResponse build() {
+            $.addressType = Codegen.stringProp("addressType").arg($.addressType).def("None").getNullable();
+            $.country = Objects.requireNonNull($.country, "expected parameter 'country' to be non-null");
+            $.streetAddress1 = Objects.requireNonNull($.streetAddress1, "expected parameter 'streetAddress1' to be non-null");
+            return $;
         }
     }
+
 }

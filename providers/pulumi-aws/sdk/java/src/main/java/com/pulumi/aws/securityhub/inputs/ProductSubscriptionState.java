@@ -5,9 +5,9 @@ package com.pulumi.aws.securityhub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProductSubscriptionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ProductSubscriptionState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="productArn")
-      private final @Nullable Output<String> productArn;
+    private @Nullable Output<String> productArn;
 
-    public Output<String> productArn() {
-        return this.productArn == null ? Codegen.empty() : this.productArn;
+    public Optional<Output<String>> productArn() {
+        return Optional.ofNullable(this.productArn);
     }
 
-    public ProductSubscriptionState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> productArn) {
-        this.arn = arn;
-        this.productArn = productArn;
-    }
+    private ProductSubscriptionState() {}
 
-    private ProductSubscriptionState() {
-        this.arn = Codegen.empty();
-        this.productArn = Codegen.empty();
+    private ProductSubscriptionState(ProductSubscriptionState $) {
+        this.arn = $.arn;
+        this.productArn = $.productArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProductSubscriptionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> productArn;
+        private ProductSubscriptionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProductSubscriptionState();
         }
 
         public Builder(ProductSubscriptionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.productArn = defaults.productArn;
+            $ = new ProductSubscriptionState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder productArn(@Nullable Output<String> productArn) {
-            this.productArn = productArn;
+            $.productArn = productArn;
             return this;
         }
-        public Builder productArn(@Nullable String productArn) {
-            this.productArn = Codegen.ofNullable(productArn);
-            return this;
-        }        public ProductSubscriptionState build() {
-            return new ProductSubscriptionState(arn, productArn);
+
+        public Builder productArn(String productArn) {
+            return productArn(Output.of(productArn));
+        }
+
+        public ProductSubscriptionState build() {
+            return $;
         }
     }
+
 }

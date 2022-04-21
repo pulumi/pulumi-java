@@ -23,7 +23,7 @@ public final class ManagedClusterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -34,7 +34,7 @@ public final class ManagedClusterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="config", required=true)
-      private final ClusterConfigResponse config;
+    private ClusterConfigResponse config;
 
     public ClusterConfigResponse config() {
         return this.config;
@@ -45,64 +45,59 @@ public final class ManagedClusterResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public ManagedClusterResponse(
-        String clusterName,
-        ClusterConfigResponse config,
-        Map<String,String> labels) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private ManagedClusterResponse() {}
 
-    private ManagedClusterResponse() {
-        this.clusterName = null;
-        this.config = null;
-        this.labels = Map.of();
+    private ManagedClusterResponse(ManagedClusterResponse $) {
+        this.clusterName = $.clusterName;
+        this.config = $.config;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private ClusterConfigResponse config;
-        private Map<String,String> labels;
+        private ManagedClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedClusterResponse();
         }
 
         public Builder(ManagedClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.config = defaults.config;
-    	      this.labels = defaults.labels;
+            $ = new ManagedClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder config(ClusterConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public ManagedClusterResponse build() {
-            return new ManagedClusterResponse(clusterName, config, labels);
+        }
+
+        public ManagedClusterResponse build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

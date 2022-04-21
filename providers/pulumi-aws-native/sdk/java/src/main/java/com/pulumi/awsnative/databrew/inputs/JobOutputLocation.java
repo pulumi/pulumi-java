@@ -19,78 +19,71 @@ public final class JobOutputLocation extends com.pulumi.resources.InvokeArgs {
     public static final JobOutputLocation Empty = new JobOutputLocation();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="bucketOwner")
-      private final @Nullable String bucketOwner;
+    private @Nullable String bucketOwner;
 
     public Optional<String> bucketOwner() {
-        return this.bucketOwner == null ? Optional.empty() : Optional.ofNullable(this.bucketOwner);
+        return Optional.ofNullable(this.bucketOwner);
     }
 
     @Import(name="key")
-      private final @Nullable String key;
+    private @Nullable String key;
 
     public Optional<String> key() {
-        return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
+        return Optional.ofNullable(this.key);
     }
 
-    public JobOutputLocation(
-        String bucket,
-        @Nullable String bucketOwner,
-        @Nullable String key) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.bucketOwner = bucketOwner;
-        this.key = key;
-    }
+    private JobOutputLocation() {}
 
-    private JobOutputLocation() {
-        this.bucket = null;
-        this.bucketOwner = null;
-        this.key = null;
+    private JobOutputLocation(JobOutputLocation $) {
+        this.bucket = $.bucket;
+        this.bucketOwner = $.bucketOwner;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobOutputLocation defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String bucketOwner;
-        private @Nullable String key;
+        private JobOutputLocation $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobOutputLocation();
         }
 
         public Builder(JobOutputLocation defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.bucketOwner = defaults.bucketOwner;
-    	      this.key = defaults.key;
+            $ = new JobOutputLocation(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucketOwner(@Nullable String bucketOwner) {
-            this.bucketOwner = bucketOwner;
+            $.bucketOwner = bucketOwner;
             return this;
         }
+
         public Builder key(@Nullable String key) {
-            this.key = key;
+            $.key = key;
             return this;
-        }        public JobOutputLocation build() {
-            return new JobOutputLocation(bucket, bucketOwner, key);
+        }
+
+        public JobOutputLocation build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

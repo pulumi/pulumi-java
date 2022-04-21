@@ -5,9 +5,9 @@ package com.pulumi.gcp.diagflow.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class CxAgentSpeechToTextSettingsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="enableSpeechAdaptation")
-      private final @Nullable Output<Boolean> enableSpeechAdaptation;
+    private @Nullable Output<Boolean> enableSpeechAdaptation;
 
-    public Output<Boolean> enableSpeechAdaptation() {
-        return this.enableSpeechAdaptation == null ? Codegen.empty() : this.enableSpeechAdaptation;
+    public Optional<Output<Boolean>> enableSpeechAdaptation() {
+        return Optional.ofNullable(this.enableSpeechAdaptation);
     }
 
-    public CxAgentSpeechToTextSettingsArgs(@Nullable Output<Boolean> enableSpeechAdaptation) {
-        this.enableSpeechAdaptation = enableSpeechAdaptation;
-    }
+    private CxAgentSpeechToTextSettingsArgs() {}
 
-    private CxAgentSpeechToTextSettingsArgs() {
-        this.enableSpeechAdaptation = Codegen.empty();
+    private CxAgentSpeechToTextSettingsArgs(CxAgentSpeechToTextSettingsArgs $) {
+        this.enableSpeechAdaptation = $.enableSpeechAdaptation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxAgentSpeechToTextSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableSpeechAdaptation;
+        private CxAgentSpeechToTextSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxAgentSpeechToTextSettingsArgs();
         }
 
         public Builder(CxAgentSpeechToTextSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
+            $ = new CxAgentSpeechToTextSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSpeechAdaptation(@Nullable Output<Boolean> enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = enableSpeechAdaptation;
+            $.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }
-        public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
-            this.enableSpeechAdaptation = Codegen.ofNullable(enableSpeechAdaptation);
-            return this;
-        }        public CxAgentSpeechToTextSettingsArgs build() {
-            return new CxAgentSpeechToTextSettingsArgs(enableSpeechAdaptation);
+
+        public Builder enableSpeechAdaptation(Boolean enableSpeechAdaptation) {
+            return enableSpeechAdaptation(Output.of(enableSpeechAdaptation));
+        }
+
+        public CxAgentSpeechToTextSettingsArgs build() {
+            return $;
         }
     }
+
 }

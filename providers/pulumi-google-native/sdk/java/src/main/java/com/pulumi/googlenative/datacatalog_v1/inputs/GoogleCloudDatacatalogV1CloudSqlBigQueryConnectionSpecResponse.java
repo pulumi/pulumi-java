@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -43,64 +43,59 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(
-        String database,
-        String instanceId,
-        String type) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse() {
-        this.database = null;
-        this.instanceId = null;
-        this.type = null;
+    private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse $) {
+        this.database = $.database;
+        this.instanceId = $.instanceId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private String instanceId;
-        private String type;
+        private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.instanceId = defaults.instanceId;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse build() {
-            return new GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(database, instanceId, type);
+        }
+
+        public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.enums.SchedulingInstanceTerminationAction;
 import com.pulumi.googlenative.compute_v1.enums.SchedulingOnHostMaintenance;
 import com.pulumi.googlenative.compute_v1.enums.SchedulingProvisioningModel;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="automaticRestart")
-      private final @Nullable Output<Boolean> automaticRestart;
+    private @Nullable Output<Boolean> automaticRestart;
 
-    public Output<Boolean> automaticRestart() {
-        return this.automaticRestart == null ? Codegen.empty() : this.automaticRestart;
+    public Optional<Output<Boolean>> automaticRestart() {
+        return Optional.ofNullable(this.automaticRestart);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceTerminationAction")
-      private final @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
+    private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
 
-    public Output<SchedulingInstanceTerminationAction> instanceTerminationAction() {
-        return this.instanceTerminationAction == null ? Codegen.empty() : this.instanceTerminationAction;
+    public Optional<Output<SchedulingInstanceTerminationAction>> instanceTerminationAction() {
+        return Optional.ofNullable(this.instanceTerminationAction);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationHint")
-      private final @Nullable Output<String> locationHint;
+    private @Nullable Output<String> locationHint;
 
-    public Output<String> locationHint() {
-        return this.locationHint == null ? Codegen.empty() : this.locationHint;
+    public Optional<Output<String>> locationHint() {
+        return Optional.ofNullable(this.locationHint);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minNodeCpus")
-      private final @Nullable Output<Integer> minNodeCpus;
+    private @Nullable Output<Integer> minNodeCpus;
 
-    public Output<Integer> minNodeCpus() {
-        return this.minNodeCpus == null ? Codegen.empty() : this.minNodeCpus;
+    public Optional<Output<Integer>> minNodeCpus() {
+        return Optional.ofNullable(this.minNodeCpus);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeAffinities")
-      private final @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
+    private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
 
-    public Output<List<SchedulingNodeAffinityArgs>> nodeAffinities() {
-        return this.nodeAffinities == null ? Codegen.empty() : this.nodeAffinities;
+    public Optional<Output<List<SchedulingNodeAffinityArgs>>> nodeAffinities() {
+        return Optional.ofNullable(this.nodeAffinities);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onHostMaintenance")
-      private final @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
+    private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
 
-    public Output<SchedulingOnHostMaintenance> onHostMaintenance() {
-        return this.onHostMaintenance == null ? Codegen.empty() : this.onHostMaintenance;
+    public Optional<Output<SchedulingOnHostMaintenance>> onHostMaintenance() {
+        return Optional.ofNullable(this.onHostMaintenance);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     /**
@@ -108,144 +108,122 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioningModel")
-      private final @Nullable Output<SchedulingProvisioningModel> provisioningModel;
+    private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
 
-    public Output<SchedulingProvisioningModel> provisioningModel() {
-        return this.provisioningModel == null ? Codegen.empty() : this.provisioningModel;
+    public Optional<Output<SchedulingProvisioningModel>> provisioningModel() {
+        return Optional.ofNullable(this.provisioningModel);
     }
 
-    public SchedulingArgs(
-        @Nullable Output<Boolean> automaticRestart,
-        @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction,
-        @Nullable Output<String> locationHint,
-        @Nullable Output<Integer> minNodeCpus,
-        @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities,
-        @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance,
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<SchedulingProvisioningModel> provisioningModel) {
-        this.automaticRestart = automaticRestart;
-        this.instanceTerminationAction = instanceTerminationAction;
-        this.locationHint = locationHint;
-        this.minNodeCpus = minNodeCpus;
-        this.nodeAffinities = nodeAffinities;
-        this.onHostMaintenance = onHostMaintenance;
-        this.preemptible = preemptible;
-        this.provisioningModel = provisioningModel;
-    }
+    private SchedulingArgs() {}
 
-    private SchedulingArgs() {
-        this.automaticRestart = Codegen.empty();
-        this.instanceTerminationAction = Codegen.empty();
-        this.locationHint = Codegen.empty();
-        this.minNodeCpus = Codegen.empty();
-        this.nodeAffinities = Codegen.empty();
-        this.onHostMaintenance = Codegen.empty();
-        this.preemptible = Codegen.empty();
-        this.provisioningModel = Codegen.empty();
+    private SchedulingArgs(SchedulingArgs $) {
+        this.automaticRestart = $.automaticRestart;
+        this.instanceTerminationAction = $.instanceTerminationAction;
+        this.locationHint = $.locationHint;
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.preemptible = $.preemptible;
+        this.provisioningModel = $.provisioningModel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automaticRestart;
-        private @Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction;
-        private @Nullable Output<String> locationHint;
-        private @Nullable Output<Integer> minNodeCpus;
-        private @Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities;
-        private @Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance;
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<SchedulingProvisioningModel> provisioningModel;
+        private SchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingArgs();
         }
 
         public Builder(SchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticRestart = defaults.automaticRestart;
-    	      this.instanceTerminationAction = defaults.instanceTerminationAction;
-    	      this.locationHint = defaults.locationHint;
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.preemptible = defaults.preemptible;
-    	      this.provisioningModel = defaults.provisioningModel;
+            $ = new SchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticRestart(@Nullable Output<Boolean> automaticRestart) {
-            this.automaticRestart = automaticRestart;
+            $.automaticRestart = automaticRestart;
             return this;
         }
-        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
-            this.automaticRestart = Codegen.ofNullable(automaticRestart);
-            return this;
+
+        public Builder automaticRestart(Boolean automaticRestart) {
+            return automaticRestart(Output.of(automaticRestart));
         }
+
         public Builder instanceTerminationAction(@Nullable Output<SchedulingInstanceTerminationAction> instanceTerminationAction) {
-            this.instanceTerminationAction = instanceTerminationAction;
+            $.instanceTerminationAction = instanceTerminationAction;
             return this;
         }
-        public Builder instanceTerminationAction(@Nullable SchedulingInstanceTerminationAction instanceTerminationAction) {
-            this.instanceTerminationAction = Codegen.ofNullable(instanceTerminationAction);
-            return this;
+
+        public Builder instanceTerminationAction(SchedulingInstanceTerminationAction instanceTerminationAction) {
+            return instanceTerminationAction(Output.of(instanceTerminationAction));
         }
+
         public Builder locationHint(@Nullable Output<String> locationHint) {
-            this.locationHint = locationHint;
+            $.locationHint = locationHint;
             return this;
         }
-        public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Codegen.ofNullable(locationHint);
-            return this;
+
+        public Builder locationHint(String locationHint) {
+            return locationHint(Output.of(locationHint));
         }
+
         public Builder minNodeCpus(@Nullable Output<Integer> minNodeCpus) {
-            this.minNodeCpus = minNodeCpus;
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
-        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
-            this.minNodeCpus = Codegen.ofNullable(minNodeCpus);
-            return this;
+
+        public Builder minNodeCpus(Integer minNodeCpus) {
+            return minNodeCpus(Output.of(minNodeCpus));
         }
+
         public Builder nodeAffinities(@Nullable Output<List<SchedulingNodeAffinityArgs>> nodeAffinities) {
-            this.nodeAffinities = nodeAffinities;
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
-        public Builder nodeAffinities(@Nullable List<SchedulingNodeAffinityArgs> nodeAffinities) {
-            this.nodeAffinities = Codegen.ofNullable(nodeAffinities);
-            return this;
+
+        public Builder nodeAffinities(List<SchedulingNodeAffinityArgs> nodeAffinities) {
+            return nodeAffinities(Output.of(nodeAffinities));
         }
+
         public Builder nodeAffinities(SchedulingNodeAffinityArgs... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(@Nullable Output<SchedulingOnHostMaintenance> onHostMaintenance) {
-            this.onHostMaintenance = onHostMaintenance;
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
-        public Builder onHostMaintenance(@Nullable SchedulingOnHostMaintenance onHostMaintenance) {
-            this.onHostMaintenance = Codegen.ofNullable(onHostMaintenance);
-            return this;
+
+        public Builder onHostMaintenance(SchedulingOnHostMaintenance onHostMaintenance) {
+            return onHostMaintenance(Output.of(onHostMaintenance));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder provisioningModel(@Nullable Output<SchedulingProvisioningModel> provisioningModel) {
-            this.provisioningModel = provisioningModel;
+            $.provisioningModel = provisioningModel;
             return this;
         }
-        public Builder provisioningModel(@Nullable SchedulingProvisioningModel provisioningModel) {
-            this.provisioningModel = Codegen.ofNullable(provisioningModel);
-            return this;
-        }        public SchedulingArgs build() {
-            return new SchedulingArgs(automaticRestart, instanceTerminationAction, locationHint, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible, provisioningModel);
+
+        public Builder provisioningModel(SchedulingProvisioningModel provisioningModel) {
+            return provisioningModel(Output.of(provisioningModel));
+        }
+
+        public SchedulingArgs build() {
+            return $;
         }
     }
+
 }

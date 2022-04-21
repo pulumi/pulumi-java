@@ -24,10 +24,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * 
      */
     @Import(name="blobContainerUri")
-      private final @Nullable String blobContainerUri;
+    private @Nullable String blobContainerUri;
 
     public Optional<String> blobContainerUri() {
-        return this.blobContainerUri == null ? Optional.empty() : Optional.ofNullable(this.blobContainerUri);
+        return Optional.ofNullable(this.blobContainerUri);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse extends
      * 
      */
     @Import(name="sasToken")
-      private final @Nullable SecureStringResponse sasToken;
+    private @Nullable SecureStringResponse sasToken;
 
     public Optional<SecureStringResponse> sasToken() {
-        return this.sasToken == null ? Optional.empty() : Optional.ofNullable(this.sasToken);
+        return Optional.ofNullable(this.sasToken);
     }
 
-    public IntegrationRuntimeCustomSetupScriptPropertiesResponse(
-        @Nullable String blobContainerUri,
-        @Nullable SecureStringResponse sasToken) {
-        this.blobContainerUri = blobContainerUri;
-        this.sasToken = sasToken;
-    }
+    private IntegrationRuntimeCustomSetupScriptPropertiesResponse() {}
 
-    private IntegrationRuntimeCustomSetupScriptPropertiesResponse() {
-        this.blobContainerUri = null;
-        this.sasToken = null;
+    private IntegrationRuntimeCustomSetupScriptPropertiesResponse(IntegrationRuntimeCustomSetupScriptPropertiesResponse $) {
+        this.blobContainerUri = $.blobContainerUri;
+        this.sasToken = $.sasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IntegrationRuntimeCustomSetupScriptPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String blobContainerUri;
-        private @Nullable SecureStringResponse sasToken;
+        private IntegrationRuntimeCustomSetupScriptPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IntegrationRuntimeCustomSetupScriptPropertiesResponse();
         }
 
         public Builder(IntegrationRuntimeCustomSetupScriptPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.blobContainerUri = defaults.blobContainerUri;
-    	      this.sasToken = defaults.sasToken;
+            $ = new IntegrationRuntimeCustomSetupScriptPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder blobContainerUri(@Nullable String blobContainerUri) {
-            this.blobContainerUri = blobContainerUri;
+            $.blobContainerUri = blobContainerUri;
             return this;
         }
+
         public Builder sasToken(@Nullable SecureStringResponse sasToken) {
-            this.sasToken = sasToken;
+            $.sasToken = sasToken;
             return this;
-        }        public IntegrationRuntimeCustomSetupScriptPropertiesResponse build() {
-            return new IntegrationRuntimeCustomSetupScriptPropertiesResponse(blobContainerUri, sasToken);
+        }
+
+        public IntegrationRuntimeCustomSetupScriptPropertiesResponse build() {
+            return $;
         }
     }
+
 }

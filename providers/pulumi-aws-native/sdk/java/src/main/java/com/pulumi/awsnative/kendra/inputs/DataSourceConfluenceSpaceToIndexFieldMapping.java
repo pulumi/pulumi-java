@@ -16,78 +16,72 @@ public final class DataSourceConfluenceSpaceToIndexFieldMapping extends com.pulu
     public static final DataSourceConfluenceSpaceToIndexFieldMapping Empty = new DataSourceConfluenceSpaceToIndexFieldMapping();
 
     @Import(name="dataSourceFieldName", required=true)
-      private final DataSourceConfluenceSpaceFieldName dataSourceFieldName;
+    private DataSourceConfluenceSpaceFieldName dataSourceFieldName;
 
     public DataSourceConfluenceSpaceFieldName dataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @Import(name="dateFieldFormat")
-      private final @Nullable String dateFieldFormat;
+    private @Nullable String dateFieldFormat;
 
     public Optional<String> dateFieldFormat() {
-        return this.dateFieldFormat == null ? Optional.empty() : Optional.ofNullable(this.dateFieldFormat);
+        return Optional.ofNullable(this.dateFieldFormat);
     }
 
     @Import(name="indexFieldName", required=true)
-      private final String indexFieldName;
+    private String indexFieldName;
 
     public String indexFieldName() {
         return this.indexFieldName;
     }
 
-    public DataSourceConfluenceSpaceToIndexFieldMapping(
-        DataSourceConfluenceSpaceFieldName dataSourceFieldName,
-        @Nullable String dateFieldFormat,
-        String indexFieldName) {
-        this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
-        this.dateFieldFormat = dateFieldFormat;
-        this.indexFieldName = Objects.requireNonNull(indexFieldName, "expected parameter 'indexFieldName' to be non-null");
-    }
+    private DataSourceConfluenceSpaceToIndexFieldMapping() {}
 
-    private DataSourceConfluenceSpaceToIndexFieldMapping() {
-        this.dataSourceFieldName = null;
-        this.dateFieldFormat = null;
-        this.indexFieldName = null;
+    private DataSourceConfluenceSpaceToIndexFieldMapping(DataSourceConfluenceSpaceToIndexFieldMapping $) {
+        this.dataSourceFieldName = $.dataSourceFieldName;
+        this.dateFieldFormat = $.dateFieldFormat;
+        this.indexFieldName = $.indexFieldName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceConfluenceSpaceToIndexFieldMapping defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DataSourceConfluenceSpaceFieldName dataSourceFieldName;
-        private @Nullable String dateFieldFormat;
-        private String indexFieldName;
+        private DataSourceConfluenceSpaceToIndexFieldMapping $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceConfluenceSpaceToIndexFieldMapping();
         }
 
         public Builder(DataSourceConfluenceSpaceToIndexFieldMapping defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceFieldName = defaults.dataSourceFieldName;
-    	      this.dateFieldFormat = defaults.dateFieldFormat;
-    	      this.indexFieldName = defaults.indexFieldName;
+            $ = new DataSourceConfluenceSpaceToIndexFieldMapping(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceFieldName(DataSourceConfluenceSpaceFieldName dataSourceFieldName) {
-            this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
+            $.dataSourceFieldName = dataSourceFieldName;
             return this;
         }
+
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = dateFieldFormat;
+            $.dateFieldFormat = dateFieldFormat;
             return this;
         }
+
         public Builder indexFieldName(String indexFieldName) {
-            this.indexFieldName = Objects.requireNonNull(indexFieldName);
+            $.indexFieldName = indexFieldName;
             return this;
-        }        public DataSourceConfluenceSpaceToIndexFieldMapping build() {
-            return new DataSourceConfluenceSpaceToIndexFieldMapping(dataSourceFieldName, dateFieldFormat, indexFieldName);
+        }
+
+        public DataSourceConfluenceSpaceToIndexFieldMapping build() {
+            $.dataSourceFieldName = Objects.requireNonNull($.dataSourceFieldName, "expected parameter 'dataSourceFieldName' to be non-null");
+            $.indexFieldName = Objects.requireNonNull($.indexFieldName, "expected parameter 'indexFieldName' to be non-null");
+            return $;
         }
     }
+
 }

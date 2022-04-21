@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudrun.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -36,10 +36,10 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -50,76 +50,70 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends com.pulumi.re
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public ServiceTemplateSpecVolumeSecretItemArgs(
-        Output<String> key,
-        @Nullable Output<Integer> mode,
-        Output<String> path) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.mode = mode;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private ServiceTemplateSpecVolumeSecretItemArgs() {}
 
-    private ServiceTemplateSpecVolumeSecretItemArgs() {
-        this.key = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.path = Codegen.empty();
+    private ServiceTemplateSpecVolumeSecretItemArgs(ServiceTemplateSpecVolumeSecretItemArgs $) {
+        this.key = $.key;
+        this.mode = $.mode;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTemplateSpecVolumeSecretItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private @Nullable Output<Integer> mode;
-        private Output<String> path;
+        private ServiceTemplateSpecVolumeSecretItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTemplateSpecVolumeSecretItemArgs();
         }
 
         public Builder(ServiceTemplateSpecVolumeSecretItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
+            $ = new ServiceTemplateSpecVolumeSecretItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public ServiceTemplateSpecVolumeSecretItemArgs build() {
-            return new ServiceTemplateSpecVolumeSecretItemArgs(key, mode, path);
+            return path(Output.of(path));
+        }
+
+        public ServiceTemplateSpecVolumeSecretItemArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

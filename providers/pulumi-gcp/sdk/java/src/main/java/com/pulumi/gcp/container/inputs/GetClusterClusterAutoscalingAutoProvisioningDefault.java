@@ -14,97 +14,91 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault extends c
     public static final GetClusterClusterAutoscalingAutoProvisioningDefault Empty = new GetClusterClusterAutoscalingAutoProvisioningDefault();
 
     @Import(name="imageType", required=true)
-      private final String imageType;
+    private String imageType;
 
     public String imageType() {
         return this.imageType;
     }
 
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
     }
 
     @Import(name="oauthScopes", required=true)
-      private final List<String> oauthScopes;
+    private List<String> oauthScopes;
 
     public List<String> oauthScopes() {
         return this.oauthScopes;
     }
 
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
     }
 
-    public GetClusterClusterAutoscalingAutoProvisioningDefault(
-        String imageType,
-        String minCpuPlatform,
-        List<String> oauthScopes,
-        String serviceAccount) {
-        this.imageType = Objects.requireNonNull(imageType, "expected parameter 'imageType' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.oauthScopes = Objects.requireNonNull(oauthScopes, "expected parameter 'oauthScopes' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-    }
+    private GetClusterClusterAutoscalingAutoProvisioningDefault() {}
 
-    private GetClusterClusterAutoscalingAutoProvisioningDefault() {
-        this.imageType = null;
-        this.minCpuPlatform = null;
-        this.oauthScopes = List.of();
-        this.serviceAccount = null;
+    private GetClusterClusterAutoscalingAutoProvisioningDefault(GetClusterClusterAutoscalingAutoProvisioningDefault $) {
+        this.imageType = $.imageType;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterClusterAutoscalingAutoProvisioningDefault defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String imageType;
-        private String minCpuPlatform;
-        private List<String> oauthScopes;
-        private String serviceAccount;
+        private GetClusterClusterAutoscalingAutoProvisioningDefault $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterClusterAutoscalingAutoProvisioningDefault();
         }
 
         public Builder(GetClusterClusterAutoscalingAutoProvisioningDefault defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageType = defaults.imageType;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
+            $ = new GetClusterClusterAutoscalingAutoProvisioningDefault(Objects.requireNonNull(defaults));
         }
 
         public Builder imageType(String imageType) {
-            this.imageType = Objects.requireNonNull(imageType);
+            $.imageType = imageType;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder oauthScopes(List<String> oauthScopes) {
-            this.oauthScopes = Objects.requireNonNull(oauthScopes);
+            $.oauthScopes = oauthScopes;
             return this;
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
-        }        public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
-            return new GetClusterClusterAutoscalingAutoProvisioningDefault(imageType, minCpuPlatform, oauthScopes, serviceAccount);
+        }
+
+        public GetClusterClusterAutoscalingAutoProvisioningDefault build() {
+            $.imageType = Objects.requireNonNull($.imageType, "expected parameter 'imageType' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.oauthScopes = Objects.requireNonNull($.oauthScopes, "expected parameter 'oauthScopes' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            return $;
         }
     }
+
 }

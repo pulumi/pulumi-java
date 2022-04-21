@@ -5,10 +5,10 @@ package com.pulumi.gcp.serviceAccount;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.serviceAccount.inputs.IAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,14 +22,14 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<IAMMemberConditionArgs> condition;
+    private @Nullable Output<IAMMemberConditionArgs> condition;
 
-    public Output<IAMMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<IAMMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -42,7 +42,7 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
@@ -53,89 +53,81 @@ public final class IAMMemberArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountId", required=true)
-      private final Output<String> serviceAccountId;
+    private Output<String> serviceAccountId;
 
     public Output<String> serviceAccountId() {
         return this.serviceAccountId;
     }
 
-    public IAMMemberArgs(
-        @Nullable Output<IAMMemberConditionArgs> condition,
-        Output<String> member,
-        Output<String> role,
-        Output<String> serviceAccountId) {
-        this.condition = condition;
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.serviceAccountId = Objects.requireNonNull(serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
-    }
+    private IAMMemberArgs() {}
 
-    private IAMMemberArgs() {
-        this.condition = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
-        this.serviceAccountId = Codegen.empty();
+    private IAMMemberArgs(IAMMemberArgs $) {
+        this.condition = $.condition;
+        this.member = $.member;
+        this.role = $.role;
+        this.serviceAccountId = $.serviceAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IAMMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IAMMemberConditionArgs> condition;
-        private Output<String> member;
-        private Output<String> role;
-        private Output<String> serviceAccountId;
+        private IAMMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IAMMemberArgs();
         }
 
         public Builder(IAMMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
-    	      this.serviceAccountId = defaults.serviceAccountId;
+            $ = new IAMMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<IAMMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable IAMMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(IAMMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
+            return role(Output.of(role));
         }
+
         public Builder serviceAccountId(Output<String> serviceAccountId) {
-            this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
+            $.serviceAccountId = serviceAccountId;
             return this;
         }
+
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Output.of(Objects.requireNonNull(serviceAccountId));
-            return this;
-        }        public IAMMemberArgs build() {
-            return new IAMMemberArgs(condition, member, role, serviceAccountId);
+            return serviceAccountId(Output.of(serviceAccountId));
+        }
+
+        public IAMMemberArgs build() {
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.serviceAccountId = Objects.requireNonNull($.serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
+            return $;
         }
     }
+
 }

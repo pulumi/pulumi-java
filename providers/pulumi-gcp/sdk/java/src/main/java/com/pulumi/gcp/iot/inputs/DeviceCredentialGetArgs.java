@@ -5,10 +5,10 @@ package com.pulumi.gcp.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.iot.inputs.DeviceCredentialPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class DeviceCredentialGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="expirationTime")
-      private final @Nullable Output<String> expirationTime;
+    private @Nullable Output<String> expirationTime;
 
-    public Output<String> expirationTime() {
-        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
+    public Optional<Output<String>> expirationTime() {
+        return Optional.ofNullable(this.expirationTime);
     }
 
     /**
@@ -33,63 +33,59 @@ public final class DeviceCredentialGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="publicKey", required=true)
-      private final Output<DeviceCredentialPublicKeyGetArgs> publicKey;
+    private Output<DeviceCredentialPublicKeyGetArgs> publicKey;
 
     public Output<DeviceCredentialPublicKeyGetArgs> publicKey() {
         return this.publicKey;
     }
 
-    public DeviceCredentialGetArgs(
-        @Nullable Output<String> expirationTime,
-        Output<DeviceCredentialPublicKeyGetArgs> publicKey) {
-        this.expirationTime = expirationTime;
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-    }
+    private DeviceCredentialGetArgs() {}
 
-    private DeviceCredentialGetArgs() {
-        this.expirationTime = Codegen.empty();
-        this.publicKey = Codegen.empty();
+    private DeviceCredentialGetArgs(DeviceCredentialGetArgs $) {
+        this.expirationTime = $.expirationTime;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceCredentialGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expirationTime;
-        private Output<DeviceCredentialPublicKeyGetArgs> publicKey;
+        private DeviceCredentialGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceCredentialGetArgs();
         }
 
         public Builder(DeviceCredentialGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.publicKey = defaults.publicKey;
+            $ = new DeviceCredentialGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
-            this.expirationTime = expirationTime;
+            $.expirationTime = expirationTime;
             return this;
         }
-        public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Codegen.ofNullable(expirationTime);
-            return this;
+
+        public Builder expirationTime(String expirationTime) {
+            return expirationTime(Output.of(expirationTime));
         }
+
         public Builder publicKey(Output<DeviceCredentialPublicKeyGetArgs> publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder publicKey(DeviceCredentialPublicKeyGetArgs publicKey) {
-            this.publicKey = Output.of(Objects.requireNonNull(publicKey));
-            return this;
-        }        public DeviceCredentialGetArgs build() {
-            return new DeviceCredentialGetArgs(expirationTime, publicKey);
+            return publicKey(Output.of(publicKey));
+        }
+
+        public DeviceCredentialGetArgs build() {
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            return $;
         }
     }
+
 }

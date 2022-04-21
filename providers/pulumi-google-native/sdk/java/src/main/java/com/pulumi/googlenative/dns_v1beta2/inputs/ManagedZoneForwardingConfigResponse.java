@@ -15,7 +15,7 @@ public final class ManagedZoneForwardingConfigResponse extends com.pulumi.resour
     public static final ManagedZoneForwardingConfigResponse Empty = new ManagedZoneForwardingConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -26,58 +26,56 @@ public final class ManagedZoneForwardingConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="targetNameServers", required=true)
-      private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
+    private List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
     public List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers() {
         return this.targetNameServers;
     }
 
-    public ManagedZoneForwardingConfigResponse(
-        String kind,
-        List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.targetNameServers = Objects.requireNonNull(targetNameServers, "expected parameter 'targetNameServers' to be non-null");
-    }
+    private ManagedZoneForwardingConfigResponse() {}
 
-    private ManagedZoneForwardingConfigResponse() {
-        this.kind = null;
-        this.targetNameServers = List.of();
+    private ManagedZoneForwardingConfigResponse(ManagedZoneForwardingConfigResponse $) {
+        this.kind = $.kind;
+        this.targetNameServers = $.targetNameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneForwardingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
+        private ManagedZoneForwardingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneForwardingConfigResponse();
         }
 
         public Builder(ManagedZoneForwardingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.targetNameServers = defaults.targetNameServers;
+            $ = new ManagedZoneForwardingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
-            this.targetNameServers = Objects.requireNonNull(targetNameServers);
+            $.targetNameServers = targetNameServers;
             return this;
         }
+
         public Builder targetNameServers(ManagedZoneForwardingConfigNameServerTargetResponse... targetNameServers) {
             return targetNameServers(List.of(targetNameServers));
-        }        public ManagedZoneForwardingConfigResponse build() {
-            return new ManagedZoneForwardingConfigResponse(kind, targetNameServers);
+        }
+
+        public ManagedZoneForwardingConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.targetNameServers = Objects.requireNonNull($.targetNameServers, "expected parameter 'targetNameServers' to be non-null");
+            return $;
         }
     }
+
 }

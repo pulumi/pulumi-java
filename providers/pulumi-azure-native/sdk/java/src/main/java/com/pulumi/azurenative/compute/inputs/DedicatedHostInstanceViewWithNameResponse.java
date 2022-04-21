@@ -26,7 +26,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
      * 
      */
     @Import(name="assetId", required=true)
-      private final String assetId;
+    private String assetId;
 
     public String assetId() {
         return this.assetId;
@@ -37,10 +37,10 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
      * 
      */
     @Import(name="availableCapacity")
-      private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
+    private @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
     public Optional<DedicatedHostAvailableCapacityResponse> availableCapacity() {
-        return this.availableCapacity == null ? Optional.empty() : Optional.ofNullable(this.availableCapacity);
+        return Optional.ofNullable(this.availableCapacity);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -59,76 +59,68 @@ public final class DedicatedHostInstanceViewWithNameResponse extends com.pulumi.
      * 
      */
     @Import(name="statuses")
-      private final @Nullable List<InstanceViewStatusResponse> statuses;
+    private @Nullable List<InstanceViewStatusResponse> statuses;
 
-    public List<InstanceViewStatusResponse> statuses() {
-        return this.statuses == null ? List.of() : this.statuses;
+    public Optional<List<InstanceViewStatusResponse>> statuses() {
+        return Optional.ofNullable(this.statuses);
     }
 
-    public DedicatedHostInstanceViewWithNameResponse(
-        String assetId,
-        @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
-        String name,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
-        this.assetId = Objects.requireNonNull(assetId, "expected parameter 'assetId' to be non-null");
-        this.availableCapacity = availableCapacity;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.statuses = statuses;
-    }
+    private DedicatedHostInstanceViewWithNameResponse() {}
 
-    private DedicatedHostInstanceViewWithNameResponse() {
-        this.assetId = null;
-        this.availableCapacity = null;
-        this.name = null;
-        this.statuses = List.of();
+    private DedicatedHostInstanceViewWithNameResponse(DedicatedHostInstanceViewWithNameResponse $) {
+        this.assetId = $.assetId;
+        this.availableCapacity = $.availableCapacity;
+        this.name = $.name;
+        this.statuses = $.statuses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DedicatedHostInstanceViewWithNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String assetId;
-        private @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
-        private String name;
-        private @Nullable List<InstanceViewStatusResponse> statuses;
+        private DedicatedHostInstanceViewWithNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DedicatedHostInstanceViewWithNameResponse();
         }
 
         public Builder(DedicatedHostInstanceViewWithNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetId = defaults.assetId;
-    	      this.availableCapacity = defaults.availableCapacity;
-    	      this.name = defaults.name;
-    	      this.statuses = defaults.statuses;
+            $ = new DedicatedHostInstanceViewWithNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder assetId(String assetId) {
-            this.assetId = Objects.requireNonNull(assetId);
+            $.assetId = assetId;
             return this;
         }
+
         public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
-            this.availableCapacity = availableCapacity;
+            $.availableCapacity = availableCapacity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
-            this.statuses = statuses;
+            $.statuses = statuses;
             return this;
         }
+
         public Builder statuses(InstanceViewStatusResponse... statuses) {
             return statuses(List.of(statuses));
-        }        public DedicatedHostInstanceViewWithNameResponse build() {
-            return new DedicatedHostInstanceViewWithNameResponse(assetId, availableCapacity, name, statuses);
+        }
+
+        public DedicatedHostInstanceViewWithNameResponse build() {
+            $.assetId = Objects.requireNonNull($.assetId, "expected parameter 'assetId' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

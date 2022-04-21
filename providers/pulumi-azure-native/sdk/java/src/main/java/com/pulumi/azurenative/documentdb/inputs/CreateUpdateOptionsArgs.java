@@ -6,9 +6,9 @@ package com.pulumi.azurenative.documentdb.inputs;
 import com.pulumi.azurenative.documentdb.inputs.AutoscaleSettingsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="autoscaleSettings")
-      private final @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
+    private @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
 
-    public Output<AutoscaleSettingsArgs> autoscaleSettings() {
-        return this.autoscaleSettings == null ? Codegen.empty() : this.autoscaleSettings;
+    public Optional<Output<AutoscaleSettingsArgs>> autoscaleSettings() {
+        return Optional.ofNullable(this.autoscaleSettings);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CreateUpdateOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="throughput")
-      private final @Nullable Output<Integer> throughput;
+    private @Nullable Output<Integer> throughput;
 
-    public Output<Integer> throughput() {
-        return this.throughput == null ? Codegen.empty() : this.throughput;
+    public Optional<Output<Integer>> throughput() {
+        return Optional.ofNullable(this.throughput);
     }
 
-    public CreateUpdateOptionsArgs(
-        @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings,
-        @Nullable Output<Integer> throughput) {
-        this.autoscaleSettings = autoscaleSettings;
-        this.throughput = throughput;
-    }
+    private CreateUpdateOptionsArgs() {}
 
-    private CreateUpdateOptionsArgs() {
-        this.autoscaleSettings = Codegen.empty();
-        this.throughput = Codegen.empty();
+    private CreateUpdateOptionsArgs(CreateUpdateOptionsArgs $) {
+        this.autoscaleSettings = $.autoscaleSettings;
+        this.throughput = $.throughput;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateUpdateOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
-        private @Nullable Output<Integer> throughput;
+        private CreateUpdateOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateUpdateOptionsArgs();
         }
 
         public Builder(CreateUpdateOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaleSettings = defaults.autoscaleSettings;
-    	      this.throughput = defaults.throughput;
+            $ = new CreateUpdateOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaleSettings(@Nullable Output<AutoscaleSettingsArgs> autoscaleSettings) {
-            this.autoscaleSettings = autoscaleSettings;
+            $.autoscaleSettings = autoscaleSettings;
             return this;
         }
-        public Builder autoscaleSettings(@Nullable AutoscaleSettingsArgs autoscaleSettings) {
-            this.autoscaleSettings = Codegen.ofNullable(autoscaleSettings);
-            return this;
+
+        public Builder autoscaleSettings(AutoscaleSettingsArgs autoscaleSettings) {
+            return autoscaleSettings(Output.of(autoscaleSettings));
         }
+
         public Builder throughput(@Nullable Output<Integer> throughput) {
-            this.throughput = throughput;
+            $.throughput = throughput;
             return this;
         }
-        public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Codegen.ofNullable(throughput);
-            return this;
-        }        public CreateUpdateOptionsArgs build() {
-            return new CreateUpdateOptionsArgs(autoscaleSettings, throughput);
+
+        public Builder throughput(Integer throughput) {
+            return throughput(Output.of(throughput));
+        }
+
+        public CreateUpdateOptionsArgs build() {
+            return $;
         }
     }
+
 }

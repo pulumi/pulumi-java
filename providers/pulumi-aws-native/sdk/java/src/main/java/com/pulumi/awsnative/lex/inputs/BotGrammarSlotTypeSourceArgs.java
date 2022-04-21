@@ -5,9 +5,9 @@ package com.pulumi.awsnative.lex.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="s3BucketName", required=true)
-      private final Output<String> s3BucketName;
+    private Output<String> s3BucketName;
 
     public Output<String> s3BucketName() {
         return this.s3BucketName;
@@ -46,76 +46,70 @@ public final class BotGrammarSlotTypeSourceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="s3ObjectKey", required=true)
-      private final Output<String> s3ObjectKey;
+    private Output<String> s3ObjectKey;
 
     public Output<String> s3ObjectKey() {
         return this.s3ObjectKey;
     }
 
-    public BotGrammarSlotTypeSourceArgs(
-        @Nullable Output<String> kmsKeyArn,
-        Output<String> s3BucketName,
-        Output<String> s3ObjectKey) {
-        this.kmsKeyArn = kmsKeyArn;
-        this.s3BucketName = Objects.requireNonNull(s3BucketName, "expected parameter 's3BucketName' to be non-null");
-        this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey, "expected parameter 's3ObjectKey' to be non-null");
-    }
+    private BotGrammarSlotTypeSourceArgs() {}
 
-    private BotGrammarSlotTypeSourceArgs() {
-        this.kmsKeyArn = Codegen.empty();
-        this.s3BucketName = Codegen.empty();
-        this.s3ObjectKey = Codegen.empty();
+    private BotGrammarSlotTypeSourceArgs(BotGrammarSlotTypeSourceArgs $) {
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.s3BucketName = $.s3BucketName;
+        this.s3ObjectKey = $.s3ObjectKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotGrammarSlotTypeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyArn;
-        private Output<String> s3BucketName;
-        private Output<String> s3ObjectKey;
+        private BotGrammarSlotTypeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotGrammarSlotTypeSourceArgs();
         }
 
         public Builder(BotGrammarSlotTypeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.s3BucketName = defaults.s3BucketName;
-    	      this.s3ObjectKey = defaults.s3ObjectKey;
+            $ = new BotGrammarSlotTypeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder s3BucketName(Output<String> s3BucketName) {
-            this.s3BucketName = Objects.requireNonNull(s3BucketName);
+            $.s3BucketName = s3BucketName;
             return this;
         }
+
         public Builder s3BucketName(String s3BucketName) {
-            this.s3BucketName = Output.of(Objects.requireNonNull(s3BucketName));
-            return this;
+            return s3BucketName(Output.of(s3BucketName));
         }
+
         public Builder s3ObjectKey(Output<String> s3ObjectKey) {
-            this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
+            $.s3ObjectKey = s3ObjectKey;
             return this;
         }
+
         public Builder s3ObjectKey(String s3ObjectKey) {
-            this.s3ObjectKey = Output.of(Objects.requireNonNull(s3ObjectKey));
-            return this;
-        }        public BotGrammarSlotTypeSourceArgs build() {
-            return new BotGrammarSlotTypeSourceArgs(kmsKeyArn, s3BucketName, s3ObjectKey);
+            return s3ObjectKey(Output.of(s3ObjectKey));
+        }
+
+        public BotGrammarSlotTypeSourceArgs build() {
+            $.s3BucketName = Objects.requireNonNull($.s3BucketName, "expected parameter 's3BucketName' to be non-null");
+            $.s3ObjectKey = Objects.requireNonNull($.s3ObjectKey, "expected parameter 's3ObjectKey' to be non-null");
+            return $;
         }
     }
+
 }

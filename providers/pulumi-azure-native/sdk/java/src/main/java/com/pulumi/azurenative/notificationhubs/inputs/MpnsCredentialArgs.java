@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificateKey")
-      private final @Nullable Output<String> certificateKey;
+    private @Nullable Output<String> certificateKey;
 
-    public Output<String> certificateKey() {
-        return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
+    public Optional<Output<String>> certificateKey() {
+        return Optional.ofNullable(this.certificateKey);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mpnsCertificate")
-      private final @Nullable Output<String> mpnsCertificate;
+    private @Nullable Output<String> mpnsCertificate;
 
-    public Output<String> mpnsCertificate() {
-        return this.mpnsCertificate == null ? Codegen.empty() : this.mpnsCertificate;
+    public Optional<Output<String>> mpnsCertificate() {
+        return Optional.ofNullable(this.mpnsCertificate);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class MpnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
-    public MpnsCredentialArgs(
-        @Nullable Output<String> certificateKey,
-        @Nullable Output<String> mpnsCertificate,
-        @Nullable Output<String> thumbprint) {
-        this.certificateKey = certificateKey;
-        this.mpnsCertificate = mpnsCertificate;
-        this.thumbprint = thumbprint;
-    }
+    private MpnsCredentialArgs() {}
 
-    private MpnsCredentialArgs() {
-        this.certificateKey = Codegen.empty();
-        this.mpnsCertificate = Codegen.empty();
-        this.thumbprint = Codegen.empty();
+    private MpnsCredentialArgs(MpnsCredentialArgs $) {
+        this.certificateKey = $.certificateKey;
+        this.mpnsCertificate = $.mpnsCertificate;
+        this.thumbprint = $.thumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MpnsCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateKey;
-        private @Nullable Output<String> mpnsCertificate;
-        private @Nullable Output<String> thumbprint;
+        private MpnsCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MpnsCredentialArgs();
         }
 
         public Builder(MpnsCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateKey = defaults.certificateKey;
-    	      this.mpnsCertificate = defaults.mpnsCertificate;
-    	      this.thumbprint = defaults.thumbprint;
+            $ = new MpnsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateKey(@Nullable Output<String> certificateKey) {
-            this.certificateKey = certificateKey;
+            $.certificateKey = certificateKey;
             return this;
         }
-        public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = Codegen.ofNullable(certificateKey);
-            return this;
+
+        public Builder certificateKey(String certificateKey) {
+            return certificateKey(Output.of(certificateKey));
         }
+
         public Builder mpnsCertificate(@Nullable Output<String> mpnsCertificate) {
-            this.mpnsCertificate = mpnsCertificate;
+            $.mpnsCertificate = mpnsCertificate;
             return this;
         }
-        public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
-            this.mpnsCertificate = Codegen.ofNullable(mpnsCertificate);
-            return this;
+
+        public Builder mpnsCertificate(String mpnsCertificate) {
+            return mpnsCertificate(Output.of(mpnsCertificate));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
-        }        public MpnsCredentialArgs build() {
-            return new MpnsCredentialArgs(certificateKey, mpnsCertificate, thumbprint);
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
+        }
+
+        public MpnsCredentialArgs build() {
+            return $;
         }
     }
+
 }

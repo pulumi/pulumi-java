@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.enums.DistributionArchitecture;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="architecture")
-      private final @Nullable Output<DistributionArchitecture> architecture;
+    private @Nullable Output<DistributionArchitecture> architecture;
 
-    public Output<DistributionArchitecture> architecture() {
-        return this.architecture == null ? Codegen.empty() : this.architecture;
+    public Optional<Output<DistributionArchitecture>> architecture() {
+        return Optional.ofNullable(this.architecture);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cpeUri")
-      private final @Nullable Output<String> cpeUri;
+    private @Nullable Output<String> cpeUri;
 
-    public Output<String> cpeUri() {
-        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
+    public Optional<Output<String>> cpeUri() {
+        return Optional.ofNullable(this.cpeUri);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="latestVersion")
-      private final @Nullable Output<VersionArgs> latestVersion;
+    private @Nullable Output<VersionArgs> latestVersion;
 
-    public Output<VersionArgs> latestVersion() {
-        return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
+    public Optional<Output<VersionArgs>> latestVersion() {
+        return Optional.ofNullable(this.latestVersion);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintainer")
-      private final @Nullable Output<String> maintainer;
+    private @Nullable Output<String> maintainer;
 
-    public Output<String> maintainer() {
-        return this.maintainer == null ? Codegen.empty() : this.maintainer;
+    public Optional<Output<String>> maintainer() {
+        return Optional.ofNullable(this.maintainer);
     }
 
     /**
@@ -81,115 +81,98 @@ public final class DistributionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public DistributionArgs(
-        @Nullable Output<DistributionArchitecture> architecture,
-        @Nullable Output<String> cpeUri,
-        @Nullable Output<String> description,
-        @Nullable Output<VersionArgs> latestVersion,
-        @Nullable Output<String> maintainer,
-        @Nullable Output<String> url) {
-        this.architecture = architecture;
-        this.cpeUri = cpeUri;
-        this.description = description;
-        this.latestVersion = latestVersion;
-        this.maintainer = maintainer;
-        this.url = url;
-    }
+    private DistributionArgs() {}
 
-    private DistributionArgs() {
-        this.architecture = Codegen.empty();
-        this.cpeUri = Codegen.empty();
-        this.description = Codegen.empty();
-        this.latestVersion = Codegen.empty();
-        this.maintainer = Codegen.empty();
-        this.url = Codegen.empty();
+    private DistributionArgs(DistributionArgs $) {
+        this.architecture = $.architecture;
+        this.cpeUri = $.cpeUri;
+        this.description = $.description;
+        this.latestVersion = $.latestVersion;
+        this.maintainer = $.maintainer;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DistributionArchitecture> architecture;
-        private @Nullable Output<String> cpeUri;
-        private @Nullable Output<String> description;
-        private @Nullable Output<VersionArgs> latestVersion;
-        private @Nullable Output<String> maintainer;
-        private @Nullable Output<String> url;
+        private DistributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionArgs();
         }
 
         public Builder(DistributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.description = defaults.description;
-    	      this.latestVersion = defaults.latestVersion;
-    	      this.maintainer = defaults.maintainer;
-    	      this.url = defaults.url;
+            $ = new DistributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(@Nullable Output<DistributionArchitecture> architecture) {
-            this.architecture = architecture;
+            $.architecture = architecture;
             return this;
         }
-        public Builder architecture(@Nullable DistributionArchitecture architecture) {
-            this.architecture = Codegen.ofNullable(architecture);
-            return this;
+
+        public Builder architecture(DistributionArchitecture architecture) {
+            return architecture(Output.of(architecture));
         }
+
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
-            this.cpeUri = cpeUri;
+            $.cpeUri = cpeUri;
             return this;
         }
-        public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Codegen.ofNullable(cpeUri);
-            return this;
+
+        public Builder cpeUri(String cpeUri) {
+            return cpeUri(Output.of(cpeUri));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder latestVersion(@Nullable Output<VersionArgs> latestVersion) {
-            this.latestVersion = latestVersion;
+            $.latestVersion = latestVersion;
             return this;
         }
-        public Builder latestVersion(@Nullable VersionArgs latestVersion) {
-            this.latestVersion = Codegen.ofNullable(latestVersion);
-            return this;
+
+        public Builder latestVersion(VersionArgs latestVersion) {
+            return latestVersion(Output.of(latestVersion));
         }
+
         public Builder maintainer(@Nullable Output<String> maintainer) {
-            this.maintainer = maintainer;
+            $.maintainer = maintainer;
             return this;
         }
-        public Builder maintainer(@Nullable String maintainer) {
-            this.maintainer = Codegen.ofNullable(maintainer);
-            return this;
+
+        public Builder maintainer(String maintainer) {
+            return maintainer(Output.of(maintainer));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public DistributionArgs build() {
-            return new DistributionArgs(architecture, cpeUri, description, latestVersion, maintainer, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public DistributionArgs build() {
+            return $;
         }
     }
+
 }

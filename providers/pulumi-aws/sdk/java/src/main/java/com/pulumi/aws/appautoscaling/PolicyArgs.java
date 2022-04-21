@@ -7,9 +7,9 @@ import com.pulumi.aws.appautoscaling.inputs.PolicyStepScalingPolicyConfiguration
 import com.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policyType")
-      private final @Nullable Output<String> policyType;
+    private @Nullable Output<String> policyType;
 
-    public Output<String> policyType() {
-        return this.policyType == null ? Codegen.empty() : this.policyType;
+    public Optional<Output<String>> policyType() {
+        return Optional.ofNullable(this.policyType);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
@@ -55,7 +55,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scalableDimension", required=true)
-      private final Output<String> scalableDimension;
+    private Output<String> scalableDimension;
 
     public Output<String> scalableDimension() {
         return this.scalableDimension;
@@ -66,7 +66,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceNamespace", required=true)
-      private final Output<String> serviceNamespace;
+    private Output<String> serviceNamespace;
 
     public Output<String> serviceNamespace() {
         return this.serviceNamespace;
@@ -77,10 +77,10 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepScalingPolicyConfiguration")
-      private final @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
+    private @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
 
-    public Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration() {
-        return this.stepScalingPolicyConfiguration == null ? Codegen.empty() : this.stepScalingPolicyConfiguration;
+    public Optional<Output<PolicyStepScalingPolicyConfigurationArgs>> stepScalingPolicyConfiguration() {
+        return Optional.ofNullable(this.stepScalingPolicyConfiguration);
     }
 
     /**
@@ -88,128 +88,111 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetTrackingScalingPolicyConfiguration")
-      private final @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+    private @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
 
-    public Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration() {
-        return this.targetTrackingScalingPolicyConfiguration == null ? Codegen.empty() : this.targetTrackingScalingPolicyConfiguration;
+    public Optional<Output<PolicyTargetTrackingScalingPolicyConfigurationArgs>> targetTrackingScalingPolicyConfiguration() {
+        return Optional.ofNullable(this.targetTrackingScalingPolicyConfiguration);
     }
 
-    public PolicyArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> policyType,
-        Output<String> resourceId,
-        Output<String> scalableDimension,
-        Output<String> serviceNamespace,
-        @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration,
-        @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
-        this.name = name;
-        this.policyType = policyType;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.scalableDimension = Objects.requireNonNull(scalableDimension, "expected parameter 'scalableDimension' to be non-null");
-        this.serviceNamespace = Objects.requireNonNull(serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
-        this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
-        this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.name = Codegen.empty();
-        this.policyType = Codegen.empty();
-        this.resourceId = Codegen.empty();
-        this.scalableDimension = Codegen.empty();
-        this.serviceNamespace = Codegen.empty();
-        this.stepScalingPolicyConfiguration = Codegen.empty();
-        this.targetTrackingScalingPolicyConfiguration = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.name = $.name;
+        this.policyType = $.policyType;
+        this.resourceId = $.resourceId;
+        this.scalableDimension = $.scalableDimension;
+        this.serviceNamespace = $.serviceNamespace;
+        this.stepScalingPolicyConfiguration = $.stepScalingPolicyConfiguration;
+        this.targetTrackingScalingPolicyConfiguration = $.targetTrackingScalingPolicyConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> policyType;
-        private Output<String> resourceId;
-        private Output<String> scalableDimension;
-        private Output<String> serviceNamespace;
-        private @Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration;
-        private @Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.policyType = defaults.policyType;
-    	      this.resourceId = defaults.resourceId;
-    	      this.scalableDimension = defaults.scalableDimension;
-    	      this.serviceNamespace = defaults.serviceNamespace;
-    	      this.stepScalingPolicyConfiguration = defaults.stepScalingPolicyConfiguration;
-    	      this.targetTrackingScalingPolicyConfiguration = defaults.targetTrackingScalingPolicyConfiguration;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policyType(@Nullable Output<String> policyType) {
-            this.policyType = policyType;
+            $.policyType = policyType;
             return this;
         }
-        public Builder policyType(@Nullable String policyType) {
-            this.policyType = Codegen.ofNullable(policyType);
-            return this;
+
+        public Builder policyType(String policyType) {
+            return policyType(Output.of(policyType));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
+            return resourceId(Output.of(resourceId));
         }
+
         public Builder scalableDimension(Output<String> scalableDimension) {
-            this.scalableDimension = Objects.requireNonNull(scalableDimension);
+            $.scalableDimension = scalableDimension;
             return this;
         }
+
         public Builder scalableDimension(String scalableDimension) {
-            this.scalableDimension = Output.of(Objects.requireNonNull(scalableDimension));
-            return this;
+            return scalableDimension(Output.of(scalableDimension));
         }
+
         public Builder serviceNamespace(Output<String> serviceNamespace) {
-            this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
+            $.serviceNamespace = serviceNamespace;
             return this;
         }
+
         public Builder serviceNamespace(String serviceNamespace) {
-            this.serviceNamespace = Output.of(Objects.requireNonNull(serviceNamespace));
-            return this;
+            return serviceNamespace(Output.of(serviceNamespace));
         }
+
         public Builder stepScalingPolicyConfiguration(@Nullable Output<PolicyStepScalingPolicyConfigurationArgs> stepScalingPolicyConfiguration) {
-            this.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
+            $.stepScalingPolicyConfiguration = stepScalingPolicyConfiguration;
             return this;
         }
-        public Builder stepScalingPolicyConfiguration(@Nullable PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
-            this.stepScalingPolicyConfiguration = Codegen.ofNullable(stepScalingPolicyConfiguration);
-            return this;
+
+        public Builder stepScalingPolicyConfiguration(PolicyStepScalingPolicyConfigurationArgs stepScalingPolicyConfiguration) {
+            return stepScalingPolicyConfiguration(Output.of(stepScalingPolicyConfiguration));
         }
+
         public Builder targetTrackingScalingPolicyConfiguration(@Nullable Output<PolicyTargetTrackingScalingPolicyConfigurationArgs> targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
+            $.targetTrackingScalingPolicyConfiguration = targetTrackingScalingPolicyConfiguration;
             return this;
         }
-        public Builder targetTrackingScalingPolicyConfiguration(@Nullable PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
-            this.targetTrackingScalingPolicyConfiguration = Codegen.ofNullable(targetTrackingScalingPolicyConfiguration);
-            return this;
-        }        public PolicyArgs build() {
-            return new PolicyArgs(name, policyType, resourceId, scalableDimension, serviceNamespace, stepScalingPolicyConfiguration, targetTrackingScalingPolicyConfiguration);
+
+        public Builder targetTrackingScalingPolicyConfiguration(PolicyTargetTrackingScalingPolicyConfigurationArgs targetTrackingScalingPolicyConfiguration) {
+            return targetTrackingScalingPolicyConfiguration(Output.of(targetTrackingScalingPolicyConfiguration));
+        }
+
+        public PolicyArgs build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.scalableDimension = Objects.requireNonNull($.scalableDimension, "expected parameter 'scalableDimension' to be non-null");
+            $.serviceNamespace = Objects.requireNonNull($.serviceNamespace, "expected parameter 'serviceNamespace' to be non-null");
+            return $;
         }
     }
+
 }

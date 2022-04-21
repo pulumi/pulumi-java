@@ -6,9 +6,9 @@ package com.pulumi.azurenative.security.inputs;
 import com.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
      * 
      */
     @Import(name="servicePrincipalSecretMetadata")
-      private final @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
+    private @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
 
-    public Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata() {
-        return this.servicePrincipalSecretMetadata == null ? Codegen.empty() : this.servicePrincipalSecretMetadata;
+    public Optional<Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs>> servicePrincipalSecretMetadata() {
+        return Optional.ofNullable(this.servicePrincipalSecretMetadata);
     }
 
-    public DefenderForServersAwsOfferingArcAutoProvisioningArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
-        this.enabled = enabled;
-        this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
-    }
+    private DefenderForServersAwsOfferingArcAutoProvisioningArgs() {}
 
-    private DefenderForServersAwsOfferingArcAutoProvisioningArgs() {
-        this.enabled = Codegen.empty();
-        this.servicePrincipalSecretMetadata = Codegen.empty();
+    private DefenderForServersAwsOfferingArcAutoProvisioningArgs(DefenderForServersAwsOfferingArcAutoProvisioningArgs $) {
+        this.enabled = $.enabled;
+        this.servicePrincipalSecretMetadata = $.servicePrincipalSecretMetadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DefenderForServersAwsOfferingArcAutoProvisioningArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata;
+        private DefenderForServersAwsOfferingArcAutoProvisioningArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DefenderForServersAwsOfferingArcAutoProvisioningArgs();
         }
 
         public Builder(DefenderForServersAwsOfferingArcAutoProvisioningArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.servicePrincipalSecretMetadata = defaults.servicePrincipalSecretMetadata;
+            $ = new DefenderForServersAwsOfferingArcAutoProvisioningArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder servicePrincipalSecretMetadata(@Nullable Output<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
-            this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
+            $.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
-        public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
-            this.servicePrincipalSecretMetadata = Codegen.ofNullable(servicePrincipalSecretMetadata);
-            return this;
-        }        public DefenderForServersAwsOfferingArcAutoProvisioningArgs build() {
-            return new DefenderForServersAwsOfferingArcAutoProvisioningArgs(enabled, servicePrincipalSecretMetadata);
+
+        public Builder servicePrincipalSecretMetadata(DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
+            return servicePrincipalSecretMetadata(Output.of(servicePrincipalSecretMetadata));
+        }
+
+        public DefenderForServersAwsOfferingArcAutoProvisioningArgs build() {
+            return $;
         }
     }
+
 }

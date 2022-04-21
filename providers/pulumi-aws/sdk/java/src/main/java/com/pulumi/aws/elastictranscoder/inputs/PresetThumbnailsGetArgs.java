@@ -5,9 +5,9 @@ package com.pulumi.aws.elastictranscoder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="aspectRatio")
-      private final @Nullable Output<String> aspectRatio;
+    private @Nullable Output<String> aspectRatio;
 
-    public Output<String> aspectRatio() {
-        return this.aspectRatio == null ? Codegen.empty() : this.aspectRatio;
+    public Optional<Output<String>> aspectRatio() {
+        return Optional.ofNullable(this.aspectRatio);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="format")
-      private final @Nullable Output<String> format;
+    private @Nullable Output<String> format;
 
-    public Output<String> format() {
-        return this.format == null ? Codegen.empty() : this.format;
+    public Optional<Output<String>> format() {
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="interval")
-      private final @Nullable Output<String> interval;
+    private @Nullable Output<String> interval;
 
-    public Output<String> interval() {
-        return this.interval == null ? Codegen.empty() : this.interval;
+    public Optional<Output<String>> interval() {
+        return Optional.ofNullable(this.interval);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="maxHeight")
-      private final @Nullable Output<String> maxHeight;
+    private @Nullable Output<String> maxHeight;
 
-    public Output<String> maxHeight() {
-        return this.maxHeight == null ? Codegen.empty() : this.maxHeight;
+    public Optional<Output<String>> maxHeight() {
+        return Optional.ofNullable(this.maxHeight);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="maxWidth")
-      private final @Nullable Output<String> maxWidth;
+    private @Nullable Output<String> maxWidth;
 
-    public Output<String> maxWidth() {
-        return this.maxWidth == null ? Codegen.empty() : this.maxWidth;
+    public Optional<Output<String>> maxWidth() {
+        return Optional.ofNullable(this.maxWidth);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="paddingPolicy")
-      private final @Nullable Output<String> paddingPolicy;
+    private @Nullable Output<String> paddingPolicy;
 
-    public Output<String> paddingPolicy() {
-        return this.paddingPolicy == null ? Codegen.empty() : this.paddingPolicy;
+    public Optional<Output<String>> paddingPolicy() {
+        return Optional.ofNullable(this.paddingPolicy);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resolution")
-      private final @Nullable Output<String> resolution;
+    private @Nullable Output<String> resolution;
 
-    public Output<String> resolution() {
-        return this.resolution == null ? Codegen.empty() : this.resolution;
+    public Optional<Output<String>> resolution() {
+        return Optional.ofNullable(this.resolution);
     }
 
     /**
@@ -97,141 +97,118 @@ public final class PresetThumbnailsGetArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sizingPolicy")
-      private final @Nullable Output<String> sizingPolicy;
+    private @Nullable Output<String> sizingPolicy;
 
-    public Output<String> sizingPolicy() {
-        return this.sizingPolicy == null ? Codegen.empty() : this.sizingPolicy;
+    public Optional<Output<String>> sizingPolicy() {
+        return Optional.ofNullable(this.sizingPolicy);
     }
 
-    public PresetThumbnailsGetArgs(
-        @Nullable Output<String> aspectRatio,
-        @Nullable Output<String> format,
-        @Nullable Output<String> interval,
-        @Nullable Output<String> maxHeight,
-        @Nullable Output<String> maxWidth,
-        @Nullable Output<String> paddingPolicy,
-        @Nullable Output<String> resolution,
-        @Nullable Output<String> sizingPolicy) {
-        this.aspectRatio = aspectRatio;
-        this.format = format;
-        this.interval = interval;
-        this.maxHeight = maxHeight;
-        this.maxWidth = maxWidth;
-        this.paddingPolicy = paddingPolicy;
-        this.resolution = resolution;
-        this.sizingPolicy = sizingPolicy;
-    }
+    private PresetThumbnailsGetArgs() {}
 
-    private PresetThumbnailsGetArgs() {
-        this.aspectRatio = Codegen.empty();
-        this.format = Codegen.empty();
-        this.interval = Codegen.empty();
-        this.maxHeight = Codegen.empty();
-        this.maxWidth = Codegen.empty();
-        this.paddingPolicy = Codegen.empty();
-        this.resolution = Codegen.empty();
-        this.sizingPolicy = Codegen.empty();
+    private PresetThumbnailsGetArgs(PresetThumbnailsGetArgs $) {
+        this.aspectRatio = $.aspectRatio;
+        this.format = $.format;
+        this.interval = $.interval;
+        this.maxHeight = $.maxHeight;
+        this.maxWidth = $.maxWidth;
+        this.paddingPolicy = $.paddingPolicy;
+        this.resolution = $.resolution;
+        this.sizingPolicy = $.sizingPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PresetThumbnailsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aspectRatio;
-        private @Nullable Output<String> format;
-        private @Nullable Output<String> interval;
-        private @Nullable Output<String> maxHeight;
-        private @Nullable Output<String> maxWidth;
-        private @Nullable Output<String> paddingPolicy;
-        private @Nullable Output<String> resolution;
-        private @Nullable Output<String> sizingPolicy;
+        private PresetThumbnailsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PresetThumbnailsGetArgs();
         }
 
         public Builder(PresetThumbnailsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aspectRatio = defaults.aspectRatio;
-    	      this.format = defaults.format;
-    	      this.interval = defaults.interval;
-    	      this.maxHeight = defaults.maxHeight;
-    	      this.maxWidth = defaults.maxWidth;
-    	      this.paddingPolicy = defaults.paddingPolicy;
-    	      this.resolution = defaults.resolution;
-    	      this.sizingPolicy = defaults.sizingPolicy;
+            $ = new PresetThumbnailsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aspectRatio(@Nullable Output<String> aspectRatio) {
-            this.aspectRatio = aspectRatio;
+            $.aspectRatio = aspectRatio;
             return this;
         }
-        public Builder aspectRatio(@Nullable String aspectRatio) {
-            this.aspectRatio = Codegen.ofNullable(aspectRatio);
-            return this;
+
+        public Builder aspectRatio(String aspectRatio) {
+            return aspectRatio(Output.of(aspectRatio));
         }
+
         public Builder format(@Nullable Output<String> format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
-        public Builder format(@Nullable String format) {
-            this.format = Codegen.ofNullable(format);
-            return this;
+
+        public Builder format(String format) {
+            return format(Output.of(format));
         }
+
         public Builder interval(@Nullable Output<String> interval) {
-            this.interval = interval;
+            $.interval = interval;
             return this;
         }
-        public Builder interval(@Nullable String interval) {
-            this.interval = Codegen.ofNullable(interval);
-            return this;
+
+        public Builder interval(String interval) {
+            return interval(Output.of(interval));
         }
+
         public Builder maxHeight(@Nullable Output<String> maxHeight) {
-            this.maxHeight = maxHeight;
+            $.maxHeight = maxHeight;
             return this;
         }
-        public Builder maxHeight(@Nullable String maxHeight) {
-            this.maxHeight = Codegen.ofNullable(maxHeight);
-            return this;
+
+        public Builder maxHeight(String maxHeight) {
+            return maxHeight(Output.of(maxHeight));
         }
+
         public Builder maxWidth(@Nullable Output<String> maxWidth) {
-            this.maxWidth = maxWidth;
+            $.maxWidth = maxWidth;
             return this;
         }
-        public Builder maxWidth(@Nullable String maxWidth) {
-            this.maxWidth = Codegen.ofNullable(maxWidth);
-            return this;
+
+        public Builder maxWidth(String maxWidth) {
+            return maxWidth(Output.of(maxWidth));
         }
+
         public Builder paddingPolicy(@Nullable Output<String> paddingPolicy) {
-            this.paddingPolicy = paddingPolicy;
+            $.paddingPolicy = paddingPolicy;
             return this;
         }
-        public Builder paddingPolicy(@Nullable String paddingPolicy) {
-            this.paddingPolicy = Codegen.ofNullable(paddingPolicy);
-            return this;
+
+        public Builder paddingPolicy(String paddingPolicy) {
+            return paddingPolicy(Output.of(paddingPolicy));
         }
+
         public Builder resolution(@Nullable Output<String> resolution) {
-            this.resolution = resolution;
+            $.resolution = resolution;
             return this;
         }
-        public Builder resolution(@Nullable String resolution) {
-            this.resolution = Codegen.ofNullable(resolution);
-            return this;
+
+        public Builder resolution(String resolution) {
+            return resolution(Output.of(resolution));
         }
+
         public Builder sizingPolicy(@Nullable Output<String> sizingPolicy) {
-            this.sizingPolicy = sizingPolicy;
+            $.sizingPolicy = sizingPolicy;
             return this;
         }
-        public Builder sizingPolicy(@Nullable String sizingPolicy) {
-            this.sizingPolicy = Codegen.ofNullable(sizingPolicy);
-            return this;
-        }        public PresetThumbnailsGetArgs build() {
-            return new PresetThumbnailsGetArgs(aspectRatio, format, interval, maxHeight, maxWidth, paddingPolicy, resolution, sizingPolicy);
+
+        public Builder sizingPolicy(String sizingPolicy) {
+            return sizingPolicy(Output.of(sizingPolicy));
+        }
+
+        public PresetThumbnailsGetArgs build() {
+            return $;
         }
     }
+
 }

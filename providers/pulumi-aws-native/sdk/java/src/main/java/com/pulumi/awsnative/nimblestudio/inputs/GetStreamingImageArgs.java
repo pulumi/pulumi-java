@@ -13,7 +13,7 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
     public static final GetStreamingImageArgs Empty = new GetStreamingImageArgs();
 
     @Import(name="streamingImageId", required=true)
-      private final String streamingImageId;
+    private String streamingImageId;
 
     public String streamingImageId() {
         return this.streamingImageId;
@@ -24,55 +24,52 @@ public final class GetStreamingImageArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="studioId", required=true)
-      private final String studioId;
+    private String studioId;
 
     public String studioId() {
         return this.studioId;
     }
 
-    public GetStreamingImageArgs(
-        String streamingImageId,
-        String studioId) {
-        this.streamingImageId = Objects.requireNonNull(streamingImageId, "expected parameter 'streamingImageId' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private GetStreamingImageArgs() {}
 
-    private GetStreamingImageArgs() {
-        this.streamingImageId = null;
-        this.studioId = null;
+    private GetStreamingImageArgs(GetStreamingImageArgs $) {
+        this.streamingImageId = $.streamingImageId;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamingImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String streamingImageId;
-        private String studioId;
+        private GetStreamingImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamingImageArgs();
         }
 
         public Builder(GetStreamingImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.streamingImageId = defaults.streamingImageId;
-    	      this.studioId = defaults.studioId;
+            $ = new GetStreamingImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder streamingImageId(String streamingImageId) {
-            this.streamingImageId = Objects.requireNonNull(streamingImageId);
+            $.streamingImageId = streamingImageId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
-        }        public GetStreamingImageArgs build() {
-            return new GetStreamingImageArgs(streamingImageId, studioId);
+        }
+
+        public GetStreamingImageArgs build() {
+            $.streamingImageId = Objects.requireNonNull($.streamingImageId, "expected parameter 'streamingImageId' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,58 +34,56 @@ public final class SettingsSectionDescriptionResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<SettingsParameterDescriptionResponse> parameters;
+    private List<SettingsParameterDescriptionResponse> parameters;
 
     public List<SettingsParameterDescriptionResponse> parameters() {
         return this.parameters;
     }
 
-    public SettingsSectionDescriptionResponse(
-        String name,
-        List<SettingsParameterDescriptionResponse> parameters) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private SettingsSectionDescriptionResponse() {}
 
-    private SettingsSectionDescriptionResponse() {
-        this.name = null;
-        this.parameters = List.of();
+    private SettingsSectionDescriptionResponse(SettingsSectionDescriptionResponse $) {
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsSectionDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private List<SettingsParameterDescriptionResponse> parameters;
+        private SettingsSectionDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsSectionDescriptionResponse();
         }
 
         public Builder(SettingsSectionDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new SettingsSectionDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder parameters(List<SettingsParameterDescriptionResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(SettingsParameterDescriptionResponse... parameters) {
             return parameters(List.of(parameters));
-        }        public SettingsSectionDescriptionResponse build() {
-            return new SettingsSectionDescriptionResponse(name, parameters);
+        }
+
+        public SettingsSectionDescriptionResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

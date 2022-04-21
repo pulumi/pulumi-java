@@ -17,7 +17,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="ascLocation", required=true)
-      private final String ascLocation;
+    private String ascLocation;
 
     public String ascLocation() {
         return this.ascLocation;
@@ -28,7 +28,7 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="jitNetworkAccessPolicyName", required=true)
-      private final String jitNetworkAccessPolicyName;
+    private String jitNetworkAccessPolicyName;
 
     public String jitNetworkAccessPolicyName() {
         return this.jitNetworkAccessPolicyName;
@@ -39,64 +39,59 @@ public final class GetJitNetworkAccessPolicyArgs extends com.pulumi.resources.In
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetJitNetworkAccessPolicyArgs(
-        String ascLocation,
-        String jitNetworkAccessPolicyName,
-        String resourceGroupName) {
-        this.ascLocation = Objects.requireNonNull(ascLocation, "expected parameter 'ascLocation' to be non-null");
-        this.jitNetworkAccessPolicyName = Objects.requireNonNull(jitNetworkAccessPolicyName, "expected parameter 'jitNetworkAccessPolicyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetJitNetworkAccessPolicyArgs() {}
 
-    private GetJitNetworkAccessPolicyArgs() {
-        this.ascLocation = null;
-        this.jitNetworkAccessPolicyName = null;
-        this.resourceGroupName = null;
+    private GetJitNetworkAccessPolicyArgs(GetJitNetworkAccessPolicyArgs $) {
+        this.ascLocation = $.ascLocation;
+        this.jitNetworkAccessPolicyName = $.jitNetworkAccessPolicyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetJitNetworkAccessPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ascLocation;
-        private String jitNetworkAccessPolicyName;
-        private String resourceGroupName;
+        private GetJitNetworkAccessPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetJitNetworkAccessPolicyArgs();
         }
 
         public Builder(GetJitNetworkAccessPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ascLocation = defaults.ascLocation;
-    	      this.jitNetworkAccessPolicyName = defaults.jitNetworkAccessPolicyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetJitNetworkAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ascLocation(String ascLocation) {
-            this.ascLocation = Objects.requireNonNull(ascLocation);
+            $.ascLocation = ascLocation;
             return this;
         }
+
         public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
-            this.jitNetworkAccessPolicyName = Objects.requireNonNull(jitNetworkAccessPolicyName);
+            $.jitNetworkAccessPolicyName = jitNetworkAccessPolicyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetJitNetworkAccessPolicyArgs build() {
-            return new GetJitNetworkAccessPolicyArgs(ascLocation, jitNetworkAccessPolicyName, resourceGroupName);
+        }
+
+        public GetJitNetworkAccessPolicyArgs build() {
+            $.ascLocation = Objects.requireNonNull($.ascLocation, "expected parameter 'ascLocation' to be non-null");
+            $.jitNetworkAccessPolicyName = Objects.requireNonNull($.jitNetworkAccessPolicyName, "expected parameter 'jitNetworkAccessPolicyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

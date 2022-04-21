@@ -24,24 +24,24 @@ public final class RulesetRule extends com.pulumi.resources.InvokeArgs {
     public static final RulesetRule Empty = new RulesetRule();
 
     @Import(name="checkExpression", required=true)
-      private final String checkExpression;
+    private String checkExpression;
 
     public String checkExpression() {
         return this.checkExpression;
     }
 
     @Import(name="columnSelectors")
-      private final @Nullable List<RulesetColumnSelector> columnSelectors;
+    private @Nullable List<RulesetColumnSelector> columnSelectors;
 
-    public List<RulesetColumnSelector> columnSelectors() {
-        return this.columnSelectors == null ? List.of() : this.columnSelectors;
+    public Optional<List<RulesetColumnSelector>> columnSelectors() {
+        return Optional.ofNullable(this.columnSelectors);
     }
 
     @Import(name="disabled")
-      private final @Nullable Boolean disabled;
+    private @Nullable Boolean disabled;
 
     public Optional<Boolean> disabled() {
-        return this.disabled == null ? Optional.empty() : Optional.ofNullable(this.disabled);
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -49,111 +49,98 @@ public final class RulesetRule extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
     @Import(name="substitutionMap")
-      private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
+    private @Nullable List<RulesetSubstitutionValue> substitutionMap;
 
-    public List<RulesetSubstitutionValue> substitutionMap() {
-        return this.substitutionMap == null ? List.of() : this.substitutionMap;
+    public Optional<List<RulesetSubstitutionValue>> substitutionMap() {
+        return Optional.ofNullable(this.substitutionMap);
     }
 
     @Import(name="threshold")
-      private final @Nullable RulesetThreshold threshold;
+    private @Nullable RulesetThreshold threshold;
 
     public Optional<RulesetThreshold> threshold() {
-        return this.threshold == null ? Optional.empty() : Optional.ofNullable(this.threshold);
+        return Optional.ofNullable(this.threshold);
     }
 
-    public RulesetRule(
-        String checkExpression,
-        @Nullable List<RulesetColumnSelector> columnSelectors,
-        @Nullable Boolean disabled,
-        String name,
-        @Nullable List<RulesetSubstitutionValue> substitutionMap,
-        @Nullable RulesetThreshold threshold) {
-        this.checkExpression = Objects.requireNonNull(checkExpression, "expected parameter 'checkExpression' to be non-null");
-        this.columnSelectors = columnSelectors;
-        this.disabled = disabled;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.substitutionMap = substitutionMap;
-        this.threshold = threshold;
-    }
+    private RulesetRule() {}
 
-    private RulesetRule() {
-        this.checkExpression = null;
-        this.columnSelectors = List.of();
-        this.disabled = null;
-        this.name = null;
-        this.substitutionMap = List.of();
-        this.threshold = null;
+    private RulesetRule(RulesetRule $) {
+        this.checkExpression = $.checkExpression;
+        this.columnSelectors = $.columnSelectors;
+        this.disabled = $.disabled;
+        this.name = $.name;
+        this.substitutionMap = $.substitutionMap;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetRule defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String checkExpression;
-        private @Nullable List<RulesetColumnSelector> columnSelectors;
-        private @Nullable Boolean disabled;
-        private String name;
-        private @Nullable List<RulesetSubstitutionValue> substitutionMap;
-        private @Nullable RulesetThreshold threshold;
+        private RulesetRule $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetRule();
         }
 
         public Builder(RulesetRule defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkExpression = defaults.checkExpression;
-    	      this.columnSelectors = defaults.columnSelectors;
-    	      this.disabled = defaults.disabled;
-    	      this.name = defaults.name;
-    	      this.substitutionMap = defaults.substitutionMap;
-    	      this.threshold = defaults.threshold;
+            $ = new RulesetRule(Objects.requireNonNull(defaults));
         }
 
         public Builder checkExpression(String checkExpression) {
-            this.checkExpression = Objects.requireNonNull(checkExpression);
+            $.checkExpression = checkExpression;
             return this;
         }
+
         public Builder columnSelectors(@Nullable List<RulesetColumnSelector> columnSelectors) {
-            this.columnSelectors = columnSelectors;
+            $.columnSelectors = columnSelectors;
             return this;
         }
+
         public Builder columnSelectors(RulesetColumnSelector... columnSelectors) {
             return columnSelectors(List.of(columnSelectors));
         }
+
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder substitutionMap(@Nullable List<RulesetSubstitutionValue> substitutionMap) {
-            this.substitutionMap = substitutionMap;
+            $.substitutionMap = substitutionMap;
             return this;
         }
+
         public Builder substitutionMap(RulesetSubstitutionValue... substitutionMap) {
             return substitutionMap(List.of(substitutionMap));
         }
+
         public Builder threshold(@Nullable RulesetThreshold threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
-        }        public RulesetRule build() {
-            return new RulesetRule(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);
+        }
+
+        public RulesetRule build() {
+            $.checkExpression = Objects.requireNonNull($.checkExpression, "expected parameter 'checkExpression' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

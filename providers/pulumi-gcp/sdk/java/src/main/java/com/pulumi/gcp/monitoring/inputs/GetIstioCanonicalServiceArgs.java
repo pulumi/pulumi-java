@@ -20,7 +20,7 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="canonicalService", required=true)
-      private final String canonicalService;
+    private String canonicalService;
 
     public String canonicalService() {
         return this.canonicalService;
@@ -32,7 +32,7 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="canonicalServiceNamespace", required=true)
-      private final String canonicalServiceNamespace;
+    private String canonicalServiceNamespace;
 
     public String canonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
@@ -44,7 +44,7 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="meshUid", required=true)
-      private final String meshUid;
+    private String meshUid;
 
     public String meshUid() {
         return this.meshUid;
@@ -56,73 +56,65 @@ public final class GetIstioCanonicalServiceArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetIstioCanonicalServiceArgs(
-        String canonicalService,
-        String canonicalServiceNamespace,
-        String meshUid,
-        @Nullable String project) {
-        this.canonicalService = Objects.requireNonNull(canonicalService, "expected parameter 'canonicalService' to be non-null");
-        this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace, "expected parameter 'canonicalServiceNamespace' to be non-null");
-        this.meshUid = Objects.requireNonNull(meshUid, "expected parameter 'meshUid' to be non-null");
-        this.project = project;
-    }
+    private GetIstioCanonicalServiceArgs() {}
 
-    private GetIstioCanonicalServiceArgs() {
-        this.canonicalService = null;
-        this.canonicalServiceNamespace = null;
-        this.meshUid = null;
-        this.project = null;
+    private GetIstioCanonicalServiceArgs(GetIstioCanonicalServiceArgs $) {
+        this.canonicalService = $.canonicalService;
+        this.canonicalServiceNamespace = $.canonicalServiceNamespace;
+        this.meshUid = $.meshUid;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIstioCanonicalServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String canonicalService;
-        private String canonicalServiceNamespace;
-        private String meshUid;
-        private @Nullable String project;
+        private GetIstioCanonicalServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIstioCanonicalServiceArgs();
         }
 
         public Builder(GetIstioCanonicalServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalService = defaults.canonicalService;
-    	      this.canonicalServiceNamespace = defaults.canonicalServiceNamespace;
-    	      this.meshUid = defaults.meshUid;
-    	      this.project = defaults.project;
+            $ = new GetIstioCanonicalServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalService(String canonicalService) {
-            this.canonicalService = Objects.requireNonNull(canonicalService);
+            $.canonicalService = canonicalService;
             return this;
         }
+
         public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
-            this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
+            $.canonicalServiceNamespace = canonicalServiceNamespace;
             return this;
         }
+
         public Builder meshUid(String meshUid) {
-            this.meshUid = Objects.requireNonNull(meshUid);
+            $.meshUid = meshUid;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetIstioCanonicalServiceArgs build() {
-            return new GetIstioCanonicalServiceArgs(canonicalService, canonicalServiceNamespace, meshUid, project);
+        }
+
+        public GetIstioCanonicalServiceArgs build() {
+            $.canonicalService = Objects.requireNonNull($.canonicalService, "expected parameter 'canonicalService' to be non-null");
+            $.canonicalServiceNamespace = Objects.requireNonNull($.canonicalServiceNamespace, "expected parameter 'canonicalServiceNamespace' to be non-null");
+            $.meshUid = Objects.requireNonNull($.meshUid, "expected parameter 'meshUid' to be non-null");
+            return $;
         }
     }
+
 }

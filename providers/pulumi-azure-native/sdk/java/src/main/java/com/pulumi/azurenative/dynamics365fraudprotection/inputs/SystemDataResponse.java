@@ -23,10 +23,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdAt")
-      private final @Nullable String createdAt;
+    private @Nullable String createdAt;
 
     public Optional<String> createdAt() {
-        return this.createdAt == null ? Optional.empty() : Optional.ofNullable(this.createdAt);
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdBy")
-      private final @Nullable String createdBy;
+    private @Nullable String createdBy;
 
     public Optional<String> createdBy() {
-        return this.createdBy == null ? Optional.empty() : Optional.ofNullable(this.createdBy);
+        return Optional.ofNullable(this.createdBy);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createdByType")
-      private final @Nullable String createdByType;
+    private @Nullable String createdByType;
 
     public Optional<String> createdByType() {
-        return this.createdByType == null ? Optional.empty() : Optional.ofNullable(this.createdByType);
+        return Optional.ofNullable(this.createdByType);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedAt")
-      private final @Nullable String lastModifiedAt;
+    private @Nullable String lastModifiedAt;
 
     public Optional<String> lastModifiedAt() {
-        return this.lastModifiedAt == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedAt);
+        return Optional.ofNullable(this.lastModifiedAt);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedBy")
-      private final @Nullable String lastModifiedBy;
+    private @Nullable String lastModifiedBy;
 
     public Optional<String> lastModifiedBy() {
-        return this.lastModifiedBy == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedBy);
+        return Optional.ofNullable(this.lastModifiedBy);
     }
 
     /**
@@ -78,91 +78,74 @@ public final class SystemDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastModifiedByType")
-      private final @Nullable String lastModifiedByType;
+    private @Nullable String lastModifiedByType;
 
     public Optional<String> lastModifiedByType() {
-        return this.lastModifiedByType == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedByType);
+        return Optional.ofNullable(this.lastModifiedByType);
     }
 
-    public SystemDataResponse(
-        @Nullable String createdAt,
-        @Nullable String createdBy,
-        @Nullable String createdByType,
-        @Nullable String lastModifiedAt,
-        @Nullable String lastModifiedBy,
-        @Nullable String lastModifiedByType) {
-        this.createdAt = createdAt;
-        this.createdBy = createdBy;
-        this.createdByType = createdByType;
-        this.lastModifiedAt = lastModifiedAt;
-        this.lastModifiedBy = lastModifiedBy;
-        this.lastModifiedByType = lastModifiedByType;
-    }
+    private SystemDataResponse() {}
 
-    private SystemDataResponse() {
-        this.createdAt = null;
-        this.createdBy = null;
-        this.createdByType = null;
-        this.lastModifiedAt = null;
-        this.lastModifiedBy = null;
-        this.lastModifiedByType = null;
+    private SystemDataResponse(SystemDataResponse $) {
+        this.createdAt = $.createdAt;
+        this.createdBy = $.createdBy;
+        this.createdByType = $.createdByType;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.lastModifiedBy = $.lastModifiedBy;
+        this.lastModifiedByType = $.lastModifiedByType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String createdAt;
-        private @Nullable String createdBy;
-        private @Nullable String createdByType;
-        private @Nullable String lastModifiedAt;
-        private @Nullable String lastModifiedBy;
-        private @Nullable String lastModifiedByType;
+        private SystemDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemDataResponse();
         }
 
         public Builder(SystemDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.createdBy = defaults.createdBy;
-    	      this.createdByType = defaults.createdByType;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.lastModifiedBy = defaults.lastModifiedBy;
-    	      this.lastModifiedByType = defaults.lastModifiedByType;
+            $ = new SystemDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = createdAt;
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder createdBy(@Nullable String createdBy) {
-            this.createdBy = createdBy;
+            $.createdBy = createdBy;
             return this;
         }
+
         public Builder createdByType(@Nullable String createdByType) {
-            this.createdByType = createdByType;
+            $.createdByType = createdByType;
             return this;
         }
+
         public Builder lastModifiedAt(@Nullable String lastModifiedAt) {
-            this.lastModifiedAt = lastModifiedAt;
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
+
         public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
-            this.lastModifiedBy = lastModifiedBy;
+            $.lastModifiedBy = lastModifiedBy;
             return this;
         }
+
         public Builder lastModifiedByType(@Nullable String lastModifiedByType) {
-            this.lastModifiedByType = lastModifiedByType;
+            $.lastModifiedByType = lastModifiedByType;
             return this;
-        }        public SystemDataResponse build() {
-            return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
+        }
+
+        public SystemDataResponse build() {
+            return $;
         }
     }
+
 }

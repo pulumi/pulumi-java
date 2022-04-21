@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.inputs.CertificateRawDataArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
     public static final AuthorizedCertificateArgs Empty = new AuthorizedCertificateArgs();
 
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -28,10 +28,10 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="certificateRawData")
-      private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
+    private @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
-    public Output<CertificateRawDataArgs> certificateRawData() {
-        return this.certificateRawData == null ? Codegen.empty() : this.certificateRawData;
+    public Optional<Output<CertificateRawDataArgs>> certificateRawData() {
+        return Optional.ofNullable(this.certificateRawData);
     }
 
     /**
@@ -39,76 +39,69 @@ public final class AuthorizedCertificateArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public AuthorizedCertificateArgs(
-        Output<String> appId,
-        @Nullable Output<CertificateRawDataArgs> certificateRawData,
-        @Nullable Output<String> displayName) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.certificateRawData = certificateRawData;
-        this.displayName = displayName;
-    }
+    private AuthorizedCertificateArgs() {}
 
-    private AuthorizedCertificateArgs() {
-        this.appId = Codegen.empty();
-        this.certificateRawData = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private AuthorizedCertificateArgs(AuthorizedCertificateArgs $) {
+        this.appId = $.appId;
+        this.certificateRawData = $.certificateRawData;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizedCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<CertificateRawDataArgs> certificateRawData;
-        private @Nullable Output<String> displayName;
+        private AuthorizedCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizedCertificateArgs();
         }
 
         public Builder(AuthorizedCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.certificateRawData = defaults.certificateRawData;
-    	      this.displayName = defaults.displayName;
+            $ = new AuthorizedCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder certificateRawData(@Nullable Output<CertificateRawDataArgs> certificateRawData) {
-            this.certificateRawData = certificateRawData;
+            $.certificateRawData = certificateRawData;
             return this;
         }
-        public Builder certificateRawData(@Nullable CertificateRawDataArgs certificateRawData) {
-            this.certificateRawData = Codegen.ofNullable(certificateRawData);
-            return this;
+
+        public Builder certificateRawData(CertificateRawDataArgs certificateRawData) {
+            return certificateRawData(Output.of(certificateRawData));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public AuthorizedCertificateArgs build() {
-            return new AuthorizedCertificateArgs(appId, certificateRawData, displayName);
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public AuthorizedCertificateArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            return $;
         }
     }
+
 }

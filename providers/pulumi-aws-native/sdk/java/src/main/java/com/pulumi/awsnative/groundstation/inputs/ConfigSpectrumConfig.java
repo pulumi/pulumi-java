@@ -17,78 +17,70 @@ public final class ConfigSpectrumConfig extends com.pulumi.resources.InvokeArgs 
     public static final ConfigSpectrumConfig Empty = new ConfigSpectrumConfig();
 
     @Import(name="bandwidth")
-      private final @Nullable ConfigFrequencyBandwidth bandwidth;
+    private @Nullable ConfigFrequencyBandwidth bandwidth;
 
     public Optional<ConfigFrequencyBandwidth> bandwidth() {
-        return this.bandwidth == null ? Optional.empty() : Optional.ofNullable(this.bandwidth);
+        return Optional.ofNullable(this.bandwidth);
     }
 
     @Import(name="centerFrequency")
-      private final @Nullable ConfigFrequency centerFrequency;
+    private @Nullable ConfigFrequency centerFrequency;
 
     public Optional<ConfigFrequency> centerFrequency() {
-        return this.centerFrequency == null ? Optional.empty() : Optional.ofNullable(this.centerFrequency);
+        return Optional.ofNullable(this.centerFrequency);
     }
 
     @Import(name="polarization")
-      private final @Nullable ConfigPolarization polarization;
+    private @Nullable ConfigPolarization polarization;
 
     public Optional<ConfigPolarization> polarization() {
-        return this.polarization == null ? Optional.empty() : Optional.ofNullable(this.polarization);
+        return Optional.ofNullable(this.polarization);
     }
 
-    public ConfigSpectrumConfig(
-        @Nullable ConfigFrequencyBandwidth bandwidth,
-        @Nullable ConfigFrequency centerFrequency,
-        @Nullable ConfigPolarization polarization) {
-        this.bandwidth = bandwidth;
-        this.centerFrequency = centerFrequency;
-        this.polarization = polarization;
-    }
+    private ConfigSpectrumConfig() {}
 
-    private ConfigSpectrumConfig() {
-        this.bandwidth = null;
-        this.centerFrequency = null;
-        this.polarization = null;
+    private ConfigSpectrumConfig(ConfigSpectrumConfig $) {
+        this.bandwidth = $.bandwidth;
+        this.centerFrequency = $.centerFrequency;
+        this.polarization = $.polarization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigSpectrumConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ConfigFrequencyBandwidth bandwidth;
-        private @Nullable ConfigFrequency centerFrequency;
-        private @Nullable ConfigPolarization polarization;
+        private ConfigSpectrumConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigSpectrumConfig();
         }
 
         public Builder(ConfigSpectrumConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bandwidth = defaults.bandwidth;
-    	      this.centerFrequency = defaults.centerFrequency;
-    	      this.polarization = defaults.polarization;
+            $ = new ConfigSpectrumConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder bandwidth(@Nullable ConfigFrequencyBandwidth bandwidth) {
-            this.bandwidth = bandwidth;
+            $.bandwidth = bandwidth;
             return this;
         }
+
         public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
-            this.centerFrequency = centerFrequency;
+            $.centerFrequency = centerFrequency;
             return this;
         }
+
         public Builder polarization(@Nullable ConfigPolarization polarization) {
-            this.polarization = polarization;
+            $.polarization = polarization;
             return this;
-        }        public ConfigSpectrumConfig build() {
-            return new ConfigSpectrumConfig(bandwidth, centerFrequency, polarization);
+        }
+
+        public ConfigSpectrumConfig build() {
+            return $;
         }
     }
+
 }

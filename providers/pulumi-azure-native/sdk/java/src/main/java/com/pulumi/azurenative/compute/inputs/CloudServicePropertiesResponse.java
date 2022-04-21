@@ -29,10 +29,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowModelOverride")
-      private final @Nullable Boolean allowModelOverride;
+    private @Nullable Boolean allowModelOverride;
 
     public Optional<Boolean> allowModelOverride() {
-        return this.allowModelOverride == null ? Optional.empty() : Optional.ofNullable(this.allowModelOverride);
+        return Optional.ofNullable(this.allowModelOverride);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="configuration")
-      private final @Nullable String configuration;
+    private @Nullable String configuration;
 
     public Optional<String> configuration() {
-        return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
+        return Optional.ofNullable(this.configuration);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="configurationUrl")
-      private final @Nullable String configurationUrl;
+    private @Nullable String configurationUrl;
 
     public Optional<String> configurationUrl() {
-        return this.configurationUrl == null ? Optional.empty() : Optional.ofNullable(this.configurationUrl);
+        return Optional.ofNullable(this.configurationUrl);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="extensionProfile")
-      private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
+    private @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
     public Optional<CloudServiceExtensionProfileResponse> extensionProfile() {
-        return this.extensionProfile == null ? Optional.empty() : Optional.ofNullable(this.extensionProfile);
+        return Optional.ofNullable(this.extensionProfile);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="networkProfile")
-      private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
+    private @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
     public Optional<CloudServiceNetworkProfileResponse> networkProfile() {
-        return this.networkProfile == null ? Optional.empty() : Optional.ofNullable(this.networkProfile);
+        return Optional.ofNullable(this.networkProfile);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="osProfile")
-      private final @Nullable CloudServiceOsProfileResponse osProfile;
+    private @Nullable CloudServiceOsProfileResponse osProfile;
 
     public Optional<CloudServiceOsProfileResponse> osProfile() {
-        return this.osProfile == null ? Optional.empty() : Optional.ofNullable(this.osProfile);
+        return Optional.ofNullable(this.osProfile);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="packageUrl")
-      private final @Nullable String packageUrl;
+    private @Nullable String packageUrl;
 
     public Optional<String> packageUrl() {
-        return this.packageUrl == null ? Optional.empty() : Optional.ofNullable(this.packageUrl);
+        return Optional.ofNullable(this.packageUrl);
     }
 
     /**
@@ -108,7 +108,7 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -119,10 +119,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="roleProfile")
-      private final @Nullable CloudServiceRoleProfileResponse roleProfile;
+    private @Nullable CloudServiceRoleProfileResponse roleProfile;
 
     public Optional<CloudServiceRoleProfileResponse> roleProfile() {
-        return this.roleProfile == null ? Optional.empty() : Optional.ofNullable(this.roleProfile);
+        return Optional.ofNullable(this.roleProfile);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="startCloudService")
-      private final @Nullable Boolean startCloudService;
+    private @Nullable Boolean startCloudService;
 
     public Optional<Boolean> startCloudService() {
-        return this.startCloudService == null ? Optional.empty() : Optional.ofNullable(this.startCloudService);
+        return Optional.ofNullable(this.startCloudService);
     }
 
     /**
@@ -142,7 +142,7 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="uniqueId", required=true)
-      private final String uniqueId;
+    private String uniqueId;
 
     public String uniqueId() {
         return this.uniqueId;
@@ -155,145 +155,112 @@ public final class CloudServicePropertiesResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="upgradeMode")
-      private final @Nullable String upgradeMode;
+    private @Nullable String upgradeMode;
 
     public Optional<String> upgradeMode() {
-        return this.upgradeMode == null ? Optional.empty() : Optional.ofNullable(this.upgradeMode);
+        return Optional.ofNullable(this.upgradeMode);
     }
 
-    public CloudServicePropertiesResponse(
-        @Nullable Boolean allowModelOverride,
-        @Nullable String configuration,
-        @Nullable String configurationUrl,
-        @Nullable CloudServiceExtensionProfileResponse extensionProfile,
-        @Nullable CloudServiceNetworkProfileResponse networkProfile,
-        @Nullable CloudServiceOsProfileResponse osProfile,
-        @Nullable String packageUrl,
-        String provisioningState,
-        @Nullable CloudServiceRoleProfileResponse roleProfile,
-        @Nullable Boolean startCloudService,
-        String uniqueId,
-        @Nullable String upgradeMode) {
-        this.allowModelOverride = allowModelOverride;
-        this.configuration = configuration;
-        this.configurationUrl = configurationUrl;
-        this.extensionProfile = extensionProfile;
-        this.networkProfile = networkProfile;
-        this.osProfile = osProfile;
-        this.packageUrl = packageUrl;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.roleProfile = roleProfile;
-        this.startCloudService = startCloudService;
-        this.uniqueId = Objects.requireNonNull(uniqueId, "expected parameter 'uniqueId' to be non-null");
-        this.upgradeMode = upgradeMode;
-    }
+    private CloudServicePropertiesResponse() {}
 
-    private CloudServicePropertiesResponse() {
-        this.allowModelOverride = null;
-        this.configuration = null;
-        this.configurationUrl = null;
-        this.extensionProfile = null;
-        this.networkProfile = null;
-        this.osProfile = null;
-        this.packageUrl = null;
-        this.provisioningState = null;
-        this.roleProfile = null;
-        this.startCloudService = null;
-        this.uniqueId = null;
-        this.upgradeMode = null;
+    private CloudServicePropertiesResponse(CloudServicePropertiesResponse $) {
+        this.allowModelOverride = $.allowModelOverride;
+        this.configuration = $.configuration;
+        this.configurationUrl = $.configurationUrl;
+        this.extensionProfile = $.extensionProfile;
+        this.networkProfile = $.networkProfile;
+        this.osProfile = $.osProfile;
+        this.packageUrl = $.packageUrl;
+        this.provisioningState = $.provisioningState;
+        this.roleProfile = $.roleProfile;
+        this.startCloudService = $.startCloudService;
+        this.uniqueId = $.uniqueId;
+        this.upgradeMode = $.upgradeMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServicePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allowModelOverride;
-        private @Nullable String configuration;
-        private @Nullable String configurationUrl;
-        private @Nullable CloudServiceExtensionProfileResponse extensionProfile;
-        private @Nullable CloudServiceNetworkProfileResponse networkProfile;
-        private @Nullable CloudServiceOsProfileResponse osProfile;
-        private @Nullable String packageUrl;
-        private String provisioningState;
-        private @Nullable CloudServiceRoleProfileResponse roleProfile;
-        private @Nullable Boolean startCloudService;
-        private String uniqueId;
-        private @Nullable String upgradeMode;
+        private CloudServicePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServicePropertiesResponse();
         }
 
         public Builder(CloudServicePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowModelOverride = defaults.allowModelOverride;
-    	      this.configuration = defaults.configuration;
-    	      this.configurationUrl = defaults.configurationUrl;
-    	      this.extensionProfile = defaults.extensionProfile;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.osProfile = defaults.osProfile;
-    	      this.packageUrl = defaults.packageUrl;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.roleProfile = defaults.roleProfile;
-    	      this.startCloudService = defaults.startCloudService;
-    	      this.uniqueId = defaults.uniqueId;
-    	      this.upgradeMode = defaults.upgradeMode;
+            $ = new CloudServicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowModelOverride(@Nullable Boolean allowModelOverride) {
-            this.allowModelOverride = allowModelOverride;
+            $.allowModelOverride = allowModelOverride;
             return this;
         }
+
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = configuration;
+            $.configuration = configuration;
             return this;
         }
+
         public Builder configurationUrl(@Nullable String configurationUrl) {
-            this.configurationUrl = configurationUrl;
+            $.configurationUrl = configurationUrl;
             return this;
         }
+
         public Builder extensionProfile(@Nullable CloudServiceExtensionProfileResponse extensionProfile) {
-            this.extensionProfile = extensionProfile;
+            $.extensionProfile = extensionProfile;
             return this;
         }
+
         public Builder networkProfile(@Nullable CloudServiceNetworkProfileResponse networkProfile) {
-            this.networkProfile = networkProfile;
+            $.networkProfile = networkProfile;
             return this;
         }
+
         public Builder osProfile(@Nullable CloudServiceOsProfileResponse osProfile) {
-            this.osProfile = osProfile;
+            $.osProfile = osProfile;
             return this;
         }
+
         public Builder packageUrl(@Nullable String packageUrl) {
-            this.packageUrl = packageUrl;
+            $.packageUrl = packageUrl;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder roleProfile(@Nullable CloudServiceRoleProfileResponse roleProfile) {
-            this.roleProfile = roleProfile;
+            $.roleProfile = roleProfile;
             return this;
         }
+
         public Builder startCloudService(@Nullable Boolean startCloudService) {
-            this.startCloudService = startCloudService;
+            $.startCloudService = startCloudService;
             return this;
         }
+
         public Builder uniqueId(String uniqueId) {
-            this.uniqueId = Objects.requireNonNull(uniqueId);
+            $.uniqueId = uniqueId;
             return this;
         }
+
         public Builder upgradeMode(@Nullable String upgradeMode) {
-            this.upgradeMode = upgradeMode;
+            $.upgradeMode = upgradeMode;
             return this;
-        }        public CloudServicePropertiesResponse build() {
-            return new CloudServicePropertiesResponse(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, provisioningState, roleProfile, startCloudService, uniqueId, upgradeMode);
+        }
+
+        public CloudServicePropertiesResponse build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.uniqueId = Objects.requireNonNull($.uniqueId, "expected parameter 'uniqueId' to be non-null");
+            return $;
         }
     }
+
 }

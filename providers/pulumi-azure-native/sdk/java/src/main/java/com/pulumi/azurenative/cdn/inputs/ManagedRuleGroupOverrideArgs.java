@@ -6,10 +6,10 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.ManagedRuleOverrideArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class ManagedRuleGroupOverrideArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ruleGroupName", required=true)
-      private final Output<String> ruleGroupName;
+    private Output<String> ruleGroupName;
 
     public Output<String> ruleGroupName() {
         return this.ruleGroupName;
@@ -37,66 +37,63 @@ public final class ManagedRuleGroupOverrideArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
+    private @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
-    public Output<List<ManagedRuleOverrideArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<ManagedRuleOverrideArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public ManagedRuleGroupOverrideArgs(
-        Output<String> ruleGroupName,
-        @Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
-        this.ruleGroupName = Objects.requireNonNull(ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
-        this.rules = rules;
-    }
+    private ManagedRuleGroupOverrideArgs() {}
 
-    private ManagedRuleGroupOverrideArgs() {
-        this.ruleGroupName = Codegen.empty();
-        this.rules = Codegen.empty();
+    private ManagedRuleGroupOverrideArgs(ManagedRuleGroupOverrideArgs $) {
+        this.ruleGroupName = $.ruleGroupName;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedRuleGroupOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> ruleGroupName;
-        private @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
+        private ManagedRuleGroupOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedRuleGroupOverrideArgs();
         }
 
         public Builder(ManagedRuleGroupOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ruleGroupName = defaults.ruleGroupName;
-    	      this.rules = defaults.rules;
+            $ = new ManagedRuleGroupOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ruleGroupName(Output<String> ruleGroupName) {
-            this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
+            $.ruleGroupName = ruleGroupName;
             return this;
         }
+
         public Builder ruleGroupName(String ruleGroupName) {
-            this.ruleGroupName = Output.of(Objects.requireNonNull(ruleGroupName));
-            return this;
+            return ruleGroupName(Output.of(ruleGroupName));
         }
+
         public Builder rules(@Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<ManagedRuleOverrideArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<ManagedRuleOverrideArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(ManagedRuleOverrideArgs... rules) {
             return rules(List.of(rules));
-        }        public ManagedRuleGroupOverrideArgs build() {
-            return new ManagedRuleGroupOverrideArgs(ruleGroupName, rules);
+        }
+
+        public ManagedRuleGroupOverrideArgs build() {
+            $.ruleGroupName = Objects.requireNonNull($.ruleGroupName, "expected parameter 'ruleGroupName' to be non-null");
+            return $;
         }
     }
+
 }

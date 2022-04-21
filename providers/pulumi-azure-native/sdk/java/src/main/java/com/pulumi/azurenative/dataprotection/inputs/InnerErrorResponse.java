@@ -24,10 +24,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="additionalInfo")
-      private final @Nullable Map<String,String> additionalInfo;
+    private @Nullable Map<String,String> additionalInfo;
 
-    public Map<String,String> additionalInfo() {
-        return this.additionalInfo == null ? Map.of() : this.additionalInfo;
+    public Optional<Map<String,String>> additionalInfo() {
+        return Optional.ofNullable(this.additionalInfo);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="code")
-      private final @Nullable String code;
+    private @Nullable String code;
 
     public Optional<String> code() {
-        return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
+        return Optional.ofNullable(this.code);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class InnerErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="embeddedInnerError")
-      private final @Nullable InnerErrorResponse embeddedInnerError;
+    private @Nullable InnerErrorResponse embeddedInnerError;
 
     public Optional<InnerErrorResponse> embeddedInnerError() {
-        return this.embeddedInnerError == null ? Optional.empty() : Optional.ofNullable(this.embeddedInnerError);
+        return Optional.ofNullable(this.embeddedInnerError);
     }
 
-    public InnerErrorResponse(
-        @Nullable Map<String,String> additionalInfo,
-        @Nullable String code,
-        @Nullable InnerErrorResponse embeddedInnerError) {
-        this.additionalInfo = additionalInfo;
-        this.code = code;
-        this.embeddedInnerError = embeddedInnerError;
-    }
+    private InnerErrorResponse() {}
 
-    private InnerErrorResponse() {
-        this.additionalInfo = Map.of();
-        this.code = null;
-        this.embeddedInnerError = null;
+    private InnerErrorResponse(InnerErrorResponse $) {
+        this.additionalInfo = $.additionalInfo;
+        this.code = $.code;
+        this.embeddedInnerError = $.embeddedInnerError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InnerErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> additionalInfo;
-        private @Nullable String code;
-        private @Nullable InnerErrorResponse embeddedInnerError;
+        private InnerErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InnerErrorResponse();
         }
 
         public Builder(InnerErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalInfo = defaults.additionalInfo;
-    	      this.code = defaults.code;
-    	      this.embeddedInnerError = defaults.embeddedInnerError;
+            $ = new InnerErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalInfo(@Nullable Map<String,String> additionalInfo) {
-            this.additionalInfo = additionalInfo;
+            $.additionalInfo = additionalInfo;
             return this;
         }
+
         public Builder code(@Nullable String code) {
-            this.code = code;
+            $.code = code;
             return this;
         }
+
         public Builder embeddedInnerError(@Nullable InnerErrorResponse embeddedInnerError) {
-            this.embeddedInnerError = embeddedInnerError;
+            $.embeddedInnerError = embeddedInnerError;
             return this;
-        }        public InnerErrorResponse build() {
-            return new InnerErrorResponse(additionalInfo, code, embeddedInnerError);
+        }
+
+        public InnerErrorResponse build() {
+            return $;
         }
     }
+
 }

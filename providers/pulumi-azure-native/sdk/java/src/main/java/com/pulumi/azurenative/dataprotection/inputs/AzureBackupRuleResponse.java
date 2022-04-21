@@ -29,10 +29,10 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="backupParameters")
-      private final @Nullable AzureBackupParamsResponse backupParameters;
+    private @Nullable AzureBackupParamsResponse backupParameters;
 
     public Optional<AzureBackupParamsResponse> backupParameters() {
-        return this.backupParameters == null ? Optional.empty() : Optional.ofNullable(this.backupParameters);
+        return Optional.ofNullable(this.backupParameters);
     }
 
     /**
@@ -40,14 +40,14 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dataStore", required=true)
-      private final DataStoreInfoBaseResponse dataStore;
+    private DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse dataStore() {
         return this.dataStore;
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,7 +58,7 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -69,82 +69,72 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trigger", required=true)
-      private final Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
+    private Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
 
     public Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger() {
         return this.trigger;
     }
 
-    public AzureBackupRuleResponse(
-        @Nullable AzureBackupParamsResponse backupParameters,
-        DataStoreInfoBaseResponse dataStore,
-        String name,
-        String objectType,
-        Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
-        this.backupParameters = backupParameters;
-        this.dataStore = Objects.requireNonNull(dataStore, "expected parameter 'dataStore' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.objectType = Codegen.stringProp("objectType").arg(objectType).require();
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private AzureBackupRuleResponse() {}
 
-    private AzureBackupRuleResponse() {
-        this.backupParameters = null;
-        this.dataStore = null;
-        this.name = null;
-        this.objectType = null;
-        this.trigger = null;
+    private AzureBackupRuleResponse(AzureBackupRuleResponse $) {
+        this.backupParameters = $.backupParameters;
+        this.dataStore = $.dataStore;
+        this.name = $.name;
+        this.objectType = $.objectType;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureBackupRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable AzureBackupParamsResponse backupParameters;
-        private DataStoreInfoBaseResponse dataStore;
-        private String name;
-        private String objectType;
-        private Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger;
+        private AzureBackupRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureBackupRuleResponse();
         }
 
         public Builder(AzureBackupRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupParameters = defaults.backupParameters;
-    	      this.dataStore = defaults.dataStore;
-    	      this.name = defaults.name;
-    	      this.objectType = defaults.objectType;
-    	      this.trigger = defaults.trigger;
+            $ = new AzureBackupRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupParameters(@Nullable AzureBackupParamsResponse backupParameters) {
-            this.backupParameters = backupParameters;
+            $.backupParameters = backupParameters;
             return this;
         }
+
         public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
-            this.dataStore = Objects.requireNonNull(dataStore);
+            $.dataStore = dataStore;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder trigger(Either<AdhocBasedTriggerContextResponse,ScheduleBasedTriggerContextResponse> trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
-        }        public AzureBackupRuleResponse build() {
-            return new AzureBackupRuleResponse(backupParameters, dataStore, name, objectType, trigger);
+        }
+
+        public AzureBackupRuleResponse build() {
+            $.dataStore = Objects.requireNonNull($.dataStore, "expected parameter 'dataStore' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.objectType = Codegen.stringProp("objectType").arg($.objectType).require();
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

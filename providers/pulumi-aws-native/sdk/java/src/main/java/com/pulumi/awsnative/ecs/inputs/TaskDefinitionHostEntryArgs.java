@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ecs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class TaskDefinitionHostEntryArgs extends com.pulumi.resources.Reso
     public static final TaskDefinitionHostEntryArgs Empty = new TaskDefinitionHostEntryArgs();
 
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
-    public TaskDefinitionHostEntryArgs(
-        @Nullable Output<String> hostname,
-        @Nullable Output<String> ipAddress) {
-        this.hostname = hostname;
-        this.ipAddress = ipAddress;
-    }
+    private TaskDefinitionHostEntryArgs() {}
 
-    private TaskDefinitionHostEntryArgs() {
-        this.hostname = Codegen.empty();
-        this.ipAddress = Codegen.empty();
+    private TaskDefinitionHostEntryArgs(TaskDefinitionHostEntryArgs $) {
+        this.hostname = $.hostname;
+        this.ipAddress = $.ipAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TaskDefinitionHostEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostname;
-        private @Nullable Output<String> ipAddress;
+        private TaskDefinitionHostEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TaskDefinitionHostEntryArgs();
         }
 
         public Builder(TaskDefinitionHostEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.ipAddress = defaults.ipAddress;
+            $ = new TaskDefinitionHostEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
-        }        public TaskDefinitionHostEntryArgs build() {
-            return new TaskDefinitionHostEntryArgs(hostname, ipAddress);
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
+        }
+
+        public TaskDefinitionHostEntryArgs build() {
+            return $;
         }
     }
+
 }

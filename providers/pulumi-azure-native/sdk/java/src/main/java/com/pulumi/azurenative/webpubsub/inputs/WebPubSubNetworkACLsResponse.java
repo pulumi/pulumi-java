@@ -27,10 +27,10 @@ public final class WebPubSubNetworkACLsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="defaultAction")
-      private final @Nullable String defaultAction;
+    private @Nullable String defaultAction;
 
     public Optional<String> defaultAction() {
-        return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
+        return Optional.ofNullable(this.defaultAction);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class WebPubSubNetworkACLsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="privateEndpoints")
-      private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
+    private @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
-    public List<PrivateEndpointACLResponse> privateEndpoints() {
-        return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
+    public Optional<List<PrivateEndpointACLResponse>> privateEndpoints() {
+        return Optional.ofNullable(this.privateEndpoints);
     }
 
     /**
@@ -49,67 +49,61 @@ public final class WebPubSubNetworkACLsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="publicNetwork")
-      private final @Nullable NetworkACLResponse publicNetwork;
+    private @Nullable NetworkACLResponse publicNetwork;
 
     public Optional<NetworkACLResponse> publicNetwork() {
-        return this.publicNetwork == null ? Optional.empty() : Optional.ofNullable(this.publicNetwork);
+        return Optional.ofNullable(this.publicNetwork);
     }
 
-    public WebPubSubNetworkACLsResponse(
-        @Nullable String defaultAction,
-        @Nullable List<PrivateEndpointACLResponse> privateEndpoints,
-        @Nullable NetworkACLResponse publicNetwork) {
-        this.defaultAction = Codegen.stringProp("defaultAction").arg(defaultAction).def("Deny").getNullable();
-        this.privateEndpoints = privateEndpoints;
-        this.publicNetwork = publicNetwork;
-    }
+    private WebPubSubNetworkACLsResponse() {}
 
-    private WebPubSubNetworkACLsResponse() {
-        this.defaultAction = null;
-        this.privateEndpoints = List.of();
-        this.publicNetwork = null;
+    private WebPubSubNetworkACLsResponse(WebPubSubNetworkACLsResponse $) {
+        this.defaultAction = $.defaultAction;
+        this.privateEndpoints = $.privateEndpoints;
+        this.publicNetwork = $.publicNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubNetworkACLsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String defaultAction;
-        private @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
-        private @Nullable NetworkACLResponse publicNetwork;
+        private WebPubSubNetworkACLsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubNetworkACLsResponse();
         }
 
         public Builder(WebPubSubNetworkACLsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultAction = defaults.defaultAction;
-    	      this.privateEndpoints = defaults.privateEndpoints;
-    	      this.publicNetwork = defaults.publicNetwork;
+            $ = new WebPubSubNetworkACLsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultAction(@Nullable String defaultAction) {
-            this.defaultAction = defaultAction;
+            $.defaultAction = defaultAction;
             return this;
         }
+
         public Builder privateEndpoints(@Nullable List<PrivateEndpointACLResponse> privateEndpoints) {
-            this.privateEndpoints = privateEndpoints;
+            $.privateEndpoints = privateEndpoints;
             return this;
         }
+
         public Builder privateEndpoints(PrivateEndpointACLResponse... privateEndpoints) {
             return privateEndpoints(List.of(privateEndpoints));
         }
+
         public Builder publicNetwork(@Nullable NetworkACLResponse publicNetwork) {
-            this.publicNetwork = publicNetwork;
+            $.publicNetwork = publicNetwork;
             return this;
-        }        public WebPubSubNetworkACLsResponse build() {
-            return new WebPubSubNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
+        }
+
+        public WebPubSubNetworkACLsResponse build() {
+            $.defaultAction = Codegen.stringProp("defaultAction").arg($.defaultAction).def("Deny").getNullable();
+            return $;
         }
     }
+
 }

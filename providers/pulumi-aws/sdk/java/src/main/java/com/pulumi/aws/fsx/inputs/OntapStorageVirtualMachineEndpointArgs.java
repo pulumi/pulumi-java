@@ -9,9 +9,9 @@ import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointNfArgs;
 import com.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointSmbArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends com.pulumi.res
      * 
      */
     @Import(name="iscses")
-      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
+    private @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
 
-    public Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses() {
-        return this.iscses == null ? Codegen.empty() : this.iscses;
+    public Optional<Output<List<OntapStorageVirtualMachineEndpointIscseArgs>>> iscses() {
+        return Optional.ofNullable(this.iscses);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends com.pulumi.res
      * 
      */
     @Import(name="managements")
-      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
+    private @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
 
-    public Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements() {
-        return this.managements == null ? Codegen.empty() : this.managements;
+    public Optional<Output<List<OntapStorageVirtualMachineEndpointManagementArgs>>> managements() {
+        return Optional.ofNullable(this.managements);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class OntapStorageVirtualMachineEndpointArgs extends com.pulumi.res
      * 
      */
     @Import(name="nfs")
-      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
+    private @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
 
-    public Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs() {
-        return this.nfs == null ? Codegen.empty() : this.nfs;
+    public Optional<Output<List<OntapStorageVirtualMachineEndpointNfArgs>>> nfs() {
+        return Optional.ofNullable(this.nfs);
     }
 
     /**
@@ -57,101 +57,94 @@ public final class OntapStorageVirtualMachineEndpointArgs extends com.pulumi.res
      * 
      */
     @Import(name="smbs")
-      private final @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
+    private @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
 
-    public Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs() {
-        return this.smbs == null ? Codegen.empty() : this.smbs;
+    public Optional<Output<List<OntapStorageVirtualMachineEndpointSmbArgs>>> smbs() {
+        return Optional.ofNullable(this.smbs);
     }
 
-    public OntapStorageVirtualMachineEndpointArgs(
-        @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses,
-        @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements,
-        @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs,
-        @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
-        this.iscses = iscses;
-        this.managements = managements;
-        this.nfs = nfs;
-        this.smbs = smbs;
-    }
+    private OntapStorageVirtualMachineEndpointArgs() {}
 
-    private OntapStorageVirtualMachineEndpointArgs() {
-        this.iscses = Codegen.empty();
-        this.managements = Codegen.empty();
-        this.nfs = Codegen.empty();
-        this.smbs = Codegen.empty();
+    private OntapStorageVirtualMachineEndpointArgs(OntapStorageVirtualMachineEndpointArgs $) {
+        this.iscses = $.iscses;
+        this.managements = $.managements;
+        this.nfs = $.nfs;
+        this.smbs = $.smbs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OntapStorageVirtualMachineEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses;
-        private @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements;
-        private @Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs;
-        private @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs;
+        private OntapStorageVirtualMachineEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OntapStorageVirtualMachineEndpointArgs();
         }
 
         public Builder(OntapStorageVirtualMachineEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iscses = defaults.iscses;
-    	      this.managements = defaults.managements;
-    	      this.nfs = defaults.nfs;
-    	      this.smbs = defaults.smbs;
+            $ = new OntapStorageVirtualMachineEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iscses(@Nullable Output<List<OntapStorageVirtualMachineEndpointIscseArgs>> iscses) {
-            this.iscses = iscses;
+            $.iscses = iscses;
             return this;
         }
-        public Builder iscses(@Nullable List<OntapStorageVirtualMachineEndpointIscseArgs> iscses) {
-            this.iscses = Codegen.ofNullable(iscses);
-            return this;
+
+        public Builder iscses(List<OntapStorageVirtualMachineEndpointIscseArgs> iscses) {
+            return iscses(Output.of(iscses));
         }
+
         public Builder iscses(OntapStorageVirtualMachineEndpointIscseArgs... iscses) {
             return iscses(List.of(iscses));
         }
+
         public Builder managements(@Nullable Output<List<OntapStorageVirtualMachineEndpointManagementArgs>> managements) {
-            this.managements = managements;
+            $.managements = managements;
             return this;
         }
-        public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagementArgs> managements) {
-            this.managements = Codegen.ofNullable(managements);
-            return this;
+
+        public Builder managements(List<OntapStorageVirtualMachineEndpointManagementArgs> managements) {
+            return managements(Output.of(managements));
         }
+
         public Builder managements(OntapStorageVirtualMachineEndpointManagementArgs... managements) {
             return managements(List.of(managements));
         }
+
         public Builder nfs(@Nullable Output<List<OntapStorageVirtualMachineEndpointNfArgs>> nfs) {
-            this.nfs = nfs;
+            $.nfs = nfs;
             return this;
         }
-        public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNfArgs> nfs) {
-            this.nfs = Codegen.ofNullable(nfs);
-            return this;
+
+        public Builder nfs(List<OntapStorageVirtualMachineEndpointNfArgs> nfs) {
+            return nfs(Output.of(nfs));
         }
+
         public Builder nfs(OntapStorageVirtualMachineEndpointNfArgs... nfs) {
             return nfs(List.of(nfs));
         }
+
         public Builder smbs(@Nullable Output<List<OntapStorageVirtualMachineEndpointSmbArgs>> smbs) {
-            this.smbs = smbs;
+            $.smbs = smbs;
             return this;
         }
-        public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmbArgs> smbs) {
-            this.smbs = Codegen.ofNullable(smbs);
-            return this;
+
+        public Builder smbs(List<OntapStorageVirtualMachineEndpointSmbArgs> smbs) {
+            return smbs(Output.of(smbs));
         }
+
         public Builder smbs(OntapStorageVirtualMachineEndpointSmbArgs... smbs) {
             return smbs(List.of(smbs));
-        }        public OntapStorageVirtualMachineEndpointArgs build() {
-            return new OntapStorageVirtualMachineEndpointArgs(iscses, managements, nfs, smbs);
+        }
+
+        public OntapStorageVirtualMachineEndpointArgs build() {
+            return $;
         }
     }
+
 }

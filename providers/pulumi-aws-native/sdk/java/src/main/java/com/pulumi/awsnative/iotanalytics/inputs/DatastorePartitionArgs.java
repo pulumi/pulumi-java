@@ -6,8 +6,8 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 import com.pulumi.awsnative.iotanalytics.inputs.DatastoreTimestampPartitionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class DatastorePartitionArgs extends com.pulumi.resources.ResourceA
     public static final DatastorePartitionArgs Empty = new DatastorePartitionArgs();
 
     @Import(name="partition")
-      private final @Nullable Output<DatastorePartitionArgs> partition;
+    private @Nullable Output<DatastorePartitionArgs> partition;
 
-    public Output<DatastorePartitionArgs> partition() {
-        return this.partition == null ? Codegen.empty() : this.partition;
+    public Optional<Output<DatastorePartitionArgs>> partition() {
+        return Optional.ofNullable(this.partition);
     }
 
     @Import(name="timestampPartition")
-      private final @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition;
+    private @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition;
 
-    public Output<DatastoreTimestampPartitionArgs> timestampPartition() {
-        return this.timestampPartition == null ? Codegen.empty() : this.timestampPartition;
+    public Optional<Output<DatastoreTimestampPartitionArgs>> timestampPartition() {
+        return Optional.ofNullable(this.timestampPartition);
     }
 
-    public DatastorePartitionArgs(
-        @Nullable Output<DatastorePartitionArgs> partition,
-        @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition) {
-        this.partition = partition;
-        this.timestampPartition = timestampPartition;
-    }
+    private DatastorePartitionArgs() {}
 
-    private DatastorePartitionArgs() {
-        this.partition = Codegen.empty();
-        this.timestampPartition = Codegen.empty();
+    private DatastorePartitionArgs(DatastorePartitionArgs $) {
+        this.partition = $.partition;
+        this.timestampPartition = $.timestampPartition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatastorePartitionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatastorePartitionArgs> partition;
-        private @Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition;
+        private DatastorePartitionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatastorePartitionArgs();
         }
 
         public Builder(DatastorePartitionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partition = defaults.partition;
-    	      this.timestampPartition = defaults.timestampPartition;
+            $ = new DatastorePartitionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partition(@Nullable Output<DatastorePartitionArgs> partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
-        public Builder partition(@Nullable DatastorePartitionArgs partition) {
-            this.partition = Codegen.ofNullable(partition);
-            return this;
+
+        public Builder partition(DatastorePartitionArgs partition) {
+            return partition(Output.of(partition));
         }
+
         public Builder timestampPartition(@Nullable Output<DatastoreTimestampPartitionArgs> timestampPartition) {
-            this.timestampPartition = timestampPartition;
+            $.timestampPartition = timestampPartition;
             return this;
         }
-        public Builder timestampPartition(@Nullable DatastoreTimestampPartitionArgs timestampPartition) {
-            this.timestampPartition = Codegen.ofNullable(timestampPartition);
-            return this;
-        }        public DatastorePartitionArgs build() {
-            return new DatastorePartitionArgs(partition, timestampPartition);
+
+        public Builder timestampPartition(DatastoreTimestampPartitionArgs timestampPartition) {
+            return timestampPartition(Output.of(timestampPartition));
+        }
+
+        public DatastorePartitionArgs build() {
+            return $;
         }
     }
+
 }

@@ -16,12 +16,12 @@ import com.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllo
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customRdpProperty")
-      private final @Nullable Output<String> customRdpProperty;
+    private @Nullable Output<String> customRdpProperty;
 
-    public Output<String> customRdpProperty() {
-        return this.customRdpProperty == null ? Codegen.empty() : this.customRdpProperty;
+    public Optional<Output<String>> customRdpProperty() {
+        return Optional.ofNullable(this.customRdpProperty);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable Output<String> friendlyName;
+    private @Nullable Output<String> friendlyName;
 
-    public Output<String> friendlyName() {
-        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
+    public Optional<Output<String>> friendlyName() {
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPoolName")
-      private final @Nullable Output<String> hostPoolName;
+    private @Nullable Output<String> hostPoolName;
 
-    public Output<String> hostPoolName() {
-        return this.hostPoolName == null ? Codegen.empty() : this.hostPoolName;
+    public Optional<Output<String>> hostPoolName() {
+        return Optional.ofNullable(this.hostPoolName);
     }
 
     /**
@@ -78,17 +78,17 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPoolType", required=true)
-      private final Output<Either<String,HostPoolType>> hostPoolType;
+    private Output<Either<String,HostPoolType>> hostPoolType;
 
     public Output<Either<String,HostPoolType>> hostPoolType() {
         return this.hostPoolType;
     }
 
     @Import(name="identity")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
-    public Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ResourceModelWithAllowedPropertySetIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="loadBalancerType", required=true)
-      private final Output<Either<String,LoadBalancerType>> loadBalancerType;
+    private Output<Either<String,LoadBalancerType>> loadBalancerType;
 
     public Output<Either<String,LoadBalancerType>> loadBalancerType() {
         return this.loadBalancerType;
@@ -118,10 +118,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -129,10 +129,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedBy")
-      private final @Nullable Output<String> managedBy;
+    private @Nullable Output<String> managedBy;
 
-    public Output<String> managedBy() {
-        return this.managedBy == null ? Codegen.empty() : this.managedBy;
+    public Optional<Output<String>> managedBy() {
+        return Optional.ofNullable(this.managedBy);
     }
 
     /**
@@ -140,10 +140,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSessionLimit")
-      private final @Nullable Output<Integer> maxSessionLimit;
+    private @Nullable Output<Integer> maxSessionLimit;
 
-    public Output<Integer> maxSessionLimit() {
-        return this.maxSessionLimit == null ? Codegen.empty() : this.maxSessionLimit;
+    public Optional<Output<Integer>> maxSessionLimit() {
+        return Optional.ofNullable(this.maxSessionLimit);
     }
 
     /**
@@ -151,10 +151,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="migrationRequest")
-      private final @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
+    private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
 
-    public Output<MigrationRequestPropertiesArgs> migrationRequest() {
-        return this.migrationRequest == null ? Codegen.empty() : this.migrationRequest;
+    public Optional<Output<MigrationRequestPropertiesArgs>> migrationRequest() {
+        return Optional.ofNullable(this.migrationRequest);
     }
 
     /**
@@ -162,17 +162,17 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="personalDesktopAssignmentType")
-      private final @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
+    private @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
 
-    public Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType() {
-        return this.personalDesktopAssignmentType == null ? Codegen.empty() : this.personalDesktopAssignmentType;
+    public Optional<Output<Either<String,PersonalDesktopAssignmentType>>> personalDesktopAssignmentType() {
+        return Optional.ofNullable(this.personalDesktopAssignmentType);
     }
 
     @Import(name="plan")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
-    public Output<ResourceModelWithAllowedPropertySetPlanArgs> plan() {
-        return this.plan == null ? Codegen.empty() : this.plan;
+    public Optional<Output<ResourceModelWithAllowedPropertySetPlanArgs>> plan() {
+        return Optional.ofNullable(this.plan);
     }
 
     /**
@@ -180,7 +180,7 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="preferredAppGroupType", required=true)
-      private final Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
+    private Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
 
     public Output<Either<String,PreferredAppGroupType>> preferredAppGroupType() {
         return this.preferredAppGroupType;
@@ -191,10 +191,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="registrationInfo")
-      private final @Nullable Output<RegistrationInfoArgs> registrationInfo;
+    private @Nullable Output<RegistrationInfoArgs> registrationInfo;
 
-    public Output<RegistrationInfoArgs> registrationInfo() {
-        return this.registrationInfo == null ? Codegen.empty() : this.registrationInfo;
+    public Optional<Output<RegistrationInfoArgs>> registrationInfo() {
+        return Optional.ofNullable(this.registrationInfo);
     }
 
     /**
@@ -202,7 +202,7 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -213,17 +213,17 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ring")
-      private final @Nullable Output<Integer> ring;
+    private @Nullable Output<Integer> ring;
 
-    public Output<Integer> ring() {
-        return this.ring == null ? Codegen.empty() : this.ring;
+    public Optional<Output<Integer>> ring() {
+        return Optional.ofNullable(this.ring);
     }
 
     @Import(name="sku")
-      private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+    private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
-    public Output<ResourceModelWithAllowedPropertySetSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ResourceModelWithAllowedPropertySetSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ssoClientId")
-      private final @Nullable Output<String> ssoClientId;
+    private @Nullable Output<String> ssoClientId;
 
-    public Output<String> ssoClientId() {
-        return this.ssoClientId == null ? Codegen.empty() : this.ssoClientId;
+    public Optional<Output<String>> ssoClientId() {
+        return Optional.ofNullable(this.ssoClientId);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ssoClientSecretKeyVaultPath")
-      private final @Nullable Output<String> ssoClientSecretKeyVaultPath;
+    private @Nullable Output<String> ssoClientSecretKeyVaultPath;
 
-    public Output<String> ssoClientSecretKeyVaultPath() {
-        return this.ssoClientSecretKeyVaultPath == null ? Codegen.empty() : this.ssoClientSecretKeyVaultPath;
+    public Optional<Output<String>> ssoClientSecretKeyVaultPath() {
+        return Optional.ofNullable(this.ssoClientSecretKeyVaultPath);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ssoSecretType")
-      private final @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
+    private @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
 
-    public Output<Either<String,SSOSecretType>> ssoSecretType() {
-        return this.ssoSecretType == null ? Codegen.empty() : this.ssoSecretType;
+    public Optional<Output<Either<String,SSOSecretType>>> ssoSecretType() {
+        return Optional.ofNullable(this.ssoSecretType);
     }
 
     /**
@@ -264,10 +264,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ssoadfsAuthority")
-      private final @Nullable Output<String> ssoadfsAuthority;
+    private @Nullable Output<String> ssoadfsAuthority;
 
-    public Output<String> ssoadfsAuthority() {
-        return this.ssoadfsAuthority == null ? Codegen.empty() : this.ssoadfsAuthority;
+    public Optional<Output<String>> ssoadfsAuthority() {
+        return Optional.ofNullable(this.ssoadfsAuthority);
     }
 
     /**
@@ -275,10 +275,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startVMOnConnect")
-      private final @Nullable Output<Boolean> startVMOnConnect;
+    private @Nullable Output<Boolean> startVMOnConnect;
 
-    public Output<Boolean> startVMOnConnect() {
-        return this.startVMOnConnect == null ? Codegen.empty() : this.startVMOnConnect;
+    public Optional<Output<Boolean>> startVMOnConnect() {
+        return Optional.ofNullable(this.startVMOnConnect);
     }
 
     /**
@@ -286,10 +286,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -297,10 +297,10 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationEnvironment")
-      private final @Nullable Output<Boolean> validationEnvironment;
+    private @Nullable Output<Boolean> validationEnvironment;
 
-    public Output<Boolean> validationEnvironment() {
-        return this.validationEnvironment == null ? Codegen.empty() : this.validationEnvironment;
+    public Optional<Output<Boolean>> validationEnvironment() {
+        return Optional.ofNullable(this.validationEnvironment);
     }
 
     /**
@@ -308,388 +308,312 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vmTemplate")
-      private final @Nullable Output<String> vmTemplate;
+    private @Nullable Output<String> vmTemplate;
 
-    public Output<String> vmTemplate() {
-        return this.vmTemplate == null ? Codegen.empty() : this.vmTemplate;
+    public Optional<Output<String>> vmTemplate() {
+        return Optional.ofNullable(this.vmTemplate);
     }
 
-    public HostPoolArgs(
-        @Nullable Output<String> customRdpProperty,
-        @Nullable Output<String> description,
-        @Nullable Output<String> friendlyName,
-        @Nullable Output<String> hostPoolName,
-        Output<Either<String,HostPoolType>> hostPoolType,
-        @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity,
-        @Nullable Output<String> kind,
-        Output<Either<String,LoadBalancerType>> loadBalancerType,
-        @Nullable Output<String> location,
-        @Nullable Output<String> managedBy,
-        @Nullable Output<Integer> maxSessionLimit,
-        @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest,
-        @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType,
-        @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan,
-        Output<Either<String,PreferredAppGroupType>> preferredAppGroupType,
-        @Nullable Output<RegistrationInfoArgs> registrationInfo,
-        Output<String> resourceGroupName,
-        @Nullable Output<Integer> ring,
-        @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku,
-        @Nullable Output<String> ssoClientId,
-        @Nullable Output<String> ssoClientSecretKeyVaultPath,
-        @Nullable Output<Either<String,SSOSecretType>> ssoSecretType,
-        @Nullable Output<String> ssoadfsAuthority,
-        @Nullable Output<Boolean> startVMOnConnect,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Boolean> validationEnvironment,
-        @Nullable Output<String> vmTemplate) {
-        this.customRdpProperty = customRdpProperty;
-        this.description = description;
-        this.friendlyName = friendlyName;
-        this.hostPoolName = hostPoolName;
-        this.hostPoolType = Objects.requireNonNull(hostPoolType, "expected parameter 'hostPoolType' to be non-null");
-        this.identity = identity;
-        this.kind = kind;
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
-        this.location = location;
-        this.managedBy = managedBy;
-        this.maxSessionLimit = maxSessionLimit;
-        this.migrationRequest = migrationRequest;
-        this.personalDesktopAssignmentType = personalDesktopAssignmentType;
-        this.plan = plan;
-        this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType, "expected parameter 'preferredAppGroupType' to be non-null");
-        this.registrationInfo = registrationInfo;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.ring = ring;
-        this.sku = sku;
-        this.ssoClientId = ssoClientId;
-        this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
-        this.ssoSecretType = ssoSecretType;
-        this.ssoadfsAuthority = ssoadfsAuthority;
-        this.startVMOnConnect = startVMOnConnect;
-        this.tags = tags;
-        this.validationEnvironment = validationEnvironment;
-        this.vmTemplate = vmTemplate;
-    }
+    private HostPoolArgs() {}
 
-    private HostPoolArgs() {
-        this.customRdpProperty = Codegen.empty();
-        this.description = Codegen.empty();
-        this.friendlyName = Codegen.empty();
-        this.hostPoolName = Codegen.empty();
-        this.hostPoolType = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.loadBalancerType = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managedBy = Codegen.empty();
-        this.maxSessionLimit = Codegen.empty();
-        this.migrationRequest = Codegen.empty();
-        this.personalDesktopAssignmentType = Codegen.empty();
-        this.plan = Codegen.empty();
-        this.preferredAppGroupType = Codegen.empty();
-        this.registrationInfo = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.ring = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.ssoClientId = Codegen.empty();
-        this.ssoClientSecretKeyVaultPath = Codegen.empty();
-        this.ssoSecretType = Codegen.empty();
-        this.ssoadfsAuthority = Codegen.empty();
-        this.startVMOnConnect = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validationEnvironment = Codegen.empty();
-        this.vmTemplate = Codegen.empty();
+    private HostPoolArgs(HostPoolArgs $) {
+        this.customRdpProperty = $.customRdpProperty;
+        this.description = $.description;
+        this.friendlyName = $.friendlyName;
+        this.hostPoolName = $.hostPoolName;
+        this.hostPoolType = $.hostPoolType;
+        this.identity = $.identity;
+        this.kind = $.kind;
+        this.loadBalancerType = $.loadBalancerType;
+        this.location = $.location;
+        this.managedBy = $.managedBy;
+        this.maxSessionLimit = $.maxSessionLimit;
+        this.migrationRequest = $.migrationRequest;
+        this.personalDesktopAssignmentType = $.personalDesktopAssignmentType;
+        this.plan = $.plan;
+        this.preferredAppGroupType = $.preferredAppGroupType;
+        this.registrationInfo = $.registrationInfo;
+        this.resourceGroupName = $.resourceGroupName;
+        this.ring = $.ring;
+        this.sku = $.sku;
+        this.ssoClientId = $.ssoClientId;
+        this.ssoClientSecretKeyVaultPath = $.ssoClientSecretKeyVaultPath;
+        this.ssoSecretType = $.ssoSecretType;
+        this.ssoadfsAuthority = $.ssoadfsAuthority;
+        this.startVMOnConnect = $.startVMOnConnect;
+        this.tags = $.tags;
+        this.validationEnvironment = $.validationEnvironment;
+        this.vmTemplate = $.vmTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> customRdpProperty;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> friendlyName;
-        private @Nullable Output<String> hostPoolName;
-        private Output<Either<String,HostPoolType>> hostPoolType;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
-        private @Nullable Output<String> kind;
-        private Output<Either<String,LoadBalancerType>> loadBalancerType;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> managedBy;
-        private @Nullable Output<Integer> maxSessionLimit;
-        private @Nullable Output<MigrationRequestPropertiesArgs> migrationRequest;
-        private @Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
-        private Output<Either<String,PreferredAppGroupType>> preferredAppGroupType;
-        private @Nullable Output<RegistrationInfoArgs> registrationInfo;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Integer> ring;
-        private @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
-        private @Nullable Output<String> ssoClientId;
-        private @Nullable Output<String> ssoClientSecretKeyVaultPath;
-        private @Nullable Output<Either<String,SSOSecretType>> ssoSecretType;
-        private @Nullable Output<String> ssoadfsAuthority;
-        private @Nullable Output<Boolean> startVMOnConnect;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Boolean> validationEnvironment;
-        private @Nullable Output<String> vmTemplate;
+        private HostPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostPoolArgs();
         }
 
         public Builder(HostPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customRdpProperty = defaults.customRdpProperty;
-    	      this.description = defaults.description;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.hostPoolName = defaults.hostPoolName;
-    	      this.hostPoolType = defaults.hostPoolType;
-    	      this.identity = defaults.identity;
-    	      this.kind = defaults.kind;
-    	      this.loadBalancerType = defaults.loadBalancerType;
-    	      this.location = defaults.location;
-    	      this.managedBy = defaults.managedBy;
-    	      this.maxSessionLimit = defaults.maxSessionLimit;
-    	      this.migrationRequest = defaults.migrationRequest;
-    	      this.personalDesktopAssignmentType = defaults.personalDesktopAssignmentType;
-    	      this.plan = defaults.plan;
-    	      this.preferredAppGroupType = defaults.preferredAppGroupType;
-    	      this.registrationInfo = defaults.registrationInfo;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.ring = defaults.ring;
-    	      this.sku = defaults.sku;
-    	      this.ssoClientId = defaults.ssoClientId;
-    	      this.ssoClientSecretKeyVaultPath = defaults.ssoClientSecretKeyVaultPath;
-    	      this.ssoSecretType = defaults.ssoSecretType;
-    	      this.ssoadfsAuthority = defaults.ssoadfsAuthority;
-    	      this.startVMOnConnect = defaults.startVMOnConnect;
-    	      this.tags = defaults.tags;
-    	      this.validationEnvironment = defaults.validationEnvironment;
-    	      this.vmTemplate = defaults.vmTemplate;
+            $ = new HostPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customRdpProperty(@Nullable Output<String> customRdpProperty) {
-            this.customRdpProperty = customRdpProperty;
+            $.customRdpProperty = customRdpProperty;
             return this;
         }
-        public Builder customRdpProperty(@Nullable String customRdpProperty) {
-            this.customRdpProperty = Codegen.ofNullable(customRdpProperty);
-            return this;
+
+        public Builder customRdpProperty(String customRdpProperty) {
+            return customRdpProperty(Output.of(customRdpProperty));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
-        public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Codegen.ofNullable(friendlyName);
-            return this;
+
+        public Builder friendlyName(String friendlyName) {
+            return friendlyName(Output.of(friendlyName));
         }
+
         public Builder hostPoolName(@Nullable Output<String> hostPoolName) {
-            this.hostPoolName = hostPoolName;
+            $.hostPoolName = hostPoolName;
             return this;
         }
-        public Builder hostPoolName(@Nullable String hostPoolName) {
-            this.hostPoolName = Codegen.ofNullable(hostPoolName);
-            return this;
+
+        public Builder hostPoolName(String hostPoolName) {
+            return hostPoolName(Output.of(hostPoolName));
         }
+
         public Builder hostPoolType(Output<Either<String,HostPoolType>> hostPoolType) {
-            this.hostPoolType = Objects.requireNonNull(hostPoolType);
+            $.hostPoolType = hostPoolType;
             return this;
         }
+
         public Builder hostPoolType(Either<String,HostPoolType> hostPoolType) {
-            this.hostPoolType = Output.of(Objects.requireNonNull(hostPoolType));
-            return this;
+            return hostPoolType(Output.of(hostPoolType));
         }
+
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ResourceModelWithAllowedPropertySetIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder loadBalancerType(Output<Either<String,LoadBalancerType>> loadBalancerType) {
-            this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+            $.loadBalancerType = loadBalancerType;
             return this;
         }
+
         public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
-            this.loadBalancerType = Output.of(Objects.requireNonNull(loadBalancerType));
-            return this;
+            return loadBalancerType(Output.of(loadBalancerType));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managedBy(@Nullable Output<String> managedBy) {
-            this.managedBy = managedBy;
+            $.managedBy = managedBy;
             return this;
         }
-        public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Codegen.ofNullable(managedBy);
-            return this;
+
+        public Builder managedBy(String managedBy) {
+            return managedBy(Output.of(managedBy));
         }
+
         public Builder maxSessionLimit(@Nullable Output<Integer> maxSessionLimit) {
-            this.maxSessionLimit = maxSessionLimit;
+            $.maxSessionLimit = maxSessionLimit;
             return this;
         }
-        public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
-            this.maxSessionLimit = Codegen.ofNullable(maxSessionLimit);
-            return this;
+
+        public Builder maxSessionLimit(Integer maxSessionLimit) {
+            return maxSessionLimit(Output.of(maxSessionLimit));
         }
+
         public Builder migrationRequest(@Nullable Output<MigrationRequestPropertiesArgs> migrationRequest) {
-            this.migrationRequest = migrationRequest;
+            $.migrationRequest = migrationRequest;
             return this;
         }
-        public Builder migrationRequest(@Nullable MigrationRequestPropertiesArgs migrationRequest) {
-            this.migrationRequest = Codegen.ofNullable(migrationRequest);
-            return this;
+
+        public Builder migrationRequest(MigrationRequestPropertiesArgs migrationRequest) {
+            return migrationRequest(Output.of(migrationRequest));
         }
+
         public Builder personalDesktopAssignmentType(@Nullable Output<Either<String,PersonalDesktopAssignmentType>> personalDesktopAssignmentType) {
-            this.personalDesktopAssignmentType = personalDesktopAssignmentType;
+            $.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
-        public Builder personalDesktopAssignmentType(@Nullable Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
-            this.personalDesktopAssignmentType = Codegen.ofNullable(personalDesktopAssignmentType);
-            return this;
+
+        public Builder personalDesktopAssignmentType(Either<String,PersonalDesktopAssignmentType> personalDesktopAssignmentType) {
+            return personalDesktopAssignmentType(Output.of(personalDesktopAssignmentType));
         }
+
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
-            this.plan = plan;
+            $.plan = plan;
             return this;
         }
-        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetPlanArgs plan) {
-            this.plan = Codegen.ofNullable(plan);
-            return this;
+
+        public Builder plan(ResourceModelWithAllowedPropertySetPlanArgs plan) {
+            return plan(Output.of(plan));
         }
+
         public Builder preferredAppGroupType(Output<Either<String,PreferredAppGroupType>> preferredAppGroupType) {
-            this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
+            $.preferredAppGroupType = preferredAppGroupType;
             return this;
         }
+
         public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
-            this.preferredAppGroupType = Output.of(Objects.requireNonNull(preferredAppGroupType));
-            return this;
+            return preferredAppGroupType(Output.of(preferredAppGroupType));
         }
+
         public Builder registrationInfo(@Nullable Output<RegistrationInfoArgs> registrationInfo) {
-            this.registrationInfo = registrationInfo;
+            $.registrationInfo = registrationInfo;
             return this;
         }
-        public Builder registrationInfo(@Nullable RegistrationInfoArgs registrationInfo) {
-            this.registrationInfo = Codegen.ofNullable(registrationInfo);
-            return this;
+
+        public Builder registrationInfo(RegistrationInfoArgs registrationInfo) {
+            return registrationInfo(Output.of(registrationInfo));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder ring(@Nullable Output<Integer> ring) {
-            this.ring = ring;
+            $.ring = ring;
             return this;
         }
-        public Builder ring(@Nullable Integer ring) {
-            this.ring = Codegen.ofNullable(ring);
-            return this;
+
+        public Builder ring(Integer ring) {
+            return ring(Output.of(ring));
         }
+
         public Builder sku(@Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ResourceModelWithAllowedPropertySetSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder ssoClientId(@Nullable Output<String> ssoClientId) {
-            this.ssoClientId = ssoClientId;
+            $.ssoClientId = ssoClientId;
             return this;
         }
-        public Builder ssoClientId(@Nullable String ssoClientId) {
-            this.ssoClientId = Codegen.ofNullable(ssoClientId);
-            return this;
+
+        public Builder ssoClientId(String ssoClientId) {
+            return ssoClientId(Output.of(ssoClientId));
         }
+
         public Builder ssoClientSecretKeyVaultPath(@Nullable Output<String> ssoClientSecretKeyVaultPath) {
-            this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
+            $.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
-        public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
-            this.ssoClientSecretKeyVaultPath = Codegen.ofNullable(ssoClientSecretKeyVaultPath);
-            return this;
+
+        public Builder ssoClientSecretKeyVaultPath(String ssoClientSecretKeyVaultPath) {
+            return ssoClientSecretKeyVaultPath(Output.of(ssoClientSecretKeyVaultPath));
         }
+
         public Builder ssoSecretType(@Nullable Output<Either<String,SSOSecretType>> ssoSecretType) {
-            this.ssoSecretType = ssoSecretType;
+            $.ssoSecretType = ssoSecretType;
             return this;
         }
-        public Builder ssoSecretType(@Nullable Either<String,SSOSecretType> ssoSecretType) {
-            this.ssoSecretType = Codegen.ofNullable(ssoSecretType);
-            return this;
+
+        public Builder ssoSecretType(Either<String,SSOSecretType> ssoSecretType) {
+            return ssoSecretType(Output.of(ssoSecretType));
         }
+
         public Builder ssoadfsAuthority(@Nullable Output<String> ssoadfsAuthority) {
-            this.ssoadfsAuthority = ssoadfsAuthority;
+            $.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
-        public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
-            this.ssoadfsAuthority = Codegen.ofNullable(ssoadfsAuthority);
-            return this;
+
+        public Builder ssoadfsAuthority(String ssoadfsAuthority) {
+            return ssoadfsAuthority(Output.of(ssoadfsAuthority));
         }
+
         public Builder startVMOnConnect(@Nullable Output<Boolean> startVMOnConnect) {
-            this.startVMOnConnect = startVMOnConnect;
+            $.startVMOnConnect = startVMOnConnect;
             return this;
         }
-        public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
-            this.startVMOnConnect = Codegen.ofNullable(startVMOnConnect);
-            return this;
+
+        public Builder startVMOnConnect(Boolean startVMOnConnect) {
+            return startVMOnConnect(Output.of(startVMOnConnect));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder validationEnvironment(@Nullable Output<Boolean> validationEnvironment) {
-            this.validationEnvironment = validationEnvironment;
+            $.validationEnvironment = validationEnvironment;
             return this;
         }
-        public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
-            this.validationEnvironment = Codegen.ofNullable(validationEnvironment);
-            return this;
+
+        public Builder validationEnvironment(Boolean validationEnvironment) {
+            return validationEnvironment(Output.of(validationEnvironment));
         }
+
         public Builder vmTemplate(@Nullable Output<String> vmTemplate) {
-            this.vmTemplate = vmTemplate;
+            $.vmTemplate = vmTemplate;
             return this;
         }
-        public Builder vmTemplate(@Nullable String vmTemplate) {
-            this.vmTemplate = Codegen.ofNullable(vmTemplate);
-            return this;
-        }        public HostPoolArgs build() {
-            return new HostPoolArgs(customRdpProperty, description, friendlyName, hostPoolName, hostPoolType, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, resourceGroupName, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, validationEnvironment, vmTemplate);
+
+        public Builder vmTemplate(String vmTemplate) {
+            return vmTemplate(Output.of(vmTemplate));
+        }
+
+        public HostPoolArgs build() {
+            $.hostPoolType = Objects.requireNonNull($.hostPoolType, "expected parameter 'hostPoolType' to be non-null");
+            $.loadBalancerType = Objects.requireNonNull($.loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
+            $.preferredAppGroupType = Objects.requireNonNull($.preferredAppGroupType, "expected parameter 'preferredAppGroupType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="dataIntegrityValidationResult", required=true)
-      private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
+    private DataIntegrityValidationResultResponse dataIntegrityValidationResult;
 
     public DataIntegrityValidationResultResponse dataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="endedOn", required=true)
-      private final String endedOn;
+    private String endedOn;
 
     public String endedOn() {
         return this.endedOn;
@@ -47,7 +47,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -58,7 +58,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="migrationId", required=true)
-      private final String migrationId;
+    private String migrationId;
 
     public String migrationId() {
         return this.migrationId;
@@ -69,7 +69,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="queryAnalysisValidationResult", required=true)
-      private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
+    private QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
 
     public QueryAnalysisValidationResultResponse queryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
@@ -81,7 +81,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="resultType", required=true)
-      private final String resultType;
+    private String resultType;
 
     public String resultType() {
         return this.resultType;
@@ -92,7 +92,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="schemaValidationResult", required=true)
-      private final SchemaComparisonValidationResultResponse schemaValidationResult;
+    private SchemaComparisonValidationResultResponse schemaValidationResult;
 
     public SchemaComparisonValidationResultResponse schemaValidationResult() {
         return this.schemaValidationResult;
@@ -103,7 +103,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="sourceDatabaseName", required=true)
-      private final String sourceDatabaseName;
+    private String sourceDatabaseName;
 
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -114,7 +114,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="startedOn", required=true)
-      private final String startedOn;
+    private String startedOn;
 
     public String startedOn() {
         return this.startedOn;
@@ -125,7 +125,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -136,136 +136,115 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @Import(name="targetDatabaseName", required=true)
-      private final String targetDatabaseName;
+    private String targetDatabaseName;
 
     public String targetDatabaseName() {
         return this.targetDatabaseName;
     }
 
-    public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(
-        DataIntegrityValidationResultResponse dataIntegrityValidationResult,
-        String endedOn,
-        String id,
-        String migrationId,
-        QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
-        String resultType,
-        SchemaComparisonValidationResultResponse schemaValidationResult,
-        String sourceDatabaseName,
-        String startedOn,
-        String status,
-        String targetDatabaseName) {
-        this.dataIntegrityValidationResult = Objects.requireNonNull(dataIntegrityValidationResult, "expected parameter 'dataIntegrityValidationResult' to be non-null");
-        this.endedOn = Objects.requireNonNull(endedOn, "expected parameter 'endedOn' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.migrationId = Objects.requireNonNull(migrationId, "expected parameter 'migrationId' to be non-null");
-        this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult, "expected parameter 'queryAnalysisValidationResult' to be non-null");
-        this.resultType = Codegen.stringProp("resultType").arg(resultType).require();
-        this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult, "expected parameter 'schemaValidationResult' to be non-null");
-        this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
-        this.startedOn = Objects.requireNonNull(startedOn, "expected parameter 'startedOn' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName, "expected parameter 'targetDatabaseName' to be non-null");
-    }
+    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse() {}
 
-    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse() {
-        this.dataIntegrityValidationResult = null;
-        this.endedOn = null;
-        this.id = null;
-        this.migrationId = null;
-        this.queryAnalysisValidationResult = null;
-        this.resultType = null;
-        this.schemaValidationResult = null;
-        this.sourceDatabaseName = null;
-        this.startedOn = null;
-        this.status = null;
-        this.targetDatabaseName = null;
+    private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse $) {
+        this.dataIntegrityValidationResult = $.dataIntegrityValidationResult;
+        this.endedOn = $.endedOn;
+        this.id = $.id;
+        this.migrationId = $.migrationId;
+        this.queryAnalysisValidationResult = $.queryAnalysisValidationResult;
+        this.resultType = $.resultType;
+        this.schemaValidationResult = $.schemaValidationResult;
+        this.sourceDatabaseName = $.sourceDatabaseName;
+        this.startedOn = $.startedOn;
+        this.status = $.status;
+        this.targetDatabaseName = $.targetDatabaseName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DataIntegrityValidationResultResponse dataIntegrityValidationResult;
-        private String endedOn;
-        private String id;
-        private String migrationId;
-        private QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
-        private String resultType;
-        private SchemaComparisonValidationResultResponse schemaValidationResult;
-        private String sourceDatabaseName;
-        private String startedOn;
-        private String status;
-        private String targetDatabaseName;
+        private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataIntegrityValidationResult = defaults.dataIntegrityValidationResult;
-    	      this.endedOn = defaults.endedOn;
-    	      this.id = defaults.id;
-    	      this.migrationId = defaults.migrationId;
-    	      this.queryAnalysisValidationResult = defaults.queryAnalysisValidationResult;
-    	      this.resultType = defaults.resultType;
-    	      this.schemaValidationResult = defaults.schemaValidationResult;
-    	      this.sourceDatabaseName = defaults.sourceDatabaseName;
-    	      this.startedOn = defaults.startedOn;
-    	      this.status = defaults.status;
-    	      this.targetDatabaseName = defaults.targetDatabaseName;
+            $ = new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataIntegrityValidationResult(DataIntegrityValidationResultResponse dataIntegrityValidationResult) {
-            this.dataIntegrityValidationResult = Objects.requireNonNull(dataIntegrityValidationResult);
+            $.dataIntegrityValidationResult = dataIntegrityValidationResult;
             return this;
         }
+
         public Builder endedOn(String endedOn) {
-            this.endedOn = Objects.requireNonNull(endedOn);
+            $.endedOn = endedOn;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder migrationId(String migrationId) {
-            this.migrationId = Objects.requireNonNull(migrationId);
+            $.migrationId = migrationId;
             return this;
         }
+
         public Builder queryAnalysisValidationResult(QueryAnalysisValidationResultResponse queryAnalysisValidationResult) {
-            this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult);
+            $.queryAnalysisValidationResult = queryAnalysisValidationResult;
             return this;
         }
+
         public Builder resultType(String resultType) {
-            this.resultType = Objects.requireNonNull(resultType);
+            $.resultType = resultType;
             return this;
         }
+
         public Builder schemaValidationResult(SchemaComparisonValidationResultResponse schemaValidationResult) {
-            this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult);
+            $.schemaValidationResult = schemaValidationResult;
             return this;
         }
+
         public Builder sourceDatabaseName(String sourceDatabaseName) {
-            this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
+            $.sourceDatabaseName = sourceDatabaseName;
             return this;
         }
+
         public Builder startedOn(String startedOn) {
-            this.startedOn = Objects.requireNonNull(startedOn);
+            $.startedOn = startedOn;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder targetDatabaseName(String targetDatabaseName) {
-            this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
+            $.targetDatabaseName = targetDatabaseName;
             return this;
-        }        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
-            return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(dataIntegrityValidationResult, endedOn, id, migrationId, queryAnalysisValidationResult, resultType, schemaValidationResult, sourceDatabaseName, startedOn, status, targetDatabaseName);
+        }
+
+        public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
+            $.dataIntegrityValidationResult = Objects.requireNonNull($.dataIntegrityValidationResult, "expected parameter 'dataIntegrityValidationResult' to be non-null");
+            $.endedOn = Objects.requireNonNull($.endedOn, "expected parameter 'endedOn' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.migrationId = Objects.requireNonNull($.migrationId, "expected parameter 'migrationId' to be non-null");
+            $.queryAnalysisValidationResult = Objects.requireNonNull($.queryAnalysisValidationResult, "expected parameter 'queryAnalysisValidationResult' to be non-null");
+            $.resultType = Codegen.stringProp("resultType").arg($.resultType).require();
+            $.schemaValidationResult = Objects.requireNonNull($.schemaValidationResult, "expected parameter 'schemaValidationResult' to be non-null");
+            $.sourceDatabaseName = Objects.requireNonNull($.sourceDatabaseName, "expected parameter 'sourceDatabaseName' to be non-null");
+            $.startedOn = Objects.requireNonNull($.startedOn, "expected parameter 'startedOn' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.targetDatabaseName = Objects.requireNonNull($.targetDatabaseName, "expected parameter 'targetDatabaseName' to be non-null");
+            return $;
         }
     }
+
 }

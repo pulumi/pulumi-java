@@ -5,9 +5,9 @@ package com.pulumi.azurenative.webpubsub.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class ManagedIdentitySettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<String> resource;
+    private @Nullable Output<String> resource;
 
-    public Output<String> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<String>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
-    public ManagedIdentitySettingsArgs(@Nullable Output<String> resource) {
-        this.resource = resource;
-    }
+    private ManagedIdentitySettingsArgs() {}
 
-    private ManagedIdentitySettingsArgs() {
-        this.resource = Codegen.empty();
+    private ManagedIdentitySettingsArgs(ManagedIdentitySettingsArgs $) {
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedIdentitySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resource;
+        private ManagedIdentitySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedIdentitySettingsArgs();
         }
 
         public Builder(ManagedIdentitySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
+            $ = new ManagedIdentitySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(@Nullable Output<String> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable String resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
-        }        public ManagedIdentitySettingsArgs build() {
-            return new ManagedIdentitySettingsArgs(resource);
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
+        }
+
+        public ManagedIdentitySettingsArgs build() {
+            return $;
         }
     }
+
 }

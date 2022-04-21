@@ -9,12 +9,12 @@ import com.pulumi.awsnative.lex.inputs.BotTagArgs;
 import com.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,17 +27,17 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoBuildBotLocales")
-      private final @Nullable Output<Boolean> autoBuildBotLocales;
+    private @Nullable Output<Boolean> autoBuildBotLocales;
 
-    public Output<Boolean> autoBuildBotLocales() {
-        return this.autoBuildBotLocales == null ? Codegen.empty() : this.autoBuildBotLocales;
+    public Optional<Output<Boolean>> autoBuildBotLocales() {
+        return Optional.ofNullable(this.autoBuildBotLocales);
     }
 
     @Import(name="botFileS3Location")
-      private final @Nullable Output<BotS3LocationArgs> botFileS3Location;
+    private @Nullable Output<BotS3LocationArgs> botFileS3Location;
 
-    public Output<BotS3LocationArgs> botFileS3Location() {
-        return this.botFileS3Location == null ? Codegen.empty() : this.botFileS3Location;
+    public Optional<Output<BotS3LocationArgs>> botFileS3Location() {
+        return Optional.ofNullable(this.botFileS3Location);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botLocales")
-      private final @Nullable Output<List<BotLocaleArgs>> botLocales;
+    private @Nullable Output<List<BotLocaleArgs>> botLocales;
 
-    public Output<List<BotLocaleArgs>> botLocales() {
-        return this.botLocales == null ? Codegen.empty() : this.botLocales;
+    public Optional<Output<List<BotLocaleArgs>>> botLocales() {
+        return Optional.ofNullable(this.botLocales);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="botTags")
-      private final @Nullable Output<List<BotTagArgs>> botTags;
+    private @Nullable Output<List<BotTagArgs>> botTags;
 
-    public Output<List<BotTagArgs>> botTags() {
-        return this.botTags == null ? Codegen.empty() : this.botTags;
+    public Optional<Output<List<BotTagArgs>>> botTags() {
+        return Optional.ofNullable(this.botTags);
     }
 
     /**
@@ -67,17 +67,17 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataPrivacy", required=true)
-      private final Output<DataPrivacyPropertiesArgs> dataPrivacy;
+    private Output<DataPrivacyPropertiesArgs> dataPrivacy;
 
     public Output<DataPrivacyPropertiesArgs> dataPrivacy() {
         return this.dataPrivacy;
     }
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -85,21 +85,21 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="idleSessionTTLInSeconds", required=true)
-      private final Output<Integer> idleSessionTTLInSeconds;
+    private Output<Integer> idleSessionTTLInSeconds;
 
     public Output<Integer> idleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -110,176 +110,153 @@ public final class BotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testBotAliasTags")
-      private final @Nullable Output<List<BotTagArgs>> testBotAliasTags;
+    private @Nullable Output<List<BotTagArgs>> testBotAliasTags;
 
-    public Output<List<BotTagArgs>> testBotAliasTags() {
-        return this.testBotAliasTags == null ? Codegen.empty() : this.testBotAliasTags;
+    public Optional<Output<List<BotTagArgs>>> testBotAliasTags() {
+        return Optional.ofNullable(this.testBotAliasTags);
     }
 
-    public BotArgs(
-        @Nullable Output<Boolean> autoBuildBotLocales,
-        @Nullable Output<BotS3LocationArgs> botFileS3Location,
-        @Nullable Output<List<BotLocaleArgs>> botLocales,
-        @Nullable Output<List<BotTagArgs>> botTags,
-        Output<DataPrivacyPropertiesArgs> dataPrivacy,
-        @Nullable Output<String> description,
-        Output<Integer> idleSessionTTLInSeconds,
-        @Nullable Output<String> name,
-        Output<String> roleArn,
-        @Nullable Output<List<BotTagArgs>> testBotAliasTags) {
-        this.autoBuildBotLocales = autoBuildBotLocales;
-        this.botFileS3Location = botFileS3Location;
-        this.botLocales = botLocales;
-        this.botTags = botTags;
-        this.dataPrivacy = Objects.requireNonNull(dataPrivacy, "expected parameter 'dataPrivacy' to be non-null");
-        this.description = description;
-        this.idleSessionTTLInSeconds = Objects.requireNonNull(idleSessionTTLInSeconds, "expected parameter 'idleSessionTTLInSeconds' to be non-null");
-        this.name = name;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.testBotAliasTags = testBotAliasTags;
-    }
+    private BotArgs() {}
 
-    private BotArgs() {
-        this.autoBuildBotLocales = Codegen.empty();
-        this.botFileS3Location = Codegen.empty();
-        this.botLocales = Codegen.empty();
-        this.botTags = Codegen.empty();
-        this.dataPrivacy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.idleSessionTTLInSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.testBotAliasTags = Codegen.empty();
+    private BotArgs(BotArgs $) {
+        this.autoBuildBotLocales = $.autoBuildBotLocales;
+        this.botFileS3Location = $.botFileS3Location;
+        this.botLocales = $.botLocales;
+        this.botTags = $.botTags;
+        this.dataPrivacy = $.dataPrivacy;
+        this.description = $.description;
+        this.idleSessionTTLInSeconds = $.idleSessionTTLInSeconds;
+        this.name = $.name;
+        this.roleArn = $.roleArn;
+        this.testBotAliasTags = $.testBotAliasTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoBuildBotLocales;
-        private @Nullable Output<BotS3LocationArgs> botFileS3Location;
-        private @Nullable Output<List<BotLocaleArgs>> botLocales;
-        private @Nullable Output<List<BotTagArgs>> botTags;
-        private Output<DataPrivacyPropertiesArgs> dataPrivacy;
-        private @Nullable Output<String> description;
-        private Output<Integer> idleSessionTTLInSeconds;
-        private @Nullable Output<String> name;
-        private Output<String> roleArn;
-        private @Nullable Output<List<BotTagArgs>> testBotAliasTags;
+        private BotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BotArgs();
         }
 
         public Builder(BotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoBuildBotLocales = defaults.autoBuildBotLocales;
-    	      this.botFileS3Location = defaults.botFileS3Location;
-    	      this.botLocales = defaults.botLocales;
-    	      this.botTags = defaults.botTags;
-    	      this.dataPrivacy = defaults.dataPrivacy;
-    	      this.description = defaults.description;
-    	      this.idleSessionTTLInSeconds = defaults.idleSessionTTLInSeconds;
-    	      this.name = defaults.name;
-    	      this.roleArn = defaults.roleArn;
-    	      this.testBotAliasTags = defaults.testBotAliasTags;
+            $ = new BotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoBuildBotLocales(@Nullable Output<Boolean> autoBuildBotLocales) {
-            this.autoBuildBotLocales = autoBuildBotLocales;
+            $.autoBuildBotLocales = autoBuildBotLocales;
             return this;
         }
-        public Builder autoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
-            this.autoBuildBotLocales = Codegen.ofNullable(autoBuildBotLocales);
-            return this;
+
+        public Builder autoBuildBotLocales(Boolean autoBuildBotLocales) {
+            return autoBuildBotLocales(Output.of(autoBuildBotLocales));
         }
+
         public Builder botFileS3Location(@Nullable Output<BotS3LocationArgs> botFileS3Location) {
-            this.botFileS3Location = botFileS3Location;
+            $.botFileS3Location = botFileS3Location;
             return this;
         }
-        public Builder botFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
-            this.botFileS3Location = Codegen.ofNullable(botFileS3Location);
-            return this;
+
+        public Builder botFileS3Location(BotS3LocationArgs botFileS3Location) {
+            return botFileS3Location(Output.of(botFileS3Location));
         }
+
         public Builder botLocales(@Nullable Output<List<BotLocaleArgs>> botLocales) {
-            this.botLocales = botLocales;
+            $.botLocales = botLocales;
             return this;
         }
-        public Builder botLocales(@Nullable List<BotLocaleArgs> botLocales) {
-            this.botLocales = Codegen.ofNullable(botLocales);
-            return this;
+
+        public Builder botLocales(List<BotLocaleArgs> botLocales) {
+            return botLocales(Output.of(botLocales));
         }
+
         public Builder botLocales(BotLocaleArgs... botLocales) {
             return botLocales(List.of(botLocales));
         }
+
         public Builder botTags(@Nullable Output<List<BotTagArgs>> botTags) {
-            this.botTags = botTags;
+            $.botTags = botTags;
             return this;
         }
-        public Builder botTags(@Nullable List<BotTagArgs> botTags) {
-            this.botTags = Codegen.ofNullable(botTags);
-            return this;
+
+        public Builder botTags(List<BotTagArgs> botTags) {
+            return botTags(Output.of(botTags));
         }
+
         public Builder botTags(BotTagArgs... botTags) {
             return botTags(List.of(botTags));
         }
+
         public Builder dataPrivacy(Output<DataPrivacyPropertiesArgs> dataPrivacy) {
-            this.dataPrivacy = Objects.requireNonNull(dataPrivacy);
+            $.dataPrivacy = dataPrivacy;
             return this;
         }
+
         public Builder dataPrivacy(DataPrivacyPropertiesArgs dataPrivacy) {
-            this.dataPrivacy = Output.of(Objects.requireNonNull(dataPrivacy));
-            return this;
+            return dataPrivacy(Output.of(dataPrivacy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder idleSessionTTLInSeconds(Output<Integer> idleSessionTTLInSeconds) {
-            this.idleSessionTTLInSeconds = Objects.requireNonNull(idleSessionTTLInSeconds);
+            $.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
             return this;
         }
+
         public Builder idleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
-            this.idleSessionTTLInSeconds = Output.of(Objects.requireNonNull(idleSessionTTLInSeconds));
-            return this;
+            return idleSessionTTLInSeconds(Output.of(idleSessionTTLInSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder testBotAliasTags(@Nullable Output<List<BotTagArgs>> testBotAliasTags) {
-            this.testBotAliasTags = testBotAliasTags;
+            $.testBotAliasTags = testBotAliasTags;
             return this;
         }
-        public Builder testBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
-            this.testBotAliasTags = Codegen.ofNullable(testBotAliasTags);
-            return this;
+
+        public Builder testBotAliasTags(List<BotTagArgs> testBotAliasTags) {
+            return testBotAliasTags(Output.of(testBotAliasTags));
         }
+
         public Builder testBotAliasTags(BotTagArgs... testBotAliasTags) {
             return testBotAliasTags(List.of(testBotAliasTags));
-        }        public BotArgs build() {
-            return new BotArgs(autoBuildBotLocales, botFileS3Location, botLocales, botTags, dataPrivacy, description, idleSessionTTLInSeconds, name, roleArn, testBotAliasTags);
+        }
+
+        public BotArgs build() {
+            $.dataPrivacy = Objects.requireNonNull($.dataPrivacy, "expected parameter 'dataPrivacy' to be non-null");
+            $.idleSessionTTLInSeconds = Objects.requireNonNull($.idleSessionTTLInSeconds, "expected parameter 'idleSessionTTLInSeconds' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

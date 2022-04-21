@@ -5,9 +5,9 @@ package com.pulumi.gcp.redis.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class InstanceMaintenanceScheduleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class InstanceMaintenanceScheduleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="scheduleDeadlineTime")
-      private final @Nullable Output<String> scheduleDeadlineTime;
+    private @Nullable Output<String> scheduleDeadlineTime;
 
-    public Output<String> scheduleDeadlineTime() {
-        return this.scheduleDeadlineTime == null ? Codegen.empty() : this.scheduleDeadlineTime;
+    public Optional<Output<String>> scheduleDeadlineTime() {
+        return Optional.ofNullable(this.scheduleDeadlineTime);
     }
 
     /**
@@ -52,76 +52,68 @@ public final class InstanceMaintenanceScheduleGetArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public InstanceMaintenanceScheduleGetArgs(
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> scheduleDeadlineTime,
-        @Nullable Output<String> startTime) {
-        this.endTime = endTime;
-        this.scheduleDeadlineTime = scheduleDeadlineTime;
-        this.startTime = startTime;
-    }
+    private InstanceMaintenanceScheduleGetArgs() {}
 
-    private InstanceMaintenanceScheduleGetArgs() {
-        this.endTime = Codegen.empty();
-        this.scheduleDeadlineTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private InstanceMaintenanceScheduleGetArgs(InstanceMaintenanceScheduleGetArgs $) {
+        this.endTime = $.endTime;
+        this.scheduleDeadlineTime = $.scheduleDeadlineTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceMaintenanceScheduleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> scheduleDeadlineTime;
-        private @Nullable Output<String> startTime;
+        private InstanceMaintenanceScheduleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceMaintenanceScheduleGetArgs();
         }
 
         public Builder(InstanceMaintenanceScheduleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.scheduleDeadlineTime = defaults.scheduleDeadlineTime;
-    	      this.startTime = defaults.startTime;
+            $ = new InstanceMaintenanceScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = scheduleDeadlineTime;
+            $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
-        public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Codegen.ofNullable(scheduleDeadlineTime);
-            return this;
+
+        public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
+            return scheduleDeadlineTime(Output.of(scheduleDeadlineTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public InstanceMaintenanceScheduleGetArgs build() {
-            return new InstanceMaintenanceScheduleGetArgs(endTime, scheduleDeadlineTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public InstanceMaintenanceScheduleGetArgs build() {
+            return $;
         }
     }
+
 }

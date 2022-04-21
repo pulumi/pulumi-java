@@ -13,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="autoRenew")
-      private final @Nullable Output<Boolean> autoRenew;
+    private @Nullable Output<Boolean> autoRenew;
 
-    public Output<Boolean> autoRenew() {
-        return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
+    public Optional<Output<Boolean>> autoRenew() {
+        return Optional.ofNullable(this.autoRenew);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificateOrderName")
-      private final @Nullable Output<String> certificateOrderName;
+    private @Nullable Output<String> certificateOrderName;
 
-    public Output<String> certificateOrderName() {
-        return this.certificateOrderName == null ? Codegen.empty() : this.certificateOrderName;
+    public Optional<Output<String>> certificateOrderName() {
+        return Optional.ofNullable(this.certificateOrderName);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="certificates")
-      private final @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
+    private @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
 
-    public Output<Map<String,AppServiceCertificateArgs>> certificates() {
-        return this.certificates == null ? Codegen.empty() : this.certificates;
+    public Optional<Output<Map<String,AppServiceCertificateArgs>>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="csr")
-      private final @Nullable Output<String> csr;
+    private @Nullable Output<String> csr;
 
-    public Output<String> csr() {
-        return this.csr == null ? Codegen.empty() : this.csr;
+    public Optional<Output<String>> csr() {
+        return Optional.ofNullable(this.csr);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="distinguishedName")
-      private final @Nullable Output<String> distinguishedName;
+    private @Nullable Output<String> distinguishedName;
 
-    public Output<String> distinguishedName() {
-        return this.distinguishedName == null ? Codegen.empty() : this.distinguishedName;
+    public Optional<Output<String>> distinguishedName() {
+        return Optional.ofNullable(this.distinguishedName);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="keySize")
-      private final @Nullable Output<Integer> keySize;
+    private @Nullable Output<Integer> keySize;
 
-    public Output<Integer> keySize() {
-        return this.keySize == null ? Codegen.empty() : this.keySize;
+    public Optional<Output<Integer>> keySize() {
+        return Optional.ofNullable(this.keySize);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -102,10 +103,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -113,7 +114,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="productType", required=true)
-      private final Output<CertificateProductType> productType;
+    private Output<CertificateProductType> productType;
 
     public Output<CertificateProductType> productType() {
         return this.productType;
@@ -124,7 +125,7 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -135,10 +136,10 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -146,193 +147,163 @@ public final class AppServiceCertificateOrderArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="validityInYears")
-      private final @Nullable Output<Integer> validityInYears;
+    private @Nullable Output<Integer> validityInYears;
 
-    public Output<Integer> validityInYears() {
-        return this.validityInYears == null ? Codegen.empty() : this.validityInYears;
+    public Optional<Output<Integer>> validityInYears() {
+        return Optional.ofNullable(this.validityInYears);
     }
 
-    public AppServiceCertificateOrderArgs(
-        @Nullable Output<Boolean> autoRenew,
-        @Nullable Output<String> certificateOrderName,
-        @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates,
-        @Nullable Output<String> csr,
-        @Nullable Output<String> distinguishedName,
-        @Nullable Output<Integer> keySize,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> location,
-        Output<CertificateProductType> productType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> validityInYears) {
-        this.autoRenew = Codegen.booleanProp("autoRenew").output().arg(autoRenew).def(true).getNullable();
-        this.certificateOrderName = certificateOrderName;
-        this.certificates = certificates;
-        this.csr = csr;
-        this.distinguishedName = distinguishedName;
-        this.keySize = Codegen.integerProp("keySize").output().arg(keySize).def(2048).getNullable();
-        this.kind = kind;
-        this.location = location;
-        this.productType = Objects.requireNonNull(productType, "expected parameter 'productType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-        this.validityInYears = Codegen.integerProp("validityInYears").output().arg(validityInYears).def(1).getNullable();
-    }
+    private AppServiceCertificateOrderArgs() {}
 
-    private AppServiceCertificateOrderArgs() {
-        this.autoRenew = Codegen.empty();
-        this.certificateOrderName = Codegen.empty();
-        this.certificates = Codegen.empty();
-        this.csr = Codegen.empty();
-        this.distinguishedName = Codegen.empty();
-        this.keySize = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.location = Codegen.empty();
-        this.productType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.validityInYears = Codegen.empty();
+    private AppServiceCertificateOrderArgs(AppServiceCertificateOrderArgs $) {
+        this.autoRenew = $.autoRenew;
+        this.certificateOrderName = $.certificateOrderName;
+        this.certificates = $.certificates;
+        this.csr = $.csr;
+        this.distinguishedName = $.distinguishedName;
+        this.keySize = $.keySize;
+        this.kind = $.kind;
+        this.location = $.location;
+        this.productType = $.productType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
+        this.validityInYears = $.validityInYears;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppServiceCertificateOrderArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoRenew;
-        private @Nullable Output<String> certificateOrderName;
-        private @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
-        private @Nullable Output<String> csr;
-        private @Nullable Output<String> distinguishedName;
-        private @Nullable Output<Integer> keySize;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> location;
-        private Output<CertificateProductType> productType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> validityInYears;
+        private AppServiceCertificateOrderArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppServiceCertificateOrderArgs();
         }
 
         public Builder(AppServiceCertificateOrderArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRenew = defaults.autoRenew;
-    	      this.certificateOrderName = defaults.certificateOrderName;
-    	      this.certificates = defaults.certificates;
-    	      this.csr = defaults.csr;
-    	      this.distinguishedName = defaults.distinguishedName;
-    	      this.keySize = defaults.keySize;
-    	      this.kind = defaults.kind;
-    	      this.location = defaults.location;
-    	      this.productType = defaults.productType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
-    	      this.validityInYears = defaults.validityInYears;
+            $ = new AppServiceCertificateOrderArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRenew(@Nullable Output<Boolean> autoRenew) {
-            this.autoRenew = autoRenew;
+            $.autoRenew = autoRenew;
             return this;
         }
-        public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Codegen.ofNullable(autoRenew);
-            return this;
+
+        public Builder autoRenew(Boolean autoRenew) {
+            return autoRenew(Output.of(autoRenew));
         }
+
         public Builder certificateOrderName(@Nullable Output<String> certificateOrderName) {
-            this.certificateOrderName = certificateOrderName;
+            $.certificateOrderName = certificateOrderName;
             return this;
         }
-        public Builder certificateOrderName(@Nullable String certificateOrderName) {
-            this.certificateOrderName = Codegen.ofNullable(certificateOrderName);
-            return this;
+
+        public Builder certificateOrderName(String certificateOrderName) {
+            return certificateOrderName(Output.of(certificateOrderName));
         }
+
         public Builder certificates(@Nullable Output<Map<String,AppServiceCertificateArgs>> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
-        public Builder certificates(@Nullable Map<String,AppServiceCertificateArgs> certificates) {
-            this.certificates = Codegen.ofNullable(certificates);
-            return this;
+
+        public Builder certificates(Map<String,AppServiceCertificateArgs> certificates) {
+            return certificates(Output.of(certificates));
         }
+
         public Builder csr(@Nullable Output<String> csr) {
-            this.csr = csr;
+            $.csr = csr;
             return this;
         }
-        public Builder csr(@Nullable String csr) {
-            this.csr = Codegen.ofNullable(csr);
-            return this;
+
+        public Builder csr(String csr) {
+            return csr(Output.of(csr));
         }
+
         public Builder distinguishedName(@Nullable Output<String> distinguishedName) {
-            this.distinguishedName = distinguishedName;
+            $.distinguishedName = distinguishedName;
             return this;
         }
-        public Builder distinguishedName(@Nullable String distinguishedName) {
-            this.distinguishedName = Codegen.ofNullable(distinguishedName);
-            return this;
+
+        public Builder distinguishedName(String distinguishedName) {
+            return distinguishedName(Output.of(distinguishedName));
         }
+
         public Builder keySize(@Nullable Output<Integer> keySize) {
-            this.keySize = keySize;
+            $.keySize = keySize;
             return this;
         }
-        public Builder keySize(@Nullable Integer keySize) {
-            this.keySize = Codegen.ofNullable(keySize);
-            return this;
+
+        public Builder keySize(Integer keySize) {
+            return keySize(Output.of(keySize));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder productType(Output<CertificateProductType> productType) {
-            this.productType = Objects.requireNonNull(productType);
+            $.productType = productType;
             return this;
         }
+
         public Builder productType(CertificateProductType productType) {
-            this.productType = Output.of(Objects.requireNonNull(productType));
-            return this;
+            return productType(Output.of(productType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder validityInYears(@Nullable Output<Integer> validityInYears) {
-            this.validityInYears = validityInYears;
+            $.validityInYears = validityInYears;
             return this;
         }
-        public Builder validityInYears(@Nullable Integer validityInYears) {
-            this.validityInYears = Codegen.ofNullable(validityInYears);
-            return this;
-        }        public AppServiceCertificateOrderArgs build() {
-            return new AppServiceCertificateOrderArgs(autoRenew, certificateOrderName, certificates, csr, distinguishedName, keySize, kind, location, productType, resourceGroupName, tags, validityInYears);
+
+        public Builder validityInYears(Integer validityInYears) {
+            return validityInYears(Output.of(validityInYears));
+        }
+
+        public AppServiceCertificateOrderArgs build() {
+            $.autoRenew = Codegen.booleanProp("autoRenew").output().arg($.autoRenew).def(true).getNullable();
+            $.keySize = Codegen.integerProp("keySize").output().arg($.keySize).def(2048).getNullable();
+            $.productType = Objects.requireNonNull($.productType, "expected parameter 'productType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.validityInYears = Codegen.integerProp("validityInYears").output().arg($.validityInYears).def(1).getNullable();
+            return $;
         }
     }
+
 }

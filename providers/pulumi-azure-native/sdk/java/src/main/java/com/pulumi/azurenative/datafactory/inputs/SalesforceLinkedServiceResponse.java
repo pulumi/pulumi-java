@@ -32,10 +32,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="annotations")
-      private final @Nullable List<Object> annotations;
+    private @Nullable List<Object> annotations;
 
-    public List<Object> annotations() {
-        return this.annotations == null ? List.of() : this.annotations;
+    public Optional<List<Object>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Object apiVersion;
+    private @Nullable Object apiVersion;
 
     public Optional<Object> apiVersion() {
-        return this.apiVersion == null ? Optional.empty() : Optional.ofNullable(this.apiVersion);
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="connectVia")
-      private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+    private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
-        return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
+        return Optional.ofNullable(this.connectVia);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="encryptedCredential")
-      private final @Nullable Object encryptedCredential;
+    private @Nullable Object encryptedCredential;
 
     public Optional<Object> encryptedCredential() {
-        return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
+        return Optional.ofNullable(this.encryptedCredential);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="environmentUrl")
-      private final @Nullable Object environmentUrl;
+    private @Nullable Object environmentUrl;
 
     public Optional<Object> environmentUrl() {
-        return this.environmentUrl == null ? Optional.empty() : Optional.ofNullable(this.environmentUrl);
+        return Optional.ofNullable(this.environmentUrl);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+    private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
-    public Map<String,ParameterSpecificationResponse> parameters() {
-        return this.parameters == null ? Map.of() : this.parameters;
+    public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="securityToken")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken() {
-        return this.securityToken == null ? null : this.securityToken;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> securityToken() {
+        return Optional.ofNullable(this.securityToken);
     }
 
     /**
@@ -132,7 +132,7 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -143,139 +143,109 @@ public final class SalesforceLinkedServiceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public SalesforceLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object apiVersion,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object environmentUrl,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken,
-        String type,
-        @Nullable Object username) {
-        this.annotations = annotations;
-        this.apiVersion = apiVersion;
-        this.connectVia = connectVia;
-        this.description = description;
-        this.encryptedCredential = encryptedCredential;
-        this.environmentUrl = environmentUrl;
-        this.parameters = parameters;
-        this.password = password;
-        this.securityToken = securityToken;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.username = username;
-    }
+    private SalesforceLinkedServiceResponse() {}
 
-    private SalesforceLinkedServiceResponse() {
-        this.annotations = List.of();
-        this.apiVersion = null;
-        this.connectVia = null;
-        this.description = null;
-        this.encryptedCredential = null;
-        this.environmentUrl = null;
-        this.parameters = Map.of();
-        this.password = null;
-        this.securityToken = null;
-        this.type = null;
-        this.username = null;
+    private SalesforceLinkedServiceResponse(SalesforceLinkedServiceResponse $) {
+        this.annotations = $.annotations;
+        this.apiVersion = $.apiVersion;
+        this.connectVia = $.connectVia;
+        this.description = $.description;
+        this.encryptedCredential = $.encryptedCredential;
+        this.environmentUrl = $.environmentUrl;
+        this.parameters = $.parameters;
+        this.password = $.password;
+        this.securityToken = $.securityToken;
+        this.type = $.type;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SalesforceLinkedServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> annotations;
-        private @Nullable Object apiVersion;
-        private @Nullable IntegrationRuntimeReferenceResponse connectVia;
-        private @Nullable String description;
-        private @Nullable Object encryptedCredential;
-        private @Nullable Object environmentUrl;
-        private @Nullable Map<String,ParameterSpecificationResponse> parameters;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken;
-        private String type;
-        private @Nullable Object username;
+        private SalesforceLinkedServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SalesforceLinkedServiceResponse();
         }
 
         public Builder(SalesforceLinkedServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.connectVia = defaults.connectVia;
-    	      this.description = defaults.description;
-    	      this.encryptedCredential = defaults.encryptedCredential;
-    	      this.environmentUrl = defaults.environmentUrl;
-    	      this.parameters = defaults.parameters;
-    	      this.password = defaults.password;
-    	      this.securityToken = defaults.securityToken;
-    	      this.type = defaults.type;
-    	      this.username = defaults.username;
+            $ = new SalesforceLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
+
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
+
         public Builder apiVersion(@Nullable Object apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
-            this.connectVia = connectVia;
+            $.connectVia = connectVia;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = encryptedCredential;
+            $.encryptedCredential = encryptedCredential;
             return this;
         }
+
         public Builder environmentUrl(@Nullable Object environmentUrl) {
-            this.environmentUrl = environmentUrl;
+            $.environmentUrl = environmentUrl;
             return this;
         }
+
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
-            this.securityToken = securityToken;
+            $.securityToken = securityToken;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public SalesforceLinkedServiceResponse build() {
-            return new SalesforceLinkedServiceResponse(annotations, apiVersion, connectVia, description, encryptedCredential, environmentUrl, parameters, password, securityToken, type, username);
+        }
+
+        public SalesforceLinkedServiceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

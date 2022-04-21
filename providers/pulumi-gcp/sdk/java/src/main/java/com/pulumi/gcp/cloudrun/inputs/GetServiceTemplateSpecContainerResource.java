@@ -14,62 +14,59 @@ public final class GetServiceTemplateSpecContainerResource extends com.pulumi.re
     public static final GetServiceTemplateSpecContainerResource Empty = new GetServiceTemplateSpecContainerResource();
 
     @Import(name="limits", required=true)
-      private final Map<String,String> limits;
+    private Map<String,String> limits;
 
     public Map<String,String> limits() {
         return this.limits;
     }
 
     @Import(name="requests", required=true)
-      private final Map<String,String> requests;
+    private Map<String,String> requests;
 
     public Map<String,String> requests() {
         return this.requests;
     }
 
-    public GetServiceTemplateSpecContainerResource(
-        Map<String,String> limits,
-        Map<String,String> requests) {
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-        this.requests = Objects.requireNonNull(requests, "expected parameter 'requests' to be non-null");
-    }
+    private GetServiceTemplateSpecContainerResource() {}
 
-    private GetServiceTemplateSpecContainerResource() {
-        this.limits = Map.of();
-        this.requests = Map.of();
+    private GetServiceTemplateSpecContainerResource(GetServiceTemplateSpecContainerResource $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceTemplateSpecContainerResource defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> limits;
-        private Map<String,String> requests;
+        private GetServiceTemplateSpecContainerResource $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceTemplateSpecContainerResource();
         }
 
         public Builder(GetServiceTemplateSpecContainerResource defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new GetServiceTemplateSpecContainerResource(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(Map<String,String> limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
         }
+
         public Builder requests(Map<String,String> requests) {
-            this.requests = Objects.requireNonNull(requests);
+            $.requests = requests;
             return this;
-        }        public GetServiceTemplateSpecContainerResource build() {
-            return new GetServiceTemplateSpecContainerResource(limits, requests);
+        }
+
+        public GetServiceTemplateSpecContainerResource build() {
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            $.requests = Objects.requireNonNull($.requests, "expected parameter 'requests' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends com.pul
     public static final DeliveryStreamHttpEndpointCommonAttributeArgs Empty = new DeliveryStreamHttpEndpointCommonAttributeArgs();
 
     @Import(name="attributeName", required=true)
-      private final Output<String> attributeName;
+    private Output<String> attributeName;
 
     public Output<String> attributeName() {
         return this.attributeName;
     }
 
     @Import(name="attributeValue", required=true)
-      private final Output<String> attributeValue;
+    private Output<String> attributeValue;
 
     public Output<String> attributeValue() {
         return this.attributeValue;
     }
 
-    public DeliveryStreamHttpEndpointCommonAttributeArgs(
-        Output<String> attributeName,
-        Output<String> attributeValue) {
-        this.attributeName = Objects.requireNonNull(attributeName, "expected parameter 'attributeName' to be non-null");
-        this.attributeValue = Objects.requireNonNull(attributeValue, "expected parameter 'attributeValue' to be non-null");
-    }
+    private DeliveryStreamHttpEndpointCommonAttributeArgs() {}
 
-    private DeliveryStreamHttpEndpointCommonAttributeArgs() {
-        this.attributeName = Codegen.empty();
-        this.attributeValue = Codegen.empty();
+    private DeliveryStreamHttpEndpointCommonAttributeArgs(DeliveryStreamHttpEndpointCommonAttributeArgs $) {
+        this.attributeName = $.attributeName;
+        this.attributeValue = $.attributeValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamHttpEndpointCommonAttributeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> attributeName;
-        private Output<String> attributeValue;
+        private DeliveryStreamHttpEndpointCommonAttributeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamHttpEndpointCommonAttributeArgs();
         }
 
         public Builder(DeliveryStreamHttpEndpointCommonAttributeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributeName = defaults.attributeName;
-    	      this.attributeValue = defaults.attributeValue;
+            $ = new DeliveryStreamHttpEndpointCommonAttributeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributeName(Output<String> attributeName) {
-            this.attributeName = Objects.requireNonNull(attributeName);
+            $.attributeName = attributeName;
             return this;
         }
+
         public Builder attributeName(String attributeName) {
-            this.attributeName = Output.of(Objects.requireNonNull(attributeName));
-            return this;
+            return attributeName(Output.of(attributeName));
         }
+
         public Builder attributeValue(Output<String> attributeValue) {
-            this.attributeValue = Objects.requireNonNull(attributeValue);
+            $.attributeValue = attributeValue;
             return this;
         }
+
         public Builder attributeValue(String attributeValue) {
-            this.attributeValue = Output.of(Objects.requireNonNull(attributeValue));
-            return this;
-        }        public DeliveryStreamHttpEndpointCommonAttributeArgs build() {
-            return new DeliveryStreamHttpEndpointCommonAttributeArgs(attributeName, attributeValue);
+            return attributeValue(Output.of(attributeValue));
+        }
+
+        public DeliveryStreamHttpEndpointCommonAttributeArgs build() {
+            $.attributeName = Objects.requireNonNull($.attributeName, "expected parameter 'attributeName' to be non-null");
+            $.attributeValue = Objects.requireNonNull($.attributeValue, "expected parameter 'attributeValue' to be non-null");
+            return $;
         }
     }
+
 }

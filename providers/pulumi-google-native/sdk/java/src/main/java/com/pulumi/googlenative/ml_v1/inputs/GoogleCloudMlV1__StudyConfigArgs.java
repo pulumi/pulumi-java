@@ -5,13 +5,13 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__StudyConfigAlgorithm;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AutomatedStoppingConfigArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
+    private @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
 
-    public Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<GoogleCloudMlV1__StudyConfigAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="automatedStoppingConfig")
-      private final @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
+    private @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
 
-    public Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig() {
-        return this.automatedStoppingConfig == null ? Codegen.empty() : this.automatedStoppingConfig;
+    public Optional<Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs>> automatedStoppingConfig() {
+        return Optional.ofNullable(this.automatedStoppingConfig);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
+    private @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
 
-    public Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -61,95 +61,87 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="parameters", required=true)
-      private final Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
+    private Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
 
     public Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters() {
         return this.parameters;
     }
 
-    public GoogleCloudMlV1__StudyConfigArgs(
-        @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm,
-        @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig,
-        @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics,
-        Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters) {
-        this.algorithm = algorithm;
-        this.automatedStoppingConfig = automatedStoppingConfig;
-        this.metrics = metrics;
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-    }
+    private GoogleCloudMlV1__StudyConfigArgs() {}
 
-    private GoogleCloudMlV1__StudyConfigArgs() {
-        this.algorithm = Codegen.empty();
-        this.automatedStoppingConfig = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private GoogleCloudMlV1__StudyConfigArgs(GoogleCloudMlV1__StudyConfigArgs $) {
+        this.algorithm = $.algorithm;
+        this.automatedStoppingConfig = $.automatedStoppingConfig;
+        this.metrics = $.metrics;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__StudyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
-        private @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
-        private @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
-        private Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters;
+        private GoogleCloudMlV1__StudyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__StudyConfigArgs();
         }
 
         public Builder(GoogleCloudMlV1__StudyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.automatedStoppingConfig = defaults.automatedStoppingConfig;
-    	      this.metrics = defaults.metrics;
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudMlV1__StudyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder automatedStoppingConfig(@Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig) {
-            this.automatedStoppingConfig = automatedStoppingConfig;
+            $.automatedStoppingConfig = automatedStoppingConfig;
             return this;
         }
-        public Builder automatedStoppingConfig(@Nullable GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
-            this.automatedStoppingConfig = Codegen.ofNullable(automatedStoppingConfig);
-            return this;
+
+        public Builder automatedStoppingConfig(GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
+            return automatedStoppingConfig(Output.of(automatedStoppingConfig));
         }
+
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder parameters(Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs> parameters) {
-            this.parameters = Output.of(Objects.requireNonNull(parameters));
-            return this;
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(GoogleCloudMlV1_StudyConfig_ParameterSpecArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public GoogleCloudMlV1__StudyConfigArgs build() {
-            return new GoogleCloudMlV1__StudyConfigArgs(algorithm, automatedStoppingConfig, metrics, parameters);
+        }
+
+        public GoogleCloudMlV1__StudyConfigArgs build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            return $;
         }
     }
+
 }

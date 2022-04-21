@@ -5,13 +5,13 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchGetArgs;
 import com.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="action", required=true)
-      private final Output<String> action;
+    private Output<String> action;
 
     public Output<String> action() {
         return this.action;
@@ -39,10 +39,10 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -51,7 +51,7 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="match", required=true)
-      private final Output<SecurityPolicyRuleMatchGetArgs> match;
+    private Output<SecurityPolicyRuleMatchGetArgs> match;
 
     public Output<SecurityPolicyRuleMatchGetArgs> match() {
         return this.match;
@@ -63,10 +63,10 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="preview")
-      private final @Nullable Output<Boolean> preview;
+    private @Nullable Output<Boolean> preview;
 
-    public Output<Boolean> preview() {
-        return this.preview == null ? Codegen.empty() : this.preview;
+    public Optional<Output<Boolean>> preview() {
+        return Optional.ofNullable(this.preview);
     }
 
     /**
@@ -75,7 +75,7 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
@@ -87,115 +87,101 @@ public final class SecurityPolicyRuleGetArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rateLimitOptions")
-      private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
+    private @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
 
-    public Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions() {
-        return this.rateLimitOptions == null ? Codegen.empty() : this.rateLimitOptions;
+    public Optional<Output<SecurityPolicyRuleRateLimitOptionsGetArgs>> rateLimitOptions() {
+        return Optional.ofNullable(this.rateLimitOptions);
     }
 
-    public SecurityPolicyRuleGetArgs(
-        Output<String> action,
-        @Nullable Output<String> description,
-        Output<SecurityPolicyRuleMatchGetArgs> match,
-        @Nullable Output<Boolean> preview,
-        Output<Integer> priority,
-        @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.description = description;
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.preview = preview;
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.rateLimitOptions = rateLimitOptions;
-    }
+    private SecurityPolicyRuleGetArgs() {}
 
-    private SecurityPolicyRuleGetArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.match = Codegen.empty();
-        this.preview = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.rateLimitOptions = Codegen.empty();
+    private SecurityPolicyRuleGetArgs(SecurityPolicyRuleGetArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.match = $.match;
+        this.preview = $.preview;
+        this.priority = $.priority;
+        this.rateLimitOptions = $.rateLimitOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> action;
-        private @Nullable Output<String> description;
-        private Output<SecurityPolicyRuleMatchGetArgs> match;
-        private @Nullable Output<Boolean> preview;
-        private Output<Integer> priority;
-        private @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
+        private SecurityPolicyRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleGetArgs();
         }
 
         public Builder(SecurityPolicyRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.match = defaults.match;
-    	      this.preview = defaults.preview;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitOptions = defaults.rateLimitOptions;
+            $ = new SecurityPolicyRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<String> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(String action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder match(Output<SecurityPolicyRuleMatchGetArgs> match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder match(SecurityPolicyRuleMatchGetArgs match) {
-            this.match = Output.of(Objects.requireNonNull(match));
-            return this;
+            return match(Output.of(match));
         }
+
         public Builder preview(@Nullable Output<Boolean> preview) {
-            this.preview = preview;
+            $.preview = preview;
             return this;
         }
-        public Builder preview(@Nullable Boolean preview) {
-            this.preview = Codegen.ofNullable(preview);
-            return this;
+
+        public Builder preview(Boolean preview) {
+            return preview(Output.of(preview));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
+            return priority(Output.of(priority));
         }
+
         public Builder rateLimitOptions(@Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions) {
-            this.rateLimitOptions = rateLimitOptions;
+            $.rateLimitOptions = rateLimitOptions;
             return this;
         }
-        public Builder rateLimitOptions(@Nullable SecurityPolicyRuleRateLimitOptionsGetArgs rateLimitOptions) {
-            this.rateLimitOptions = Codegen.ofNullable(rateLimitOptions);
-            return this;
-        }        public SecurityPolicyRuleGetArgs build() {
-            return new SecurityPolicyRuleGetArgs(action, description, match, preview, priority, rateLimitOptions);
+
+        public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsGetArgs rateLimitOptions) {
+            return rateLimitOptions(Output.of(rateLimitOptions));
+        }
+
+        public SecurityPolicyRuleGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

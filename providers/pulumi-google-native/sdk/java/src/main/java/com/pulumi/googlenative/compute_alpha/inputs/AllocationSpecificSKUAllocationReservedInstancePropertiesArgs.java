@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval;
 import com.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="guestAccelerators")
-      private final @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
+    private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
 
-    public Output<List<AcceleratorConfigArgs>> guestAccelerators() {
-        return this.guestAccelerators == null ? Codegen.empty() : this.guestAccelerators;
+    public Optional<Output<List<AcceleratorConfigArgs>>> guestAccelerators() {
+        return Optional.ofNullable(this.guestAccelerators);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="localSsds")
-      private final @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
+    private @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
 
-    public Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds() {
-        return this.localSsds == null ? Codegen.empty() : this.localSsds;
+    public Optional<Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>>> localSsds() {
+        return Optional.ofNullable(this.localSsds);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="locationHint")
-      private final @Nullable Output<String> locationHint;
+    private @Nullable Output<String> locationHint;
 
-    public Output<String> locationHint() {
-        return this.locationHint == null ? Codegen.empty() : this.locationHint;
+    public Optional<Output<String>> locationHint() {
+        return Optional.ofNullable(this.locationHint);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="maintenanceFreezeDurationHours")
-      private final @Nullable Output<Integer> maintenanceFreezeDurationHours;
+    private @Nullable Output<Integer> maintenanceFreezeDurationHours;
 
-    public Output<Integer> maintenanceFreezeDurationHours() {
-        return this.maintenanceFreezeDurationHours == null ? Codegen.empty() : this.maintenanceFreezeDurationHours;
+    public Optional<Output<Integer>> maintenanceFreezeDurationHours() {
+        return Optional.ofNullable(this.maintenanceFreezeDurationHours);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="maintenanceInterval")
-      private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
+    private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
 
-    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval() {
-        return this.maintenanceInterval == null ? Codegen.empty() : this.maintenanceInterval;
+    public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval>> maintenanceInterval() {
+        return Optional.ofNullable(this.maintenanceInterval);
     }
 
     /**
@@ -95,134 +95,116 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesArgs
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
-    public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(
-        @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators,
-        @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds,
-        @Nullable Output<String> locationHint,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Integer> maintenanceFreezeDurationHours,
-        @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval,
-        @Nullable Output<String> minCpuPlatform) {
-        this.guestAccelerators = guestAccelerators;
-        this.localSsds = localSsds;
-        this.locationHint = locationHint;
-        this.machineType = machineType;
-        this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
-        this.maintenanceInterval = maintenanceInterval;
-        this.minCpuPlatform = minCpuPlatform;
-    }
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesArgs() {}
 
-    private AllocationSpecificSKUAllocationReservedInstancePropertiesArgs() {
-        this.guestAccelerators = Codegen.empty();
-        this.localSsds = Codegen.empty();
-        this.locationHint = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.maintenanceFreezeDurationHours = Codegen.empty();
-        this.maintenanceInterval = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
+    private AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs $) {
+        this.guestAccelerators = $.guestAccelerators;
+        this.localSsds = $.localSsds;
+        this.locationHint = $.locationHint;
+        this.machineType = $.machineType;
+        this.maintenanceFreezeDurationHours = $.maintenanceFreezeDurationHours;
+        this.maintenanceInterval = $.maintenanceInterval;
+        this.minCpuPlatform = $.minCpuPlatform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators;
-        private @Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds;
-        private @Nullable Output<String> locationHint;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Integer> maintenanceFreezeDurationHours;
-        private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval;
-        private @Nullable Output<String> minCpuPlatform;
+        private AllocationSpecificSKUAllocationReservedInstancePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs();
         }
 
         public Builder(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.localSsds = defaults.localSsds;
-    	      this.locationHint = defaults.locationHint;
-    	      this.machineType = defaults.machineType;
-    	      this.maintenanceFreezeDurationHours = defaults.maintenanceFreezeDurationHours;
-    	      this.maintenanceInterval = defaults.maintenanceInterval;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
+            $ = new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder guestAccelerators(@Nullable Output<List<AcceleratorConfigArgs>> guestAccelerators) {
-            this.guestAccelerators = guestAccelerators;
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
-        public Builder guestAccelerators(@Nullable List<AcceleratorConfigArgs> guestAccelerators) {
-            this.guestAccelerators = Codegen.ofNullable(guestAccelerators);
-            return this;
+
+        public Builder guestAccelerators(List<AcceleratorConfigArgs> guestAccelerators) {
+            return guestAccelerators(Output.of(guestAccelerators));
         }
+
         public Builder guestAccelerators(AcceleratorConfigArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder localSsds(@Nullable Output<List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs>> localSsds) {
-            this.localSsds = localSsds;
+            $.localSsds = localSsds;
             return this;
         }
-        public Builder localSsds(@Nullable List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
-            this.localSsds = Codegen.ofNullable(localSsds);
-            return this;
+
+        public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs> localSsds) {
+            return localSsds(Output.of(localSsds));
         }
+
         public Builder localSsds(AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs... localSsds) {
             return localSsds(List.of(localSsds));
         }
+
         public Builder locationHint(@Nullable Output<String> locationHint) {
-            this.locationHint = locationHint;
+            $.locationHint = locationHint;
             return this;
         }
-        public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Codegen.ofNullable(locationHint);
-            return this;
+
+        public Builder locationHint(String locationHint) {
+            return locationHint(Output.of(locationHint));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder maintenanceFreezeDurationHours(@Nullable Output<Integer> maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
+            $.maintenanceFreezeDurationHours = maintenanceFreezeDurationHours;
             return this;
         }
-        public Builder maintenanceFreezeDurationHours(@Nullable Integer maintenanceFreezeDurationHours) {
-            this.maintenanceFreezeDurationHours = Codegen.ofNullable(maintenanceFreezeDurationHours);
-            return this;
+
+        public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
+            return maintenanceFreezeDurationHours(Output.of(maintenanceFreezeDurationHours));
         }
+
         public Builder maintenanceInterval(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval> maintenanceInterval) {
-            this.maintenanceInterval = maintenanceInterval;
+            $.maintenanceInterval = maintenanceInterval;
             return this;
         }
-        public Builder maintenanceInterval(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval maintenanceInterval) {
-            this.maintenanceInterval = Codegen.ofNullable(maintenanceInterval);
-            return this;
+
+        public Builder maintenanceInterval(AllocationSpecificSKUAllocationReservedInstancePropertiesMaintenanceInterval maintenanceInterval) {
+            return maintenanceInterval(Output.of(maintenanceInterval));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
-        }        public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {
-            return new AllocationSpecificSKUAllocationReservedInstancePropertiesArgs(guestAccelerators, localSsds, locationHint, machineType, maintenanceFreezeDurationHours, maintenanceInterval, minCpuPlatform);
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
+        }
+
+        public AllocationSpecificSKUAllocationReservedInstancePropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,10 +22,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allocationResourceTags")
-      private final @Nullable Map<String,String> allocationResourceTags;
+    private @Nullable Map<String,String> allocationResourceTags;
 
-    public Map<String,String> allocationResourceTags() {
-        return this.allocationResourceTags == null ? Map.of() : this.allocationResourceTags;
+    public Optional<Map<String,String>> allocationResourceTags() {
+        return Optional.ofNullable(this.allocationResourceTags);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filters")
-      private final @Nullable List<GetVpcIamPoolFilter> filters;
+    private @Nullable List<GetVpcIamPoolFilter> filters;
 
-    public List<GetVpcIamPoolFilter> filters() {
-        return this.filters == null ? List.of() : this.filters;
+    public Optional<List<GetVpcIamPoolFilter>> filters() {
+        return Optional.ofNullable(this.filters);
     }
 
     /**
@@ -44,17 +44,17 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="ipamPoolId")
-      private final @Nullable String ipamPoolId;
+    private @Nullable String ipamPoolId;
 
     public Optional<String> ipamPoolId() {
-        return this.ipamPoolId == null ? Optional.empty() : Optional.ofNullable(this.ipamPoolId);
+        return Optional.ofNullable(this.ipamPoolId);
     }
 
     /**
@@ -62,85 +62,72 @@ public final class GetVpcIamPoolArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Map<String,String> tags;
+    private @Nullable Map<String,String> tags;
 
-    public Map<String,String> tags() {
-        return this.tags == null ? Map.of() : this.tags;
+    public Optional<Map<String,String>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GetVpcIamPoolArgs(
-        @Nullable Map<String,String> allocationResourceTags,
-        @Nullable List<GetVpcIamPoolFilter> filters,
-        @Nullable String id,
-        @Nullable String ipamPoolId,
-        @Nullable Map<String,String> tags) {
-        this.allocationResourceTags = allocationResourceTags;
-        this.filters = filters;
-        this.id = id;
-        this.ipamPoolId = ipamPoolId;
-        this.tags = tags;
-    }
+    private GetVpcIamPoolArgs() {}
 
-    private GetVpcIamPoolArgs() {
-        this.allocationResourceTags = Map.of();
-        this.filters = List.of();
-        this.id = null;
-        this.ipamPoolId = null;
-        this.tags = Map.of();
+    private GetVpcIamPoolArgs(GetVpcIamPoolArgs $) {
+        this.allocationResourceTags = $.allocationResourceTags;
+        this.filters = $.filters;
+        this.id = $.id;
+        this.ipamPoolId = $.ipamPoolId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVpcIamPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Map<String,String> allocationResourceTags;
-        private @Nullable List<GetVpcIamPoolFilter> filters;
-        private @Nullable String id;
-        private @Nullable String ipamPoolId;
-        private @Nullable Map<String,String> tags;
+        private GetVpcIamPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVpcIamPoolArgs();
         }
 
         public Builder(GetVpcIamPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allocationResourceTags = defaults.allocationResourceTags;
-    	      this.filters = defaults.filters;
-    	      this.id = defaults.id;
-    	      this.ipamPoolId = defaults.ipamPoolId;
-    	      this.tags = defaults.tags;
+            $ = new GetVpcIamPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allocationResourceTags(@Nullable Map<String,String> allocationResourceTags) {
-            this.allocationResourceTags = allocationResourceTags;
+            $.allocationResourceTags = allocationResourceTags;
             return this;
         }
+
         public Builder filters(@Nullable List<GetVpcIamPoolFilter> filters) {
-            this.filters = filters;
+            $.filters = filters;
             return this;
         }
+
         public Builder filters(GetVpcIamPoolFilter... filters) {
             return filters(List.of(filters));
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipamPoolId(@Nullable String ipamPoolId) {
-            this.ipamPoolId = ipamPoolId;
+            $.ipamPoolId = ipamPoolId;
             return this;
         }
+
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public GetVpcIamPoolArgs build() {
-            return new GetVpcIamPoolArgs(allocationResourceTags, filters, id, ipamPoolId, tags);
+        }
+
+        public GetVpcIamPoolArgs build() {
+            return $;
         }
     }
+
 }

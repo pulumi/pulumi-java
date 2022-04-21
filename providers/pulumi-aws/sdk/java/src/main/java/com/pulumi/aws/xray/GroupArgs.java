@@ -5,10 +5,10 @@ package com.pulumi.aws.xray;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filterExpression", required=true)
-      private final Output<String> filterExpression;
+    private Output<String> filterExpression;
 
     public Output<String> filterExpression() {
         return this.filterExpression;
@@ -32,7 +32,7 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="groupName", required=true)
-      private final Output<String> groupName;
+    private Output<String> groupName;
 
     public Output<String> groupName() {
         return this.groupName;
@@ -43,76 +43,70 @@ public final class GroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public GroupArgs(
-        Output<String> filterExpression,
-        Output<String> groupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.filterExpression = Objects.requireNonNull(filterExpression, "expected parameter 'filterExpression' to be non-null");
-        this.groupName = Objects.requireNonNull(groupName, "expected parameter 'groupName' to be non-null");
-        this.tags = tags;
-    }
+    private GroupArgs() {}
 
-    private GroupArgs() {
-        this.filterExpression = Codegen.empty();
-        this.groupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private GroupArgs(GroupArgs $) {
+        this.filterExpression = $.filterExpression;
+        this.groupName = $.groupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> filterExpression;
-        private Output<String> groupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private GroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GroupArgs();
         }
 
         public Builder(GroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterExpression = defaults.filterExpression;
-    	      this.groupName = defaults.groupName;
-    	      this.tags = defaults.tags;
+            $ = new GroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterExpression(Output<String> filterExpression) {
-            this.filterExpression = Objects.requireNonNull(filterExpression);
+            $.filterExpression = filterExpression;
             return this;
         }
+
         public Builder filterExpression(String filterExpression) {
-            this.filterExpression = Output.of(Objects.requireNonNull(filterExpression));
-            return this;
+            return filterExpression(Output.of(filterExpression));
         }
+
         public Builder groupName(Output<String> groupName) {
-            this.groupName = Objects.requireNonNull(groupName);
+            $.groupName = groupName;
             return this;
         }
+
         public Builder groupName(String groupName) {
-            this.groupName = Output.of(Objects.requireNonNull(groupName));
-            return this;
+            return groupName(Output.of(groupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public GroupArgs build() {
-            return new GroupArgs(filterExpression, groupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public GroupArgs build() {
+            $.filterExpression = Objects.requireNonNull($.filterExpression, "expected parameter 'filterExpression' to be non-null");
+            $.groupName = Objects.requireNonNull($.groupName, "expected parameter 'groupName' to be non-null");
+            return $;
         }
     }
+
 }

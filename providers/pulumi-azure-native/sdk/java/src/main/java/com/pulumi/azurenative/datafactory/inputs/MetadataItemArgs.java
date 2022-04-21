@@ -5,9 +5,9 @@ package com.pulumi.azurenative.datafactory.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetadataItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Object> name;
+    private @Nullable Output<Object> name;
 
-    public Output<Object> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Object>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MetadataItemArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<Object> value;
+    private @Nullable Output<Object> value;
 
-    public Output<Object> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Object>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public MetadataItemArgs(
-        @Nullable Output<Object> name,
-        @Nullable Output<Object> value) {
-        this.name = name;
-        this.value = value;
-    }
+    private MetadataItemArgs() {}
 
-    private MetadataItemArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
+    private MetadataItemArgs(MetadataItemArgs $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> name;
-        private @Nullable Output<Object> value;
+        private MetadataItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataItemArgs();
         }
 
         public Builder(MetadataItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new MetadataItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<Object> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Object name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Object name) {
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<Object> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Object value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public MetadataItemArgs build() {
-            return new MetadataItemArgs(name, value);
+
+        public Builder value(Object value) {
+            return value(Output.of(value));
+        }
+
+        public MetadataItemArgs build() {
+            return $;
         }
     }
+
 }

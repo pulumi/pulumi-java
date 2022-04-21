@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ContainerHostGetArgs extends com.pulumi.resources.ResourceArg
     public static final ContainerHostGetArgs Empty = new ContainerHostGetArgs();
 
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
     }
 
     @Import(name="ip", required=true)
-      private final Output<String> ip;
+    private Output<String> ip;
 
     public Output<String> ip() {
         return this.ip;
     }
 
-    public ContainerHostGetArgs(
-        Output<String> host,
-        Output<String> ip) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
-    }
+    private ContainerHostGetArgs() {}
 
-    private ContainerHostGetArgs() {
-        this.host = Codegen.empty();
-        this.ip = Codegen.empty();
+    private ContainerHostGetArgs(ContainerHostGetArgs $) {
+        this.host = $.host;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerHostGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> host;
-        private Output<String> ip;
+        private ContainerHostGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerHostGetArgs();
         }
 
         public Builder(ContainerHostGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.ip = defaults.ip;
+            $ = new ContainerHostGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder ip(Output<String> ip) {
-            this.ip = Objects.requireNonNull(ip);
+            $.ip = ip;
             return this;
         }
+
         public Builder ip(String ip) {
-            this.ip = Output.of(Objects.requireNonNull(ip));
-            return this;
-        }        public ContainerHostGetArgs build() {
-            return new ContainerHostGetArgs(host, ip);
+            return ip(Output.of(ip));
+        }
+
+        public ContainerHostGetArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.ip = Objects.requireNonNull($.ip, "expected parameter 'ip' to be non-null");
+            return $;
         }
     }
+
 }

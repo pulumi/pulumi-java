@@ -24,10 +24,10 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="extendedLocations")
-      private final @Nullable List<String> extendedLocations;
+    private @Nullable List<String> extendedLocations;
 
-    public List<String> extendedLocations() {
-        return this.extendedLocations == null ? List.of() : this.extendedLocations;
+    public Optional<List<String>> extendedLocations() {
+        return Optional.ofNullable(this.extendedLocations);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="location")
-      private final @Nullable String location;
+    private @Nullable String location;
 
     public Optional<String> location() {
-        return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -46,67 +46,60 @@ public final class ProviderExtendedLocationResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ProviderExtendedLocationResponse(
-        @Nullable List<String> extendedLocations,
-        @Nullable String location,
-        @Nullable String type) {
-        this.extendedLocations = extendedLocations;
-        this.location = location;
-        this.type = type;
-    }
+    private ProviderExtendedLocationResponse() {}
 
-    private ProviderExtendedLocationResponse() {
-        this.extendedLocations = List.of();
-        this.location = null;
-        this.type = null;
+    private ProviderExtendedLocationResponse(ProviderExtendedLocationResponse $) {
+        this.extendedLocations = $.extendedLocations;
+        this.location = $.location;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProviderExtendedLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> extendedLocations;
-        private @Nullable String location;
-        private @Nullable String type;
+        private ProviderExtendedLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProviderExtendedLocationResponse();
         }
 
         public Builder(ProviderExtendedLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extendedLocations = defaults.extendedLocations;
-    	      this.location = defaults.location;
-    	      this.type = defaults.type;
+            $ = new ProviderExtendedLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder extendedLocations(@Nullable List<String> extendedLocations) {
-            this.extendedLocations = extendedLocations;
+            $.extendedLocations = extendedLocations;
             return this;
         }
+
         public Builder extendedLocations(String... extendedLocations) {
             return extendedLocations(List.of(extendedLocations));
         }
+
         public Builder location(@Nullable String location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ProviderExtendedLocationResponse build() {
-            return new ProviderExtendedLocationResponse(extendedLocations, location, type);
+        }
+
+        public ProviderExtendedLocationResponse build() {
+            return $;
         }
     }
+
 }

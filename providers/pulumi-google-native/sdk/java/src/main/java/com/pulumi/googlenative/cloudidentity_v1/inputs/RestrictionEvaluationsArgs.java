@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudidentity_v1.inputs.MembershipRoleRestrictionEvaluationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class RestrictionEvaluationsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="memberRestrictionEvaluation")
-      private final @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
+    private @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
 
-    public Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation() {
-        return this.memberRestrictionEvaluation == null ? Codegen.empty() : this.memberRestrictionEvaluation;
+    public Optional<Output<MembershipRoleRestrictionEvaluationArgs>> memberRestrictionEvaluation() {
+        return Optional.ofNullable(this.memberRestrictionEvaluation);
     }
 
-    public RestrictionEvaluationsArgs(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
-        this.memberRestrictionEvaluation = memberRestrictionEvaluation;
-    }
+    private RestrictionEvaluationsArgs() {}
 
-    private RestrictionEvaluationsArgs() {
-        this.memberRestrictionEvaluation = Codegen.empty();
+    private RestrictionEvaluationsArgs(RestrictionEvaluationsArgs $) {
+        this.memberRestrictionEvaluation = $.memberRestrictionEvaluation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestrictionEvaluationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation;
+        private RestrictionEvaluationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestrictionEvaluationsArgs();
         }
 
         public Builder(RestrictionEvaluationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
+            $ = new RestrictionEvaluationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder memberRestrictionEvaluation(@Nullable Output<MembershipRoleRestrictionEvaluationArgs> memberRestrictionEvaluation) {
-            this.memberRestrictionEvaluation = memberRestrictionEvaluation;
+            $.memberRestrictionEvaluation = memberRestrictionEvaluation;
             return this;
         }
-        public Builder memberRestrictionEvaluation(@Nullable MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
-            this.memberRestrictionEvaluation = Codegen.ofNullable(memberRestrictionEvaluation);
-            return this;
-        }        public RestrictionEvaluationsArgs build() {
-            return new RestrictionEvaluationsArgs(memberRestrictionEvaluation);
+
+        public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationArgs memberRestrictionEvaluation) {
+            return memberRestrictionEvaluation(Output.of(memberRestrictionEvaluation));
+        }
+
+        public RestrictionEvaluationsArgs build() {
+            return $;
         }
     }
+
 }

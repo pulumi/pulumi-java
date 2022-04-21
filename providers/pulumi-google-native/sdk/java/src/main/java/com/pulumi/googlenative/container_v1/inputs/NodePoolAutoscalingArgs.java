@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="autoprovisioned")
-      private final @Nullable Output<Boolean> autoprovisioned;
+    private @Nullable Output<Boolean> autoprovisioned;
 
-    public Output<Boolean> autoprovisioned() {
-        return this.autoprovisioned == null ? Codegen.empty() : this.autoprovisioned;
+    public Optional<Output<Boolean>> autoprovisioned() {
+        return Optional.ofNullable(this.autoprovisioned);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="maxNodeCount")
-      private final @Nullable Output<Integer> maxNodeCount;
+    private @Nullable Output<Integer> maxNodeCount;
 
-    public Output<Integer> maxNodeCount() {
-        return this.maxNodeCount == null ? Codegen.empty() : this.maxNodeCount;
+    public Optional<Output<Integer>> maxNodeCount() {
+        return Optional.ofNullable(this.maxNodeCount);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class NodePoolAutoscalingArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="minNodeCount")
-      private final @Nullable Output<Integer> minNodeCount;
+    private @Nullable Output<Integer> minNodeCount;
 
-    public Output<Integer> minNodeCount() {
-        return this.minNodeCount == null ? Codegen.empty() : this.minNodeCount;
+    public Optional<Output<Integer>> minNodeCount() {
+        return Optional.ofNullable(this.minNodeCount);
     }
 
-    public NodePoolAutoscalingArgs(
-        @Nullable Output<Boolean> autoprovisioned,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<Integer> maxNodeCount,
-        @Nullable Output<Integer> minNodeCount) {
-        this.autoprovisioned = autoprovisioned;
-        this.enabled = enabled;
-        this.maxNodeCount = maxNodeCount;
-        this.minNodeCount = minNodeCount;
-    }
+    private NodePoolAutoscalingArgs() {}
 
-    private NodePoolAutoscalingArgs() {
-        this.autoprovisioned = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.maxNodeCount = Codegen.empty();
-        this.minNodeCount = Codegen.empty();
+    private NodePoolAutoscalingArgs(NodePoolAutoscalingArgs $) {
+        this.autoprovisioned = $.autoprovisioned;
+        this.enabled = $.enabled;
+        this.maxNodeCount = $.maxNodeCount;
+        this.minNodeCount = $.minNodeCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolAutoscalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoprovisioned;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<Integer> maxNodeCount;
-        private @Nullable Output<Integer> minNodeCount;
+        private NodePoolAutoscalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolAutoscalingArgs();
         }
 
         public Builder(NodePoolAutoscalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoprovisioned = defaults.autoprovisioned;
-    	      this.enabled = defaults.enabled;
-    	      this.maxNodeCount = defaults.maxNodeCount;
-    	      this.minNodeCount = defaults.minNodeCount;
+            $ = new NodePoolAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoprovisioned(@Nullable Output<Boolean> autoprovisioned) {
-            this.autoprovisioned = autoprovisioned;
+            $.autoprovisioned = autoprovisioned;
             return this;
         }
-        public Builder autoprovisioned(@Nullable Boolean autoprovisioned) {
-            this.autoprovisioned = Codegen.ofNullable(autoprovisioned);
-            return this;
+
+        public Builder autoprovisioned(Boolean autoprovisioned) {
+            return autoprovisioned(Output.of(autoprovisioned));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder maxNodeCount(@Nullable Output<Integer> maxNodeCount) {
-            this.maxNodeCount = maxNodeCount;
+            $.maxNodeCount = maxNodeCount;
             return this;
         }
-        public Builder maxNodeCount(@Nullable Integer maxNodeCount) {
-            this.maxNodeCount = Codegen.ofNullable(maxNodeCount);
-            return this;
+
+        public Builder maxNodeCount(Integer maxNodeCount) {
+            return maxNodeCount(Output.of(maxNodeCount));
         }
+
         public Builder minNodeCount(@Nullable Output<Integer> minNodeCount) {
-            this.minNodeCount = minNodeCount;
+            $.minNodeCount = minNodeCount;
             return this;
         }
-        public Builder minNodeCount(@Nullable Integer minNodeCount) {
-            this.minNodeCount = Codegen.ofNullable(minNodeCount);
-            return this;
-        }        public NodePoolAutoscalingArgs build() {
-            return new NodePoolAutoscalingArgs(autoprovisioned, enabled, maxNodeCount, minNodeCount);
+
+        public Builder minNodeCount(Integer minNodeCount) {
+            return minNodeCount(Output.of(minNodeCount));
+        }
+
+        public NodePoolAutoscalingArgs build() {
+            return $;
         }
     }
+
 }

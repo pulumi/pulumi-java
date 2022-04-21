@@ -7,8 +7,8 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileCredentialsArgs;
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfilePropertiesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,66 @@ public final class ConnectorProfileConfigArgs extends com.pulumi.resources.Resou
     public static final ConnectorProfileConfigArgs Empty = new ConnectorProfileConfigArgs();
 
     @Import(name="connectorProfileCredentials", required=true)
-      private final Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
+    private Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
 
     public Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials() {
         return this.connectorProfileCredentials;
     }
 
     @Import(name="connectorProfileProperties")
-      private final @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
+    private @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
 
-    public Output<ConnectorProfilePropertiesArgs> connectorProfileProperties() {
-        return this.connectorProfileProperties == null ? Codegen.empty() : this.connectorProfileProperties;
+    public Optional<Output<ConnectorProfilePropertiesArgs>> connectorProfileProperties() {
+        return Optional.ofNullable(this.connectorProfileProperties);
     }
 
-    public ConnectorProfileConfigArgs(
-        Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials,
-        @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties) {
-        this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials, "expected parameter 'connectorProfileCredentials' to be non-null");
-        this.connectorProfileProperties = connectorProfileProperties;
-    }
+    private ConnectorProfileConfigArgs() {}
 
-    private ConnectorProfileConfigArgs() {
-        this.connectorProfileCredentials = Codegen.empty();
-        this.connectorProfileProperties = Codegen.empty();
+    private ConnectorProfileConfigArgs(ConnectorProfileConfigArgs $) {
+        this.connectorProfileCredentials = $.connectorProfileCredentials;
+        this.connectorProfileProperties = $.connectorProfileProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials;
-        private @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
+        private ConnectorProfileConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileConfigArgs();
         }
 
         public Builder(ConnectorProfileConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorProfileCredentials = defaults.connectorProfileCredentials;
-    	      this.connectorProfileProperties = defaults.connectorProfileProperties;
+            $ = new ConnectorProfileConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorProfileCredentials(Output<ConnectorProfileCredentialsArgs> connectorProfileCredentials) {
-            this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials);
+            $.connectorProfileCredentials = connectorProfileCredentials;
             return this;
         }
+
         public Builder connectorProfileCredentials(ConnectorProfileCredentialsArgs connectorProfileCredentials) {
-            this.connectorProfileCredentials = Output.of(Objects.requireNonNull(connectorProfileCredentials));
-            return this;
+            return connectorProfileCredentials(Output.of(connectorProfileCredentials));
         }
+
         public Builder connectorProfileProperties(@Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties) {
-            this.connectorProfileProperties = connectorProfileProperties;
+            $.connectorProfileProperties = connectorProfileProperties;
             return this;
         }
-        public Builder connectorProfileProperties(@Nullable ConnectorProfilePropertiesArgs connectorProfileProperties) {
-            this.connectorProfileProperties = Codegen.ofNullable(connectorProfileProperties);
-            return this;
-        }        public ConnectorProfileConfigArgs build() {
-            return new ConnectorProfileConfigArgs(connectorProfileCredentials, connectorProfileProperties);
+
+        public Builder connectorProfileProperties(ConnectorProfilePropertiesArgs connectorProfileProperties) {
+            return connectorProfileProperties(Output.of(connectorProfileProperties));
+        }
+
+        public ConnectorProfileConfigArgs build() {
+            $.connectorProfileCredentials = Objects.requireNonNull($.connectorProfileCredentials, "expected parameter 'connectorProfileCredentials' to be non-null");
+            return $;
         }
     }
+
 }

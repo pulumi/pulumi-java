@@ -24,48 +24,48 @@ public final class FhirServiceAcrConfigurationResponse extends com.pulumi.resour
      * 
      */
     @Import(name="loginServers")
-      private final @Nullable List<String> loginServers;
+    private @Nullable List<String> loginServers;
 
-    public List<String> loginServers() {
-        return this.loginServers == null ? List.of() : this.loginServers;
+    public Optional<List<String>> loginServers() {
+        return Optional.ofNullable(this.loginServers);
     }
 
-    public FhirServiceAcrConfigurationResponse(@Nullable List<String> loginServers) {
-        this.loginServers = loginServers;
-    }
+    private FhirServiceAcrConfigurationResponse() {}
 
-    private FhirServiceAcrConfigurationResponse() {
-        this.loginServers = List.of();
+    private FhirServiceAcrConfigurationResponse(FhirServiceAcrConfigurationResponse $) {
+        this.loginServers = $.loginServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FhirServiceAcrConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> loginServers;
+        private FhirServiceAcrConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FhirServiceAcrConfigurationResponse();
         }
 
         public Builder(FhirServiceAcrConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loginServers = defaults.loginServers;
+            $ = new FhirServiceAcrConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loginServers(@Nullable List<String> loginServers) {
-            this.loginServers = loginServers;
+            $.loginServers = loginServers;
             return this;
         }
+
         public Builder loginServers(String... loginServers) {
             return loginServers(List.of(loginServers));
-        }        public FhirServiceAcrConfigurationResponse build() {
-            return new FhirServiceAcrConfigurationResponse(loginServers);
+        }
+
+        public FhirServiceAcrConfigurationResponse build() {
+            return $;
         }
     }
+
 }

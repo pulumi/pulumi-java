@@ -21,7 +21,7 @@ public final class ObjectiveResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="goal", required=true)
-      private final String goal;
+    private String goal;
 
     public String goal() {
         return this.goal;
@@ -32,55 +32,52 @@ public final class ObjectiveResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryMetric", required=true)
-      private final String primaryMetric;
+    private String primaryMetric;
 
     public String primaryMetric() {
         return this.primaryMetric;
     }
 
-    public ObjectiveResponse(
-        String goal,
-        String primaryMetric) {
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.primaryMetric = Objects.requireNonNull(primaryMetric, "expected parameter 'primaryMetric' to be non-null");
-    }
+    private ObjectiveResponse() {}
 
-    private ObjectiveResponse() {
-        this.goal = null;
-        this.primaryMetric = null;
+    private ObjectiveResponse(ObjectiveResponse $) {
+        this.goal = $.goal;
+        this.primaryMetric = $.primaryMetric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectiveResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String goal;
-        private String primaryMetric;
+        private ObjectiveResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectiveResponse();
         }
 
         public Builder(ObjectiveResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goal = defaults.goal;
-    	      this.primaryMetric = defaults.primaryMetric;
+            $ = new ObjectiveResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder goal(String goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder primaryMetric(String primaryMetric) {
-            this.primaryMetric = Objects.requireNonNull(primaryMetric);
+            $.primaryMetric = primaryMetric;
             return this;
-        }        public ObjectiveResponse build() {
-            return new ObjectiveResponse(goal, primaryMetric);
+        }
+
+        public ObjectiveResponse build() {
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.primaryMetric = Objects.requireNonNull($.primaryMetric, "expected parameter 'primaryMetric' to be non-null");
+            return $;
         }
     }
+
 }

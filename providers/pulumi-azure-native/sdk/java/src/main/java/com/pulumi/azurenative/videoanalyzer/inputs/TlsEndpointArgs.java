@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +29,7 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="credentials", required=true)
-      private final Output<UsernamePasswordCredentialsArgs> credentials;
+    private Output<UsernamePasswordCredentialsArgs> credentials;
 
     public Output<UsernamePasswordCredentialsArgs> credentials() {
         return this.credentials;
@@ -39,10 +40,10 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trustedCertificates")
-      private final @Nullable Output<PemCertificateListArgs> trustedCertificates;
+    private @Nullable Output<PemCertificateListArgs> trustedCertificates;
 
-    public Output<PemCertificateListArgs> trustedCertificates() {
-        return this.trustedCertificates == null ? Codegen.empty() : this.trustedCertificates;
+    public Optional<Output<PemCertificateListArgs>> trustedCertificates() {
+        return Optional.ofNullable(this.trustedCertificates);
     }
 
     /**
@@ -50,10 +51,10 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tunnel")
-      private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
+    private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
-    public Output<SecureIotDeviceRemoteTunnelArgs> tunnel() {
-        return this.tunnel == null ? Codegen.empty() : this.tunnel;
+    public Optional<Output<SecureIotDeviceRemoteTunnelArgs>> tunnel() {
+        return Optional.ofNullable(this.tunnel);
     }
 
     /**
@@ -62,7 +63,7 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -73,7 +74,7 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final Output<String> url;
+    private Output<String> url;
 
     public Output<String> url() {
         return this.url;
@@ -84,115 +85,101 @@ public final class TlsEndpointArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationOptions")
-      private final @Nullable Output<TlsValidationOptionsArgs> validationOptions;
+    private @Nullable Output<TlsValidationOptionsArgs> validationOptions;
 
-    public Output<TlsValidationOptionsArgs> validationOptions() {
-        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
+    public Optional<Output<TlsValidationOptionsArgs>> validationOptions() {
+        return Optional.ofNullable(this.validationOptions);
     }
 
-    public TlsEndpointArgs(
-        Output<UsernamePasswordCredentialsArgs> credentials,
-        @Nullable Output<PemCertificateListArgs> trustedCertificates,
-        @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel,
-        Output<String> type,
-        Output<String> url,
-        @Nullable Output<TlsValidationOptionsArgs> validationOptions) {
-        this.credentials = Objects.requireNonNull(credentials, "expected parameter 'credentials' to be non-null");
-        this.trustedCertificates = trustedCertificates;
-        this.tunnel = tunnel;
-        this.type = Codegen.stringProp("type").output().arg(type).require();
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.validationOptions = validationOptions;
-    }
+    private TlsEndpointArgs() {}
 
-    private TlsEndpointArgs() {
-        this.credentials = Codegen.empty();
-        this.trustedCertificates = Codegen.empty();
-        this.tunnel = Codegen.empty();
-        this.type = Codegen.empty();
-        this.url = Codegen.empty();
-        this.validationOptions = Codegen.empty();
+    private TlsEndpointArgs(TlsEndpointArgs $) {
+        this.credentials = $.credentials;
+        this.trustedCertificates = $.trustedCertificates;
+        this.tunnel = $.tunnel;
+        this.type = $.type;
+        this.url = $.url;
+        this.validationOptions = $.validationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TlsEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<UsernamePasswordCredentialsArgs> credentials;
-        private @Nullable Output<PemCertificateListArgs> trustedCertificates;
-        private @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
-        private Output<String> type;
-        private Output<String> url;
-        private @Nullable Output<TlsValidationOptionsArgs> validationOptions;
+        private TlsEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TlsEndpointArgs();
         }
 
         public Builder(TlsEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credentials = defaults.credentials;
-    	      this.trustedCertificates = defaults.trustedCertificates;
-    	      this.tunnel = defaults.tunnel;
-    	      this.type = defaults.type;
-    	      this.url = defaults.url;
-    	      this.validationOptions = defaults.validationOptions;
+            $ = new TlsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder credentials(Output<UsernamePasswordCredentialsArgs> credentials) {
-            this.credentials = Objects.requireNonNull(credentials);
+            $.credentials = credentials;
             return this;
         }
+
         public Builder credentials(UsernamePasswordCredentialsArgs credentials) {
-            this.credentials = Output.of(Objects.requireNonNull(credentials));
-            return this;
+            return credentials(Output.of(credentials));
         }
+
         public Builder trustedCertificates(@Nullable Output<PemCertificateListArgs> trustedCertificates) {
-            this.trustedCertificates = trustedCertificates;
+            $.trustedCertificates = trustedCertificates;
             return this;
         }
-        public Builder trustedCertificates(@Nullable PemCertificateListArgs trustedCertificates) {
-            this.trustedCertificates = Codegen.ofNullable(trustedCertificates);
-            return this;
+
+        public Builder trustedCertificates(PemCertificateListArgs trustedCertificates) {
+            return trustedCertificates(Output.of(trustedCertificates));
         }
+
         public Builder tunnel(@Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel) {
-            this.tunnel = tunnel;
+            $.tunnel = tunnel;
             return this;
         }
-        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelArgs tunnel) {
-            this.tunnel = Codegen.ofNullable(tunnel);
-            return this;
+
+        public Builder tunnel(SecureIotDeviceRemoteTunnelArgs tunnel) {
+            return tunnel(Output.of(tunnel));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder url(Output<String> url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Output.of(Objects.requireNonNull(url));
-            return this;
+            return url(Output.of(url));
         }
+
         public Builder validationOptions(@Nullable Output<TlsValidationOptionsArgs> validationOptions) {
-            this.validationOptions = validationOptions;
+            $.validationOptions = validationOptions;
             return this;
         }
-        public Builder validationOptions(@Nullable TlsValidationOptionsArgs validationOptions) {
-            this.validationOptions = Codegen.ofNullable(validationOptions);
-            return this;
-        }        public TlsEndpointArgs build() {
-            return new TlsEndpointArgs(credentials, trustedCertificates, tunnel, type, url, validationOptions);
+
+        public Builder validationOptions(TlsValidationOptionsArgs validationOptions) {
+            return validationOptions(Output.of(validationOptions));
+        }
+
+        public TlsEndpointArgs build() {
+            $.credentials = Objects.requireNonNull($.credentials, "expected parameter 'credentials' to be non-null");
+            $.type = Codegen.stringProp("type").output().arg($.type).require();
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

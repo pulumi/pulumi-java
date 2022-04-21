@@ -5,11 +5,11 @@ package com.pulumi.gcp.vertex;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.vertex.inputs.AiDatasetEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -34,10 +34,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionSpec")
-      private final @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
+    private @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
-    public Output<AiDatasetEncryptionSpecArgs> encryptionSpec() {
-        return this.encryptionSpec == null ? Codegen.empty() : this.encryptionSpec;
+    public Optional<Output<AiDatasetEncryptionSpecArgs>> encryptionSpec() {
+        return Optional.ofNullable(this.encryptionSpec);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataSchemaUri", required=true)
-      private final Output<String> metadataSchemaUri;
+    private Output<String> metadataSchemaUri;
 
     public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri;
@@ -68,10 +68,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -79,115 +79,100 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
-    public AiDatasetArgs(
-        Output<String> displayName,
-        @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> metadataSchemaUri,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.encryptionSpec = encryptionSpec;
-        this.labels = labels;
-        this.metadataSchemaUri = Objects.requireNonNull(metadataSchemaUri, "expected parameter 'metadataSchemaUri' to be non-null");
-        this.project = project;
-        this.region = region;
-    }
+    private AiDatasetArgs() {}
 
-    private AiDatasetArgs() {
-        this.displayName = Codegen.empty();
-        this.encryptionSpec = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.metadataSchemaUri = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
+    private AiDatasetArgs(AiDatasetArgs $) {
+        this.displayName = $.displayName;
+        this.encryptionSpec = $.encryptionSpec;
+        this.labels = $.labels;
+        this.metadataSchemaUri = $.metadataSchemaUri;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AiDatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> metadataSchemaUri;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
+        private AiDatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AiDatasetArgs();
         }
 
         public Builder(AiDatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.encryptionSpec = defaults.encryptionSpec;
-    	      this.labels = defaults.labels;
-    	      this.metadataSchemaUri = defaults.metadataSchemaUri;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new AiDatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec) {
-            this.encryptionSpec = encryptionSpec;
+            $.encryptionSpec = encryptionSpec;
             return this;
         }
-        public Builder encryptionSpec(@Nullable AiDatasetEncryptionSpecArgs encryptionSpec) {
-            this.encryptionSpec = Codegen.ofNullable(encryptionSpec);
-            return this;
+
+        public Builder encryptionSpec(AiDatasetEncryptionSpecArgs encryptionSpec) {
+            return encryptionSpec(Output.of(encryptionSpec));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder metadataSchemaUri(Output<String> metadataSchemaUri) {
-            this.metadataSchemaUri = Objects.requireNonNull(metadataSchemaUri);
+            $.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
+
         public Builder metadataSchemaUri(String metadataSchemaUri) {
-            this.metadataSchemaUri = Output.of(Objects.requireNonNull(metadataSchemaUri));
-            return this;
+            return metadataSchemaUri(Output.of(metadataSchemaUri));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
-        }        public AiDatasetArgs build() {
-            return new AiDatasetArgs(displayName, encryptionSpec, labels, metadataSchemaUri, project, region);
+
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        public AiDatasetArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.metadataSchemaUri = Objects.requireNonNull($.metadataSchemaUri, "expected parameter 'metadataSchemaUri' to be non-null");
+            return $;
         }
     }
+
 }

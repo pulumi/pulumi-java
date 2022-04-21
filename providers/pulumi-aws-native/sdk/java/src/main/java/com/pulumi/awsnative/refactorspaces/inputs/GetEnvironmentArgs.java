@@ -13,45 +13,45 @@ public final class GetEnvironmentArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEnvironmentArgs Empty = new GetEnvironmentArgs();
 
     @Import(name="environmentIdentifier", required=true)
-      private final String environmentIdentifier;
+    private String environmentIdentifier;
 
     public String environmentIdentifier() {
         return this.environmentIdentifier;
     }
 
-    public GetEnvironmentArgs(String environmentIdentifier) {
-        this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
-    }
+    private GetEnvironmentArgs() {}
 
-    private GetEnvironmentArgs() {
-        this.environmentIdentifier = null;
+    private GetEnvironmentArgs(GetEnvironmentArgs $) {
+        this.environmentIdentifier = $.environmentIdentifier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentIdentifier;
+        private GetEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEnvironmentArgs();
         }
 
         public Builder(GetEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentIdentifier = defaults.environmentIdentifier;
+            $ = new GetEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentIdentifier(String environmentIdentifier) {
-            this.environmentIdentifier = Objects.requireNonNull(environmentIdentifier);
+            $.environmentIdentifier = environmentIdentifier;
             return this;
-        }        public GetEnvironmentArgs build() {
-            return new GetEnvironmentArgs(environmentIdentifier);
+        }
+
+        public GetEnvironmentArgs build() {
+            $.environmentIdentifier = Objects.requireNonNull($.environmentIdentifier, "expected parameter 'environmentIdentifier' to be non-null");
+            return $;
         }
     }
+
 }

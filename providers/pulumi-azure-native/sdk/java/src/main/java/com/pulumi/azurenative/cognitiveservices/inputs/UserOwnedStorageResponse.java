@@ -23,45 +23,44 @@ public final class UserOwnedStorageResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceId")
-      private final @Nullable String resourceId;
+    private @Nullable String resourceId;
 
     public Optional<String> resourceId() {
-        return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
+        return Optional.ofNullable(this.resourceId);
     }
 
-    public UserOwnedStorageResponse(@Nullable String resourceId) {
-        this.resourceId = resourceId;
-    }
+    private UserOwnedStorageResponse() {}
 
-    private UserOwnedStorageResponse() {
-        this.resourceId = null;
+    private UserOwnedStorageResponse(UserOwnedStorageResponse $) {
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserOwnedStorageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String resourceId;
+        private UserOwnedStorageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserOwnedStorageResponse();
         }
 
         public Builder(UserOwnedStorageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
+            $ = new UserOwnedStorageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = resourceId;
+            $.resourceId = resourceId;
             return this;
-        }        public UserOwnedStorageResponse build() {
-            return new UserOwnedStorageResponse(resourceId);
+        }
+
+        public UserOwnedStorageResponse build() {
+            return $;
         }
     }
+
 }

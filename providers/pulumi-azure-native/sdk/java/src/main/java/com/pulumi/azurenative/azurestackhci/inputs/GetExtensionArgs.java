@@ -17,7 +17,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arcSettingName", required=true)
-      private final String arcSettingName;
+    private String arcSettingName;
 
     public String arcSettingName() {
         return this.arcSettingName;
@@ -28,7 +28,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -39,7 +39,7 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="extensionName", required=true)
-      private final String extensionName;
+    private String extensionName;
 
     public String extensionName() {
         return this.extensionName;
@@ -50,73 +50,66 @@ public final class GetExtensionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetExtensionArgs(
-        String arcSettingName,
-        String clusterName,
-        String extensionName,
-        String resourceGroupName) {
-        this.arcSettingName = Objects.requireNonNull(arcSettingName, "expected parameter 'arcSettingName' to be non-null");
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.extensionName = Objects.requireNonNull(extensionName, "expected parameter 'extensionName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetExtensionArgs() {}
 
-    private GetExtensionArgs() {
-        this.arcSettingName = null;
-        this.clusterName = null;
-        this.extensionName = null;
-        this.resourceGroupName = null;
+    private GetExtensionArgs(GetExtensionArgs $) {
+        this.arcSettingName = $.arcSettingName;
+        this.clusterName = $.clusterName;
+        this.extensionName = $.extensionName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arcSettingName;
-        private String clusterName;
-        private String extensionName;
-        private String resourceGroupName;
+        private GetExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExtensionArgs();
         }
 
         public Builder(GetExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arcSettingName = defaults.arcSettingName;
-    	      this.clusterName = defaults.clusterName;
-    	      this.extensionName = defaults.extensionName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arcSettingName(String arcSettingName) {
-            this.arcSettingName = Objects.requireNonNull(arcSettingName);
+            $.arcSettingName = arcSettingName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder extensionName(String extensionName) {
-            this.extensionName = Objects.requireNonNull(extensionName);
+            $.extensionName = extensionName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetExtensionArgs build() {
-            return new GetExtensionArgs(arcSettingName, clusterName, extensionName, resourceGroupName);
+        }
+
+        public GetExtensionArgs build() {
+            $.arcSettingName = Objects.requireNonNull($.arcSettingName, "expected parameter 'arcSettingName' to be non-null");
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.extensionName = Objects.requireNonNull($.extensionName, "expected parameter 'extensionName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

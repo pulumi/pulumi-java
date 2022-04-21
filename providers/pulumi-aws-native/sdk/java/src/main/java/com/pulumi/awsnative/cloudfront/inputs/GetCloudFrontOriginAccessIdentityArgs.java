@@ -13,45 +13,45 @@ public final class GetCloudFrontOriginAccessIdentityArgs extends com.pulumi.reso
     public static final GetCloudFrontOriginAccessIdentityArgs Empty = new GetCloudFrontOriginAccessIdentityArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetCloudFrontOriginAccessIdentityArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetCloudFrontOriginAccessIdentityArgs() {}
 
-    private GetCloudFrontOriginAccessIdentityArgs() {
-        this.id = null;
+    private GetCloudFrontOriginAccessIdentityArgs(GetCloudFrontOriginAccessIdentityArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCloudFrontOriginAccessIdentityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetCloudFrontOriginAccessIdentityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCloudFrontOriginAccessIdentityArgs();
         }
 
         public Builder(GetCloudFrontOriginAccessIdentityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetCloudFrontOriginAccessIdentityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetCloudFrontOriginAccessIdentityArgs build() {
-            return new GetCloudFrontOriginAccessIdentityArgs(id);
+        }
+
+        public GetCloudFrontOriginAccessIdentityArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

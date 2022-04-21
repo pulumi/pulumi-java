@@ -14,10 +14,10 @@ import com.pulumi.awsnative.cloudformation.inputs.StackSetStackInstancesArgs;
 import com.pulumi.awsnative.cloudformation.inputs.StackSetTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="administrationRoleARN")
-      private final @Nullable Output<String> administrationRoleARN;
+    private @Nullable Output<String> administrationRoleARN;
 
-    public Output<String> administrationRoleARN() {
-        return this.administrationRoleARN == null ? Codegen.empty() : this.administrationRoleARN;
+    public Optional<Output<String>> administrationRoleARN() {
+        return Optional.ofNullable(this.administrationRoleARN);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeployment")
-      private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
+    private @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
-    public Output<StackSetAutoDeploymentArgs> autoDeployment() {
-        return this.autoDeployment == null ? Codegen.empty() : this.autoDeployment;
+    public Optional<Output<StackSetAutoDeploymentArgs>> autoDeployment() {
+        return Optional.ofNullable(this.autoDeployment);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="callAs")
-      private final @Nullable Output<StackSetCallAs> callAs;
+    private @Nullable Output<StackSetCallAs> callAs;
 
-    public Output<StackSetCallAs> callAs() {
-        return this.callAs == null ? Codegen.empty() : this.callAs;
+    public Optional<Output<StackSetCallAs>> callAs() {
+        return Optional.ofNullable(this.callAs);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<List<StackSetCapability>> capabilities;
+    private @Nullable Output<List<StackSetCapability>> capabilities;
 
-    public Output<List<StackSetCapability>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<StackSetCapability>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleName")
-      private final @Nullable Output<String> executionRoleName;
+    private @Nullable Output<String> executionRoleName;
 
-    public Output<String> executionRoleName() {
-        return this.executionRoleName == null ? Codegen.empty() : this.executionRoleName;
+    public Optional<Output<String>> executionRoleName() {
+        return Optional.ofNullable(this.executionRoleName);
     }
 
     /**
@@ -96,17 +96,17 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managedExecution")
-      private final @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
+    private @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
-    public Output<ManagedExecutionPropertiesArgs> managedExecution() {
-        return this.managedExecution == null ? Codegen.empty() : this.managedExecution;
+    public Optional<Output<ManagedExecutionPropertiesArgs>> managedExecution() {
+        return Optional.ofNullable(this.managedExecution);
     }
 
     @Import(name="operationPreferences")
-      private final @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
+    private @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
 
-    public Output<StackSetOperationPreferencesArgs> operationPreferences() {
-        return this.operationPreferences == null ? Codegen.empty() : this.operationPreferences;
+    public Optional<Output<StackSetOperationPreferencesArgs>> operationPreferences() {
+        return Optional.ofNullable(this.operationPreferences);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<StackSetParameterArgs>> parameters;
+    private @Nullable Output<List<StackSetParameterArgs>> parameters;
 
-    public Output<List<StackSetParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<StackSetParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionModel", required=true)
-      private final Output<StackSetPermissionModel> permissionModel;
+    private Output<StackSetPermissionModel> permissionModel;
 
     public Output<StackSetPermissionModel> permissionModel() {
         return this.permissionModel;
@@ -136,10 +136,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackInstancesGroup")
-      private final @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
+    private @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
-    public Output<List<StackSetStackInstancesArgs>> stackInstancesGroup() {
-        return this.stackInstancesGroup == null ? Codegen.empty() : this.stackInstancesGroup;
+    public Optional<Output<List<StackSetStackInstancesArgs>>> stackInstancesGroup() {
+        return Optional.ofNullable(this.stackInstancesGroup);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackSetName")
-      private final @Nullable Output<String> stackSetName;
+    private @Nullable Output<String> stackSetName;
 
-    public Output<String> stackSetName() {
-        return this.stackSetName == null ? Codegen.empty() : this.stackSetName;
+    public Optional<Output<String>> stackSetName() {
+        return Optional.ofNullable(this.stackSetName);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<StackSetTagArgs>> tags;
+    private @Nullable Output<List<StackSetTagArgs>> tags;
 
-    public Output<List<StackSetTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<StackSetTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateBody")
-      private final @Nullable Output<String> templateBody;
+    private @Nullable Output<String> templateBody;
 
-    public Output<String> templateBody() {
-        return this.templateBody == null ? Codegen.empty() : this.templateBody;
+    public Optional<Output<String>> templateBody() {
+        return Optional.ofNullable(this.templateBody);
     }
 
     /**
@@ -180,244 +180,205 @@ public final class StackSetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateURL")
-      private final @Nullable Output<String> templateURL;
+    private @Nullable Output<String> templateURL;
 
-    public Output<String> templateURL() {
-        return this.templateURL == null ? Codegen.empty() : this.templateURL;
+    public Optional<Output<String>> templateURL() {
+        return Optional.ofNullable(this.templateURL);
     }
 
-    public StackSetArgs(
-        @Nullable Output<String> administrationRoleARN,
-        @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment,
-        @Nullable Output<StackSetCallAs> callAs,
-        @Nullable Output<List<StackSetCapability>> capabilities,
-        @Nullable Output<String> description,
-        @Nullable Output<String> executionRoleName,
-        @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution,
-        @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences,
-        @Nullable Output<List<StackSetParameterArgs>> parameters,
-        Output<StackSetPermissionModel> permissionModel,
-        @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup,
-        @Nullable Output<String> stackSetName,
-        @Nullable Output<List<StackSetTagArgs>> tags,
-        @Nullable Output<String> templateBody,
-        @Nullable Output<String> templateURL) {
-        this.administrationRoleARN = administrationRoleARN;
-        this.autoDeployment = autoDeployment;
-        this.callAs = callAs;
-        this.capabilities = capabilities;
-        this.description = description;
-        this.executionRoleName = executionRoleName;
-        this.managedExecution = managedExecution;
-        this.operationPreferences = operationPreferences;
-        this.parameters = parameters;
-        this.permissionModel = Objects.requireNonNull(permissionModel, "expected parameter 'permissionModel' to be non-null");
-        this.stackInstancesGroup = stackInstancesGroup;
-        this.stackSetName = stackSetName;
-        this.tags = tags;
-        this.templateBody = templateBody;
-        this.templateURL = templateURL;
-    }
+    private StackSetArgs() {}
 
-    private StackSetArgs() {
-        this.administrationRoleARN = Codegen.empty();
-        this.autoDeployment = Codegen.empty();
-        this.callAs = Codegen.empty();
-        this.capabilities = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionRoleName = Codegen.empty();
-        this.managedExecution = Codegen.empty();
-        this.operationPreferences = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissionModel = Codegen.empty();
-        this.stackInstancesGroup = Codegen.empty();
-        this.stackSetName = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.templateBody = Codegen.empty();
-        this.templateURL = Codegen.empty();
+    private StackSetArgs(StackSetArgs $) {
+        this.administrationRoleARN = $.administrationRoleARN;
+        this.autoDeployment = $.autoDeployment;
+        this.callAs = $.callAs;
+        this.capabilities = $.capabilities;
+        this.description = $.description;
+        this.executionRoleName = $.executionRoleName;
+        this.managedExecution = $.managedExecution;
+        this.operationPreferences = $.operationPreferences;
+        this.parameters = $.parameters;
+        this.permissionModel = $.permissionModel;
+        this.stackInstancesGroup = $.stackInstancesGroup;
+        this.stackSetName = $.stackSetName;
+        this.tags = $.tags;
+        this.templateBody = $.templateBody;
+        this.templateURL = $.templateURL;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administrationRoleARN;
-        private @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
-        private @Nullable Output<StackSetCallAs> callAs;
-        private @Nullable Output<List<StackSetCapability>> capabilities;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> executionRoleName;
-        private @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
-        private @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
-        private @Nullable Output<List<StackSetParameterArgs>> parameters;
-        private Output<StackSetPermissionModel> permissionModel;
-        private @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
-        private @Nullable Output<String> stackSetName;
-        private @Nullable Output<List<StackSetTagArgs>> tags;
-        private @Nullable Output<String> templateBody;
-        private @Nullable Output<String> templateURL;
+        private StackSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetArgs();
         }
 
         public Builder(StackSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administrationRoleARN = defaults.administrationRoleARN;
-    	      this.autoDeployment = defaults.autoDeployment;
-    	      this.callAs = defaults.callAs;
-    	      this.capabilities = defaults.capabilities;
-    	      this.description = defaults.description;
-    	      this.executionRoleName = defaults.executionRoleName;
-    	      this.managedExecution = defaults.managedExecution;
-    	      this.operationPreferences = defaults.operationPreferences;
-    	      this.parameters = defaults.parameters;
-    	      this.permissionModel = defaults.permissionModel;
-    	      this.stackInstancesGroup = defaults.stackInstancesGroup;
-    	      this.stackSetName = defaults.stackSetName;
-    	      this.tags = defaults.tags;
-    	      this.templateBody = defaults.templateBody;
-    	      this.templateURL = defaults.templateURL;
+            $ = new StackSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder administrationRoleARN(@Nullable Output<String> administrationRoleARN) {
-            this.administrationRoleARN = administrationRoleARN;
+            $.administrationRoleARN = administrationRoleARN;
             return this;
         }
-        public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
-            this.administrationRoleARN = Codegen.ofNullable(administrationRoleARN);
-            return this;
+
+        public Builder administrationRoleARN(String administrationRoleARN) {
+            return administrationRoleARN(Output.of(administrationRoleARN));
         }
+
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
-            this.autoDeployment = autoDeployment;
+            $.autoDeployment = autoDeployment;
             return this;
         }
-        public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
-            this.autoDeployment = Codegen.ofNullable(autoDeployment);
-            return this;
+
+        public Builder autoDeployment(StackSetAutoDeploymentArgs autoDeployment) {
+            return autoDeployment(Output.of(autoDeployment));
         }
+
         public Builder callAs(@Nullable Output<StackSetCallAs> callAs) {
-            this.callAs = callAs;
+            $.callAs = callAs;
             return this;
         }
-        public Builder callAs(@Nullable StackSetCallAs callAs) {
-            this.callAs = Codegen.ofNullable(callAs);
-            return this;
+
+        public Builder callAs(StackSetCallAs callAs) {
+            return callAs(Output.of(callAs));
         }
+
         public Builder capabilities(@Nullable Output<List<StackSetCapability>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<StackSetCapability> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(StackSetCapability... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
-            this.executionRoleName = executionRoleName;
+            $.executionRoleName = executionRoleName;
             return this;
         }
-        public Builder executionRoleName(@Nullable String executionRoleName) {
-            this.executionRoleName = Codegen.ofNullable(executionRoleName);
-            return this;
+
+        public Builder executionRoleName(String executionRoleName) {
+            return executionRoleName(Output.of(executionRoleName));
         }
+
         public Builder managedExecution(@Nullable Output<ManagedExecutionPropertiesArgs> managedExecution) {
-            this.managedExecution = managedExecution;
+            $.managedExecution = managedExecution;
             return this;
         }
-        public Builder managedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
-            this.managedExecution = Codegen.ofNullable(managedExecution);
-            return this;
+
+        public Builder managedExecution(ManagedExecutionPropertiesArgs managedExecution) {
+            return managedExecution(Output.of(managedExecution));
         }
+
         public Builder operationPreferences(@Nullable Output<StackSetOperationPreferencesArgs> operationPreferences) {
-            this.operationPreferences = operationPreferences;
+            $.operationPreferences = operationPreferences;
             return this;
         }
-        public Builder operationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
-            this.operationPreferences = Codegen.ofNullable(operationPreferences);
-            return this;
+
+        public Builder operationPreferences(StackSetOperationPreferencesArgs operationPreferences) {
+            return operationPreferences(Output.of(operationPreferences));
         }
+
         public Builder parameters(@Nullable Output<List<StackSetParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<StackSetParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<StackSetParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(StackSetParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder permissionModel(Output<StackSetPermissionModel> permissionModel) {
-            this.permissionModel = Objects.requireNonNull(permissionModel);
+            $.permissionModel = permissionModel;
             return this;
         }
+
         public Builder permissionModel(StackSetPermissionModel permissionModel) {
-            this.permissionModel = Output.of(Objects.requireNonNull(permissionModel));
-            return this;
+            return permissionModel(Output.of(permissionModel));
         }
+
         public Builder stackInstancesGroup(@Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
-            this.stackInstancesGroup = stackInstancesGroup;
+            $.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
-        public Builder stackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
-            this.stackInstancesGroup = Codegen.ofNullable(stackInstancesGroup);
-            return this;
+
+        public Builder stackInstancesGroup(List<StackSetStackInstancesArgs> stackInstancesGroup) {
+            return stackInstancesGroup(Output.of(stackInstancesGroup));
         }
+
         public Builder stackInstancesGroup(StackSetStackInstancesArgs... stackInstancesGroup) {
             return stackInstancesGroup(List.of(stackInstancesGroup));
         }
+
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
-            this.stackSetName = stackSetName;
+            $.stackSetName = stackSetName;
             return this;
         }
-        public Builder stackSetName(@Nullable String stackSetName) {
-            this.stackSetName = Codegen.ofNullable(stackSetName);
-            return this;
+
+        public Builder stackSetName(String stackSetName) {
+            return stackSetName(Output.of(stackSetName));
         }
+
         public Builder tags(@Nullable Output<List<StackSetTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<StackSetTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<StackSetTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(StackSetTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder templateBody(@Nullable Output<String> templateBody) {
-            this.templateBody = templateBody;
+            $.templateBody = templateBody;
             return this;
         }
-        public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Codegen.ofNullable(templateBody);
-            return this;
+
+        public Builder templateBody(String templateBody) {
+            return templateBody(Output.of(templateBody));
         }
+
         public Builder templateURL(@Nullable Output<String> templateURL) {
-            this.templateURL = templateURL;
+            $.templateURL = templateURL;
             return this;
         }
-        public Builder templateURL(@Nullable String templateURL) {
-            this.templateURL = Codegen.ofNullable(templateURL);
-            return this;
-        }        public StackSetArgs build() {
-            return new StackSetArgs(administrationRoleARN, autoDeployment, callAs, capabilities, description, executionRoleName, managedExecution, operationPreferences, parameters, permissionModel, stackInstancesGroup, stackSetName, tags, templateBody, templateURL);
+
+        public Builder templateURL(String templateURL) {
+            return templateURL(Output.of(templateURL));
+        }
+
+        public StackSetArgs build() {
+            $.permissionModel = Objects.requireNonNull($.permissionModel, "expected parameter 'permissionModel' to be non-null");
+            return $;
         }
     }
+
 }

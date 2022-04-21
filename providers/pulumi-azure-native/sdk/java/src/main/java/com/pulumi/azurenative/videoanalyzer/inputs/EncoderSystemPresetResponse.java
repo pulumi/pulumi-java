@@ -22,7 +22,7 @@ public final class EncoderSystemPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -34,55 +34,52 @@ public final class EncoderSystemPresetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EncoderSystemPresetResponse(
-        String name,
-        String type) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private EncoderSystemPresetResponse() {}
 
-    private EncoderSystemPresetResponse() {
-        this.name = null;
-        this.type = null;
+    private EncoderSystemPresetResponse(EncoderSystemPresetResponse $) {
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncoderSystemPresetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String type;
+        private EncoderSystemPresetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncoderSystemPresetResponse();
         }
 
         public Builder(EncoderSystemPresetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new EncoderSystemPresetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EncoderSystemPresetResponse build() {
-            return new EncoderSystemPresetResponse(name, type);
+        }
+
+        public EncoderSystemPresetResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSocketAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,90 +18,82 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends com.pulumi.
     public static final DataflowEndpointGroupDataflowEndpointArgs Empty = new DataflowEndpointGroupDataflowEndpointArgs();
 
     @Import(name="address")
-      private final @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
+    private @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
 
-    public Output<DataflowEndpointGroupSocketAddressArgs> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<DataflowEndpointGroupSocketAddressArgs>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     @Import(name="mtu")
-      private final @Nullable Output<Integer> mtu;
+    private @Nullable Output<Integer> mtu;
 
-    public Output<Integer> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<Integer>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public DataflowEndpointGroupDataflowEndpointArgs(
-        @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address,
-        @Nullable Output<Integer> mtu,
-        @Nullable Output<String> name) {
-        this.address = address;
-        this.mtu = mtu;
-        this.name = name;
-    }
+    private DataflowEndpointGroupDataflowEndpointArgs() {}
 
-    private DataflowEndpointGroupDataflowEndpointArgs() {
-        this.address = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
+    private DataflowEndpointGroupDataflowEndpointArgs(DataflowEndpointGroupDataflowEndpointArgs $) {
+        this.address = $.address;
+        this.mtu = $.mtu;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupDataflowEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataflowEndpointGroupSocketAddressArgs> address;
-        private @Nullable Output<Integer> mtu;
-        private @Nullable Output<String> name;
+        private DataflowEndpointGroupDataflowEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupDataflowEndpointArgs();
         }
 
         public Builder(DataflowEndpointGroupDataflowEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
+            $ = new DataflowEndpointGroupDataflowEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<DataflowEndpointGroupSocketAddressArgs> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable DataflowEndpointGroupSocketAddressArgs address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(DataflowEndpointGroupSocketAddressArgs address) {
+            return address(Output.of(address));
         }
+
         public Builder mtu(@Nullable Output<Integer> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(Integer mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public DataflowEndpointGroupDataflowEndpointArgs build() {
-            return new DataflowEndpointGroupDataflowEndpointArgs(address, mtu, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public DataflowEndpointGroupDataflowEndpointArgs build() {
+            return $;
         }
     }
+
 }

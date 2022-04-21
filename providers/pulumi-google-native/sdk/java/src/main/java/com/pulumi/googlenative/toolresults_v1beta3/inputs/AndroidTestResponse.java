@@ -25,7 +25,7 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="androidAppInfo", required=true)
-      private final AndroidAppInfoResponse androidAppInfo;
+    private AndroidAppInfoResponse androidAppInfo;
 
     public AndroidAppInfoResponse androidAppInfo() {
         return this.androidAppInfo;
@@ -36,7 +36,7 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="androidInstrumentationTest", required=true)
-      private final AndroidInstrumentationTestResponse androidInstrumentationTest;
+    private AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse androidInstrumentationTest() {
         return this.androidInstrumentationTest;
@@ -47,7 +47,7 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="androidRoboTest", required=true)
-      private final AndroidRoboTestResponse androidRoboTest;
+    private AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse androidRoboTest() {
         return this.androidRoboTest;
@@ -58,7 +58,7 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="androidTestLoop", required=true)
-      private final AndroidTestLoopResponse androidTestLoop;
+    private AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse androidTestLoop() {
         return this.androidTestLoop;
@@ -69,82 +69,73 @@ public final class AndroidTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="testTimeout", required=true)
-      private final DurationResponse testTimeout;
+    private DurationResponse testTimeout;
 
     public DurationResponse testTimeout() {
         return this.testTimeout;
     }
 
-    public AndroidTestResponse(
-        AndroidAppInfoResponse androidAppInfo,
-        AndroidInstrumentationTestResponse androidInstrumentationTest,
-        AndroidRoboTestResponse androidRoboTest,
-        AndroidTestLoopResponse androidTestLoop,
-        DurationResponse testTimeout) {
-        this.androidAppInfo = Objects.requireNonNull(androidAppInfo, "expected parameter 'androidAppInfo' to be non-null");
-        this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest, "expected parameter 'androidInstrumentationTest' to be non-null");
-        this.androidRoboTest = Objects.requireNonNull(androidRoboTest, "expected parameter 'androidRoboTest' to be non-null");
-        this.androidTestLoop = Objects.requireNonNull(androidTestLoop, "expected parameter 'androidTestLoop' to be non-null");
-        this.testTimeout = Objects.requireNonNull(testTimeout, "expected parameter 'testTimeout' to be non-null");
-    }
+    private AndroidTestResponse() {}
 
-    private AndroidTestResponse() {
-        this.androidAppInfo = null;
-        this.androidInstrumentationTest = null;
-        this.androidRoboTest = null;
-        this.androidTestLoop = null;
-        this.testTimeout = null;
+    private AndroidTestResponse(AndroidTestResponse $) {
+        this.androidAppInfo = $.androidAppInfo;
+        this.androidInstrumentationTest = $.androidInstrumentationTest;
+        this.androidRoboTest = $.androidRoboTest;
+        this.androidTestLoop = $.androidTestLoop;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AndroidAppInfoResponse androidAppInfo;
-        private AndroidInstrumentationTestResponse androidInstrumentationTest;
-        private AndroidRoboTestResponse androidRoboTest;
-        private AndroidTestLoopResponse androidTestLoop;
-        private DurationResponse testTimeout;
+        private AndroidTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidTestResponse();
         }
 
         public Builder(AndroidTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidAppInfo = defaults.androidAppInfo;
-    	      this.androidInstrumentationTest = defaults.androidInstrumentationTest;
-    	      this.androidRoboTest = defaults.androidRoboTest;
-    	      this.androidTestLoop = defaults.androidTestLoop;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new AndroidTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidAppInfo(AndroidAppInfoResponse androidAppInfo) {
-            this.androidAppInfo = Objects.requireNonNull(androidAppInfo);
+            $.androidAppInfo = androidAppInfo;
             return this;
         }
+
         public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
-            this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
+            $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
+
         public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
-            this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
+            $.androidRoboTest = androidRoboTest;
             return this;
         }
+
         public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
-            this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
+            $.androidTestLoop = androidTestLoop;
             return this;
         }
+
         public Builder testTimeout(DurationResponse testTimeout) {
-            this.testTimeout = Objects.requireNonNull(testTimeout);
+            $.testTimeout = testTimeout;
             return this;
-        }        public AndroidTestResponse build() {
-            return new AndroidTestResponse(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
+        }
+
+        public AndroidTestResponse build() {
+            $.androidAppInfo = Objects.requireNonNull($.androidAppInfo, "expected parameter 'androidAppInfo' to be non-null");
+            $.androidInstrumentationTest = Objects.requireNonNull($.androidInstrumentationTest, "expected parameter 'androidInstrumentationTest' to be non-null");
+            $.androidRoboTest = Objects.requireNonNull($.androidRoboTest, "expected parameter 'androidRoboTest' to be non-null");
+            $.androidTestLoop = Objects.requireNonNull($.androidTestLoop, "expected parameter 'androidTestLoop' to be non-null");
+            $.testTimeout = Objects.requireNonNull($.testTimeout, "expected parameter 'testTimeout' to be non-null");
+            return $;
         }
     }
+
 }

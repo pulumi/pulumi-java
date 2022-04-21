@@ -24,7 +24,7 @@ public final class BucketTopicConfiguration extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="event", required=true)
-      private final String event;
+    private String event;
 
     public String event() {
         return this.event;
@@ -35,10 +35,10 @@ public final class BucketTopicConfiguration extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="filter")
-      private final @Nullable BucketNotificationFilter filter;
+    private @Nullable BucketNotificationFilter filter;
 
     public Optional<BucketNotificationFilter> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -46,64 +46,58 @@ public final class BucketTopicConfiguration extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public BucketTopicConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String topic) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.filter = filter;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private BucketTopicConfiguration() {}
 
-    private BucketTopicConfiguration() {
-        this.event = null;
-        this.filter = null;
-        this.topic = null;
+    private BucketTopicConfiguration(BucketTopicConfiguration $) {
+        this.event = $.event;
+        this.filter = $.filter;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketTopicConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String event;
-        private @Nullable BucketNotificationFilter filter;
-        private String topic;
+        private BucketTopicConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketTopicConfiguration();
         }
 
         public Builder(BucketTopicConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.filter = defaults.filter;
-    	      this.topic = defaults.topic;
+            $ = new BucketTopicConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder event(String event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder filter(@Nullable BucketNotificationFilter filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public BucketTopicConfiguration build() {
-            return new BucketTopicConfiguration(event, filter, topic);
+        }
+
+        public BucketTopicConfiguration build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

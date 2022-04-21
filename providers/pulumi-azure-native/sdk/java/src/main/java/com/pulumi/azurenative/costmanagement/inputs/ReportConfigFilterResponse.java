@@ -24,10 +24,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="and")
-      private final @Nullable List<ReportConfigFilterResponse> and;
+    private @Nullable List<ReportConfigFilterResponse> and;
 
-    public List<ReportConfigFilterResponse> and() {
-        return this.and == null ? List.of() : this.and;
+    public Optional<List<ReportConfigFilterResponse>> and() {
+        return Optional.ofNullable(this.and);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dimensions")
-      private final @Nullable ReportConfigComparisonExpressionResponse dimensions;
+    private @Nullable ReportConfigComparisonExpressionResponse dimensions;
 
     public Optional<ReportConfigComparisonExpressionResponse> dimensions() {
-        return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
+        return Optional.ofNullable(this.dimensions);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="or")
-      private final @Nullable List<ReportConfigFilterResponse> or;
+    private @Nullable List<ReportConfigFilterResponse> or;
 
-    public List<ReportConfigFilterResponse> or() {
-        return this.or == null ? List.of() : this.or;
+    public Optional<List<ReportConfigFilterResponse>> or() {
+        return Optional.ofNullable(this.or);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tagKey")
-      private final @Nullable ReportConfigComparisonExpressionResponse tagKey;
+    private @Nullable ReportConfigComparisonExpressionResponse tagKey;
 
     public Optional<ReportConfigComparisonExpressionResponse> tagKey() {
-        return this.tagKey == null ? Optional.empty() : Optional.ofNullable(this.tagKey);
+        return Optional.ofNullable(this.tagKey);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tagValue")
-      private final @Nullable ReportConfigComparisonExpressionResponse tagValue;
+    private @Nullable ReportConfigComparisonExpressionResponse tagValue;
 
     public Optional<ReportConfigComparisonExpressionResponse> tagValue() {
-        return this.tagValue == null ? Optional.empty() : Optional.ofNullable(this.tagValue);
+        return Optional.ofNullable(this.tagValue);
     }
 
     /**
@@ -79,97 +79,82 @@ public final class ReportConfigFilterResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="tags")
-      private final @Nullable ReportConfigComparisonExpressionResponse tags;
+    private @Nullable ReportConfigComparisonExpressionResponse tags;
 
     public Optional<ReportConfigComparisonExpressionResponse> tags() {
-        return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
+        return Optional.ofNullable(this.tags);
     }
 
-    public ReportConfigFilterResponse(
-        @Nullable List<ReportConfigFilterResponse> and,
-        @Nullable ReportConfigComparisonExpressionResponse dimensions,
-        @Nullable List<ReportConfigFilterResponse> or,
-        @Nullable ReportConfigComparisonExpressionResponse tagKey,
-        @Nullable ReportConfigComparisonExpressionResponse tagValue,
-        @Nullable ReportConfigComparisonExpressionResponse tags) {
-        this.and = and;
-        this.dimensions = dimensions;
-        this.or = or;
-        this.tagKey = tagKey;
-        this.tagValue = tagValue;
-        this.tags = tags;
-    }
+    private ReportConfigFilterResponse() {}
 
-    private ReportConfigFilterResponse() {
-        this.and = List.of();
-        this.dimensions = null;
-        this.or = List.of();
-        this.tagKey = null;
-        this.tagValue = null;
-        this.tags = null;
+    private ReportConfigFilterResponse(ReportConfigFilterResponse $) {
+        this.and = $.and;
+        this.dimensions = $.dimensions;
+        this.or = $.or;
+        this.tagKey = $.tagKey;
+        this.tagValue = $.tagValue;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportConfigFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ReportConfigFilterResponse> and;
-        private @Nullable ReportConfigComparisonExpressionResponse dimensions;
-        private @Nullable List<ReportConfigFilterResponse> or;
-        private @Nullable ReportConfigComparisonExpressionResponse tagKey;
-        private @Nullable ReportConfigComparisonExpressionResponse tagValue;
-        private @Nullable ReportConfigComparisonExpressionResponse tags;
+        private ReportConfigFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportConfigFilterResponse();
         }
 
         public Builder(ReportConfigFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.and = defaults.and;
-    	      this.dimensions = defaults.dimensions;
-    	      this.or = defaults.or;
-    	      this.tagKey = defaults.tagKey;
-    	      this.tagValue = defaults.tagValue;
-    	      this.tags = defaults.tags;
+            $ = new ReportConfigFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder and(@Nullable List<ReportConfigFilterResponse> and) {
-            this.and = and;
+            $.and = and;
             return this;
         }
+
         public Builder and(ReportConfigFilterResponse... and) {
             return and(List.of(and));
         }
+
         public Builder dimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
-            this.dimensions = dimensions;
+            $.dimensions = dimensions;
             return this;
         }
+
         public Builder or(@Nullable List<ReportConfigFilterResponse> or) {
-            this.or = or;
+            $.or = or;
             return this;
         }
+
         public Builder or(ReportConfigFilterResponse... or) {
             return or(List.of(or));
         }
+
         public Builder tagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
-            this.tagKey = tagKey;
+            $.tagKey = tagKey;
             return this;
         }
+
         public Builder tagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
-            this.tagValue = tagValue;
+            $.tagValue = tagValue;
             return this;
         }
+
         public Builder tags(@Nullable ReportConfigComparisonExpressionResponse tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
-        }        public ReportConfigFilterResponse build() {
-            return new ReportConfigFilterResponse(and, dimensions, or, tagKey, tagValue, tags);
+        }
+
+        public ReportConfigFilterResponse build() {
+            return $;
         }
     }
+
 }

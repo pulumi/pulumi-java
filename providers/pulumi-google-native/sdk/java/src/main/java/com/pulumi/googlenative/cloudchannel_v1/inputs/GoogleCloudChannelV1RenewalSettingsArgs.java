@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1RenewalSettingsPaymentPlan;
 import com.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1PeriodArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="enableRenewal")
-      private final @Nullable Output<Boolean> enableRenewal;
+    private @Nullable Output<Boolean> enableRenewal;
 
-    public Output<Boolean> enableRenewal() {
-        return this.enableRenewal == null ? Codegen.empty() : this.enableRenewal;
+    public Optional<Output<Boolean>> enableRenewal() {
+        return Optional.ofNullable(this.enableRenewal);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="paymentCycle")
-      private final @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
+    private @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
 
-    public Output<GoogleCloudChannelV1PeriodArgs> paymentCycle() {
-        return this.paymentCycle == null ? Codegen.empty() : this.paymentCycle;
+    public Optional<Output<GoogleCloudChannelV1PeriodArgs>> paymentCycle() {
+        return Optional.ofNullable(this.paymentCycle);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="paymentPlan")
-      private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
+    private @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
 
-    public Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan() {
-        return this.paymentPlan == null ? Codegen.empty() : this.paymentPlan;
+    public Optional<Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan>> paymentPlan() {
+        return Optional.ofNullable(this.paymentPlan);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends com.pulumi.re
      * 
      */
     @Import(name="resizeUnitCount")
-      private final @Nullable Output<Boolean> resizeUnitCount;
+    private @Nullable Output<Boolean> resizeUnitCount;
 
-    public Output<Boolean> resizeUnitCount() {
-        return this.resizeUnitCount == null ? Codegen.empty() : this.resizeUnitCount;
+    public Optional<Output<Boolean>> resizeUnitCount() {
+        return Optional.ofNullable(this.resizeUnitCount);
     }
 
-    public GoogleCloudChannelV1RenewalSettingsArgs(
-        @Nullable Output<Boolean> enableRenewal,
-        @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle,
-        @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan,
-        @Nullable Output<Boolean> resizeUnitCount) {
-        this.enableRenewal = enableRenewal;
-        this.paymentCycle = paymentCycle;
-        this.paymentPlan = paymentPlan;
-        this.resizeUnitCount = resizeUnitCount;
-    }
+    private GoogleCloudChannelV1RenewalSettingsArgs() {}
 
-    private GoogleCloudChannelV1RenewalSettingsArgs() {
-        this.enableRenewal = Codegen.empty();
-        this.paymentCycle = Codegen.empty();
-        this.paymentPlan = Codegen.empty();
-        this.resizeUnitCount = Codegen.empty();
+    private GoogleCloudChannelV1RenewalSettingsArgs(GoogleCloudChannelV1RenewalSettingsArgs $) {
+        this.enableRenewal = $.enableRenewal;
+        this.paymentCycle = $.paymentCycle;
+        this.paymentPlan = $.paymentPlan;
+        this.resizeUnitCount = $.resizeUnitCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1RenewalSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableRenewal;
-        private @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
-        private @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
-        private @Nullable Output<Boolean> resizeUnitCount;
+        private GoogleCloudChannelV1RenewalSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1RenewalSettingsArgs();
         }
 
         public Builder(GoogleCloudChannelV1RenewalSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableRenewal = defaults.enableRenewal;
-    	      this.paymentCycle = defaults.paymentCycle;
-    	      this.paymentPlan = defaults.paymentPlan;
-    	      this.resizeUnitCount = defaults.resizeUnitCount;
+            $ = new GoogleCloudChannelV1RenewalSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableRenewal(@Nullable Output<Boolean> enableRenewal) {
-            this.enableRenewal = enableRenewal;
+            $.enableRenewal = enableRenewal;
             return this;
         }
-        public Builder enableRenewal(@Nullable Boolean enableRenewal) {
-            this.enableRenewal = Codegen.ofNullable(enableRenewal);
-            return this;
+
+        public Builder enableRenewal(Boolean enableRenewal) {
+            return enableRenewal(Output.of(enableRenewal));
         }
+
         public Builder paymentCycle(@Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle) {
-            this.paymentCycle = paymentCycle;
+            $.paymentCycle = paymentCycle;
             return this;
         }
-        public Builder paymentCycle(@Nullable GoogleCloudChannelV1PeriodArgs paymentCycle) {
-            this.paymentCycle = Codegen.ofNullable(paymentCycle);
-            return this;
+
+        public Builder paymentCycle(GoogleCloudChannelV1PeriodArgs paymentCycle) {
+            return paymentCycle(Output.of(paymentCycle));
         }
+
         public Builder paymentPlan(@Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan) {
-            this.paymentPlan = paymentPlan;
+            $.paymentPlan = paymentPlan;
             return this;
         }
-        public Builder paymentPlan(@Nullable GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
-            this.paymentPlan = Codegen.ofNullable(paymentPlan);
-            return this;
+
+        public Builder paymentPlan(GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
+            return paymentPlan(Output.of(paymentPlan));
         }
+
         public Builder resizeUnitCount(@Nullable Output<Boolean> resizeUnitCount) {
-            this.resizeUnitCount = resizeUnitCount;
+            $.resizeUnitCount = resizeUnitCount;
             return this;
         }
-        public Builder resizeUnitCount(@Nullable Boolean resizeUnitCount) {
-            this.resizeUnitCount = Codegen.ofNullable(resizeUnitCount);
-            return this;
-        }        public GoogleCloudChannelV1RenewalSettingsArgs build() {
-            return new GoogleCloudChannelV1RenewalSettingsArgs(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
+
+        public Builder resizeUnitCount(Boolean resizeUnitCount) {
+            return resizeUnitCount(Output.of(resizeUnitCount));
+        }
+
+        public GoogleCloudChannelV1RenewalSettingsArgs build() {
+            return $;
         }
     }
+
 }

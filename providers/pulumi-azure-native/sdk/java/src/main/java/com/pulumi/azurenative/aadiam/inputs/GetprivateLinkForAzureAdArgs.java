@@ -17,7 +17,7 @@ public final class GetprivateLinkForAzureAdArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
@@ -28,55 +28,52 @@ public final class GetprivateLinkForAzureAdArgs extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetprivateLinkForAzureAdArgs(
-        String policyName,
-        String resourceGroupName) {
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetprivateLinkForAzureAdArgs() {}
 
-    private GetprivateLinkForAzureAdArgs() {
-        this.policyName = null;
-        this.resourceGroupName = null;
+    private GetprivateLinkForAzureAdArgs(GetprivateLinkForAzureAdArgs $) {
+        this.policyName = $.policyName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetprivateLinkForAzureAdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyName;
-        private String resourceGroupName;
+        private GetprivateLinkForAzureAdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetprivateLinkForAzureAdArgs();
         }
 
         public Builder(GetprivateLinkForAzureAdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyName = defaults.policyName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetprivateLinkForAzureAdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetprivateLinkForAzureAdArgs build() {
-            return new GetprivateLinkForAzureAdArgs(policyName, resourceGroupName);
+        }
+
+        public GetprivateLinkForAzureAdArgs build() {
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

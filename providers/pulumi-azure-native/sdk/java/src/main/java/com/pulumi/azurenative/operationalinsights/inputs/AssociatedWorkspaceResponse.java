@@ -21,7 +21,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="associateDate", required=true)
-      private final String associateDate;
+    private String associateDate;
 
     public String associateDate() {
         return this.associateDate;
@@ -32,7 +32,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -43,7 +43,7 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceId", required=true)
-      private final String workspaceId;
+    private String workspaceId;
 
     public String workspaceId() {
         return this.workspaceId;
@@ -54,73 +54,66 @@ public final class AssociatedWorkspaceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public AssociatedWorkspaceResponse(
-        String associateDate,
-        String resourceId,
-        String workspaceId,
-        String workspaceName) {
-        this.associateDate = Objects.requireNonNull(associateDate, "expected parameter 'associateDate' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.workspaceId = Objects.requireNonNull(workspaceId, "expected parameter 'workspaceId' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private AssociatedWorkspaceResponse() {}
 
-    private AssociatedWorkspaceResponse() {
-        this.associateDate = null;
-        this.resourceId = null;
-        this.workspaceId = null;
-        this.workspaceName = null;
+    private AssociatedWorkspaceResponse(AssociatedWorkspaceResponse $) {
+        this.associateDate = $.associateDate;
+        this.resourceId = $.resourceId;
+        this.workspaceId = $.workspaceId;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssociatedWorkspaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String associateDate;
-        private String resourceId;
-        private String workspaceId;
-        private String workspaceName;
+        private AssociatedWorkspaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssociatedWorkspaceResponse();
         }
 
         public Builder(AssociatedWorkspaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associateDate = defaults.associateDate;
-    	      this.resourceId = defaults.resourceId;
-    	      this.workspaceId = defaults.workspaceId;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new AssociatedWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder associateDate(String associateDate) {
-            this.associateDate = Objects.requireNonNull(associateDate);
+            $.associateDate = associateDate;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder workspaceId(String workspaceId) {
-            this.workspaceId = Objects.requireNonNull(workspaceId);
+            $.workspaceId = workspaceId;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public AssociatedWorkspaceResponse build() {
-            return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
+        }
+
+        public AssociatedWorkspaceResponse build() {
+            $.associateDate = Objects.requireNonNull($.associateDate, "expected parameter 'associateDate' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.workspaceId = Objects.requireNonNull($.workspaceId, "expected parameter 'workspaceId' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

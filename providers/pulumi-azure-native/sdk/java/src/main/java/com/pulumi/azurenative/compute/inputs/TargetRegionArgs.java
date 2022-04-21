@@ -8,10 +8,10 @@ import com.pulumi.azurenative.compute.inputs.EncryptionImagesArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryption")
-      private final @Nullable Output<EncryptionImagesArgs> encryption;
+    private @Nullable Output<EncryptionImagesArgs> encryption;
 
-    public Output<EncryptionImagesArgs> encryption() {
-        return this.encryption == null ? Codegen.empty() : this.encryption;
+    public Optional<Output<EncryptionImagesArgs>> encryption() {
+        return Optional.ofNullable(this.encryption);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -50,10 +50,10 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regionalReplicaCount")
-      private final @Nullable Output<Integer> regionalReplicaCount;
+    private @Nullable Output<Integer> regionalReplicaCount;
 
-    public Output<Integer> regionalReplicaCount() {
-        return this.regionalReplicaCount == null ? Codegen.empty() : this.regionalReplicaCount;
+    public Optional<Output<Integer>> regionalReplicaCount() {
+        return Optional.ofNullable(this.regionalReplicaCount);
     }
 
     /**
@@ -61,89 +61,79 @@ public final class TargetRegionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageAccountType")
-      private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+    private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
-    public Output<Either<String,StorageAccountType>> storageAccountType() {
-        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
+    public Optional<Output<Either<String,StorageAccountType>>> storageAccountType() {
+        return Optional.ofNullable(this.storageAccountType);
     }
 
-    public TargetRegionArgs(
-        @Nullable Output<EncryptionImagesArgs> encryption,
-        Output<String> name,
-        @Nullable Output<Integer> regionalReplicaCount,
-        @Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
-        this.encryption = encryption;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.regionalReplicaCount = regionalReplicaCount;
-        this.storageAccountType = storageAccountType;
-    }
+    private TargetRegionArgs() {}
 
-    private TargetRegionArgs() {
-        this.encryption = Codegen.empty();
-        this.name = Codegen.empty();
-        this.regionalReplicaCount = Codegen.empty();
-        this.storageAccountType = Codegen.empty();
+    private TargetRegionArgs(TargetRegionArgs $) {
+        this.encryption = $.encryption;
+        this.name = $.name;
+        this.regionalReplicaCount = $.regionalReplicaCount;
+        this.storageAccountType = $.storageAccountType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TargetRegionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EncryptionImagesArgs> encryption;
-        private Output<String> name;
-        private @Nullable Output<Integer> regionalReplicaCount;
-        private @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
+        private TargetRegionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TargetRegionArgs();
         }
 
         public Builder(TargetRegionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encryption = defaults.encryption;
-    	      this.name = defaults.name;
-    	      this.regionalReplicaCount = defaults.regionalReplicaCount;
-    	      this.storageAccountType = defaults.storageAccountType;
+            $ = new TargetRegionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encryption(@Nullable Output<EncryptionImagesArgs> encryption) {
-            this.encryption = encryption;
+            $.encryption = encryption;
             return this;
         }
-        public Builder encryption(@Nullable EncryptionImagesArgs encryption) {
-            this.encryption = Codegen.ofNullable(encryption);
-            return this;
+
+        public Builder encryption(EncryptionImagesArgs encryption) {
+            return encryption(Output.of(encryption));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder regionalReplicaCount(@Nullable Output<Integer> regionalReplicaCount) {
-            this.regionalReplicaCount = regionalReplicaCount;
+            $.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
-        public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
-            this.regionalReplicaCount = Codegen.ofNullable(regionalReplicaCount);
-            return this;
+
+        public Builder regionalReplicaCount(Integer regionalReplicaCount) {
+            return regionalReplicaCount(Output.of(regionalReplicaCount));
         }
+
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountType>> storageAccountType) {
-            this.storageAccountType = storageAccountType;
+            $.storageAccountType = storageAccountType;
             return this;
         }
-        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
-            this.storageAccountType = Codegen.ofNullable(storageAccountType);
-            return this;
-        }        public TargetRegionArgs build() {
-            return new TargetRegionArgs(encryption, name, regionalReplicaCount, storageAccountType);
+
+        public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
+            return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public TargetRegionArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

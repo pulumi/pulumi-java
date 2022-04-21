@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueCategory;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueSeverity;
 import com.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueType;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AnyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="category")
-      private final @Nullable Output<TestIssueCategory> category;
+    private @Nullable Output<TestIssueCategory> category;
 
-    public Output<TestIssueCategory> category() {
-        return this.category == null ? Codegen.empty() : this.category;
+    public Optional<Output<TestIssueCategory>> category() {
+        return Optional.ofNullable(this.category);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="errorMessage")
-      private final @Nullable Output<String> errorMessage;
+    private @Nullable Output<String> errorMessage;
 
-    public Output<String> errorMessage() {
-        return this.errorMessage == null ? Codegen.empty() : this.errorMessage;
+    public Optional<Output<String>> errorMessage() {
+        return Optional.ofNullable(this.errorMessage);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<TestIssueSeverity> severity;
+    private @Nullable Output<TestIssueSeverity> severity;
 
-    public Output<TestIssueSeverity> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<TestIssueSeverity>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<TestIssueType> type;
+    private @Nullable Output<TestIssueType> type;
 
-    public Output<TestIssueType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<TestIssueType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class TestIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="warning")
-      private final @Nullable Output<AnyArgs> warning;
+    private @Nullable Output<AnyArgs> warning;
 
-    public Output<AnyArgs> warning() {
-        return this.warning == null ? Codegen.empty() : this.warning;
+    public Optional<Output<AnyArgs>> warning() {
+        return Optional.ofNullable(this.warning);
     }
 
-    public TestIssueArgs(
-        @Nullable Output<TestIssueCategory> category,
-        @Nullable Output<String> errorMessage,
-        @Nullable Output<TestIssueSeverity> severity,
-        @Nullable Output<TestIssueType> type,
-        @Nullable Output<AnyArgs> warning) {
-        this.category = category;
-        this.errorMessage = errorMessage;
-        this.severity = severity;
-        this.type = type;
-        this.warning = warning;
-    }
+    private TestIssueArgs() {}
 
-    private TestIssueArgs() {
-        this.category = Codegen.empty();
-        this.errorMessage = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.type = Codegen.empty();
-        this.warning = Codegen.empty();
+    private TestIssueArgs(TestIssueArgs $) {
+        this.category = $.category;
+        this.errorMessage = $.errorMessage;
+        this.severity = $.severity;
+        this.type = $.type;
+        this.warning = $.warning;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestIssueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TestIssueCategory> category;
-        private @Nullable Output<String> errorMessage;
-        private @Nullable Output<TestIssueSeverity> severity;
-        private @Nullable Output<TestIssueType> type;
-        private @Nullable Output<AnyArgs> warning;
+        private TestIssueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestIssueArgs();
         }
 
         public Builder(TestIssueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.severity = defaults.severity;
-    	      this.type = defaults.type;
-    	      this.warning = defaults.warning;
+            $ = new TestIssueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder category(@Nullable Output<TestIssueCategory> category) {
-            this.category = category;
+            $.category = category;
             return this;
         }
-        public Builder category(@Nullable TestIssueCategory category) {
-            this.category = Codegen.ofNullable(category);
-            return this;
+
+        public Builder category(TestIssueCategory category) {
+            return category(Output.of(category));
         }
+
         public Builder errorMessage(@Nullable Output<String> errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
-        public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = Codegen.ofNullable(errorMessage);
-            return this;
+
+        public Builder errorMessage(String errorMessage) {
+            return errorMessage(Output.of(errorMessage));
         }
+
         public Builder severity(@Nullable Output<TestIssueSeverity> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable TestIssueSeverity severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(TestIssueSeverity severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder type(@Nullable Output<TestIssueType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable TestIssueType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(TestIssueType type) {
+            return type(Output.of(type));
         }
+
         public Builder warning(@Nullable Output<AnyArgs> warning) {
-            this.warning = warning;
+            $.warning = warning;
             return this;
         }
-        public Builder warning(@Nullable AnyArgs warning) {
-            this.warning = Codegen.ofNullable(warning);
-            return this;
-        }        public TestIssueArgs build() {
-            return new TestIssueArgs(category, errorMessage, severity, type, warning);
+
+        public Builder warning(AnyArgs warning) {
+            return warning(Output.of(warning));
+        }
+
+        public TestIssueArgs build() {
+            return $;
         }
     }
+
 }

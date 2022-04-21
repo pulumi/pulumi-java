@@ -8,11 +8,11 @@ import com.pulumi.azurenative.timeseriesinsights.inputs.ReferenceDataSetKeyPrope
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="dataStringComparisonBehavior")
-      private final @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
+    private @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
 
-    public Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior() {
-        return this.dataStringComparisonBehavior == null ? Codegen.empty() : this.dataStringComparisonBehavior;
+    public Optional<Output<Either<String,DataStringComparisonBehavior>>> dataStringComparisonBehavior() {
+        return Optional.ofNullable(this.dataStringComparisonBehavior);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="environmentName", required=true)
-      private final Output<String> environmentName;
+    private Output<String> environmentName;
 
     public Output<String> environmentName() {
         return this.environmentName;
@@ -47,7 +47,7 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="keyProperties", required=true)
-      private final Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
+    private Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
 
     public Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties() {
         return this.keyProperties;
@@ -58,10 +58,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="referenceDataSetName")
-      private final @Nullable Output<String> referenceDataSetName;
+    private @Nullable Output<String> referenceDataSetName;
 
-    public Output<String> referenceDataSetName() {
-        return this.referenceDataSetName == null ? Codegen.empty() : this.referenceDataSetName;
+    public Optional<Output<String>> referenceDataSetName() {
+        return Optional.ofNullable(this.referenceDataSetName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -91,131 +91,115 @@ public final class ReferenceDataSetArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ReferenceDataSetArgs(
-        @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior,
-        Output<String> environmentName,
-        Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties,
-        @Nullable Output<String> location,
-        @Nullable Output<String> referenceDataSetName,
-        Output<String> resourceGroupName,
-        @Nullable Output<Map<String,String>> tags) {
-        this.dataStringComparisonBehavior = dataStringComparisonBehavior;
-        this.environmentName = Objects.requireNonNull(environmentName, "expected parameter 'environmentName' to be non-null");
-        this.keyProperties = Objects.requireNonNull(keyProperties, "expected parameter 'keyProperties' to be non-null");
-        this.location = location;
-        this.referenceDataSetName = referenceDataSetName;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.tags = tags;
-    }
+    private ReferenceDataSetArgs() {}
 
-    private ReferenceDataSetArgs() {
-        this.dataStringComparisonBehavior = Codegen.empty();
-        this.environmentName = Codegen.empty();
-        this.keyProperties = Codegen.empty();
-        this.location = Codegen.empty();
-        this.referenceDataSetName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ReferenceDataSetArgs(ReferenceDataSetArgs $) {
+        this.dataStringComparisonBehavior = $.dataStringComparisonBehavior;
+        this.environmentName = $.environmentName;
+        this.keyProperties = $.keyProperties;
+        this.location = $.location;
+        this.referenceDataSetName = $.referenceDataSetName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceDataSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior;
-        private Output<String> environmentName;
-        private Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> referenceDataSetName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Map<String,String>> tags;
+        private ReferenceDataSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceDataSetArgs();
         }
 
         public Builder(ReferenceDataSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataStringComparisonBehavior = defaults.dataStringComparisonBehavior;
-    	      this.environmentName = defaults.environmentName;
-    	      this.keyProperties = defaults.keyProperties;
-    	      this.location = defaults.location;
-    	      this.referenceDataSetName = defaults.referenceDataSetName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.tags = defaults.tags;
+            $ = new ReferenceDataSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataStringComparisonBehavior(@Nullable Output<Either<String,DataStringComparisonBehavior>> dataStringComparisonBehavior) {
-            this.dataStringComparisonBehavior = dataStringComparisonBehavior;
+            $.dataStringComparisonBehavior = dataStringComparisonBehavior;
             return this;
         }
-        public Builder dataStringComparisonBehavior(@Nullable Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
-            this.dataStringComparisonBehavior = Codegen.ofNullable(dataStringComparisonBehavior);
-            return this;
+
+        public Builder dataStringComparisonBehavior(Either<String,DataStringComparisonBehavior> dataStringComparisonBehavior) {
+            return dataStringComparisonBehavior(Output.of(dataStringComparisonBehavior));
         }
+
         public Builder environmentName(Output<String> environmentName) {
-            this.environmentName = Objects.requireNonNull(environmentName);
+            $.environmentName = environmentName;
             return this;
         }
+
         public Builder environmentName(String environmentName) {
-            this.environmentName = Output.of(Objects.requireNonNull(environmentName));
-            return this;
+            return environmentName(Output.of(environmentName));
         }
+
         public Builder keyProperties(Output<List<ReferenceDataSetKeyPropertyArgs>> keyProperties) {
-            this.keyProperties = Objects.requireNonNull(keyProperties);
+            $.keyProperties = keyProperties;
             return this;
         }
+
         public Builder keyProperties(List<ReferenceDataSetKeyPropertyArgs> keyProperties) {
-            this.keyProperties = Output.of(Objects.requireNonNull(keyProperties));
-            return this;
+            return keyProperties(Output.of(keyProperties));
         }
+
         public Builder keyProperties(ReferenceDataSetKeyPropertyArgs... keyProperties) {
             return keyProperties(List.of(keyProperties));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder referenceDataSetName(@Nullable Output<String> referenceDataSetName) {
-            this.referenceDataSetName = referenceDataSetName;
+            $.referenceDataSetName = referenceDataSetName;
             return this;
         }
-        public Builder referenceDataSetName(@Nullable String referenceDataSetName) {
-            this.referenceDataSetName = Codegen.ofNullable(referenceDataSetName);
-            return this;
+
+        public Builder referenceDataSetName(String referenceDataSetName) {
+            return referenceDataSetName(Output.of(referenceDataSetName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public ReferenceDataSetArgs build() {
-            return new ReferenceDataSetArgs(dataStringComparisonBehavior, environmentName, keyProperties, location, referenceDataSetName, resourceGroupName, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public ReferenceDataSetArgs build() {
+            $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");
+            $.keyProperties = Objects.requireNonNull($.keyProperties, "expected parameter 'keyProperties' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

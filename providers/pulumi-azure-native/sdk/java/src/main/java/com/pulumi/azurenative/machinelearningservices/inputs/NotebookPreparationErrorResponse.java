@@ -16,62 +16,57 @@ public final class NotebookPreparationErrorResponse extends com.pulumi.resources
     public static final NotebookPreparationErrorResponse Empty = new NotebookPreparationErrorResponse();
 
     @Import(name="errorMessage")
-      private final @Nullable String errorMessage;
+    private @Nullable String errorMessage;
 
     public Optional<String> errorMessage() {
-        return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
+        return Optional.ofNullable(this.errorMessage);
     }
 
     @Import(name="statusCode")
-      private final @Nullable Integer statusCode;
+    private @Nullable Integer statusCode;
 
     public Optional<Integer> statusCode() {
-        return this.statusCode == null ? Optional.empty() : Optional.ofNullable(this.statusCode);
+        return Optional.ofNullable(this.statusCode);
     }
 
-    public NotebookPreparationErrorResponse(
-        @Nullable String errorMessage,
-        @Nullable Integer statusCode) {
-        this.errorMessage = errorMessage;
-        this.statusCode = statusCode;
-    }
+    private NotebookPreparationErrorResponse() {}
 
-    private NotebookPreparationErrorResponse() {
-        this.errorMessage = null;
-        this.statusCode = null;
+    private NotebookPreparationErrorResponse(NotebookPreparationErrorResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.statusCode = $.statusCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookPreparationErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String errorMessage;
-        private @Nullable Integer statusCode;
+        private NotebookPreparationErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookPreparationErrorResponse();
         }
 
         public Builder(NotebookPreparationErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.statusCode = defaults.statusCode;
+            $ = new NotebookPreparationErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = errorMessage;
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder statusCode(@Nullable Integer statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
-        }        public NotebookPreparationErrorResponse build() {
-            return new NotebookPreparationErrorResponse(errorMessage, statusCode);
+        }
+
+        public NotebookPreparationErrorResponse build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.DerivedArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GrafeasV1beta1ImageDetailsArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="derivedImage", required=true)
-      private final Output<DerivedArgs> derivedImage;
+    private Output<DerivedArgs> derivedImage;
 
     public Output<DerivedArgs> derivedImage() {
         return this.derivedImage;
     }
 
-    public GrafeasV1beta1ImageDetailsArgs(Output<DerivedArgs> derivedImage) {
-        this.derivedImage = Objects.requireNonNull(derivedImage, "expected parameter 'derivedImage' to be non-null");
-    }
+    private GrafeasV1beta1ImageDetailsArgs() {}
 
-    private GrafeasV1beta1ImageDetailsArgs() {
-        this.derivedImage = Codegen.empty();
+    private GrafeasV1beta1ImageDetailsArgs(GrafeasV1beta1ImageDetailsArgs $) {
+        this.derivedImage = $.derivedImage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1ImageDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DerivedArgs> derivedImage;
+        private GrafeasV1beta1ImageDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1ImageDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1ImageDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.derivedImage = defaults.derivedImage;
+            $ = new GrafeasV1beta1ImageDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder derivedImage(Output<DerivedArgs> derivedImage) {
-            this.derivedImage = Objects.requireNonNull(derivedImage);
+            $.derivedImage = derivedImage;
             return this;
         }
+
         public Builder derivedImage(DerivedArgs derivedImage) {
-            this.derivedImage = Output.of(Objects.requireNonNull(derivedImage));
-            return this;
-        }        public GrafeasV1beta1ImageDetailsArgs build() {
-            return new GrafeasV1beta1ImageDetailsArgs(derivedImage);
+            return derivedImage(Output.of(derivedImage));
+        }
+
+        public GrafeasV1beta1ImageDetailsArgs build() {
+            $.derivedImage = Objects.requireNonNull($.derivedImage, "expected parameter 'derivedImage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.glacier.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class VaultLockState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completeLock")
-      private final @Nullable Output<Boolean> completeLock;
+    private @Nullable Output<Boolean> completeLock;
 
-    public Output<Boolean> completeLock() {
-        return this.completeLock == null ? Codegen.empty() : this.completeLock;
+    public Optional<Output<Boolean>> completeLock() {
+        return Optional.ofNullable(this.completeLock);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class VaultLockState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoreDeletionError")
-      private final @Nullable Output<Boolean> ignoreDeletionError;
+    private @Nullable Output<Boolean> ignoreDeletionError;
 
-    public Output<Boolean> ignoreDeletionError() {
-        return this.ignoreDeletionError == null ? Codegen.empty() : this.ignoreDeletionError;
+    public Optional<Output<Boolean>> ignoreDeletionError() {
+        return Optional.ofNullable(this.ignoreDeletionError);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class VaultLockState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policy")
-      private final @Nullable Output<String> policy;
+    private @Nullable Output<String> policy;
 
-    public Output<String> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<String>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class VaultLockState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vaultName")
-      private final @Nullable Output<String> vaultName;
+    private @Nullable Output<String> vaultName;
 
-    public Output<String> vaultName() {
-        return this.vaultName == null ? Codegen.empty() : this.vaultName;
+    public Optional<Output<String>> vaultName() {
+        return Optional.ofNullable(this.vaultName);
     }
 
-    public VaultLockState(
-        @Nullable Output<Boolean> completeLock,
-        @Nullable Output<Boolean> ignoreDeletionError,
-        @Nullable Output<String> policy,
-        @Nullable Output<String> vaultName) {
-        this.completeLock = completeLock;
-        this.ignoreDeletionError = ignoreDeletionError;
-        this.policy = policy;
-        this.vaultName = vaultName;
-    }
+    private VaultLockState() {}
 
-    private VaultLockState() {
-        this.completeLock = Codegen.empty();
-        this.ignoreDeletionError = Codegen.empty();
-        this.policy = Codegen.empty();
-        this.vaultName = Codegen.empty();
+    private VaultLockState(VaultLockState $) {
+        this.completeLock = $.completeLock;
+        this.ignoreDeletionError = $.ignoreDeletionError;
+        this.policy = $.policy;
+        this.vaultName = $.vaultName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VaultLockState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> completeLock;
-        private @Nullable Output<Boolean> ignoreDeletionError;
-        private @Nullable Output<String> policy;
-        private @Nullable Output<String> vaultName;
+        private VaultLockState $;
 
         public Builder() {
-    	      // Empty
+            $ = new VaultLockState();
         }
 
         public Builder(VaultLockState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completeLock = defaults.completeLock;
-    	      this.ignoreDeletionError = defaults.ignoreDeletionError;
-    	      this.policy = defaults.policy;
-    	      this.vaultName = defaults.vaultName;
+            $ = new VaultLockState(Objects.requireNonNull(defaults));
         }
 
         public Builder completeLock(@Nullable Output<Boolean> completeLock) {
-            this.completeLock = completeLock;
+            $.completeLock = completeLock;
             return this;
         }
-        public Builder completeLock(@Nullable Boolean completeLock) {
-            this.completeLock = Codegen.ofNullable(completeLock);
-            return this;
+
+        public Builder completeLock(Boolean completeLock) {
+            return completeLock(Output.of(completeLock));
         }
+
         public Builder ignoreDeletionError(@Nullable Output<Boolean> ignoreDeletionError) {
-            this.ignoreDeletionError = ignoreDeletionError;
+            $.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
-        public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
-            this.ignoreDeletionError = Codegen.ofNullable(ignoreDeletionError);
-            return this;
+
+        public Builder ignoreDeletionError(Boolean ignoreDeletionError) {
+            return ignoreDeletionError(Output.of(ignoreDeletionError));
         }
+
         public Builder policy(@Nullable Output<String> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable String policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(String policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder vaultName(@Nullable Output<String> vaultName) {
-            this.vaultName = vaultName;
+            $.vaultName = vaultName;
             return this;
         }
-        public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Codegen.ofNullable(vaultName);
-            return this;
-        }        public VaultLockState build() {
-            return new VaultLockState(completeLock, ignoreDeletionError, policy, vaultName);
+
+        public Builder vaultName(String vaultName) {
+            return vaultName(Output.of(vaultName));
+        }
+
+        public VaultLockState build() {
+            return $;
         }
     }
+
 }

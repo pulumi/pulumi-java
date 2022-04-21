@@ -16,94 +16,85 @@ public final class FlowSnowflakeDestinationProperties extends com.pulumi.resourc
     public static final FlowSnowflakeDestinationProperties Empty = new FlowSnowflakeDestinationProperties();
 
     @Import(name="bucketPrefix")
-      private final @Nullable String bucketPrefix;
+    private @Nullable String bucketPrefix;
 
     public Optional<String> bucketPrefix() {
-        return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
+        return Optional.ofNullable(this.bucketPrefix);
     }
 
     @Import(name="errorHandlingConfig")
-      private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+    private @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> errorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
+        return Optional.ofNullable(this.errorHandlingConfig);
     }
 
     @Import(name="intermediateBucketName", required=true)
-      private final String intermediateBucketName;
+    private String intermediateBucketName;
 
     public String intermediateBucketName() {
         return this.intermediateBucketName;
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public FlowSnowflakeDestinationProperties(
-        @Nullable String bucketPrefix,
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        String intermediateBucketName,
-        String object) {
-        this.bucketPrefix = bucketPrefix;
-        this.errorHandlingConfig = errorHandlingConfig;
-        this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName, "expected parameter 'intermediateBucketName' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private FlowSnowflakeDestinationProperties() {}
 
-    private FlowSnowflakeDestinationProperties() {
-        this.bucketPrefix = null;
-        this.errorHandlingConfig = null;
-        this.intermediateBucketName = null;
-        this.object = null;
+    private FlowSnowflakeDestinationProperties(FlowSnowflakeDestinationProperties $) {
+        this.bucketPrefix = $.bucketPrefix;
+        this.errorHandlingConfig = $.errorHandlingConfig;
+        this.intermediateBucketName = $.intermediateBucketName;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowSnowflakeDestinationProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String bucketPrefix;
-        private @Nullable FlowErrorHandlingConfig errorHandlingConfig;
-        private String intermediateBucketName;
-        private String object;
+        private FlowSnowflakeDestinationProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowSnowflakeDestinationProperties();
         }
 
         public Builder(FlowSnowflakeDestinationProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketPrefix = defaults.bucketPrefix;
-    	      this.errorHandlingConfig = defaults.errorHandlingConfig;
-    	      this.intermediateBucketName = defaults.intermediateBucketName;
-    	      this.object = defaults.object;
+            $ = new FlowSnowflakeDestinationProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketPrefix(@Nullable String bucketPrefix) {
-            this.bucketPrefix = bucketPrefix;
+            $.bucketPrefix = bucketPrefix;
             return this;
         }
+
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
-            this.errorHandlingConfig = errorHandlingConfig;
+            $.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
+
         public Builder intermediateBucketName(String intermediateBucketName) {
-            this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
+            $.intermediateBucketName = intermediateBucketName;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public FlowSnowflakeDestinationProperties build() {
-            return new FlowSnowflakeDestinationProperties(bucketPrefix, errorHandlingConfig, intermediateBucketName, object);
+        }
+
+        public FlowSnowflakeDestinationProperties build() {
+            $.intermediateBucketName = Objects.requireNonNull($.intermediateBucketName, "expected parameter 'intermediateBucketName' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

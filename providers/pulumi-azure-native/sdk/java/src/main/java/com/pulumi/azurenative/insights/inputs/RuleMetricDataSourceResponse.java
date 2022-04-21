@@ -24,10 +24,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="legacyResourceId")
-      private final @Nullable String legacyResourceId;
+    private @Nullable String legacyResourceId;
 
     public Optional<String> legacyResourceId() {
-        return this.legacyResourceId == null ? Optional.empty() : Optional.ofNullable(this.legacyResourceId);
+        return Optional.ofNullable(this.legacyResourceId);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="metricName")
-      private final @Nullable String metricName;
+    private @Nullable String metricName;
 
     public Optional<String> metricName() {
-        return this.metricName == null ? Optional.empty() : Optional.ofNullable(this.metricName);
+        return Optional.ofNullable(this.metricName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="metricNamespace")
-      private final @Nullable String metricNamespace;
+    private @Nullable String metricNamespace;
 
     public Optional<String> metricNamespace() {
-        return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
+        return Optional.ofNullable(this.metricNamespace);
     }
 
     /**
@@ -58,7 +58,7 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -69,10 +69,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceLocation")
-      private final @Nullable String resourceLocation;
+    private @Nullable String resourceLocation;
 
     public Optional<String> resourceLocation() {
-        return this.resourceLocation == null ? Optional.empty() : Optional.ofNullable(this.resourceLocation);
+        return Optional.ofNullable(this.resourceLocation);
     }
 
     /**
@@ -80,91 +80,75 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable String resourceUri;
+    private @Nullable String resourceUri;
 
     public Optional<String> resourceUri() {
-        return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public RuleMetricDataSourceResponse(
-        @Nullable String legacyResourceId,
-        @Nullable String metricName,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String resourceLocation,
-        @Nullable String resourceUri) {
-        this.legacyResourceId = legacyResourceId;
-        this.metricName = metricName;
-        this.metricNamespace = metricNamespace;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.resourceLocation = resourceLocation;
-        this.resourceUri = resourceUri;
-    }
+    private RuleMetricDataSourceResponse() {}
 
-    private RuleMetricDataSourceResponse() {
-        this.legacyResourceId = null;
-        this.metricName = null;
-        this.metricNamespace = null;
-        this.odataType = null;
-        this.resourceLocation = null;
-        this.resourceUri = null;
+    private RuleMetricDataSourceResponse(RuleMetricDataSourceResponse $) {
+        this.legacyResourceId = $.legacyResourceId;
+        this.metricName = $.metricName;
+        this.metricNamespace = $.metricNamespace;
+        this.odataType = $.odataType;
+        this.resourceLocation = $.resourceLocation;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuleMetricDataSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String legacyResourceId;
-        private @Nullable String metricName;
-        private @Nullable String metricNamespace;
-        private String odataType;
-        private @Nullable String resourceLocation;
-        private @Nullable String resourceUri;
+        private RuleMetricDataSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuleMetricDataSourceResponse();
         }
 
         public Builder(RuleMetricDataSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.legacyResourceId = defaults.legacyResourceId;
-    	      this.metricName = defaults.metricName;
-    	      this.metricNamespace = defaults.metricNamespace;
-    	      this.odataType = defaults.odataType;
-    	      this.resourceLocation = defaults.resourceLocation;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new RuleMetricDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
-            this.legacyResourceId = legacyResourceId;
+            $.legacyResourceId = legacyResourceId;
             return this;
         }
+
         public Builder metricName(@Nullable String metricName) {
-            this.metricName = metricName;
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = metricNamespace;
+            $.metricNamespace = metricNamespace;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = resourceLocation;
+            $.resourceLocation = resourceLocation;
             return this;
         }
+
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
-        }        public RuleMetricDataSourceResponse build() {
-            return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
+        }
+
+        public RuleMetricDataSourceResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

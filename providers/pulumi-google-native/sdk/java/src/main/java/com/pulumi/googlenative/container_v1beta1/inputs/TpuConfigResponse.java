@@ -22,7 +22,7 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv4CidrBlock", required=true)
-      private final String ipv4CidrBlock;
+    private String ipv4CidrBlock;
 
     public String ipv4CidrBlock() {
         return this.ipv4CidrBlock;
@@ -44,64 +44,59 @@ public final class TpuConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="useServiceNetworking", required=true)
-      private final Boolean useServiceNetworking;
+    private Boolean useServiceNetworking;
 
     public Boolean useServiceNetworking() {
         return this.useServiceNetworking;
     }
 
-    public TpuConfigResponse(
-        Boolean enabled,
-        String ipv4CidrBlock,
-        Boolean useServiceNetworking) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock, "expected parameter 'ipv4CidrBlock' to be non-null");
-        this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking, "expected parameter 'useServiceNetworking' to be non-null");
-    }
+    private TpuConfigResponse() {}
 
-    private TpuConfigResponse() {
-        this.enabled = null;
-        this.ipv4CidrBlock = null;
-        this.useServiceNetworking = null;
+    private TpuConfigResponse(TpuConfigResponse $) {
+        this.enabled = $.enabled;
+        this.ipv4CidrBlock = $.ipv4CidrBlock;
+        this.useServiceNetworking = $.useServiceNetworking;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TpuConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
-        private String ipv4CidrBlock;
-        private Boolean useServiceNetworking;
+        private TpuConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TpuConfigResponse();
         }
 
         public Builder(TpuConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.ipv4CidrBlock = defaults.ipv4CidrBlock;
-    	      this.useServiceNetworking = defaults.useServiceNetworking;
+            $ = new TpuConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder ipv4CidrBlock(String ipv4CidrBlock) {
-            this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock);
+            $.ipv4CidrBlock = ipv4CidrBlock;
             return this;
         }
+
         public Builder useServiceNetworking(Boolean useServiceNetworking) {
-            this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
+            $.useServiceNetworking = useServiceNetworking;
             return this;
-        }        public TpuConfigResponse build() {
-            return new TpuConfigResponse(enabled, ipv4CidrBlock, useServiceNetworking);
+        }
+
+        public TpuConfigResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.ipv4CidrBlock = Objects.requireNonNull($.ipv4CidrBlock, "expected parameter 'ipv4CidrBlock' to be non-null");
+            $.useServiceNetworking = Objects.requireNonNull($.useServiceNetworking, "expected parameter 'useServiceNetworking' to be non-null");
+            return $;
         }
     }
+
 }

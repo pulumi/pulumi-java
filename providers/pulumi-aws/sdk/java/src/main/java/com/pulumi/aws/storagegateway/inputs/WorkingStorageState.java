@@ -5,9 +5,9 @@ package com.pulumi.aws.storagegateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class WorkingStorageState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="diskId")
-      private final @Nullable Output<String> diskId;
+    private @Nullable Output<String> diskId;
 
-    public Output<String> diskId() {
-        return this.diskId == null ? Codegen.empty() : this.diskId;
+    public Optional<Output<String>> diskId() {
+        return Optional.ofNullable(this.diskId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class WorkingStorageState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="gatewayArn")
-      private final @Nullable Output<String> gatewayArn;
+    private @Nullable Output<String> gatewayArn;
 
-    public Output<String> gatewayArn() {
-        return this.gatewayArn == null ? Codegen.empty() : this.gatewayArn;
+    public Optional<Output<String>> gatewayArn() {
+        return Optional.ofNullable(this.gatewayArn);
     }
 
-    public WorkingStorageState(
-        @Nullable Output<String> diskId,
-        @Nullable Output<String> gatewayArn) {
-        this.diskId = diskId;
-        this.gatewayArn = gatewayArn;
-    }
+    private WorkingStorageState() {}
 
-    private WorkingStorageState() {
-        this.diskId = Codegen.empty();
-        this.gatewayArn = Codegen.empty();
+    private WorkingStorageState(WorkingStorageState $) {
+        this.diskId = $.diskId;
+        this.gatewayArn = $.gatewayArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkingStorageState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> diskId;
-        private @Nullable Output<String> gatewayArn;
+        private WorkingStorageState $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkingStorageState();
         }
 
         public Builder(WorkingStorageState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskId = defaults.diskId;
-    	      this.gatewayArn = defaults.gatewayArn;
+            $ = new WorkingStorageState(Objects.requireNonNull(defaults));
         }
 
         public Builder diskId(@Nullable Output<String> diskId) {
-            this.diskId = diskId;
+            $.diskId = diskId;
             return this;
         }
-        public Builder diskId(@Nullable String diskId) {
-            this.diskId = Codegen.ofNullable(diskId);
-            return this;
+
+        public Builder diskId(String diskId) {
+            return diskId(Output.of(diskId));
         }
+
         public Builder gatewayArn(@Nullable Output<String> gatewayArn) {
-            this.gatewayArn = gatewayArn;
+            $.gatewayArn = gatewayArn;
             return this;
         }
-        public Builder gatewayArn(@Nullable String gatewayArn) {
-            this.gatewayArn = Codegen.ofNullable(gatewayArn);
-            return this;
-        }        public WorkingStorageState build() {
-            return new WorkingStorageState(diskId, gatewayArn);
+
+        public Builder gatewayArn(String gatewayArn) {
+            return gatewayArn(Output.of(gatewayArn));
+        }
+
+        public WorkingStorageState build() {
+            return $;
         }
     }
+
 }

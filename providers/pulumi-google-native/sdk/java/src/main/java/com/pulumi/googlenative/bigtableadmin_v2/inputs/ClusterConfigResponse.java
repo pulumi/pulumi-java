@@ -21,45 +21,45 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="clusterAutoscalingConfig", required=true)
-      private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
+    private ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
     public ClusterAutoscalingConfigResponse clusterAutoscalingConfig() {
         return this.clusterAutoscalingConfig;
     }
 
-    public ClusterConfigResponse(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
-        this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig, "expected parameter 'clusterAutoscalingConfig' to be non-null");
-    }
+    private ClusterConfigResponse() {}
 
-    private ClusterConfigResponse() {
-        this.clusterAutoscalingConfig = null;
+    private ClusterConfigResponse(ClusterConfigResponse $) {
+        this.clusterAutoscalingConfig = $.clusterAutoscalingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
+        private ClusterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigResponse();
         }
 
         public Builder(ClusterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterAutoscalingConfig = defaults.clusterAutoscalingConfig;
+            $ = new ClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterAutoscalingConfig(ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
-            this.clusterAutoscalingConfig = Objects.requireNonNull(clusterAutoscalingConfig);
+            $.clusterAutoscalingConfig = clusterAutoscalingConfig;
             return this;
-        }        public ClusterConfigResponse build() {
-            return new ClusterConfigResponse(clusterAutoscalingConfig);
+        }
+
+        public ClusterConfigResponse build() {
+            $.clusterAutoscalingConfig = Objects.requireNonNull($.clusterAutoscalingConfig, "expected parameter 'clusterAutoscalingConfig' to be non-null");
+            return $;
         }
     }
+
 }

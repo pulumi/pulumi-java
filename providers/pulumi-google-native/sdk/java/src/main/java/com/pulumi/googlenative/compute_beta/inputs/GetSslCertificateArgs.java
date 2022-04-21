@@ -15,62 +15,58 @@ public final class GetSslCertificateArgs extends com.pulumi.resources.InvokeArgs
     public static final GetSslCertificateArgs Empty = new GetSslCertificateArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sslCertificate", required=true)
-      private final String sslCertificate;
+    private String sslCertificate;
 
     public String sslCertificate() {
         return this.sslCertificate;
     }
 
-    public GetSslCertificateArgs(
-        @Nullable String project,
-        String sslCertificate) {
-        this.project = project;
-        this.sslCertificate = Objects.requireNonNull(sslCertificate, "expected parameter 'sslCertificate' to be non-null");
-    }
+    private GetSslCertificateArgs() {}
 
-    private GetSslCertificateArgs() {
-        this.project = null;
-        this.sslCertificate = null;
+    private GetSslCertificateArgs(GetSslCertificateArgs $) {
+        this.project = $.project;
+        this.sslCertificate = $.sslCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSslCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String sslCertificate;
+        private GetSslCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSslCertificateArgs();
         }
 
         public Builder(GetSslCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.sslCertificate = defaults.sslCertificate;
+            $ = new GetSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sslCertificate(String sslCertificate) {
-            this.sslCertificate = Objects.requireNonNull(sslCertificate);
+            $.sslCertificate = sslCertificate;
             return this;
-        }        public GetSslCertificateArgs build() {
-            return new GetSslCertificateArgs(project, sslCertificate);
+        }
+
+        public GetSslCertificateArgs build() {
+            $.sslCertificate = Objects.requireNonNull($.sslCertificate, "expected parameter 'sslCertificate' to be non-null");
+            return $;
         }
     }
+
 }

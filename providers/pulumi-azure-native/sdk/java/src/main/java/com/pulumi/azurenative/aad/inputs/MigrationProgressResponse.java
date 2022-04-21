@@ -24,10 +24,10 @@ public final class MigrationProgressResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="completionPercentage")
-      private final @Nullable Double completionPercentage;
+    private @Nullable Double completionPercentage;
 
     public Optional<Double> completionPercentage() {
-        return this.completionPercentage == null ? Optional.empty() : Optional.ofNullable(this.completionPercentage);
+        return Optional.ofNullable(this.completionPercentage);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class MigrationProgressResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="progressMessage")
-      private final @Nullable String progressMessage;
+    private @Nullable String progressMessage;
 
     public Optional<String> progressMessage() {
-        return this.progressMessage == null ? Optional.empty() : Optional.ofNullable(this.progressMessage);
+        return Optional.ofNullable(this.progressMessage);
     }
 
-    public MigrationProgressResponse(
-        @Nullable Double completionPercentage,
-        @Nullable String progressMessage) {
-        this.completionPercentage = completionPercentage;
-        this.progressMessage = progressMessage;
-    }
+    private MigrationProgressResponse() {}
 
-    private MigrationProgressResponse() {
-        this.completionPercentage = null;
-        this.progressMessage = null;
+    private MigrationProgressResponse(MigrationProgressResponse $) {
+        this.completionPercentage = $.completionPercentage;
+        this.progressMessage = $.progressMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrationProgressResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double completionPercentage;
-        private @Nullable String progressMessage;
+        private MigrationProgressResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrationProgressResponse();
         }
 
         public Builder(MigrationProgressResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.completionPercentage = defaults.completionPercentage;
-    	      this.progressMessage = defaults.progressMessage;
+            $ = new MigrationProgressResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder completionPercentage(@Nullable Double completionPercentage) {
-            this.completionPercentage = completionPercentage;
+            $.completionPercentage = completionPercentage;
             return this;
         }
+
         public Builder progressMessage(@Nullable String progressMessage) {
-            this.progressMessage = progressMessage;
+            $.progressMessage = progressMessage;
             return this;
-        }        public MigrationProgressResponse build() {
-            return new MigrationProgressResponse(completionPercentage, progressMessage);
+        }
+
+        public MigrationProgressResponse build() {
+            return $;
         }
     }
+
 }

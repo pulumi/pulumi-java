@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NodeGroupMaintenancePolicy;
 import com.pulumi.googlenative.compute_alpha.enums.NodeGroupStatus;
 import com.pulumi.googlenative.compute_alpha.inputs.NodeGroupAutoscalingPolicyArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.compute_alpha.inputs.NodeGroupMaintenanceWindowAr
 import com.pulumi.googlenative.compute_alpha.inputs.ShareSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
+    private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<NodeGroupAutoscalingPolicyArgs>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -36,14 +36,14 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="initialNodeCount", required=true)
-      private final Output<String> initialNodeCount;
+    private Output<String> initialNodeCount;
 
     public Output<String> initialNodeCount() {
         return this.initialNodeCount;
@@ -54,10 +54,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locationHint")
-      private final @Nullable Output<String> locationHint;
+    private @Nullable Output<String> locationHint;
 
-    public Output<String> locationHint() {
-        return this.locationHint == null ? Codegen.empty() : this.locationHint;
+    public Optional<Output<String>> locationHint() {
+        return Optional.ofNullable(this.locationHint);
     }
 
     /**
@@ -65,17 +65,17 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenancePolicy")
-      private final @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
+    private @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
 
-    public Output<NodeGroupMaintenancePolicy> maintenancePolicy() {
-        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
+    public Optional<Output<NodeGroupMaintenancePolicy>> maintenancePolicy() {
+        return Optional.ofNullable(this.maintenancePolicy);
     }
 
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
+    private @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<NodeGroupMaintenanceWindowArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -94,24 +94,24 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeTemplate")
-      private final @Nullable Output<String> nodeTemplate;
+    private @Nullable Output<String> nodeTemplate;
 
-    public Output<String> nodeTemplate() {
-        return this.nodeTemplate == null ? Codegen.empty() : this.nodeTemplate;
+    public Optional<Output<String>> nodeTemplate() {
+        return Optional.ofNullable(this.nodeTemplate);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -119,220 +119,183 @@ public final class NodeGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareSettings")
-      private final @Nullable Output<ShareSettingsArgs> shareSettings;
+    private @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Output<ShareSettingsArgs> shareSettings() {
-        return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
+    public Optional<Output<ShareSettingsArgs>> shareSettings() {
+        return Optional.ofNullable(this.shareSettings);
     }
 
     @Import(name="status")
-      private final @Nullable Output<NodeGroupStatus> status;
+    private @Nullable Output<NodeGroupStatus> status;
 
-    public Output<NodeGroupStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<NodeGroupStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NodeGroupArgs(
-        @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy,
-        @Nullable Output<String> description,
-        Output<String> initialNodeCount,
-        @Nullable Output<String> locationHint,
-        @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy,
-        @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Output<String> name,
-        @Nullable Output<String> nodeTemplate,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<ShareSettingsArgs> shareSettings,
-        @Nullable Output<NodeGroupStatus> status,
-        @Nullable Output<String> zone) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.description = description;
-        this.initialNodeCount = Objects.requireNonNull(initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
-        this.locationHint = locationHint;
-        this.maintenancePolicy = maintenancePolicy;
-        this.maintenanceWindow = maintenanceWindow;
-        this.name = name;
-        this.nodeTemplate = nodeTemplate;
-        this.project = project;
-        this.requestId = requestId;
-        this.shareSettings = shareSettings;
-        this.status = status;
-        this.zone = zone;
-    }
+    private NodeGroupArgs() {}
 
-    private NodeGroupArgs() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.initialNodeCount = Codegen.empty();
-        this.locationHint = Codegen.empty();
-        this.maintenancePolicy = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nodeTemplate = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.shareSettings = Codegen.empty();
-        this.status = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NodeGroupArgs(NodeGroupArgs $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.description = $.description;
+        this.initialNodeCount = $.initialNodeCount;
+        this.locationHint = $.locationHint;
+        this.maintenancePolicy = $.maintenancePolicy;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.name = $.name;
+        this.nodeTemplate = $.nodeTemplate;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.shareSettings = $.shareSettings;
+        this.status = $.status;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
-        private @Nullable Output<String> description;
-        private Output<String> initialNodeCount;
-        private @Nullable Output<String> locationHint;
-        private @Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy;
-        private @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> nodeTemplate;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<ShareSettingsArgs> shareSettings;
-        private @Nullable Output<NodeGroupStatus> status;
-        private @Nullable Output<String> zone;
+        private NodeGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupArgs();
         }
 
         public Builder(NodeGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.description = defaults.description;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.locationHint = defaults.locationHint;
-    	      this.maintenancePolicy = defaults.maintenancePolicy;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.name = defaults.name;
-    	      this.nodeTemplate = defaults.nodeTemplate;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.shareSettings = defaults.shareSettings;
-    	      this.status = defaults.status;
-    	      this.zone = defaults.zone;
+            $ = new NodeGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(NodeGroupAutoscalingPolicyArgs autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder initialNodeCount(Output<String> initialNodeCount) {
-            this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
+
         public Builder initialNodeCount(String initialNodeCount) {
-            this.initialNodeCount = Output.of(Objects.requireNonNull(initialNodeCount));
-            return this;
+            return initialNodeCount(Output.of(initialNodeCount));
         }
+
         public Builder locationHint(@Nullable Output<String> locationHint) {
-            this.locationHint = locationHint;
+            $.locationHint = locationHint;
             return this;
         }
-        public Builder locationHint(@Nullable String locationHint) {
-            this.locationHint = Codegen.ofNullable(locationHint);
-            return this;
+
+        public Builder locationHint(String locationHint) {
+            return locationHint(Output.of(locationHint));
         }
+
         public Builder maintenancePolicy(@Nullable Output<NodeGroupMaintenancePolicy> maintenancePolicy) {
-            this.maintenancePolicy = maintenancePolicy;
+            $.maintenancePolicy = maintenancePolicy;
             return this;
         }
-        public Builder maintenancePolicy(@Nullable NodeGroupMaintenancePolicy maintenancePolicy) {
-            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
-            return this;
+
+        public Builder maintenancePolicy(NodeGroupMaintenancePolicy maintenancePolicy) {
+            return maintenancePolicy(Output.of(maintenancePolicy));
         }
+
         public Builder maintenanceWindow(@Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable NodeGroupMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(NodeGroupMaintenanceWindowArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder nodeTemplate(@Nullable Output<String> nodeTemplate) {
-            this.nodeTemplate = nodeTemplate;
+            $.nodeTemplate = nodeTemplate;
             return this;
         }
-        public Builder nodeTemplate(@Nullable String nodeTemplate) {
-            this.nodeTemplate = Codegen.ofNullable(nodeTemplate);
-            return this;
+
+        public Builder nodeTemplate(String nodeTemplate) {
+            return nodeTemplate(Output.of(nodeTemplate));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
-            this.shareSettings = shareSettings;
+            $.shareSettings = shareSettings;
             return this;
         }
-        public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
-            this.shareSettings = Codegen.ofNullable(shareSettings);
-            return this;
+
+        public Builder shareSettings(ShareSettingsArgs shareSettings) {
+            return shareSettings(Output.of(shareSettings));
         }
+
         public Builder status(@Nullable Output<NodeGroupStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable NodeGroupStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
+
+        public Builder status(NodeGroupStatus status) {
+            return status(Output.of(status));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NodeGroupArgs build() {
-            return new NodeGroupArgs(autoscalingPolicy, description, initialNodeCount, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, requestId, shareSettings, status, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NodeGroupArgs build() {
+            $.initialNodeCount = Objects.requireNonNull($.initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
+            return $;
         }
     }
+
 }

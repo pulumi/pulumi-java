@@ -25,10 +25,10 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="preserveZipFileNameAsFolder")
-      private final @Nullable Object preserveZipFileNameAsFolder;
+    private @Nullable Object preserveZipFileNameAsFolder;
 
     public Optional<Object> preserveZipFileNameAsFolder() {
-        return this.preserveZipFileNameAsFolder == null ? Optional.empty() : Optional.ofNullable(this.preserveZipFileNameAsFolder);
+        return Optional.ofNullable(this.preserveZipFileNameAsFolder);
     }
 
     /**
@@ -37,55 +37,51 @@ public final class ZipDeflateReadSettingsResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ZipDeflateReadSettingsResponse(
-        @Nullable Object preserveZipFileNameAsFolder,
-        String type) {
-        this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private ZipDeflateReadSettingsResponse() {}
 
-    private ZipDeflateReadSettingsResponse() {
-        this.preserveZipFileNameAsFolder = null;
-        this.type = null;
+    private ZipDeflateReadSettingsResponse(ZipDeflateReadSettingsResponse $) {
+        this.preserveZipFileNameAsFolder = $.preserveZipFileNameAsFolder;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZipDeflateReadSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object preserveZipFileNameAsFolder;
-        private String type;
+        private ZipDeflateReadSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZipDeflateReadSettingsResponse();
         }
 
         public Builder(ZipDeflateReadSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preserveZipFileNameAsFolder = defaults.preserveZipFileNameAsFolder;
-    	      this.type = defaults.type;
+            $ = new ZipDeflateReadSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
-            this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
+            $.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ZipDeflateReadSettingsResponse build() {
-            return new ZipDeflateReadSettingsResponse(preserveZipFileNameAsFolder, type);
+        }
+
+        public ZipDeflateReadSettingsResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

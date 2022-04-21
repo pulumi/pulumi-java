@@ -5,9 +5,9 @@ package com.pulumi.aws.ec2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class LaunchTemplateIamInstanceProfileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class LaunchTemplateIamInstanceProfileArgs extends com.pulumi.resou
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public LaunchTemplateIamInstanceProfileArgs(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> name) {
-        this.arn = arn;
-        this.name = name;
-    }
+    private LaunchTemplateIamInstanceProfileArgs() {}
 
-    private LaunchTemplateIamInstanceProfileArgs() {
-        this.arn = Codegen.empty();
-        this.name = Codegen.empty();
+    private LaunchTemplateIamInstanceProfileArgs(LaunchTemplateIamInstanceProfileArgs $) {
+        this.arn = $.arn;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchTemplateIamInstanceProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> name;
+        private LaunchTemplateIamInstanceProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchTemplateIamInstanceProfileArgs();
         }
 
         public Builder(LaunchTemplateIamInstanceProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.name = defaults.name;
+            $ = new LaunchTemplateIamInstanceProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public LaunchTemplateIamInstanceProfileArgs build() {
-            return new LaunchTemplateIamInstanceProfileArgs(arn, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public LaunchTemplateIamInstanceProfileArgs build() {
+            return $;
         }
     }
+
 }

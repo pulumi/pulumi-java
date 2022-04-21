@@ -23,10 +23,10 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class DeploymentModelResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="version")
-      private final @Nullable String version;
+    private @Nullable String version;
 
     public Optional<String> version() {
-        return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
+        return Optional.ofNullable(this.version);
     }
 
-    public DeploymentModelResponse(
-        @Nullable String format,
-        @Nullable String name,
-        @Nullable String version) {
-        this.format = format;
-        this.name = name;
-        this.version = version;
-    }
+    private DeploymentModelResponse() {}
 
-    private DeploymentModelResponse() {
-        this.format = null;
-        this.name = null;
-        this.version = null;
+    private DeploymentModelResponse(DeploymentModelResponse $) {
+        this.format = $.format;
+        this.name = $.name;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentModelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String format;
-        private @Nullable String name;
-        private @Nullable String version;
+        private DeploymentModelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentModelResponse();
         }
 
         public Builder(DeploymentModelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.name = defaults.name;
-    	      this.version = defaults.version;
+            $ = new DeploymentModelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder version(@Nullable String version) {
-            this.version = version;
+            $.version = version;
             return this;
-        }        public DeploymentModelResponse build() {
-            return new DeploymentModelResponse(format, name, version);
+        }
+
+        public DeploymentModelResponse build() {
+            return $;
         }
     }
+
 }

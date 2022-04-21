@@ -5,12 +5,12 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class MetricAbsenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aggregations")
-      private final @Nullable Output<List<AggregationArgs>> aggregations;
+    private @Nullable Output<List<AggregationArgs>> aggregations;
 
-    public Output<List<AggregationArgs>> aggregations() {
-        return this.aggregations == null ? Codegen.empty() : this.aggregations;
+    public Optional<Output<List<AggregationArgs>>> aggregations() {
+        return Optional.ofNullable(this.aggregations);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MetricAbsenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="duration")
-      private final @Nullable Output<String> duration;
+    private @Nullable Output<String> duration;
 
-    public Output<String> duration() {
-        return this.duration == null ? Codegen.empty() : this.duration;
+    public Optional<Output<String>> duration() {
+        return Optional.ofNullable(this.duration);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class MetricAbsenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -60,92 +60,83 @@ public final class MetricAbsenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="trigger")
-      private final @Nullable Output<TriggerArgs> trigger;
+    private @Nullable Output<TriggerArgs> trigger;
 
-    public Output<TriggerArgs> trigger() {
-        return this.trigger == null ? Codegen.empty() : this.trigger;
+    public Optional<Output<TriggerArgs>> trigger() {
+        return Optional.ofNullable(this.trigger);
     }
 
-    public MetricAbsenceArgs(
-        @Nullable Output<List<AggregationArgs>> aggregations,
-        @Nullable Output<String> duration,
-        Output<String> filter,
-        @Nullable Output<TriggerArgs> trigger) {
-        this.aggregations = aggregations;
-        this.duration = duration;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.trigger = trigger;
-    }
+    private MetricAbsenceArgs() {}
 
-    private MetricAbsenceArgs() {
-        this.aggregations = Codegen.empty();
-        this.duration = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.trigger = Codegen.empty();
+    private MetricAbsenceArgs(MetricAbsenceArgs $) {
+        this.aggregations = $.aggregations;
+        this.duration = $.duration;
+        this.filter = $.filter;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricAbsenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AggregationArgs>> aggregations;
-        private @Nullable Output<String> duration;
-        private Output<String> filter;
-        private @Nullable Output<TriggerArgs> trigger;
+        private MetricAbsenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricAbsenceArgs();
         }
 
         public Builder(MetricAbsenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.duration = defaults.duration;
-    	      this.filter = defaults.filter;
-    	      this.trigger = defaults.trigger;
+            $ = new MetricAbsenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(@Nullable Output<List<AggregationArgs>> aggregations) {
-            this.aggregations = aggregations;
+            $.aggregations = aggregations;
             return this;
         }
-        public Builder aggregations(@Nullable List<AggregationArgs> aggregations) {
-            this.aggregations = Codegen.ofNullable(aggregations);
-            return this;
+
+        public Builder aggregations(List<AggregationArgs> aggregations) {
+            return aggregations(Output.of(aggregations));
         }
+
         public Builder aggregations(AggregationArgs... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder duration(@Nullable Output<String> duration) {
-            this.duration = duration;
+            $.duration = duration;
             return this;
         }
-        public Builder duration(@Nullable String duration) {
-            this.duration = Codegen.ofNullable(duration);
-            return this;
+
+        public Builder duration(String duration) {
+            return duration(Output.of(duration));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder trigger(@Nullable Output<TriggerArgs> trigger) {
-            this.trigger = trigger;
+            $.trigger = trigger;
             return this;
         }
-        public Builder trigger(@Nullable TriggerArgs trigger) {
-            this.trigger = Codegen.ofNullable(trigger);
-            return this;
-        }        public MetricAbsenceArgs build() {
-            return new MetricAbsenceArgs(aggregations, duration, filter, trigger);
+
+        public Builder trigger(TriggerArgs trigger) {
+            return trigger(Output.of(trigger));
+        }
+
+        public MetricAbsenceArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

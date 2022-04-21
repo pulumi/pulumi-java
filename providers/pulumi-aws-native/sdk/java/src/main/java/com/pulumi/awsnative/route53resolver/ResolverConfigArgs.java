@@ -6,7 +6,6 @@ package com.pulumi.awsnative.route53resolver;
 import com.pulumi.awsnative.route53resolver.enums.ResolverConfigAutodefinedReverseFlag;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="autodefinedReverseFlag", required=true)
-      private final Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
+    private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
 
     public Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag() {
         return this.autodefinedReverseFlag;
@@ -31,63 +30,60 @@ public final class ResolverConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceId", required=true)
-      private final Output<String> resourceId;
+    private Output<String> resourceId;
 
     public Output<String> resourceId() {
         return this.resourceId;
     }
 
-    public ResolverConfigArgs(
-        Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag,
-        Output<String> resourceId) {
-        this.autodefinedReverseFlag = Objects.requireNonNull(autodefinedReverseFlag, "expected parameter 'autodefinedReverseFlag' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private ResolverConfigArgs() {}
 
-    private ResolverConfigArgs() {
-        this.autodefinedReverseFlag = Codegen.empty();
-        this.resourceId = Codegen.empty();
+    private ResolverConfigArgs(ResolverConfigArgs $) {
+        this.autodefinedReverseFlag = $.autodefinedReverseFlag;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResolverConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag;
-        private Output<String> resourceId;
+        private ResolverConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResolverConfigArgs();
         }
 
         public Builder(ResolverConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autodefinedReverseFlag = defaults.autodefinedReverseFlag;
-    	      this.resourceId = defaults.resourceId;
+            $ = new ResolverConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autodefinedReverseFlag(Output<ResolverConfigAutodefinedReverseFlag> autodefinedReverseFlag) {
-            this.autodefinedReverseFlag = Objects.requireNonNull(autodefinedReverseFlag);
+            $.autodefinedReverseFlag = autodefinedReverseFlag;
             return this;
         }
+
         public Builder autodefinedReverseFlag(ResolverConfigAutodefinedReverseFlag autodefinedReverseFlag) {
-            this.autodefinedReverseFlag = Output.of(Objects.requireNonNull(autodefinedReverseFlag));
-            return this;
+            return autodefinedReverseFlag(Output.of(autodefinedReverseFlag));
         }
+
         public Builder resourceId(Output<String> resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Output.of(Objects.requireNonNull(resourceId));
-            return this;
-        }        public ResolverConfigArgs build() {
-            return new ResolverConfigArgs(autodefinedReverseFlag, resourceId);
+            return resourceId(Output.of(resourceId));
+        }
+
+        public ResolverConfigArgs build() {
+            $.autodefinedReverseFlag = Objects.requireNonNull($.autodefinedReverseFlag, "expected parameter 'autodefinedReverseFlag' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

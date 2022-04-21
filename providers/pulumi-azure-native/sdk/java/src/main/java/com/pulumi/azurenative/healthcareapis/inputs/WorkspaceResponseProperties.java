@@ -21,45 +21,45 @@ public final class WorkspaceResponseProperties extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
     }
 
-    public WorkspaceResponseProperties(String provisioningState) {
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-    }
+    private WorkspaceResponseProperties() {}
 
-    private WorkspaceResponseProperties() {
-        this.provisioningState = null;
+    private WorkspaceResponseProperties(WorkspaceResponseProperties $) {
+        this.provisioningState = $.provisioningState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String provisioningState;
+        private WorkspaceResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceResponseProperties();
         }
 
         public Builder(WorkspaceResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.provisioningState = defaults.provisioningState;
+            $ = new WorkspaceResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
-        }        public WorkspaceResponseProperties build() {
-            return new WorkspaceResponseProperties(provisioningState);
+        }
+
+        public WorkspaceResponseProperties build() {
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            return $;
         }
     }
+
 }

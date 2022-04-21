@@ -5,9 +5,9 @@ package com.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EndConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cardinality")
-      private final @Nullable Output<CardinalityArgs> cardinality;
+    private @Nullable Output<CardinalityArgs> cardinality;
 
-    public Output<CardinalityArgs> cardinality() {
-        return this.cardinality == null ? Codegen.empty() : this.cardinality;
+    public Optional<Output<CardinalityArgs>> cardinality() {
+        return Optional.ofNullable(this.cardinality);
     }
 
-    public EndConditionArgs(@Nullable Output<CardinalityArgs> cardinality) {
-        this.cardinality = cardinality;
-    }
+    private EndConditionArgs() {}
 
-    private EndConditionArgs() {
-        this.cardinality = Codegen.empty();
+    private EndConditionArgs(EndConditionArgs $) {
+        this.cardinality = $.cardinality;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CardinalityArgs> cardinality;
+        private EndConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndConditionArgs();
         }
 
         public Builder(EndConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardinality = defaults.cardinality;
+            $ = new EndConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cardinality(@Nullable Output<CardinalityArgs> cardinality) {
-            this.cardinality = cardinality;
+            $.cardinality = cardinality;
             return this;
         }
-        public Builder cardinality(@Nullable CardinalityArgs cardinality) {
-            this.cardinality = Codegen.ofNullable(cardinality);
-            return this;
-        }        public EndConditionArgs build() {
-            return new EndConditionArgs(cardinality);
+
+        public Builder cardinality(CardinalityArgs cardinality) {
+            return cardinality(Output.of(cardinality));
+        }
+
+        public EndConditionArgs build() {
+            return $;
         }
     }
+
 }

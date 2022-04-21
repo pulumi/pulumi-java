@@ -23,10 +23,10 @@ public final class LinkedWorkspacePropsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="linkedWorkspaceResourceId")
-      private final @Nullable String linkedWorkspaceResourceId;
+    private @Nullable String linkedWorkspaceResourceId;
 
     public Optional<String> linkedWorkspaceResourceId() {
-        return this.linkedWorkspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.linkedWorkspaceResourceId);
+        return Optional.ofNullable(this.linkedWorkspaceResourceId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class LinkedWorkspacePropsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="userAssignedIdentityResourceId")
-      private final @Nullable String userAssignedIdentityResourceId;
+    private @Nullable String userAssignedIdentityResourceId;
 
     public Optional<String> userAssignedIdentityResourceId() {
-        return this.userAssignedIdentityResourceId == null ? Optional.empty() : Optional.ofNullable(this.userAssignedIdentityResourceId);
+        return Optional.ofNullable(this.userAssignedIdentityResourceId);
     }
 
-    public LinkedWorkspacePropsResponse(
-        @Nullable String linkedWorkspaceResourceId,
-        @Nullable String userAssignedIdentityResourceId) {
-        this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
-        this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
-    }
+    private LinkedWorkspacePropsResponse() {}
 
-    private LinkedWorkspacePropsResponse() {
-        this.linkedWorkspaceResourceId = null;
-        this.userAssignedIdentityResourceId = null;
+    private LinkedWorkspacePropsResponse(LinkedWorkspacePropsResponse $) {
+        this.linkedWorkspaceResourceId = $.linkedWorkspaceResourceId;
+        this.userAssignedIdentityResourceId = $.userAssignedIdentityResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedWorkspacePropsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String linkedWorkspaceResourceId;
-        private @Nullable String userAssignedIdentityResourceId;
+        private LinkedWorkspacePropsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedWorkspacePropsResponse();
         }
 
         public Builder(LinkedWorkspacePropsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.linkedWorkspaceResourceId = defaults.linkedWorkspaceResourceId;
-    	      this.userAssignedIdentityResourceId = defaults.userAssignedIdentityResourceId;
+            $ = new LinkedWorkspacePropsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
-            this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
+            $.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
+
         public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
-            this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
+            $.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
-        }        public LinkedWorkspacePropsResponse build() {
-            return new LinkedWorkspacePropsResponse(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
+        }
+
+        public LinkedWorkspacePropsResponse build() {
+            return $;
         }
     }
+
 }

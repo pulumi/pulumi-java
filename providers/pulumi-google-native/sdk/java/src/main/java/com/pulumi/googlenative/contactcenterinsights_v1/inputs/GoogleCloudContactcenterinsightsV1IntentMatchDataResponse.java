@@ -21,45 +21,45 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
      * 
      */
     @Import(name="intentUniqueId", required=true)
-      private final String intentUniqueId;
+    private String intentUniqueId;
 
     public String intentUniqueId() {
         return this.intentUniqueId;
     }
 
-    public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(String intentUniqueId) {
-        this.intentUniqueId = Objects.requireNonNull(intentUniqueId, "expected parameter 'intentUniqueId' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse() {
-        this.intentUniqueId = null;
+    private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse $) {
+        this.intentUniqueId = $.intentUniqueId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String intentUniqueId;
+        private GoogleCloudContactcenterinsightsV1IntentMatchDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IntentMatchDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intentUniqueId = defaults.intentUniqueId;
+            $ = new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder intentUniqueId(String intentUniqueId) {
-            this.intentUniqueId = Objects.requireNonNull(intentUniqueId);
+            $.intentUniqueId = intentUniqueId;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1IntentMatchDataResponse(intentUniqueId);
+        }
+
+        public GoogleCloudContactcenterinsightsV1IntentMatchDataResponse build() {
+            $.intentUniqueId = Objects.requireNonNull($.intentUniqueId, "expected parameter 'intentUniqueId' to be non-null");
+            return $;
         }
     }
+
 }

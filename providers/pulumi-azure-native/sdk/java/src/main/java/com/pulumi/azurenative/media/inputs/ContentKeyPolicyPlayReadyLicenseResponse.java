@@ -28,7 +28,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="allowTestDevices", required=true)
-      private final Boolean allowTestDevices;
+    private Boolean allowTestDevices;
 
     public Boolean allowTestDevices() {
         return this.allowTestDevices;
@@ -39,10 +39,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="beginDate")
-      private final @Nullable String beginDate;
+    private @Nullable String beginDate;
 
     public Optional<String> beginDate() {
-        return this.beginDate == null ? Optional.empty() : Optional.ofNullable(this.beginDate);
+        return Optional.ofNullable(this.beginDate);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="contentKeyLocation", required=true)
-      private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
+    private Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
 
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation() {
         return this.contentKeyLocation;
@@ -61,7 +61,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="contentType", required=true)
-      private final String contentType;
+    private String contentType;
 
     public String contentType() {
         return this.contentType;
@@ -72,10 +72,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="expirationDate")
-      private final @Nullable String expirationDate;
+    private @Nullable String expirationDate;
 
     public Optional<String> expirationDate() {
-        return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
+        return Optional.ofNullable(this.expirationDate);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="gracePeriod")
-      private final @Nullable String gracePeriod;
+    private @Nullable String gracePeriod;
 
     public Optional<String> gracePeriod() {
-        return this.gracePeriod == null ? Optional.empty() : Optional.ofNullable(this.gracePeriod);
+        return Optional.ofNullable(this.gracePeriod);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="licenseType", required=true)
-      private final String licenseType;
+    private String licenseType;
 
     public String licenseType() {
         return this.licenseType;
@@ -105,10 +105,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="playRight")
-      private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
+    private @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
 
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> playRight() {
-        return this.playRight == null ? Optional.empty() : Optional.ofNullable(this.playRight);
+        return Optional.ofNullable(this.playRight);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="relativeBeginDate")
-      private final @Nullable String relativeBeginDate;
+    private @Nullable String relativeBeginDate;
 
     public Optional<String> relativeBeginDate() {
-        return this.relativeBeginDate == null ? Optional.empty() : Optional.ofNullable(this.relativeBeginDate);
+        return Optional.ofNullable(this.relativeBeginDate);
     }
 
     /**
@@ -127,127 +127,102 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends com.pulumi.r
      * 
      */
     @Import(name="relativeExpirationDate")
-      private final @Nullable String relativeExpirationDate;
+    private @Nullable String relativeExpirationDate;
 
     public Optional<String> relativeExpirationDate() {
-        return this.relativeExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.relativeExpirationDate);
+        return Optional.ofNullable(this.relativeExpirationDate);
     }
 
-    public ContentKeyPolicyPlayReadyLicenseResponse(
-        Boolean allowTestDevices,
-        @Nullable String beginDate,
-        Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation,
-        String contentType,
-        @Nullable String expirationDate,
-        @Nullable String gracePeriod,
-        String licenseType,
-        @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight,
-        @Nullable String relativeBeginDate,
-        @Nullable String relativeExpirationDate) {
-        this.allowTestDevices = Objects.requireNonNull(allowTestDevices, "expected parameter 'allowTestDevices' to be non-null");
-        this.beginDate = beginDate;
-        this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation, "expected parameter 'contentKeyLocation' to be non-null");
-        this.contentType = Objects.requireNonNull(contentType, "expected parameter 'contentType' to be non-null");
-        this.expirationDate = expirationDate;
-        this.gracePeriod = gracePeriod;
-        this.licenseType = Objects.requireNonNull(licenseType, "expected parameter 'licenseType' to be non-null");
-        this.playRight = playRight;
-        this.relativeBeginDate = relativeBeginDate;
-        this.relativeExpirationDate = relativeExpirationDate;
-    }
+    private ContentKeyPolicyPlayReadyLicenseResponse() {}
 
-    private ContentKeyPolicyPlayReadyLicenseResponse() {
-        this.allowTestDevices = null;
-        this.beginDate = null;
-        this.contentKeyLocation = null;
-        this.contentType = null;
-        this.expirationDate = null;
-        this.gracePeriod = null;
-        this.licenseType = null;
-        this.playRight = null;
-        this.relativeBeginDate = null;
-        this.relativeExpirationDate = null;
+    private ContentKeyPolicyPlayReadyLicenseResponse(ContentKeyPolicyPlayReadyLicenseResponse $) {
+        this.allowTestDevices = $.allowTestDevices;
+        this.beginDate = $.beginDate;
+        this.contentKeyLocation = $.contentKeyLocation;
+        this.contentType = $.contentType;
+        this.expirationDate = $.expirationDate;
+        this.gracePeriod = $.gracePeriod;
+        this.licenseType = $.licenseType;
+        this.playRight = $.playRight;
+        this.relativeBeginDate = $.relativeBeginDate;
+        this.relativeExpirationDate = $.relativeExpirationDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContentKeyPolicyPlayReadyLicenseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowTestDevices;
-        private @Nullable String beginDate;
-        private Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
-        private String contentType;
-        private @Nullable String expirationDate;
-        private @Nullable String gracePeriod;
-        private String licenseType;
-        private @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
-        private @Nullable String relativeBeginDate;
-        private @Nullable String relativeExpirationDate;
+        private ContentKeyPolicyPlayReadyLicenseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContentKeyPolicyPlayReadyLicenseResponse();
         }
 
         public Builder(ContentKeyPolicyPlayReadyLicenseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowTestDevices = defaults.allowTestDevices;
-    	      this.beginDate = defaults.beginDate;
-    	      this.contentKeyLocation = defaults.contentKeyLocation;
-    	      this.contentType = defaults.contentType;
-    	      this.expirationDate = defaults.expirationDate;
-    	      this.gracePeriod = defaults.gracePeriod;
-    	      this.licenseType = defaults.licenseType;
-    	      this.playRight = defaults.playRight;
-    	      this.relativeBeginDate = defaults.relativeBeginDate;
-    	      this.relativeExpirationDate = defaults.relativeExpirationDate;
+            $ = new ContentKeyPolicyPlayReadyLicenseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowTestDevices(Boolean allowTestDevices) {
-            this.allowTestDevices = Objects.requireNonNull(allowTestDevices);
+            $.allowTestDevices = allowTestDevices;
             return this;
         }
+
         public Builder beginDate(@Nullable String beginDate) {
-            this.beginDate = beginDate;
+            $.beginDate = beginDate;
             return this;
         }
+
         public Builder contentKeyLocation(Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation) {
-            this.contentKeyLocation = Objects.requireNonNull(contentKeyLocation);
+            $.contentKeyLocation = contentKeyLocation;
             return this;
         }
+
         public Builder contentType(String contentType) {
-            this.contentType = Objects.requireNonNull(contentType);
+            $.contentType = contentType;
             return this;
         }
+
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = expirationDate;
+            $.expirationDate = expirationDate;
             return this;
         }
+
         public Builder gracePeriod(@Nullable String gracePeriod) {
-            this.gracePeriod = gracePeriod;
+            $.gracePeriod = gracePeriod;
             return this;
         }
+
         public Builder licenseType(String licenseType) {
-            this.licenseType = Objects.requireNonNull(licenseType);
+            $.licenseType = licenseType;
             return this;
         }
+
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight) {
-            this.playRight = playRight;
+            $.playRight = playRight;
             return this;
         }
+
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
-            this.relativeBeginDate = relativeBeginDate;
+            $.relativeBeginDate = relativeBeginDate;
             return this;
         }
+
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
-            this.relativeExpirationDate = relativeExpirationDate;
+            $.relativeExpirationDate = relativeExpirationDate;
             return this;
-        }        public ContentKeyPolicyPlayReadyLicenseResponse build() {
-            return new ContentKeyPolicyPlayReadyLicenseResponse(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
+        }
+
+        public ContentKeyPolicyPlayReadyLicenseResponse build() {
+            $.allowTestDevices = Objects.requireNonNull($.allowTestDevices, "expected parameter 'allowTestDevices' to be non-null");
+            $.contentKeyLocation = Objects.requireNonNull($.contentKeyLocation, "expected parameter 'contentKeyLocation' to be non-null");
+            $.contentType = Objects.requireNonNull($.contentType, "expected parameter 'contentType' to be non-null");
+            $.licenseType = Objects.requireNonNull($.licenseType, "expected parameter 'licenseType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioAr
      * 
      */
     @Import(name="audioUri", required=true)
-      private final Output<String> audioUri;
+    private Output<String> audioUri;
 
     public Output<String> audioUri() {
         return this.audioUri;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(Output<String> audioUri) {
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs() {
-        this.audioUri = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs $) {
+        this.audioUri = $.audioUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> audioUri;
+        private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(Output<String> audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
         }
+
         public Builder audioUri(String audioUri) {
-            this.audioUri = Output.of(Objects.requireNonNull(audioUri));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs(audioUri);
+            return audioUri(Output.of(audioUri));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioArgs build() {
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            return $;
         }
     }
+
 }

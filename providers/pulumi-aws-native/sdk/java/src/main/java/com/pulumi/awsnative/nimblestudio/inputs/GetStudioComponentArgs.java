@@ -13,7 +13,7 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
     public static final GetStudioComponentArgs Empty = new GetStudioComponentArgs();
 
     @Import(name="studioComponentId", required=true)
-      private final String studioComponentId;
+    private String studioComponentId;
 
     public String studioComponentId() {
         return this.studioComponentId;
@@ -24,55 +24,52 @@ public final class GetStudioComponentArgs extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="studioId", required=true)
-      private final String studioId;
+    private String studioId;
 
     public String studioId() {
         return this.studioId;
     }
 
-    public GetStudioComponentArgs(
-        String studioComponentId,
-        String studioId) {
-        this.studioComponentId = Objects.requireNonNull(studioComponentId, "expected parameter 'studioComponentId' to be non-null");
-        this.studioId = Objects.requireNonNull(studioId, "expected parameter 'studioId' to be non-null");
-    }
+    private GetStudioComponentArgs() {}
 
-    private GetStudioComponentArgs() {
-        this.studioComponentId = null;
-        this.studioId = null;
+    private GetStudioComponentArgs(GetStudioComponentArgs $) {
+        this.studioComponentId = $.studioComponentId;
+        this.studioId = $.studioId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStudioComponentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String studioComponentId;
-        private String studioId;
+        private GetStudioComponentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStudioComponentArgs();
         }
 
         public Builder(GetStudioComponentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.studioComponentId = defaults.studioComponentId;
-    	      this.studioId = defaults.studioId;
+            $ = new GetStudioComponentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder studioComponentId(String studioComponentId) {
-            this.studioComponentId = Objects.requireNonNull(studioComponentId);
+            $.studioComponentId = studioComponentId;
             return this;
         }
+
         public Builder studioId(String studioId) {
-            this.studioId = Objects.requireNonNull(studioId);
+            $.studioId = studioId;
             return this;
-        }        public GetStudioComponentArgs build() {
-            return new GetStudioComponentArgs(studioComponentId, studioId);
+        }
+
+        public GetStudioComponentArgs build() {
+            $.studioComponentId = Objects.requireNonNull($.studioComponentId, "expected parameter 'studioComponentId' to be non-null");
+            $.studioId = Objects.requireNonNull($.studioId, "expected parameter 'studioId' to be non-null");
+            return $;
         }
     }
+
 }

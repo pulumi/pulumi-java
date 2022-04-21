@@ -24,7 +24,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
      * 
      */
     @Import(name="destination", required=true)
-      private final String destination;
+    private String destination;
 
     public String destination() {
         return this.destination;
@@ -35,7 +35,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
@@ -46,7 +46,7 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
      * 
      */
     @Import(name="rules", required=true)
-      private final List<BlobInventoryPolicyRuleResponse> rules;
+    private List<BlobInventoryPolicyRuleResponse> rules;
 
     public List<BlobInventoryPolicyRuleResponse> rules() {
         return this.rules;
@@ -57,76 +57,70 @@ public final class BlobInventoryPolicySchemaResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BlobInventoryPolicySchemaResponse(
-        String destination,
-        Boolean enabled,
-        List<BlobInventoryPolicyRuleResponse> rules,
-        String type) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BlobInventoryPolicySchemaResponse() {}
 
-    private BlobInventoryPolicySchemaResponse() {
-        this.destination = null;
-        this.enabled = null;
-        this.rules = List.of();
-        this.type = null;
+    private BlobInventoryPolicySchemaResponse(BlobInventoryPolicySchemaResponse $) {
+        this.destination = $.destination;
+        this.enabled = $.enabled;
+        this.rules = $.rules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BlobInventoryPolicySchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destination;
-        private Boolean enabled;
-        private List<BlobInventoryPolicyRuleResponse> rules;
-        private String type;
+        private BlobInventoryPolicySchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BlobInventoryPolicySchemaResponse();
         }
 
         public Builder(BlobInventoryPolicySchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.enabled = defaults.enabled;
-    	      this.rules = defaults.rules;
-    	      this.type = defaults.type;
+            $ = new BlobInventoryPolicySchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(String destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder rules(List<BlobInventoryPolicyRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(BlobInventoryPolicyRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BlobInventoryPolicySchemaResponse build() {
-            return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
+        }
+
+        public BlobInventoryPolicySchemaResponse build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

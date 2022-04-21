@@ -7,8 +7,8 @@ import com.pulumi.azurenative.appplatform.inputs.DeploymentSettingsArgs;
 import com.pulumi.azurenative.appplatform.inputs.UserSourceInfoArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="deploymentSettings")
-      private final @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
+    private @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
 
-    public Output<DeploymentSettingsArgs> deploymentSettings() {
-        return this.deploymentSettings == null ? Codegen.empty() : this.deploymentSettings;
+    public Optional<Output<DeploymentSettingsArgs>> deploymentSettings() {
+        return Optional.ofNullable(this.deploymentSettings);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DeploymentResourcePropertiesArgs extends com.pulumi.resources
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<UserSourceInfoArgs> source;
+    private @Nullable Output<UserSourceInfoArgs> source;
 
-    public Output<UserSourceInfoArgs> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<UserSourceInfoArgs>> source() {
+        return Optional.ofNullable(this.source);
     }
 
-    public DeploymentResourcePropertiesArgs(
-        @Nullable Output<DeploymentSettingsArgs> deploymentSettings,
-        @Nullable Output<UserSourceInfoArgs> source) {
-        this.deploymentSettings = deploymentSettings;
-        this.source = source;
-    }
+    private DeploymentResourcePropertiesArgs() {}
 
-    private DeploymentResourcePropertiesArgs() {
-        this.deploymentSettings = Codegen.empty();
-        this.source = Codegen.empty();
+    private DeploymentResourcePropertiesArgs(DeploymentResourcePropertiesArgs $) {
+        this.deploymentSettings = $.deploymentSettings;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeploymentResourcePropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeploymentSettingsArgs> deploymentSettings;
-        private @Nullable Output<UserSourceInfoArgs> source;
+        private DeploymentResourcePropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeploymentResourcePropertiesArgs();
         }
 
         public Builder(DeploymentResourcePropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deploymentSettings = defaults.deploymentSettings;
-    	      this.source = defaults.source;
+            $ = new DeploymentResourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deploymentSettings(@Nullable Output<DeploymentSettingsArgs> deploymentSettings) {
-            this.deploymentSettings = deploymentSettings;
+            $.deploymentSettings = deploymentSettings;
             return this;
         }
-        public Builder deploymentSettings(@Nullable DeploymentSettingsArgs deploymentSettings) {
-            this.deploymentSettings = Codegen.ofNullable(deploymentSettings);
-            return this;
+
+        public Builder deploymentSettings(DeploymentSettingsArgs deploymentSettings) {
+            return deploymentSettings(Output.of(deploymentSettings));
         }
+
         public Builder source(@Nullable Output<UserSourceInfoArgs> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable UserSourceInfoArgs source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
-        }        public DeploymentResourcePropertiesArgs build() {
-            return new DeploymentResourcePropertiesArgs(deploymentSettings, source);
+
+        public Builder source(UserSourceInfoArgs source) {
+            return source(Output.of(source));
+        }
+
+        public DeploymentResourcePropertiesArgs build() {
+            return $;
         }
     }
+
 }

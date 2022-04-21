@@ -5,12 +5,12 @@ package com.pulumi.gcp.appengine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.appengine.inputs.DomainMappingResourceRecordGetArgs;
 import com.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsGetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="domainName")
-      private final @Nullable Output<String> domainName;
+    private @Nullable Output<String> domainName;
 
-    public Output<String> domainName() {
-        return this.domainName == null ? Codegen.empty() : this.domainName;
+    public Optional<Output<String>> domainName() {
+        return Optional.ofNullable(this.domainName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="overrideStrategy")
-      private final @Nullable Output<String> overrideStrategy;
+    private @Nullable Output<String> overrideStrategy;
 
-    public Output<String> overrideStrategy() {
-        return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
+    public Optional<Output<String>> overrideStrategy() {
+        return Optional.ofNullable(this.overrideStrategy);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="resourceRecords")
-      private final @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
+    private @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
 
-    public Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords() {
-        return this.resourceRecords == null ? Codegen.empty() : this.resourceRecords;
+    public Optional<Output<List<DomainMappingResourceRecordGetArgs>>> resourceRecords() {
+        return Optional.ofNullable(this.resourceRecords);
     }
 
     /**
@@ -84,118 +84,102 @@ public final class DomainMappingState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="sslSettings")
-      private final @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
+    private @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
 
-    public Output<DomainMappingSslSettingsGetArgs> sslSettings() {
-        return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
+    public Optional<Output<DomainMappingSslSettingsGetArgs>> sslSettings() {
+        return Optional.ofNullable(this.sslSettings);
     }
 
-    public DomainMappingState(
-        @Nullable Output<String> domainName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> overrideStrategy,
-        @Nullable Output<String> project,
-        @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords,
-        @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings) {
-        this.domainName = domainName;
-        this.name = name;
-        this.overrideStrategy = overrideStrategy;
-        this.project = project;
-        this.resourceRecords = resourceRecords;
-        this.sslSettings = sslSettings;
-    }
+    private DomainMappingState() {}
 
-    private DomainMappingState() {
-        this.domainName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.overrideStrategy = Codegen.empty();
-        this.project = Codegen.empty();
-        this.resourceRecords = Codegen.empty();
-        this.sslSettings = Codegen.empty();
+    private DomainMappingState(DomainMappingState $) {
+        this.domainName = $.domainName;
+        this.name = $.name;
+        this.overrideStrategy = $.overrideStrategy;
+        this.project = $.project;
+        this.resourceRecords = $.resourceRecords;
+        this.sslSettings = $.sslSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domainName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> overrideStrategy;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
-        private @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
+        private DomainMappingState $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingState();
         }
 
         public Builder(DomainMappingState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.name = defaults.name;
-    	      this.overrideStrategy = defaults.overrideStrategy;
-    	      this.project = defaults.project;
-    	      this.resourceRecords = defaults.resourceRecords;
-    	      this.sslSettings = defaults.sslSettings;
+            $ = new DomainMappingState(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(@Nullable Output<String> domainName) {
-            this.domainName = domainName;
+            $.domainName = domainName;
             return this;
         }
-        public Builder domainName(@Nullable String domainName) {
-            this.domainName = Codegen.ofNullable(domainName);
-            return this;
+
+        public Builder domainName(String domainName) {
+            return domainName(Output.of(domainName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
-            this.overrideStrategy = overrideStrategy;
+            $.overrideStrategy = overrideStrategy;
             return this;
         }
-        public Builder overrideStrategy(@Nullable String overrideStrategy) {
-            this.overrideStrategy = Codegen.ofNullable(overrideStrategy);
-            return this;
+
+        public Builder overrideStrategy(String overrideStrategy) {
+            return overrideStrategy(Output.of(overrideStrategy));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder resourceRecords(@Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords) {
-            this.resourceRecords = resourceRecords;
+            $.resourceRecords = resourceRecords;
             return this;
         }
-        public Builder resourceRecords(@Nullable List<DomainMappingResourceRecordGetArgs> resourceRecords) {
-            this.resourceRecords = Codegen.ofNullable(resourceRecords);
-            return this;
+
+        public Builder resourceRecords(List<DomainMappingResourceRecordGetArgs> resourceRecords) {
+            return resourceRecords(Output.of(resourceRecords));
         }
+
         public Builder resourceRecords(DomainMappingResourceRecordGetArgs... resourceRecords) {
             return resourceRecords(List.of(resourceRecords));
         }
+
         public Builder sslSettings(@Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings) {
-            this.sslSettings = sslSettings;
+            $.sslSettings = sslSettings;
             return this;
         }
-        public Builder sslSettings(@Nullable DomainMappingSslSettingsGetArgs sslSettings) {
-            this.sslSettings = Codegen.ofNullable(sslSettings);
-            return this;
-        }        public DomainMappingState build() {
-            return new DomainMappingState(domainName, name, overrideStrategy, project, resourceRecords, sslSettings);
+
+        public Builder sslSettings(DomainMappingSslSettingsGetArgs sslSettings) {
+            return sslSettings(Output.of(sslSettings));
+        }
+
+        public DomainMappingState build() {
+            return $;
         }
     }
+
 }

@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +27,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="agreementNumber")
-      private final @Nullable Output<String> agreementNumber;
+    private @Nullable Output<String> agreementNumber;
 
-    public Output<String> agreementNumber() {
-        return this.agreementNumber == null ? Codegen.empty() : this.agreementNumber;
+    public Optional<Output<String>> agreementNumber() {
+        return Optional.ofNullable(this.agreementNumber);
     }
 
     /**
@@ -37,10 +38,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="installedServerNumber")
-      private final @Nullable Output<Integer> installedServerNumber;
+    private @Nullable Output<Integer> installedServerNumber;
 
-    public Output<Integer> installedServerNumber() {
-        return this.installedServerNumber == null ? Codegen.empty() : this.installedServerNumber;
+    public Optional<Output<Integer>> installedServerNumber() {
+        return Optional.ofNullable(this.installedServerNumber);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="isEligible")
-      private final @Nullable Output<Boolean> isEligible;
+    private @Nullable Output<Boolean> isEligible;
 
-    public Output<Boolean> isEligible() {
-        return this.isEligible == null ? Codegen.empty() : this.isEligible;
+    public Optional<Output<Boolean>> isEligible() {
+        return Optional.ofNullable(this.isEligible);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="multipleActivationKeyName")
-      private final @Nullable Output<String> multipleActivationKeyName;
+    private @Nullable Output<String> multipleActivationKeyName;
 
-    public Output<String> multipleActivationKeyName() {
-        return this.multipleActivationKeyName == null ? Codegen.empty() : this.multipleActivationKeyName;
+    public Optional<Output<String>> multipleActivationKeyName() {
+        return Optional.ofNullable(this.multipleActivationKeyName);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="osType")
-      private final @Nullable Output<Either<String,OsType>> osType;
+    private @Nullable Output<Either<String,OsType>> osType;
 
-    public Output<Either<String,OsType>> osType() {
-        return this.osType == null ? Codegen.empty() : this.osType;
+    public Optional<Output<Either<String,OsType>>> osType() {
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -103,10 +104,10 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="supportType")
-      private final @Nullable Output<Either<String,SupportType>> supportType;
+    private @Nullable Output<Either<String,SupportType>> supportType;
 
-    public Output<Either<String,SupportType>> supportType() {
-        return this.supportType == null ? Codegen.empty() : this.supportType;
+    public Optional<Output<Either<String,SupportType>>> supportType() {
+        return Optional.ofNullable(this.supportType);
     }
 
     /**
@@ -114,154 +115,130 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public MultipleActivationKeyArgs(
-        @Nullable Output<String> agreementNumber,
-        @Nullable Output<Integer> installedServerNumber,
-        @Nullable Output<Boolean> isEligible,
-        @Nullable Output<String> location,
-        @Nullable Output<String> multipleActivationKeyName,
-        @Nullable Output<Either<String,OsType>> osType,
-        Output<String> resourceGroupName,
-        @Nullable Output<Either<String,SupportType>> supportType,
-        @Nullable Output<Map<String,String>> tags) {
-        this.agreementNumber = agreementNumber;
-        this.installedServerNumber = installedServerNumber;
-        this.isEligible = isEligible;
-        this.location = location;
-        this.multipleActivationKeyName = multipleActivationKeyName;
-        this.osType = osType;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.supportType = Codegen.stringProp("supportType").left(SupportType.class).output().arg(supportType).def("SupplementalServicing").getNullable();
-        this.tags = tags;
-    }
+    private MultipleActivationKeyArgs() {}
 
-    private MultipleActivationKeyArgs() {
-        this.agreementNumber = Codegen.empty();
-        this.installedServerNumber = Codegen.empty();
-        this.isEligible = Codegen.empty();
-        this.location = Codegen.empty();
-        this.multipleActivationKeyName = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.supportType = Codegen.empty();
-        this.tags = Codegen.empty();
+    private MultipleActivationKeyArgs(MultipleActivationKeyArgs $) {
+        this.agreementNumber = $.agreementNumber;
+        this.installedServerNumber = $.installedServerNumber;
+        this.isEligible = $.isEligible;
+        this.location = $.location;
+        this.multipleActivationKeyName = $.multipleActivationKeyName;
+        this.osType = $.osType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.supportType = $.supportType;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultipleActivationKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> agreementNumber;
-        private @Nullable Output<Integer> installedServerNumber;
-        private @Nullable Output<Boolean> isEligible;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> multipleActivationKeyName;
-        private @Nullable Output<Either<String,OsType>> osType;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<Either<String,SupportType>> supportType;
-        private @Nullable Output<Map<String,String>> tags;
+        private MultipleActivationKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultipleActivationKeyArgs();
         }
 
         public Builder(MultipleActivationKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agreementNumber = defaults.agreementNumber;
-    	      this.installedServerNumber = defaults.installedServerNumber;
-    	      this.isEligible = defaults.isEligible;
-    	      this.location = defaults.location;
-    	      this.multipleActivationKeyName = defaults.multipleActivationKeyName;
-    	      this.osType = defaults.osType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.supportType = defaults.supportType;
-    	      this.tags = defaults.tags;
+            $ = new MultipleActivationKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agreementNumber(@Nullable Output<String> agreementNumber) {
-            this.agreementNumber = agreementNumber;
+            $.agreementNumber = agreementNumber;
             return this;
         }
-        public Builder agreementNumber(@Nullable String agreementNumber) {
-            this.agreementNumber = Codegen.ofNullable(agreementNumber);
-            return this;
+
+        public Builder agreementNumber(String agreementNumber) {
+            return agreementNumber(Output.of(agreementNumber));
         }
+
         public Builder installedServerNumber(@Nullable Output<Integer> installedServerNumber) {
-            this.installedServerNumber = installedServerNumber;
+            $.installedServerNumber = installedServerNumber;
             return this;
         }
-        public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
-            this.installedServerNumber = Codegen.ofNullable(installedServerNumber);
-            return this;
+
+        public Builder installedServerNumber(Integer installedServerNumber) {
+            return installedServerNumber(Output.of(installedServerNumber));
         }
+
         public Builder isEligible(@Nullable Output<Boolean> isEligible) {
-            this.isEligible = isEligible;
+            $.isEligible = isEligible;
             return this;
         }
-        public Builder isEligible(@Nullable Boolean isEligible) {
-            this.isEligible = Codegen.ofNullable(isEligible);
-            return this;
+
+        public Builder isEligible(Boolean isEligible) {
+            return isEligible(Output.of(isEligible));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder multipleActivationKeyName(@Nullable Output<String> multipleActivationKeyName) {
-            this.multipleActivationKeyName = multipleActivationKeyName;
+            $.multipleActivationKeyName = multipleActivationKeyName;
             return this;
         }
-        public Builder multipleActivationKeyName(@Nullable String multipleActivationKeyName) {
-            this.multipleActivationKeyName = Codegen.ofNullable(multipleActivationKeyName);
-            return this;
+
+        public Builder multipleActivationKeyName(String multipleActivationKeyName) {
+            return multipleActivationKeyName(Output.of(multipleActivationKeyName));
         }
+
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
-        public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Codegen.ofNullable(osType);
-            return this;
+
+        public Builder osType(Either<String,OsType> osType) {
+            return osType(Output.of(osType));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder supportType(@Nullable Output<Either<String,SupportType>> supportType) {
-            this.supportType = supportType;
+            $.supportType = supportType;
             return this;
         }
-        public Builder supportType(@Nullable Either<String,SupportType> supportType) {
-            this.supportType = Codegen.ofNullable(supportType);
-            return this;
+
+        public Builder supportType(Either<String,SupportType> supportType) {
+            return supportType(Output.of(supportType));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public MultipleActivationKeyArgs build() {
-            return new MultipleActivationKeyArgs(agreementNumber, installedServerNumber, isEligible, location, multipleActivationKeyName, osType, resourceGroupName, supportType, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public MultipleActivationKeyArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.supportType = Codegen.stringProp("supportType").left(SupportType.class).output().arg($.supportType).def("SupplementalServicing").getNullable();
+            return $;
         }
     }
+
 }

@@ -9,10 +9,10 @@ import com.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincip
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="aadBasedSecurityPrincipals")
-      private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
+    private @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
-    public Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals() {
-        return this.aadBasedSecurityPrincipals == null ? Codegen.empty() : this.aadBasedSecurityPrincipals;
+    public Optional<Output<List<AADBasedSecurityPrincipalArgs>>> aadBasedSecurityPrincipals() {
+        return Optional.ofNullable(this.aadBasedSecurityPrincipals);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="certBasedSecurityPrincipals")
-      private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
+    private @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
-    public Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals() {
-        return this.certBasedSecurityPrincipals == null ? Codegen.empty() : this.certBasedSecurityPrincipals;
+    public Optional<Output<List<CertBasedSecurityPrincipalArgs>>> certBasedSecurityPrincipals() {
+        return Optional.ofNullable(this.certBasedSecurityPrincipals);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ledgerStorageAccount")
-      private final @Nullable Output<String> ledgerStorageAccount;
+    private @Nullable Output<String> ledgerStorageAccount;
 
-    public Output<String> ledgerStorageAccount() {
-        return this.ledgerStorageAccount == null ? Codegen.empty() : this.ledgerStorageAccount;
+    public Optional<Output<String>> ledgerStorageAccount() {
+        return Optional.ofNullable(this.ledgerStorageAccount);
     }
 
     /**
@@ -62,95 +62,86 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ledgerType")
-      private final @Nullable Output<Either<String,LedgerType>> ledgerType;
+    private @Nullable Output<Either<String,LedgerType>> ledgerType;
 
-    public Output<Either<String,LedgerType>> ledgerType() {
-        return this.ledgerType == null ? Codegen.empty() : this.ledgerType;
+    public Optional<Output<Either<String,LedgerType>>> ledgerType() {
+        return Optional.ofNullable(this.ledgerType);
     }
 
-    public LedgerPropertiesArgs(
-        @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals,
-        @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals,
-        @Nullable Output<String> ledgerStorageAccount,
-        @Nullable Output<Either<String,LedgerType>> ledgerType) {
-        this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
-        this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
-        this.ledgerStorageAccount = ledgerStorageAccount;
-        this.ledgerType = ledgerType;
-    }
+    private LedgerPropertiesArgs() {}
 
-    private LedgerPropertiesArgs() {
-        this.aadBasedSecurityPrincipals = Codegen.empty();
-        this.certBasedSecurityPrincipals = Codegen.empty();
-        this.ledgerStorageAccount = Codegen.empty();
-        this.ledgerType = Codegen.empty();
+    private LedgerPropertiesArgs(LedgerPropertiesArgs $) {
+        this.aadBasedSecurityPrincipals = $.aadBasedSecurityPrincipals;
+        this.certBasedSecurityPrincipals = $.certBasedSecurityPrincipals;
+        this.ledgerStorageAccount = $.ledgerStorageAccount;
+        this.ledgerType = $.ledgerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LedgerPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
-        private @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
-        private @Nullable Output<String> ledgerStorageAccount;
-        private @Nullable Output<Either<String,LedgerType>> ledgerType;
+        private LedgerPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LedgerPropertiesArgs();
         }
 
         public Builder(LedgerPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aadBasedSecurityPrincipals = defaults.aadBasedSecurityPrincipals;
-    	      this.certBasedSecurityPrincipals = defaults.certBasedSecurityPrincipals;
-    	      this.ledgerStorageAccount = defaults.ledgerStorageAccount;
-    	      this.ledgerType = defaults.ledgerType;
+            $ = new LedgerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aadBasedSecurityPrincipals(@Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals) {
-            this.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
+            $.aadBasedSecurityPrincipals = aadBasedSecurityPrincipals;
             return this;
         }
-        public Builder aadBasedSecurityPrincipals(@Nullable List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
-            this.aadBasedSecurityPrincipals = Codegen.ofNullable(aadBasedSecurityPrincipals);
-            return this;
+
+        public Builder aadBasedSecurityPrincipals(List<AADBasedSecurityPrincipalArgs> aadBasedSecurityPrincipals) {
+            return aadBasedSecurityPrincipals(Output.of(aadBasedSecurityPrincipals));
         }
+
         public Builder aadBasedSecurityPrincipals(AADBasedSecurityPrincipalArgs... aadBasedSecurityPrincipals) {
             return aadBasedSecurityPrincipals(List.of(aadBasedSecurityPrincipals));
         }
+
         public Builder certBasedSecurityPrincipals(@Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals) {
-            this.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
+            $.certBasedSecurityPrincipals = certBasedSecurityPrincipals;
             return this;
         }
-        public Builder certBasedSecurityPrincipals(@Nullable List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
-            this.certBasedSecurityPrincipals = Codegen.ofNullable(certBasedSecurityPrincipals);
-            return this;
+
+        public Builder certBasedSecurityPrincipals(List<CertBasedSecurityPrincipalArgs> certBasedSecurityPrincipals) {
+            return certBasedSecurityPrincipals(Output.of(certBasedSecurityPrincipals));
         }
+
         public Builder certBasedSecurityPrincipals(CertBasedSecurityPrincipalArgs... certBasedSecurityPrincipals) {
             return certBasedSecurityPrincipals(List.of(certBasedSecurityPrincipals));
         }
+
         public Builder ledgerStorageAccount(@Nullable Output<String> ledgerStorageAccount) {
-            this.ledgerStorageAccount = ledgerStorageAccount;
+            $.ledgerStorageAccount = ledgerStorageAccount;
             return this;
         }
-        public Builder ledgerStorageAccount(@Nullable String ledgerStorageAccount) {
-            this.ledgerStorageAccount = Codegen.ofNullable(ledgerStorageAccount);
-            return this;
+
+        public Builder ledgerStorageAccount(String ledgerStorageAccount) {
+            return ledgerStorageAccount(Output.of(ledgerStorageAccount));
         }
+
         public Builder ledgerType(@Nullable Output<Either<String,LedgerType>> ledgerType) {
-            this.ledgerType = ledgerType;
+            $.ledgerType = ledgerType;
             return this;
         }
-        public Builder ledgerType(@Nullable Either<String,LedgerType> ledgerType) {
-            this.ledgerType = Codegen.ofNullable(ledgerType);
-            return this;
-        }        public LedgerPropertiesArgs build() {
-            return new LedgerPropertiesArgs(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, ledgerStorageAccount, ledgerType);
+
+        public Builder ledgerType(Either<String,LedgerType> ledgerType) {
+            return ledgerType(Output.of(ledgerType));
+        }
+
+        public LedgerPropertiesArgs build() {
+            return $;
         }
     }
+
 }

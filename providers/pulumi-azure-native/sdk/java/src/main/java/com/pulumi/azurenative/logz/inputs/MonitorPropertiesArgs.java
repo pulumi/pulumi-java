@@ -11,9 +11,9 @@ import com.pulumi.azurenative.logz.inputs.UserInfoArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
     @Import(name="logzOrganizationProperties")
-      private final @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
+    private @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
-    public Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties() {
-        return this.logzOrganizationProperties == null ? Codegen.empty() : this.logzOrganizationProperties;
+    public Optional<Output<LogzOrganizationPropertiesArgs>> logzOrganizationProperties() {
+        return Optional.ofNullable(this.logzOrganizationProperties);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="marketplaceSubscriptionStatus")
-      private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
+    private @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
-    public Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus() {
-        return this.marketplaceSubscriptionStatus == null ? Codegen.empty() : this.marketplaceSubscriptionStatus;
+    public Optional<Output<Either<String,MarketplaceSubscriptionStatus>>> marketplaceSubscriptionStatus() {
+        return Optional.ofNullable(this.marketplaceSubscriptionStatus);
     }
 
     /**
@@ -48,116 +48,102 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="monitoringStatus")
-      private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
+    private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
-    public Output<Either<String,MonitoringStatus>> monitoringStatus() {
-        return this.monitoringStatus == null ? Codegen.empty() : this.monitoringStatus;
+    public Optional<Output<Either<String,MonitoringStatus>>> monitoringStatus() {
+        return Optional.ofNullable(this.monitoringStatus);
     }
 
     @Import(name="planData")
-      private final @Nullable Output<PlanDataArgs> planData;
+    private @Nullable Output<PlanDataArgs> planData;
 
-    public Output<PlanDataArgs> planData() {
-        return this.planData == null ? Codegen.empty() : this.planData;
+    public Optional<Output<PlanDataArgs>> planData() {
+        return Optional.ofNullable(this.planData);
     }
 
     @Import(name="userInfo")
-      private final @Nullable Output<UserInfoArgs> userInfo;
+    private @Nullable Output<UserInfoArgs> userInfo;
 
-    public Output<UserInfoArgs> userInfo() {
-        return this.userInfo == null ? Codegen.empty() : this.userInfo;
+    public Optional<Output<UserInfoArgs>> userInfo() {
+        return Optional.ofNullable(this.userInfo);
     }
 
-    public MonitorPropertiesArgs(
-        @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties,
-        @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus,
-        @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus,
-        @Nullable Output<PlanDataArgs> planData,
-        @Nullable Output<UserInfoArgs> userInfo) {
-        this.logzOrganizationProperties = logzOrganizationProperties;
-        this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
-        this.monitoringStatus = monitoringStatus;
-        this.planData = planData;
-        this.userInfo = userInfo;
-    }
+    private MonitorPropertiesArgs() {}
 
-    private MonitorPropertiesArgs() {
-        this.logzOrganizationProperties = Codegen.empty();
-        this.marketplaceSubscriptionStatus = Codegen.empty();
-        this.monitoringStatus = Codegen.empty();
-        this.planData = Codegen.empty();
-        this.userInfo = Codegen.empty();
+    private MonitorPropertiesArgs(MonitorPropertiesArgs $) {
+        this.logzOrganizationProperties = $.logzOrganizationProperties;
+        this.marketplaceSubscriptionStatus = $.marketplaceSubscriptionStatus;
+        this.monitoringStatus = $.monitoringStatus;
+        this.planData = $.planData;
+        this.userInfo = $.userInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitorPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
-        private @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
-        private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
-        private @Nullable Output<PlanDataArgs> planData;
-        private @Nullable Output<UserInfoArgs> userInfo;
+        private MonitorPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitorPropertiesArgs();
         }
 
         public Builder(MonitorPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logzOrganizationProperties = defaults.logzOrganizationProperties;
-    	      this.marketplaceSubscriptionStatus = defaults.marketplaceSubscriptionStatus;
-    	      this.monitoringStatus = defaults.monitoringStatus;
-    	      this.planData = defaults.planData;
-    	      this.userInfo = defaults.userInfo;
+            $ = new MonitorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logzOrganizationProperties(@Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties) {
-            this.logzOrganizationProperties = logzOrganizationProperties;
+            $.logzOrganizationProperties = logzOrganizationProperties;
             return this;
         }
-        public Builder logzOrganizationProperties(@Nullable LogzOrganizationPropertiesArgs logzOrganizationProperties) {
-            this.logzOrganizationProperties = Codegen.ofNullable(logzOrganizationProperties);
-            return this;
+
+        public Builder logzOrganizationProperties(LogzOrganizationPropertiesArgs logzOrganizationProperties) {
+            return logzOrganizationProperties(Output.of(logzOrganizationProperties));
         }
+
         public Builder marketplaceSubscriptionStatus(@Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
+            $.marketplaceSubscriptionStatus = marketplaceSubscriptionStatus;
             return this;
         }
-        public Builder marketplaceSubscriptionStatus(@Nullable Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
-            this.marketplaceSubscriptionStatus = Codegen.ofNullable(marketplaceSubscriptionStatus);
-            return this;
+
+        public Builder marketplaceSubscriptionStatus(Either<String,MarketplaceSubscriptionStatus> marketplaceSubscriptionStatus) {
+            return marketplaceSubscriptionStatus(Output.of(marketplaceSubscriptionStatus));
         }
+
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
-            this.monitoringStatus = monitoringStatus;
+            $.monitoringStatus = monitoringStatus;
             return this;
         }
-        public Builder monitoringStatus(@Nullable Either<String,MonitoringStatus> monitoringStatus) {
-            this.monitoringStatus = Codegen.ofNullable(monitoringStatus);
-            return this;
+
+        public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
+            return monitoringStatus(Output.of(monitoringStatus));
         }
+
         public Builder planData(@Nullable Output<PlanDataArgs> planData) {
-            this.planData = planData;
+            $.planData = planData;
             return this;
         }
-        public Builder planData(@Nullable PlanDataArgs planData) {
-            this.planData = Codegen.ofNullable(planData);
-            return this;
+
+        public Builder planData(PlanDataArgs planData) {
+            return planData(Output.of(planData));
         }
+
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
-            this.userInfo = userInfo;
+            $.userInfo = userInfo;
             return this;
         }
-        public Builder userInfo(@Nullable UserInfoArgs userInfo) {
-            this.userInfo = Codegen.ofNullable(userInfo);
-            return this;
-        }        public MonitorPropertiesArgs build() {
-            return new MonitorPropertiesArgs(logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, userInfo);
+
+        public Builder userInfo(UserInfoArgs userInfo) {
+            return userInfo(Output.of(userInfo));
+        }
+
+        public MonitorPropertiesArgs build() {
+            return $;
         }
     }
+
 }

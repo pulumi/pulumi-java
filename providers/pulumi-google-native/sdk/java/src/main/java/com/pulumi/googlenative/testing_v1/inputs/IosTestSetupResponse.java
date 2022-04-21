@@ -24,7 +24,7 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="additionalIpas", required=true)
-      private final List<FileReferenceResponse> additionalIpas;
+    private List<FileReferenceResponse> additionalIpas;
 
     public List<FileReferenceResponse> additionalIpas() {
         return this.additionalIpas;
@@ -35,7 +35,7 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="networkProfile", required=true)
-      private final String networkProfile;
+    private String networkProfile;
 
     public String networkProfile() {
         return this.networkProfile;
@@ -46,7 +46,7 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="pullDirectories", required=true)
-      private final List<IosDeviceFileResponse> pullDirectories;
+    private List<IosDeviceFileResponse> pullDirectories;
 
     public List<IosDeviceFileResponse> pullDirectories() {
         return this.pullDirectories;
@@ -57,82 +57,78 @@ public final class IosTestSetupResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="pushFiles", required=true)
-      private final List<IosDeviceFileResponse> pushFiles;
+    private List<IosDeviceFileResponse> pushFiles;
 
     public List<IosDeviceFileResponse> pushFiles() {
         return this.pushFiles;
     }
 
-    public IosTestSetupResponse(
-        List<FileReferenceResponse> additionalIpas,
-        String networkProfile,
-        List<IosDeviceFileResponse> pullDirectories,
-        List<IosDeviceFileResponse> pushFiles) {
-        this.additionalIpas = Objects.requireNonNull(additionalIpas, "expected parameter 'additionalIpas' to be non-null");
-        this.networkProfile = Objects.requireNonNull(networkProfile, "expected parameter 'networkProfile' to be non-null");
-        this.pullDirectories = Objects.requireNonNull(pullDirectories, "expected parameter 'pullDirectories' to be non-null");
-        this.pushFiles = Objects.requireNonNull(pushFiles, "expected parameter 'pushFiles' to be non-null");
-    }
+    private IosTestSetupResponse() {}
 
-    private IosTestSetupResponse() {
-        this.additionalIpas = List.of();
-        this.networkProfile = null;
-        this.pullDirectories = List.of();
-        this.pushFiles = List.of();
+    private IosTestSetupResponse(IosTestSetupResponse $) {
+        this.additionalIpas = $.additionalIpas;
+        this.networkProfile = $.networkProfile;
+        this.pullDirectories = $.pullDirectories;
+        this.pushFiles = $.pushFiles;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestSetupResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<FileReferenceResponse> additionalIpas;
-        private String networkProfile;
-        private List<IosDeviceFileResponse> pullDirectories;
-        private List<IosDeviceFileResponse> pushFiles;
+        private IosTestSetupResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestSetupResponse();
         }
 
         public Builder(IosTestSetupResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalIpas = defaults.additionalIpas;
-    	      this.networkProfile = defaults.networkProfile;
-    	      this.pullDirectories = defaults.pullDirectories;
-    	      this.pushFiles = defaults.pushFiles;
+            $ = new IosTestSetupResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalIpas(List<FileReferenceResponse> additionalIpas) {
-            this.additionalIpas = Objects.requireNonNull(additionalIpas);
+            $.additionalIpas = additionalIpas;
             return this;
         }
+
         public Builder additionalIpas(FileReferenceResponse... additionalIpas) {
             return additionalIpas(List.of(additionalIpas));
         }
+
         public Builder networkProfile(String networkProfile) {
-            this.networkProfile = Objects.requireNonNull(networkProfile);
+            $.networkProfile = networkProfile;
             return this;
         }
+
         public Builder pullDirectories(List<IosDeviceFileResponse> pullDirectories) {
-            this.pullDirectories = Objects.requireNonNull(pullDirectories);
+            $.pullDirectories = pullDirectories;
             return this;
         }
+
         public Builder pullDirectories(IosDeviceFileResponse... pullDirectories) {
             return pullDirectories(List.of(pullDirectories));
         }
+
         public Builder pushFiles(List<IosDeviceFileResponse> pushFiles) {
-            this.pushFiles = Objects.requireNonNull(pushFiles);
+            $.pushFiles = pushFiles;
             return this;
         }
+
         public Builder pushFiles(IosDeviceFileResponse... pushFiles) {
             return pushFiles(List.of(pushFiles));
-        }        public IosTestSetupResponse build() {
-            return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
+        }
+
+        public IosTestSetupResponse build() {
+            $.additionalIpas = Objects.requireNonNull($.additionalIpas, "expected parameter 'additionalIpas' to be non-null");
+            $.networkProfile = Objects.requireNonNull($.networkProfile, "expected parameter 'networkProfile' to be non-null");
+            $.pullDirectories = Objects.requireNonNull($.pullDirectories, "expected parameter 'pullDirectories' to be non-null");
+            $.pushFiles = Objects.requireNonNull($.pushFiles, "expected parameter 'pushFiles' to be non-null");
+            return $;
         }
     }
+
 }

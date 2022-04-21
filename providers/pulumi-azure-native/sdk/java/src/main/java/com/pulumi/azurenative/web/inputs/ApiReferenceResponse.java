@@ -20,10 +20,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="brandColor")
-      private final @Nullable String brandColor;
+    private @Nullable String brandColor;
 
     public Optional<String> brandColor() {
-        return this.brandColor == null ? Optional.empty() : Optional.ofNullable(this.brandColor);
+        return Optional.ofNullable(this.brandColor);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable String description;
+    private @Nullable String description;
 
     public Optional<String> description() {
-        return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable String displayName;
+    private @Nullable String displayName;
 
     public Optional<String> displayName() {
-        return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="iconUri")
-      private final @Nullable String iconUri;
+    private @Nullable String iconUri;
 
     public Optional<String> iconUri() {
-        return this.iconUri == null ? Optional.empty() : Optional.ofNullable(this.iconUri);
+        return Optional.ofNullable(this.iconUri);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="swagger")
-      private final @Nullable Object swagger;
+    private @Nullable Object swagger;
 
     public Optional<Object> swagger() {
-        return this.swagger == null ? Optional.empty() : Optional.ofNullable(this.swagger);
+        return Optional.ofNullable(this.swagger);
     }
 
     /**
@@ -97,109 +97,86 @@ public final class ApiReferenceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
-    public ApiReferenceResponse(
-        @Nullable String brandColor,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUri,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Object swagger,
-        @Nullable String type) {
-        this.brandColor = brandColor;
-        this.description = description;
-        this.displayName = displayName;
-        this.iconUri = iconUri;
-        this.id = id;
-        this.name = name;
-        this.swagger = swagger;
-        this.type = type;
-    }
+    private ApiReferenceResponse() {}
 
-    private ApiReferenceResponse() {
-        this.brandColor = null;
-        this.description = null;
-        this.displayName = null;
-        this.iconUri = null;
-        this.id = null;
-        this.name = null;
-        this.swagger = null;
-        this.type = null;
+    private ApiReferenceResponse(ApiReferenceResponse $) {
+        this.brandColor = $.brandColor;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.iconUri = $.iconUri;
+        this.id = $.id;
+        this.name = $.name;
+        this.swagger = $.swagger;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String brandColor;
-        private @Nullable String description;
-        private @Nullable String displayName;
-        private @Nullable String iconUri;
-        private @Nullable String id;
-        private @Nullable String name;
-        private @Nullable Object swagger;
-        private @Nullable String type;
+        private ApiReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiReferenceResponse();
         }
 
         public Builder(ApiReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brandColor = defaults.brandColor;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.iconUri = defaults.iconUri;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.swagger = defaults.swagger;
-    	      this.type = defaults.type;
+            $ = new ApiReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = brandColor;
+            $.brandColor = brandColor;
             return this;
         }
+
         public Builder description(@Nullable String description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
+
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
+
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = iconUri;
+            $.iconUri = iconUri;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = swagger;
+            $.swagger = swagger;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
-        }        public ApiReferenceResponse build() {
-            return new ApiReferenceResponse(brandColor, description, displayName, iconUri, id, name, swagger, type);
+        }
+
+        public ApiReferenceResponse build() {
+            return $;
         }
     }
+
 }

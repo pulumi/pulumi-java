@@ -5,9 +5,9 @@ package com.pulumi.azurenative.notificationhubs.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="apnsCertificate")
-      private final @Nullable Output<String> apnsCertificate;
+    private @Nullable Output<String> apnsCertificate;
 
-    public Output<String> apnsCertificate() {
-        return this.apnsCertificate == null ? Codegen.empty() : this.apnsCertificate;
+    public Optional<Output<String>> apnsCertificate() {
+        return Optional.ofNullable(this.apnsCertificate);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appId")
-      private final @Nullable Output<String> appId;
+    private @Nullable Output<String> appId;
 
-    public Output<String> appId() {
-        return this.appId == null ? Codegen.empty() : this.appId;
+    public Optional<Output<String>> appId() {
+        return Optional.ofNullable(this.appId);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="appName")
-      private final @Nullable Output<String> appName;
+    private @Nullable Output<String> appName;
 
-    public Output<String> appName() {
-        return this.appName == null ? Codegen.empty() : this.appName;
+    public Optional<Output<String>> appName() {
+        return Optional.ofNullable(this.appName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="certificateKey")
-      private final @Nullable Output<String> certificateKey;
+    private @Nullable Output<String> certificateKey;
 
-    public Output<String> certificateKey() {
-        return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
+    public Optional<Output<String>> certificateKey() {
+        return Optional.ofNullable(this.certificateKey);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="endpoint")
-      private final @Nullable Output<String> endpoint;
+    private @Nullable Output<String> endpoint;
 
-    public Output<String> endpoint() {
-        return this.endpoint == null ? Codegen.empty() : this.endpoint;
+    public Optional<Output<String>> endpoint() {
+        return Optional.ofNullable(this.endpoint);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="keyId")
-      private final @Nullable Output<String> keyId;
+    private @Nullable Output<String> keyId;
 
-    public Output<String> keyId() {
-        return this.keyId == null ? Codegen.empty() : this.keyId;
+    public Optional<Output<String>> keyId() {
+        return Optional.ofNullable(this.keyId);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="thumbprint")
-      private final @Nullable Output<String> thumbprint;
+    private @Nullable Output<String> thumbprint;
 
-    public Output<String> thumbprint() {
-        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
+    public Optional<Output<String>> thumbprint() {
+        return Optional.ofNullable(this.thumbprint);
     }
 
     /**
@@ -101,141 +101,118 @@ public final class ApnsCredentialArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="token")
-      private final @Nullable Output<String> token;
+    private @Nullable Output<String> token;
 
-    public Output<String> token() {
-        return this.token == null ? Codegen.empty() : this.token;
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
-    public ApnsCredentialArgs(
-        @Nullable Output<String> apnsCertificate,
-        @Nullable Output<String> appId,
-        @Nullable Output<String> appName,
-        @Nullable Output<String> certificateKey,
-        @Nullable Output<String> endpoint,
-        @Nullable Output<String> keyId,
-        @Nullable Output<String> thumbprint,
-        @Nullable Output<String> token) {
-        this.apnsCertificate = apnsCertificate;
-        this.appId = appId;
-        this.appName = appName;
-        this.certificateKey = certificateKey;
-        this.endpoint = endpoint;
-        this.keyId = keyId;
-        this.thumbprint = thumbprint;
-        this.token = token;
-    }
+    private ApnsCredentialArgs() {}
 
-    private ApnsCredentialArgs() {
-        this.apnsCertificate = Codegen.empty();
-        this.appId = Codegen.empty();
-        this.appName = Codegen.empty();
-        this.certificateKey = Codegen.empty();
-        this.endpoint = Codegen.empty();
-        this.keyId = Codegen.empty();
-        this.thumbprint = Codegen.empty();
-        this.token = Codegen.empty();
+    private ApnsCredentialArgs(ApnsCredentialArgs $) {
+        this.apnsCertificate = $.apnsCertificate;
+        this.appId = $.appId;
+        this.appName = $.appName;
+        this.certificateKey = $.certificateKey;
+        this.endpoint = $.endpoint;
+        this.keyId = $.keyId;
+        this.thumbprint = $.thumbprint;
+        this.token = $.token;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApnsCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apnsCertificate;
-        private @Nullable Output<String> appId;
-        private @Nullable Output<String> appName;
-        private @Nullable Output<String> certificateKey;
-        private @Nullable Output<String> endpoint;
-        private @Nullable Output<String> keyId;
-        private @Nullable Output<String> thumbprint;
-        private @Nullable Output<String> token;
+        private ApnsCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApnsCredentialArgs();
         }
 
         public Builder(ApnsCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apnsCertificate = defaults.apnsCertificate;
-    	      this.appId = defaults.appId;
-    	      this.appName = defaults.appName;
-    	      this.certificateKey = defaults.certificateKey;
-    	      this.endpoint = defaults.endpoint;
-    	      this.keyId = defaults.keyId;
-    	      this.thumbprint = defaults.thumbprint;
-    	      this.token = defaults.token;
+            $ = new ApnsCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apnsCertificate(@Nullable Output<String> apnsCertificate) {
-            this.apnsCertificate = apnsCertificate;
+            $.apnsCertificate = apnsCertificate;
             return this;
         }
-        public Builder apnsCertificate(@Nullable String apnsCertificate) {
-            this.apnsCertificate = Codegen.ofNullable(apnsCertificate);
-            return this;
+
+        public Builder apnsCertificate(String apnsCertificate) {
+            return apnsCertificate(Output.of(apnsCertificate));
         }
+
         public Builder appId(@Nullable Output<String> appId) {
-            this.appId = appId;
+            $.appId = appId;
             return this;
         }
-        public Builder appId(@Nullable String appId) {
-            this.appId = Codegen.ofNullable(appId);
-            return this;
+
+        public Builder appId(String appId) {
+            return appId(Output.of(appId));
         }
+
         public Builder appName(@Nullable Output<String> appName) {
-            this.appName = appName;
+            $.appName = appName;
             return this;
         }
-        public Builder appName(@Nullable String appName) {
-            this.appName = Codegen.ofNullable(appName);
-            return this;
+
+        public Builder appName(String appName) {
+            return appName(Output.of(appName));
         }
+
         public Builder certificateKey(@Nullable Output<String> certificateKey) {
-            this.certificateKey = certificateKey;
+            $.certificateKey = certificateKey;
             return this;
         }
-        public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = Codegen.ofNullable(certificateKey);
-            return this;
+
+        public Builder certificateKey(String certificateKey) {
+            return certificateKey(Output.of(certificateKey));
         }
+
         public Builder endpoint(@Nullable Output<String> endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
-        public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Codegen.ofNullable(endpoint);
-            return this;
+
+        public Builder endpoint(String endpoint) {
+            return endpoint(Output.of(endpoint));
         }
+
         public Builder keyId(@Nullable Output<String> keyId) {
-            this.keyId = keyId;
+            $.keyId = keyId;
             return this;
         }
-        public Builder keyId(@Nullable String keyId) {
-            this.keyId = Codegen.ofNullable(keyId);
-            return this;
+
+        public Builder keyId(String keyId) {
+            return keyId(Output.of(keyId));
         }
+
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
-            this.thumbprint = thumbprint;
+            $.thumbprint = thumbprint;
             return this;
         }
-        public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Codegen.ofNullable(thumbprint);
-            return this;
+
+        public Builder thumbprint(String thumbprint) {
+            return thumbprint(Output.of(thumbprint));
         }
+
         public Builder token(@Nullable Output<String> token) {
-            this.token = token;
+            $.token = token;
             return this;
         }
-        public Builder token(@Nullable String token) {
-            this.token = Codegen.ofNullable(token);
-            return this;
-        }        public ApnsCredentialArgs build() {
-            return new ApnsCredentialArgs(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
+
+        public Builder token(String token) {
+            return token(Output.of(token));
+        }
+
+        public ApnsCredentialArgs build() {
+            return $;
         }
     }
+
 }

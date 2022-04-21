@@ -8,10 +8,10 @@ import com.pulumi.azurenative.security.enums.State;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
      * 
      */
     @Import(name="roles")
-      private final @Nullable Output<List<Either<String,Roles>>> roles;
+    private @Nullable Output<List<Either<String,Roles>>> roles;
 
-    public Output<List<Either<String,Roles>>> roles() {
-        return this.roles == null ? Codegen.empty() : this.roles;
+    public Optional<Output<List<Either<String,Roles>>>> roles() {
+        return Optional.ofNullable(this.roles);
     }
 
     /**
@@ -39,66 +39,62 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<Either<String,State>> state;
+    private @Nullable Output<Either<String,State>> state;
 
-    public Output<Either<String,State>> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<Either<String,State>>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public SecurityContactPropertiesNotificationsByRoleArgs(
-        @Nullable Output<List<Either<String,Roles>>> roles,
-        @Nullable Output<Either<String,State>> state) {
-        this.roles = roles;
-        this.state = state;
-    }
+    private SecurityContactPropertiesNotificationsByRoleArgs() {}
 
-    private SecurityContactPropertiesNotificationsByRoleArgs() {
-        this.roles = Codegen.empty();
-        this.state = Codegen.empty();
+    private SecurityContactPropertiesNotificationsByRoleArgs(SecurityContactPropertiesNotificationsByRoleArgs $) {
+        this.roles = $.roles;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityContactPropertiesNotificationsByRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,Roles>>> roles;
-        private @Nullable Output<Either<String,State>> state;
+        private SecurityContactPropertiesNotificationsByRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityContactPropertiesNotificationsByRoleArgs();
         }
 
         public Builder(SecurityContactPropertiesNotificationsByRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roles = defaults.roles;
-    	      this.state = defaults.state;
+            $ = new SecurityContactPropertiesNotificationsByRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roles(@Nullable Output<List<Either<String,Roles>>> roles) {
-            this.roles = roles;
+            $.roles = roles;
             return this;
         }
-        public Builder roles(@Nullable List<Either<String,Roles>> roles) {
-            this.roles = Codegen.ofNullable(roles);
-            return this;
+
+        public Builder roles(List<Either<String,Roles>> roles) {
+            return roles(Output.of(roles));
         }
+
         public Builder roles(Either<String,Roles>... roles) {
             return roles(List.of(roles));
         }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable Either<String,State> state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public SecurityContactPropertiesNotificationsByRoleArgs build() {
-            return new SecurityContactPropertiesNotificationsByRoleArgs(roles, state);
+
+        public Builder state(Either<String,State> state) {
+            return state(Output.of(state));
+        }
+
+        public SecurityContactPropertiesNotificationsByRoleArgs build() {
+            return $;
         }
     }
+
 }

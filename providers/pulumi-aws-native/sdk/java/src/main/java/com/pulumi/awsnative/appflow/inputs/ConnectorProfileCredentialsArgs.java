@@ -21,8 +21,8 @@ import com.pulumi.awsnative.appflow.inputs.ConnectorProfileVeevaConnectorProfile
 import com.pulumi.awsnative.appflow.inputs.ConnectorProfileZendeskConnectorProfileCredentialsArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,350 +35,303 @@ public final class ConnectorProfileCredentialsArgs extends com.pulumi.resources.
     public static final ConnectorProfileCredentialsArgs Empty = new ConnectorProfileCredentialsArgs();
 
     @Import(name="amplitude")
-      private final @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude;
+    private @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude;
 
-    public Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude() {
-        return this.amplitude == null ? Codegen.empty() : this.amplitude;
+    public Optional<Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs>> amplitude() {
+        return Optional.ofNullable(this.amplitude);
     }
 
     @Import(name="datadog")
-      private final @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog;
+    private @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog;
 
-    public Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog() {
-        return this.datadog == null ? Codegen.empty() : this.datadog;
+    public Optional<Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs>> datadog() {
+        return Optional.ofNullable(this.datadog);
     }
 
     @Import(name="dynatrace")
-      private final @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace;
+    private @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace;
 
-    public Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace() {
-        return this.dynatrace == null ? Codegen.empty() : this.dynatrace;
+    public Optional<Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs>> dynatrace() {
+        return Optional.ofNullable(this.dynatrace);
     }
 
     @Import(name="googleAnalytics")
-      private final @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics;
+    private @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics;
 
-    public Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics() {
-        return this.googleAnalytics == null ? Codegen.empty() : this.googleAnalytics;
+    public Optional<Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs>> googleAnalytics() {
+        return Optional.ofNullable(this.googleAnalytics);
     }
 
     @Import(name="inforNexus")
-      private final @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus;
+    private @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus;
 
-    public Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus() {
-        return this.inforNexus == null ? Codegen.empty() : this.inforNexus;
+    public Optional<Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs>> inforNexus() {
+        return Optional.ofNullable(this.inforNexus);
     }
 
     @Import(name="marketo")
-      private final @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo;
+    private @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo;
 
-    public Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo() {
-        return this.marketo == null ? Codegen.empty() : this.marketo;
+    public Optional<Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs>> marketo() {
+        return Optional.ofNullable(this.marketo);
     }
 
     @Import(name="redshift")
-      private final @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift;
+    private @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift;
 
-    public Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift() {
-        return this.redshift == null ? Codegen.empty() : this.redshift;
+    public Optional<Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs>> redshift() {
+        return Optional.ofNullable(this.redshift);
     }
 
     @Import(name="sAPOData")
-      private final @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData;
+    private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData;
 
-    public Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData() {
-        return this.sAPOData == null ? Codegen.empty() : this.sAPOData;
+    public Optional<Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs>> sAPOData() {
+        return Optional.ofNullable(this.sAPOData);
     }
 
     @Import(name="salesforce")
-      private final @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce;
+    private @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce;
 
-    public Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce() {
-        return this.salesforce == null ? Codegen.empty() : this.salesforce;
+    public Optional<Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs>> salesforce() {
+        return Optional.ofNullable(this.salesforce);
     }
 
     @Import(name="serviceNow")
-      private final @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow;
+    private @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow;
 
-    public Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow() {
-        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
+    public Optional<Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs>> serviceNow() {
+        return Optional.ofNullable(this.serviceNow);
     }
 
     @Import(name="singular")
-      private final @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular;
+    private @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular;
 
-    public Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular() {
-        return this.singular == null ? Codegen.empty() : this.singular;
+    public Optional<Output<ConnectorProfileSingularConnectorProfileCredentialsArgs>> singular() {
+        return Optional.ofNullable(this.singular);
     }
 
     @Import(name="slack")
-      private final @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack;
+    private @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack;
 
-    public Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack() {
-        return this.slack == null ? Codegen.empty() : this.slack;
+    public Optional<Output<ConnectorProfileSlackConnectorProfileCredentialsArgs>> slack() {
+        return Optional.ofNullable(this.slack);
     }
 
     @Import(name="snowflake")
-      private final @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake;
+    private @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake;
 
-    public Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake() {
-        return this.snowflake == null ? Codegen.empty() : this.snowflake;
+    public Optional<Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs>> snowflake() {
+        return Optional.ofNullable(this.snowflake);
     }
 
     @Import(name="trendmicro")
-      private final @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro;
+    private @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro;
 
-    public Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro() {
-        return this.trendmicro == null ? Codegen.empty() : this.trendmicro;
+    public Optional<Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs>> trendmicro() {
+        return Optional.ofNullable(this.trendmicro);
     }
 
     @Import(name="veeva")
-      private final @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva;
+    private @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva;
 
-    public Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva() {
-        return this.veeva == null ? Codegen.empty() : this.veeva;
+    public Optional<Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs>> veeva() {
+        return Optional.ofNullable(this.veeva);
     }
 
     @Import(name="zendesk")
-      private final @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk;
+    private @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk;
 
-    public Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk() {
-        return this.zendesk == null ? Codegen.empty() : this.zendesk;
+    public Optional<Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs>> zendesk() {
+        return Optional.ofNullable(this.zendesk);
     }
 
-    public ConnectorProfileCredentialsArgs(
-        @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude,
-        @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog,
-        @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace,
-        @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics,
-        @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus,
-        @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo,
-        @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift,
-        @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData,
-        @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce,
-        @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow,
-        @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular,
-        @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack,
-        @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake,
-        @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro,
-        @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva,
-        @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk) {
-        this.amplitude = amplitude;
-        this.datadog = datadog;
-        this.dynatrace = dynatrace;
-        this.googleAnalytics = googleAnalytics;
-        this.inforNexus = inforNexus;
-        this.marketo = marketo;
-        this.redshift = redshift;
-        this.sAPOData = sAPOData;
-        this.salesforce = salesforce;
-        this.serviceNow = serviceNow;
-        this.singular = singular;
-        this.slack = slack;
-        this.snowflake = snowflake;
-        this.trendmicro = trendmicro;
-        this.veeva = veeva;
-        this.zendesk = zendesk;
-    }
+    private ConnectorProfileCredentialsArgs() {}
 
-    private ConnectorProfileCredentialsArgs() {
-        this.amplitude = Codegen.empty();
-        this.datadog = Codegen.empty();
-        this.dynatrace = Codegen.empty();
-        this.googleAnalytics = Codegen.empty();
-        this.inforNexus = Codegen.empty();
-        this.marketo = Codegen.empty();
-        this.redshift = Codegen.empty();
-        this.sAPOData = Codegen.empty();
-        this.salesforce = Codegen.empty();
-        this.serviceNow = Codegen.empty();
-        this.singular = Codegen.empty();
-        this.slack = Codegen.empty();
-        this.snowflake = Codegen.empty();
-        this.trendmicro = Codegen.empty();
-        this.veeva = Codegen.empty();
-        this.zendesk = Codegen.empty();
+    private ConnectorProfileCredentialsArgs(ConnectorProfileCredentialsArgs $) {
+        this.amplitude = $.amplitude;
+        this.datadog = $.datadog;
+        this.dynatrace = $.dynatrace;
+        this.googleAnalytics = $.googleAnalytics;
+        this.inforNexus = $.inforNexus;
+        this.marketo = $.marketo;
+        this.redshift = $.redshift;
+        this.sAPOData = $.sAPOData;
+        this.salesforce = $.salesforce;
+        this.serviceNow = $.serviceNow;
+        this.singular = $.singular;
+        this.slack = $.slack;
+        this.snowflake = $.snowflake;
+        this.trendmicro = $.trendmicro;
+        this.veeva = $.veeva;
+        this.zendesk = $.zendesk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorProfileCredentialsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude;
-        private @Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog;
-        private @Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace;
-        private @Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics;
-        private @Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus;
-        private @Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo;
-        private @Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift;
-        private @Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData;
-        private @Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce;
-        private @Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow;
-        private @Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular;
-        private @Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack;
-        private @Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake;
-        private @Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro;
-        private @Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva;
-        private @Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk;
+        private ConnectorProfileCredentialsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorProfileCredentialsArgs();
         }
 
         public Builder(ConnectorProfileCredentialsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amplitude = defaults.amplitude;
-    	      this.datadog = defaults.datadog;
-    	      this.dynatrace = defaults.dynatrace;
-    	      this.googleAnalytics = defaults.googleAnalytics;
-    	      this.inforNexus = defaults.inforNexus;
-    	      this.marketo = defaults.marketo;
-    	      this.redshift = defaults.redshift;
-    	      this.sAPOData = defaults.sAPOData;
-    	      this.salesforce = defaults.salesforce;
-    	      this.serviceNow = defaults.serviceNow;
-    	      this.singular = defaults.singular;
-    	      this.slack = defaults.slack;
-    	      this.snowflake = defaults.snowflake;
-    	      this.trendmicro = defaults.trendmicro;
-    	      this.veeva = defaults.veeva;
-    	      this.zendesk = defaults.zendesk;
+            $ = new ConnectorProfileCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder amplitude(@Nullable Output<ConnectorProfileAmplitudeConnectorProfileCredentialsArgs> amplitude) {
-            this.amplitude = amplitude;
+            $.amplitude = amplitude;
             return this;
         }
-        public Builder amplitude(@Nullable ConnectorProfileAmplitudeConnectorProfileCredentialsArgs amplitude) {
-            this.amplitude = Codegen.ofNullable(amplitude);
-            return this;
+
+        public Builder amplitude(ConnectorProfileAmplitudeConnectorProfileCredentialsArgs amplitude) {
+            return amplitude(Output.of(amplitude));
         }
+
         public Builder datadog(@Nullable Output<ConnectorProfileDatadogConnectorProfileCredentialsArgs> datadog) {
-            this.datadog = datadog;
+            $.datadog = datadog;
             return this;
         }
-        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileCredentialsArgs datadog) {
-            this.datadog = Codegen.ofNullable(datadog);
-            return this;
+
+        public Builder datadog(ConnectorProfileDatadogConnectorProfileCredentialsArgs datadog) {
+            return datadog(Output.of(datadog));
         }
+
         public Builder dynatrace(@Nullable Output<ConnectorProfileDynatraceConnectorProfileCredentialsArgs> dynatrace) {
-            this.dynatrace = dynatrace;
+            $.dynatrace = dynatrace;
             return this;
         }
-        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileCredentialsArgs dynatrace) {
-            this.dynatrace = Codegen.ofNullable(dynatrace);
-            return this;
+
+        public Builder dynatrace(ConnectorProfileDynatraceConnectorProfileCredentialsArgs dynatrace) {
+            return dynatrace(Output.of(dynatrace));
         }
+
         public Builder googleAnalytics(@Nullable Output<ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs> googleAnalytics) {
-            this.googleAnalytics = googleAnalytics;
+            $.googleAnalytics = googleAnalytics;
             return this;
         }
-        public Builder googleAnalytics(@Nullable ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs googleAnalytics) {
-            this.googleAnalytics = Codegen.ofNullable(googleAnalytics);
-            return this;
+
+        public Builder googleAnalytics(ConnectorProfileGoogleAnalyticsConnectorProfileCredentialsArgs googleAnalytics) {
+            return googleAnalytics(Output.of(googleAnalytics));
         }
+
         public Builder inforNexus(@Nullable Output<ConnectorProfileInforNexusConnectorProfileCredentialsArgs> inforNexus) {
-            this.inforNexus = inforNexus;
+            $.inforNexus = inforNexus;
             return this;
         }
-        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileCredentialsArgs inforNexus) {
-            this.inforNexus = Codegen.ofNullable(inforNexus);
-            return this;
+
+        public Builder inforNexus(ConnectorProfileInforNexusConnectorProfileCredentialsArgs inforNexus) {
+            return inforNexus(Output.of(inforNexus));
         }
+
         public Builder marketo(@Nullable Output<ConnectorProfileMarketoConnectorProfileCredentialsArgs> marketo) {
-            this.marketo = marketo;
+            $.marketo = marketo;
             return this;
         }
-        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileCredentialsArgs marketo) {
-            this.marketo = Codegen.ofNullable(marketo);
-            return this;
+
+        public Builder marketo(ConnectorProfileMarketoConnectorProfileCredentialsArgs marketo) {
+            return marketo(Output.of(marketo));
         }
+
         public Builder redshift(@Nullable Output<ConnectorProfileRedshiftConnectorProfileCredentialsArgs> redshift) {
-            this.redshift = redshift;
+            $.redshift = redshift;
             return this;
         }
-        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileCredentialsArgs redshift) {
-            this.redshift = Codegen.ofNullable(redshift);
-            return this;
+
+        public Builder redshift(ConnectorProfileRedshiftConnectorProfileCredentialsArgs redshift) {
+            return redshift(Output.of(redshift));
         }
+
         public Builder sAPOData(@Nullable Output<ConnectorProfileSAPODataConnectorProfileCredentialsArgs> sAPOData) {
-            this.sAPOData = sAPOData;
+            $.sAPOData = sAPOData;
             return this;
         }
-        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsArgs sAPOData) {
-            this.sAPOData = Codegen.ofNullable(sAPOData);
-            return this;
+
+        public Builder sAPOData(ConnectorProfileSAPODataConnectorProfileCredentialsArgs sAPOData) {
+            return sAPOData(Output.of(sAPOData));
         }
+
         public Builder salesforce(@Nullable Output<ConnectorProfileSalesforceConnectorProfileCredentialsArgs> salesforce) {
-            this.salesforce = salesforce;
+            $.salesforce = salesforce;
             return this;
         }
-        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileCredentialsArgs salesforce) {
-            this.salesforce = Codegen.ofNullable(salesforce);
-            return this;
+
+        public Builder salesforce(ConnectorProfileSalesforceConnectorProfileCredentialsArgs salesforce) {
+            return salesforce(Output.of(salesforce));
         }
+
         public Builder serviceNow(@Nullable Output<ConnectorProfileServiceNowConnectorProfileCredentialsArgs> serviceNow) {
-            this.serviceNow = serviceNow;
+            $.serviceNow = serviceNow;
             return this;
         }
-        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileCredentialsArgs serviceNow) {
-            this.serviceNow = Codegen.ofNullable(serviceNow);
-            return this;
+
+        public Builder serviceNow(ConnectorProfileServiceNowConnectorProfileCredentialsArgs serviceNow) {
+            return serviceNow(Output.of(serviceNow));
         }
+
         public Builder singular(@Nullable Output<ConnectorProfileSingularConnectorProfileCredentialsArgs> singular) {
-            this.singular = singular;
+            $.singular = singular;
             return this;
         }
-        public Builder singular(@Nullable ConnectorProfileSingularConnectorProfileCredentialsArgs singular) {
-            this.singular = Codegen.ofNullable(singular);
-            return this;
+
+        public Builder singular(ConnectorProfileSingularConnectorProfileCredentialsArgs singular) {
+            return singular(Output.of(singular));
         }
+
         public Builder slack(@Nullable Output<ConnectorProfileSlackConnectorProfileCredentialsArgs> slack) {
-            this.slack = slack;
+            $.slack = slack;
             return this;
         }
-        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileCredentialsArgs slack) {
-            this.slack = Codegen.ofNullable(slack);
-            return this;
+
+        public Builder slack(ConnectorProfileSlackConnectorProfileCredentialsArgs slack) {
+            return slack(Output.of(slack));
         }
+
         public Builder snowflake(@Nullable Output<ConnectorProfileSnowflakeConnectorProfileCredentialsArgs> snowflake) {
-            this.snowflake = snowflake;
+            $.snowflake = snowflake;
             return this;
         }
-        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileCredentialsArgs snowflake) {
-            this.snowflake = Codegen.ofNullable(snowflake);
-            return this;
+
+        public Builder snowflake(ConnectorProfileSnowflakeConnectorProfileCredentialsArgs snowflake) {
+            return snowflake(Output.of(snowflake));
         }
+
         public Builder trendmicro(@Nullable Output<ConnectorProfileTrendmicroConnectorProfileCredentialsArgs> trendmicro) {
-            this.trendmicro = trendmicro;
+            $.trendmicro = trendmicro;
             return this;
         }
-        public Builder trendmicro(@Nullable ConnectorProfileTrendmicroConnectorProfileCredentialsArgs trendmicro) {
-            this.trendmicro = Codegen.ofNullable(trendmicro);
-            return this;
+
+        public Builder trendmicro(ConnectorProfileTrendmicroConnectorProfileCredentialsArgs trendmicro) {
+            return trendmicro(Output.of(trendmicro));
         }
+
         public Builder veeva(@Nullable Output<ConnectorProfileVeevaConnectorProfileCredentialsArgs> veeva) {
-            this.veeva = veeva;
+            $.veeva = veeva;
             return this;
         }
-        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileCredentialsArgs veeva) {
-            this.veeva = Codegen.ofNullable(veeva);
-            return this;
+
+        public Builder veeva(ConnectorProfileVeevaConnectorProfileCredentialsArgs veeva) {
+            return veeva(Output.of(veeva));
         }
+
         public Builder zendesk(@Nullable Output<ConnectorProfileZendeskConnectorProfileCredentialsArgs> zendesk) {
-            this.zendesk = zendesk;
+            $.zendesk = zendesk;
             return this;
         }
-        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileCredentialsArgs zendesk) {
-            this.zendesk = Codegen.ofNullable(zendesk);
-            return this;
-        }        public ConnectorProfileCredentialsArgs build() {
-            return new ConnectorProfileCredentialsArgs(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, singular, slack, snowflake, trendmicro, veeva, zendesk);
+
+        public Builder zendesk(ConnectorProfileZendeskConnectorProfileCredentialsArgs zendesk) {
+            return zendesk(Output.of(zendesk));
+        }
+
+        public ConnectorProfileCredentialsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.gcp.compute.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ProjectMetadataItemState extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ProjectMetadataItemState(
-        @Nullable Output<String> key,
-        @Nullable Output<String> project,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.project = project;
-        this.value = value;
-    }
+    private ProjectMetadataItemState() {}
 
-    private ProjectMetadataItemState() {
-        this.key = Codegen.empty();
-        this.project = Codegen.empty();
-        this.value = Codegen.empty();
+    private ProjectMetadataItemState(ProjectMetadataItemState $) {
+        this.key = $.key;
+        this.project = $.project;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProjectMetadataItemState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> value;
+        private ProjectMetadataItemState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProjectMetadataItemState();
         }
 
         public Builder(ProjectMetadataItemState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.value = defaults.value;
+            $ = new ProjectMetadataItemState(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ProjectMetadataItemState build() {
-            return new ProjectMetadataItemState(key, project, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ProjectMetadataItemState build() {
+            return $;
         }
     }
+
 }

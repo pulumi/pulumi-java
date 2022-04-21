@@ -5,7 +5,6 @@ package com.pulumi.awsnative.quicksight.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class TemplateDataSetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetArn", required=true)
-      private final Output<String> dataSetArn;
+    private Output<String> dataSetArn;
 
     public Output<String> dataSetArn() {
         return this.dataSetArn;
@@ -34,63 +33,60 @@ public final class TemplateDataSetReferenceArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="dataSetPlaceholder", required=true)
-      private final Output<String> dataSetPlaceholder;
+    private Output<String> dataSetPlaceholder;
 
     public Output<String> dataSetPlaceholder() {
         return this.dataSetPlaceholder;
     }
 
-    public TemplateDataSetReferenceArgs(
-        Output<String> dataSetArn,
-        Output<String> dataSetPlaceholder) {
-        this.dataSetArn = Objects.requireNonNull(dataSetArn, "expected parameter 'dataSetArn' to be non-null");
-        this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder, "expected parameter 'dataSetPlaceholder' to be non-null");
-    }
+    private TemplateDataSetReferenceArgs() {}
 
-    private TemplateDataSetReferenceArgs() {
-        this.dataSetArn = Codegen.empty();
-        this.dataSetPlaceholder = Codegen.empty();
+    private TemplateDataSetReferenceArgs(TemplateDataSetReferenceArgs $) {
+        this.dataSetArn = $.dataSetArn;
+        this.dataSetPlaceholder = $.dataSetPlaceholder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateDataSetReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> dataSetArn;
-        private Output<String> dataSetPlaceholder;
+        private TemplateDataSetReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateDataSetReferenceArgs();
         }
 
         public Builder(TemplateDataSetReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSetArn = defaults.dataSetArn;
-    	      this.dataSetPlaceholder = defaults.dataSetPlaceholder;
+            $ = new TemplateDataSetReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSetArn(Output<String> dataSetArn) {
-            this.dataSetArn = Objects.requireNonNull(dataSetArn);
+            $.dataSetArn = dataSetArn;
             return this;
         }
+
         public Builder dataSetArn(String dataSetArn) {
-            this.dataSetArn = Output.of(Objects.requireNonNull(dataSetArn));
-            return this;
+            return dataSetArn(Output.of(dataSetArn));
         }
+
         public Builder dataSetPlaceholder(Output<String> dataSetPlaceholder) {
-            this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
+            $.dataSetPlaceholder = dataSetPlaceholder;
             return this;
         }
+
         public Builder dataSetPlaceholder(String dataSetPlaceholder) {
-            this.dataSetPlaceholder = Output.of(Objects.requireNonNull(dataSetPlaceholder));
-            return this;
-        }        public TemplateDataSetReferenceArgs build() {
-            return new TemplateDataSetReferenceArgs(dataSetArn, dataSetPlaceholder);
+            return dataSetPlaceholder(Output.of(dataSetPlaceholder));
+        }
+
+        public TemplateDataSetReferenceArgs build() {
+            $.dataSetArn = Objects.requireNonNull($.dataSetArn, "expected parameter 'dataSetArn' to be non-null");
+            $.dataSetPlaceholder = Objects.requireNonNull($.dataSetPlaceholder, "expected parameter 'dataSetPlaceholder' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="eventHubEndpointName", required=true)
-      private final String eventHubEndpointName;
+    private String eventHubEndpointName;
 
     public String eventHubEndpointName() {
         return this.eventHubEndpointName;
@@ -28,7 +28,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends com.pulumi
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetIotHubResourceEventHubConsumerGroupArgs(
-        String eventHubEndpointName,
-        String name,
-        String resourceGroupName,
-        String resourceName) {
-        this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName, "expected parameter 'eventHubEndpointName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetIotHubResourceEventHubConsumerGroupArgs() {}
 
-    private GetIotHubResourceEventHubConsumerGroupArgs() {
-        this.eventHubEndpointName = null;
-        this.name = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetIotHubResourceEventHubConsumerGroupArgs(GetIotHubResourceEventHubConsumerGroupArgs $) {
+        this.eventHubEndpointName = $.eventHubEndpointName;
+        this.name = $.name;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIotHubResourceEventHubConsumerGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventHubEndpointName;
-        private String name;
-        private String resourceGroupName;
-        private String resourceName;
+        private GetIotHubResourceEventHubConsumerGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIotHubResourceEventHubConsumerGroupArgs();
         }
 
         public Builder(GetIotHubResourceEventHubConsumerGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHubEndpointName = defaults.eventHubEndpointName;
-    	      this.name = defaults.name;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetIotHubResourceEventHubConsumerGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHubEndpointName(String eventHubEndpointName) {
-            this.eventHubEndpointName = Objects.requireNonNull(eventHubEndpointName);
+            $.eventHubEndpointName = eventHubEndpointName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetIotHubResourceEventHubConsumerGroupArgs build() {
-            return new GetIotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, resourceGroupName, resourceName);
+        }
+
+        public GetIotHubResourceEventHubConsumerGroupArgs build() {
+            $.eventHubEndpointName = Objects.requireNonNull($.eventHubEndpointName, "expected parameter 'eventHubEndpointName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

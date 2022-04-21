@@ -20,7 +20,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
      * 
      */
     @Import(name="instances", required=true)
-      private final List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
+    private List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
 
     public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances() {
         return this.instances;
@@ -31,7 +31,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
      * 
      */
     @Import(name="subnetworks", required=true)
-      private final List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
+    private List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
 
     public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks() {
         return this.subnetworks;
@@ -42,73 +42,71 @@ public final class PacketMirroringMirroredResourceInfoResponse extends com.pulum
      * 
      */
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
     }
 
-    public PacketMirroringMirroredResourceInfoResponse(
-        List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
-        List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
-        List<String> tags) {
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.subnetworks = Objects.requireNonNull(subnetworks, "expected parameter 'subnetworks' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private PacketMirroringMirroredResourceInfoResponse() {}
 
-    private PacketMirroringMirroredResourceInfoResponse() {
-        this.instances = List.of();
-        this.subnetworks = List.of();
-        this.tags = List.of();
+    private PacketMirroringMirroredResourceInfoResponse(PacketMirroringMirroredResourceInfoResponse $) {
+        this.instances = $.instances;
+        this.subnetworks = $.subnetworks;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringMirroredResourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
-        private List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
-        private List<String> tags;
+        private PacketMirroringMirroredResourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringMirroredResourceInfoResponse();
         }
 
         public Builder(PacketMirroringMirroredResourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.subnetworks = defaults.subnetworks;
-    	      this.tags = defaults.tags;
+            $ = new PacketMirroringMirroredResourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(PacketMirroringMirroredResourceInfoInstanceInfoResponse... instances) {
             return instances(List.of(instances));
         }
+
         public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
-            this.subnetworks = Objects.requireNonNull(subnetworks);
+            $.subnetworks = subnetworks;
             return this;
         }
+
         public Builder subnetworks(PacketMirroringMirroredResourceInfoSubnetInfoResponse... subnetworks) {
             return subnetworks(List.of(subnetworks));
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public PacketMirroringMirroredResourceInfoResponse build() {
-            return new PacketMirroringMirroredResourceInfoResponse(instances, subnetworks, tags);
+        }
+
+        public PacketMirroringMirroredResourceInfoResponse build() {
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.subnetworks = Objects.requireNonNull($.subnetworks, "expected parameter 'subnetworks' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

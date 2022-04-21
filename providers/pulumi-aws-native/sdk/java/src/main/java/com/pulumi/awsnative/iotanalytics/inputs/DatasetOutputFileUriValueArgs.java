@@ -5,7 +5,6 @@ package com.pulumi.awsnative.iotanalytics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class DatasetOutputFileUriValueArgs extends com.pulumi.resources.Re
     public static final DatasetOutputFileUriValueArgs Empty = new DatasetOutputFileUriValueArgs();
 
     @Import(name="fileName", required=true)
-      private final Output<String> fileName;
+    private Output<String> fileName;
 
     public Output<String> fileName() {
         return this.fileName;
     }
 
-    public DatasetOutputFileUriValueArgs(Output<String> fileName) {
-        this.fileName = Objects.requireNonNull(fileName, "expected parameter 'fileName' to be non-null");
-    }
+    private DatasetOutputFileUriValueArgs() {}
 
-    private DatasetOutputFileUriValueArgs() {
-        this.fileName = Codegen.empty();
+    private DatasetOutputFileUriValueArgs(DatasetOutputFileUriValueArgs $) {
+        this.fileName = $.fileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetOutputFileUriValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> fileName;
+        private DatasetOutputFileUriValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetOutputFileUriValueArgs();
         }
 
         public Builder(DatasetOutputFileUriValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
+            $ = new DatasetOutputFileUriValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(Output<String> fileName) {
-            this.fileName = Objects.requireNonNull(fileName);
+            $.fileName = fileName;
             return this;
         }
+
         public Builder fileName(String fileName) {
-            this.fileName = Output.of(Objects.requireNonNull(fileName));
-            return this;
-        }        public DatasetOutputFileUriValueArgs build() {
-            return new DatasetOutputFileUriValueArgs(fileName);
+            return fileName(Output.of(fileName));
+        }
+
+        public DatasetOutputFileUriValueArgs build() {
+            $.fileName = Objects.requireNonNull($.fileName, "expected parameter 'fileName' to be non-null");
+            return $;
         }
     }
+
 }

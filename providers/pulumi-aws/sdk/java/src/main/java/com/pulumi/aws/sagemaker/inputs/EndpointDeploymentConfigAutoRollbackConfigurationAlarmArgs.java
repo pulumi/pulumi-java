@@ -5,7 +5,6 @@ package com.pulumi.aws.sagemaker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs ex
      * 
      */
     @Import(name="alarmName", required=true)
-      private final Output<String> alarmName;
+    private Output<String> alarmName;
 
     public Output<String> alarmName() {
         return this.alarmName;
     }
 
-    public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(Output<String> alarmName) {
-        this.alarmName = Objects.requireNonNull(alarmName, "expected parameter 'alarmName' to be non-null");
-    }
+    private EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs() {}
 
-    private EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs() {
-        this.alarmName = Codegen.empty();
+    private EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs $) {
+        this.alarmName = $.alarmName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> alarmName;
+        private EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs();
         }
 
         public Builder(EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alarmName = defaults.alarmName;
+            $ = new EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alarmName(Output<String> alarmName) {
-            this.alarmName = Objects.requireNonNull(alarmName);
+            $.alarmName = alarmName;
             return this;
         }
+
         public Builder alarmName(String alarmName) {
-            this.alarmName = Output.of(Objects.requireNonNull(alarmName));
-            return this;
-        }        public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs build() {
-            return new EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs(alarmName);
+            return alarmName(Output.of(alarmName));
+        }
+
+        public EndpointDeploymentConfigAutoRollbackConfigurationAlarmArgs build() {
+            $.alarmName = Objects.requireNonNull($.alarmName, "expected parameter 'alarmName' to be non-null");
+            return $;
         }
     }
+
 }

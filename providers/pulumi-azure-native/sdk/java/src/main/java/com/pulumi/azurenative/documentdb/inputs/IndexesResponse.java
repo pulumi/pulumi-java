@@ -25,10 +25,10 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataType")
-      private final @Nullable String dataType;
+    private @Nullable String dataType;
 
     public Optional<String> dataType() {
-        return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
+        return Optional.ofNullable(this.dataType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -47,64 +47,58 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="precision")
-      private final @Nullable Integer precision;
+    private @Nullable Integer precision;
 
     public Optional<Integer> precision() {
-        return this.precision == null ? Optional.empty() : Optional.ofNullable(this.precision);
+        return Optional.ofNullable(this.precision);
     }
 
-    public IndexesResponse(
-        @Nullable String dataType,
-        @Nullable String kind,
-        @Nullable Integer precision) {
-        this.dataType = Codegen.stringProp("dataType").arg(dataType).def("String").getNullable();
-        this.kind = Codegen.stringProp("kind").arg(kind).def("Hash").getNullable();
-        this.precision = precision;
-    }
+    private IndexesResponse() {}
 
-    private IndexesResponse() {
-        this.dataType = null;
-        this.kind = null;
-        this.precision = null;
+    private IndexesResponse(IndexesResponse $) {
+        this.dataType = $.dataType;
+        this.kind = $.kind;
+        this.precision = $.precision;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IndexesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String dataType;
-        private @Nullable String kind;
-        private @Nullable Integer precision;
+        private IndexesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IndexesResponse();
         }
 
         public Builder(IndexesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.kind = defaults.kind;
-    	      this.precision = defaults.precision;
+            $ = new IndexesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = dataType;
+            $.dataType = dataType;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder precision(@Nullable Integer precision) {
-            this.precision = precision;
+            $.precision = precision;
             return this;
-        }        public IndexesResponse build() {
-            return new IndexesResponse(dataType, kind, precision);
+        }
+
+        public IndexesResponse build() {
+            $.dataType = Codegen.stringProp("dataType").arg($.dataType).def("String").getNullable();
+            $.kind = Codegen.stringProp("kind").arg($.kind).def("Hash").getNullable();
+            return $;
         }
     }
+
 }

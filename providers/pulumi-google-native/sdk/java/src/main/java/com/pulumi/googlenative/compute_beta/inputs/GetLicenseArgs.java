@@ -15,62 +15,58 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLicenseArgs Empty = new GetLicenseArgs();
 
     @Import(name="license", required=true)
-      private final String license;
+    private String license;
 
     public String license() {
         return this.license;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetLicenseArgs(
-        String license,
-        @Nullable String project) {
-        this.license = Objects.requireNonNull(license, "expected parameter 'license' to be non-null");
-        this.project = project;
-    }
+    private GetLicenseArgs() {}
 
-    private GetLicenseArgs() {
-        this.license = null;
-        this.project = null;
+    private GetLicenseArgs(GetLicenseArgs $) {
+        this.license = $.license;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLicenseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String license;
-        private @Nullable String project;
+        private GetLicenseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLicenseArgs();
         }
 
         public Builder(GetLicenseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.license = defaults.license;
-    	      this.project = defaults.project;
+            $ = new GetLicenseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder license(String license) {
-            this.license = Objects.requireNonNull(license);
+            $.license = license;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetLicenseArgs build() {
-            return new GetLicenseArgs(license, project);
+        }
+
+        public GetLicenseArgs build() {
+            $.license = Objects.requireNonNull($.license, "expected parameter 'license' to be non-null");
+            return $;
         }
     }
+
 }

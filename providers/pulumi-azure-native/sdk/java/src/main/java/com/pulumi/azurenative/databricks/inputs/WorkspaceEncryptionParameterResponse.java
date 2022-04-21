@@ -24,7 +24,7 @@ public final class WorkspaceEncryptionParameterResponse extends com.pulumi.resou
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -35,55 +35,51 @@ public final class WorkspaceEncryptionParameterResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value")
-      private final @Nullable EncryptionResponse value;
+    private @Nullable EncryptionResponse value;
 
     public Optional<EncryptionResponse> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public WorkspaceEncryptionParameterResponse(
-        String type,
-        @Nullable EncryptionResponse value) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value;
-    }
+    private WorkspaceEncryptionParameterResponse() {}
 
-    private WorkspaceEncryptionParameterResponse() {
-        this.type = null;
-        this.value = null;
+    private WorkspaceEncryptionParameterResponse(WorkspaceEncryptionParameterResponse $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkspaceEncryptionParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
-        private @Nullable EncryptionResponse value;
+        private WorkspaceEncryptionParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkspaceEncryptionParameterResponse();
         }
 
         public Builder(WorkspaceEncryptionParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new WorkspaceEncryptionParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder value(@Nullable EncryptionResponse value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public WorkspaceEncryptionParameterResponse build() {
-            return new WorkspaceEncryptionParameterResponse(type, value);
+        }
+
+        public WorkspaceEncryptionParameterResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

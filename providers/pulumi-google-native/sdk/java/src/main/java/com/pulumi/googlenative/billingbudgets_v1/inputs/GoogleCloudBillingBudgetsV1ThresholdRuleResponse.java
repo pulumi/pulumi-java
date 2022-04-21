@@ -22,7 +22,7 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends com.
      * 
      */
     @Import(name="spendBasis", required=true)
-      private final String spendBasis;
+    private String spendBasis;
 
     public String spendBasis() {
         return this.spendBasis;
@@ -33,55 +33,52 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse extends com.
      * 
      */
     @Import(name="thresholdPercent", required=true)
-      private final Double thresholdPercent;
+    private Double thresholdPercent;
 
     public Double thresholdPercent() {
         return this.thresholdPercent;
     }
 
-    public GoogleCloudBillingBudgetsV1ThresholdRuleResponse(
-        String spendBasis,
-        Double thresholdPercent) {
-        this.spendBasis = Objects.requireNonNull(spendBasis, "expected parameter 'spendBasis' to be non-null");
-        this.thresholdPercent = Objects.requireNonNull(thresholdPercent, "expected parameter 'thresholdPercent' to be non-null");
-    }
+    private GoogleCloudBillingBudgetsV1ThresholdRuleResponse() {}
 
-    private GoogleCloudBillingBudgetsV1ThresholdRuleResponse() {
-        this.spendBasis = null;
-        this.thresholdPercent = null;
+    private GoogleCloudBillingBudgetsV1ThresholdRuleResponse(GoogleCloudBillingBudgetsV1ThresholdRuleResponse $) {
+        this.spendBasis = $.spendBasis;
+        this.thresholdPercent = $.thresholdPercent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1ThresholdRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String spendBasis;
-        private Double thresholdPercent;
+        private GoogleCloudBillingBudgetsV1ThresholdRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1ThresholdRuleResponse();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1ThresholdRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spendBasis = defaults.spendBasis;
-    	      this.thresholdPercent = defaults.thresholdPercent;
+            $ = new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder spendBasis(String spendBasis) {
-            this.spendBasis = Objects.requireNonNull(spendBasis);
+            $.spendBasis = spendBasis;
             return this;
         }
+
         public Builder thresholdPercent(Double thresholdPercent) {
-            this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
+            $.thresholdPercent = thresholdPercent;
             return this;
-        }        public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
-            return new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(spendBasis, thresholdPercent);
+        }
+
+        public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
+            $.spendBasis = Objects.requireNonNull($.spendBasis, "expected parameter 'spendBasis' to be non-null");
+            $.thresholdPercent = Objects.requireNonNull($.thresholdPercent, "expected parameter 'thresholdPercent' to be non-null");
+            return $;
         }
     }
+
 }

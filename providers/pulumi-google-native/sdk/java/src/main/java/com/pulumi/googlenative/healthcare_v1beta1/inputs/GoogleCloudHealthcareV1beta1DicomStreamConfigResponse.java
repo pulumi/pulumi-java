@@ -21,45 +21,45 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse extends
      * 
      */
     @Import(name="bigqueryDestination", required=true)
-      private final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
+    private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
 
     public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination() {
         return this.bigqueryDestination;
     }
 
-    public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
-        this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
-    }
+    private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse() {}
 
-    private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse() {
-        this.bigqueryDestination = null;
+    private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(GoogleCloudHealthcareV1beta1DicomStreamConfigResponse $) {
+        this.bigqueryDestination = $.bigqueryDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1beta1DicomStreamConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
+        private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse();
         }
 
         public Builder(GoogleCloudHealthcareV1beta1DicomStreamConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
+            $ = new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
-            this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
+            $.bigqueryDestination = bigqueryDestination;
             return this;
-        }        public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse build() {
-            return new GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(bigqueryDestination);
+        }
+
+        public GoogleCloudHealthcareV1beta1DicomStreamConfigResponse build() {
+            $.bigqueryDestination = Objects.requireNonNull($.bigqueryDestination, "expected parameter 'bigqueryDestination' to be non-null");
+            return $;
         }
     }
+
 }

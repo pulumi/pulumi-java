@@ -7,11 +7,11 @@ import com.pulumi.awsnative.groundstation.inputs.MissionProfileDataflowEdgeArgs;
 import com.pulumi.awsnative.groundstation.inputs.MissionProfileTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contactPostPassDurationSeconds")
-      private final @Nullable Output<Integer> contactPostPassDurationSeconds;
+    private @Nullable Output<Integer> contactPostPassDurationSeconds;
 
-    public Output<Integer> contactPostPassDurationSeconds() {
-        return this.contactPostPassDurationSeconds == null ? Codegen.empty() : this.contactPostPassDurationSeconds;
+    public Optional<Output<Integer>> contactPostPassDurationSeconds() {
+        return Optional.ofNullable(this.contactPostPassDurationSeconds);
     }
 
     /**
@@ -35,14 +35,14 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="contactPrePassDurationSeconds")
-      private final @Nullable Output<Integer> contactPrePassDurationSeconds;
+    private @Nullable Output<Integer> contactPrePassDurationSeconds;
 
-    public Output<Integer> contactPrePassDurationSeconds() {
-        return this.contactPrePassDurationSeconds == null ? Codegen.empty() : this.contactPrePassDurationSeconds;
+    public Optional<Output<Integer>> contactPrePassDurationSeconds() {
+        return Optional.ofNullable(this.contactPrePassDurationSeconds);
     }
 
     @Import(name="dataflowEdges", required=true)
-      private final Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
+    private Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
 
     public Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges() {
         return this.dataflowEdges;
@@ -53,7 +53,7 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minimumViableContactDurationSeconds", required=true)
-      private final Output<Integer> minimumViableContactDurationSeconds;
+    private Output<Integer> minimumViableContactDurationSeconds;
 
     public Output<Integer> minimumViableContactDurationSeconds() {
         return this.minimumViableContactDurationSeconds;
@@ -64,148 +64,133 @@ public final class MissionProfileArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<MissionProfileTagArgs>> tags;
+    private @Nullable Output<List<MissionProfileTagArgs>> tags;
 
-    public Output<List<MissionProfileTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<MissionProfileTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     @Import(name="trackingConfigArn", required=true)
-      private final Output<String> trackingConfigArn;
+    private Output<String> trackingConfigArn;
 
     public Output<String> trackingConfigArn() {
         return this.trackingConfigArn;
     }
 
-    public MissionProfileArgs(
-        @Nullable Output<Integer> contactPostPassDurationSeconds,
-        @Nullable Output<Integer> contactPrePassDurationSeconds,
-        Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges,
-        Output<Integer> minimumViableContactDurationSeconds,
-        @Nullable Output<String> name,
-        @Nullable Output<List<MissionProfileTagArgs>> tags,
-        Output<String> trackingConfigArn) {
-        this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
-        this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
-        this.dataflowEdges = Objects.requireNonNull(dataflowEdges, "expected parameter 'dataflowEdges' to be non-null");
-        this.minimumViableContactDurationSeconds = Objects.requireNonNull(minimumViableContactDurationSeconds, "expected parameter 'minimumViableContactDurationSeconds' to be non-null");
-        this.name = name;
-        this.tags = tags;
-        this.trackingConfigArn = Objects.requireNonNull(trackingConfigArn, "expected parameter 'trackingConfigArn' to be non-null");
-    }
+    private MissionProfileArgs() {}
 
-    private MissionProfileArgs() {
-        this.contactPostPassDurationSeconds = Codegen.empty();
-        this.contactPrePassDurationSeconds = Codegen.empty();
-        this.dataflowEdges = Codegen.empty();
-        this.minimumViableContactDurationSeconds = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.trackingConfigArn = Codegen.empty();
+    private MissionProfileArgs(MissionProfileArgs $) {
+        this.contactPostPassDurationSeconds = $.contactPostPassDurationSeconds;
+        this.contactPrePassDurationSeconds = $.contactPrePassDurationSeconds;
+        this.dataflowEdges = $.dataflowEdges;
+        this.minimumViableContactDurationSeconds = $.minimumViableContactDurationSeconds;
+        this.name = $.name;
+        this.tags = $.tags;
+        this.trackingConfigArn = $.trackingConfigArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MissionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> contactPostPassDurationSeconds;
-        private @Nullable Output<Integer> contactPrePassDurationSeconds;
-        private Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
-        private Output<Integer> minimumViableContactDurationSeconds;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<MissionProfileTagArgs>> tags;
-        private Output<String> trackingConfigArn;
+        private MissionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MissionProfileArgs();
         }
 
         public Builder(MissionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactPostPassDurationSeconds = defaults.contactPostPassDurationSeconds;
-    	      this.contactPrePassDurationSeconds = defaults.contactPrePassDurationSeconds;
-    	      this.dataflowEdges = defaults.dataflowEdges;
-    	      this.minimumViableContactDurationSeconds = defaults.minimumViableContactDurationSeconds;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
-    	      this.trackingConfigArn = defaults.trackingConfigArn;
+            $ = new MissionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactPostPassDurationSeconds(@Nullable Output<Integer> contactPostPassDurationSeconds) {
-            this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
+            $.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
-        public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
-            this.contactPostPassDurationSeconds = Codegen.ofNullable(contactPostPassDurationSeconds);
-            return this;
+
+        public Builder contactPostPassDurationSeconds(Integer contactPostPassDurationSeconds) {
+            return contactPostPassDurationSeconds(Output.of(contactPostPassDurationSeconds));
         }
+
         public Builder contactPrePassDurationSeconds(@Nullable Output<Integer> contactPrePassDurationSeconds) {
-            this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
+            $.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
-        public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
-            this.contactPrePassDurationSeconds = Codegen.ofNullable(contactPrePassDurationSeconds);
-            return this;
+
+        public Builder contactPrePassDurationSeconds(Integer contactPrePassDurationSeconds) {
+            return contactPrePassDurationSeconds(Output.of(contactPrePassDurationSeconds));
         }
+
         public Builder dataflowEdges(Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges) {
-            this.dataflowEdges = Objects.requireNonNull(dataflowEdges);
+            $.dataflowEdges = dataflowEdges;
             return this;
         }
+
         public Builder dataflowEdges(List<MissionProfileDataflowEdgeArgs> dataflowEdges) {
-            this.dataflowEdges = Output.of(Objects.requireNonNull(dataflowEdges));
-            return this;
+            return dataflowEdges(Output.of(dataflowEdges));
         }
+
         public Builder dataflowEdges(MissionProfileDataflowEdgeArgs... dataflowEdges) {
             return dataflowEdges(List.of(dataflowEdges));
         }
+
         public Builder minimumViableContactDurationSeconds(Output<Integer> minimumViableContactDurationSeconds) {
-            this.minimumViableContactDurationSeconds = Objects.requireNonNull(minimumViableContactDurationSeconds);
+            $.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
             return this;
         }
+
         public Builder minimumViableContactDurationSeconds(Integer minimumViableContactDurationSeconds) {
-            this.minimumViableContactDurationSeconds = Output.of(Objects.requireNonNull(minimumViableContactDurationSeconds));
-            return this;
+            return minimumViableContactDurationSeconds(Output.of(minimumViableContactDurationSeconds));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<MissionProfileTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<MissionProfileTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<MissionProfileTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(MissionProfileTagArgs... tags) {
             return tags(List.of(tags));
         }
+
         public Builder trackingConfigArn(Output<String> trackingConfigArn) {
-            this.trackingConfigArn = Objects.requireNonNull(trackingConfigArn);
+            $.trackingConfigArn = trackingConfigArn;
             return this;
         }
+
         public Builder trackingConfigArn(String trackingConfigArn) {
-            this.trackingConfigArn = Output.of(Objects.requireNonNull(trackingConfigArn));
-            return this;
-        }        public MissionProfileArgs build() {
-            return new MissionProfileArgs(contactPostPassDurationSeconds, contactPrePassDurationSeconds, dataflowEdges, minimumViableContactDurationSeconds, name, tags, trackingConfigArn);
+            return trackingConfigArn(Output.of(trackingConfigArn));
+        }
+
+        public MissionProfileArgs build() {
+            $.dataflowEdges = Objects.requireNonNull($.dataflowEdges, "expected parameter 'dataflowEdges' to be non-null");
+            $.minimumViableContactDurationSeconds = Objects.requireNonNull($.minimumViableContactDurationSeconds, "expected parameter 'minimumViableContactDurationSeconds' to be non-null");
+            $.trackingConfigArn = Objects.requireNonNull($.trackingConfigArn, "expected parameter 'trackingConfigArn' to be non-null");
+            return $;
         }
     }
+
 }

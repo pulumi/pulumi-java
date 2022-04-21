@@ -21,10 +21,10 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="address")
-      private final @Nullable String address;
+    private @Nullable String address;
 
     public Optional<String> address() {
-        return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="administratorAccount")
-      private final @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
+    private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
 
     public Optional<VirtualMachineSshCredentialsResponse> administratorAccount() {
-        return this.administratorAccount == null ? Optional.empty() : Optional.ofNullable(this.administratorAccount);
+        return Optional.ofNullable(this.administratorAccount);
     }
 
     /**
@@ -43,64 +43,56 @@ public final class HDInsightResponseProperties extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sshPort")
-      private final @Nullable Integer sshPort;
+    private @Nullable Integer sshPort;
 
     public Optional<Integer> sshPort() {
-        return this.sshPort == null ? Optional.empty() : Optional.ofNullable(this.sshPort);
+        return Optional.ofNullable(this.sshPort);
     }
 
-    public HDInsightResponseProperties(
-        @Nullable String address,
-        @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @Nullable Integer sshPort) {
-        this.address = address;
-        this.administratorAccount = administratorAccount;
-        this.sshPort = sshPort;
-    }
+    private HDInsightResponseProperties() {}
 
-    private HDInsightResponseProperties() {
-        this.address = null;
-        this.administratorAccount = null;
-        this.sshPort = null;
+    private HDInsightResponseProperties(HDInsightResponseProperties $) {
+        this.address = $.address;
+        this.administratorAccount = $.administratorAccount;
+        this.sshPort = $.sshPort;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HDInsightResponseProperties defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String address;
-        private @Nullable VirtualMachineSshCredentialsResponse administratorAccount;
-        private @Nullable Integer sshPort;
+        private HDInsightResponseProperties $;
 
         public Builder() {
-    	      // Empty
+            $ = new HDInsightResponseProperties();
         }
 
         public Builder(HDInsightResponseProperties defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.administratorAccount = defaults.administratorAccount;
-    	      this.sshPort = defaults.sshPort;
+            $ = new HDInsightResponseProperties(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable String address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
+
         public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
-            this.administratorAccount = administratorAccount;
+            $.administratorAccount = administratorAccount;
             return this;
         }
+
         public Builder sshPort(@Nullable Integer sshPort) {
-            this.sshPort = sshPort;
+            $.sshPort = sshPort;
             return this;
-        }        public HDInsightResponseProperties build() {
-            return new HDInsightResponseProperties(address, administratorAccount, sshPort);
+        }
+
+        public HDInsightResponseProperties build() {
+            return $;
         }
     }
+
 }

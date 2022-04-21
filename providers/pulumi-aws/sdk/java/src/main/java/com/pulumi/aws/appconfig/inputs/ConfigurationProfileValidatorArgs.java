@@ -5,9 +5,9 @@ package com.pulumi.aws.appconfig.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ConfigurationProfileValidatorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="content")
-      private final @Nullable Output<String> content;
+    private @Nullable Output<String> content;
 
-    public Output<String> content() {
-        return this.content == null ? Codegen.empty() : this.content;
+    public Optional<Output<String>> content() {
+        return Optional.ofNullable(this.content);
     }
 
     /**
@@ -31,63 +31,59 @@ public final class ConfigurationProfileValidatorArgs extends com.pulumi.resource
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public ConfigurationProfileValidatorArgs(
-        @Nullable Output<String> content,
-        Output<String> type) {
-        this.content = content;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ConfigurationProfileValidatorArgs() {}
 
-    private ConfigurationProfileValidatorArgs() {
-        this.content = Codegen.empty();
-        this.type = Codegen.empty();
+    private ConfigurationProfileValidatorArgs(ConfigurationProfileValidatorArgs $) {
+        this.content = $.content;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationProfileValidatorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> content;
-        private Output<String> type;
+        private ConfigurationProfileValidatorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationProfileValidatorArgs();
         }
 
         public Builder(ConfigurationProfileValidatorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.type = defaults.type;
+            $ = new ConfigurationProfileValidatorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(@Nullable Output<String> content) {
-            this.content = content;
+            $.content = content;
             return this;
         }
-        public Builder content(@Nullable String content) {
-            this.content = Codegen.ofNullable(content);
-            return this;
+
+        public Builder content(String content) {
+            return content(Output.of(content));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ConfigurationProfileValidatorArgs build() {
-            return new ConfigurationProfileValidatorArgs(content, type);
+            return type(Output.of(type));
+        }
+
+        public ConfigurationProfileValidatorArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

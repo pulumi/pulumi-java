@@ -8,10 +8,10 @@ import com.pulumi.azurenative.cdn.inputs.ManagedCertificateParametersArgs;
 import com.pulumi.azurenative.cdn.inputs.UrlSigningKeyParametersArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Object> parameters;
+    private @Nullable Output<Object> parameters;
 
-    public Output<Object> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Object>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="profileName", required=true)
-      private final Output<String> profileName;
+    private Output<String> profileName;
 
     public Output<String> profileName() {
         return this.profileName;
@@ -46,7 +46,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -57,89 +57,80 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretName")
-      private final @Nullable Output<String> secretName;
+    private @Nullable Output<String> secretName;
 
-    public Output<String> secretName() {
-        return this.secretName == null ? Codegen.empty() : this.secretName;
+    public Optional<Output<String>> secretName() {
+        return Optional.ofNullable(this.secretName);
     }
 
-    public SecretArgs(
-        @Nullable Output<Object> parameters,
-        Output<String> profileName,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> secretName) {
-        this.parameters = parameters;
-        this.profileName = Objects.requireNonNull(profileName, "expected parameter 'profileName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.secretName = secretName;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.parameters = Codegen.empty();
-        this.profileName = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.secretName = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.parameters = $.parameters;
+        this.profileName = $.profileName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Object> parameters;
-        private Output<String> profileName;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> secretName;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.profileName = defaults.profileName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.secretName = defaults.secretName;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<Object> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Object parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Object parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder profileName(Output<String> profileName) {
-            this.profileName = Objects.requireNonNull(profileName);
+            $.profileName = profileName;
             return this;
         }
+
         public Builder profileName(String profileName) {
-            this.profileName = Output.of(Objects.requireNonNull(profileName));
-            return this;
+            return profileName(Output.of(profileName));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder secretName(@Nullable Output<String> secretName) {
-            this.secretName = secretName;
+            $.secretName = secretName;
             return this;
         }
-        public Builder secretName(@Nullable String secretName) {
-            this.secretName = Codegen.ofNullable(secretName);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(parameters, profileName, resourceGroupName, secretName);
+
+        public Builder secretName(String secretName) {
+            return secretName(Output.of(secretName));
+        }
+
+        public SecretArgs build() {
+            $.profileName = Objects.requireNonNull($.profileName, "expected parameter 'profileName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

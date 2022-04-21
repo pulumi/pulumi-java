@@ -5,10 +5,10 @@ package com.pulumi.gcp.pubsub;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.pubsub.inputs.LiteSubscriptionDeliveryConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deliveryConfig")
-      private final @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
+    private @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
 
-    public Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig() {
-        return this.deliveryConfig == null ? Codegen.empty() : this.deliveryConfig;
+    public Optional<Output<LiteSubscriptionDeliveryConfigArgs>> deliveryConfig() {
+        return Optional.ofNullable(this.deliveryConfig);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="topic", required=true)
-      private final Output<String> topic;
+    private Output<String> topic;
 
     public Output<String> topic() {
         return this.topic;
@@ -78,115 +78,99 @@ public final class LiteSubscriptionArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public LiteSubscriptionArgs(
-        @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        Output<String> topic,
-        @Nullable Output<String> zone) {
-        this.deliveryConfig = deliveryConfig;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-        this.zone = zone;
-    }
+    private LiteSubscriptionArgs() {}
 
-    private LiteSubscriptionArgs() {
-        this.deliveryConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.topic = Codegen.empty();
-        this.zone = Codegen.empty();
+    private LiteSubscriptionArgs(LiteSubscriptionArgs $) {
+        this.deliveryConfig = $.deliveryConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.topic = $.topic;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LiteSubscriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private Output<String> topic;
-        private @Nullable Output<String> zone;
+        private LiteSubscriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LiteSubscriptionArgs();
         }
 
         public Builder(LiteSubscriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryConfig = defaults.deliveryConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.topic = defaults.topic;
-    	      this.zone = defaults.zone;
+            $ = new LiteSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryConfig(@Nullable Output<LiteSubscriptionDeliveryConfigArgs> deliveryConfig) {
-            this.deliveryConfig = deliveryConfig;
+            $.deliveryConfig = deliveryConfig;
             return this;
         }
-        public Builder deliveryConfig(@Nullable LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
-            this.deliveryConfig = Codegen.ofNullable(deliveryConfig);
-            return this;
+
+        public Builder deliveryConfig(LiteSubscriptionDeliveryConfigArgs deliveryConfig) {
+            return deliveryConfig(Output.of(deliveryConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder topic(Output<String> topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Output.of(Objects.requireNonNull(topic));
-            return this;
+            return topic(Output.of(topic));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public LiteSubscriptionArgs build() {
-            return new LiteSubscriptionArgs(deliveryConfig, name, project, region, topic, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public LiteSubscriptionArgs build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

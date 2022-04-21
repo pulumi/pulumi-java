@@ -17,116 +17,107 @@ public final class DataSourceColumnConfiguration extends com.pulumi.resources.In
     public static final DataSourceColumnConfiguration Empty = new DataSourceColumnConfiguration();
 
     @Import(name="changeDetectingColumns", required=true)
-      private final List<String> changeDetectingColumns;
+    private List<String> changeDetectingColumns;
 
     public List<String> changeDetectingColumns() {
         return this.changeDetectingColumns;
     }
 
     @Import(name="documentDataColumnName", required=true)
-      private final String documentDataColumnName;
+    private String documentDataColumnName;
 
     public String documentDataColumnName() {
         return this.documentDataColumnName;
     }
 
     @Import(name="documentIdColumnName", required=true)
-      private final String documentIdColumnName;
+    private String documentIdColumnName;
 
     public String documentIdColumnName() {
         return this.documentIdColumnName;
     }
 
     @Import(name="documentTitleColumnName")
-      private final @Nullable String documentTitleColumnName;
+    private @Nullable String documentTitleColumnName;
 
     public Optional<String> documentTitleColumnName() {
-        return this.documentTitleColumnName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleColumnName);
+        return Optional.ofNullable(this.documentTitleColumnName);
     }
 
     @Import(name="fieldMappings")
-      private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+    private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
-    public List<DataSourceToIndexFieldMapping> fieldMappings() {
-        return this.fieldMappings == null ? List.of() : this.fieldMappings;
+    public Optional<List<DataSourceToIndexFieldMapping>> fieldMappings() {
+        return Optional.ofNullable(this.fieldMappings);
     }
 
-    public DataSourceColumnConfiguration(
-        List<String> changeDetectingColumns,
-        String documentDataColumnName,
-        String documentIdColumnName,
-        @Nullable String documentTitleColumnName,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-        this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns, "expected parameter 'changeDetectingColumns' to be non-null");
-        this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName, "expected parameter 'documentDataColumnName' to be non-null");
-        this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName, "expected parameter 'documentIdColumnName' to be non-null");
-        this.documentTitleColumnName = documentTitleColumnName;
-        this.fieldMappings = fieldMappings;
-    }
+    private DataSourceColumnConfiguration() {}
 
-    private DataSourceColumnConfiguration() {
-        this.changeDetectingColumns = List.of();
-        this.documentDataColumnName = null;
-        this.documentIdColumnName = null;
-        this.documentTitleColumnName = null;
-        this.fieldMappings = List.of();
+    private DataSourceColumnConfiguration(DataSourceColumnConfiguration $) {
+        this.changeDetectingColumns = $.changeDetectingColumns;
+        this.documentDataColumnName = $.documentDataColumnName;
+        this.documentIdColumnName = $.documentIdColumnName;
+        this.documentTitleColumnName = $.documentTitleColumnName;
+        this.fieldMappings = $.fieldMappings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceColumnConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> changeDetectingColumns;
-        private String documentDataColumnName;
-        private String documentIdColumnName;
-        private @Nullable String documentTitleColumnName;
-        private @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private DataSourceColumnConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceColumnConfiguration();
         }
 
         public Builder(DataSourceColumnConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.changeDetectingColumns = defaults.changeDetectingColumns;
-    	      this.documentDataColumnName = defaults.documentDataColumnName;
-    	      this.documentIdColumnName = defaults.documentIdColumnName;
-    	      this.documentTitleColumnName = defaults.documentTitleColumnName;
-    	      this.fieldMappings = defaults.fieldMappings;
+            $ = new DataSourceColumnConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder changeDetectingColumns(List<String> changeDetectingColumns) {
-            this.changeDetectingColumns = Objects.requireNonNull(changeDetectingColumns);
+            $.changeDetectingColumns = changeDetectingColumns;
             return this;
         }
+
         public Builder changeDetectingColumns(String... changeDetectingColumns) {
             return changeDetectingColumns(List.of(changeDetectingColumns));
         }
+
         public Builder documentDataColumnName(String documentDataColumnName) {
-            this.documentDataColumnName = Objects.requireNonNull(documentDataColumnName);
+            $.documentDataColumnName = documentDataColumnName;
             return this;
         }
+
         public Builder documentIdColumnName(String documentIdColumnName) {
-            this.documentIdColumnName = Objects.requireNonNull(documentIdColumnName);
+            $.documentIdColumnName = documentIdColumnName;
             return this;
         }
+
         public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
-            this.documentTitleColumnName = documentTitleColumnName;
+            $.documentTitleColumnName = documentTitleColumnName;
             return this;
         }
+
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
-            this.fieldMappings = fieldMappings;
+            $.fieldMappings = fieldMappings;
             return this;
         }
+
         public Builder fieldMappings(DataSourceToIndexFieldMapping... fieldMappings) {
             return fieldMappings(List.of(fieldMappings));
-        }        public DataSourceColumnConfiguration build() {
-            return new DataSourceColumnConfiguration(changeDetectingColumns, documentDataColumnName, documentIdColumnName, documentTitleColumnName, fieldMappings);
+        }
+
+        public DataSourceColumnConfiguration build() {
+            $.changeDetectingColumns = Objects.requireNonNull($.changeDetectingColumns, "expected parameter 'changeDetectingColumns' to be non-null");
+            $.documentDataColumnName = Objects.requireNonNull($.documentDataColumnName, "expected parameter 'documentDataColumnName' to be non-null");
+            $.documentIdColumnName = Objects.requireNonNull($.documentIdColumnName, "expected parameter 'documentIdColumnName' to be non-null");
+            return $;
         }
     }
+
 }

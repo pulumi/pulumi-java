@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.IstioConfigAuth;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<IstioConfigAuth> auth;
+    private @Nullable Output<IstioConfigAuth> auth;
 
-    public Output<IstioConfigAuth> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<IstioConfigAuth>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class IstioConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
-    public IstioConfigArgs(
-        @Nullable Output<IstioConfigAuth> auth,
-        @Nullable Output<Boolean> disabled) {
-        this.auth = auth;
-        this.disabled = disabled;
-    }
+    private IstioConfigArgs() {}
 
-    private IstioConfigArgs() {
-        this.auth = Codegen.empty();
-        this.disabled = Codegen.empty();
+    private IstioConfigArgs(IstioConfigArgs $) {
+        this.auth = $.auth;
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IstioConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IstioConfigAuth> auth;
-        private @Nullable Output<Boolean> disabled;
+        private IstioConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IstioConfigArgs();
         }
 
         public Builder(IstioConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.disabled = defaults.disabled;
+            $ = new IstioConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<IstioConfigAuth> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable IstioConfigAuth auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(IstioConfigAuth auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
-        }        public IstioConfigArgs build() {
-            return new IstioConfigArgs(auth, disabled);
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
+        }
+
+        public IstioConfigArgs build() {
+            return $;
         }
     }
+
 }

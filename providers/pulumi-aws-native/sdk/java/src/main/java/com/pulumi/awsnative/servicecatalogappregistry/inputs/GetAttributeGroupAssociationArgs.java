@@ -13,45 +13,45 @@ public final class GetAttributeGroupAssociationArgs extends com.pulumi.resources
     public static final GetAttributeGroupAssociationArgs Empty = new GetAttributeGroupAssociationArgs();
 
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
     }
 
-    public GetAttributeGroupAssociationArgs(String id) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-    }
+    private GetAttributeGroupAssociationArgs() {}
 
-    private GetAttributeGroupAssociationArgs() {
-        this.id = null;
+    private GetAttributeGroupAssociationArgs(GetAttributeGroupAssociationArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttributeGroupAssociationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
+        private GetAttributeGroupAssociationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttributeGroupAssociationArgs();
         }
 
         public Builder(GetAttributeGroupAssociationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new GetAttributeGroupAssociationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
-        }        public GetAttributeGroupAssociationArgs build() {
-            return new GetAttributeGroupAssociationArgs(id);
+        }
+
+        public GetAttributeGroupAssociationArgs build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

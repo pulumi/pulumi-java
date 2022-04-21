@@ -17,45 +17,45 @@ public final class TransactionInfoResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="transactionId", required=true)
-      private final String transactionId;
+    private String transactionId;
 
     public String transactionId() {
         return this.transactionId;
     }
 
-    public TransactionInfoResponse(String transactionId) {
-        this.transactionId = Objects.requireNonNull(transactionId, "expected parameter 'transactionId' to be non-null");
-    }
+    private TransactionInfoResponse() {}
 
-    private TransactionInfoResponse() {
-        this.transactionId = null;
+    private TransactionInfoResponse(TransactionInfoResponse $) {
+        this.transactionId = $.transactionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransactionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String transactionId;
+        private TransactionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransactionInfoResponse();
         }
 
         public Builder(TransactionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transactionId = defaults.transactionId;
+            $ = new TransactionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transactionId(String transactionId) {
-            this.transactionId = Objects.requireNonNull(transactionId);
+            $.transactionId = transactionId;
             return this;
-        }        public TransactionInfoResponse build() {
-            return new TransactionInfoResponse(transactionId);
+        }
+
+        public TransactionInfoResponse build() {
+            $.transactionId = Objects.requireNonNull($.transactionId, "expected parameter 'transactionId' to be non-null");
+            return $;
         }
     }
+
 }

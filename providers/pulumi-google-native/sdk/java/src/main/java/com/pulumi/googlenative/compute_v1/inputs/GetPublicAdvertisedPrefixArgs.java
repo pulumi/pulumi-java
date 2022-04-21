@@ -15,62 +15,58 @@ public final class GetPublicAdvertisedPrefixArgs extends com.pulumi.resources.In
     public static final GetPublicAdvertisedPrefixArgs Empty = new GetPublicAdvertisedPrefixArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicAdvertisedPrefix", required=true)
-      private final String publicAdvertisedPrefix;
+    private String publicAdvertisedPrefix;
 
     public String publicAdvertisedPrefix() {
         return this.publicAdvertisedPrefix;
     }
 
-    public GetPublicAdvertisedPrefixArgs(
-        @Nullable String project,
-        String publicAdvertisedPrefix) {
-        this.project = project;
-        this.publicAdvertisedPrefix = Objects.requireNonNull(publicAdvertisedPrefix, "expected parameter 'publicAdvertisedPrefix' to be non-null");
-    }
+    private GetPublicAdvertisedPrefixArgs() {}
 
-    private GetPublicAdvertisedPrefixArgs() {
-        this.project = null;
-        this.publicAdvertisedPrefix = null;
+    private GetPublicAdvertisedPrefixArgs(GetPublicAdvertisedPrefixArgs $) {
+        this.project = $.project;
+        this.publicAdvertisedPrefix = $.publicAdvertisedPrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPublicAdvertisedPrefixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String publicAdvertisedPrefix;
+        private GetPublicAdvertisedPrefixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPublicAdvertisedPrefixArgs();
         }
 
         public Builder(GetPublicAdvertisedPrefixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.publicAdvertisedPrefix = defaults.publicAdvertisedPrefix;
+            $ = new GetPublicAdvertisedPrefixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder publicAdvertisedPrefix(String publicAdvertisedPrefix) {
-            this.publicAdvertisedPrefix = Objects.requireNonNull(publicAdvertisedPrefix);
+            $.publicAdvertisedPrefix = publicAdvertisedPrefix;
             return this;
-        }        public GetPublicAdvertisedPrefixArgs build() {
-            return new GetPublicAdvertisedPrefixArgs(project, publicAdvertisedPrefix);
+        }
+
+        public GetPublicAdvertisedPrefixArgs build() {
+            $.publicAdvertisedPrefix = Objects.requireNonNull($.publicAdvertisedPrefix, "expected parameter 'publicAdvertisedPrefix' to be non-null");
+            return $;
         }
     }
+
 }

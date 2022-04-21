@@ -17,62 +17,59 @@ public final class ConformancePackInputParameter extends com.pulumi.resources.In
     public static final ConformancePackInputParameter Empty = new ConformancePackInputParameter();
 
     @Import(name="parameterName", required=true)
-      private final String parameterName;
+    private String parameterName;
 
     public String parameterName() {
         return this.parameterName;
     }
 
     @Import(name="parameterValue", required=true)
-      private final String parameterValue;
+    private String parameterValue;
 
     public String parameterValue() {
         return this.parameterValue;
     }
 
-    public ConformancePackInputParameter(
-        String parameterName,
-        String parameterValue) {
-        this.parameterName = Objects.requireNonNull(parameterName, "expected parameter 'parameterName' to be non-null");
-        this.parameterValue = Objects.requireNonNull(parameterValue, "expected parameter 'parameterValue' to be non-null");
-    }
+    private ConformancePackInputParameter() {}
 
-    private ConformancePackInputParameter() {
-        this.parameterName = null;
-        this.parameterValue = null;
+    private ConformancePackInputParameter(ConformancePackInputParameter $) {
+        this.parameterName = $.parameterName;
+        this.parameterValue = $.parameterValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConformancePackInputParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterName;
-        private String parameterValue;
+        private ConformancePackInputParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConformancePackInputParameter();
         }
 
         public Builder(ConformancePackInputParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterName = defaults.parameterName;
-    	      this.parameterValue = defaults.parameterValue;
+            $ = new ConformancePackInputParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterName(String parameterName) {
-            this.parameterName = Objects.requireNonNull(parameterName);
+            $.parameterName = parameterName;
             return this;
         }
+
         public Builder parameterValue(String parameterValue) {
-            this.parameterValue = Objects.requireNonNull(parameterValue);
+            $.parameterValue = parameterValue;
             return this;
-        }        public ConformancePackInputParameter build() {
-            return new ConformancePackInputParameter(parameterName, parameterValue);
+        }
+
+        public ConformancePackInputParameter build() {
+            $.parameterName = Objects.requireNonNull($.parameterName, "expected parameter 'parameterName' to be non-null");
+            $.parameterValue = Objects.requireNonNull($.parameterValue, "expected parameter 'parameterValue' to be non-null");
+            return $;
         }
     }
+
 }

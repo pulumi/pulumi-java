@@ -13,45 +13,45 @@ public final class GetProjectIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetProjectIamPolicyArgs Empty = new GetProjectIamPolicyArgs();
 
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetProjectIamPolicyArgs(String resource) {
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetProjectIamPolicyArgs() {}
 
-    private GetProjectIamPolicyArgs() {
-        this.resource = null;
+    private GetProjectIamPolicyArgs(GetProjectIamPolicyArgs $) {
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProjectIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resource;
+        private GetProjectIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProjectIamPolicyArgs();
         }
 
         public Builder(GetProjectIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resource = defaults.resource;
+            $ = new GetProjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetProjectIamPolicyArgs build() {
-            return new GetProjectIamPolicyArgs(resource);
+        }
+
+        public GetProjectIamPolicyArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class RolePolicy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyDocument", required=true)
-      private final String policyDocument;
+    private String policyDocument;
 
     public String policyDocument() {
         return this.policyDocument;
@@ -32,55 +32,52 @@ public final class RolePolicy extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="policyName", required=true)
-      private final String policyName;
+    private String policyName;
 
     public String policyName() {
         return this.policyName;
     }
 
-    public RolePolicy(
-        String policyDocument,
-        String policyName) {
-        this.policyDocument = Objects.requireNonNull(policyDocument, "expected parameter 'policyDocument' to be non-null");
-        this.policyName = Objects.requireNonNull(policyName, "expected parameter 'policyName' to be non-null");
-    }
+    private RolePolicy() {}
 
-    private RolePolicy() {
-        this.policyDocument = null;
-        this.policyName = null;
+    private RolePolicy(RolePolicy $) {
+        this.policyDocument = $.policyDocument;
+        this.policyName = $.policyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RolePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyDocument;
-        private String policyName;
+        private RolePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new RolePolicy();
         }
 
         public Builder(RolePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyDocument = defaults.policyDocument;
-    	      this.policyName = defaults.policyName;
+            $ = new RolePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder policyDocument(String policyDocument) {
-            this.policyDocument = Objects.requireNonNull(policyDocument);
+            $.policyDocument = policyDocument;
             return this;
         }
+
         public Builder policyName(String policyName) {
-            this.policyName = Objects.requireNonNull(policyName);
+            $.policyName = policyName;
             return this;
-        }        public RolePolicy build() {
-            return new RolePolicy(policyDocument, policyName);
+        }
+
+        public RolePolicy build() {
+            $.policyDocument = Objects.requireNonNull($.policyDocument, "expected parameter 'policyDocument' to be non-null");
+            $.policyName = Objects.requireNonNull($.policyName, "expected parameter 'policyName' to be non-null");
+            return $;
         }
     }
+
 }

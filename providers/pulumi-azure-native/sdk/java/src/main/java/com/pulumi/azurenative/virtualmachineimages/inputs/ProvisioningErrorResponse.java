@@ -23,10 +23,10 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="message")
-      private final @Nullable String message;
+    private @Nullable String message;
 
     public Optional<String> message() {
-        return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ProvisioningErrorResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="provisioningErrorCode")
-      private final @Nullable String provisioningErrorCode;
+    private @Nullable String provisioningErrorCode;
 
     public Optional<String> provisioningErrorCode() {
-        return this.provisioningErrorCode == null ? Optional.empty() : Optional.ofNullable(this.provisioningErrorCode);
+        return Optional.ofNullable(this.provisioningErrorCode);
     }
 
-    public ProvisioningErrorResponse(
-        @Nullable String message,
-        @Nullable String provisioningErrorCode) {
-        this.message = message;
-        this.provisioningErrorCode = provisioningErrorCode;
-    }
+    private ProvisioningErrorResponse() {}
 
-    private ProvisioningErrorResponse() {
-        this.message = null;
-        this.provisioningErrorCode = null;
+    private ProvisioningErrorResponse(ProvisioningErrorResponse $) {
+        this.message = $.message;
+        this.provisioningErrorCode = $.provisioningErrorCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProvisioningErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String message;
-        private @Nullable String provisioningErrorCode;
+        private ProvisioningErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProvisioningErrorResponse();
         }
 
         public Builder(ProvisioningErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.provisioningErrorCode = defaults.provisioningErrorCode;
+            $ = new ProvisioningErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable String message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
+
         public Builder provisioningErrorCode(@Nullable String provisioningErrorCode) {
-            this.provisioningErrorCode = provisioningErrorCode;
+            $.provisioningErrorCode = provisioningErrorCode;
             return this;
-        }        public ProvisioningErrorResponse build() {
-            return new ProvisioningErrorResponse(message, provisioningErrorCode);
+        }
+
+        public ProvisioningErrorResponse build() {
+            return $;
         }
     }
+
 }

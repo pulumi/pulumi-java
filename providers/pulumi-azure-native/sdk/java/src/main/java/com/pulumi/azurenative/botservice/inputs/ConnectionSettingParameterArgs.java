@@ -5,9 +5,9 @@ package com.pulumi.azurenative.botservice.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConnectionSettingParameterArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ConnectionSettingParameterArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ConnectionSettingParameterArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<String> value) {
-        this.key = key;
-        this.value = value;
-    }
+    private ConnectionSettingParameterArgs() {}
 
-    private ConnectionSettingParameterArgs() {
-        this.key = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConnectionSettingParameterArgs(ConnectionSettingParameterArgs $) {
+        this.key = $.key;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionSettingParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> value;
+        private ConnectionSettingParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionSettingParameterArgs();
         }
 
         public Builder(ConnectionSettingParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.value = defaults.value;
+            $ = new ConnectionSettingParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ConnectionSettingParameterArgs build() {
-            return new ConnectionSettingParameterArgs(key, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public ConnectionSettingParameterArgs build() {
+            return $;
         }
     }
+
 }

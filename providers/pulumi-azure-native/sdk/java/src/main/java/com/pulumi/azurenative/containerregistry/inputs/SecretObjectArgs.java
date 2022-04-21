@@ -7,9 +7,9 @@ import com.pulumi.azurenative.containerregistry.enums.SecretObjectType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<Either<String,SecretObjectType>> type;
+    private @Nullable Output<Either<String,SecretObjectType>> type;
 
-    public Output<Either<String,SecretObjectType>> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<Either<String,SecretObjectType>>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -40,63 +40,58 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public SecretObjectArgs(
-        @Nullable Output<Either<String,SecretObjectType>> type,
-        @Nullable Output<String> value) {
-        this.type = type;
-        this.value = value;
-    }
+    private SecretObjectArgs() {}
 
-    private SecretObjectArgs() {
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private SecretObjectArgs(SecretObjectArgs $) {
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,SecretObjectType>> type;
-        private @Nullable Output<String> value;
+        private SecretObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretObjectArgs();
         }
 
         public Builder(SecretObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new SecretObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder type(@Nullable Output<Either<String,SecretObjectType>> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable Either<String,SecretObjectType> type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(Either<String,SecretObjectType> type) {
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public SecretObjectArgs build() {
-            return new SecretObjectArgs(type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public SecretObjectArgs build() {
+            return $;
         }
     }
+
 }

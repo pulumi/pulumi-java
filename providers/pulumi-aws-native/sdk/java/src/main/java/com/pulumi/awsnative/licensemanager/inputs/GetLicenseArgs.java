@@ -17,45 +17,45 @@ public final class GetLicenseArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="licenseArn", required=true)
-      private final String licenseArn;
+    private String licenseArn;
 
     public String licenseArn() {
         return this.licenseArn;
     }
 
-    public GetLicenseArgs(String licenseArn) {
-        this.licenseArn = Objects.requireNonNull(licenseArn, "expected parameter 'licenseArn' to be non-null");
-    }
+    private GetLicenseArgs() {}
 
-    private GetLicenseArgs() {
-        this.licenseArn = null;
+    private GetLicenseArgs(GetLicenseArgs $) {
+        this.licenseArn = $.licenseArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLicenseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String licenseArn;
+        private GetLicenseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLicenseArgs();
         }
 
         public Builder(GetLicenseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.licenseArn = defaults.licenseArn;
+            $ = new GetLicenseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder licenseArn(String licenseArn) {
-            this.licenseArn = Objects.requireNonNull(licenseArn);
+            $.licenseArn = licenseArn;
             return this;
-        }        public GetLicenseArgs build() {
-            return new GetLicenseArgs(licenseArn);
+        }
+
+        public GetLicenseArgs build() {
+            $.licenseArn = Objects.requireNonNull($.licenseArn, "expected parameter 'licenseArn' to be non-null");
+            return $;
         }
     }
+
 }

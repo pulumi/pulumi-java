@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DatastoreOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HybridOptionsArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TimespanConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="bigQueryOptions")
-      private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
+    private @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
-    public Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions() {
-        return this.bigQueryOptions == null ? Codegen.empty() : this.bigQueryOptions;
+    public Optional<Output<GooglePrivacyDlpV2BigQueryOptionsArgs>> bigQueryOptions() {
+        return Optional.ofNullable(this.bigQueryOptions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="cloudStorageOptions")
-      private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
+    private @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
-    public Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions() {
-        return this.cloudStorageOptions == null ? Codegen.empty() : this.cloudStorageOptions;
+    public Optional<Output<GooglePrivacyDlpV2CloudStorageOptionsArgs>> cloudStorageOptions() {
+        return Optional.ofNullable(this.cloudStorageOptions);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="datastoreOptions")
-      private final @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
+    private @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
-    public Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions() {
-        return this.datastoreOptions == null ? Codegen.empty() : this.datastoreOptions;
+    public Optional<Output<GooglePrivacyDlpV2DatastoreOptionsArgs>> datastoreOptions() {
+        return Optional.ofNullable(this.datastoreOptions);
     }
 
     /**
@@ -61,109 +61,95 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="hybridOptions")
-      private final @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
+    private @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
-    public Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions() {
-        return this.hybridOptions == null ? Codegen.empty() : this.hybridOptions;
+    public Optional<Output<GooglePrivacyDlpV2HybridOptionsArgs>> hybridOptions() {
+        return Optional.ofNullable(this.hybridOptions);
     }
 
     @Import(name="timespanConfig")
-      private final @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
+    private @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 
-    public Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig() {
-        return this.timespanConfig == null ? Codegen.empty() : this.timespanConfig;
+    public Optional<Output<GooglePrivacyDlpV2TimespanConfigArgs>> timespanConfig() {
+        return Optional.ofNullable(this.timespanConfig);
     }
 
-    public GooglePrivacyDlpV2StorageConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions,
-        @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions,
-        @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions,
-        @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions,
-        @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
-        this.bigQueryOptions = bigQueryOptions;
-        this.cloudStorageOptions = cloudStorageOptions;
-        this.datastoreOptions = datastoreOptions;
-        this.hybridOptions = hybridOptions;
-        this.timespanConfig = timespanConfig;
-    }
+    private GooglePrivacyDlpV2StorageConfigArgs() {}
 
-    private GooglePrivacyDlpV2StorageConfigArgs() {
-        this.bigQueryOptions = Codegen.empty();
-        this.cloudStorageOptions = Codegen.empty();
-        this.datastoreOptions = Codegen.empty();
-        this.hybridOptions = Codegen.empty();
-        this.timespanConfig = Codegen.empty();
+    private GooglePrivacyDlpV2StorageConfigArgs(GooglePrivacyDlpV2StorageConfigArgs $) {
+        this.bigQueryOptions = $.bigQueryOptions;
+        this.cloudStorageOptions = $.cloudStorageOptions;
+        this.datastoreOptions = $.datastoreOptions;
+        this.hybridOptions = $.hybridOptions;
+        this.timespanConfig = $.timespanConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StorageConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
-        private @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
-        private @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
-        private @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
-        private @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
+        private GooglePrivacyDlpV2StorageConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StorageConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2StorageConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryOptions = defaults.bigQueryOptions;
-    	      this.cloudStorageOptions = defaults.cloudStorageOptions;
-    	      this.datastoreOptions = defaults.datastoreOptions;
-    	      this.hybridOptions = defaults.hybridOptions;
-    	      this.timespanConfig = defaults.timespanConfig;
+            $ = new GooglePrivacyDlpV2StorageConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryOptions(@Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions) {
-            this.bigQueryOptions = bigQueryOptions;
+            $.bigQueryOptions = bigQueryOptions;
             return this;
         }
-        public Builder bigQueryOptions(@Nullable GooglePrivacyDlpV2BigQueryOptionsArgs bigQueryOptions) {
-            this.bigQueryOptions = Codegen.ofNullable(bigQueryOptions);
-            return this;
+
+        public Builder bigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsArgs bigQueryOptions) {
+            return bigQueryOptions(Output.of(bigQueryOptions));
         }
+
         public Builder cloudStorageOptions(@Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions) {
-            this.cloudStorageOptions = cloudStorageOptions;
+            $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
-        public Builder cloudStorageOptions(@Nullable GooglePrivacyDlpV2CloudStorageOptionsArgs cloudStorageOptions) {
-            this.cloudStorageOptions = Codegen.ofNullable(cloudStorageOptions);
-            return this;
+
+        public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsArgs cloudStorageOptions) {
+            return cloudStorageOptions(Output.of(cloudStorageOptions));
         }
+
         public Builder datastoreOptions(@Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions) {
-            this.datastoreOptions = datastoreOptions;
+            $.datastoreOptions = datastoreOptions;
             return this;
         }
-        public Builder datastoreOptions(@Nullable GooglePrivacyDlpV2DatastoreOptionsArgs datastoreOptions) {
-            this.datastoreOptions = Codegen.ofNullable(datastoreOptions);
-            return this;
+
+        public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsArgs datastoreOptions) {
+            return datastoreOptions(Output.of(datastoreOptions));
         }
+
         public Builder hybridOptions(@Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions) {
-            this.hybridOptions = hybridOptions;
+            $.hybridOptions = hybridOptions;
             return this;
         }
-        public Builder hybridOptions(@Nullable GooglePrivacyDlpV2HybridOptionsArgs hybridOptions) {
-            this.hybridOptions = Codegen.ofNullable(hybridOptions);
-            return this;
+
+        public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsArgs hybridOptions) {
+            return hybridOptions(Output.of(hybridOptions));
         }
+
         public Builder timespanConfig(@Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig) {
-            this.timespanConfig = timespanConfig;
+            $.timespanConfig = timespanConfig;
             return this;
         }
-        public Builder timespanConfig(@Nullable GooglePrivacyDlpV2TimespanConfigArgs timespanConfig) {
-            this.timespanConfig = Codegen.ofNullable(timespanConfig);
-            return this;
-        }        public GooglePrivacyDlpV2StorageConfigArgs build() {
-            return new GooglePrivacyDlpV2StorageConfigArgs(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
+
+        public Builder timespanConfig(GooglePrivacyDlpV2TimespanConfigArgs timespanConfig) {
+            return timespanConfig(Output.of(timespanConfig));
+        }
+
+        public GooglePrivacyDlpV2StorageConfigArgs build() {
+            return $;
         }
     }
+
 }

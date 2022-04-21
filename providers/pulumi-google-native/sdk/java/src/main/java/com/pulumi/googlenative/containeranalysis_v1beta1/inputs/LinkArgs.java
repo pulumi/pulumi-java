@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.ByProductsArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.EnvironmentArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GrafeasV1beta1IntotoArtifactArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="byproducts")
-      private final @Nullable Output<ByProductsArgs> byproducts;
+    private @Nullable Output<ByProductsArgs> byproducts;
 
-    public Output<ByProductsArgs> byproducts() {
-        return this.byproducts == null ? Codegen.empty() : this.byproducts;
+    public Optional<Output<ByProductsArgs>> byproducts() {
+        return Optional.ofNullable(this.byproducts);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<EnvironmentArgs> environment;
+    private @Nullable Output<EnvironmentArgs> environment;
 
-    public Output<EnvironmentArgs> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<EnvironmentArgs>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="materials")
-      private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
+    private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials() {
-        return this.materials == null ? Codegen.empty() : this.materials;
+    public Optional<Output<List<GrafeasV1beta1IntotoArtifactArgs>>> materials() {
+        return Optional.ofNullable(this.materials);
     }
 
     /**
@@ -72,111 +72,100 @@ public final class LinkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="products")
-      private final @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
+    private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
 
-    public Output<List<GrafeasV1beta1IntotoArtifactArgs>> products() {
-        return this.products == null ? Codegen.empty() : this.products;
+    public Optional<Output<List<GrafeasV1beta1IntotoArtifactArgs>>> products() {
+        return Optional.ofNullable(this.products);
     }
 
-    public LinkArgs(
-        @Nullable Output<ByProductsArgs> byproducts,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<EnvironmentArgs> environment,
-        @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials,
-        @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
-        this.byproducts = byproducts;
-        this.command = command;
-        this.environment = environment;
-        this.materials = materials;
-        this.products = products;
-    }
+    private LinkArgs() {}
 
-    private LinkArgs() {
-        this.byproducts = Codegen.empty();
-        this.command = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.materials = Codegen.empty();
-        this.products = Codegen.empty();
+    private LinkArgs(LinkArgs $) {
+        this.byproducts = $.byproducts;
+        this.command = $.command;
+        this.environment = $.environment;
+        this.materials = $.materials;
+        this.products = $.products;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ByProductsArgs> byproducts;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<EnvironmentArgs> environment;
-        private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials;
-        private @Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products;
+        private LinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkArgs();
         }
 
         public Builder(LinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.byproducts = defaults.byproducts;
-    	      this.command = defaults.command;
-    	      this.environment = defaults.environment;
-    	      this.materials = defaults.materials;
-    	      this.products = defaults.products;
+            $ = new LinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder byproducts(@Nullable Output<ByProductsArgs> byproducts) {
-            this.byproducts = byproducts;
+            $.byproducts = byproducts;
             return this;
         }
-        public Builder byproducts(@Nullable ByProductsArgs byproducts) {
-            this.byproducts = Codegen.ofNullable(byproducts);
-            return this;
+
+        public Builder byproducts(ByProductsArgs byproducts) {
+            return byproducts(Output.of(byproducts));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable EnvironmentArgs environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(EnvironmentArgs environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder materials(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
-            this.materials = materials;
+            $.materials = materials;
             return this;
         }
-        public Builder materials(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> materials) {
-            this.materials = Codegen.ofNullable(materials);
-            return this;
+
+        public Builder materials(List<GrafeasV1beta1IntotoArtifactArgs> materials) {
+            return materials(Output.of(materials));
         }
+
         public Builder materials(GrafeasV1beta1IntotoArtifactArgs... materials) {
             return materials(List.of(materials));
         }
+
         public Builder products(@Nullable Output<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
-            this.products = products;
+            $.products = products;
             return this;
         }
-        public Builder products(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> products) {
-            this.products = Codegen.ofNullable(products);
-            return this;
+
+        public Builder products(List<GrafeasV1beta1IntotoArtifactArgs> products) {
+            return products(Output.of(products));
         }
+
         public Builder products(GrafeasV1beta1IntotoArtifactArgs... products) {
             return products(List.of(products));
-        }        public LinkArgs build() {
-            return new LinkArgs(byproducts, command, environment, materials, products);
+        }
+
+        public LinkArgs build() {
+            return $;
         }
     }
+
 }

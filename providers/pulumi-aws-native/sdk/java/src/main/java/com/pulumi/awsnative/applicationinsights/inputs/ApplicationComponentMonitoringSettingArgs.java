@@ -7,9 +7,9 @@ import com.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonito
 import com.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="componentARN")
-      private final @Nullable Output<String> componentARN;
+    private @Nullable Output<String> componentARN;
 
-    public Output<String> componentARN() {
-        return this.componentARN == null ? Codegen.empty() : this.componentARN;
+    public Optional<Output<String>> componentARN() {
+        return Optional.ofNullable(this.componentARN);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="componentConfigurationMode", required=true)
-      private final Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
+    private Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
 
     public Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode() {
         return this.componentConfigurationMode;
@@ -48,10 +48,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="componentName")
-      private final @Nullable Output<String> componentName;
+    private @Nullable Output<String> componentName;
 
-    public Output<String> componentName() {
-        return this.componentName == null ? Codegen.empty() : this.componentName;
+    public Optional<Output<String>> componentName() {
+        return Optional.ofNullable(this.componentName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="customComponentConfiguration")
-      private final @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
+    private @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
-    public Output<ApplicationComponentConfigurationArgs> customComponentConfiguration() {
-        return this.customComponentConfiguration == null ? Codegen.empty() : this.customComponentConfiguration;
+    public Optional<Output<ApplicationComponentConfigurationArgs>> customComponentConfiguration() {
+        return Optional.ofNullable(this.customComponentConfiguration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="defaultOverwriteComponentConfiguration")
-      private final @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
+    private @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
-    public Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration() {
-        return this.defaultOverwriteComponentConfiguration == null ? Codegen.empty() : this.defaultOverwriteComponentConfiguration;
+    public Optional<Output<ApplicationComponentConfigurationArgs>> defaultOverwriteComponentConfiguration() {
+        return Optional.ofNullable(this.defaultOverwriteComponentConfiguration);
     }
 
     /**
@@ -81,115 +81,100 @@ public final class ApplicationComponentMonitoringSettingArgs extends com.pulumi.
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<String> tier;
+    private Output<String> tier;
 
     public Output<String> tier() {
         return this.tier;
     }
 
-    public ApplicationComponentMonitoringSettingArgs(
-        @Nullable Output<String> componentARN,
-        Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode,
-        @Nullable Output<String> componentName,
-        @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration,
-        @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration,
-        Output<String> tier) {
-        this.componentARN = componentARN;
-        this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode, "expected parameter 'componentConfigurationMode' to be non-null");
-        this.componentName = componentName;
-        this.customComponentConfiguration = customComponentConfiguration;
-        this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private ApplicationComponentMonitoringSettingArgs() {}
 
-    private ApplicationComponentMonitoringSettingArgs() {
-        this.componentARN = Codegen.empty();
-        this.componentConfigurationMode = Codegen.empty();
-        this.componentName = Codegen.empty();
-        this.customComponentConfiguration = Codegen.empty();
-        this.defaultOverwriteComponentConfiguration = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ApplicationComponentMonitoringSettingArgs(ApplicationComponentMonitoringSettingArgs $) {
+        this.componentARN = $.componentARN;
+        this.componentConfigurationMode = $.componentConfigurationMode;
+        this.componentName = $.componentName;
+        this.customComponentConfiguration = $.customComponentConfiguration;
+        this.defaultOverwriteComponentConfiguration = $.defaultOverwriteComponentConfiguration;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationComponentMonitoringSettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> componentARN;
-        private Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
-        private @Nullable Output<String> componentName;
-        private @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
-        private @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
-        private Output<String> tier;
+        private ApplicationComponentMonitoringSettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationComponentMonitoringSettingArgs();
         }
 
         public Builder(ApplicationComponentMonitoringSettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentARN = defaults.componentARN;
-    	      this.componentConfigurationMode = defaults.componentConfigurationMode;
-    	      this.componentName = defaults.componentName;
-    	      this.customComponentConfiguration = defaults.customComponentConfiguration;
-    	      this.defaultOverwriteComponentConfiguration = defaults.defaultOverwriteComponentConfiguration;
-    	      this.tier = defaults.tier;
+            $ = new ApplicationComponentMonitoringSettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentARN(@Nullable Output<String> componentARN) {
-            this.componentARN = componentARN;
+            $.componentARN = componentARN;
             return this;
         }
-        public Builder componentARN(@Nullable String componentARN) {
-            this.componentARN = Codegen.ofNullable(componentARN);
-            return this;
+
+        public Builder componentARN(String componentARN) {
+            return componentARN(Output.of(componentARN));
         }
+
         public Builder componentConfigurationMode(Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode) {
-            this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
+            $.componentConfigurationMode = componentConfigurationMode;
             return this;
         }
+
         public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
-            this.componentConfigurationMode = Output.of(Objects.requireNonNull(componentConfigurationMode));
-            return this;
+            return componentConfigurationMode(Output.of(componentConfigurationMode));
         }
+
         public Builder componentName(@Nullable Output<String> componentName) {
-            this.componentName = componentName;
+            $.componentName = componentName;
             return this;
         }
-        public Builder componentName(@Nullable String componentName) {
-            this.componentName = Codegen.ofNullable(componentName);
-            return this;
+
+        public Builder componentName(String componentName) {
+            return componentName(Output.of(componentName));
         }
+
         public Builder customComponentConfiguration(@Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration) {
-            this.customComponentConfiguration = customComponentConfiguration;
+            $.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
-        public Builder customComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs customComponentConfiguration) {
-            this.customComponentConfiguration = Codegen.ofNullable(customComponentConfiguration);
-            return this;
+
+        public Builder customComponentConfiguration(ApplicationComponentConfigurationArgs customComponentConfiguration) {
+            return customComponentConfiguration(Output.of(customComponentConfiguration));
         }
+
         public Builder defaultOverwriteComponentConfiguration(@Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration) {
-            this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
+            $.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
-        public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfigurationArgs defaultOverwriteComponentConfiguration) {
-            this.defaultOverwriteComponentConfiguration = Codegen.ofNullable(defaultOverwriteComponentConfiguration);
-            return this;
+
+        public Builder defaultOverwriteComponentConfiguration(ApplicationComponentConfigurationArgs defaultOverwriteComponentConfiguration) {
+            return defaultOverwriteComponentConfiguration(Output.of(defaultOverwriteComponentConfiguration));
         }
+
         public Builder tier(Output<String> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public ApplicationComponentMonitoringSettingArgs build() {
-            return new ApplicationComponentMonitoringSettingArgs(componentARN, componentConfigurationMode, componentName, customComponentConfiguration, defaultOverwriteComponentConfiguration, tier);
+            return tier(Output.of(tier));
+        }
+
+        public ApplicationComponentMonitoringSettingArgs build() {
+            $.componentConfigurationMode = Objects.requireNonNull($.componentConfigurationMode, "expected parameter 'componentConfigurationMode' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

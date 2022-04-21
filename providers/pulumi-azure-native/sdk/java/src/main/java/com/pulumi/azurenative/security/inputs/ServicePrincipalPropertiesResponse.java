@@ -23,10 +23,10 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="applicationId")
-      private final @Nullable String applicationId;
+    private @Nullable String applicationId;
 
     public Optional<String> applicationId() {
-        return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class ServicePrincipalPropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="secret")
-      private final @Nullable String secret;
+    private @Nullable String secret;
 
     public Optional<String> secret() {
-        return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
+        return Optional.ofNullable(this.secret);
     }
 
-    public ServicePrincipalPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String secret) {
-        this.applicationId = applicationId;
-        this.secret = secret;
-    }
+    private ServicePrincipalPropertiesResponse() {}
 
-    private ServicePrincipalPropertiesResponse() {
-        this.applicationId = null;
-        this.secret = null;
+    private ServicePrincipalPropertiesResponse(ServicePrincipalPropertiesResponse $) {
+        this.applicationId = $.applicationId;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePrincipalPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String applicationId;
-        private @Nullable String secret;
+        private ServicePrincipalPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePrincipalPropertiesResponse();
         }
 
         public Builder(ServicePrincipalPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.secret = defaults.secret;
+            $ = new ServicePrincipalPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = applicationId;
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder secret(@Nullable String secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
-        }        public ServicePrincipalPropertiesResponse build() {
-            return new ServicePrincipalPropertiesResponse(applicationId, secret);
+        }
+
+        public ServicePrincipalPropertiesResponse build() {
+            return $;
         }
     }
+
 }

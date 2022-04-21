@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameArgs extends com.pulumi.r
      * 
      */
     @Import(name="wildcardMatch")
-      private final @Nullable Output<Boolean> wildcardMatch;
+    private @Nullable Output<Boolean> wildcardMatch;
 
-    public Output<Boolean> wildcardMatch() {
-        return this.wildcardMatch == null ? Codegen.empty() : this.wildcardMatch;
+    public Optional<Output<Boolean>> wildcardMatch() {
+        return Optional.ofNullable(this.wildcardMatch);
     }
 
-    public GoogleCloudApigeeV1TlsInfoCommonNameArgs(
-        @Nullable Output<String> value,
-        @Nullable Output<Boolean> wildcardMatch) {
-        this.value = value;
-        this.wildcardMatch = wildcardMatch;
-    }
+    private GoogleCloudApigeeV1TlsInfoCommonNameArgs() {}
 
-    private GoogleCloudApigeeV1TlsInfoCommonNameArgs() {
-        this.value = Codegen.empty();
-        this.wildcardMatch = Codegen.empty();
+    private GoogleCloudApigeeV1TlsInfoCommonNameArgs(GoogleCloudApigeeV1TlsInfoCommonNameArgs $) {
+        this.value = $.value;
+        this.wildcardMatch = $.wildcardMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1TlsInfoCommonNameArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> value;
-        private @Nullable Output<Boolean> wildcardMatch;
+        private GoogleCloudApigeeV1TlsInfoCommonNameArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1TlsInfoCommonNameArgs();
         }
 
         public Builder(GoogleCloudApigeeV1TlsInfoCommonNameArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.wildcardMatch = defaults.wildcardMatch;
+            $ = new GoogleCloudApigeeV1TlsInfoCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder wildcardMatch(@Nullable Output<Boolean> wildcardMatch) {
-            this.wildcardMatch = wildcardMatch;
+            $.wildcardMatch = wildcardMatch;
             return this;
         }
-        public Builder wildcardMatch(@Nullable Boolean wildcardMatch) {
-            this.wildcardMatch = Codegen.ofNullable(wildcardMatch);
-            return this;
-        }        public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {
-            return new GoogleCloudApigeeV1TlsInfoCommonNameArgs(value, wildcardMatch);
+
+        public Builder wildcardMatch(Boolean wildcardMatch) {
+            return wildcardMatch(Output.of(wildcardMatch));
+        }
+
+        public GoogleCloudApigeeV1TlsInfoCommonNameArgs build() {
+            return $;
         }
     }
+
 }

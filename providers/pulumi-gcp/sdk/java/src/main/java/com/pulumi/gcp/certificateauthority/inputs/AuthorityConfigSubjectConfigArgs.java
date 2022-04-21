@@ -5,10 +5,10 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectAltNameArgs;
 import com.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class AuthorityConfigSubjectConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subject", required=true)
-      private final Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
+    private Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
 
     public Output<AuthorityConfigSubjectConfigSubjectArgs> subject() {
         return this.subject;
@@ -34,63 +34,59 @@ public final class AuthorityConfigSubjectConfigArgs extends com.pulumi.resources
      * 
      */
     @Import(name="subjectAltName")
-      private final @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+    private @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
 
-    public Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName() {
-        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
+    public Optional<Output<AuthorityConfigSubjectConfigSubjectAltNameArgs>> subjectAltName() {
+        return Optional.ofNullable(this.subjectAltName);
     }
 
-    public AuthorityConfigSubjectConfigArgs(
-        Output<AuthorityConfigSubjectConfigSubjectArgs> subject,
-        @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-        this.subjectAltName = subjectAltName;
-    }
+    private AuthorityConfigSubjectConfigArgs() {}
 
-    private AuthorityConfigSubjectConfigArgs() {
-        this.subject = Codegen.empty();
-        this.subjectAltName = Codegen.empty();
+    private AuthorityConfigSubjectConfigArgs(AuthorityConfigSubjectConfigArgs $) {
+        this.subject = $.subject;
+        this.subjectAltName = $.subjectAltName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityConfigSubjectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AuthorityConfigSubjectConfigSubjectArgs> subject;
-        private @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName;
+        private AuthorityConfigSubjectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityConfigSubjectConfigArgs();
         }
 
         public Builder(AuthorityConfigSubjectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.subject = defaults.subject;
-    	      this.subjectAltName = defaults.subjectAltName;
+            $ = new AuthorityConfigSubjectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder subject(Output<AuthorityConfigSubjectConfigSubjectArgs> subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
         }
+
         public Builder subject(AuthorityConfigSubjectConfigSubjectArgs subject) {
-            this.subject = Output.of(Objects.requireNonNull(subject));
-            return this;
+            return subject(Output.of(subject));
         }
+
         public Builder subjectAltName(@Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameArgs> subjectAltName) {
-            this.subjectAltName = subjectAltName;
+            $.subjectAltName = subjectAltName;
             return this;
         }
-        public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltNameArgs subjectAltName) {
-            this.subjectAltName = Codegen.ofNullable(subjectAltName);
-            return this;
-        }        public AuthorityConfigSubjectConfigArgs build() {
-            return new AuthorityConfigSubjectConfigArgs(subject, subjectAltName);
+
+        public Builder subjectAltName(AuthorityConfigSubjectConfigSubjectAltNameArgs subjectAltName) {
+            return subjectAltName(Output.of(subjectAltName));
+        }
+
+        public AuthorityConfigSubjectConfigArgs build() {
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

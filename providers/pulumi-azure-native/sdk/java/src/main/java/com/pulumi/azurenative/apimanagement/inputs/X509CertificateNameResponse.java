@@ -23,10 +23,10 @@ public final class X509CertificateNameResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="issuerCertificateThumbprint")
-      private final @Nullable String issuerCertificateThumbprint;
+    private @Nullable String issuerCertificateThumbprint;
 
     public Optional<String> issuerCertificateThumbprint() {
-        return this.issuerCertificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.issuerCertificateThumbprint);
+        return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
 
     /**
@@ -34,55 +34,50 @@ public final class X509CertificateNameResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public X509CertificateNameResponse(
-        @Nullable String issuerCertificateThumbprint,
-        @Nullable String name) {
-        this.issuerCertificateThumbprint = issuerCertificateThumbprint;
-        this.name = name;
-    }
+    private X509CertificateNameResponse() {}
 
-    private X509CertificateNameResponse() {
-        this.issuerCertificateThumbprint = null;
-        this.name = null;
+    private X509CertificateNameResponse(X509CertificateNameResponse $) {
+        this.issuerCertificateThumbprint = $.issuerCertificateThumbprint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509CertificateNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String issuerCertificateThumbprint;
-        private @Nullable String name;
+        private X509CertificateNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509CertificateNameResponse();
         }
 
         public Builder(X509CertificateNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuerCertificateThumbprint = defaults.issuerCertificateThumbprint;
-    	      this.name = defaults.name;
+            $ = new X509CertificateNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
-            this.issuerCertificateThumbprint = issuerCertificateThumbprint;
+            $.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public X509CertificateNameResponse build() {
-            return new X509CertificateNameResponse(issuerCertificateThumbprint, name);
+        }
+
+        public X509CertificateNameResponse build() {
+            return $;
         }
     }
+
 }

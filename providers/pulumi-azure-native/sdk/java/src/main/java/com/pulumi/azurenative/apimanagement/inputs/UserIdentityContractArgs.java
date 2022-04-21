@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class UserIdentityContractArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class UserIdentityContractArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="provider")
-      private final @Nullable Output<String> provider;
+    private @Nullable Output<String> provider;
 
-    public Output<String> provider() {
-        return this.provider == null ? Codegen.empty() : this.provider;
+    public Optional<Output<String>> provider() {
+        return Optional.ofNullable(this.provider);
     }
 
-    public UserIdentityContractArgs(
-        @Nullable Output<String> id,
-        @Nullable Output<String> provider) {
-        this.id = id;
-        this.provider = provider;
-    }
+    private UserIdentityContractArgs() {}
 
-    private UserIdentityContractArgs() {
-        this.id = Codegen.empty();
-        this.provider = Codegen.empty();
+    private UserIdentityContractArgs(UserIdentityContractArgs $) {
+        this.id = $.id;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UserIdentityContractArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> provider;
+        private UserIdentityContractArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UserIdentityContractArgs();
         }
 
         public Builder(UserIdentityContractArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.provider = defaults.provider;
+            $ = new UserIdentityContractArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder provider(@Nullable Output<String> provider) {
-            this.provider = provider;
+            $.provider = provider;
             return this;
         }
-        public Builder provider(@Nullable String provider) {
-            this.provider = Codegen.ofNullable(provider);
-            return this;
-        }        public UserIdentityContractArgs build() {
-            return new UserIdentityContractArgs(id, provider);
+
+        public Builder provider(String provider) {
+            return provider(Output.of(provider));
+        }
+
+        public UserIdentityContractArgs build() {
+            return $;
         }
     }
+
 }

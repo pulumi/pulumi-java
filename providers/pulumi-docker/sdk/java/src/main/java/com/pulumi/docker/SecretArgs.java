@@ -5,11 +5,11 @@ package com.pulumi.docker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.SecretLabelArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data", required=true)
-      private final Output<String> data;
+    private Output<String> data;
 
     public Output<String> data() {
         return this.data;
@@ -33,10 +33,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<SecretLabelArgs>> labels;
+    private @Nullable Output<List<SecretLabelArgs>> labels;
 
-    public Output<List<SecretLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<SecretLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -44,79 +44,73 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SecretArgs(
-        Output<String> data,
-        @Nullable Output<List<SecretLabelArgs>> labels,
-        @Nullable Output<String> name) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.labels = labels;
-        this.name = name;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.data = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.data = $.data;
+        this.labels = $.labels;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> data;
-        private @Nullable Output<List<SecretLabelArgs>> labels;
-        private @Nullable Output<String> name;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(Output<String> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Output.of(Objects.requireNonNull(data));
-            return this;
+            return data(Output.of(data));
         }
+
         public Builder labels(@Nullable Output<List<SecretLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<SecretLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<SecretLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(SecretLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(data, labels, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SecretArgs build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            return $;
         }
     }
+
 }

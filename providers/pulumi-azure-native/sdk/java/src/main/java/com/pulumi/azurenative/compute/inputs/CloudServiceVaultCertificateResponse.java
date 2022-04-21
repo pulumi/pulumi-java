@@ -23,45 +23,44 @@ public final class CloudServiceVaultCertificateResponse extends com.pulumi.resou
      * 
      */
     @Import(name="certificateUrl")
-      private final @Nullable String certificateUrl;
+    private @Nullable String certificateUrl;
 
     public Optional<String> certificateUrl() {
-        return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
+        return Optional.ofNullable(this.certificateUrl);
     }
 
-    public CloudServiceVaultCertificateResponse(@Nullable String certificateUrl) {
-        this.certificateUrl = certificateUrl;
-    }
+    private CloudServiceVaultCertificateResponse() {}
 
-    private CloudServiceVaultCertificateResponse() {
-        this.certificateUrl = null;
+    private CloudServiceVaultCertificateResponse(CloudServiceVaultCertificateResponse $) {
+        this.certificateUrl = $.certificateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudServiceVaultCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String certificateUrl;
+        private CloudServiceVaultCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudServiceVaultCertificateResponse();
         }
 
         public Builder(CloudServiceVaultCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateUrl = defaults.certificateUrl;
+            $ = new CloudServiceVaultCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateUrl(@Nullable String certificateUrl) {
-            this.certificateUrl = certificateUrl;
+            $.certificateUrl = certificateUrl;
             return this;
-        }        public CloudServiceVaultCertificateResponse build() {
-            return new CloudServiceVaultCertificateResponse(certificateUrl);
+        }
+
+        public CloudServiceVaultCertificateResponse build() {
+            return $;
         }
     }
+
 }

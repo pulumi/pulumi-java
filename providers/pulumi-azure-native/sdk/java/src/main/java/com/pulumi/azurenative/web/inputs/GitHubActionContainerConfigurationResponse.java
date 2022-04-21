@@ -23,10 +23,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="imageName")
-      private final @Nullable String imageName;
+    private @Nullable String imageName;
 
     public Optional<String> imageName() {
-        return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
+        return Optional.ofNullable(this.imageName);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="serverUrl")
-      private final @Nullable String serverUrl;
+    private @Nullable String serverUrl;
 
     public Optional<String> serverUrl() {
-        return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
+        return Optional.ofNullable(this.serverUrl);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class GitHubActionContainerConfigurationResponse extends com.pulumi
      * 
      */
     @Import(name="username")
-      private final @Nullable String username;
+    private @Nullable String username;
 
     public Optional<String> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public GitHubActionContainerConfigurationResponse(
-        @Nullable String imageName,
-        @Nullable String password,
-        @Nullable String serverUrl,
-        @Nullable String username) {
-        this.imageName = imageName;
-        this.password = password;
-        this.serverUrl = serverUrl;
-        this.username = username;
-    }
+    private GitHubActionContainerConfigurationResponse() {}
 
-    private GitHubActionContainerConfigurationResponse() {
-        this.imageName = null;
-        this.password = null;
-        this.serverUrl = null;
-        this.username = null;
+    private GitHubActionContainerConfigurationResponse(GitHubActionContainerConfigurationResponse $) {
+        this.imageName = $.imageName;
+        this.password = $.password;
+        this.serverUrl = $.serverUrl;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubActionContainerConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String imageName;
-        private @Nullable String password;
-        private @Nullable String serverUrl;
-        private @Nullable String username;
+        private GitHubActionContainerConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubActionContainerConfigurationResponse();
         }
 
         public Builder(GitHubActionContainerConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageName = defaults.imageName;
-    	      this.password = defaults.password;
-    	      this.serverUrl = defaults.serverUrl;
-    	      this.username = defaults.username;
+            $ = new GitHubActionContainerConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = imageName;
+            $.imageName = imageName;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = serverUrl;
+            $.serverUrl = serverUrl;
             return this;
         }
+
         public Builder username(@Nullable String username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public GitHubActionContainerConfigurationResponse build() {
-            return new GitHubActionContainerConfigurationResponse(imageName, password, serverUrl, username);
+        }
+
+        public GitHubActionContainerConfigurationResponse build() {
+            return $;
         }
     }
+
 }

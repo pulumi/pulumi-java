@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedIssuanceModesGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeGetArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesGetArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityCo
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allowedIssuanceModes")
-      private final @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
+    private @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
 
-    public Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes() {
-        return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
+    public Optional<Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs>> allowedIssuanceModes() {
+        return Optional.ofNullable(this.allowedIssuanceModes);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allowedKeyTypes")
-      private final @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
+    private @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
 
-    public Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes() {
-        return this.allowedKeyTypes == null ? Codegen.empty() : this.allowedKeyTypes;
+    public Optional<Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>>> allowedKeyTypes() {
+        return Optional.ofNullable(this.allowedKeyTypes);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="baselineValues")
-      private final @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
+    private @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
 
-    public Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues() {
-        return this.baselineValues == null ? Codegen.empty() : this.baselineValues;
+    public Optional<Output<CaPoolIssuancePolicyBaselineValuesGetArgs>> baselineValues() {
+        return Optional.ofNullable(this.baselineValues);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="identityConstraints")
-      private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
+    private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
 
-    public Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints() {
-        return this.identityConstraints == null ? Codegen.empty() : this.identityConstraints;
+    public Optional<Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs>> identityConstraints() {
+        return Optional.ofNullable(this.identityConstraints);
     }
 
     /**
@@ -79,105 +79,92 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maximumLifetime")
-      private final @Nullable Output<String> maximumLifetime;
+    private @Nullable Output<String> maximumLifetime;
 
-    public Output<String> maximumLifetime() {
-        return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
+    public Optional<Output<String>> maximumLifetime() {
+        return Optional.ofNullable(this.maximumLifetime);
     }
 
-    public CaPoolIssuancePolicyGetArgs(
-        @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes,
-        @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes,
-        @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues,
-        @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints,
-        @Nullable Output<String> maximumLifetime) {
-        this.allowedIssuanceModes = allowedIssuanceModes;
-        this.allowedKeyTypes = allowedKeyTypes;
-        this.baselineValues = baselineValues;
-        this.identityConstraints = identityConstraints;
-        this.maximumLifetime = maximumLifetime;
-    }
+    private CaPoolIssuancePolicyGetArgs() {}
 
-    private CaPoolIssuancePolicyGetArgs() {
-        this.allowedIssuanceModes = Codegen.empty();
-        this.allowedKeyTypes = Codegen.empty();
-        this.baselineValues = Codegen.empty();
-        this.identityConstraints = Codegen.empty();
-        this.maximumLifetime = Codegen.empty();
+    private CaPoolIssuancePolicyGetArgs(CaPoolIssuancePolicyGetArgs $) {
+        this.allowedIssuanceModes = $.allowedIssuanceModes;
+        this.allowedKeyTypes = $.allowedKeyTypes;
+        this.baselineValues = $.baselineValues;
+        this.identityConstraints = $.identityConstraints;
+        this.maximumLifetime = $.maximumLifetime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaPoolIssuancePolicyGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
-        private @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
-        private @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
-        private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
-        private @Nullable Output<String> maximumLifetime;
+        private CaPoolIssuancePolicyGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaPoolIssuancePolicyGetArgs();
         }
 
         public Builder(CaPoolIssuancePolicyGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIssuanceModes = defaults.allowedIssuanceModes;
-    	      this.allowedKeyTypes = defaults.allowedKeyTypes;
-    	      this.baselineValues = defaults.baselineValues;
-    	      this.identityConstraints = defaults.identityConstraints;
-    	      this.maximumLifetime = defaults.maximumLifetime;
+            $ = new CaPoolIssuancePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIssuanceModes(@Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes) {
-            this.allowedIssuanceModes = allowedIssuanceModes;
+            $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-        public Builder allowedIssuanceModes(@Nullable CaPoolIssuancePolicyAllowedIssuanceModesGetArgs allowedIssuanceModes) {
-            this.allowedIssuanceModes = Codegen.ofNullable(allowedIssuanceModes);
-            return this;
+
+        public Builder allowedIssuanceModes(CaPoolIssuancePolicyAllowedIssuanceModesGetArgs allowedIssuanceModes) {
+            return allowedIssuanceModes(Output.of(allowedIssuanceModes));
         }
+
         public Builder allowedKeyTypes(@Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes) {
-            this.allowedKeyTypes = allowedKeyTypes;
+            $.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
-        public Builder allowedKeyTypes(@Nullable List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs> allowedKeyTypes) {
-            this.allowedKeyTypes = Codegen.ofNullable(allowedKeyTypes);
-            return this;
+
+        public Builder allowedKeyTypes(List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs> allowedKeyTypes) {
+            return allowedKeyTypes(Output.of(allowedKeyTypes));
         }
+
         public Builder allowedKeyTypes(CaPoolIssuancePolicyAllowedKeyTypeGetArgs... allowedKeyTypes) {
             return allowedKeyTypes(List.of(allowedKeyTypes));
         }
+
         public Builder baselineValues(@Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues) {
-            this.baselineValues = baselineValues;
+            $.baselineValues = baselineValues;
             return this;
         }
-        public Builder baselineValues(@Nullable CaPoolIssuancePolicyBaselineValuesGetArgs baselineValues) {
-            this.baselineValues = Codegen.ofNullable(baselineValues);
-            return this;
+
+        public Builder baselineValues(CaPoolIssuancePolicyBaselineValuesGetArgs baselineValues) {
+            return baselineValues(Output.of(baselineValues));
         }
+
         public Builder identityConstraints(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints) {
-            this.identityConstraints = identityConstraints;
+            $.identityConstraints = identityConstraints;
             return this;
         }
-        public Builder identityConstraints(@Nullable CaPoolIssuancePolicyIdentityConstraintsGetArgs identityConstraints) {
-            this.identityConstraints = Codegen.ofNullable(identityConstraints);
-            return this;
+
+        public Builder identityConstraints(CaPoolIssuancePolicyIdentityConstraintsGetArgs identityConstraints) {
+            return identityConstraints(Output.of(identityConstraints));
         }
+
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
-            this.maximumLifetime = maximumLifetime;
+            $.maximumLifetime = maximumLifetime;
             return this;
         }
-        public Builder maximumLifetime(@Nullable String maximumLifetime) {
-            this.maximumLifetime = Codegen.ofNullable(maximumLifetime);
-            return this;
-        }        public CaPoolIssuancePolicyGetArgs build() {
-            return new CaPoolIssuancePolicyGetArgs(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime);
+
+        public Builder maximumLifetime(String maximumLifetime) {
+            return maximumLifetime(Output.of(maximumLifetime));
+        }
+
+        public CaPoolIssuancePolicyGetArgs build() {
+            return $;
         }
     }
+
 }

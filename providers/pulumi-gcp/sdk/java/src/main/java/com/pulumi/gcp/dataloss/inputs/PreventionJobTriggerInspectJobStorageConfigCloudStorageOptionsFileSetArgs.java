@@ -5,10 +5,10 @@ package com.pulumi.gcp.dataloss.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @Import(name="regexFileSet")
-      private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
+    private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
 
-    public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet() {
-        return this.regexFileSet == null ? Codegen.empty() : this.regexFileSet;
+    public Optional<Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs>> regexFileSet() {
+        return Optional.ofNullable(this.regexFileSet);
     }
 
     /**
@@ -37,63 +37,58 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(
-        @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet,
-        @Nullable Output<String> url) {
-        this.regexFileSet = regexFileSet;
-        this.url = url;
-    }
+    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs() {}
 
-    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs() {
-        this.regexFileSet = Codegen.empty();
-        this.url = Codegen.empty();
+    private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs $) {
+        this.regexFileSet = $.regexFileSet;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet;
-        private @Nullable Output<String> url;
+        private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs();
         }
 
         public Builder(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.regexFileSet = defaults.regexFileSet;
-    	      this.url = defaults.url;
+            $ = new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder regexFileSet(@Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs> regexFileSet) {
-            this.regexFileSet = regexFileSet;
+            $.regexFileSet = regexFileSet;
             return this;
         }
-        public Builder regexFileSet(@Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs regexFileSet) {
-            this.regexFileSet = Codegen.ofNullable(regexFileSet);
-            return this;
+
+        public Builder regexFileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs regexFileSet) {
+            return regexFileSet(Output.of(regexFileSet));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {
-            return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs(regexFileSet, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs build() {
+            return $;
         }
     }
+
 }

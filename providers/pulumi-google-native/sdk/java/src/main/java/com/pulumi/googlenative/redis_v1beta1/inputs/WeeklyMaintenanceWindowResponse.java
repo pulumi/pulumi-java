@@ -22,7 +22,7 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="day", required=true)
-      private final String day;
+    private String day;
 
     public String day() {
         return this.day;
@@ -33,7 +33,7 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -44,64 +44,59 @@ public final class WeeklyMaintenanceWindowResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="startTime", required=true)
-      private final TimeOfDayResponse startTime;
+    private TimeOfDayResponse startTime;
 
     public TimeOfDayResponse startTime() {
         return this.startTime;
     }
 
-    public WeeklyMaintenanceWindowResponse(
-        String day,
-        String duration,
-        TimeOfDayResponse startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private WeeklyMaintenanceWindowResponse() {}
 
-    private WeeklyMaintenanceWindowResponse() {
-        this.day = null;
-        this.duration = null;
-        this.startTime = null;
+    private WeeklyMaintenanceWindowResponse(WeeklyMaintenanceWindowResponse $) {
+        this.day = $.day;
+        this.duration = $.duration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyMaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String day;
-        private String duration;
-        private TimeOfDayResponse startTime;
+        private WeeklyMaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyMaintenanceWindowResponse();
         }
 
         public Builder(WeeklyMaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.duration = defaults.duration;
-    	      this.startTime = defaults.startTime;
+            $ = new WeeklyMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(String day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder startTime(TimeOfDayResponse startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public WeeklyMaintenanceWindowResponse build() {
-            return new WeeklyMaintenanceWindowResponse(day, duration, startTime);
+        }
+
+        public WeeklyMaintenanceWindowResponse build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

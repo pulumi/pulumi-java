@@ -13,45 +13,45 @@ public final class GetVirtualMFADeviceArgs extends com.pulumi.resources.InvokeAr
     public static final GetVirtualMFADeviceArgs Empty = new GetVirtualMFADeviceArgs();
 
     @Import(name="serialNumber", required=true)
-      private final String serialNumber;
+    private String serialNumber;
 
     public String serialNumber() {
         return this.serialNumber;
     }
 
-    public GetVirtualMFADeviceArgs(String serialNumber) {
-        this.serialNumber = Objects.requireNonNull(serialNumber, "expected parameter 'serialNumber' to be non-null");
-    }
+    private GetVirtualMFADeviceArgs() {}
 
-    private GetVirtualMFADeviceArgs() {
-        this.serialNumber = null;
+    private GetVirtualMFADeviceArgs(GetVirtualMFADeviceArgs $) {
+        this.serialNumber = $.serialNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVirtualMFADeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String serialNumber;
+        private GetVirtualMFADeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVirtualMFADeviceArgs();
         }
 
         public Builder(GetVirtualMFADeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.serialNumber = defaults.serialNumber;
+            $ = new GetVirtualMFADeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder serialNumber(String serialNumber) {
-            this.serialNumber = Objects.requireNonNull(serialNumber);
+            $.serialNumber = serialNumber;
             return this;
-        }        public GetVirtualMFADeviceArgs build() {
-            return new GetVirtualMFADeviceArgs(serialNumber);
+        }
+
+        public GetVirtualMFADeviceArgs build() {
+            $.serialNumber = Objects.requireNonNull($.serialNumber, "expected parameter 'serialNumber' to be non-null");
+            return $;
         }
     }
+
 }

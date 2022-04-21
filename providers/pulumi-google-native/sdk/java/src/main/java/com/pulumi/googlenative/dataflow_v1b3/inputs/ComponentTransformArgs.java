@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="originalTransform")
-      private final @Nullable Output<String> originalTransform;
+    private @Nullable Output<String> originalTransform;
 
-    public Output<String> originalTransform() {
-        return this.originalTransform == null ? Codegen.empty() : this.originalTransform;
+    public Optional<Output<String>> originalTransform() {
+        return Optional.ofNullable(this.originalTransform);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class ComponentTransformArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public ComponentTransformArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> originalTransform,
-        @Nullable Output<String> userName) {
-        this.name = name;
-        this.originalTransform = originalTransform;
-        this.userName = userName;
-    }
+    private ComponentTransformArgs() {}
 
-    private ComponentTransformArgs() {
-        this.name = Codegen.empty();
-        this.originalTransform = Codegen.empty();
-        this.userName = Codegen.empty();
+    private ComponentTransformArgs(ComponentTransformArgs $) {
+        this.name = $.name;
+        this.originalTransform = $.originalTransform;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentTransformArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> originalTransform;
-        private @Nullable Output<String> userName;
+        private ComponentTransformArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentTransformArgs();
         }
 
         public Builder(ComponentTransformArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.originalTransform = defaults.originalTransform;
-    	      this.userName = defaults.userName;
+            $ = new ComponentTransformArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder originalTransform(@Nullable Output<String> originalTransform) {
-            this.originalTransform = originalTransform;
+            $.originalTransform = originalTransform;
             return this;
         }
-        public Builder originalTransform(@Nullable String originalTransform) {
-            this.originalTransform = Codegen.ofNullable(originalTransform);
-            return this;
+
+        public Builder originalTransform(String originalTransform) {
+            return originalTransform(Output.of(originalTransform));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public ComponentTransformArgs build() {
-            return new ComponentTransformArgs(name, originalTransform, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public ComponentTransformArgs build() {
+            return $;
         }
     }
+
 }

@@ -7,10 +7,10 @@ import com.pulumi.azurenative.eventhub.enums.EntityStatus;
 import com.pulumi.azurenative.eventhub.inputs.CaptureDescriptionArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="captureDescription")
-      private final @Nullable Output<CaptureDescriptionArgs> captureDescription;
+    private @Nullable Output<CaptureDescriptionArgs> captureDescription;
 
-    public Output<CaptureDescriptionArgs> captureDescription() {
-        return this.captureDescription == null ? Codegen.empty() : this.captureDescription;
+    public Optional<Output<CaptureDescriptionArgs>> captureDescription() {
+        return Optional.ofNullable(this.captureDescription);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHubName")
-      private final @Nullable Output<String> eventHubName;
+    private @Nullable Output<String> eventHubName;
 
-    public Output<String> eventHubName() {
-        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
+    public Optional<Output<String>> eventHubName() {
+        return Optional.ofNullable(this.eventHubName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageRetentionInDays")
-      private final @Nullable Output<Double> messageRetentionInDays;
+    private @Nullable Output<Double> messageRetentionInDays;
 
-    public Output<Double> messageRetentionInDays() {
-        return this.messageRetentionInDays == null ? Codegen.empty() : this.messageRetentionInDays;
+    public Optional<Output<Double>> messageRetentionInDays() {
+        return Optional.ofNullable(this.messageRetentionInDays);
     }
 
     /**
@@ -56,7 +56,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespaceName", required=true)
-      private final Output<String> namespaceName;
+    private Output<String> namespaceName;
 
     public Output<String> namespaceName() {
         return this.namespaceName;
@@ -67,10 +67,10 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="partitionCount")
-      private final @Nullable Output<Double> partitionCount;
+    private @Nullable Output<Double> partitionCount;
 
-    public Output<Double> partitionCount() {
-        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
+    public Optional<Output<Double>> partitionCount() {
+        return Optional.ofNullable(this.partitionCount);
     }
 
     /**
@@ -78,7 +78,7 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -89,128 +89,110 @@ public final class EventHubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status")
-      private final @Nullable Output<EntityStatus> status;
+    private @Nullable Output<EntityStatus> status;
 
-    public Output<EntityStatus> status() {
-        return this.status == null ? Codegen.empty() : this.status;
+    public Optional<Output<EntityStatus>> status() {
+        return Optional.ofNullable(this.status);
     }
 
-    public EventHubArgs(
-        @Nullable Output<CaptureDescriptionArgs> captureDescription,
-        @Nullable Output<String> eventHubName,
-        @Nullable Output<Double> messageRetentionInDays,
-        Output<String> namespaceName,
-        @Nullable Output<Double> partitionCount,
-        Output<String> resourceGroupName,
-        @Nullable Output<EntityStatus> status) {
-        this.captureDescription = captureDescription;
-        this.eventHubName = eventHubName;
-        this.messageRetentionInDays = messageRetentionInDays;
-        this.namespaceName = Objects.requireNonNull(namespaceName, "expected parameter 'namespaceName' to be non-null");
-        this.partitionCount = partitionCount;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.status = status;
-    }
+    private EventHubArgs() {}
 
-    private EventHubArgs() {
-        this.captureDescription = Codegen.empty();
-        this.eventHubName = Codegen.empty();
-        this.messageRetentionInDays = Codegen.empty();
-        this.namespaceName = Codegen.empty();
-        this.partitionCount = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.status = Codegen.empty();
+    private EventHubArgs(EventHubArgs $) {
+        this.captureDescription = $.captureDescription;
+        this.eventHubName = $.eventHubName;
+        this.messageRetentionInDays = $.messageRetentionInDays;
+        this.namespaceName = $.namespaceName;
+        this.partitionCount = $.partitionCount;
+        this.resourceGroupName = $.resourceGroupName;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventHubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaptureDescriptionArgs> captureDescription;
-        private @Nullable Output<String> eventHubName;
-        private @Nullable Output<Double> messageRetentionInDays;
-        private Output<String> namespaceName;
-        private @Nullable Output<Double> partitionCount;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<EntityStatus> status;
+        private EventHubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventHubArgs();
         }
 
         public Builder(EventHubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.captureDescription = defaults.captureDescription;
-    	      this.eventHubName = defaults.eventHubName;
-    	      this.messageRetentionInDays = defaults.messageRetentionInDays;
-    	      this.namespaceName = defaults.namespaceName;
-    	      this.partitionCount = defaults.partitionCount;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.status = defaults.status;
+            $ = new EventHubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder captureDescription(@Nullable Output<CaptureDescriptionArgs> captureDescription) {
-            this.captureDescription = captureDescription;
+            $.captureDescription = captureDescription;
             return this;
         }
-        public Builder captureDescription(@Nullable CaptureDescriptionArgs captureDescription) {
-            this.captureDescription = Codegen.ofNullable(captureDescription);
-            return this;
+
+        public Builder captureDescription(CaptureDescriptionArgs captureDescription) {
+            return captureDescription(Output.of(captureDescription));
         }
+
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
-            this.eventHubName = eventHubName;
+            $.eventHubName = eventHubName;
             return this;
         }
-        public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Codegen.ofNullable(eventHubName);
-            return this;
+
+        public Builder eventHubName(String eventHubName) {
+            return eventHubName(Output.of(eventHubName));
         }
+
         public Builder messageRetentionInDays(@Nullable Output<Double> messageRetentionInDays) {
-            this.messageRetentionInDays = messageRetentionInDays;
+            $.messageRetentionInDays = messageRetentionInDays;
             return this;
         }
-        public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
-            this.messageRetentionInDays = Codegen.ofNullable(messageRetentionInDays);
-            return this;
+
+        public Builder messageRetentionInDays(Double messageRetentionInDays) {
+            return messageRetentionInDays(Output.of(messageRetentionInDays));
         }
+
         public Builder namespaceName(Output<String> namespaceName) {
-            this.namespaceName = Objects.requireNonNull(namespaceName);
+            $.namespaceName = namespaceName;
             return this;
         }
+
         public Builder namespaceName(String namespaceName) {
-            this.namespaceName = Output.of(Objects.requireNonNull(namespaceName));
-            return this;
+            return namespaceName(Output.of(namespaceName));
         }
+
         public Builder partitionCount(@Nullable Output<Double> partitionCount) {
-            this.partitionCount = partitionCount;
+            $.partitionCount = partitionCount;
             return this;
         }
-        public Builder partitionCount(@Nullable Double partitionCount) {
-            this.partitionCount = Codegen.ofNullable(partitionCount);
-            return this;
+
+        public Builder partitionCount(Double partitionCount) {
+            return partitionCount(Output.of(partitionCount));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder status(@Nullable Output<EntityStatus> status) {
-            this.status = status;
+            $.status = status;
             return this;
         }
-        public Builder status(@Nullable EntityStatus status) {
-            this.status = Codegen.ofNullable(status);
-            return this;
-        }        public EventHubArgs build() {
-            return new EventHubArgs(captureDescription, eventHubName, messageRetentionInDays, namespaceName, partitionCount, resourceGroupName, status);
+
+        public Builder status(EntityStatus status) {
+            return status(Output.of(status));
+        }
+
+        public EventHubArgs build() {
+            $.namespaceName = Objects.requireNonNull($.namespaceName, "expected parameter 'namespaceName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

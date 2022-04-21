@@ -5,7 +5,6 @@ package com.pulumi.gcp.diagflow;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentArgs;
 import com.pulumi.gcp.diagflow.inputs.CxPageEventHandlerArgs;
 import com.pulumi.gcp.diagflow.inputs.CxPageFormArgs;
@@ -13,6 +12,7 @@ import com.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -37,10 +37,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entryFulfillment")
-      private final @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
+    private @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
 
-    public Output<CxPageEntryFulfillmentArgs> entryFulfillment() {
-        return this.entryFulfillment == null ? Codegen.empty() : this.entryFulfillment;
+    public Optional<Output<CxPageEntryFulfillmentArgs>> entryFulfillment() {
+        return Optional.ofNullable(this.entryFulfillment);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandlers")
-      private final @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
+    private @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
 
-    public Output<List<CxPageEventHandlerArgs>> eventHandlers() {
-        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
+    public Optional<Output<List<CxPageEventHandlerArgs>>> eventHandlers() {
+        return Optional.ofNullable(this.eventHandlers);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="form")
-      private final @Nullable Output<CxPageFormArgs> form;
+    private @Nullable Output<CxPageFormArgs> form;
 
-    public Output<CxPageFormArgs> form() {
-        return this.form == null ? Codegen.empty() : this.form;
+    public Optional<Output<CxPageFormArgs>> form() {
+        return Optional.ofNullable(this.form);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRouteGroups")
-      private final @Nullable Output<List<String>> transitionRouteGroups;
+    private @Nullable Output<List<String>> transitionRouteGroups;
 
-    public Output<List<String>> transitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
+    public Optional<Output<List<String>>> transitionRouteGroups() {
+        return Optional.ofNullable(this.transitionRouteGroups);
     }
 
     /**
@@ -128,150 +128,131 @@ public final class CxPageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitionRoutes")
-      private final @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
+    private @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
-    public Output<List<CxPageTransitionRouteArgs>> transitionRoutes() {
-        return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
+    public Optional<Output<List<CxPageTransitionRouteArgs>>> transitionRoutes() {
+        return Optional.ofNullable(this.transitionRoutes);
     }
 
-    public CxPageArgs(
-        Output<String> displayName,
-        @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment,
-        @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers,
-        @Nullable Output<CxPageFormArgs> form,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> parent,
-        @Nullable Output<List<String>> transitionRouteGroups,
-        @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.entryFulfillment = entryFulfillment;
-        this.eventHandlers = eventHandlers;
-        this.form = form;
-        this.languageCode = languageCode;
-        this.parent = parent;
-        this.transitionRouteGroups = transitionRouteGroups;
-        this.transitionRoutes = transitionRoutes;
-    }
+    private CxPageArgs() {}
 
-    private CxPageArgs() {
-        this.displayName = Codegen.empty();
-        this.entryFulfillment = Codegen.empty();
-        this.eventHandlers = Codegen.empty();
-        this.form = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.transitionRouteGroups = Codegen.empty();
-        this.transitionRoutes = Codegen.empty();
+    private CxPageArgs(CxPageArgs $) {
+        this.displayName = $.displayName;
+        this.entryFulfillment = $.entryFulfillment;
+        this.eventHandlers = $.eventHandlers;
+        this.form = $.form;
+        this.languageCode = $.languageCode;
+        this.parent = $.parent;
+        this.transitionRouteGroups = $.transitionRouteGroups;
+        this.transitionRoutes = $.transitionRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CxPageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
-        private @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
-        private @Nullable Output<CxPageFormArgs> form;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<List<String>> transitionRouteGroups;
-        private @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
+        private CxPageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CxPageArgs();
         }
 
         public Builder(CxPageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.entryFulfillment = defaults.entryFulfillment;
-    	      this.eventHandlers = defaults.eventHandlers;
-    	      this.form = defaults.form;
-    	      this.languageCode = defaults.languageCode;
-    	      this.parent = defaults.parent;
-    	      this.transitionRouteGroups = defaults.transitionRouteGroups;
-    	      this.transitionRoutes = defaults.transitionRoutes;
+            $ = new CxPageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder entryFulfillment(@Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment) {
-            this.entryFulfillment = entryFulfillment;
+            $.entryFulfillment = entryFulfillment;
             return this;
         }
-        public Builder entryFulfillment(@Nullable CxPageEntryFulfillmentArgs entryFulfillment) {
-            this.entryFulfillment = Codegen.ofNullable(entryFulfillment);
-            return this;
+
+        public Builder entryFulfillment(CxPageEntryFulfillmentArgs entryFulfillment) {
+            return entryFulfillment(Output.of(entryFulfillment));
         }
+
         public Builder eventHandlers(@Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers) {
-            this.eventHandlers = eventHandlers;
+            $.eventHandlers = eventHandlers;
             return this;
         }
-        public Builder eventHandlers(@Nullable List<CxPageEventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Codegen.ofNullable(eventHandlers);
-            return this;
+
+        public Builder eventHandlers(List<CxPageEventHandlerArgs> eventHandlers) {
+            return eventHandlers(Output.of(eventHandlers));
         }
+
         public Builder eventHandlers(CxPageEventHandlerArgs... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
+
         public Builder form(@Nullable Output<CxPageFormArgs> form) {
-            this.form = form;
+            $.form = form;
             return this;
         }
-        public Builder form(@Nullable CxPageFormArgs form) {
-            this.form = Codegen.ofNullable(form);
-            return this;
+
+        public Builder form(CxPageFormArgs form) {
+            return form(Output.of(form));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
-            this.transitionRouteGroups = transitionRouteGroups;
+            $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
-        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Codegen.ofNullable(transitionRouteGroups);
-            return this;
+
+        public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
+            return transitionRouteGroups(Output.of(transitionRouteGroups));
         }
+
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
+
         public Builder transitionRoutes(@Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes) {
-            this.transitionRoutes = transitionRoutes;
+            $.transitionRoutes = transitionRoutes;
             return this;
         }
-        public Builder transitionRoutes(@Nullable List<CxPageTransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Codegen.ofNullable(transitionRoutes);
-            return this;
+
+        public Builder transitionRoutes(List<CxPageTransitionRouteArgs> transitionRoutes) {
+            return transitionRoutes(Output.of(transitionRoutes));
         }
+
         public Builder transitionRoutes(CxPageTransitionRouteArgs... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
-        }        public CxPageArgs build() {
-            return new CxPageArgs(displayName, entryFulfillment, eventHandlers, form, languageCode, parent, transitionRouteGroups, transitionRoutes);
+        }
+
+        public CxPageArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

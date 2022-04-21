@@ -17,7 +17,7 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentProviderNamespace", required=true)
-      private final String parentProviderNamespace;
+    private String parentProviderNamespace;
 
     public String parentProviderNamespace() {
         return this.parentProviderNamespace;
@@ -28,7 +28,7 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourceName", required=true)
-      private final String parentResourceName;
+    private String parentResourceName;
 
     public String parentResourceName() {
         return this.parentResourceName;
@@ -39,7 +39,7 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="parentResourceType", required=true)
-      private final String parentResourceType;
+    private String parentResourceType;
 
     public String parentResourceType() {
         return this.parentResourceType;
@@ -50,7 +50,7 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -61,82 +61,73 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetName", required=true)
-      private final String targetName;
+    private String targetName;
 
     public String targetName() {
         return this.targetName;
     }
 
-    public GetTargetArgs(
-        String parentProviderNamespace,
-        String parentResourceName,
-        String parentResourceType,
-        String resourceGroupName,
-        String targetName) {
-        this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace, "expected parameter 'parentProviderNamespace' to be non-null");
-        this.parentResourceName = Objects.requireNonNull(parentResourceName, "expected parameter 'parentResourceName' to be non-null");
-        this.parentResourceType = Objects.requireNonNull(parentResourceType, "expected parameter 'parentResourceType' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.targetName = Objects.requireNonNull(targetName, "expected parameter 'targetName' to be non-null");
-    }
+    private GetTargetArgs() {}
 
-    private GetTargetArgs() {
-        this.parentProviderNamespace = null;
-        this.parentResourceName = null;
-        this.parentResourceType = null;
-        this.resourceGroupName = null;
-        this.targetName = null;
+    private GetTargetArgs(GetTargetArgs $) {
+        this.parentProviderNamespace = $.parentProviderNamespace;
+        this.parentResourceName = $.parentResourceName;
+        this.parentResourceType = $.parentResourceType;
+        this.resourceGroupName = $.resourceGroupName;
+        this.targetName = $.targetName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parentProviderNamespace;
-        private String parentResourceName;
-        private String parentResourceType;
-        private String resourceGroupName;
-        private String targetName;
+        private GetTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetArgs();
         }
 
         public Builder(GetTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parentProviderNamespace = defaults.parentProviderNamespace;
-    	      this.parentResourceName = defaults.parentResourceName;
-    	      this.parentResourceType = defaults.parentResourceType;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.targetName = defaults.targetName;
+            $ = new GetTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parentProviderNamespace(String parentProviderNamespace) {
-            this.parentProviderNamespace = Objects.requireNonNull(parentProviderNamespace);
+            $.parentProviderNamespace = parentProviderNamespace;
             return this;
         }
+
         public Builder parentResourceName(String parentResourceName) {
-            this.parentResourceName = Objects.requireNonNull(parentResourceName);
+            $.parentResourceName = parentResourceName;
             return this;
         }
+
         public Builder parentResourceType(String parentResourceType) {
-            this.parentResourceType = Objects.requireNonNull(parentResourceType);
+            $.parentResourceType = parentResourceType;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder targetName(String targetName) {
-            this.targetName = Objects.requireNonNull(targetName);
+            $.targetName = targetName;
             return this;
-        }        public GetTargetArgs build() {
-            return new GetTargetArgs(parentProviderNamespace, parentResourceName, parentResourceType, resourceGroupName, targetName);
+        }
+
+        public GetTargetArgs build() {
+            $.parentProviderNamespace = Objects.requireNonNull($.parentProviderNamespace, "expected parameter 'parentProviderNamespace' to be non-null");
+            $.parentResourceName = Objects.requireNonNull($.parentResourceName, "expected parameter 'parentResourceName' to be non-null");
+            $.parentResourceType = Objects.requireNonNull($.parentResourceType, "expected parameter 'parentResourceType' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.targetName = Objects.requireNonNull($.targetName, "expected parameter 'targetName' to be non-null");
+            return $;
         }
     }
+
 }

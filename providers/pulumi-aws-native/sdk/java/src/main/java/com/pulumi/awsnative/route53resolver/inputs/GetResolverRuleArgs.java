@@ -17,45 +17,45 @@ public final class GetResolverRuleArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resolverRuleId", required=true)
-      private final String resolverRuleId;
+    private String resolverRuleId;
 
     public String resolverRuleId() {
         return this.resolverRuleId;
     }
 
-    public GetResolverRuleArgs(String resolverRuleId) {
-        this.resolverRuleId = Objects.requireNonNull(resolverRuleId, "expected parameter 'resolverRuleId' to be non-null");
-    }
+    private GetResolverRuleArgs() {}
 
-    private GetResolverRuleArgs() {
-        this.resolverRuleId = null;
+    private GetResolverRuleArgs(GetResolverRuleArgs $) {
+        this.resolverRuleId = $.resolverRuleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResolverRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resolverRuleId;
+        private GetResolverRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResolverRuleArgs();
         }
 
         public Builder(GetResolverRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resolverRuleId = defaults.resolverRuleId;
+            $ = new GetResolverRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resolverRuleId(String resolverRuleId) {
-            this.resolverRuleId = Objects.requireNonNull(resolverRuleId);
+            $.resolverRuleId = resolverRuleId;
             return this;
-        }        public GetResolverRuleArgs build() {
-            return new GetResolverRuleArgs(resolverRuleId);
+        }
+
+        public GetResolverRuleArgs build() {
+            $.resolverRuleId = Objects.requireNonNull($.resolverRuleId, "expected parameter 'resolverRuleId' to be non-null");
+            return $;
         }
     }
+
 }

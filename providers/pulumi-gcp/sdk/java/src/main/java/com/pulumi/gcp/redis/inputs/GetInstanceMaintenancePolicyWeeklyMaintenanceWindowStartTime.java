@@ -13,94 +13,87 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime 
     public static final GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime Empty = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime();
 
     @Import(name="hours", required=true)
-      private final Integer hours;
+    private Integer hours;
 
     public Integer hours() {
         return this.hours;
     }
 
     @Import(name="minutes", required=true)
-      private final Integer minutes;
+    private Integer minutes;
 
     public Integer minutes() {
         return this.minutes;
     }
 
     @Import(name="nanos", required=true)
-      private final Integer nanos;
+    private Integer nanos;
 
     public Integer nanos() {
         return this.nanos;
     }
 
     @Import(name="seconds", required=true)
-      private final Integer seconds;
+    private Integer seconds;
 
     public Integer seconds() {
         return this.seconds;
     }
 
-    public GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(
-        Integer hours,
-        Integer minutes,
-        Integer nanos,
-        Integer seconds) {
-        this.hours = Objects.requireNonNull(hours, "expected parameter 'hours' to be non-null");
-        this.minutes = Objects.requireNonNull(minutes, "expected parameter 'minutes' to be non-null");
-        this.nanos = Objects.requireNonNull(nanos, "expected parameter 'nanos' to be non-null");
-        this.seconds = Objects.requireNonNull(seconds, "expected parameter 'seconds' to be non-null");
-    }
+    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime() {}
 
-    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime() {
-        this.hours = null;
-        this.minutes = null;
-        this.nanos = null;
-        this.seconds = null;
+    private GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime $) {
+        this.hours = $.hours;
+        this.minutes = $.minutes;
+        this.nanos = $.nanos;
+        this.seconds = $.seconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer hours;
-        private Integer minutes;
-        private Integer nanos;
-        private Integer seconds;
+        private GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime();
         }
 
         public Builder(GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hours = defaults.hours;
-    	      this.minutes = defaults.minutes;
-    	      this.nanos = defaults.nanos;
-    	      this.seconds = defaults.seconds;
+            $ = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(Objects.requireNonNull(defaults));
         }
 
         public Builder hours(Integer hours) {
-            this.hours = Objects.requireNonNull(hours);
+            $.hours = hours;
             return this;
         }
+
         public Builder minutes(Integer minutes) {
-            this.minutes = Objects.requireNonNull(minutes);
+            $.minutes = minutes;
             return this;
         }
+
         public Builder nanos(Integer nanos) {
-            this.nanos = Objects.requireNonNull(nanos);
+            $.nanos = nanos;
             return this;
         }
+
         public Builder seconds(Integer seconds) {
-            this.seconds = Objects.requireNonNull(seconds);
+            $.seconds = seconds;
             return this;
-        }        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
-            return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
+        }
+
+        public GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
+            $.hours = Objects.requireNonNull($.hours, "expected parameter 'hours' to be non-null");
+            $.minutes = Objects.requireNonNull($.minutes, "expected parameter 'minutes' to be non-null");
+            $.nanos = Objects.requireNonNull($.nanos, "expected parameter 'nanos' to be non-null");
+            $.seconds = Objects.requireNonNull($.seconds, "expected parameter 'seconds' to be non-null");
+            return $;
         }
     }
+
 }

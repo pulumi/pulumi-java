@@ -22,7 +22,7 @@ public final class ClusterMetricsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="hdfsMetrics", required=true)
-      private final Map<String,String> hdfsMetrics;
+    private Map<String,String> hdfsMetrics;
 
     public Map<String,String> hdfsMetrics() {
         return this.hdfsMetrics;
@@ -33,55 +33,52 @@ public final class ClusterMetricsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="yarnMetrics", required=true)
-      private final Map<String,String> yarnMetrics;
+    private Map<String,String> yarnMetrics;
 
     public Map<String,String> yarnMetrics() {
         return this.yarnMetrics;
     }
 
-    public ClusterMetricsResponse(
-        Map<String,String> hdfsMetrics,
-        Map<String,String> yarnMetrics) {
-        this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics, "expected parameter 'hdfsMetrics' to be non-null");
-        this.yarnMetrics = Objects.requireNonNull(yarnMetrics, "expected parameter 'yarnMetrics' to be non-null");
-    }
+    private ClusterMetricsResponse() {}
 
-    private ClusterMetricsResponse() {
-        this.hdfsMetrics = Map.of();
-        this.yarnMetrics = Map.of();
+    private ClusterMetricsResponse(ClusterMetricsResponse $) {
+        this.hdfsMetrics = $.hdfsMetrics;
+        this.yarnMetrics = $.yarnMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterMetricsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> hdfsMetrics;
-        private Map<String,String> yarnMetrics;
+        private ClusterMetricsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterMetricsResponse();
         }
 
         public Builder(ClusterMetricsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hdfsMetrics = defaults.hdfsMetrics;
-    	      this.yarnMetrics = defaults.yarnMetrics;
+            $ = new ClusterMetricsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hdfsMetrics(Map<String,String> hdfsMetrics) {
-            this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics);
+            $.hdfsMetrics = hdfsMetrics;
             return this;
         }
+
         public Builder yarnMetrics(Map<String,String> yarnMetrics) {
-            this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
+            $.yarnMetrics = yarnMetrics;
             return this;
-        }        public ClusterMetricsResponse build() {
-            return new ClusterMetricsResponse(hdfsMetrics, yarnMetrics);
+        }
+
+        public ClusterMetricsResponse build() {
+            $.hdfsMetrics = Objects.requireNonNull($.hdfsMetrics, "expected parameter 'hdfsMetrics' to be non-null");
+            $.yarnMetrics = Objects.requireNonNull($.yarnMetrics, "expected parameter 'yarnMetrics' to be non-null");
+            return $;
         }
     }
+
 }

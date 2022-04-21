@@ -17,45 +17,45 @@ public final class GetTypeActivationArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public GetTypeActivationArgs(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private GetTypeActivationArgs() {}
 
-    private GetTypeActivationArgs() {
-        this.arn = null;
+    private GetTypeActivationArgs(GetTypeActivationArgs $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTypeActivationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private GetTypeActivationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTypeActivationArgs();
         }
 
         public Builder(GetTypeActivationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new GetTypeActivationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public GetTypeActivationArgs build() {
-            return new GetTypeActivationArgs(arn);
+        }
+
+        public GetTypeActivationArgs build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

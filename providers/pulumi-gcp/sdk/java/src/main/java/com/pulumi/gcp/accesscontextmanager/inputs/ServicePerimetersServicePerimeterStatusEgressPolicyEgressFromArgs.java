@@ -5,10 +5,10 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressFrom
      * 
      */
     @Import(name="identities")
-      private final @Nullable Output<List<String>> identities;
+    private @Nullable Output<List<String>> identities;
 
-    public Output<List<String>> identities() {
-        return this.identities == null ? Codegen.empty() : this.identities;
+    public Optional<Output<List<String>>> identities() {
+        return Optional.ofNullable(this.identities);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressFrom
      * 
      */
     @Import(name="identityType")
-      private final @Nullable Output<String> identityType;
+    private @Nullable Output<String> identityType;
 
-    public Output<String> identityType() {
-        return this.identityType == null ? Codegen.empty() : this.identityType;
+    public Optional<Output<String>> identityType() {
+        return Optional.ofNullable(this.identityType);
     }
 
-    public ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs(
-        @Nullable Output<List<String>> identities,
-        @Nullable Output<String> identityType) {
-        this.identities = identities;
-        this.identityType = identityType;
-    }
+    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs() {}
 
-    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs() {
-        this.identities = Codegen.empty();
-        this.identityType = Codegen.empty();
+    private ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs(ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs $) {
+        this.identities = $.identities;
+        this.identityType = $.identityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> identities;
-        private @Nullable Output<String> identityType;
+        private ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs();
         }
 
         public Builder(ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identities = defaults.identities;
-    	      this.identityType = defaults.identityType;
+            $ = new ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder identities(@Nullable Output<List<String>> identities) {
-            this.identities = identities;
+            $.identities = identities;
             return this;
         }
-        public Builder identities(@Nullable List<String> identities) {
-            this.identities = Codegen.ofNullable(identities);
-            return this;
+
+        public Builder identities(List<String> identities) {
+            return identities(Output.of(identities));
         }
+
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
+
         public Builder identityType(@Nullable Output<String> identityType) {
-            this.identityType = identityType;
+            $.identityType = identityType;
             return this;
         }
-        public Builder identityType(@Nullable String identityType) {
-            this.identityType = Codegen.ofNullable(identityType);
-            return this;
-        }        public ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs build() {
-            return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs(identities, identityType);
+
+        public Builder identityType(String identityType) {
+            return identityType(Output.of(identityType));
+        }
+
+        public ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs build() {
+            return $;
         }
     }
+
 }

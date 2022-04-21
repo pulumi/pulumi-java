@@ -22,21 +22,21 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="automaticRestart", required=true)
-      private final Boolean automaticRestart;
+    private Boolean automaticRestart;
 
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
 
     @Import(name="minNodeCpus", required=true)
-      private final Integer minNodeCpus;
+    private Integer minNodeCpus;
 
     public Integer minNodeCpus() {
         return this.minNodeCpus;
     }
 
     @Import(name="nodeAffinities", required=true)
-      private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
+    private List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
 
     public List<GetInstanceSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities;
@@ -49,7 +49,7 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="onHostMaintenance", required=true)
-      private final String onHostMaintenance;
+    private String onHostMaintenance;
 
     public String onHostMaintenance() {
         return this.onHostMaintenance;
@@ -60,85 +60,77 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="preemptible", required=true)
-      private final Boolean preemptible;
+    private Boolean preemptible;
 
     public Boolean preemptible() {
         return this.preemptible;
     }
 
-    public GetInstanceScheduling(
-        Boolean automaticRestart,
-        Integer minNodeCpus,
-        List<GetInstanceSchedulingNodeAffinity> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible) {
-        this.automaticRestart = Objects.requireNonNull(automaticRestart, "expected parameter 'automaticRestart' to be non-null");
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
-        this.preemptible = Objects.requireNonNull(preemptible, "expected parameter 'preemptible' to be non-null");
-    }
+    private GetInstanceScheduling() {}
 
-    private GetInstanceScheduling() {
-        this.automaticRestart = null;
-        this.minNodeCpus = null;
-        this.nodeAffinities = List.of();
-        this.onHostMaintenance = null;
-        this.preemptible = null;
+    private GetInstanceScheduling(GetInstanceScheduling $) {
+        this.automaticRestart = $.automaticRestart;
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.preemptible = $.preemptible;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceScheduling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean automaticRestart;
-        private Integer minNodeCpus;
-        private List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
-        private String onHostMaintenance;
-        private Boolean preemptible;
+        private GetInstanceScheduling $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceScheduling();
         }
 
         public Builder(GetInstanceScheduling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automaticRestart = defaults.automaticRestart;
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.preemptible = defaults.preemptible;
+            $ = new GetInstanceScheduling(Objects.requireNonNull(defaults));
         }
 
         public Builder automaticRestart(Boolean automaticRestart) {
-            this.automaticRestart = Objects.requireNonNull(automaticRestart);
+            $.automaticRestart = automaticRestart;
             return this;
         }
+
         public Builder minNodeCpus(Integer minNodeCpus) {
-            this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
+
         public Builder nodeAffinities(List<GetInstanceSchedulingNodeAffinity> nodeAffinities) {
-            this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
+
         public Builder nodeAffinities(GetInstanceSchedulingNodeAffinity... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(String onHostMaintenance) {
-            this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
+
         public Builder preemptible(Boolean preemptible) {
-            this.preemptible = Objects.requireNonNull(preemptible);
+            $.preemptible = preemptible;
             return this;
-        }        public GetInstanceScheduling build() {
-            return new GetInstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
+        }
+
+        public GetInstanceScheduling build() {
+            $.automaticRestart = Objects.requireNonNull($.automaticRestart, "expected parameter 'automaticRestart' to be non-null");
+            $.minNodeCpus = Objects.requireNonNull($.minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
+            $.nodeAffinities = Objects.requireNonNull($.nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
+            $.onHostMaintenance = Objects.requireNonNull($.onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
+            $.preemptible = Objects.requireNonNull($.preemptible, "expected parameter 'preemptible' to be non-null");
+            return $;
         }
     }
+
 }

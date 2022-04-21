@@ -5,9 +5,9 @@ package com.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class PrivateIPAddressArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetResourceId")
-      private final @Nullable Output<String> subnetResourceId;
+    private @Nullable Output<String> subnetResourceId;
 
-    public Output<String> subnetResourceId() {
-        return this.subnetResourceId == null ? Codegen.empty() : this.subnetResourceId;
+    public Optional<Output<String>> subnetResourceId() {
+        return Optional.ofNullable(this.subnetResourceId);
     }
 
-    public PrivateIPAddressArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> subnetResourceId) {
-        this.ipAddress = ipAddress;
-        this.subnetResourceId = subnetResourceId;
-    }
+    private PrivateIPAddressArgs() {}
 
-    private PrivateIPAddressArgs() {
-        this.ipAddress = Codegen.empty();
-        this.subnetResourceId = Codegen.empty();
+    private PrivateIPAddressArgs(PrivateIPAddressArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.subnetResourceId = $.subnetResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateIPAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> subnetResourceId;
+        private PrivateIPAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateIPAddressArgs();
         }
 
         public Builder(PrivateIPAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.subnetResourceId = defaults.subnetResourceId;
+            $ = new PrivateIPAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
-            this.subnetResourceId = subnetResourceId;
+            $.subnetResourceId = subnetResourceId;
             return this;
         }
-        public Builder subnetResourceId(@Nullable String subnetResourceId) {
-            this.subnetResourceId = Codegen.ofNullable(subnetResourceId);
-            return this;
-        }        public PrivateIPAddressArgs build() {
-            return new PrivateIPAddressArgs(ipAddress, subnetResourceId);
+
+        public Builder subnetResourceId(String subnetResourceId) {
+            return subnetResourceId(Output.of(subnetResourceId));
+        }
+
+        public PrivateIPAddressArgs build() {
+            return $;
         }
     }
+
 }

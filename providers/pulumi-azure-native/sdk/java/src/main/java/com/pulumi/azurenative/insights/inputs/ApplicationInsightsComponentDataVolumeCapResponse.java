@@ -25,10 +25,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="cap")
-      private final @Nullable Double cap;
+    private @Nullable Double cap;
 
     public Optional<Double> cap() {
-        return this.cap == null ? Optional.empty() : Optional.ofNullable(this.cap);
+        return Optional.ofNullable(this.cap);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="maxHistoryCap", required=true)
-      private final Double maxHistoryCap;
+    private Double maxHistoryCap;
 
     public Double maxHistoryCap() {
         return this.maxHistoryCap;
@@ -47,7 +47,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="resetTime", required=true)
-      private final Integer resetTime;
+    private Integer resetTime;
 
     public Integer resetTime() {
         return this.resetTime;
@@ -58,10 +58,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="stopSendNotificationWhenHitCap")
-      private final @Nullable Boolean stopSendNotificationWhenHitCap;
+    private @Nullable Boolean stopSendNotificationWhenHitCap;
 
     public Optional<Boolean> stopSendNotificationWhenHitCap() {
-        return this.stopSendNotificationWhenHitCap == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitCap);
+        return Optional.ofNullable(this.stopSendNotificationWhenHitCap);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="stopSendNotificationWhenHitThreshold")
-      private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
+    private @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
     public Optional<Boolean> stopSendNotificationWhenHitThreshold() {
-        return this.stopSendNotificationWhenHitThreshold == null ? Optional.empty() : Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
+        return Optional.ofNullable(this.stopSendNotificationWhenHitThreshold);
     }
 
     /**
@@ -80,91 +80,76 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends com
      * 
      */
     @Import(name="warningThreshold")
-      private final @Nullable Integer warningThreshold;
+    private @Nullable Integer warningThreshold;
 
     public Optional<Integer> warningThreshold() {
-        return this.warningThreshold == null ? Optional.empty() : Optional.ofNullable(this.warningThreshold);
+        return Optional.ofNullable(this.warningThreshold);
     }
 
-    public ApplicationInsightsComponentDataVolumeCapResponse(
-        @Nullable Double cap,
-        Double maxHistoryCap,
-        Integer resetTime,
-        @Nullable Boolean stopSendNotificationWhenHitCap,
-        @Nullable Boolean stopSendNotificationWhenHitThreshold,
-        @Nullable Integer warningThreshold) {
-        this.cap = cap;
-        this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap, "expected parameter 'maxHistoryCap' to be non-null");
-        this.resetTime = Objects.requireNonNull(resetTime, "expected parameter 'resetTime' to be non-null");
-        this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
-        this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
-        this.warningThreshold = warningThreshold;
-    }
+    private ApplicationInsightsComponentDataVolumeCapResponse() {}
 
-    private ApplicationInsightsComponentDataVolumeCapResponse() {
-        this.cap = null;
-        this.maxHistoryCap = null;
-        this.resetTime = null;
-        this.stopSendNotificationWhenHitCap = null;
-        this.stopSendNotificationWhenHitThreshold = null;
-        this.warningThreshold = null;
+    private ApplicationInsightsComponentDataVolumeCapResponse(ApplicationInsightsComponentDataVolumeCapResponse $) {
+        this.cap = $.cap;
+        this.maxHistoryCap = $.maxHistoryCap;
+        this.resetTime = $.resetTime;
+        this.stopSendNotificationWhenHitCap = $.stopSendNotificationWhenHitCap;
+        this.stopSendNotificationWhenHitThreshold = $.stopSendNotificationWhenHitThreshold;
+        this.warningThreshold = $.warningThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationInsightsComponentDataVolumeCapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Double cap;
-        private Double maxHistoryCap;
-        private Integer resetTime;
-        private @Nullable Boolean stopSendNotificationWhenHitCap;
-        private @Nullable Boolean stopSendNotificationWhenHitThreshold;
-        private @Nullable Integer warningThreshold;
+        private ApplicationInsightsComponentDataVolumeCapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationInsightsComponentDataVolumeCapResponse();
         }
 
         public Builder(ApplicationInsightsComponentDataVolumeCapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cap = defaults.cap;
-    	      this.maxHistoryCap = defaults.maxHistoryCap;
-    	      this.resetTime = defaults.resetTime;
-    	      this.stopSendNotificationWhenHitCap = defaults.stopSendNotificationWhenHitCap;
-    	      this.stopSendNotificationWhenHitThreshold = defaults.stopSendNotificationWhenHitThreshold;
-    	      this.warningThreshold = defaults.warningThreshold;
+            $ = new ApplicationInsightsComponentDataVolumeCapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cap(@Nullable Double cap) {
-            this.cap = cap;
+            $.cap = cap;
             return this;
         }
+
         public Builder maxHistoryCap(Double maxHistoryCap) {
-            this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap);
+            $.maxHistoryCap = maxHistoryCap;
             return this;
         }
+
         public Builder resetTime(Integer resetTime) {
-            this.resetTime = Objects.requireNonNull(resetTime);
+            $.resetTime = resetTime;
             return this;
         }
+
         public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
-            this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
+            $.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
+
         public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
-            this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
+            $.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
+
         public Builder warningThreshold(@Nullable Integer warningThreshold) {
-            this.warningThreshold = warningThreshold;
+            $.warningThreshold = warningThreshold;
             return this;
-        }        public ApplicationInsightsComponentDataVolumeCapResponse build() {
-            return new ApplicationInsightsComponentDataVolumeCapResponse(cap, maxHistoryCap, resetTime, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
+        }
+
+        public ApplicationInsightsComponentDataVolumeCapResponse build() {
+            $.maxHistoryCap = Objects.requireNonNull($.maxHistoryCap, "expected parameter 'maxHistoryCap' to be non-null");
+            $.resetTime = Objects.requireNonNull($.resetTime, "expected parameter 'resetTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.aws.ses.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ReceiptRuleS3ActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -32,10 +32,10 @@ public final class ReceiptRuleS3ActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kmsKeyArn")
-      private final @Nullable Output<String> kmsKeyArn;
+    private @Nullable Output<String> kmsKeyArn;
 
-    public Output<String> kmsKeyArn() {
-        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
+    public Optional<Output<String>> kmsKeyArn() {
+        return Optional.ofNullable(this.kmsKeyArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ReceiptRuleS3ActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="objectKeyPrefix")
-      private final @Nullable Output<String> objectKeyPrefix;
+    private @Nullable Output<String> objectKeyPrefix;
 
-    public Output<String> objectKeyPrefix() {
-        return this.objectKeyPrefix == null ? Codegen.empty() : this.objectKeyPrefix;
+    public Optional<Output<String>> objectKeyPrefix() {
+        return Optional.ofNullable(this.objectKeyPrefix);
     }
 
     /**
@@ -54,7 +54,7 @@ public final class ReceiptRuleS3ActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="position", required=true)
-      private final Output<Integer> position;
+    private Output<Integer> position;
 
     public Output<Integer> position() {
         return this.position;
@@ -65,102 +65,90 @@ public final class ReceiptRuleS3ActionGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="topicArn")
-      private final @Nullable Output<String> topicArn;
+    private @Nullable Output<String> topicArn;
 
-    public Output<String> topicArn() {
-        return this.topicArn == null ? Codegen.empty() : this.topicArn;
+    public Optional<Output<String>> topicArn() {
+        return Optional.ofNullable(this.topicArn);
     }
 
-    public ReceiptRuleS3ActionGetArgs(
-        Output<String> bucketName,
-        @Nullable Output<String> kmsKeyArn,
-        @Nullable Output<String> objectKeyPrefix,
-        Output<Integer> position,
-        @Nullable Output<String> topicArn) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.kmsKeyArn = kmsKeyArn;
-        this.objectKeyPrefix = objectKeyPrefix;
-        this.position = Objects.requireNonNull(position, "expected parameter 'position' to be non-null");
-        this.topicArn = topicArn;
-    }
+    private ReceiptRuleS3ActionGetArgs() {}
 
-    private ReceiptRuleS3ActionGetArgs() {
-        this.bucketName = Codegen.empty();
-        this.kmsKeyArn = Codegen.empty();
-        this.objectKeyPrefix = Codegen.empty();
-        this.position = Codegen.empty();
-        this.topicArn = Codegen.empty();
+    private ReceiptRuleS3ActionGetArgs(ReceiptRuleS3ActionGetArgs $) {
+        this.bucketName = $.bucketName;
+        this.kmsKeyArn = $.kmsKeyArn;
+        this.objectKeyPrefix = $.objectKeyPrefix;
+        this.position = $.position;
+        this.topicArn = $.topicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReceiptRuleS3ActionGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucketName;
-        private @Nullable Output<String> kmsKeyArn;
-        private @Nullable Output<String> objectKeyPrefix;
-        private Output<Integer> position;
-        private @Nullable Output<String> topicArn;
+        private ReceiptRuleS3ActionGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReceiptRuleS3ActionGetArgs();
         }
 
         public Builder(ReceiptRuleS3ActionGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.kmsKeyArn = defaults.kmsKeyArn;
-    	      this.objectKeyPrefix = defaults.objectKeyPrefix;
-    	      this.position = defaults.position;
-    	      this.topicArn = defaults.topicArn;
+            $ = new ReceiptRuleS3ActionGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
-            this.kmsKeyArn = kmsKeyArn;
+            $.kmsKeyArn = kmsKeyArn;
             return this;
         }
-        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
-            return this;
+
+        public Builder kmsKeyArn(String kmsKeyArn) {
+            return kmsKeyArn(Output.of(kmsKeyArn));
         }
+
         public Builder objectKeyPrefix(@Nullable Output<String> objectKeyPrefix) {
-            this.objectKeyPrefix = objectKeyPrefix;
+            $.objectKeyPrefix = objectKeyPrefix;
             return this;
         }
-        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
-            this.objectKeyPrefix = Codegen.ofNullable(objectKeyPrefix);
-            return this;
+
+        public Builder objectKeyPrefix(String objectKeyPrefix) {
+            return objectKeyPrefix(Output.of(objectKeyPrefix));
         }
+
         public Builder position(Output<Integer> position) {
-            this.position = Objects.requireNonNull(position);
+            $.position = position;
             return this;
         }
+
         public Builder position(Integer position) {
-            this.position = Output.of(Objects.requireNonNull(position));
-            return this;
+            return position(Output.of(position));
         }
+
         public Builder topicArn(@Nullable Output<String> topicArn) {
-            this.topicArn = topicArn;
+            $.topicArn = topicArn;
             return this;
         }
-        public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Codegen.ofNullable(topicArn);
-            return this;
-        }        public ReceiptRuleS3ActionGetArgs build() {
-            return new ReceiptRuleS3ActionGetArgs(bucketName, kmsKeyArn, objectKeyPrefix, position, topicArn);
+
+        public Builder topicArn(String topicArn) {
+            return topicArn(Output.of(topicArn));
+        }
+
+        public ReceiptRuleS3ActionGetArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.position = Objects.requireNonNull($.position, "expected parameter 'position' to be non-null");
+            return $;
         }
     }
+
 }

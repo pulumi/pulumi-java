@@ -13,45 +13,45 @@ public final class GetFHIRDatastoreArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetFHIRDatastoreArgs Empty = new GetFHIRDatastoreArgs();
 
     @Import(name="datastoreId", required=true)
-      private final String datastoreId;
+    private String datastoreId;
 
     public String datastoreId() {
         return this.datastoreId;
     }
 
-    public GetFHIRDatastoreArgs(String datastoreId) {
-        this.datastoreId = Objects.requireNonNull(datastoreId, "expected parameter 'datastoreId' to be non-null");
-    }
+    private GetFHIRDatastoreArgs() {}
 
-    private GetFHIRDatastoreArgs() {
-        this.datastoreId = null;
+    private GetFHIRDatastoreArgs(GetFHIRDatastoreArgs $) {
+        this.datastoreId = $.datastoreId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFHIRDatastoreArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datastoreId;
+        private GetFHIRDatastoreArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFHIRDatastoreArgs();
         }
 
         public Builder(GetFHIRDatastoreArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
+            $ = new GetFHIRDatastoreArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(String datastoreId) {
-            this.datastoreId = Objects.requireNonNull(datastoreId);
+            $.datastoreId = datastoreId;
             return this;
-        }        public GetFHIRDatastoreArgs build() {
-            return new GetFHIRDatastoreArgs(datastoreId);
+        }
+
+        public GetFHIRDatastoreArgs build() {
+            $.datastoreId = Objects.requireNonNull($.datastoreId, "expected parameter 'datastoreId' to be non-null");
+            return $;
         }
     }
+
 }

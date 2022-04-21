@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
      * 
      */
     @Import(name="bucketName", required=true)
-      private final String bucketName;
+    private String bucketName;
 
     public String bucketName() {
         return this.bucketName;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
      * 
      */
     @Import(name="datasetName", required=true)
-      private final String datasetName;
+    private String datasetName;
 
     public String datasetName() {
         return this.datasetName;
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -54,7 +54,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -65,82 +65,73 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends com.pulumi
      * 
      */
     @Import(name="tablePrefix", required=true)
-      private final String tablePrefix;
+    private String tablePrefix;
 
     public String tablePrefix() {
         return this.tablePrefix;
     }
 
-    public GoogleCloudApigeeV1DatastoreConfigResponse(
-        String bucketName,
-        String datasetName,
-        String path,
-        String project,
-        String tablePrefix) {
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.datasetName = Objects.requireNonNull(datasetName, "expected parameter 'datasetName' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.tablePrefix = Objects.requireNonNull(tablePrefix, "expected parameter 'tablePrefix' to be non-null");
-    }
+    private GoogleCloudApigeeV1DatastoreConfigResponse() {}
 
-    private GoogleCloudApigeeV1DatastoreConfigResponse() {
-        this.bucketName = null;
-        this.datasetName = null;
-        this.path = null;
-        this.project = null;
-        this.tablePrefix = null;
+    private GoogleCloudApigeeV1DatastoreConfigResponse(GoogleCloudApigeeV1DatastoreConfigResponse $) {
+        this.bucketName = $.bucketName;
+        this.datasetName = $.datasetName;
+        this.path = $.path;
+        this.project = $.project;
+        this.tablePrefix = $.tablePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1DatastoreConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketName;
-        private String datasetName;
-        private String path;
-        private String project;
-        private String tablePrefix;
+        private GoogleCloudApigeeV1DatastoreConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1DatastoreConfigResponse();
         }
 
         public Builder(GoogleCloudApigeeV1DatastoreConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.datasetName = defaults.datasetName;
-    	      this.path = defaults.path;
-    	      this.project = defaults.project;
-    	      this.tablePrefix = defaults.tablePrefix;
+            $ = new GoogleCloudApigeeV1DatastoreConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(String bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder datasetName(String datasetName) {
-            this.datasetName = Objects.requireNonNull(datasetName);
+            $.datasetName = datasetName;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder tablePrefix(String tablePrefix) {
-            this.tablePrefix = Objects.requireNonNull(tablePrefix);
+            $.tablePrefix = tablePrefix;
             return this;
-        }        public GoogleCloudApigeeV1DatastoreConfigResponse build() {
-            return new GoogleCloudApigeeV1DatastoreConfigResponse(bucketName, datasetName, path, project, tablePrefix);
+        }
+
+        public GoogleCloudApigeeV1DatastoreConfigResponse build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            $.datasetName = Objects.requireNonNull($.datasetName, "expected parameter 'datasetName' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.tablePrefix = Objects.requireNonNull($.tablePrefix, "expected parameter 'tablePrefix' to be non-null");
+            return $;
         }
     }
+
 }

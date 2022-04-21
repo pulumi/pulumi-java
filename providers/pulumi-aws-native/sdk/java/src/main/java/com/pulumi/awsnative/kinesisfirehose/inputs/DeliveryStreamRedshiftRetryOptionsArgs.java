@@ -5,9 +5,9 @@ package com.pulumi.awsnative.kinesisfirehose.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class DeliveryStreamRedshiftRetryOptionsArgs extends com.pulumi.res
     public static final DeliveryStreamRedshiftRetryOptionsArgs Empty = new DeliveryStreamRedshiftRetryOptionsArgs();
 
     @Import(name="durationInSeconds")
-      private final @Nullable Output<Integer> durationInSeconds;
+    private @Nullable Output<Integer> durationInSeconds;
 
-    public Output<Integer> durationInSeconds() {
-        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
+    public Optional<Output<Integer>> durationInSeconds() {
+        return Optional.ofNullable(this.durationInSeconds);
     }
 
-    public DeliveryStreamRedshiftRetryOptionsArgs(@Nullable Output<Integer> durationInSeconds) {
-        this.durationInSeconds = durationInSeconds;
-    }
+    private DeliveryStreamRedshiftRetryOptionsArgs() {}
 
-    private DeliveryStreamRedshiftRetryOptionsArgs() {
-        this.durationInSeconds = Codegen.empty();
+    private DeliveryStreamRedshiftRetryOptionsArgs(DeliveryStreamRedshiftRetryOptionsArgs $) {
+        this.durationInSeconds = $.durationInSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryStreamRedshiftRetryOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> durationInSeconds;
+        private DeliveryStreamRedshiftRetryOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryStreamRedshiftRetryOptionsArgs();
         }
 
         public Builder(DeliveryStreamRedshiftRetryOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.durationInSeconds = defaults.durationInSeconds;
+            $ = new DeliveryStreamRedshiftRetryOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder durationInSeconds(@Nullable Output<Integer> durationInSeconds) {
-            this.durationInSeconds = durationInSeconds;
+            $.durationInSeconds = durationInSeconds;
             return this;
         }
-        public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
-            return this;
-        }        public DeliveryStreamRedshiftRetryOptionsArgs build() {
-            return new DeliveryStreamRedshiftRetryOptionsArgs(durationInSeconds);
+
+        public Builder durationInSeconds(Integer durationInSeconds) {
+            return durationInSeconds(Output.of(durationInSeconds));
+        }
+
+        public DeliveryStreamRedshiftRetryOptionsArgs build() {
+            return $;
         }
     }
+
 }

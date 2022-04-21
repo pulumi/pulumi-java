@@ -25,10 +25,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backupScheduleType")
-      private final @Nullable String backupScheduleType;
+    private @Nullable String backupScheduleType;
 
     public Optional<String> backupScheduleType() {
-        return this.backupScheduleType == null ? Optional.empty() : Optional.ofNullable(this.backupScheduleType);
+        return Optional.ofNullable(this.backupScheduleType);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="backupSystemDbs")
-      private final @Nullable Boolean backupSystemDbs;
+    private @Nullable Boolean backupSystemDbs;
 
     public Optional<Boolean> backupSystemDbs() {
-        return this.backupSystemDbs == null ? Optional.empty() : Optional.ofNullable(this.backupSystemDbs);
+        return Optional.ofNullable(this.backupSystemDbs);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enable")
-      private final @Nullable Boolean enable;
+    private @Nullable Boolean enable;
 
     public Optional<Boolean> enable() {
-        return this.enable == null ? Optional.empty() : Optional.ofNullable(this.enable);
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableEncryption")
-      private final @Nullable Boolean enableEncryption;
+    private @Nullable Boolean enableEncryption;
 
     public Optional<Boolean> enableEncryption() {
-        return this.enableEncryption == null ? Optional.empty() : Optional.ofNullable(this.enableEncryption);
+        return Optional.ofNullable(this.enableEncryption);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullBackupFrequency")
-      private final @Nullable String fullBackupFrequency;
+    private @Nullable String fullBackupFrequency;
 
     public Optional<String> fullBackupFrequency() {
-        return this.fullBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.fullBackupFrequency);
+        return Optional.ofNullable(this.fullBackupFrequency);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullBackupStartTime")
-      private final @Nullable Integer fullBackupStartTime;
+    private @Nullable Integer fullBackupStartTime;
 
     public Optional<Integer> fullBackupStartTime() {
-        return this.fullBackupStartTime == null ? Optional.empty() : Optional.ofNullable(this.fullBackupStartTime);
+        return Optional.ofNullable(this.fullBackupStartTime);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullBackupWindowHours")
-      private final @Nullable Integer fullBackupWindowHours;
+    private @Nullable Integer fullBackupWindowHours;
 
     public Optional<Integer> fullBackupWindowHours() {
-        return this.fullBackupWindowHours == null ? Optional.empty() : Optional.ofNullable(this.fullBackupWindowHours);
+        return Optional.ofNullable(this.fullBackupWindowHours);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="logBackupFrequency")
-      private final @Nullable Integer logBackupFrequency;
+    private @Nullable Integer logBackupFrequency;
 
     public Optional<Integer> logBackupFrequency() {
-        return this.logBackupFrequency == null ? Optional.empty() : Optional.ofNullable(this.logBackupFrequency);
+        return Optional.ofNullable(this.logBackupFrequency);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="retentionPeriod")
-      private final @Nullable Integer retentionPeriod;
+    private @Nullable Integer retentionPeriod;
 
     public Optional<Integer> retentionPeriod() {
-        return this.retentionPeriod == null ? Optional.empty() : Optional.ofNullable(this.retentionPeriod);
+        return Optional.ofNullable(this.retentionPeriod);
     }
 
     /**
@@ -124,127 +124,98 @@ public final class AutoBackupSettingsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="storageAccountUrl")
-      private final @Nullable String storageAccountUrl;
+    private @Nullable String storageAccountUrl;
 
     public Optional<String> storageAccountUrl() {
-        return this.storageAccountUrl == null ? Optional.empty() : Optional.ofNullable(this.storageAccountUrl);
+        return Optional.ofNullable(this.storageAccountUrl);
     }
 
-    public AutoBackupSettingsResponse(
-        @Nullable String backupScheduleType,
-        @Nullable Boolean backupSystemDbs,
-        @Nullable Boolean enable,
-        @Nullable Boolean enableEncryption,
-        @Nullable String fullBackupFrequency,
-        @Nullable Integer fullBackupStartTime,
-        @Nullable Integer fullBackupWindowHours,
-        @Nullable Integer logBackupFrequency,
-        @Nullable Integer retentionPeriod,
-        @Nullable String storageAccountUrl) {
-        this.backupScheduleType = backupScheduleType;
-        this.backupSystemDbs = backupSystemDbs;
-        this.enable = enable;
-        this.enableEncryption = enableEncryption;
-        this.fullBackupFrequency = fullBackupFrequency;
-        this.fullBackupStartTime = fullBackupStartTime;
-        this.fullBackupWindowHours = fullBackupWindowHours;
-        this.logBackupFrequency = logBackupFrequency;
-        this.retentionPeriod = retentionPeriod;
-        this.storageAccountUrl = storageAccountUrl;
-    }
+    private AutoBackupSettingsResponse() {}
 
-    private AutoBackupSettingsResponse() {
-        this.backupScheduleType = null;
-        this.backupSystemDbs = null;
-        this.enable = null;
-        this.enableEncryption = null;
-        this.fullBackupFrequency = null;
-        this.fullBackupStartTime = null;
-        this.fullBackupWindowHours = null;
-        this.logBackupFrequency = null;
-        this.retentionPeriod = null;
-        this.storageAccountUrl = null;
+    private AutoBackupSettingsResponse(AutoBackupSettingsResponse $) {
+        this.backupScheduleType = $.backupScheduleType;
+        this.backupSystemDbs = $.backupSystemDbs;
+        this.enable = $.enable;
+        this.enableEncryption = $.enableEncryption;
+        this.fullBackupFrequency = $.fullBackupFrequency;
+        this.fullBackupStartTime = $.fullBackupStartTime;
+        this.fullBackupWindowHours = $.fullBackupWindowHours;
+        this.logBackupFrequency = $.logBackupFrequency;
+        this.retentionPeriod = $.retentionPeriod;
+        this.storageAccountUrl = $.storageAccountUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoBackupSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupScheduleType;
-        private @Nullable Boolean backupSystemDbs;
-        private @Nullable Boolean enable;
-        private @Nullable Boolean enableEncryption;
-        private @Nullable String fullBackupFrequency;
-        private @Nullable Integer fullBackupStartTime;
-        private @Nullable Integer fullBackupWindowHours;
-        private @Nullable Integer logBackupFrequency;
-        private @Nullable Integer retentionPeriod;
-        private @Nullable String storageAccountUrl;
+        private AutoBackupSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoBackupSettingsResponse();
         }
 
         public Builder(AutoBackupSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupScheduleType = defaults.backupScheduleType;
-    	      this.backupSystemDbs = defaults.backupSystemDbs;
-    	      this.enable = defaults.enable;
-    	      this.enableEncryption = defaults.enableEncryption;
-    	      this.fullBackupFrequency = defaults.fullBackupFrequency;
-    	      this.fullBackupStartTime = defaults.fullBackupStartTime;
-    	      this.fullBackupWindowHours = defaults.fullBackupWindowHours;
-    	      this.logBackupFrequency = defaults.logBackupFrequency;
-    	      this.retentionPeriod = defaults.retentionPeriod;
-    	      this.storageAccountUrl = defaults.storageAccountUrl;
+            $ = new AutoBackupSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupScheduleType(@Nullable String backupScheduleType) {
-            this.backupScheduleType = backupScheduleType;
+            $.backupScheduleType = backupScheduleType;
             return this;
         }
+
         public Builder backupSystemDbs(@Nullable Boolean backupSystemDbs) {
-            this.backupSystemDbs = backupSystemDbs;
+            $.backupSystemDbs = backupSystemDbs;
             return this;
         }
+
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
+
         public Builder enableEncryption(@Nullable Boolean enableEncryption) {
-            this.enableEncryption = enableEncryption;
+            $.enableEncryption = enableEncryption;
             return this;
         }
+
         public Builder fullBackupFrequency(@Nullable String fullBackupFrequency) {
-            this.fullBackupFrequency = fullBackupFrequency;
+            $.fullBackupFrequency = fullBackupFrequency;
             return this;
         }
+
         public Builder fullBackupStartTime(@Nullable Integer fullBackupStartTime) {
-            this.fullBackupStartTime = fullBackupStartTime;
+            $.fullBackupStartTime = fullBackupStartTime;
             return this;
         }
+
         public Builder fullBackupWindowHours(@Nullable Integer fullBackupWindowHours) {
-            this.fullBackupWindowHours = fullBackupWindowHours;
+            $.fullBackupWindowHours = fullBackupWindowHours;
             return this;
         }
+
         public Builder logBackupFrequency(@Nullable Integer logBackupFrequency) {
-            this.logBackupFrequency = logBackupFrequency;
+            $.logBackupFrequency = logBackupFrequency;
             return this;
         }
+
         public Builder retentionPeriod(@Nullable Integer retentionPeriod) {
-            this.retentionPeriod = retentionPeriod;
+            $.retentionPeriod = retentionPeriod;
             return this;
         }
+
         public Builder storageAccountUrl(@Nullable String storageAccountUrl) {
-            this.storageAccountUrl = storageAccountUrl;
+            $.storageAccountUrl = storageAccountUrl;
             return this;
-        }        public AutoBackupSettingsResponse build() {
-            return new AutoBackupSettingsResponse(backupScheduleType, backupSystemDbs, enable, enableEncryption, fullBackupFrequency, fullBackupStartTime, fullBackupWindowHours, logBackupFrequency, retentionPeriod, storageAccountUrl);
+        }
+
+        public AutoBackupSettingsResponse build() {
+            return $;
         }
     }
+
 }

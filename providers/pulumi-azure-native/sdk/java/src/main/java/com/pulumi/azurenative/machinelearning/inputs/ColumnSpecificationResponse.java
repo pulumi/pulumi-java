@@ -26,10 +26,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="enum")
-      private final @Nullable List<Object> enum_;
+    private @Nullable List<Object> enum_;
 
-    public List<Object> enum_() {
-        return this.enum_ == null ? List.of() : this.enum_;
+    public Optional<List<Object>> enum_() {
+        return Optional.ofNullable(this.enum_);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="format")
-      private final @Nullable String format;
+    private @Nullable String format;
 
     public Optional<String> format() {
-        return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
+        return Optional.ofNullable(this.format);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -59,10 +59,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="xMsIsnullable")
-      private final @Nullable Boolean xMsIsnullable;
+    private @Nullable Boolean xMsIsnullable;
 
     public Optional<Boolean> xMsIsnullable() {
-        return this.xMsIsnullable == null ? Optional.empty() : Optional.ofNullable(this.xMsIsnullable);
+        return Optional.ofNullable(this.xMsIsnullable);
     }
 
     /**
@@ -70,85 +70,73 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="xMsIsordered")
-      private final @Nullable Boolean xMsIsordered;
+    private @Nullable Boolean xMsIsordered;
 
     public Optional<Boolean> xMsIsordered() {
-        return this.xMsIsordered == null ? Optional.empty() : Optional.ofNullable(this.xMsIsordered);
+        return Optional.ofNullable(this.xMsIsordered);
     }
 
-    public ColumnSpecificationResponse(
-        @Nullable List<Object> enum_,
-        @Nullable String format,
-        String type,
-        @Nullable Boolean xMsIsnullable,
-        @Nullable Boolean xMsIsordered) {
-        this.enum_ = enum_;
-        this.format = format;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.xMsIsnullable = xMsIsnullable;
-        this.xMsIsordered = xMsIsordered;
-    }
+    private ColumnSpecificationResponse() {}
 
-    private ColumnSpecificationResponse() {
-        this.enum_ = List.of();
-        this.format = null;
-        this.type = null;
-        this.xMsIsnullable = null;
-        this.xMsIsordered = null;
+    private ColumnSpecificationResponse(ColumnSpecificationResponse $) {
+        this.enum_ = $.enum_;
+        this.format = $.format;
+        this.type = $.type;
+        this.xMsIsnullable = $.xMsIsnullable;
+        this.xMsIsordered = $.xMsIsordered;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnSpecificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<Object> enum_;
-        private @Nullable String format;
-        private String type;
-        private @Nullable Boolean xMsIsnullable;
-        private @Nullable Boolean xMsIsordered;
+        private ColumnSpecificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnSpecificationResponse();
         }
 
         public Builder(ColumnSpecificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enum_ = defaults.enum_;
-    	      this.format = defaults.format;
-    	      this.type = defaults.type;
-    	      this.xMsIsnullable = defaults.xMsIsnullable;
-    	      this.xMsIsordered = defaults.xMsIsordered;
+            $ = new ColumnSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enum_(@Nullable List<Object> enum_) {
-            this.enum_ = enum_;
+            $.enum_ = enum_;
             return this;
         }
+
         public Builder enum_(Object... enum_) {
             return enum_(List.of(enum_));
         }
+
         public Builder format(@Nullable String format) {
-            this.format = format;
+            $.format = format;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
-            this.xMsIsnullable = xMsIsnullable;
+            $.xMsIsnullable = xMsIsnullable;
             return this;
         }
+
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
-            this.xMsIsordered = xMsIsordered;
+            $.xMsIsordered = xMsIsordered;
             return this;
-        }        public ColumnSpecificationResponse build() {
-            return new ColumnSpecificationResponse(enum_, format, type, xMsIsnullable, xMsIsordered);
+        }
+
+        public ColumnSpecificationResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

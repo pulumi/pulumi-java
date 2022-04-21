@@ -6,10 +6,10 @@ package com.pulumi.azurenative.network.inputs;
 import com.pulumi.azurenative.network.inputs.AzureFirewallPublicIPAddressArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="addresses")
-      private final @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
+    private @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
 
-    public Output<List<AzureFirewallPublicIPAddressArgs>> addresses() {
-        return this.addresses == null ? Codegen.empty() : this.addresses;
+    public Optional<Output<List<AzureFirewallPublicIPAddressArgs>>> addresses() {
+        return Optional.ofNullable(this.addresses);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class HubPublicIPAddressesArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public HubPublicIPAddressesArgs(
-        @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses,
-        @Nullable Output<Integer> count) {
-        this.addresses = addresses;
-        this.count = count;
-    }
+    private HubPublicIPAddressesArgs() {}
 
-    private HubPublicIPAddressesArgs() {
-        this.addresses = Codegen.empty();
-        this.count = Codegen.empty();
+    private HubPublicIPAddressesArgs(HubPublicIPAddressesArgs $) {
+        this.addresses = $.addresses;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HubPublicIPAddressesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses;
-        private @Nullable Output<Integer> count;
+        private HubPublicIPAddressesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HubPublicIPAddressesArgs();
         }
 
         public Builder(HubPublicIPAddressesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addresses = defaults.addresses;
-    	      this.count = defaults.count;
+            $ = new HubPublicIPAddressesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addresses(@Nullable Output<List<AzureFirewallPublicIPAddressArgs>> addresses) {
-            this.addresses = addresses;
+            $.addresses = addresses;
             return this;
         }
-        public Builder addresses(@Nullable List<AzureFirewallPublicIPAddressArgs> addresses) {
-            this.addresses = Codegen.ofNullable(addresses);
-            return this;
+
+        public Builder addresses(List<AzureFirewallPublicIPAddressArgs> addresses) {
+            return addresses(Output.of(addresses));
         }
+
         public Builder addresses(AzureFirewallPublicIPAddressArgs... addresses) {
             return addresses(List.of(addresses));
         }
+
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public HubPublicIPAddressesArgs build() {
-            return new HubPublicIPAddressesArgs(addresses, count);
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
+        }
+
+        public HubPublicIPAddressesArgs build() {
+            return $;
         }
     }
+
 }

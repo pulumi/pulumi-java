@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @Import(name="ssml", required=true)
-      private final String ssml;
+    private String ssml;
 
     public String ssml() {
         return this.ssml;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(
-        String ssml,
-        String text) {
-        this.ssml = Objects.requireNonNull(ssml, "expected parameter 'ssml' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse() {
-        this.ssml = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse $) {
+        this.ssml = $.ssml;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ssml;
-        private String text;
+        private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ssml = defaults.ssml;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ssml(String ssml) {
-            this.ssml = Objects.requireNonNull(ssml);
+            $.ssml = ssml;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(ssml, text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse build() {
+            $.ssml = Objects.requireNonNull($.ssml, "expected parameter 'ssml' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

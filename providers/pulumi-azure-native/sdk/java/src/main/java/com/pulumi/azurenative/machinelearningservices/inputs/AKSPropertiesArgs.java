@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +30,10 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentCount")
-      private final @Nullable Output<Integer> agentCount;
+    private @Nullable Output<Integer> agentCount;
 
-    public Output<Integer> agentCount() {
-        return this.agentCount == null ? Codegen.empty() : this.agentCount;
+    public Optional<Output<Integer>> agentCount() {
+        return Optional.ofNullable(this.agentCount);
     }
 
     /**
@@ -40,10 +41,10 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="agentVmSize")
-      private final @Nullable Output<String> agentVmSize;
+    private @Nullable Output<String> agentVmSize;
 
-    public Output<String> agentVmSize() {
-        return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
+    public Optional<Output<String>> agentVmSize() {
+        return Optional.ofNullable(this.agentVmSize);
     }
 
     /**
@@ -51,10 +52,10 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aksNetworkingConfiguration")
-      private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
+    private @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
-    public Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration() {
-        return this.aksNetworkingConfiguration == null ? Codegen.empty() : this.aksNetworkingConfiguration;
+    public Optional<Output<AksNetworkingConfigurationArgs>> aksNetworkingConfiguration() {
+        return Optional.ofNullable(this.aksNetworkingConfiguration);
     }
 
     /**
@@ -62,10 +63,10 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterFqdn")
-      private final @Nullable Output<String> clusterFqdn;
+    private @Nullable Output<String> clusterFqdn;
 
-    public Output<String> clusterFqdn() {
-        return this.clusterFqdn == null ? Codegen.empty() : this.clusterFqdn;
+    public Optional<Output<String>> clusterFqdn() {
+        return Optional.ofNullable(this.clusterFqdn);
     }
 
     /**
@@ -73,10 +74,10 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterPurpose")
-      private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
+    private @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
 
-    public Output<Either<String,ClusterPurpose>> clusterPurpose() {
-        return this.clusterPurpose == null ? Codegen.empty() : this.clusterPurpose;
+    public Optional<Output<Either<String,ClusterPurpose>>> clusterPurpose() {
+        return Optional.ofNullable(this.clusterPurpose);
     }
 
     /**
@@ -84,115 +85,99 @@ public final class AKSPropertiesArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslConfiguration")
-      private final @Nullable Output<SslConfigurationArgs> sslConfiguration;
+    private @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
-    public Output<SslConfigurationArgs> sslConfiguration() {
-        return this.sslConfiguration == null ? Codegen.empty() : this.sslConfiguration;
+    public Optional<Output<SslConfigurationArgs>> sslConfiguration() {
+        return Optional.ofNullable(this.sslConfiguration);
     }
 
-    public AKSPropertiesArgs(
-        @Nullable Output<Integer> agentCount,
-        @Nullable Output<String> agentVmSize,
-        @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration,
-        @Nullable Output<String> clusterFqdn,
-        @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose,
-        @Nullable Output<SslConfigurationArgs> sslConfiguration) {
-        this.agentCount = agentCount;
-        this.agentVmSize = agentVmSize;
-        this.aksNetworkingConfiguration = aksNetworkingConfiguration;
-        this.clusterFqdn = clusterFqdn;
-        this.clusterPurpose = Codegen.stringProp("clusterPurpose").left(ClusterPurpose.class).output().arg(clusterPurpose).def("FastProd").getNullable();
-        this.sslConfiguration = sslConfiguration;
-    }
+    private AKSPropertiesArgs() {}
 
-    private AKSPropertiesArgs() {
-        this.agentCount = Codegen.empty();
-        this.agentVmSize = Codegen.empty();
-        this.aksNetworkingConfiguration = Codegen.empty();
-        this.clusterFqdn = Codegen.empty();
-        this.clusterPurpose = Codegen.empty();
-        this.sslConfiguration = Codegen.empty();
+    private AKSPropertiesArgs(AKSPropertiesArgs $) {
+        this.agentCount = $.agentCount;
+        this.agentVmSize = $.agentVmSize;
+        this.aksNetworkingConfiguration = $.aksNetworkingConfiguration;
+        this.clusterFqdn = $.clusterFqdn;
+        this.clusterPurpose = $.clusterPurpose;
+        this.sslConfiguration = $.sslConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AKSPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> agentCount;
-        private @Nullable Output<String> agentVmSize;
-        private @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
-        private @Nullable Output<String> clusterFqdn;
-        private @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
-        private @Nullable Output<SslConfigurationArgs> sslConfiguration;
+        private AKSPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AKSPropertiesArgs();
         }
 
         public Builder(AKSPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentCount = defaults.agentCount;
-    	      this.agentVmSize = defaults.agentVmSize;
-    	      this.aksNetworkingConfiguration = defaults.aksNetworkingConfiguration;
-    	      this.clusterFqdn = defaults.clusterFqdn;
-    	      this.clusterPurpose = defaults.clusterPurpose;
-    	      this.sslConfiguration = defaults.sslConfiguration;
+            $ = new AKSPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentCount(@Nullable Output<Integer> agentCount) {
-            this.agentCount = agentCount;
+            $.agentCount = agentCount;
             return this;
         }
-        public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Codegen.ofNullable(agentCount);
-            return this;
+
+        public Builder agentCount(Integer agentCount) {
+            return agentCount(Output.of(agentCount));
         }
+
         public Builder agentVmSize(@Nullable Output<String> agentVmSize) {
-            this.agentVmSize = agentVmSize;
+            $.agentVmSize = agentVmSize;
             return this;
         }
-        public Builder agentVmSize(@Nullable String agentVmSize) {
-            this.agentVmSize = Codegen.ofNullable(agentVmSize);
-            return this;
+
+        public Builder agentVmSize(String agentVmSize) {
+            return agentVmSize(Output.of(agentVmSize));
         }
+
         public Builder aksNetworkingConfiguration(@Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
-            this.aksNetworkingConfiguration = aksNetworkingConfiguration;
+            $.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
-        public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
-            this.aksNetworkingConfiguration = Codegen.ofNullable(aksNetworkingConfiguration);
-            return this;
+
+        public Builder aksNetworkingConfiguration(AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
+            return aksNetworkingConfiguration(Output.of(aksNetworkingConfiguration));
         }
+
         public Builder clusterFqdn(@Nullable Output<String> clusterFqdn) {
-            this.clusterFqdn = clusterFqdn;
+            $.clusterFqdn = clusterFqdn;
             return this;
         }
-        public Builder clusterFqdn(@Nullable String clusterFqdn) {
-            this.clusterFqdn = Codegen.ofNullable(clusterFqdn);
-            return this;
+
+        public Builder clusterFqdn(String clusterFqdn) {
+            return clusterFqdn(Output.of(clusterFqdn));
         }
+
         public Builder clusterPurpose(@Nullable Output<Either<String,ClusterPurpose>> clusterPurpose) {
-            this.clusterPurpose = clusterPurpose;
+            $.clusterPurpose = clusterPurpose;
             return this;
         }
-        public Builder clusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
-            this.clusterPurpose = Codegen.ofNullable(clusterPurpose);
-            return this;
+
+        public Builder clusterPurpose(Either<String,ClusterPurpose> clusterPurpose) {
+            return clusterPurpose(Output.of(clusterPurpose));
         }
+
         public Builder sslConfiguration(@Nullable Output<SslConfigurationArgs> sslConfiguration) {
-            this.sslConfiguration = sslConfiguration;
+            $.sslConfiguration = sslConfiguration;
             return this;
         }
-        public Builder sslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
-            this.sslConfiguration = Codegen.ofNullable(sslConfiguration);
-            return this;
-        }        public AKSPropertiesArgs build() {
-            return new AKSPropertiesArgs(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration);
+
+        public Builder sslConfiguration(SslConfigurationArgs sslConfiguration) {
+            return sslConfiguration(Output.of(sslConfiguration));
+        }
+
+        public AKSPropertiesArgs build() {
+            $.clusterPurpose = Codegen.stringProp("clusterPurpose").left(ClusterPurpose.class).output().arg($.clusterPurpose).def("FastProd").getNullable();
+            return $;
         }
     }
+
 }

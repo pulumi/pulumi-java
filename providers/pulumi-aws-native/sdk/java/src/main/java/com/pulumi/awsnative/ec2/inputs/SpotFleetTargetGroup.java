@@ -13,45 +13,45 @@ public final class SpotFleetTargetGroup extends com.pulumi.resources.InvokeArgs 
     public static final SpotFleetTargetGroup Empty = new SpotFleetTargetGroup();
 
     @Import(name="arn", required=true)
-      private final String arn;
+    private String arn;
 
     public String arn() {
         return this.arn;
     }
 
-    public SpotFleetTargetGroup(String arn) {
-        this.arn = Objects.requireNonNull(arn, "expected parameter 'arn' to be non-null");
-    }
+    private SpotFleetTargetGroup() {}
 
-    private SpotFleetTargetGroup() {
-        this.arn = null;
+    private SpotFleetTargetGroup(SpotFleetTargetGroup $) {
+        this.arn = $.arn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpotFleetTargetGroup defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arn;
+        private SpotFleetTargetGroup $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpotFleetTargetGroup();
         }
 
         public Builder(SpotFleetTargetGroup defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
+            $ = new SpotFleetTargetGroup(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(String arn) {
-            this.arn = Objects.requireNonNull(arn);
+            $.arn = arn;
             return this;
-        }        public SpotFleetTargetGroup build() {
-            return new SpotFleetTargetGroup(arn);
+        }
+
+        public SpotFleetTargetGroup build() {
+            $.arn = Objects.requireNonNull($.arn, "expected parameter 'arn' to be non-null");
+            return $;
         }
     }
+
 }

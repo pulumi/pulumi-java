@@ -6,7 +6,6 @@ package com.pulumi.aws.autoscaling;
 import com.pulumi.aws.autoscaling.inputs.TagTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +19,7 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingGroupName", required=true)
-      private final Output<String> autoscalingGroupName;
+    private Output<String> autoscalingGroupName;
 
     public Output<String> autoscalingGroupName() {
         return this.autoscalingGroupName;
@@ -31,63 +30,60 @@ public final class TagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag", required=true)
-      private final Output<TagTagArgs> tag;
+    private Output<TagTagArgs> tag;
 
     public Output<TagTagArgs> tag() {
         return this.tag;
     }
 
-    public TagArgs(
-        Output<String> autoscalingGroupName,
-        Output<TagTagArgs> tag) {
-        this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName, "expected parameter 'autoscalingGroupName' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private TagArgs() {}
 
-    private TagArgs() {
-        this.autoscalingGroupName = Codegen.empty();
-        this.tag = Codegen.empty();
+    private TagArgs(TagArgs $) {
+        this.autoscalingGroupName = $.autoscalingGroupName;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> autoscalingGroupName;
-        private Output<TagTagArgs> tag;
+        private TagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagArgs();
         }
 
         public Builder(TagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingGroupName = defaults.autoscalingGroupName;
-    	      this.tag = defaults.tag;
+            $ = new TagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
-            this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
+            $.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
+
         public Builder autoscalingGroupName(String autoscalingGroupName) {
-            this.autoscalingGroupName = Output.of(Objects.requireNonNull(autoscalingGroupName));
-            return this;
+            return autoscalingGroupName(Output.of(autoscalingGroupName));
         }
+
         public Builder tag(Output<TagTagArgs> tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder tag(TagTagArgs tag) {
-            this.tag = Output.of(Objects.requireNonNull(tag));
-            return this;
-        }        public TagArgs build() {
-            return new TagArgs(autoscalingGroupName, tag);
+            return tag(Output.of(tag));
+        }
+
+        public TagArgs build() {
+            $.autoscalingGroupName = Objects.requireNonNull($.autoscalingGroupName, "expected parameter 'autoscalingGroupName' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

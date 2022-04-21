@@ -10,10 +10,10 @@ import com.pulumi.azurenative.keyvault.enums.StoragePermissions;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificates")
-      private final @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
+    private @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
 
-    public Output<List<Either<String,CertificatePermissions>>> certificates() {
-        return this.certificates == null ? Codegen.empty() : this.certificates;
+    public Optional<Output<List<Either<String,CertificatePermissions>>>> certificates() {
+        return Optional.ofNullable(this.certificates);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<Either<String,KeyPermissions>>> keys;
+    private @Nullable Output<List<Either<String,KeyPermissions>>> keys;
 
-    public Output<List<Either<String,KeyPermissions>>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<Either<String,KeyPermissions>>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secrets")
-      private final @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
+    private @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
 
-    public Output<List<Either<String,SecretPermissions>>> secrets() {
-        return this.secrets == null ? Codegen.empty() : this.secrets;
+    public Optional<Output<List<Either<String,SecretPermissions>>>> secrets() {
+        return Optional.ofNullable(this.secrets);
     }
 
     /**
@@ -63,101 +63,94 @@ public final class PermissionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storage")
-      private final @Nullable Output<List<Either<String,StoragePermissions>>> storage;
+    private @Nullable Output<List<Either<String,StoragePermissions>>> storage;
 
-    public Output<List<Either<String,StoragePermissions>>> storage() {
-        return this.storage == null ? Codegen.empty() : this.storage;
+    public Optional<Output<List<Either<String,StoragePermissions>>>> storage() {
+        return Optional.ofNullable(this.storage);
     }
 
-    public PermissionsArgs(
-        @Nullable Output<List<Either<String,CertificatePermissions>>> certificates,
-        @Nullable Output<List<Either<String,KeyPermissions>>> keys,
-        @Nullable Output<List<Either<String,SecretPermissions>>> secrets,
-        @Nullable Output<List<Either<String,StoragePermissions>>> storage) {
-        this.certificates = certificates;
-        this.keys = keys;
-        this.secrets = secrets;
-        this.storage = storage;
-    }
+    private PermissionsArgs() {}
 
-    private PermissionsArgs() {
-        this.certificates = Codegen.empty();
-        this.keys = Codegen.empty();
-        this.secrets = Codegen.empty();
-        this.storage = Codegen.empty();
+    private PermissionsArgs(PermissionsArgs $) {
+        this.certificates = $.certificates;
+        this.keys = $.keys;
+        this.secrets = $.secrets;
+        this.storage = $.storage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<Either<String,CertificatePermissions>>> certificates;
-        private @Nullable Output<List<Either<String,KeyPermissions>>> keys;
-        private @Nullable Output<List<Either<String,SecretPermissions>>> secrets;
-        private @Nullable Output<List<Either<String,StoragePermissions>>> storage;
+        private PermissionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionsArgs();
         }
 
         public Builder(PermissionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.keys = defaults.keys;
-    	      this.secrets = defaults.secrets;
-    	      this.storage = defaults.storage;
+            $ = new PermissionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(@Nullable Output<List<Either<String,CertificatePermissions>>> certificates) {
-            this.certificates = certificates;
+            $.certificates = certificates;
             return this;
         }
-        public Builder certificates(@Nullable List<Either<String,CertificatePermissions>> certificates) {
-            this.certificates = Codegen.ofNullable(certificates);
-            return this;
+
+        public Builder certificates(List<Either<String,CertificatePermissions>> certificates) {
+            return certificates(Output.of(certificates));
         }
+
         public Builder certificates(Either<String,CertificatePermissions>... certificates) {
             return certificates(List.of(certificates));
         }
+
         public Builder keys(@Nullable Output<List<Either<String,KeyPermissions>>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<Either<String,KeyPermissions>> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<Either<String,KeyPermissions>> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(Either<String,KeyPermissions>... keys) {
             return keys(List.of(keys));
         }
+
         public Builder secrets(@Nullable Output<List<Either<String,SecretPermissions>>> secrets) {
-            this.secrets = secrets;
+            $.secrets = secrets;
             return this;
         }
-        public Builder secrets(@Nullable List<Either<String,SecretPermissions>> secrets) {
-            this.secrets = Codegen.ofNullable(secrets);
-            return this;
+
+        public Builder secrets(List<Either<String,SecretPermissions>> secrets) {
+            return secrets(Output.of(secrets));
         }
+
         public Builder secrets(Either<String,SecretPermissions>... secrets) {
             return secrets(List.of(secrets));
         }
+
         public Builder storage(@Nullable Output<List<Either<String,StoragePermissions>>> storage) {
-            this.storage = storage;
+            $.storage = storage;
             return this;
         }
-        public Builder storage(@Nullable List<Either<String,StoragePermissions>> storage) {
-            this.storage = Codegen.ofNullable(storage);
-            return this;
+
+        public Builder storage(List<Either<String,StoragePermissions>> storage) {
+            return storage(Output.of(storage));
         }
+
         public Builder storage(Either<String,StoragePermissions>... storage) {
             return storage(List.of(storage));
-        }        public PermissionsArgs build() {
-            return new PermissionsArgs(certificates, keys, secrets, storage);
+        }
+
+        public PermissionsArgs build() {
+            return $;
         }
     }
+
 }

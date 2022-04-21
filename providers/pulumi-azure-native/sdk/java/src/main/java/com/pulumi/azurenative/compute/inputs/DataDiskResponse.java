@@ -28,10 +28,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="caching")
-      private final @Nullable String caching;
+    private @Nullable String caching;
 
     public Optional<String> caching() {
-        return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
+        return Optional.ofNullable(this.caching);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createOption", required=true)
-      private final String createOption;
+    private String createOption;
 
     public String createOption() {
         return this.createOption;
@@ -50,10 +50,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deleteOption")
-      private final @Nullable String deleteOption;
+    private @Nullable String deleteOption;
 
     public Optional<String> deleteOption() {
-        return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
+        return Optional.ofNullable(this.deleteOption);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="detachOption")
-      private final @Nullable String detachOption;
+    private @Nullable String detachOption;
 
     public Optional<String> detachOption() {
-        return this.detachOption == null ? Optional.empty() : Optional.ofNullable(this.detachOption);
+        return Optional.ofNullable(this.detachOption);
     }
 
     /**
@@ -72,7 +72,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskIOPSReadWrite", required=true)
-      private final Double diskIOPSReadWrite;
+    private Double diskIOPSReadWrite;
 
     public Double diskIOPSReadWrite() {
         return this.diskIOPSReadWrite;
@@ -83,7 +83,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskMBpsReadWrite", required=true)
-      private final Double diskMBpsReadWrite;
+    private Double diskMBpsReadWrite;
 
     public Double diskMBpsReadWrite() {
         return this.diskMBpsReadWrite;
@@ -94,10 +94,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGB")
-      private final @Nullable Integer diskSizeGB;
+    private @Nullable Integer diskSizeGB;
 
     public Optional<Integer> diskSizeGB() {
-        return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
+        return Optional.ofNullable(this.diskSizeGB);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable VirtualHardDiskResponse image;
+    private @Nullable VirtualHardDiskResponse image;
 
     public Optional<VirtualHardDiskResponse> image() {
-        return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lun", required=true)
-      private final Integer lun;
+    private Integer lun;
 
     public Integer lun() {
         return this.lun;
@@ -127,10 +127,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="managedDisk")
-      private final @Nullable ManagedDiskParametersResponse managedDisk;
+    private @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> managedDisk() {
-        return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
+        return Optional.ofNullable(this.managedDisk);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -149,10 +149,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="toBeDetached")
-      private final @Nullable Boolean toBeDetached;
+    private @Nullable Boolean toBeDetached;
 
     public Optional<Boolean> toBeDetached() {
-        return this.toBeDetached == null ? Optional.empty() : Optional.ofNullable(this.toBeDetached);
+        return Optional.ofNullable(this.toBeDetached);
     }
 
     /**
@@ -160,10 +160,10 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vhd")
-      private final @Nullable VirtualHardDiskResponse vhd;
+    private @Nullable VirtualHardDiskResponse vhd;
 
     public Optional<VirtualHardDiskResponse> vhd() {
-        return this.vhd == null ? Optional.empty() : Optional.ofNullable(this.vhd);
+        return Optional.ofNullable(this.vhd);
     }
 
     /**
@@ -171,163 +171,126 @@ public final class DataDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="writeAcceleratorEnabled")
-      private final @Nullable Boolean writeAcceleratorEnabled;
+    private @Nullable Boolean writeAcceleratorEnabled;
 
     public Optional<Boolean> writeAcceleratorEnabled() {
-        return this.writeAcceleratorEnabled == null ? Optional.empty() : Optional.ofNullable(this.writeAcceleratorEnabled);
+        return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
 
-    public DataDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable String deleteOption,
-        @Nullable String detachOption,
-        Double diskIOPSReadWrite,
-        Double diskMBpsReadWrite,
-        @Nullable Integer diskSizeGB,
-        @Nullable VirtualHardDiskResponse image,
-        Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable Boolean toBeDetached,
-        @Nullable VirtualHardDiskResponse vhd,
-        @Nullable Boolean writeAcceleratorEnabled) {
-        this.caching = caching;
-        this.createOption = Objects.requireNonNull(createOption, "expected parameter 'createOption' to be non-null");
-        this.deleteOption = deleteOption;
-        this.detachOption = detachOption;
-        this.diskIOPSReadWrite = Objects.requireNonNull(diskIOPSReadWrite, "expected parameter 'diskIOPSReadWrite' to be non-null");
-        this.diskMBpsReadWrite = Objects.requireNonNull(diskMBpsReadWrite, "expected parameter 'diskMBpsReadWrite' to be non-null");
-        this.diskSizeGB = diskSizeGB;
-        this.image = image;
-        this.lun = Objects.requireNonNull(lun, "expected parameter 'lun' to be non-null");
-        this.managedDisk = managedDisk;
-        this.name = name;
-        this.toBeDetached = toBeDetached;
-        this.vhd = vhd;
-        this.writeAcceleratorEnabled = writeAcceleratorEnabled;
-    }
+    private DataDiskResponse() {}
 
-    private DataDiskResponse() {
-        this.caching = null;
-        this.createOption = null;
-        this.deleteOption = null;
-        this.detachOption = null;
-        this.diskIOPSReadWrite = null;
-        this.diskMBpsReadWrite = null;
-        this.diskSizeGB = null;
-        this.image = null;
-        this.lun = null;
-        this.managedDisk = null;
-        this.name = null;
-        this.toBeDetached = null;
-        this.vhd = null;
-        this.writeAcceleratorEnabled = null;
+    private DataDiskResponse(DataDiskResponse $) {
+        this.caching = $.caching;
+        this.createOption = $.createOption;
+        this.deleteOption = $.deleteOption;
+        this.detachOption = $.detachOption;
+        this.diskIOPSReadWrite = $.diskIOPSReadWrite;
+        this.diskMBpsReadWrite = $.diskMBpsReadWrite;
+        this.diskSizeGB = $.diskSizeGB;
+        this.image = $.image;
+        this.lun = $.lun;
+        this.managedDisk = $.managedDisk;
+        this.name = $.name;
+        this.toBeDetached = $.toBeDetached;
+        this.vhd = $.vhd;
+        this.writeAcceleratorEnabled = $.writeAcceleratorEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String caching;
-        private String createOption;
-        private @Nullable String deleteOption;
-        private @Nullable String detachOption;
-        private Double diskIOPSReadWrite;
-        private Double diskMBpsReadWrite;
-        private @Nullable Integer diskSizeGB;
-        private @Nullable VirtualHardDiskResponse image;
-        private Integer lun;
-        private @Nullable ManagedDiskParametersResponse managedDisk;
-        private @Nullable String name;
-        private @Nullable Boolean toBeDetached;
-        private @Nullable VirtualHardDiskResponse vhd;
-        private @Nullable Boolean writeAcceleratorEnabled;
+        private DataDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataDiskResponse();
         }
 
         public Builder(DataDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caching = defaults.caching;
-    	      this.createOption = defaults.createOption;
-    	      this.deleteOption = defaults.deleteOption;
-    	      this.detachOption = defaults.detachOption;
-    	      this.diskIOPSReadWrite = defaults.diskIOPSReadWrite;
-    	      this.diskMBpsReadWrite = defaults.diskMBpsReadWrite;
-    	      this.diskSizeGB = defaults.diskSizeGB;
-    	      this.image = defaults.image;
-    	      this.lun = defaults.lun;
-    	      this.managedDisk = defaults.managedDisk;
-    	      this.name = defaults.name;
-    	      this.toBeDetached = defaults.toBeDetached;
-    	      this.vhd = defaults.vhd;
-    	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
+            $ = new DataDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caching(@Nullable String caching) {
-            this.caching = caching;
+            $.caching = caching;
             return this;
         }
+
         public Builder createOption(String createOption) {
-            this.createOption = Objects.requireNonNull(createOption);
+            $.createOption = createOption;
             return this;
         }
+
         public Builder deleteOption(@Nullable String deleteOption) {
-            this.deleteOption = deleteOption;
+            $.deleteOption = deleteOption;
             return this;
         }
+
         public Builder detachOption(@Nullable String detachOption) {
-            this.detachOption = detachOption;
+            $.detachOption = detachOption;
             return this;
         }
+
         public Builder diskIOPSReadWrite(Double diskIOPSReadWrite) {
-            this.diskIOPSReadWrite = Objects.requireNonNull(diskIOPSReadWrite);
+            $.diskIOPSReadWrite = diskIOPSReadWrite;
             return this;
         }
+
         public Builder diskMBpsReadWrite(Double diskMBpsReadWrite) {
-            this.diskMBpsReadWrite = Objects.requireNonNull(diskMBpsReadWrite);
+            $.diskMBpsReadWrite = diskMBpsReadWrite;
             return this;
         }
+
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = diskSizeGB;
+            $.diskSizeGB = diskSizeGB;
             return this;
         }
+
         public Builder image(@Nullable VirtualHardDiskResponse image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
+
         public Builder lun(Integer lun) {
-            this.lun = Objects.requireNonNull(lun);
+            $.lun = lun;
             return this;
         }
+
         public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
-            this.managedDisk = managedDisk;
+            $.managedDisk = managedDisk;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder toBeDetached(@Nullable Boolean toBeDetached) {
-            this.toBeDetached = toBeDetached;
+            $.toBeDetached = toBeDetached;
             return this;
         }
+
         public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
-            this.vhd = vhd;
+            $.vhd = vhd;
             return this;
         }
+
         public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
-            this.writeAcceleratorEnabled = writeAcceleratorEnabled;
+            $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
-        }        public DataDiskResponse build() {
-            return new DataDiskResponse(caching, createOption, deleteOption, detachOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, image, lun, managedDisk, name, toBeDetached, vhd, writeAcceleratorEnabled);
+        }
+
+        public DataDiskResponse build() {
+            $.createOption = Objects.requireNonNull($.createOption, "expected parameter 'createOption' to be non-null");
+            $.diskIOPSReadWrite = Objects.requireNonNull($.diskIOPSReadWrite, "expected parameter 'diskIOPSReadWrite' to be non-null");
+            $.diskMBpsReadWrite = Objects.requireNonNull($.diskMBpsReadWrite, "expected parameter 'diskMBpsReadWrite' to be non-null");
+            $.lun = Objects.requireNonNull($.lun, "expected parameter 'lun' to be non-null");
+            return $;
         }
     }
+
 }

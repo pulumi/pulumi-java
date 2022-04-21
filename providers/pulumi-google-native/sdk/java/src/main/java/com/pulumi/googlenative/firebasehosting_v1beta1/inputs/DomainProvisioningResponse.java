@@ -24,7 +24,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certChallengeDiscoveredTxt", required=true)
-      private final List<String> certChallengeDiscoveredTxt;
+    private List<String> certChallengeDiscoveredTxt;
 
     public List<String> certChallengeDiscoveredTxt() {
         return this.certChallengeDiscoveredTxt;
@@ -35,7 +35,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certChallengeDns", required=true)
-      private final CertDnsChallengeResponse certChallengeDns;
+    private CertDnsChallengeResponse certChallengeDns;
 
     public CertDnsChallengeResponse certChallengeDns() {
         return this.certChallengeDns;
@@ -46,7 +46,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certChallengeHttp", required=true)
-      private final CertHttpChallengeResponse certChallengeHttp;
+    private CertHttpChallengeResponse certChallengeHttp;
 
     public CertHttpChallengeResponse certChallengeHttp() {
         return this.certChallengeHttp;
@@ -57,7 +57,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certStatus", required=true)
-      private final String certStatus;
+    private String certStatus;
 
     public String certStatus() {
         return this.certStatus;
@@ -68,7 +68,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="discoveredIps", required=true)
-      private final List<String> discoveredIps;
+    private List<String> discoveredIps;
 
     public List<String> discoveredIps() {
         return this.discoveredIps;
@@ -79,7 +79,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dnsFetchTime", required=true)
-      private final String dnsFetchTime;
+    private String dnsFetchTime;
 
     public String dnsFetchTime() {
         return this.dnsFetchTime;
@@ -90,7 +90,7 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dnsStatus", required=true)
-      private final String dnsStatus;
+    private String dnsStatus;
 
     public String dnsStatus() {
         return this.dnsStatus;
@@ -101,118 +101,106 @@ public final class DomainProvisioningResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expectedIps", required=true)
-      private final List<String> expectedIps;
+    private List<String> expectedIps;
 
     public List<String> expectedIps() {
         return this.expectedIps;
     }
 
-    public DomainProvisioningResponse(
-        List<String> certChallengeDiscoveredTxt,
-        CertDnsChallengeResponse certChallengeDns,
-        CertHttpChallengeResponse certChallengeHttp,
-        String certStatus,
-        List<String> discoveredIps,
-        String dnsFetchTime,
-        String dnsStatus,
-        List<String> expectedIps) {
-        this.certChallengeDiscoveredTxt = Objects.requireNonNull(certChallengeDiscoveredTxt, "expected parameter 'certChallengeDiscoveredTxt' to be non-null");
-        this.certChallengeDns = Objects.requireNonNull(certChallengeDns, "expected parameter 'certChallengeDns' to be non-null");
-        this.certChallengeHttp = Objects.requireNonNull(certChallengeHttp, "expected parameter 'certChallengeHttp' to be non-null");
-        this.certStatus = Objects.requireNonNull(certStatus, "expected parameter 'certStatus' to be non-null");
-        this.discoveredIps = Objects.requireNonNull(discoveredIps, "expected parameter 'discoveredIps' to be non-null");
-        this.dnsFetchTime = Objects.requireNonNull(dnsFetchTime, "expected parameter 'dnsFetchTime' to be non-null");
-        this.dnsStatus = Objects.requireNonNull(dnsStatus, "expected parameter 'dnsStatus' to be non-null");
-        this.expectedIps = Objects.requireNonNull(expectedIps, "expected parameter 'expectedIps' to be non-null");
-    }
+    private DomainProvisioningResponse() {}
 
-    private DomainProvisioningResponse() {
-        this.certChallengeDiscoveredTxt = List.of();
-        this.certChallengeDns = null;
-        this.certChallengeHttp = null;
-        this.certStatus = null;
-        this.discoveredIps = List.of();
-        this.dnsFetchTime = null;
-        this.dnsStatus = null;
-        this.expectedIps = List.of();
+    private DomainProvisioningResponse(DomainProvisioningResponse $) {
+        this.certChallengeDiscoveredTxt = $.certChallengeDiscoveredTxt;
+        this.certChallengeDns = $.certChallengeDns;
+        this.certChallengeHttp = $.certChallengeHttp;
+        this.certStatus = $.certStatus;
+        this.discoveredIps = $.discoveredIps;
+        this.dnsFetchTime = $.dnsFetchTime;
+        this.dnsStatus = $.dnsStatus;
+        this.expectedIps = $.expectedIps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainProvisioningResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> certChallengeDiscoveredTxt;
-        private CertDnsChallengeResponse certChallengeDns;
-        private CertHttpChallengeResponse certChallengeHttp;
-        private String certStatus;
-        private List<String> discoveredIps;
-        private String dnsFetchTime;
-        private String dnsStatus;
-        private List<String> expectedIps;
+        private DomainProvisioningResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainProvisioningResponse();
         }
 
         public Builder(DomainProvisioningResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certChallengeDiscoveredTxt = defaults.certChallengeDiscoveredTxt;
-    	      this.certChallengeDns = defaults.certChallengeDns;
-    	      this.certChallengeHttp = defaults.certChallengeHttp;
-    	      this.certStatus = defaults.certStatus;
-    	      this.discoveredIps = defaults.discoveredIps;
-    	      this.dnsFetchTime = defaults.dnsFetchTime;
-    	      this.dnsStatus = defaults.dnsStatus;
-    	      this.expectedIps = defaults.expectedIps;
+            $ = new DomainProvisioningResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certChallengeDiscoveredTxt(List<String> certChallengeDiscoveredTxt) {
-            this.certChallengeDiscoveredTxt = Objects.requireNonNull(certChallengeDiscoveredTxt);
+            $.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
             return this;
         }
+
         public Builder certChallengeDiscoveredTxt(String... certChallengeDiscoveredTxt) {
             return certChallengeDiscoveredTxt(List.of(certChallengeDiscoveredTxt));
         }
+
         public Builder certChallengeDns(CertDnsChallengeResponse certChallengeDns) {
-            this.certChallengeDns = Objects.requireNonNull(certChallengeDns);
+            $.certChallengeDns = certChallengeDns;
             return this;
         }
+
         public Builder certChallengeHttp(CertHttpChallengeResponse certChallengeHttp) {
-            this.certChallengeHttp = Objects.requireNonNull(certChallengeHttp);
+            $.certChallengeHttp = certChallengeHttp;
             return this;
         }
+
         public Builder certStatus(String certStatus) {
-            this.certStatus = Objects.requireNonNull(certStatus);
+            $.certStatus = certStatus;
             return this;
         }
+
         public Builder discoveredIps(List<String> discoveredIps) {
-            this.discoveredIps = Objects.requireNonNull(discoveredIps);
+            $.discoveredIps = discoveredIps;
             return this;
         }
+
         public Builder discoveredIps(String... discoveredIps) {
             return discoveredIps(List.of(discoveredIps));
         }
+
         public Builder dnsFetchTime(String dnsFetchTime) {
-            this.dnsFetchTime = Objects.requireNonNull(dnsFetchTime);
+            $.dnsFetchTime = dnsFetchTime;
             return this;
         }
+
         public Builder dnsStatus(String dnsStatus) {
-            this.dnsStatus = Objects.requireNonNull(dnsStatus);
+            $.dnsStatus = dnsStatus;
             return this;
         }
+
         public Builder expectedIps(List<String> expectedIps) {
-            this.expectedIps = Objects.requireNonNull(expectedIps);
+            $.expectedIps = expectedIps;
             return this;
         }
+
         public Builder expectedIps(String... expectedIps) {
             return expectedIps(List.of(expectedIps));
-        }        public DomainProvisioningResponse build() {
-            return new DomainProvisioningResponse(certChallengeDiscoveredTxt, certChallengeDns, certChallengeHttp, certStatus, discoveredIps, dnsFetchTime, dnsStatus, expectedIps);
+        }
+
+        public DomainProvisioningResponse build() {
+            $.certChallengeDiscoveredTxt = Objects.requireNonNull($.certChallengeDiscoveredTxt, "expected parameter 'certChallengeDiscoveredTxt' to be non-null");
+            $.certChallengeDns = Objects.requireNonNull($.certChallengeDns, "expected parameter 'certChallengeDns' to be non-null");
+            $.certChallengeHttp = Objects.requireNonNull($.certChallengeHttp, "expected parameter 'certChallengeHttp' to be non-null");
+            $.certStatus = Objects.requireNonNull($.certStatus, "expected parameter 'certStatus' to be non-null");
+            $.discoveredIps = Objects.requireNonNull($.discoveredIps, "expected parameter 'discoveredIps' to be non-null");
+            $.dnsFetchTime = Objects.requireNonNull($.dnsFetchTime, "expected parameter 'dnsFetchTime' to be non-null");
+            $.dnsStatus = Objects.requireNonNull($.dnsStatus, "expected parameter 'dnsStatus' to be non-null");
+            $.expectedIps = Objects.requireNonNull($.expectedIps, "expected parameter 'expectedIps' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class ToolExitCodeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="number", required=true)
-      private final Integer number;
+    private Integer number;
 
     public Integer number() {
         return this.number;
     }
 
-    public ToolExitCodeResponse(Integer number) {
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-    }
+    private ToolExitCodeResponse() {}
 
-    private ToolExitCodeResponse() {
-        this.number = null;
+    private ToolExitCodeResponse(ToolExitCodeResponse $) {
+        this.number = $.number;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExitCodeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer number;
+        private ToolExitCodeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExitCodeResponse();
         }
 
         public Builder(ToolExitCodeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.number = defaults.number;
+            $ = new ToolExitCodeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder number(Integer number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
-        }        public ToolExitCodeResponse build() {
-            return new ToolExitCodeResponse(number);
+        }
+
+        public ToolExitCodeResponse build() {
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            return $;
         }
     }
+
 }

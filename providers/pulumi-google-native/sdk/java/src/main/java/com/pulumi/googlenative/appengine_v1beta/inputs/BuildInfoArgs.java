@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class BuildInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudBuildId")
-      private final @Nullable Output<String> cloudBuildId;
+    private @Nullable Output<String> cloudBuildId;
 
-    public Output<String> cloudBuildId() {
-        return this.cloudBuildId == null ? Codegen.empty() : this.cloudBuildId;
+    public Optional<Output<String>> cloudBuildId() {
+        return Optional.ofNullable(this.cloudBuildId);
     }
 
-    public BuildInfoArgs(@Nullable Output<String> cloudBuildId) {
-        this.cloudBuildId = cloudBuildId;
-    }
+    private BuildInfoArgs() {}
 
-    private BuildInfoArgs() {
-        this.cloudBuildId = Codegen.empty();
+    private BuildInfoArgs(BuildInfoArgs $) {
+        this.cloudBuildId = $.cloudBuildId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudBuildId;
+        private BuildInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildInfoArgs();
         }
 
         public Builder(BuildInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudBuildId = defaults.cloudBuildId;
+            $ = new BuildInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudBuildId(@Nullable Output<String> cloudBuildId) {
-            this.cloudBuildId = cloudBuildId;
+            $.cloudBuildId = cloudBuildId;
             return this;
         }
-        public Builder cloudBuildId(@Nullable String cloudBuildId) {
-            this.cloudBuildId = Codegen.ofNullable(cloudBuildId);
-            return this;
-        }        public BuildInfoArgs build() {
-            return new BuildInfoArgs(cloudBuildId);
+
+        public Builder cloudBuildId(String cloudBuildId) {
+            return cloudBuildId(Output.of(cloudBuildId));
+        }
+
+        public BuildInfoArgs build() {
+            return $;
         }
     }
+
 }

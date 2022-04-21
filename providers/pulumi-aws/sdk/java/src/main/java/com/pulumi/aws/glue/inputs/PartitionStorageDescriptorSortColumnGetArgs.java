@@ -5,7 +5,6 @@ package com.pulumi.aws.glue.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class PartitionStorageDescriptorSortColumnGetArgs extends com.pulum
      * 
      */
     @Import(name="column", required=true)
-      private final Output<String> column;
+    private Output<String> column;
 
     public Output<String> column() {
         return this.column;
@@ -31,63 +30,60 @@ public final class PartitionStorageDescriptorSortColumnGetArgs extends com.pulum
      * 
      */
     @Import(name="sortOrder", required=true)
-      private final Output<Integer> sortOrder;
+    private Output<Integer> sortOrder;
 
     public Output<Integer> sortOrder() {
         return this.sortOrder;
     }
 
-    public PartitionStorageDescriptorSortColumnGetArgs(
-        Output<String> column,
-        Output<Integer> sortOrder) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.sortOrder = Objects.requireNonNull(sortOrder, "expected parameter 'sortOrder' to be non-null");
-    }
+    private PartitionStorageDescriptorSortColumnGetArgs() {}
 
-    private PartitionStorageDescriptorSortColumnGetArgs() {
-        this.column = Codegen.empty();
-        this.sortOrder = Codegen.empty();
+    private PartitionStorageDescriptorSortColumnGetArgs(PartitionStorageDescriptorSortColumnGetArgs $) {
+        this.column = $.column;
+        this.sortOrder = $.sortOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionStorageDescriptorSortColumnGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> column;
-        private Output<Integer> sortOrder;
+        private PartitionStorageDescriptorSortColumnGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionStorageDescriptorSortColumnGetArgs();
         }
 
         public Builder(PartitionStorageDescriptorSortColumnGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.sortOrder = defaults.sortOrder;
+            $ = new PartitionStorageDescriptorSortColumnGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder column(Output<String> column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder column(String column) {
-            this.column = Output.of(Objects.requireNonNull(column));
-            return this;
+            return column(Output.of(column));
         }
+
         public Builder sortOrder(Output<Integer> sortOrder) {
-            this.sortOrder = Objects.requireNonNull(sortOrder);
+            $.sortOrder = sortOrder;
             return this;
         }
+
         public Builder sortOrder(Integer sortOrder) {
-            this.sortOrder = Output.of(Objects.requireNonNull(sortOrder));
-            return this;
-        }        public PartitionStorageDescriptorSortColumnGetArgs build() {
-            return new PartitionStorageDescriptorSortColumnGetArgs(column, sortOrder);
+            return sortOrder(Output.of(sortOrder));
+        }
+
+        public PartitionStorageDescriptorSortColumnGetArgs build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            $.sortOrder = Objects.requireNonNull($.sortOrder, "expected parameter 'sortOrder' to be non-null");
+            return $;
         }
     }
+
 }

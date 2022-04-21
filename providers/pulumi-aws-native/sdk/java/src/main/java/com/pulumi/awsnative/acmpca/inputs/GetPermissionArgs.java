@@ -17,7 +17,7 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="certificateAuthorityArn", required=true)
-      private final String certificateAuthorityArn;
+    private String certificateAuthorityArn;
 
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
@@ -28,55 +28,52 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principal", required=true)
-      private final String principal;
+    private String principal;
 
     public String principal() {
         return this.principal;
     }
 
-    public GetPermissionArgs(
-        String certificateAuthorityArn,
-        String principal) {
-        this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
-        this.principal = Objects.requireNonNull(principal, "expected parameter 'principal' to be non-null");
-    }
+    private GetPermissionArgs() {}
 
-    private GetPermissionArgs() {
-        this.certificateAuthorityArn = null;
-        this.principal = null;
+    private GetPermissionArgs(GetPermissionArgs $) {
+        this.certificateAuthorityArn = $.certificateAuthorityArn;
+        this.principal = $.principal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateAuthorityArn;
-        private String principal;
+        private GetPermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPermissionArgs();
         }
 
         public Builder(GetPermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityArn = defaults.certificateAuthorityArn;
-    	      this.principal = defaults.principal;
+            $ = new GetPermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
-            this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
+            $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
+
         public Builder principal(String principal) {
-            this.principal = Objects.requireNonNull(principal);
+            $.principal = principal;
             return this;
-        }        public GetPermissionArgs build() {
-            return new GetPermissionArgs(certificateAuthorityArn, principal);
+        }
+
+        public GetPermissionArgs build() {
+            $.certificateAuthorityArn = Objects.requireNonNull($.certificateAuthorityArn, "expected parameter 'certificateAuthorityArn' to be non-null");
+            $.principal = Objects.requireNonNull($.principal, "expected parameter 'principal' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class AuthorityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hint", required=true)
-      private final HintResponse hint;
+    private HintResponse hint;
 
     public HintResponse hint() {
         return this.hint;
     }
 
-    public AuthorityResponse(HintResponse hint) {
-        this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
-    }
+    private AuthorityResponse() {}
 
-    private AuthorityResponse() {
-        this.hint = null;
+    private AuthorityResponse(AuthorityResponse $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private HintResponse hint;
+        private AuthorityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityResponse();
         }
 
         public Builder(AuthorityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new AuthorityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(HintResponse hint) {
-            this.hint = Objects.requireNonNull(hint);
+            $.hint = hint;
             return this;
-        }        public AuthorityResponse build() {
-            return new AuthorityResponse(hint);
+        }
+
+        public AuthorityResponse build() {
+            $.hint = Objects.requireNonNull($.hint, "expected parameter 'hint' to be non-null");
+            return $;
         }
     }
+
 }

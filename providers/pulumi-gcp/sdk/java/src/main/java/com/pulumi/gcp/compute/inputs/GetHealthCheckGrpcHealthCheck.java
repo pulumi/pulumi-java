@@ -14,94 +14,87 @@ public final class GetHealthCheckGrpcHealthCheck extends com.pulumi.resources.In
     public static final GetHealthCheckGrpcHealthCheck Empty = new GetHealthCheckGrpcHealthCheck();
 
     @Import(name="grpcServiceName", required=true)
-      private final String grpcServiceName;
+    private String grpcServiceName;
 
     public String grpcServiceName() {
         return this.grpcServiceName;
     }
 
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
     @Import(name="portName", required=true)
-      private final String portName;
+    private String portName;
 
     public String portName() {
         return this.portName;
     }
 
     @Import(name="portSpecification", required=true)
-      private final String portSpecification;
+    private String portSpecification;
 
     public String portSpecification() {
         return this.portSpecification;
     }
 
-    public GetHealthCheckGrpcHealthCheck(
-        String grpcServiceName,
-        Integer port,
-        String portName,
-        String portSpecification) {
-        this.grpcServiceName = Objects.requireNonNull(grpcServiceName, "expected parameter 'grpcServiceName' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.portName = Objects.requireNonNull(portName, "expected parameter 'portName' to be non-null");
-        this.portSpecification = Objects.requireNonNull(portSpecification, "expected parameter 'portSpecification' to be non-null");
-    }
+    private GetHealthCheckGrpcHealthCheck() {}
 
-    private GetHealthCheckGrpcHealthCheck() {
-        this.grpcServiceName = null;
-        this.port = null;
-        this.portName = null;
-        this.portSpecification = null;
+    private GetHealthCheckGrpcHealthCheck(GetHealthCheckGrpcHealthCheck $) {
+        this.grpcServiceName = $.grpcServiceName;
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHealthCheckGrpcHealthCheck defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String grpcServiceName;
-        private Integer port;
-        private String portName;
-        private String portSpecification;
+        private GetHealthCheckGrpcHealthCheck $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHealthCheckGrpcHealthCheck();
         }
 
         public Builder(GetHealthCheckGrpcHealthCheck defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcServiceName = defaults.grpcServiceName;
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
+            $ = new GetHealthCheckGrpcHealthCheck(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcServiceName(String grpcServiceName) {
-            this.grpcServiceName = Objects.requireNonNull(grpcServiceName);
+            $.grpcServiceName = grpcServiceName;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder portName(String portName) {
-            this.portName = Objects.requireNonNull(portName);
+            $.portName = portName;
             return this;
         }
+
         public Builder portSpecification(String portSpecification) {
-            this.portSpecification = Objects.requireNonNull(portSpecification);
+            $.portSpecification = portSpecification;
             return this;
-        }        public GetHealthCheckGrpcHealthCheck build() {
-            return new GetHealthCheckGrpcHealthCheck(grpcServiceName, port, portName, portSpecification);
+        }
+
+        public GetHealthCheckGrpcHealthCheck build() {
+            $.grpcServiceName = Objects.requireNonNull($.grpcServiceName, "expected parameter 'grpcServiceName' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.portName = Objects.requireNonNull($.portName, "expected parameter 'portName' to be non-null");
+            $.portSpecification = Objects.requireNonNull($.portSpecification, "expected parameter 'portSpecification' to be non-null");
+            return $;
         }
     }
+
 }

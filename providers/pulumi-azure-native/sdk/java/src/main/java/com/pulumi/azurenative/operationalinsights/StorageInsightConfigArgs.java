@@ -6,11 +6,11 @@ package com.pulumi.azurenative.operationalinsights;
 import com.pulumi.azurenative.operationalinsights.inputs.StorageAccountArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="containers")
-      private final @Nullable Output<List<String>> containers;
+    private @Nullable Output<List<String>> containers;
 
-    public Output<List<String>> containers() {
-        return this.containers == null ? Codegen.empty() : this.containers;
+    public Optional<Output<List<String>>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="eTag")
-      private final @Nullable Output<String> eTag;
+    private @Nullable Output<String> eTag;
 
-    public Output<String> eTag() {
-        return this.eTag == null ? Codegen.empty() : this.eTag;
+    public Optional<Output<String>> eTag() {
+        return Optional.ofNullable(this.eTag);
     }
 
     /**
@@ -45,7 +45,7 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storageAccount", required=true)
-      private final Output<StorageAccountArgs> storageAccount;
+    private Output<StorageAccountArgs> storageAccount;
 
     public Output<StorageAccountArgs> storageAccount() {
         return this.storageAccount;
@@ -67,10 +67,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="storageInsightName")
-      private final @Nullable Output<String> storageInsightName;
+    private @Nullable Output<String> storageInsightName;
 
-    public Output<String> storageInsightName() {
-        return this.storageInsightName == null ? Codegen.empty() : this.storageInsightName;
+    public Optional<Output<String>> storageInsightName() {
+        return Optional.ofNullable(this.storageInsightName);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tables")
-      private final @Nullable Output<List<String>> tables;
+    private @Nullable Output<List<String>> tables;
 
-    public Output<List<String>> tables() {
-        return this.tables == null ? Codegen.empty() : this.tables;
+    public Optional<Output<List<String>>> tables() {
+        return Optional.ofNullable(this.tables);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -100,147 +100,129 @@ public final class StorageInsightConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final Output<String> workspaceName;
+    private Output<String> workspaceName;
 
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
 
-    public StorageInsightConfigArgs(
-        @Nullable Output<List<String>> containers,
-        @Nullable Output<String> eTag,
-        Output<String> resourceGroupName,
-        Output<StorageAccountArgs> storageAccount,
-        @Nullable Output<String> storageInsightName,
-        @Nullable Output<List<String>> tables,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> workspaceName) {
-        this.containers = containers;
-        this.eTag = eTag;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.storageAccount = Objects.requireNonNull(storageAccount, "expected parameter 'storageAccount' to be non-null");
-        this.storageInsightName = storageInsightName;
-        this.tables = tables;
-        this.tags = tags;
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private StorageInsightConfigArgs() {}
 
-    private StorageInsightConfigArgs() {
-        this.containers = Codegen.empty();
-        this.eTag = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.storageAccount = Codegen.empty();
-        this.storageInsightName = Codegen.empty();
-        this.tables = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.workspaceName = Codegen.empty();
+    private StorageInsightConfigArgs(StorageInsightConfigArgs $) {
+        this.containers = $.containers;
+        this.eTag = $.eTag;
+        this.resourceGroupName = $.resourceGroupName;
+        this.storageAccount = $.storageAccount;
+        this.storageInsightName = $.storageInsightName;
+        this.tables = $.tables;
+        this.tags = $.tags;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageInsightConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> containers;
-        private @Nullable Output<String> eTag;
-        private Output<String> resourceGroupName;
-        private Output<StorageAccountArgs> storageAccount;
-        private @Nullable Output<String> storageInsightName;
-        private @Nullable Output<List<String>> tables;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> workspaceName;
+        private StorageInsightConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageInsightConfigArgs();
         }
 
         public Builder(StorageInsightConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containers = defaults.containers;
-    	      this.eTag = defaults.eTag;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.storageAccount = defaults.storageAccount;
-    	      this.storageInsightName = defaults.storageInsightName;
-    	      this.tables = defaults.tables;
-    	      this.tags = defaults.tags;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new StorageInsightConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containers(@Nullable Output<List<String>> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
-        public Builder containers(@Nullable List<String> containers) {
-            this.containers = Codegen.ofNullable(containers);
-            return this;
+
+        public Builder containers(List<String> containers) {
+            return containers(Output.of(containers));
         }
+
         public Builder containers(String... containers) {
             return containers(List.of(containers));
         }
+
         public Builder eTag(@Nullable Output<String> eTag) {
-            this.eTag = eTag;
+            $.eTag = eTag;
             return this;
         }
-        public Builder eTag(@Nullable String eTag) {
-            this.eTag = Codegen.ofNullable(eTag);
-            return this;
+
+        public Builder eTag(String eTag) {
+            return eTag(Output.of(eTag));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder storageAccount(Output<StorageAccountArgs> storageAccount) {
-            this.storageAccount = Objects.requireNonNull(storageAccount);
+            $.storageAccount = storageAccount;
             return this;
         }
+
         public Builder storageAccount(StorageAccountArgs storageAccount) {
-            this.storageAccount = Output.of(Objects.requireNonNull(storageAccount));
-            return this;
+            return storageAccount(Output.of(storageAccount));
         }
+
         public Builder storageInsightName(@Nullable Output<String> storageInsightName) {
-            this.storageInsightName = storageInsightName;
+            $.storageInsightName = storageInsightName;
             return this;
         }
-        public Builder storageInsightName(@Nullable String storageInsightName) {
-            this.storageInsightName = Codegen.ofNullable(storageInsightName);
-            return this;
+
+        public Builder storageInsightName(String storageInsightName) {
+            return storageInsightName(Output.of(storageInsightName));
         }
+
         public Builder tables(@Nullable Output<List<String>> tables) {
-            this.tables = tables;
+            $.tables = tables;
             return this;
         }
-        public Builder tables(@Nullable List<String> tables) {
-            this.tables = Codegen.ofNullable(tables);
-            return this;
+
+        public Builder tables(List<String> tables) {
+            return tables(Output.of(tables));
         }
+
         public Builder tables(String... tables) {
             return tables(List.of(tables));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder workspaceName(Output<String> workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Output.of(Objects.requireNonNull(workspaceName));
-            return this;
-        }        public StorageInsightConfigArgs build() {
-            return new StorageInsightConfigArgs(containers, eTag, resourceGroupName, storageAccount, storageInsightName, tables, tags, workspaceName);
+            return workspaceName(Output.of(workspaceName));
+        }
+
+        public StorageInsightConfigArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.storageAccount = Objects.requireNonNull($.storageAccount, "expected parameter 'storageAccount' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

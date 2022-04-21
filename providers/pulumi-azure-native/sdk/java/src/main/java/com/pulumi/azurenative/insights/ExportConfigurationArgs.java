@@ -5,9 +5,9 @@ package com.pulumi.azurenative.insights;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationAccountId")
-      private final @Nullable Output<String> destinationAccountId;
+    private @Nullable Output<String> destinationAccountId;
 
-    public Output<String> destinationAccountId() {
-        return this.destinationAccountId == null ? Codegen.empty() : this.destinationAccountId;
+    public Optional<Output<String>> destinationAccountId() {
+        return Optional.ofNullable(this.destinationAccountId);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationAddress")
-      private final @Nullable Output<String> destinationAddress;
+    private @Nullable Output<String> destinationAddress;
 
-    public Output<String> destinationAddress() {
-        return this.destinationAddress == null ? Codegen.empty() : this.destinationAddress;
+    public Optional<Output<String>> destinationAddress() {
+        return Optional.ofNullable(this.destinationAddress);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationStorageLocationId")
-      private final @Nullable Output<String> destinationStorageLocationId;
+    private @Nullable Output<String> destinationStorageLocationId;
 
-    public Output<String> destinationStorageLocationId() {
-        return this.destinationStorageLocationId == null ? Codegen.empty() : this.destinationStorageLocationId;
+    public Optional<Output<String>> destinationStorageLocationId() {
+        return Optional.ofNullable(this.destinationStorageLocationId);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationStorageSubscriptionId")
-      private final @Nullable Output<String> destinationStorageSubscriptionId;
+    private @Nullable Output<String> destinationStorageSubscriptionId;
 
-    public Output<String> destinationStorageSubscriptionId() {
-        return this.destinationStorageSubscriptionId == null ? Codegen.empty() : this.destinationStorageSubscriptionId;
+    public Optional<Output<String>> destinationStorageSubscriptionId() {
+        return Optional.ofNullable(this.destinationStorageSubscriptionId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="destinationType")
-      private final @Nullable Output<String> destinationType;
+    private @Nullable Output<String> destinationType;
 
-    public Output<String> destinationType() {
-        return this.destinationType == null ? Codegen.empty() : this.destinationType;
+    public Optional<Output<String>> destinationType() {
+        return Optional.ofNullable(this.destinationType);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="exportId")
-      private final @Nullable Output<String> exportId;
+    private @Nullable Output<String> exportId;
 
-    public Output<String> exportId() {
-        return this.exportId == null ? Codegen.empty() : this.exportId;
+    public Optional<Output<String>> exportId() {
+        return Optional.ofNullable(this.exportId);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="isEnabled")
-      private final @Nullable Output<String> isEnabled;
+    private @Nullable Output<String> isEnabled;
 
-    public Output<String> isEnabled() {
-        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
+    public Optional<Output<String>> isEnabled() {
+        return Optional.ofNullable(this.isEnabled);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="notificationQueueEnabled")
-      private final @Nullable Output<String> notificationQueueEnabled;
+    private @Nullable Output<String> notificationQueueEnabled;
 
-    public Output<String> notificationQueueEnabled() {
-        return this.notificationQueueEnabled == null ? Codegen.empty() : this.notificationQueueEnabled;
+    public Optional<Output<String>> notificationQueueEnabled() {
+        return Optional.ofNullable(this.notificationQueueEnabled);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="notificationQueueUri")
-      private final @Nullable Output<String> notificationQueueUri;
+    private @Nullable Output<String> notificationQueueUri;
 
-    public Output<String> notificationQueueUri() {
-        return this.notificationQueueUri == null ? Codegen.empty() : this.notificationQueueUri;
+    public Optional<Output<String>> notificationQueueUri() {
+        return Optional.ofNullable(this.notificationQueueUri);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="recordTypes")
-      private final @Nullable Output<String> recordTypes;
+    private @Nullable Output<String> recordTypes;
 
-    public Output<String> recordTypes() {
-        return this.recordTypes == null ? Codegen.empty() : this.recordTypes;
+    public Optional<Output<String>> recordTypes() {
+        return Optional.ofNullable(this.recordTypes);
     }
 
     /**
@@ -130,7 +130,7 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -141,193 +141,160 @@ public final class ExportConfigurationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
     }
 
-    public ExportConfigurationArgs(
-        @Nullable Output<String> destinationAccountId,
-        @Nullable Output<String> destinationAddress,
-        @Nullable Output<String> destinationStorageLocationId,
-        @Nullable Output<String> destinationStorageSubscriptionId,
-        @Nullable Output<String> destinationType,
-        @Nullable Output<String> exportId,
-        @Nullable Output<String> isEnabled,
-        @Nullable Output<String> notificationQueueEnabled,
-        @Nullable Output<String> notificationQueueUri,
-        @Nullable Output<String> recordTypes,
-        Output<String> resourceGroupName,
-        Output<String> resourceName) {
-        this.destinationAccountId = destinationAccountId;
-        this.destinationAddress = destinationAddress;
-        this.destinationStorageLocationId = destinationStorageLocationId;
-        this.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
-        this.destinationType = destinationType;
-        this.exportId = exportId;
-        this.isEnabled = isEnabled;
-        this.notificationQueueEnabled = notificationQueueEnabled;
-        this.notificationQueueUri = notificationQueueUri;
-        this.recordTypes = recordTypes;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ExportConfigurationArgs() {}
 
-    private ExportConfigurationArgs() {
-        this.destinationAccountId = Codegen.empty();
-        this.destinationAddress = Codegen.empty();
-        this.destinationStorageLocationId = Codegen.empty();
-        this.destinationStorageSubscriptionId = Codegen.empty();
-        this.destinationType = Codegen.empty();
-        this.exportId = Codegen.empty();
-        this.isEnabled = Codegen.empty();
-        this.notificationQueueEnabled = Codegen.empty();
-        this.notificationQueueUri = Codegen.empty();
-        this.recordTypes = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
+    private ExportConfigurationArgs(ExportConfigurationArgs $) {
+        this.destinationAccountId = $.destinationAccountId;
+        this.destinationAddress = $.destinationAddress;
+        this.destinationStorageLocationId = $.destinationStorageLocationId;
+        this.destinationStorageSubscriptionId = $.destinationStorageSubscriptionId;
+        this.destinationType = $.destinationType;
+        this.exportId = $.exportId;
+        this.isEnabled = $.isEnabled;
+        this.notificationQueueEnabled = $.notificationQueueEnabled;
+        this.notificationQueueUri = $.notificationQueueUri;
+        this.recordTypes = $.recordTypes;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExportConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> destinationAccountId;
-        private @Nullable Output<String> destinationAddress;
-        private @Nullable Output<String> destinationStorageLocationId;
-        private @Nullable Output<String> destinationStorageSubscriptionId;
-        private @Nullable Output<String> destinationType;
-        private @Nullable Output<String> exportId;
-        private @Nullable Output<String> isEnabled;
-        private @Nullable Output<String> notificationQueueEnabled;
-        private @Nullable Output<String> notificationQueueUri;
-        private @Nullable Output<String> recordTypes;
-        private Output<String> resourceGroupName;
-        private Output<String> resourceName;
+        private ExportConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExportConfigurationArgs();
         }
 
         public Builder(ExportConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destinationAccountId = defaults.destinationAccountId;
-    	      this.destinationAddress = defaults.destinationAddress;
-    	      this.destinationStorageLocationId = defaults.destinationStorageLocationId;
-    	      this.destinationStorageSubscriptionId = defaults.destinationStorageSubscriptionId;
-    	      this.destinationType = defaults.destinationType;
-    	      this.exportId = defaults.exportId;
-    	      this.isEnabled = defaults.isEnabled;
-    	      this.notificationQueueEnabled = defaults.notificationQueueEnabled;
-    	      this.notificationQueueUri = defaults.notificationQueueUri;
-    	      this.recordTypes = defaults.recordTypes;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ExportConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destinationAccountId(@Nullable Output<String> destinationAccountId) {
-            this.destinationAccountId = destinationAccountId;
+            $.destinationAccountId = destinationAccountId;
             return this;
         }
-        public Builder destinationAccountId(@Nullable String destinationAccountId) {
-            this.destinationAccountId = Codegen.ofNullable(destinationAccountId);
-            return this;
+
+        public Builder destinationAccountId(String destinationAccountId) {
+            return destinationAccountId(Output.of(destinationAccountId));
         }
+
         public Builder destinationAddress(@Nullable Output<String> destinationAddress) {
-            this.destinationAddress = destinationAddress;
+            $.destinationAddress = destinationAddress;
             return this;
         }
-        public Builder destinationAddress(@Nullable String destinationAddress) {
-            this.destinationAddress = Codegen.ofNullable(destinationAddress);
-            return this;
+
+        public Builder destinationAddress(String destinationAddress) {
+            return destinationAddress(Output.of(destinationAddress));
         }
+
         public Builder destinationStorageLocationId(@Nullable Output<String> destinationStorageLocationId) {
-            this.destinationStorageLocationId = destinationStorageLocationId;
+            $.destinationStorageLocationId = destinationStorageLocationId;
             return this;
         }
-        public Builder destinationStorageLocationId(@Nullable String destinationStorageLocationId) {
-            this.destinationStorageLocationId = Codegen.ofNullable(destinationStorageLocationId);
-            return this;
+
+        public Builder destinationStorageLocationId(String destinationStorageLocationId) {
+            return destinationStorageLocationId(Output.of(destinationStorageLocationId));
         }
+
         public Builder destinationStorageSubscriptionId(@Nullable Output<String> destinationStorageSubscriptionId) {
-            this.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
+            $.destinationStorageSubscriptionId = destinationStorageSubscriptionId;
             return this;
         }
-        public Builder destinationStorageSubscriptionId(@Nullable String destinationStorageSubscriptionId) {
-            this.destinationStorageSubscriptionId = Codegen.ofNullable(destinationStorageSubscriptionId);
-            return this;
+
+        public Builder destinationStorageSubscriptionId(String destinationStorageSubscriptionId) {
+            return destinationStorageSubscriptionId(Output.of(destinationStorageSubscriptionId));
         }
+
         public Builder destinationType(@Nullable Output<String> destinationType) {
-            this.destinationType = destinationType;
+            $.destinationType = destinationType;
             return this;
         }
-        public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Codegen.ofNullable(destinationType);
-            return this;
+
+        public Builder destinationType(String destinationType) {
+            return destinationType(Output.of(destinationType));
         }
+
         public Builder exportId(@Nullable Output<String> exportId) {
-            this.exportId = exportId;
+            $.exportId = exportId;
             return this;
         }
-        public Builder exportId(@Nullable String exportId) {
-            this.exportId = Codegen.ofNullable(exportId);
-            return this;
+
+        public Builder exportId(String exportId) {
+            return exportId(Output.of(exportId));
         }
+
         public Builder isEnabled(@Nullable Output<String> isEnabled) {
-            this.isEnabled = isEnabled;
+            $.isEnabled = isEnabled;
             return this;
         }
-        public Builder isEnabled(@Nullable String isEnabled) {
-            this.isEnabled = Codegen.ofNullable(isEnabled);
-            return this;
+
+        public Builder isEnabled(String isEnabled) {
+            return isEnabled(Output.of(isEnabled));
         }
+
         public Builder notificationQueueEnabled(@Nullable Output<String> notificationQueueEnabled) {
-            this.notificationQueueEnabled = notificationQueueEnabled;
+            $.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
-        public Builder notificationQueueEnabled(@Nullable String notificationQueueEnabled) {
-            this.notificationQueueEnabled = Codegen.ofNullable(notificationQueueEnabled);
-            return this;
+
+        public Builder notificationQueueEnabled(String notificationQueueEnabled) {
+            return notificationQueueEnabled(Output.of(notificationQueueEnabled));
         }
+
         public Builder notificationQueueUri(@Nullable Output<String> notificationQueueUri) {
-            this.notificationQueueUri = notificationQueueUri;
+            $.notificationQueueUri = notificationQueueUri;
             return this;
         }
-        public Builder notificationQueueUri(@Nullable String notificationQueueUri) {
-            this.notificationQueueUri = Codegen.ofNullable(notificationQueueUri);
-            return this;
+
+        public Builder notificationQueueUri(String notificationQueueUri) {
+            return notificationQueueUri(Output.of(notificationQueueUri));
         }
+
         public Builder recordTypes(@Nullable Output<String> recordTypes) {
-            this.recordTypes = recordTypes;
+            $.recordTypes = recordTypes;
             return this;
         }
-        public Builder recordTypes(@Nullable String recordTypes) {
-            this.recordTypes = Codegen.ofNullable(recordTypes);
-            return this;
+
+        public Builder recordTypes(String recordTypes) {
+            return recordTypes(Output.of(recordTypes));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
-        }        public ExportConfigurationArgs build() {
-            return new ExportConfigurationArgs(destinationAccountId, destinationAddress, destinationStorageLocationId, destinationStorageSubscriptionId, destinationType, exportId, isEnabled, notificationQueueEnabled, notificationQueueUri, recordTypes, resourceGroupName, resourceName);
+            return resourceName(Output.of(resourceName));
+        }
+
+        public ExportConfigurationArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

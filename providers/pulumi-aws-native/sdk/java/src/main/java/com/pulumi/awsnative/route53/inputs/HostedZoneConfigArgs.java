@@ -5,9 +5,9 @@ package com.pulumi.awsnative.route53.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class HostedZoneConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="comment")
-      private final @Nullable Output<String> comment;
+    private @Nullable Output<String> comment;
 
-    public Output<String> comment() {
-        return this.comment == null ? Codegen.empty() : this.comment;
+    public Optional<Output<String>> comment() {
+        return Optional.ofNullable(this.comment);
     }
 
-    public HostedZoneConfigArgs(@Nullable Output<String> comment) {
-        this.comment = comment;
-    }
+    private HostedZoneConfigArgs() {}
 
-    private HostedZoneConfigArgs() {
-        this.comment = Codegen.empty();
+    private HostedZoneConfigArgs(HostedZoneConfigArgs $) {
+        this.comment = $.comment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostedZoneConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> comment;
+        private HostedZoneConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostedZoneConfigArgs();
         }
 
         public Builder(HostedZoneConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.comment = defaults.comment;
+            $ = new HostedZoneConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder comment(@Nullable Output<String> comment) {
-            this.comment = comment;
+            $.comment = comment;
             return this;
         }
-        public Builder comment(@Nullable String comment) {
-            this.comment = Codegen.ofNullable(comment);
-            return this;
-        }        public HostedZoneConfigArgs build() {
-            return new HostedZoneConfigArgs(comment);
+
+        public Builder comment(String comment) {
+            return comment(Output.of(comment));
+        }
+
+        public HostedZoneConfigArgs build() {
+            return $;
         }
     }
+
 }

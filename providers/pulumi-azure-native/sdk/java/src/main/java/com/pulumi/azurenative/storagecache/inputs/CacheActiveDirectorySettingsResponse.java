@@ -24,7 +24,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="cacheNetBiosName", required=true)
-      private final String cacheNetBiosName;
+    private String cacheNetBiosName;
 
     public String cacheNetBiosName() {
         return this.cacheNetBiosName;
@@ -35,10 +35,10 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="credentials")
-      private final @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
+    private @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
 
     public Optional<CacheActiveDirectorySettingsResponseCredentials> credentials() {
-        return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
+        return Optional.ofNullable(this.credentials);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="domainJoined", required=true)
-      private final String domainJoined;
+    private String domainJoined;
 
     public String domainJoined() {
         return this.domainJoined;
@@ -57,7 +57,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="domainName", required=true)
-      private final String domainName;
+    private String domainName;
 
     public String domainName() {
         return this.domainName;
@@ -68,7 +68,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="domainNetBiosName", required=true)
-      private final String domainNetBiosName;
+    private String domainNetBiosName;
 
     public String domainNetBiosName() {
         return this.domainNetBiosName;
@@ -79,7 +79,7 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="primaryDnsIpAddress", required=true)
-      private final String primaryDnsIpAddress;
+    private String primaryDnsIpAddress;
 
     public String primaryDnsIpAddress() {
         return this.primaryDnsIpAddress;
@@ -90,100 +90,85 @@ public final class CacheActiveDirectorySettingsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="secondaryDnsIpAddress")
-      private final @Nullable String secondaryDnsIpAddress;
+    private @Nullable String secondaryDnsIpAddress;
 
     public Optional<String> secondaryDnsIpAddress() {
-        return this.secondaryDnsIpAddress == null ? Optional.empty() : Optional.ofNullable(this.secondaryDnsIpAddress);
+        return Optional.ofNullable(this.secondaryDnsIpAddress);
     }
 
-    public CacheActiveDirectorySettingsResponse(
-        String cacheNetBiosName,
-        @Nullable CacheActiveDirectorySettingsResponseCredentials credentials,
-        String domainJoined,
-        String domainName,
-        String domainNetBiosName,
-        String primaryDnsIpAddress,
-        @Nullable String secondaryDnsIpAddress) {
-        this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName, "expected parameter 'cacheNetBiosName' to be non-null");
-        this.credentials = credentials;
-        this.domainJoined = Objects.requireNonNull(domainJoined, "expected parameter 'domainJoined' to be non-null");
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName, "expected parameter 'domainNetBiosName' to be non-null");
-        this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress, "expected parameter 'primaryDnsIpAddress' to be non-null");
-        this.secondaryDnsIpAddress = secondaryDnsIpAddress;
-    }
+    private CacheActiveDirectorySettingsResponse() {}
 
-    private CacheActiveDirectorySettingsResponse() {
-        this.cacheNetBiosName = null;
-        this.credentials = null;
-        this.domainJoined = null;
-        this.domainName = null;
-        this.domainNetBiosName = null;
-        this.primaryDnsIpAddress = null;
-        this.secondaryDnsIpAddress = null;
+    private CacheActiveDirectorySettingsResponse(CacheActiveDirectorySettingsResponse $) {
+        this.cacheNetBiosName = $.cacheNetBiosName;
+        this.credentials = $.credentials;
+        this.domainJoined = $.domainJoined;
+        this.domainName = $.domainName;
+        this.domainNetBiosName = $.domainNetBiosName;
+        this.primaryDnsIpAddress = $.primaryDnsIpAddress;
+        this.secondaryDnsIpAddress = $.secondaryDnsIpAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheActiveDirectorySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cacheNetBiosName;
-        private @Nullable CacheActiveDirectorySettingsResponseCredentials credentials;
-        private String domainJoined;
-        private String domainName;
-        private String domainNetBiosName;
-        private String primaryDnsIpAddress;
-        private @Nullable String secondaryDnsIpAddress;
+        private CacheActiveDirectorySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheActiveDirectorySettingsResponse();
         }
 
         public Builder(CacheActiveDirectorySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cacheNetBiosName = defaults.cacheNetBiosName;
-    	      this.credentials = defaults.credentials;
-    	      this.domainJoined = defaults.domainJoined;
-    	      this.domainName = defaults.domainName;
-    	      this.domainNetBiosName = defaults.domainNetBiosName;
-    	      this.primaryDnsIpAddress = defaults.primaryDnsIpAddress;
-    	      this.secondaryDnsIpAddress = defaults.secondaryDnsIpAddress;
+            $ = new CacheActiveDirectorySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cacheNetBiosName(String cacheNetBiosName) {
-            this.cacheNetBiosName = Objects.requireNonNull(cacheNetBiosName);
+            $.cacheNetBiosName = cacheNetBiosName;
             return this;
         }
+
         public Builder credentials(@Nullable CacheActiveDirectorySettingsResponseCredentials credentials) {
-            this.credentials = credentials;
+            $.credentials = credentials;
             return this;
         }
+
         public Builder domainJoined(String domainJoined) {
-            this.domainJoined = Objects.requireNonNull(domainJoined);
+            $.domainJoined = domainJoined;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainNetBiosName(String domainNetBiosName) {
-            this.domainNetBiosName = Objects.requireNonNull(domainNetBiosName);
+            $.domainNetBiosName = domainNetBiosName;
             return this;
         }
+
         public Builder primaryDnsIpAddress(String primaryDnsIpAddress) {
-            this.primaryDnsIpAddress = Objects.requireNonNull(primaryDnsIpAddress);
+            $.primaryDnsIpAddress = primaryDnsIpAddress;
             return this;
         }
+
         public Builder secondaryDnsIpAddress(@Nullable String secondaryDnsIpAddress) {
-            this.secondaryDnsIpAddress = secondaryDnsIpAddress;
+            $.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
-        }        public CacheActiveDirectorySettingsResponse build() {
-            return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
+        }
+
+        public CacheActiveDirectorySettingsResponse build() {
+            $.cacheNetBiosName = Objects.requireNonNull($.cacheNetBiosName, "expected parameter 'cacheNetBiosName' to be non-null");
+            $.domainJoined = Objects.requireNonNull($.domainJoined, "expected parameter 'domainJoined' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.domainNetBiosName = Objects.requireNonNull($.domainNetBiosName, "expected parameter 'domainNetBiosName' to be non-null");
+            $.primaryDnsIpAddress = Objects.requireNonNull($.primaryDnsIpAddress, "expected parameter 'primaryDnsIpAddress' to be non-null");
+            return $;
         }
     }
+
 }

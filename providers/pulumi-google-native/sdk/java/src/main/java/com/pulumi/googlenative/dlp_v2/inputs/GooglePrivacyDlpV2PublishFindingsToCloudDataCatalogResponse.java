@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse e
 
     public static final GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse Empty = new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse();
 
-    public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse();
         }
         public GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse build() {
-            return new GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse();
+            return $;
         }
     }
+
 }

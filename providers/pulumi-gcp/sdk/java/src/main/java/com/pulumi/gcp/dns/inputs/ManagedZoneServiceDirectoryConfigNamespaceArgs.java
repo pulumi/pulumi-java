@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
      * 
      */
     @Import(name="namespaceUrl", required=true)
-      private final Output<String> namespaceUrl;
+    private Output<String> namespaceUrl;
 
     public Output<String> namespaceUrl() {
         return this.namespaceUrl;
     }
 
-    public ManagedZoneServiceDirectoryConfigNamespaceArgs(Output<String> namespaceUrl) {
-        this.namespaceUrl = Objects.requireNonNull(namespaceUrl, "expected parameter 'namespaceUrl' to be non-null");
-    }
+    private ManagedZoneServiceDirectoryConfigNamespaceArgs() {}
 
-    private ManagedZoneServiceDirectoryConfigNamespaceArgs() {
-        this.namespaceUrl = Codegen.empty();
+    private ManagedZoneServiceDirectoryConfigNamespaceArgs(ManagedZoneServiceDirectoryConfigNamespaceArgs $) {
+        this.namespaceUrl = $.namespaceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> namespaceUrl;
+        private ManagedZoneServiceDirectoryConfigNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceArgs();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceUrl = defaults.namespaceUrl;
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceUrl(Output<String> namespaceUrl) {
-            this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
+            $.namespaceUrl = namespaceUrl;
             return this;
         }
+
         public Builder namespaceUrl(String namespaceUrl) {
-            this.namespaceUrl = Output.of(Objects.requireNonNull(namespaceUrl));
-            return this;
-        }        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
-            return new ManagedZoneServiceDirectoryConfigNamespaceArgs(namespaceUrl);
+            return namespaceUrl(Output.of(namespaceUrl));
+        }
+
+        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
+            $.namespaceUrl = Objects.requireNonNull($.namespaceUrl, "expected parameter 'namespaceUrl' to be non-null");
+            return $;
         }
     }
+
 }

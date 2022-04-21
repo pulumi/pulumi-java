@@ -16,62 +16,57 @@ public final class DataflowEndpointGroupEndpointDetails extends com.pulumi.resou
     public static final DataflowEndpointGroupEndpointDetails Empty = new DataflowEndpointGroupEndpointDetails();
 
     @Import(name="endpoint")
-      private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
+    private @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
 
     public Optional<DataflowEndpointGroupDataflowEndpoint> endpoint() {
-        return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
+        return Optional.ofNullable(this.endpoint);
     }
 
     @Import(name="securityDetails")
-      private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
+    private @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
 
     public Optional<DataflowEndpointGroupSecurityDetails> securityDetails() {
-        return this.securityDetails == null ? Optional.empty() : Optional.ofNullable(this.securityDetails);
+        return Optional.ofNullable(this.securityDetails);
     }
 
-    public DataflowEndpointGroupEndpointDetails(
-        @Nullable DataflowEndpointGroupDataflowEndpoint endpoint,
-        @Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
-        this.endpoint = endpoint;
-        this.securityDetails = securityDetails;
-    }
+    private DataflowEndpointGroupEndpointDetails() {}
 
-    private DataflowEndpointGroupEndpointDetails() {
-        this.endpoint = null;
-        this.securityDetails = null;
+    private DataflowEndpointGroupEndpointDetails(DataflowEndpointGroupEndpointDetails $) {
+        this.endpoint = $.endpoint;
+        this.securityDetails = $.securityDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataflowEndpointGroupEndpointDetails defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
-        private @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
+        private DataflowEndpointGroupEndpointDetails $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataflowEndpointGroupEndpointDetails();
         }
 
         public Builder(DataflowEndpointGroupEndpointDetails defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.securityDetails = defaults.securityDetails;
+            $ = new DataflowEndpointGroupEndpointDetails(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpoint endpoint) {
-            this.endpoint = endpoint;
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
-            this.securityDetails = securityDetails;
+            $.securityDetails = securityDetails;
             return this;
-        }        public DataflowEndpointGroupEndpointDetails build() {
-            return new DataflowEndpointGroupEndpointDetails(endpoint, securityDetails);
+        }
+
+        public DataflowEndpointGroupEndpointDetails build() {
+            return $;
         }
     }
+
 }

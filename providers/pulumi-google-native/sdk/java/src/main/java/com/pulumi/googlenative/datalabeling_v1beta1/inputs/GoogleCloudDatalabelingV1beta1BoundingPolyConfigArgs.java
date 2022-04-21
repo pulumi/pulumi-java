@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @Import(name="annotationSpecSet", required=true)
-      private final Output<String> annotationSpecSet;
+    private Output<String> annotationSpecSet;
 
     public Output<String> annotationSpecSet() {
         return this.annotationSpecSet;
@@ -35,63 +35,59 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs extends 
      * 
      */
     @Import(name="instructionMessage")
-      private final @Nullable Output<String> instructionMessage;
+    private @Nullable Output<String> instructionMessage;
 
-    public Output<String> instructionMessage() {
-        return this.instructionMessage == null ? Codegen.empty() : this.instructionMessage;
+    public Optional<Output<String>> instructionMessage() {
+        return Optional.ofNullable(this.instructionMessage);
     }
 
-    public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(
-        Output<String> annotationSpecSet,
-        @Nullable Output<String> instructionMessage) {
-        this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
-        this.instructionMessage = instructionMessage;
-    }
+    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs() {
-        this.annotationSpecSet = Codegen.empty();
-        this.instructionMessage = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs $) {
+        this.annotationSpecSet = $.annotationSpecSet;
+        this.instructionMessage = $.instructionMessage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> annotationSpecSet;
-        private @Nullable Output<String> instructionMessage;
+        private GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationSpecSet = defaults.annotationSpecSet;
-    	      this.instructionMessage = defaults.instructionMessage;
+            $ = new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationSpecSet(Output<String> annotationSpecSet) {
-            this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
+            $.annotationSpecSet = annotationSpecSet;
             return this;
         }
+
         public Builder annotationSpecSet(String annotationSpecSet) {
-            this.annotationSpecSet = Output.of(Objects.requireNonNull(annotationSpecSet));
-            return this;
+            return annotationSpecSet(Output.of(annotationSpecSet));
         }
+
         public Builder instructionMessage(@Nullable Output<String> instructionMessage) {
-            this.instructionMessage = instructionMessage;
+            $.instructionMessage = instructionMessage;
             return this;
         }
-        public Builder instructionMessage(@Nullable String instructionMessage) {
-            this.instructionMessage = Codegen.ofNullable(instructionMessage);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs(annotationSpecSet, instructionMessage);
+
+        public Builder instructionMessage(String instructionMessage) {
+            return instructionMessage(Output.of(instructionMessage));
+        }
+
+        public GoogleCloudDatalabelingV1beta1BoundingPolyConfigArgs build() {
+            $.annotationSpecSet = Objects.requireNonNull($.annotationSpecSet, "expected parameter 'annotationSpecSet' to be non-null");
+            return $;
         }
     }
+
 }

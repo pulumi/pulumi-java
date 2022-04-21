@@ -5,7 +5,6 @@ package com.pulumi.azurenative.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="permissions", required=true)
-      private final Output<String> permissions;
+    private Output<String> permissions;
 
     public Output<String> permissions() {
         return this.permissions;
@@ -30,7 +29,7 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="resourceName", required=true)
-      private final Output<String> resourceName;
+    private Output<String> resourceName;
 
     public Output<String> resourceName() {
         return this.resourceName;
@@ -41,76 +40,71 @@ public final class PermissionScopeArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="service", required=true)
-      private final Output<String> service;
+    private Output<String> service;
 
     public Output<String> service() {
         return this.service;
     }
 
-    public PermissionScopeArgs(
-        Output<String> permissions,
-        Output<String> resourceName,
-        Output<String> service) {
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private PermissionScopeArgs() {}
 
-    private PermissionScopeArgs() {
-        this.permissions = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.service = Codegen.empty();
+    private PermissionScopeArgs(PermissionScopeArgs $) {
+        this.permissions = $.permissions;
+        this.resourceName = $.resourceName;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionScopeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> permissions;
-        private Output<String> resourceName;
-        private Output<String> service;
+        private PermissionScopeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionScopeArgs();
         }
 
         public Builder(PermissionScopeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissions = defaults.permissions;
-    	      this.resourceName = defaults.resourceName;
-    	      this.service = defaults.service;
+            $ = new PermissionScopeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder permissions(Output<String> permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Output.of(Objects.requireNonNull(permissions));
-            return this;
+            return permissions(Output.of(permissions));
         }
+
         public Builder resourceName(Output<String> resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Output.of(Objects.requireNonNull(resourceName));
-            return this;
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder service(Output<String> service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Output.of(Objects.requireNonNull(service));
-            return this;
-        }        public PermissionScopeArgs build() {
-            return new PermissionScopeArgs(permissions, resourceName, service);
+            return service(Output.of(service));
+        }
+
+        public PermissionScopeArgs build() {
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

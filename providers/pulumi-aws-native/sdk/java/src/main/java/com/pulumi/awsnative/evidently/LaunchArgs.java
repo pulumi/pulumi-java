@@ -9,10 +9,10 @@ import com.pulumi.awsnative.evidently.inputs.LaunchStepConfigArgs;
 import com.pulumi.awsnative.evidently.inputs.LaunchTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,49 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
     public static final LaunchArgs Empty = new LaunchArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="groups", required=true)
-      private final Output<List<LaunchGroupObjectArgs>> groups;
+    private Output<List<LaunchGroupObjectArgs>> groups;
 
     public Output<List<LaunchGroupObjectArgs>> groups() {
         return this.groups;
     }
 
     @Import(name="metricMonitors")
-      private final @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
+    private @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
 
-    public Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors() {
-        return this.metricMonitors == null ? Codegen.empty() : this.metricMonitors;
+    public Optional<Output<List<LaunchMetricDefinitionObjectArgs>>> metricMonitors() {
+        return Optional.ofNullable(this.metricMonitors);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project", required=true)
-      private final Output<String> project;
+    private Output<String> project;
 
     public Output<String> project() {
         return this.project;
     }
 
     @Import(name="randomizationSalt")
-      private final @Nullable Output<String> randomizationSalt;
+    private @Nullable Output<String> randomizationSalt;
 
-    public Output<String> randomizationSalt() {
-        return this.randomizationSalt == null ? Codegen.empty() : this.randomizationSalt;
+    public Optional<Output<String>> randomizationSalt() {
+        return Optional.ofNullable(this.randomizationSalt);
     }
 
     @Import(name="scheduledSplitsConfig", required=true)
-      private final Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
+    private Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
 
     public Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig() {
         return this.scheduledSplitsConfig;
@@ -74,153 +74,137 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<LaunchTagArgs>> tags;
+    private @Nullable Output<List<LaunchTagArgs>> tags;
 
-    public Output<List<LaunchTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<LaunchTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public LaunchArgs(
-        @Nullable Output<String> description,
-        Output<List<LaunchGroupObjectArgs>> groups,
-        @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors,
-        @Nullable Output<String> name,
-        Output<String> project,
-        @Nullable Output<String> randomizationSalt,
-        Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig,
-        @Nullable Output<List<LaunchTagArgs>> tags) {
-        this.description = description;
-        this.groups = Objects.requireNonNull(groups, "expected parameter 'groups' to be non-null");
-        this.metricMonitors = metricMonitors;
-        this.name = name;
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.randomizationSalt = randomizationSalt;
-        this.scheduledSplitsConfig = Objects.requireNonNull(scheduledSplitsConfig, "expected parameter 'scheduledSplitsConfig' to be non-null");
-        this.tags = tags;
-    }
+    private LaunchArgs() {}
 
-    private LaunchArgs() {
-        this.description = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.metricMonitors = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.randomizationSalt = Codegen.empty();
-        this.scheduledSplitsConfig = Codegen.empty();
-        this.tags = Codegen.empty();
+    private LaunchArgs(LaunchArgs $) {
+        this.description = $.description;
+        this.groups = $.groups;
+        this.metricMonitors = $.metricMonitors;
+        this.name = $.name;
+        this.project = $.project;
+        this.randomizationSalt = $.randomizationSalt;
+        this.scheduledSplitsConfig = $.scheduledSplitsConfig;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LaunchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<List<LaunchGroupObjectArgs>> groups;
-        private @Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors;
-        private @Nullable Output<String> name;
-        private Output<String> project;
-        private @Nullable Output<String> randomizationSalt;
-        private Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig;
-        private @Nullable Output<List<LaunchTagArgs>> tags;
+        private LaunchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LaunchArgs();
         }
 
         public Builder(LaunchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.groups = defaults.groups;
-    	      this.metricMonitors = defaults.metricMonitors;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.randomizationSalt = defaults.randomizationSalt;
-    	      this.scheduledSplitsConfig = defaults.scheduledSplitsConfig;
-    	      this.tags = defaults.tags;
+            $ = new LaunchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder groups(Output<List<LaunchGroupObjectArgs>> groups) {
-            this.groups = Objects.requireNonNull(groups);
+            $.groups = groups;
             return this;
         }
+
         public Builder groups(List<LaunchGroupObjectArgs> groups) {
-            this.groups = Output.of(Objects.requireNonNull(groups));
-            return this;
+            return groups(Output.of(groups));
         }
+
         public Builder groups(LaunchGroupObjectArgs... groups) {
             return groups(List.of(groups));
         }
+
         public Builder metricMonitors(@Nullable Output<List<LaunchMetricDefinitionObjectArgs>> metricMonitors) {
-            this.metricMonitors = metricMonitors;
+            $.metricMonitors = metricMonitors;
             return this;
         }
-        public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObjectArgs> metricMonitors) {
-            this.metricMonitors = Codegen.ofNullable(metricMonitors);
-            return this;
+
+        public Builder metricMonitors(List<LaunchMetricDefinitionObjectArgs> metricMonitors) {
+            return metricMonitors(Output.of(metricMonitors));
         }
+
         public Builder metricMonitors(LaunchMetricDefinitionObjectArgs... metricMonitors) {
             return metricMonitors(List.of(metricMonitors));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(Output<String> project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Output.of(Objects.requireNonNull(project));
-            return this;
+            return project(Output.of(project));
         }
+
         public Builder randomizationSalt(@Nullable Output<String> randomizationSalt) {
-            this.randomizationSalt = randomizationSalt;
+            $.randomizationSalt = randomizationSalt;
             return this;
         }
-        public Builder randomizationSalt(@Nullable String randomizationSalt) {
-            this.randomizationSalt = Codegen.ofNullable(randomizationSalt);
-            return this;
+
+        public Builder randomizationSalt(String randomizationSalt) {
+            return randomizationSalt(Output.of(randomizationSalt));
         }
+
         public Builder scheduledSplitsConfig(Output<List<LaunchStepConfigArgs>> scheduledSplitsConfig) {
-            this.scheduledSplitsConfig = Objects.requireNonNull(scheduledSplitsConfig);
+            $.scheduledSplitsConfig = scheduledSplitsConfig;
             return this;
         }
+
         public Builder scheduledSplitsConfig(List<LaunchStepConfigArgs> scheduledSplitsConfig) {
-            this.scheduledSplitsConfig = Output.of(Objects.requireNonNull(scheduledSplitsConfig));
-            return this;
+            return scheduledSplitsConfig(Output.of(scheduledSplitsConfig));
         }
+
         public Builder scheduledSplitsConfig(LaunchStepConfigArgs... scheduledSplitsConfig) {
             return scheduledSplitsConfig(List.of(scheduledSplitsConfig));
         }
+
         public Builder tags(@Nullable Output<List<LaunchTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<LaunchTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<LaunchTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(LaunchTagArgs... tags) {
             return tags(List.of(tags));
-        }        public LaunchArgs build() {
-            return new LaunchArgs(description, groups, metricMonitors, name, project, randomizationSalt, scheduledSplitsConfig, tags);
+        }
+
+        public LaunchArgs build() {
+            $.groups = Objects.requireNonNull($.groups, "expected parameter 'groups' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.scheduledSplitsConfig = Objects.requireNonNull($.scheduledSplitsConfig, "expected parameter 'scheduledSplitsConfig' to be non-null");
+            return $;
         }
     }
+
 }

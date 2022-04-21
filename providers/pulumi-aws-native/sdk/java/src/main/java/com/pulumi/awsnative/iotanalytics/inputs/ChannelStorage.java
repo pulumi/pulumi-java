@@ -16,62 +16,57 @@ public final class ChannelStorage extends com.pulumi.resources.InvokeArgs {
     public static final ChannelStorage Empty = new ChannelStorage();
 
     @Import(name="customerManagedS3")
-      private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
+    private @Nullable ChannelCustomerManagedS3 customerManagedS3;
 
     public Optional<ChannelCustomerManagedS3> customerManagedS3() {
-        return this.customerManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.customerManagedS3);
+        return Optional.ofNullable(this.customerManagedS3);
     }
 
     @Import(name="serviceManagedS3")
-      private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
+    private @Nullable ChannelServiceManagedS3 serviceManagedS3;
 
     public Optional<ChannelServiceManagedS3> serviceManagedS3() {
-        return this.serviceManagedS3 == null ? Optional.empty() : Optional.ofNullable(this.serviceManagedS3);
+        return Optional.ofNullable(this.serviceManagedS3);
     }
 
-    public ChannelStorage(
-        @Nullable ChannelCustomerManagedS3 customerManagedS3,
-        @Nullable ChannelServiceManagedS3 serviceManagedS3) {
-        this.customerManagedS3 = customerManagedS3;
-        this.serviceManagedS3 = serviceManagedS3;
-    }
+    private ChannelStorage() {}
 
-    private ChannelStorage() {
-        this.customerManagedS3 = null;
-        this.serviceManagedS3 = null;
+    private ChannelStorage(ChannelStorage $) {
+        this.customerManagedS3 = $.customerManagedS3;
+        this.serviceManagedS3 = $.serviceManagedS3;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelStorage defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ChannelCustomerManagedS3 customerManagedS3;
-        private @Nullable ChannelServiceManagedS3 serviceManagedS3;
+        private ChannelStorage $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelStorage();
         }
 
         public Builder(ChannelStorage defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customerManagedS3 = defaults.customerManagedS3;
-    	      this.serviceManagedS3 = defaults.serviceManagedS3;
+            $ = new ChannelStorage(Objects.requireNonNull(defaults));
         }
 
         public Builder customerManagedS3(@Nullable ChannelCustomerManagedS3 customerManagedS3) {
-            this.customerManagedS3 = customerManagedS3;
+            $.customerManagedS3 = customerManagedS3;
             return this;
         }
+
         public Builder serviceManagedS3(@Nullable ChannelServiceManagedS3 serviceManagedS3) {
-            this.serviceManagedS3 = serviceManagedS3;
+            $.serviceManagedS3 = serviceManagedS3;
             return this;
-        }        public ChannelStorage build() {
-            return new ChannelStorage(customerManagedS3, serviceManagedS3);
+        }
+
+        public ChannelStorage build() {
+            return $;
         }
     }
+
 }

@@ -29,10 +29,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="agentVersion")
-      private final @Nullable String agentVersion;
+    private @Nullable String agentVersion;
 
     public Optional<String> agentVersion() {
-        return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
+        return Optional.ofNullable(this.agentVersion);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="canReRegister")
-      private final @Nullable Boolean canReRegister;
+    private @Nullable Boolean canReRegister;
 
     public Optional<Boolean> canReRegister() {
-        return this.canReRegister == null ? Optional.empty() : Optional.ofNullable(this.canReRegister);
+        return Optional.ofNullable(this.canReRegister);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerHealthState")
-      private final @Nullable String containerHealthState;
+    private @Nullable String containerHealthState;
 
     public Optional<String> containerHealthState() {
-        return this.containerHealthState == null ? Optional.empty() : Optional.ofNullable(this.containerHealthState);
+        return Optional.ofNullable(this.containerHealthState);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerId")
-      private final @Nullable Double containerId;
+    private @Nullable Double containerId;
 
     public Optional<Double> containerId() {
-        return this.containerId == null ? Optional.empty() : Optional.ofNullable(this.containerId);
+        return Optional.ofNullable(this.containerId);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerType", required=true)
-      private final String containerType;
+    private String containerType;
 
     public String containerType() {
         return this.containerType;
@@ -99,10 +99,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="extendedInfo")
-      private final @Nullable MabContainerExtendedInfoResponse extendedInfo;
+    private @Nullable MabContainerExtendedInfoResponse extendedInfo;
 
     public Optional<MabContainerExtendedInfoResponse> extendedInfo() {
-        return this.extendedInfo == null ? Optional.empty() : Optional.ofNullable(this.extendedInfo);
+        return Optional.ofNullable(this.extendedInfo);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable String healthStatus;
+    private @Nullable String healthStatus;
 
     public Optional<String> healthStatus() {
-        return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mabContainerHealthDetails")
-      private final @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
+    private @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
 
-    public List<MABContainerHealthDetailsResponse> mabContainerHealthDetails() {
-        return this.mabContainerHealthDetails == null ? List.of() : this.mabContainerHealthDetails;
+    public Optional<List<MABContainerHealthDetailsResponse>> mabContainerHealthDetails() {
+        return Optional.ofNullable(this.mabContainerHealthDetails);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="protectedItemCount")
-      private final @Nullable Double protectedItemCount;
+    private @Nullable Double protectedItemCount;
 
     public Optional<Double> protectedItemCount() {
-        return this.protectedItemCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemCount);
+        return Optional.ofNullable(this.protectedItemCount);
     }
 
     /**
@@ -154,148 +154,115 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable String registrationStatus;
+    private @Nullable String registrationStatus;
 
     public Optional<String> registrationStatus() {
-        return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
+        return Optional.ofNullable(this.registrationStatus);
     }
 
-    public MabContainerResponse(
-        @Nullable String agentVersion,
-        @Nullable String backupManagementType,
-        @Nullable Boolean canReRegister,
-        @Nullable String containerHealthState,
-        @Nullable Double containerId,
-        String containerType,
-        @Nullable MabContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails,
-        @Nullable Double protectedItemCount,
-        @Nullable String registrationStatus) {
-        this.agentVersion = agentVersion;
-        this.backupManagementType = backupManagementType;
-        this.canReRegister = canReRegister;
-        this.containerHealthState = containerHealthState;
-        this.containerId = containerId;
-        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
-        this.extendedInfo = extendedInfo;
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.mabContainerHealthDetails = mabContainerHealthDetails;
-        this.protectedItemCount = protectedItemCount;
-        this.registrationStatus = registrationStatus;
-    }
+    private MabContainerResponse() {}
 
-    private MabContainerResponse() {
-        this.agentVersion = null;
-        this.backupManagementType = null;
-        this.canReRegister = null;
-        this.containerHealthState = null;
-        this.containerId = null;
-        this.containerType = null;
-        this.extendedInfo = null;
-        this.friendlyName = null;
-        this.healthStatus = null;
-        this.mabContainerHealthDetails = List.of();
-        this.protectedItemCount = null;
-        this.registrationStatus = null;
+    private MabContainerResponse(MabContainerResponse $) {
+        this.agentVersion = $.agentVersion;
+        this.backupManagementType = $.backupManagementType;
+        this.canReRegister = $.canReRegister;
+        this.containerHealthState = $.containerHealthState;
+        this.containerId = $.containerId;
+        this.containerType = $.containerType;
+        this.extendedInfo = $.extendedInfo;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.mabContainerHealthDetails = $.mabContainerHealthDetails;
+        this.protectedItemCount = $.protectedItemCount;
+        this.registrationStatus = $.registrationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MabContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String agentVersion;
-        private @Nullable String backupManagementType;
-        private @Nullable Boolean canReRegister;
-        private @Nullable String containerHealthState;
-        private @Nullable Double containerId;
-        private String containerType;
-        private @Nullable MabContainerExtendedInfoResponse extendedInfo;
-        private @Nullable String friendlyName;
-        private @Nullable String healthStatus;
-        private @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
-        private @Nullable Double protectedItemCount;
-        private @Nullable String registrationStatus;
+        private MabContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MabContainerResponse();
         }
 
         public Builder(MabContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentVersion = defaults.agentVersion;
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.canReRegister = defaults.canReRegister;
-    	      this.containerHealthState = defaults.containerHealthState;
-    	      this.containerId = defaults.containerId;
-    	      this.containerType = defaults.containerType;
-    	      this.extendedInfo = defaults.extendedInfo;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.mabContainerHealthDetails = defaults.mabContainerHealthDetails;
-    	      this.protectedItemCount = defaults.protectedItemCount;
-    	      this.registrationStatus = defaults.registrationStatus;
+            $ = new MabContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = agentVersion;
+            $.agentVersion = agentVersion;
             return this;
         }
+
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = canReRegister;
+            $.canReRegister = canReRegister;
             return this;
         }
+
         public Builder containerHealthState(@Nullable String containerHealthState) {
-            this.containerHealthState = containerHealthState;
+            $.containerHealthState = containerHealthState;
             return this;
         }
+
         public Builder containerId(@Nullable Double containerId) {
-            this.containerId = containerId;
+            $.containerId = containerId;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoResponse extendedInfo) {
-            this.extendedInfo = extendedInfo;
+            $.extendedInfo = extendedInfo;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
+
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails) {
-            this.mabContainerHealthDetails = mabContainerHealthDetails;
+            $.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
+
         public Builder mabContainerHealthDetails(MABContainerHealthDetailsResponse... mabContainerHealthDetails) {
             return mabContainerHealthDetails(List.of(mabContainerHealthDetails));
         }
+
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = protectedItemCount;
+            $.protectedItemCount = protectedItemCount;
             return this;
         }
+
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
-        }        public MabContainerResponse build() {
-            return new MabContainerResponse(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);
+        }
+
+        public MabContainerResponse build() {
+            $.containerType = Codegen.stringProp("containerType").arg($.containerType).require();
+            return $;
         }
     }
+
 }

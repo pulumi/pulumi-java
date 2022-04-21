@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="currentAverageValue", required=true)
-      private final Output<String> currentAverageValue;
+    private Output<String> currentAverageValue;
 
     public Output<String> currentAverageValue() {
         return this.currentAverageValue;
@@ -36,7 +36,7 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -47,76 +47,70 @@ public final class PodsMetricStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public PodsMetricStatusArgs(
-        Output<String> currentAverageValue,
-        Output<String> metricName,
-        @Nullable Output<LabelSelectorArgs> selector) {
-        this.currentAverageValue = Objects.requireNonNull(currentAverageValue, "expected parameter 'currentAverageValue' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.selector = selector;
-    }
+    private PodsMetricStatusArgs() {}
 
-    private PodsMetricStatusArgs() {
-        this.currentAverageValue = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.selector = Codegen.empty();
+    private PodsMetricStatusArgs(PodsMetricStatusArgs $) {
+        this.currentAverageValue = $.currentAverageValue;
+        this.metricName = $.metricName;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodsMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> currentAverageValue;
-        private Output<String> metricName;
-        private @Nullable Output<LabelSelectorArgs> selector;
+        private PodsMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodsMetricStatusArgs();
         }
 
         public Builder(PodsMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentAverageValue = defaults.currentAverageValue;
-    	      this.metricName = defaults.metricName;
-    	      this.selector = defaults.selector;
+            $ = new PodsMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentAverageValue(Output<String> currentAverageValue) {
-            this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
+            $.currentAverageValue = currentAverageValue;
             return this;
         }
+
         public Builder currentAverageValue(String currentAverageValue) {
-            this.currentAverageValue = Output.of(Objects.requireNonNull(currentAverageValue));
-            return this;
+            return currentAverageValue(Output.of(currentAverageValue));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public PodsMetricStatusArgs build() {
-            return new PodsMetricStatusArgs(currentAverageValue, metricName, selector);
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
+        }
+
+        public PodsMetricStatusArgs build() {
+            $.currentAverageValue = Objects.requireNonNull($.currentAverageValue, "expected parameter 'currentAverageValue' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,9 +7,9 @@ import com.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,49 +26,48 @@ public final class EventArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventName")
-      private final @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
+    private @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
 
-    public Output<Either<String,NotificationChannelEventType>> eventName() {
-        return this.eventName == null ? Codegen.empty() : this.eventName;
+    public Optional<Output<Either<String,NotificationChannelEventType>>> eventName() {
+        return Optional.ofNullable(this.eventName);
     }
 
-    public EventArgs(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
-        this.eventName = eventName;
-    }
+    private EventArgs() {}
 
-    private EventArgs() {
-        this.eventName = Codegen.empty();
+    private EventArgs(EventArgs $) {
+        this.eventName = $.eventName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<String,NotificationChannelEventType>> eventName;
+        private EventArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventArgs();
         }
 
         public Builder(EventArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventName = defaults.eventName;
+            $ = new EventArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventName(@Nullable Output<Either<String,NotificationChannelEventType>> eventName) {
-            this.eventName = eventName;
+            $.eventName = eventName;
             return this;
         }
-        public Builder eventName(@Nullable Either<String,NotificationChannelEventType> eventName) {
-            this.eventName = Codegen.ofNullable(eventName);
-            return this;
-        }        public EventArgs build() {
-            return new EventArgs(eventName);
+
+        public Builder eventName(Either<String,NotificationChannelEventType> eventName) {
+            return eventName(Output.of(eventName));
+        }
+
+        public EventArgs build() {
+            return $;
         }
     }
+
 }

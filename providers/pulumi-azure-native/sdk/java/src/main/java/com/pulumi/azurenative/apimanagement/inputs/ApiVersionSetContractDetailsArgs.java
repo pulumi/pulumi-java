@@ -5,9 +5,9 @@ package com.pulumi.azurenative.apimanagement.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versionHeaderName")
-      private final @Nullable Output<String> versionHeaderName;
+    private @Nullable Output<String> versionHeaderName;
 
-    public Output<String> versionHeaderName() {
-        return this.versionHeaderName == null ? Codegen.empty() : this.versionHeaderName;
+    public Optional<Output<String>> versionHeaderName() {
+        return Optional.ofNullable(this.versionHeaderName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versionQueryName")
-      private final @Nullable Output<String> versionQueryName;
+    private @Nullable Output<String> versionQueryName;
 
-    public Output<String> versionQueryName() {
-        return this.versionQueryName == null ? Codegen.empty() : this.versionQueryName;
+    public Optional<Output<String>> versionQueryName() {
+        return Optional.ofNullable(this.versionQueryName);
     }
 
     /**
@@ -79,115 +79,98 @@ public final class ApiVersionSetContractDetailsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="versioningScheme")
-      private final @Nullable Output<String> versioningScheme;
+    private @Nullable Output<String> versioningScheme;
 
-    public Output<String> versioningScheme() {
-        return this.versioningScheme == null ? Codegen.empty() : this.versioningScheme;
+    public Optional<Output<String>> versioningScheme() {
+        return Optional.ofNullable(this.versioningScheme);
     }
 
-    public ApiVersionSetContractDetailsArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> id,
-        @Nullable Output<String> name,
-        @Nullable Output<String> versionHeaderName,
-        @Nullable Output<String> versionQueryName,
-        @Nullable Output<String> versioningScheme) {
-        this.description = description;
-        this.id = id;
-        this.name = name;
-        this.versionHeaderName = versionHeaderName;
-        this.versionQueryName = versionQueryName;
-        this.versioningScheme = versioningScheme;
-    }
+    private ApiVersionSetContractDetailsArgs() {}
 
-    private ApiVersionSetContractDetailsArgs() {
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.versionHeaderName = Codegen.empty();
-        this.versionQueryName = Codegen.empty();
-        this.versioningScheme = Codegen.empty();
+    private ApiVersionSetContractDetailsArgs(ApiVersionSetContractDetailsArgs $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.name = $.name;
+        this.versionHeaderName = $.versionHeaderName;
+        this.versionQueryName = $.versionQueryName;
+        this.versioningScheme = $.versioningScheme;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiVersionSetContractDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> versionHeaderName;
-        private @Nullable Output<String> versionQueryName;
-        private @Nullable Output<String> versioningScheme;
+        private ApiVersionSetContractDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiVersionSetContractDetailsArgs();
         }
 
         public Builder(ApiVersionSetContractDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.versionHeaderName = defaults.versionHeaderName;
-    	      this.versionQueryName = defaults.versionQueryName;
-    	      this.versioningScheme = defaults.versioningScheme;
+            $ = new ApiVersionSetContractDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder versionHeaderName(@Nullable Output<String> versionHeaderName) {
-            this.versionHeaderName = versionHeaderName;
+            $.versionHeaderName = versionHeaderName;
             return this;
         }
-        public Builder versionHeaderName(@Nullable String versionHeaderName) {
-            this.versionHeaderName = Codegen.ofNullable(versionHeaderName);
-            return this;
+
+        public Builder versionHeaderName(String versionHeaderName) {
+            return versionHeaderName(Output.of(versionHeaderName));
         }
+
         public Builder versionQueryName(@Nullable Output<String> versionQueryName) {
-            this.versionQueryName = versionQueryName;
+            $.versionQueryName = versionQueryName;
             return this;
         }
-        public Builder versionQueryName(@Nullable String versionQueryName) {
-            this.versionQueryName = Codegen.ofNullable(versionQueryName);
-            return this;
+
+        public Builder versionQueryName(String versionQueryName) {
+            return versionQueryName(Output.of(versionQueryName));
         }
+
         public Builder versioningScheme(@Nullable Output<String> versioningScheme) {
-            this.versioningScheme = versioningScheme;
+            $.versioningScheme = versioningScheme;
             return this;
         }
-        public Builder versioningScheme(@Nullable String versioningScheme) {
-            this.versioningScheme = Codegen.ofNullable(versioningScheme);
-            return this;
-        }        public ApiVersionSetContractDetailsArgs build() {
-            return new ApiVersionSetContractDetailsArgs(description, id, name, versionHeaderName, versionQueryName, versioningScheme);
+
+        public Builder versioningScheme(String versioningScheme) {
+            return versioningScheme(Output.of(versioningScheme));
+        }
+
+        public ApiVersionSetContractDetailsArgs build() {
+            return $;
         }
     }
+
 }

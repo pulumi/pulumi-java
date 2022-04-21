@@ -16,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +29,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventHandler")
-      private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
+    private @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
-    public Output<EventHandlerSettingsArgs> eventHandler() {
-        return this.eventHandler == null ? Codegen.empty() : this.eventHandler;
+    public Optional<Output<EventHandlerSettingsArgs>> eventHandler() {
+        return Optional.ofNullable(this.eventHandler);
     }
 
     /**
@@ -44,10 +45,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
+    private @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
-    public Output<List<WebPubSubFeatureArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<WebPubSubFeatureArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -55,10 +56,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="identity")
-      private final @Nullable Output<ManagedIdentityArgs> identity;
+    private @Nullable Output<ManagedIdentityArgs> identity;
 
-    public Output<ManagedIdentityArgs> identity() {
-        return this.identity == null ? Codegen.empty() : this.identity;
+    public Optional<Output<ManagedIdentityArgs>> identity() {
+        return Optional.ofNullable(this.identity);
     }
 
     /**
@@ -66,10 +67,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkACLs")
-      private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
+    private @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
-    public Output<WebPubSubNetworkACLsArgs> networkACLs() {
-        return this.networkACLs == null ? Codegen.empty() : this.networkACLs;
+    public Optional<Output<WebPubSubNetworkACLsArgs>> networkACLs() {
+        return Optional.ofNullable(this.networkACLs);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="publicNetworkAccess")
-      private final @Nullable Output<String> publicNetworkAccess;
+    private @Nullable Output<String> publicNetworkAccess;
 
-    public Output<String> publicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
+    public Optional<Output<String>> publicNetworkAccess() {
+        return Optional.ofNullable(this.publicNetworkAccess);
     }
 
     /**
@@ -101,7 +102,7 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
@@ -112,10 +113,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sku")
-      private final @Nullable Output<ResourceSkuArgs> sku;
+    private @Nullable Output<ResourceSkuArgs> sku;
 
-    public Output<ResourceSkuArgs> sku() {
-        return this.sku == null ? Codegen.empty() : this.sku;
+    public Optional<Output<ResourceSkuArgs>> sku() {
+        return Optional.ofNullable(this.sku);
     }
 
     /**
@@ -134,10 +135,10 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -145,183 +146,154 @@ public final class WebPubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tls")
-      private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;
+    private @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
-    public Output<WebPubSubTlsSettingsArgs> tls() {
-        return this.tls == null ? Codegen.empty() : this.tls;
+    public Optional<Output<WebPubSubTlsSettingsArgs>> tls() {
+        return Optional.ofNullable(this.tls);
     }
 
-    public WebPubSubArgs(
-        @Nullable Output<EventHandlerSettingsArgs> eventHandler,
-        @Nullable Output<List<WebPubSubFeatureArgs>> features,
-        @Nullable Output<ManagedIdentityArgs> identity,
-        @Nullable Output<String> location,
-        @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs,
-        @Nullable Output<String> publicNetworkAccess,
-        Output<String> resourceGroupName,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<ResourceSkuArgs> sku,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<WebPubSubTlsSettingsArgs> tls) {
-        this.eventHandler = eventHandler;
-        this.features = features;
-        this.identity = identity;
-        this.location = location;
-        this.networkACLs = networkACLs;
-        this.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").output().arg(publicNetworkAccess).def("Enabled").getNullable();
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = resourceName;
-        this.sku = sku;
-        this.tags = tags;
-        this.tls = tls;
-    }
+    private WebPubSubArgs() {}
 
-    private WebPubSubArgs() {
-        this.eventHandler = Codegen.empty();
-        this.features = Codegen.empty();
-        this.identity = Codegen.empty();
-        this.location = Codegen.empty();
-        this.networkACLs = Codegen.empty();
-        this.publicNetworkAccess = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.sku = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tls = Codegen.empty();
+    private WebPubSubArgs(WebPubSubArgs $) {
+        this.eventHandler = $.eventHandler;
+        this.features = $.features;
+        this.identity = $.identity;
+        this.location = $.location;
+        this.networkACLs = $.networkACLs;
+        this.publicNetworkAccess = $.publicNetworkAccess;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
+        this.sku = $.sku;
+        this.tags = $.tags;
+        this.tls = $.tls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebPubSubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EventHandlerSettingsArgs> eventHandler;
-        private @Nullable Output<List<WebPubSubFeatureArgs>> features;
-        private @Nullable Output<ManagedIdentityArgs> identity;
-        private @Nullable Output<String> location;
-        private @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
-        private @Nullable Output<String> publicNetworkAccess;
-        private Output<String> resourceGroupName;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<ResourceSkuArgs> sku;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<WebPubSubTlsSettingsArgs> tls;
+        private WebPubSubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebPubSubArgs();
         }
 
         public Builder(WebPubSubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventHandler = defaults.eventHandler;
-    	      this.features = defaults.features;
-    	      this.identity = defaults.identity;
-    	      this.location = defaults.location;
-    	      this.networkACLs = defaults.networkACLs;
-    	      this.publicNetworkAccess = defaults.publicNetworkAccess;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
-    	      this.sku = defaults.sku;
-    	      this.tags = defaults.tags;
-    	      this.tls = defaults.tls;
+            $ = new WebPubSubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder eventHandler(@Nullable Output<EventHandlerSettingsArgs> eventHandler) {
-            this.eventHandler = eventHandler;
+            $.eventHandler = eventHandler;
             return this;
         }
-        public Builder eventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
-            this.eventHandler = Codegen.ofNullable(eventHandler);
-            return this;
+
+        public Builder eventHandler(EventHandlerSettingsArgs eventHandler) {
+            return eventHandler(Output.of(eventHandler));
         }
+
         public Builder features(@Nullable Output<List<WebPubSubFeatureArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<WebPubSubFeatureArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(List<WebPubSubFeatureArgs> features) {
+            return features(Output.of(features));
         }
+
         public Builder features(WebPubSubFeatureArgs... features) {
             return features(List.of(features));
         }
+
         public Builder identity(@Nullable Output<ManagedIdentityArgs> identity) {
-            this.identity = identity;
+            $.identity = identity;
             return this;
         }
-        public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Codegen.ofNullable(identity);
-            return this;
+
+        public Builder identity(ManagedIdentityArgs identity) {
+            return identity(Output.of(identity));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder networkACLs(@Nullable Output<WebPubSubNetworkACLsArgs> networkACLs) {
-            this.networkACLs = networkACLs;
+            $.networkACLs = networkACLs;
             return this;
         }
-        public Builder networkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
-            this.networkACLs = Codegen.ofNullable(networkACLs);
-            return this;
+
+        public Builder networkACLs(WebPubSubNetworkACLsArgs networkACLs) {
+            return networkACLs(Output.of(networkACLs));
         }
+
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
-            this.publicNetworkAccess = publicNetworkAccess;
+            $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
-            return this;
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
+            return resourceGroupName(Output.of(resourceGroupName));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
-            this.sku = sku;
+            $.sku = sku;
             return this;
         }
-        public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Codegen.ofNullable(sku);
-            return this;
+
+        public Builder sku(ResourceSkuArgs sku) {
+            return sku(Output.of(sku));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tls(@Nullable Output<WebPubSubTlsSettingsArgs> tls) {
-            this.tls = tls;
+            $.tls = tls;
             return this;
         }
-        public Builder tls(@Nullable WebPubSubTlsSettingsArgs tls) {
-            this.tls = Codegen.ofNullable(tls);
-            return this;
-        }        public WebPubSubArgs build() {
-            return new WebPubSubArgs(eventHandler, features, identity, location, networkACLs, publicNetworkAccess, resourceGroupName, resourceName, sku, tags, tls);
+
+        public Builder tls(WebPubSubTlsSettingsArgs tls) {
+            return tls(Output.of(tls));
+        }
+
+        public WebPubSubArgs build() {
+            $.publicNetworkAccess = Codegen.stringProp("publicNetworkAccess").output().arg($.publicNetworkAccess).def("Enabled").getNullable();
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

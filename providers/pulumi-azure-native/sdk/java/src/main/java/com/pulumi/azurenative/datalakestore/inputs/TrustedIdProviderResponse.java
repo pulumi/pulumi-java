@@ -21,7 +21,7 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -32,7 +32,7 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="idProvider", required=true)
-      private final String idProvider;
+    private String idProvider;
 
     public String idProvider() {
         return this.idProvider;
@@ -43,7 +43,7 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -54,73 +54,66 @@ public final class TrustedIdProviderResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TrustedIdProviderResponse(
-        String id,
-        String idProvider,
-        String name,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.idProvider = Objects.requireNonNull(idProvider, "expected parameter 'idProvider' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TrustedIdProviderResponse() {}
 
-    private TrustedIdProviderResponse() {
-        this.id = null;
-        this.idProvider = null;
-        this.name = null;
-        this.type = null;
+    private TrustedIdProviderResponse(TrustedIdProviderResponse $) {
+        this.id = $.id;
+        this.idProvider = $.idProvider;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustedIdProviderResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String idProvider;
-        private String name;
-        private String type;
+        private TrustedIdProviderResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustedIdProviderResponse();
         }
 
         public Builder(TrustedIdProviderResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.idProvider = defaults.idProvider;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new TrustedIdProviderResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder idProvider(String idProvider) {
-            this.idProvider = Objects.requireNonNull(idProvider);
+            $.idProvider = idProvider;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TrustedIdProviderResponse build() {
-            return new TrustedIdProviderResponse(id, idProvider, name, type);
+        }
+
+        public TrustedIdProviderResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.idProvider = Objects.requireNonNull($.idProvider, "expected parameter 'idProvider' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

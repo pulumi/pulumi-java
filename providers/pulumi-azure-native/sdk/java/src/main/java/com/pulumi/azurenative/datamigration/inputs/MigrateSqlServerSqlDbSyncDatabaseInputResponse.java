@@ -24,10 +24,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="migrationSetting")
-      private final @Nullable Map<String,String> migrationSetting;
+    private @Nullable Map<String,String> migrationSetting;
 
-    public Map<String,String> migrationSetting() {
-        return this.migrationSetting == null ? Map.of() : this.migrationSetting;
+    public Optional<Map<String,String>> migrationSetting() {
+        return Optional.ofNullable(this.migrationSetting);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="schemaName")
-      private final @Nullable String schemaName;
+    private @Nullable String schemaName;
 
     public Optional<String> schemaName() {
-        return this.schemaName == null ? Optional.empty() : Optional.ofNullable(this.schemaName);
+        return Optional.ofNullable(this.schemaName);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="sourceSetting")
-      private final @Nullable Map<String,String> sourceSetting;
+    private @Nullable Map<String,String> sourceSetting;
 
-    public Map<String,String> sourceSetting() {
-        return this.sourceSetting == null ? Map.of() : this.sourceSetting;
+    public Optional<Map<String,String>> sourceSetting() {
+        return Optional.ofNullable(this.sourceSetting);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="tableMap")
-      private final @Nullable Map<String,String> tableMap;
+    private @Nullable Map<String,String> tableMap;
 
-    public Map<String,String> tableMap() {
-        return this.tableMap == null ? Map.of() : this.tableMap;
+    public Optional<Map<String,String>> tableMap() {
+        return Optional.ofNullable(this.tableMap);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="targetDatabaseName")
-      private final @Nullable String targetDatabaseName;
+    private @Nullable String targetDatabaseName;
 
     public Optional<String> targetDatabaseName() {
-        return this.targetDatabaseName == null ? Optional.empty() : Optional.ofNullable(this.targetDatabaseName);
+        return Optional.ofNullable(this.targetDatabaseName);
     }
 
     /**
@@ -101,109 +101,86 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputResponse extends com.pu
      * 
      */
     @Import(name="targetSetting")
-      private final @Nullable Map<String,String> targetSetting;
+    private @Nullable Map<String,String> targetSetting;
 
-    public Map<String,String> targetSetting() {
-        return this.targetSetting == null ? Map.of() : this.targetSetting;
+    public Optional<Map<String,String>> targetSetting() {
+        return Optional.ofNullable(this.targetSetting);
     }
 
-    public MigrateSqlServerSqlDbSyncDatabaseInputResponse(
-        @Nullable String id,
-        @Nullable Map<String,String> migrationSetting,
-        @Nullable String name,
-        @Nullable String schemaName,
-        @Nullable Map<String,String> sourceSetting,
-        @Nullable Map<String,String> tableMap,
-        @Nullable String targetDatabaseName,
-        @Nullable Map<String,String> targetSetting) {
-        this.id = id;
-        this.migrationSetting = migrationSetting;
-        this.name = name;
-        this.schemaName = schemaName;
-        this.sourceSetting = sourceSetting;
-        this.tableMap = tableMap;
-        this.targetDatabaseName = targetDatabaseName;
-        this.targetSetting = targetSetting;
-    }
+    private MigrateSqlServerSqlDbSyncDatabaseInputResponse() {}
 
-    private MigrateSqlServerSqlDbSyncDatabaseInputResponse() {
-        this.id = null;
-        this.migrationSetting = Map.of();
-        this.name = null;
-        this.schemaName = null;
-        this.sourceSetting = Map.of();
-        this.tableMap = Map.of();
-        this.targetDatabaseName = null;
-        this.targetSetting = Map.of();
+    private MigrateSqlServerSqlDbSyncDatabaseInputResponse(MigrateSqlServerSqlDbSyncDatabaseInputResponse $) {
+        this.id = $.id;
+        this.migrationSetting = $.migrationSetting;
+        this.name = $.name;
+        this.schemaName = $.schemaName;
+        this.sourceSetting = $.sourceSetting;
+        this.tableMap = $.tableMap;
+        this.targetDatabaseName = $.targetDatabaseName;
+        this.targetSetting = $.targetSetting;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateSqlServerSqlDbSyncDatabaseInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String id;
-        private @Nullable Map<String,String> migrationSetting;
-        private @Nullable String name;
-        private @Nullable String schemaName;
-        private @Nullable Map<String,String> sourceSetting;
-        private @Nullable Map<String,String> tableMap;
-        private @Nullable String targetDatabaseName;
-        private @Nullable Map<String,String> targetSetting;
+        private MigrateSqlServerSqlDbSyncDatabaseInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateSqlServerSqlDbSyncDatabaseInputResponse();
         }
 
         public Builder(MigrateSqlServerSqlDbSyncDatabaseInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.migrationSetting = defaults.migrationSetting;
-    	      this.name = defaults.name;
-    	      this.schemaName = defaults.schemaName;
-    	      this.sourceSetting = defaults.sourceSetting;
-    	      this.tableMap = defaults.tableMap;
-    	      this.targetDatabaseName = defaults.targetDatabaseName;
-    	      this.targetSetting = defaults.targetSetting;
+            $ = new MigrateSqlServerSqlDbSyncDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
-            this.migrationSetting = migrationSetting;
+            $.migrationSetting = migrationSetting;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = schemaName;
+            $.schemaName = schemaName;
             return this;
         }
+
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
-            this.sourceSetting = sourceSetting;
+            $.sourceSetting = sourceSetting;
             return this;
         }
+
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
-            this.tableMap = tableMap;
+            $.tableMap = tableMap;
             return this;
         }
+
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
-            this.targetDatabaseName = targetDatabaseName;
+            $.targetDatabaseName = targetDatabaseName;
             return this;
         }
+
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
-            this.targetSetting = targetSetting;
+            $.targetSetting = targetSetting;
             return this;
-        }        public MigrateSqlServerSqlDbSyncDatabaseInputResponse build() {
-            return new MigrateSqlServerSqlDbSyncDatabaseInputResponse(id, migrationSetting, name, schemaName, sourceSetting, tableMap, targetDatabaseName, targetSetting);
+        }
+
+        public MigrateSqlServerSqlDbSyncDatabaseInputResponse build() {
+            return $;
         }
     }
+
 }

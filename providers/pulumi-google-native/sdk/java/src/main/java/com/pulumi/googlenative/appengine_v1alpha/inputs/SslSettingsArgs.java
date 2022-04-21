@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
-    public SslSettingsArgs(@Nullable Output<String> certificateId) {
-        this.certificateId = certificateId;
-    }
+    private SslSettingsArgs() {}
 
-    private SslSettingsArgs() {
-        this.certificateId = Codegen.empty();
+    private SslSettingsArgs(SslSettingsArgs $) {
+        this.certificateId = $.certificateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
+        private SslSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslSettingsArgs();
         }
 
         public Builder(SslSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
+            $ = new SslSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
-        }        public SslSettingsArgs build() {
-            return new SslSettingsArgs(certificateId);
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
+        }
+
+        public SslSettingsArgs build() {
+            return $;
         }
     }
+
 }

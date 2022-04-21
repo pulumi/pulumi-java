@@ -25,7 +25,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="chargeForOverage", required=true)
-      private final Boolean chargeForOverage;
+    private Boolean chargeForOverage;
 
     public Boolean chargeForOverage() {
         return this.chargeForOverage;
@@ -36,7 +36,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="chargeForPlan", required=true)
-      private final Boolean chargeForPlan;
+    private Boolean chargeForPlan;
 
     public Boolean chargeForPlan() {
         return this.chargeForPlan;
@@ -47,7 +47,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="creationDate", required=true)
-      private final String creationDate;
+    private String creationDate;
 
     public String creationDate() {
         return this.creationDate;
@@ -58,7 +58,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="includedQuantities", required=true)
-      private final Map<String,PlanQuantityResponse> includedQuantities;
+    private Map<String,PlanQuantityResponse> includedQuantities;
 
     public Map<String,PlanQuantityResponse> includedQuantities() {
         return this.includedQuantities;
@@ -69,7 +69,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxAssociationLimit", required=true)
-      private final Integer maxAssociationLimit;
+    private Integer maxAssociationLimit;
 
     public Integer maxAssociationLimit() {
         return this.maxAssociationLimit;
@@ -80,7 +80,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="maxCapacityLimit", required=true)
-      private final Integer maxCapacityLimit;
+    private Integer maxCapacityLimit;
 
     public Integer maxCapacityLimit() {
         return this.maxCapacityLimit;
@@ -91,7 +91,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minCapacityLimit", required=true)
-      private final Integer minCapacityLimit;
+    private Integer minCapacityLimit;
 
     public Integer minCapacityLimit() {
         return this.minCapacityLimit;
@@ -102,7 +102,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="planMeter", required=true)
-      private final String planMeter;
+    private String planMeter;
 
     public String planMeter() {
         return this.planMeter;
@@ -113,7 +113,7 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="refillFrequencyInDays", required=true)
-      private final Integer refillFrequencyInDays;
+    private Integer refillFrequencyInDays;
 
     public Integer refillFrequencyInDays() {
         return this.refillFrequencyInDays;
@@ -124,127 +124,108 @@ public final class CommitmentPlanPropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="suspendPlanOnOverage", required=true)
-      private final Boolean suspendPlanOnOverage;
+    private Boolean suspendPlanOnOverage;
 
     public Boolean suspendPlanOnOverage() {
         return this.suspendPlanOnOverage;
     }
 
-    public CommitmentPlanPropertiesResponse(
-        Boolean chargeForOverage,
-        Boolean chargeForPlan,
-        String creationDate,
-        Map<String,PlanQuantityResponse> includedQuantities,
-        Integer maxAssociationLimit,
-        Integer maxCapacityLimit,
-        Integer minCapacityLimit,
-        String planMeter,
-        Integer refillFrequencyInDays,
-        Boolean suspendPlanOnOverage) {
-        this.chargeForOverage = Objects.requireNonNull(chargeForOverage, "expected parameter 'chargeForOverage' to be non-null");
-        this.chargeForPlan = Objects.requireNonNull(chargeForPlan, "expected parameter 'chargeForPlan' to be non-null");
-        this.creationDate = Objects.requireNonNull(creationDate, "expected parameter 'creationDate' to be non-null");
-        this.includedQuantities = Objects.requireNonNull(includedQuantities, "expected parameter 'includedQuantities' to be non-null");
-        this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit, "expected parameter 'maxAssociationLimit' to be non-null");
-        this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit, "expected parameter 'maxCapacityLimit' to be non-null");
-        this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit, "expected parameter 'minCapacityLimit' to be non-null");
-        this.planMeter = Objects.requireNonNull(planMeter, "expected parameter 'planMeter' to be non-null");
-        this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays, "expected parameter 'refillFrequencyInDays' to be non-null");
-        this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage, "expected parameter 'suspendPlanOnOverage' to be non-null");
-    }
+    private CommitmentPlanPropertiesResponse() {}
 
-    private CommitmentPlanPropertiesResponse() {
-        this.chargeForOverage = null;
-        this.chargeForPlan = null;
-        this.creationDate = null;
-        this.includedQuantities = Map.of();
-        this.maxAssociationLimit = null;
-        this.maxCapacityLimit = null;
-        this.minCapacityLimit = null;
-        this.planMeter = null;
-        this.refillFrequencyInDays = null;
-        this.suspendPlanOnOverage = null;
+    private CommitmentPlanPropertiesResponse(CommitmentPlanPropertiesResponse $) {
+        this.chargeForOverage = $.chargeForOverage;
+        this.chargeForPlan = $.chargeForPlan;
+        this.creationDate = $.creationDate;
+        this.includedQuantities = $.includedQuantities;
+        this.maxAssociationLimit = $.maxAssociationLimit;
+        this.maxCapacityLimit = $.maxCapacityLimit;
+        this.minCapacityLimit = $.minCapacityLimit;
+        this.planMeter = $.planMeter;
+        this.refillFrequencyInDays = $.refillFrequencyInDays;
+        this.suspendPlanOnOverage = $.suspendPlanOnOverage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CommitmentPlanPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean chargeForOverage;
-        private Boolean chargeForPlan;
-        private String creationDate;
-        private Map<String,PlanQuantityResponse> includedQuantities;
-        private Integer maxAssociationLimit;
-        private Integer maxCapacityLimit;
-        private Integer minCapacityLimit;
-        private String planMeter;
-        private Integer refillFrequencyInDays;
-        private Boolean suspendPlanOnOverage;
+        private CommitmentPlanPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CommitmentPlanPropertiesResponse();
         }
 
         public Builder(CommitmentPlanPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chargeForOverage = defaults.chargeForOverage;
-    	      this.chargeForPlan = defaults.chargeForPlan;
-    	      this.creationDate = defaults.creationDate;
-    	      this.includedQuantities = defaults.includedQuantities;
-    	      this.maxAssociationLimit = defaults.maxAssociationLimit;
-    	      this.maxCapacityLimit = defaults.maxCapacityLimit;
-    	      this.minCapacityLimit = defaults.minCapacityLimit;
-    	      this.planMeter = defaults.planMeter;
-    	      this.refillFrequencyInDays = defaults.refillFrequencyInDays;
-    	      this.suspendPlanOnOverage = defaults.suspendPlanOnOverage;
+            $ = new CommitmentPlanPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chargeForOverage(Boolean chargeForOverage) {
-            this.chargeForOverage = Objects.requireNonNull(chargeForOverage);
+            $.chargeForOverage = chargeForOverage;
             return this;
         }
+
         public Builder chargeForPlan(Boolean chargeForPlan) {
-            this.chargeForPlan = Objects.requireNonNull(chargeForPlan);
+            $.chargeForPlan = chargeForPlan;
             return this;
         }
+
         public Builder creationDate(String creationDate) {
-            this.creationDate = Objects.requireNonNull(creationDate);
+            $.creationDate = creationDate;
             return this;
         }
+
         public Builder includedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
-            this.includedQuantities = Objects.requireNonNull(includedQuantities);
+            $.includedQuantities = includedQuantities;
             return this;
         }
+
         public Builder maxAssociationLimit(Integer maxAssociationLimit) {
-            this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit);
+            $.maxAssociationLimit = maxAssociationLimit;
             return this;
         }
+
         public Builder maxCapacityLimit(Integer maxCapacityLimit) {
-            this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit);
+            $.maxCapacityLimit = maxCapacityLimit;
             return this;
         }
+
         public Builder minCapacityLimit(Integer minCapacityLimit) {
-            this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit);
+            $.minCapacityLimit = minCapacityLimit;
             return this;
         }
+
         public Builder planMeter(String planMeter) {
-            this.planMeter = Objects.requireNonNull(planMeter);
+            $.planMeter = planMeter;
             return this;
         }
+
         public Builder refillFrequencyInDays(Integer refillFrequencyInDays) {
-            this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays);
+            $.refillFrequencyInDays = refillFrequencyInDays;
             return this;
         }
+
         public Builder suspendPlanOnOverage(Boolean suspendPlanOnOverage) {
-            this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
+            $.suspendPlanOnOverage = suspendPlanOnOverage;
             return this;
-        }        public CommitmentPlanPropertiesResponse build() {
-            return new CommitmentPlanPropertiesResponse(chargeForOverage, chargeForPlan, creationDate, includedQuantities, maxAssociationLimit, maxCapacityLimit, minCapacityLimit, planMeter, refillFrequencyInDays, suspendPlanOnOverage);
+        }
+
+        public CommitmentPlanPropertiesResponse build() {
+            $.chargeForOverage = Objects.requireNonNull($.chargeForOverage, "expected parameter 'chargeForOverage' to be non-null");
+            $.chargeForPlan = Objects.requireNonNull($.chargeForPlan, "expected parameter 'chargeForPlan' to be non-null");
+            $.creationDate = Objects.requireNonNull($.creationDate, "expected parameter 'creationDate' to be non-null");
+            $.includedQuantities = Objects.requireNonNull($.includedQuantities, "expected parameter 'includedQuantities' to be non-null");
+            $.maxAssociationLimit = Objects.requireNonNull($.maxAssociationLimit, "expected parameter 'maxAssociationLimit' to be non-null");
+            $.maxCapacityLimit = Objects.requireNonNull($.maxCapacityLimit, "expected parameter 'maxCapacityLimit' to be non-null");
+            $.minCapacityLimit = Objects.requireNonNull($.minCapacityLimit, "expected parameter 'minCapacityLimit' to be non-null");
+            $.planMeter = Objects.requireNonNull($.planMeter, "expected parameter 'planMeter' to be non-null");
+            $.refillFrequencyInDays = Objects.requireNonNull($.refillFrequencyInDays, "expected parameter 'refillFrequencyInDays' to be non-null");
+            $.suspendPlanOnOverage = Objects.requireNonNull($.suspendPlanOnOverage, "expected parameter 'suspendPlanOnOverage' to be non-null");
+            return $;
         }
     }
+
 }

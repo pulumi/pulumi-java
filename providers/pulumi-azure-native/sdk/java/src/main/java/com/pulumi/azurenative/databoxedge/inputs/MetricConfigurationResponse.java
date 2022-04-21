@@ -25,7 +25,7 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="counterSets", required=true)
-      private final List<MetricCounterSetResponse> counterSets;
+    private List<MetricCounterSetResponse> counterSets;
 
     public List<MetricCounterSetResponse> counterSets() {
         return this.counterSets;
@@ -36,10 +36,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="mdmAccount")
-      private final @Nullable String mdmAccount;
+    private @Nullable String mdmAccount;
 
     public Optional<String> mdmAccount() {
-        return this.mdmAccount == null ? Optional.empty() : Optional.ofNullable(this.mdmAccount);
+        return Optional.ofNullable(this.mdmAccount);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="metricNameSpace")
-      private final @Nullable String metricNameSpace;
+    private @Nullable String metricNameSpace;
 
     public Optional<String> metricNameSpace() {
-        return this.metricNameSpace == null ? Optional.empty() : Optional.ofNullable(this.metricNameSpace);
+        return Optional.ofNullable(this.metricNameSpace);
     }
 
     /**
@@ -58,76 +58,68 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
     }
 
-    public MetricConfigurationResponse(
-        List<MetricCounterSetResponse> counterSets,
-        @Nullable String mdmAccount,
-        @Nullable String metricNameSpace,
-        String resourceId) {
-        this.counterSets = Objects.requireNonNull(counterSets, "expected parameter 'counterSets' to be non-null");
-        this.mdmAccount = mdmAccount;
-        this.metricNameSpace = metricNameSpace;
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-    }
+    private MetricConfigurationResponse() {}
 
-    private MetricConfigurationResponse() {
-        this.counterSets = List.of();
-        this.mdmAccount = null;
-        this.metricNameSpace = null;
-        this.resourceId = null;
+    private MetricConfigurationResponse(MetricConfigurationResponse $) {
+        this.counterSets = $.counterSets;
+        this.mdmAccount = $.mdmAccount;
+        this.metricNameSpace = $.metricNameSpace;
+        this.resourceId = $.resourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MetricCounterSetResponse> counterSets;
-        private @Nullable String mdmAccount;
-        private @Nullable String metricNameSpace;
-        private String resourceId;
+        private MetricConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricConfigurationResponse();
         }
 
         public Builder(MetricConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.counterSets = defaults.counterSets;
-    	      this.mdmAccount = defaults.mdmAccount;
-    	      this.metricNameSpace = defaults.metricNameSpace;
-    	      this.resourceId = defaults.resourceId;
+            $ = new MetricConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder counterSets(List<MetricCounterSetResponse> counterSets) {
-            this.counterSets = Objects.requireNonNull(counterSets);
+            $.counterSets = counterSets;
             return this;
         }
+
         public Builder counterSets(MetricCounterSetResponse... counterSets) {
             return counterSets(List.of(counterSets));
         }
+
         public Builder mdmAccount(@Nullable String mdmAccount) {
-            this.mdmAccount = mdmAccount;
+            $.mdmAccount = mdmAccount;
             return this;
         }
+
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
-            this.metricNameSpace = metricNameSpace;
+            $.metricNameSpace = metricNameSpace;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
-        }        public MetricConfigurationResponse build() {
-            return new MetricConfigurationResponse(counterSets, mdmAccount, metricNameSpace, resourceId);
+        }
+
+        public MetricConfigurationResponse build() {
+            $.counterSets = Objects.requireNonNull($.counterSets, "expected parameter 'counterSets' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

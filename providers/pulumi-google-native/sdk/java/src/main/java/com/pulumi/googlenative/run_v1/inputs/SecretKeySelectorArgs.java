@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecretKeySelectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecretKeySelectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="localObjectReference")
-      private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
+    private @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
-    public Output<LocalObjectReferenceArgs> localObjectReference() {
-        return this.localObjectReference == null ? Codegen.empty() : this.localObjectReference;
+    public Optional<Output<LocalObjectReferenceArgs>> localObjectReference() {
+        return Optional.ofNullable(this.localObjectReference);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecretKeySelectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class SecretKeySelectorArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="optional")
-      private final @Nullable Output<Boolean> optional;
+    private @Nullable Output<Boolean> optional;
 
-    public Output<Boolean> optional() {
-        return this.optional == null ? Codegen.empty() : this.optional;
+    public Optional<Output<Boolean>> optional() {
+        return Optional.ofNullable(this.optional);
     }
 
-    public SecretKeySelectorArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<LocalObjectReferenceArgs> localObjectReference,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> optional) {
-        this.key = key;
-        this.localObjectReference = localObjectReference;
-        this.name = name;
-        this.optional = optional;
-    }
+    private SecretKeySelectorArgs() {}
 
-    private SecretKeySelectorArgs() {
-        this.key = Codegen.empty();
-        this.localObjectReference = Codegen.empty();
-        this.name = Codegen.empty();
-        this.optional = Codegen.empty();
+    private SecretKeySelectorArgs(SecretKeySelectorArgs $) {
+        this.key = $.key;
+        this.localObjectReference = $.localObjectReference;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretKeySelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> optional;
+        private SecretKeySelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretKeySelectorArgs();
         }
 
         public Builder(SecretKeySelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.localObjectReference = defaults.localObjectReference;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new SecretKeySelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder localObjectReference(@Nullable Output<LocalObjectReferenceArgs> localObjectReference) {
-            this.localObjectReference = localObjectReference;
+            $.localObjectReference = localObjectReference;
             return this;
         }
-        public Builder localObjectReference(@Nullable LocalObjectReferenceArgs localObjectReference) {
-            this.localObjectReference = Codegen.ofNullable(localObjectReference);
-            return this;
+
+        public Builder localObjectReference(LocalObjectReferenceArgs localObjectReference) {
+            return localObjectReference(Output.of(localObjectReference));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder optional(@Nullable Output<Boolean> optional) {
-            this.optional = optional;
+            $.optional = optional;
             return this;
         }
-        public Builder optional(@Nullable Boolean optional) {
-            this.optional = Codegen.ofNullable(optional);
-            return this;
-        }        public SecretKeySelectorArgs build() {
-            return new SecretKeySelectorArgs(key, localObjectReference, name, optional);
+
+        public Builder optional(Boolean optional) {
+            return optional(Output.of(optional));
+        }
+
+        public SecretKeySelectorArgs build() {
+            return $;
         }
     }
+
 }

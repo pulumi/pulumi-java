@@ -5,9 +5,9 @@ package com.pulumi.awsnative.ssmincidents.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ResponsePlanNotificationTargetItemArgs extends com.pulumi.res
     public static final ResponsePlanNotificationTargetItemArgs Empty = new ResponsePlanNotificationTargetItemArgs();
 
     @Import(name="snsTopicArn")
-      private final @Nullable Output<String> snsTopicArn;
+    private @Nullable Output<String> snsTopicArn;
 
-    public Output<String> snsTopicArn() {
-        return this.snsTopicArn == null ? Codegen.empty() : this.snsTopicArn;
+    public Optional<Output<String>> snsTopicArn() {
+        return Optional.ofNullable(this.snsTopicArn);
     }
 
-    public ResponsePlanNotificationTargetItemArgs(@Nullable Output<String> snsTopicArn) {
-        this.snsTopicArn = snsTopicArn;
-    }
+    private ResponsePlanNotificationTargetItemArgs() {}
 
-    private ResponsePlanNotificationTargetItemArgs() {
-        this.snsTopicArn = Codegen.empty();
+    private ResponsePlanNotificationTargetItemArgs(ResponsePlanNotificationTargetItemArgs $) {
+        this.snsTopicArn = $.snsTopicArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanNotificationTargetItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> snsTopicArn;
+        private ResponsePlanNotificationTargetItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanNotificationTargetItemArgs();
         }
 
         public Builder(ResponsePlanNotificationTargetItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.snsTopicArn = defaults.snsTopicArn;
+            $ = new ResponsePlanNotificationTargetItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
-            this.snsTopicArn = snsTopicArn;
+            $.snsTopicArn = snsTopicArn;
             return this;
         }
-        public Builder snsTopicArn(@Nullable String snsTopicArn) {
-            this.snsTopicArn = Codegen.ofNullable(snsTopicArn);
-            return this;
-        }        public ResponsePlanNotificationTargetItemArgs build() {
-            return new ResponsePlanNotificationTargetItemArgs(snsTopicArn);
+
+        public Builder snsTopicArn(String snsTopicArn) {
+            return snsTopicArn(Output.of(snsTopicArn));
+        }
+
+        public ResponsePlanNotificationTargetItemArgs build() {
+            return $;
         }
     }
+
 }

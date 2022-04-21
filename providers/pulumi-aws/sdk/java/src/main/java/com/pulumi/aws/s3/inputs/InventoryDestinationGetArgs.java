@@ -6,7 +6,6 @@ package com.pulumi.aws.s3.inputs;
 import com.pulumi.aws.s3.inputs.InventoryDestinationBucketGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class InventoryDestinationGetArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<InventoryDestinationBucketGetArgs> bucket;
+    private Output<InventoryDestinationBucketGetArgs> bucket;
 
     public Output<InventoryDestinationBucketGetArgs> bucket() {
         return this.bucket;
     }
 
-    public InventoryDestinationGetArgs(Output<InventoryDestinationBucketGetArgs> bucket) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-    }
+    private InventoryDestinationGetArgs() {}
 
-    private InventoryDestinationGetArgs() {
-        this.bucket = Codegen.empty();
+    private InventoryDestinationGetArgs(InventoryDestinationGetArgs $) {
+        this.bucket = $.bucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InventoryDestinationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<InventoryDestinationBucketGetArgs> bucket;
+        private InventoryDestinationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InventoryDestinationGetArgs();
         }
 
         public Builder(InventoryDestinationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
+            $ = new InventoryDestinationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<InventoryDestinationBucketGetArgs> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(InventoryDestinationBucketGetArgs bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
-        }        public InventoryDestinationGetArgs build() {
-            return new InventoryDestinationGetArgs(bucket);
+            return bucket(Output.of(bucket));
+        }
+
+        public InventoryDestinationGetArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

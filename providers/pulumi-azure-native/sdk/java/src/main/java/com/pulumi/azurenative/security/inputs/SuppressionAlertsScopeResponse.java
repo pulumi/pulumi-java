@@ -18,48 +18,49 @@ public final class SuppressionAlertsScopeResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allOf", required=true)
-      private final List<ScopeElementResponse> allOf;
+    private List<ScopeElementResponse> allOf;
 
     public List<ScopeElementResponse> allOf() {
         return this.allOf;
     }
 
-    public SuppressionAlertsScopeResponse(List<ScopeElementResponse> allOf) {
-        this.allOf = Objects.requireNonNull(allOf, "expected parameter 'allOf' to be non-null");
-    }
+    private SuppressionAlertsScopeResponse() {}
 
-    private SuppressionAlertsScopeResponse() {
-        this.allOf = List.of();
+    private SuppressionAlertsScopeResponse(SuppressionAlertsScopeResponse $) {
+        this.allOf = $.allOf;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionAlertsScopeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ScopeElementResponse> allOf;
+        private SuppressionAlertsScopeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionAlertsScopeResponse();
         }
 
         public Builder(SuppressionAlertsScopeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allOf = defaults.allOf;
+            $ = new SuppressionAlertsScopeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allOf(List<ScopeElementResponse> allOf) {
-            this.allOf = Objects.requireNonNull(allOf);
+            $.allOf = allOf;
             return this;
         }
+
         public Builder allOf(ScopeElementResponse... allOf) {
             return allOf(List.of(allOf));
-        }        public SuppressionAlertsScopeResponse build() {
-            return new SuppressionAlertsScopeResponse(allOf);
+        }
+
+        public SuppressionAlertsScopeResponse build() {
+            $.allOf = Objects.requireNonNull($.allOf, "expected parameter 'allOf' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.wafv2.inputs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class WebACLGeoMatchStatementArgs extends com.pulumi.resources.Reso
     public static final WebACLGeoMatchStatementArgs Empty = new WebACLGeoMatchStatementArgs();
 
     @Import(name="countryCodes")
-      private final @Nullable Output<List<String>> countryCodes;
+    private @Nullable Output<List<String>> countryCodes;
 
-    public Output<List<String>> countryCodes() {
-        return this.countryCodes == null ? Codegen.empty() : this.countryCodes;
+    public Optional<Output<List<String>>> countryCodes() {
+        return Optional.ofNullable(this.countryCodes);
     }
 
     @Import(name="forwardedIPConfig")
-      private final @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+    private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
-    public Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig() {
-        return this.forwardedIPConfig == null ? Codegen.empty() : this.forwardedIPConfig;
+    public Optional<Output<WebACLForwardedIPConfigurationArgs>> forwardedIPConfig() {
+        return Optional.ofNullable(this.forwardedIPConfig);
     }
 
-    public WebACLGeoMatchStatementArgs(
-        @Nullable Output<List<String>> countryCodes,
-        @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
-        this.countryCodes = countryCodes;
-        this.forwardedIPConfig = forwardedIPConfig;
-    }
+    private WebACLGeoMatchStatementArgs() {}
 
-    private WebACLGeoMatchStatementArgs() {
-        this.countryCodes = Codegen.empty();
-        this.forwardedIPConfig = Codegen.empty();
+    private WebACLGeoMatchStatementArgs(WebACLGeoMatchStatementArgs $) {
+        this.countryCodes = $.countryCodes;
+        this.forwardedIPConfig = $.forwardedIPConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLGeoMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> countryCodes;
-        private @Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+        private WebACLGeoMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLGeoMatchStatementArgs();
         }
 
         public Builder(WebACLGeoMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.countryCodes = defaults.countryCodes;
-    	      this.forwardedIPConfig = defaults.forwardedIPConfig;
+            $ = new WebACLGeoMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder countryCodes(@Nullable Output<List<String>> countryCodes) {
-            this.countryCodes = countryCodes;
+            $.countryCodes = countryCodes;
             return this;
         }
-        public Builder countryCodes(@Nullable List<String> countryCodes) {
-            this.countryCodes = Codegen.ofNullable(countryCodes);
-            return this;
+
+        public Builder countryCodes(List<String> countryCodes) {
+            return countryCodes(Output.of(countryCodes));
         }
+
         public Builder countryCodes(String... countryCodes) {
             return countryCodes(List.of(countryCodes));
         }
+
         public Builder forwardedIPConfig(@Nullable Output<WebACLForwardedIPConfigurationArgs> forwardedIPConfig) {
-            this.forwardedIPConfig = forwardedIPConfig;
+            $.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
-            this.forwardedIPConfig = Codegen.ofNullable(forwardedIPConfig);
-            return this;
-        }        public WebACLGeoMatchStatementArgs build() {
-            return new WebACLGeoMatchStatementArgs(countryCodes, forwardedIPConfig);
+
+        public Builder forwardedIPConfig(WebACLForwardedIPConfigurationArgs forwardedIPConfig) {
+            return forwardedIPConfig(Output.of(forwardedIPConfig));
+        }
+
+        public WebACLGeoMatchStatementArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="automationAccountName", required=true)
-      private final String automationAccountName;
+    private String automationAccountName;
 
     public String automationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceControlName", required=true)
-      private final String sourceControlName;
+    private String sourceControlName;
 
     public String sourceControlName() {
         return this.sourceControlName;
     }
 
-    public GetSourceControlArgs(
-        String automationAccountName,
-        String resourceGroupName,
-        String sourceControlName) {
-        this.automationAccountName = Objects.requireNonNull(automationAccountName, "expected parameter 'automationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sourceControlName = Objects.requireNonNull(sourceControlName, "expected parameter 'sourceControlName' to be non-null");
-    }
+    private GetSourceControlArgs() {}
 
-    private GetSourceControlArgs() {
-        this.automationAccountName = null;
-        this.resourceGroupName = null;
-        this.sourceControlName = null;
+    private GetSourceControlArgs(GetSourceControlArgs $) {
+        this.automationAccountName = $.automationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.sourceControlName = $.sourceControlName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSourceControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String automationAccountName;
-        private String resourceGroupName;
-        private String sourceControlName;
+        private GetSourceControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSourceControlArgs();
         }
 
         public Builder(GetSourceControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automationAccountName = defaults.automationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sourceControlName = defaults.sourceControlName;
+            $ = new GetSourceControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automationAccountName(String automationAccountName) {
-            this.automationAccountName = Objects.requireNonNull(automationAccountName);
+            $.automationAccountName = automationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sourceControlName(String sourceControlName) {
-            this.sourceControlName = Objects.requireNonNull(sourceControlName);
+            $.sourceControlName = sourceControlName;
             return this;
-        }        public GetSourceControlArgs build() {
-            return new GetSourceControlArgs(automationAccountName, resourceGroupName, sourceControlName);
+        }
+
+        public GetSourceControlArgs build() {
+            $.automationAccountName = Objects.requireNonNull($.automationAccountName, "expected parameter 'automationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sourceControlName = Objects.requireNonNull($.sourceControlName, "expected parameter 'sourceControlName' to be non-null");
+            return $;
         }
     }
+
 }

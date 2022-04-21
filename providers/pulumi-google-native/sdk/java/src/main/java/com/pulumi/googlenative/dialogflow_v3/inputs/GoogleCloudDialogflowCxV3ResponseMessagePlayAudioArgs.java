@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs extends
      * 
      */
     @Import(name="audioUri", required=true)
-      private final Output<String> audioUri;
+    private Output<String> audioUri;
 
     public Output<String> audioUri() {
         return this.audioUri;
     }
 
-    public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(Output<String> audioUri) {
-        this.audioUri = Objects.requireNonNull(audioUri, "expected parameter 'audioUri' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs() {}
 
-    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs() {
-        this.audioUri = Codegen.empty();
+    private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs $) {
+        this.audioUri = $.audioUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> audioUri;
+        private GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audioUri = defaults.audioUri;
+            $ = new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audioUri(Output<String> audioUri) {
-            this.audioUri = Objects.requireNonNull(audioUri);
+            $.audioUri = audioUri;
             return this;
         }
+
         public Builder audioUri(String audioUri) {
-            this.audioUri = Output.of(Objects.requireNonNull(audioUri));
-            return this;
-        }        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs build() {
-            return new GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs(audioUri);
+            return audioUri(Output.of(audioUri));
+        }
+
+        public GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs build() {
+            $.audioUri = Objects.requireNonNull($.audioUri, "expected parameter 'audioUri' to be non-null");
+            return $;
         }
     }
+
 }

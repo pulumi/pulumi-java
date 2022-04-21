@@ -5,12 +5,12 @@ package com.pulumi.gcp.datacatalog.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.datacatalog.inputs.TagTemplateFieldGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fields")
-      private final @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
+    private @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
 
-    public Output<List<TagTemplateFieldGetArgs>> fields() {
-        return this.fields == null ? Codegen.empty() : this.fields;
+    public Optional<Output<List<TagTemplateFieldGetArgs>>> fields() {
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forceDelete")
-      private final @Nullable Output<Boolean> forceDelete;
+    private @Nullable Output<Boolean> forceDelete;
 
-    public Output<Boolean> forceDelete() {
-        return this.forceDelete == null ? Codegen.empty() : this.forceDelete;
+    public Optional<Output<Boolean>> forceDelete() {
+        return Optional.ofNullable(this.forceDelete);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -92,131 +92,112 @@ public final class TagTemplateState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagTemplateId")
-      private final @Nullable Output<String> tagTemplateId;
+    private @Nullable Output<String> tagTemplateId;
 
-    public Output<String> tagTemplateId() {
-        return this.tagTemplateId == null ? Codegen.empty() : this.tagTemplateId;
+    public Optional<Output<String>> tagTemplateId() {
+        return Optional.ofNullable(this.tagTemplateId);
     }
 
-    public TagTemplateState(
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<TagTemplateFieldGetArgs>> fields,
-        @Nullable Output<Boolean> forceDelete,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<String> tagTemplateId) {
-        this.displayName = displayName;
-        this.fields = fields;
-        this.forceDelete = forceDelete;
-        this.name = name;
-        this.project = project;
-        this.region = region;
-        this.tagTemplateId = tagTemplateId;
-    }
+    private TagTemplateState() {}
 
-    private TagTemplateState() {
-        this.displayName = Codegen.empty();
-        this.fields = Codegen.empty();
-        this.forceDelete = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.tagTemplateId = Codegen.empty();
+    private TagTemplateState(TagTemplateState $) {
+        this.displayName = $.displayName;
+        this.fields = $.fields;
+        this.forceDelete = $.forceDelete;
+        this.name = $.name;
+        this.project = $.project;
+        this.region = $.region;
+        this.tagTemplateId = $.tagTemplateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTemplateState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
-        private @Nullable Output<Boolean> forceDelete;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<String> tagTemplateId;
+        private TagTemplateState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTemplateState();
         }
 
         public Builder(TagTemplateState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.fields = defaults.fields;
-    	      this.forceDelete = defaults.forceDelete;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.tagTemplateId = defaults.tagTemplateId;
+            $ = new TagTemplateState(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder fields(@Nullable Output<List<TagTemplateFieldGetArgs>> fields) {
-            this.fields = fields;
+            $.fields = fields;
             return this;
         }
-        public Builder fields(@Nullable List<TagTemplateFieldGetArgs> fields) {
-            this.fields = Codegen.ofNullable(fields);
-            return this;
+
+        public Builder fields(List<TagTemplateFieldGetArgs> fields) {
+            return fields(Output.of(fields));
         }
+
         public Builder fields(TagTemplateFieldGetArgs... fields) {
             return fields(List.of(fields));
         }
+
         public Builder forceDelete(@Nullable Output<Boolean> forceDelete) {
-            this.forceDelete = forceDelete;
+            $.forceDelete = forceDelete;
             return this;
         }
-        public Builder forceDelete(@Nullable Boolean forceDelete) {
-            this.forceDelete = Codegen.ofNullable(forceDelete);
-            return this;
+
+        public Builder forceDelete(Boolean forceDelete) {
+            return forceDelete(Output.of(forceDelete));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder tagTemplateId(@Nullable Output<String> tagTemplateId) {
-            this.tagTemplateId = tagTemplateId;
+            $.tagTemplateId = tagTemplateId;
             return this;
         }
-        public Builder tagTemplateId(@Nullable String tagTemplateId) {
-            this.tagTemplateId = Codegen.ofNullable(tagTemplateId);
-            return this;
-        }        public TagTemplateState build() {
-            return new TagTemplateState(displayName, fields, forceDelete, name, project, region, tagTemplateId);
+
+        public Builder tagTemplateId(String tagTemplateId) {
+            return tagTemplateId(Output.of(tagTemplateId));
+        }
+
+        public TagTemplateState build() {
+            return $;
         }
     }
+
 }

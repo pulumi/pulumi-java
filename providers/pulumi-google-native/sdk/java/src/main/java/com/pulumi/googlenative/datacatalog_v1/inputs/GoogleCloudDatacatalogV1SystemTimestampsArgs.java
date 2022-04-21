@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends com.pulu
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsArgs extends com.pulu
      * 
      */
     @Import(name="updateTime")
-      private final @Nullable Output<String> updateTime;
+    private @Nullable Output<String> updateTime;
 
-    public Output<String> updateTime() {
-        return this.updateTime == null ? Codegen.empty() : this.updateTime;
+    public Optional<Output<String>> updateTime() {
+        return Optional.ofNullable(this.updateTime);
     }
 
-    public GoogleCloudDatacatalogV1SystemTimestampsArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> updateTime) {
-        this.createTime = createTime;
-        this.updateTime = updateTime;
-    }
+    private GoogleCloudDatacatalogV1SystemTimestampsArgs() {}
 
-    private GoogleCloudDatacatalogV1SystemTimestampsArgs() {
-        this.createTime = Codegen.empty();
-        this.updateTime = Codegen.empty();
+    private GoogleCloudDatacatalogV1SystemTimestampsArgs(GoogleCloudDatacatalogV1SystemTimestampsArgs $) {
+        this.createTime = $.createTime;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1SystemTimestampsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> updateTime;
+        private GoogleCloudDatacatalogV1SystemTimestampsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1SystemTimestampsArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1SystemTimestampsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GoogleCloudDatacatalogV1SystemTimestampsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder updateTime(@Nullable Output<String> updateTime) {
-            this.updateTime = updateTime;
+            $.updateTime = updateTime;
             return this;
         }
-        public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Codegen.ofNullable(updateTime);
-            return this;
-        }        public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {
-            return new GoogleCloudDatacatalogV1SystemTimestampsArgs(createTime, updateTime);
+
+        public Builder updateTime(String updateTime) {
+            return updateTime(Output.of(updateTime));
+        }
+
+        public GoogleCloudDatacatalogV1SystemTimestampsArgs build() {
+            return $;
         }
     }
+
 }

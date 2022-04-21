@@ -12,11 +12,11 @@ import com.pulumi.awsnative.gamelift.inputs.FleetResourceCreationLimitPolicyArgs
 import com.pulumi.awsnative.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildId")
-      private final @Nullable Output<String> buildId;
+    private @Nullable Output<String> buildId;
 
-    public Output<String> buildId() {
-        return this.buildId == null ? Codegen.empty() : this.buildId;
+    public Optional<Output<String>> buildId() {
+        return Optional.ofNullable(this.buildId);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateConfiguration")
-      private final @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration;
+    private @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration;
 
-    public Output<FleetCertificateConfigurationArgs> certificateConfiguration() {
-        return this.certificateConfiguration == null ? Codegen.empty() : this.certificateConfiguration;
+    public Optional<Output<FleetCertificateConfigurationArgs>> certificateConfiguration() {
+        return Optional.ofNullable(this.certificateConfiguration);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="desiredEC2Instances")
-      private final @Nullable Output<Integer> desiredEC2Instances;
+    private @Nullable Output<Integer> desiredEC2Instances;
 
-    public Output<Integer> desiredEC2Instances() {
-        return this.desiredEC2Instances == null ? Codegen.empty() : this.desiredEC2Instances;
+    public Optional<Output<Integer>> desiredEC2Instances() {
+        return Optional.ofNullable(this.desiredEC2Instances);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eC2InboundPermissions")
-      private final @Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions;
+    private @Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions;
 
-    public Output<List<FleetIpPermissionArgs>> eC2InboundPermissions() {
-        return this.eC2InboundPermissions == null ? Codegen.empty() : this.eC2InboundPermissions;
+    public Optional<Output<List<FleetIpPermissionArgs>>> eC2InboundPermissions() {
+        return Optional.ofNullable(this.eC2InboundPermissions);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eC2InstanceType")
-      private final @Nullable Output<String> eC2InstanceType;
+    private @Nullable Output<String> eC2InstanceType;
 
-    public Output<String> eC2InstanceType() {
-        return this.eC2InstanceType == null ? Codegen.empty() : this.eC2InstanceType;
+    public Optional<Output<String>> eC2InstanceType() {
+        return Optional.ofNullable(this.eC2InstanceType);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fleetType")
-      private final @Nullable Output<FleetType> fleetType;
+    private @Nullable Output<FleetType> fleetType;
 
-    public Output<FleetType> fleetType() {
-        return this.fleetType == null ? Codegen.empty() : this.fleetType;
+    public Optional<Output<FleetType>> fleetType() {
+        return Optional.ofNullable(this.fleetType);
     }
 
     /**
@@ -106,17 +106,17 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceRoleARN")
-      private final @Nullable Output<String> instanceRoleARN;
+    private @Nullable Output<String> instanceRoleARN;
 
-    public Output<String> instanceRoleARN() {
-        return this.instanceRoleARN == null ? Codegen.empty() : this.instanceRoleARN;
+    public Optional<Output<String>> instanceRoleARN() {
+        return Optional.ofNullable(this.instanceRoleARN);
     }
 
     @Import(name="locations")
-      private final @Nullable Output<List<FleetLocationConfigurationArgs>> locations;
+    private @Nullable Output<List<FleetLocationConfigurationArgs>> locations;
 
-    public Output<List<FleetLocationConfigurationArgs>> locations() {
-        return this.locations == null ? Codegen.empty() : this.locations;
+    public Optional<Output<List<FleetLocationConfigurationArgs>>> locations() {
+        return Optional.ofNullable(this.locations);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logPaths")
-      private final @Nullable Output<List<String>> logPaths;
+    private @Nullable Output<List<String>> logPaths;
 
-    public Output<List<String>> logPaths() {
-        return this.logPaths == null ? Codegen.empty() : this.logPaths;
+    public Optional<Output<List<String>>> logPaths() {
+        return Optional.ofNullable(this.logPaths);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxSize")
-      private final @Nullable Output<Integer> maxSize;
+    private @Nullable Output<Integer> maxSize;
 
-    public Output<Integer> maxSize() {
-        return this.maxSize == null ? Codegen.empty() : this.maxSize;
+    public Optional<Output<Integer>> maxSize() {
+        return Optional.ofNullable(this.maxSize);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricGroups")
-      private final @Nullable Output<List<String>> metricGroups;
+    private @Nullable Output<List<String>> metricGroups;
 
-    public Output<List<String>> metricGroups() {
-        return this.metricGroups == null ? Codegen.empty() : this.metricGroups;
+    public Optional<Output<List<String>>> metricGroups() {
+        return Optional.ofNullable(this.metricGroups);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minSize")
-      private final @Nullable Output<Integer> minSize;
+    private @Nullable Output<Integer> minSize;
 
-    public Output<Integer> minSize() {
-        return this.minSize == null ? Codegen.empty() : this.minSize;
+    public Optional<Output<Integer>> minSize() {
+        return Optional.ofNullable(this.minSize);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="newGameSessionProtectionPolicy")
-      private final @Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
+    private @Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
 
-    public Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy == null ? Codegen.empty() : this.newGameSessionProtectionPolicy;
+    public Optional<Output<FleetNewGameSessionProtectionPolicy>> newGameSessionProtectionPolicy() {
+        return Optional.ofNullable(this.newGameSessionProtectionPolicy);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerVpcAwsAccountId")
-      private final @Nullable Output<String> peerVpcAwsAccountId;
+    private @Nullable Output<String> peerVpcAwsAccountId;
 
-    public Output<String> peerVpcAwsAccountId() {
-        return this.peerVpcAwsAccountId == null ? Codegen.empty() : this.peerVpcAwsAccountId;
+    public Optional<Output<String>> peerVpcAwsAccountId() {
+        return Optional.ofNullable(this.peerVpcAwsAccountId);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peerVpcId")
-      private final @Nullable Output<String> peerVpcId;
+    private @Nullable Output<String> peerVpcId;
 
-    public Output<String> peerVpcId() {
-        return this.peerVpcId == null ? Codegen.empty() : this.peerVpcId;
+    public Optional<Output<String>> peerVpcId() {
+        return Optional.ofNullable(this.peerVpcId);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceCreationLimitPolicy")
-      private final @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
+    private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
-    public Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy == null ? Codegen.empty() : this.resourceCreationLimitPolicy;
+    public Optional<Output<FleetResourceCreationLimitPolicyArgs>> resourceCreationLimitPolicy() {
+        return Optional.ofNullable(this.resourceCreationLimitPolicy);
     }
 
     /**
@@ -225,10 +225,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeConfiguration")
-      private final @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
+    private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
-    public Output<FleetRuntimeConfigurationArgs> runtimeConfiguration() {
-        return this.runtimeConfiguration == null ? Codegen.empty() : this.runtimeConfiguration;
+    public Optional<Output<FleetRuntimeConfigurationArgs>> runtimeConfiguration() {
+        return Optional.ofNullable(this.runtimeConfiguration);
     }
 
     /**
@@ -238,10 +238,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scriptId")
-      private final @Nullable Output<String> scriptId;
+    private @Nullable Output<String> scriptId;
 
-    public Output<String> scriptId() {
-        return this.scriptId == null ? Codegen.empty() : this.scriptId;
+    public Optional<Output<String>> scriptId() {
+        return Optional.ofNullable(this.scriptId);
     }
 
     /**
@@ -249,10 +249,10 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverLaunchParameters")
-      private final @Nullable Output<String> serverLaunchParameters;
+    private @Nullable Output<String> serverLaunchParameters;
 
-    public Output<String> serverLaunchParameters() {
-        return this.serverLaunchParameters == null ? Codegen.empty() : this.serverLaunchParameters;
+    public Optional<Output<String>> serverLaunchParameters() {
+        return Optional.ofNullable(this.serverLaunchParameters);
     }
 
     /**
@@ -260,335 +260,274 @@ public final class FleetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverLaunchPath")
-      private final @Nullable Output<String> serverLaunchPath;
+    private @Nullable Output<String> serverLaunchPath;
 
-    public Output<String> serverLaunchPath() {
-        return this.serverLaunchPath == null ? Codegen.empty() : this.serverLaunchPath;
+    public Optional<Output<String>> serverLaunchPath() {
+        return Optional.ofNullable(this.serverLaunchPath);
     }
 
-    public FleetArgs(
-        @Nullable Output<String> buildId,
-        @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration,
-        @Nullable Output<String> description,
-        @Nullable Output<Integer> desiredEC2Instances,
-        @Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions,
-        @Nullable Output<String> eC2InstanceType,
-        @Nullable Output<FleetType> fleetType,
-        @Nullable Output<String> instanceRoleARN,
-        @Nullable Output<List<FleetLocationConfigurationArgs>> locations,
-        @Nullable Output<List<String>> logPaths,
-        @Nullable Output<Integer> maxSize,
-        @Nullable Output<List<String>> metricGroups,
-        @Nullable Output<Integer> minSize,
-        @Nullable Output<String> name,
-        @Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy,
-        @Nullable Output<String> peerVpcAwsAccountId,
-        @Nullable Output<String> peerVpcId,
-        @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy,
-        @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration,
-        @Nullable Output<String> scriptId,
-        @Nullable Output<String> serverLaunchParameters,
-        @Nullable Output<String> serverLaunchPath) {
-        this.buildId = buildId;
-        this.certificateConfiguration = certificateConfiguration;
-        this.description = description;
-        this.desiredEC2Instances = desiredEC2Instances;
-        this.eC2InboundPermissions = eC2InboundPermissions;
-        this.eC2InstanceType = eC2InstanceType;
-        this.fleetType = fleetType;
-        this.instanceRoleARN = instanceRoleARN;
-        this.locations = locations;
-        this.logPaths = logPaths;
-        this.maxSize = maxSize;
-        this.metricGroups = metricGroups;
-        this.minSize = minSize;
-        this.name = name;
-        this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
-        this.peerVpcAwsAccountId = peerVpcAwsAccountId;
-        this.peerVpcId = peerVpcId;
-        this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
-        this.runtimeConfiguration = runtimeConfiguration;
-        this.scriptId = scriptId;
-        this.serverLaunchParameters = serverLaunchParameters;
-        this.serverLaunchPath = serverLaunchPath;
-    }
+    private FleetArgs() {}
 
-    private FleetArgs() {
-        this.buildId = Codegen.empty();
-        this.certificateConfiguration = Codegen.empty();
-        this.description = Codegen.empty();
-        this.desiredEC2Instances = Codegen.empty();
-        this.eC2InboundPermissions = Codegen.empty();
-        this.eC2InstanceType = Codegen.empty();
-        this.fleetType = Codegen.empty();
-        this.instanceRoleARN = Codegen.empty();
-        this.locations = Codegen.empty();
-        this.logPaths = Codegen.empty();
-        this.maxSize = Codegen.empty();
-        this.metricGroups = Codegen.empty();
-        this.minSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.newGameSessionProtectionPolicy = Codegen.empty();
-        this.peerVpcAwsAccountId = Codegen.empty();
-        this.peerVpcId = Codegen.empty();
-        this.resourceCreationLimitPolicy = Codegen.empty();
-        this.runtimeConfiguration = Codegen.empty();
-        this.scriptId = Codegen.empty();
-        this.serverLaunchParameters = Codegen.empty();
-        this.serverLaunchPath = Codegen.empty();
+    private FleetArgs(FleetArgs $) {
+        this.buildId = $.buildId;
+        this.certificateConfiguration = $.certificateConfiguration;
+        this.description = $.description;
+        this.desiredEC2Instances = $.desiredEC2Instances;
+        this.eC2InboundPermissions = $.eC2InboundPermissions;
+        this.eC2InstanceType = $.eC2InstanceType;
+        this.fleetType = $.fleetType;
+        this.instanceRoleARN = $.instanceRoleARN;
+        this.locations = $.locations;
+        this.logPaths = $.logPaths;
+        this.maxSize = $.maxSize;
+        this.metricGroups = $.metricGroups;
+        this.minSize = $.minSize;
+        this.name = $.name;
+        this.newGameSessionProtectionPolicy = $.newGameSessionProtectionPolicy;
+        this.peerVpcAwsAccountId = $.peerVpcAwsAccountId;
+        this.peerVpcId = $.peerVpcId;
+        this.resourceCreationLimitPolicy = $.resourceCreationLimitPolicy;
+        this.runtimeConfiguration = $.runtimeConfiguration;
+        this.scriptId = $.scriptId;
+        this.serverLaunchParameters = $.serverLaunchParameters;
+        this.serverLaunchPath = $.serverLaunchPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> buildId;
-        private @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Integer> desiredEC2Instances;
-        private @Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions;
-        private @Nullable Output<String> eC2InstanceType;
-        private @Nullable Output<FleetType> fleetType;
-        private @Nullable Output<String> instanceRoleARN;
-        private @Nullable Output<List<FleetLocationConfigurationArgs>> locations;
-        private @Nullable Output<List<String>> logPaths;
-        private @Nullable Output<Integer> maxSize;
-        private @Nullable Output<List<String>> metricGroups;
-        private @Nullable Output<Integer> minSize;
-        private @Nullable Output<String> name;
-        private @Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
-        private @Nullable Output<String> peerVpcAwsAccountId;
-        private @Nullable Output<String> peerVpcId;
-        private @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
-        private @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
-        private @Nullable Output<String> scriptId;
-        private @Nullable Output<String> serverLaunchParameters;
-        private @Nullable Output<String> serverLaunchPath;
+        private FleetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetArgs();
         }
 
         public Builder(FleetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildId = defaults.buildId;
-    	      this.certificateConfiguration = defaults.certificateConfiguration;
-    	      this.description = defaults.description;
-    	      this.desiredEC2Instances = defaults.desiredEC2Instances;
-    	      this.eC2InboundPermissions = defaults.eC2InboundPermissions;
-    	      this.eC2InstanceType = defaults.eC2InstanceType;
-    	      this.fleetType = defaults.fleetType;
-    	      this.instanceRoleARN = defaults.instanceRoleARN;
-    	      this.locations = defaults.locations;
-    	      this.logPaths = defaults.logPaths;
-    	      this.maxSize = defaults.maxSize;
-    	      this.metricGroups = defaults.metricGroups;
-    	      this.minSize = defaults.minSize;
-    	      this.name = defaults.name;
-    	      this.newGameSessionProtectionPolicy = defaults.newGameSessionProtectionPolicy;
-    	      this.peerVpcAwsAccountId = defaults.peerVpcAwsAccountId;
-    	      this.peerVpcId = defaults.peerVpcId;
-    	      this.resourceCreationLimitPolicy = defaults.resourceCreationLimitPolicy;
-    	      this.runtimeConfiguration = defaults.runtimeConfiguration;
-    	      this.scriptId = defaults.scriptId;
-    	      this.serverLaunchParameters = defaults.serverLaunchParameters;
-    	      this.serverLaunchPath = defaults.serverLaunchPath;
+            $ = new FleetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildId(@Nullable Output<String> buildId) {
-            this.buildId = buildId;
+            $.buildId = buildId;
             return this;
         }
-        public Builder buildId(@Nullable String buildId) {
-            this.buildId = Codegen.ofNullable(buildId);
-            return this;
+
+        public Builder buildId(String buildId) {
+            return buildId(Output.of(buildId));
         }
+
         public Builder certificateConfiguration(@Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration) {
-            this.certificateConfiguration = certificateConfiguration;
+            $.certificateConfiguration = certificateConfiguration;
             return this;
         }
-        public Builder certificateConfiguration(@Nullable FleetCertificateConfigurationArgs certificateConfiguration) {
-            this.certificateConfiguration = Codegen.ofNullable(certificateConfiguration);
-            return this;
+
+        public Builder certificateConfiguration(FleetCertificateConfigurationArgs certificateConfiguration) {
+            return certificateConfiguration(Output.of(certificateConfiguration));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder desiredEC2Instances(@Nullable Output<Integer> desiredEC2Instances) {
-            this.desiredEC2Instances = desiredEC2Instances;
+            $.desiredEC2Instances = desiredEC2Instances;
             return this;
         }
-        public Builder desiredEC2Instances(@Nullable Integer desiredEC2Instances) {
-            this.desiredEC2Instances = Codegen.ofNullable(desiredEC2Instances);
-            return this;
+
+        public Builder desiredEC2Instances(Integer desiredEC2Instances) {
+            return desiredEC2Instances(Output.of(desiredEC2Instances));
         }
+
         public Builder eC2InboundPermissions(@Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions) {
-            this.eC2InboundPermissions = eC2InboundPermissions;
+            $.eC2InboundPermissions = eC2InboundPermissions;
             return this;
         }
-        public Builder eC2InboundPermissions(@Nullable List<FleetIpPermissionArgs> eC2InboundPermissions) {
-            this.eC2InboundPermissions = Codegen.ofNullable(eC2InboundPermissions);
-            return this;
+
+        public Builder eC2InboundPermissions(List<FleetIpPermissionArgs> eC2InboundPermissions) {
+            return eC2InboundPermissions(Output.of(eC2InboundPermissions));
         }
+
         public Builder eC2InboundPermissions(FleetIpPermissionArgs... eC2InboundPermissions) {
             return eC2InboundPermissions(List.of(eC2InboundPermissions));
         }
+
         public Builder eC2InstanceType(@Nullable Output<String> eC2InstanceType) {
-            this.eC2InstanceType = eC2InstanceType;
+            $.eC2InstanceType = eC2InstanceType;
             return this;
         }
-        public Builder eC2InstanceType(@Nullable String eC2InstanceType) {
-            this.eC2InstanceType = Codegen.ofNullable(eC2InstanceType);
-            return this;
+
+        public Builder eC2InstanceType(String eC2InstanceType) {
+            return eC2InstanceType(Output.of(eC2InstanceType));
         }
+
         public Builder fleetType(@Nullable Output<FleetType> fleetType) {
-            this.fleetType = fleetType;
+            $.fleetType = fleetType;
             return this;
         }
-        public Builder fleetType(@Nullable FleetType fleetType) {
-            this.fleetType = Codegen.ofNullable(fleetType);
-            return this;
+
+        public Builder fleetType(FleetType fleetType) {
+            return fleetType(Output.of(fleetType));
         }
+
         public Builder instanceRoleARN(@Nullable Output<String> instanceRoleARN) {
-            this.instanceRoleARN = instanceRoleARN;
+            $.instanceRoleARN = instanceRoleARN;
             return this;
         }
-        public Builder instanceRoleARN(@Nullable String instanceRoleARN) {
-            this.instanceRoleARN = Codegen.ofNullable(instanceRoleARN);
-            return this;
+
+        public Builder instanceRoleARN(String instanceRoleARN) {
+            return instanceRoleARN(Output.of(instanceRoleARN));
         }
+
         public Builder locations(@Nullable Output<List<FleetLocationConfigurationArgs>> locations) {
-            this.locations = locations;
+            $.locations = locations;
             return this;
         }
-        public Builder locations(@Nullable List<FleetLocationConfigurationArgs> locations) {
-            this.locations = Codegen.ofNullable(locations);
-            return this;
+
+        public Builder locations(List<FleetLocationConfigurationArgs> locations) {
+            return locations(Output.of(locations));
         }
+
         public Builder locations(FleetLocationConfigurationArgs... locations) {
             return locations(List.of(locations));
         }
+
         public Builder logPaths(@Nullable Output<List<String>> logPaths) {
-            this.logPaths = logPaths;
+            $.logPaths = logPaths;
             return this;
         }
-        public Builder logPaths(@Nullable List<String> logPaths) {
-            this.logPaths = Codegen.ofNullable(logPaths);
-            return this;
+
+        public Builder logPaths(List<String> logPaths) {
+            return logPaths(Output.of(logPaths));
         }
+
         public Builder logPaths(String... logPaths) {
             return logPaths(List.of(logPaths));
         }
+
         public Builder maxSize(@Nullable Output<Integer> maxSize) {
-            this.maxSize = maxSize;
+            $.maxSize = maxSize;
             return this;
         }
-        public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Codegen.ofNullable(maxSize);
-            return this;
+
+        public Builder maxSize(Integer maxSize) {
+            return maxSize(Output.of(maxSize));
         }
+
         public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
-            this.metricGroups = metricGroups;
+            $.metricGroups = metricGroups;
             return this;
         }
-        public Builder metricGroups(@Nullable List<String> metricGroups) {
-            this.metricGroups = Codegen.ofNullable(metricGroups);
-            return this;
+
+        public Builder metricGroups(List<String> metricGroups) {
+            return metricGroups(Output.of(metricGroups));
         }
+
         public Builder metricGroups(String... metricGroups) {
             return metricGroups(List.of(metricGroups));
         }
+
         public Builder minSize(@Nullable Output<Integer> minSize) {
-            this.minSize = minSize;
+            $.minSize = minSize;
             return this;
         }
-        public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Codegen.ofNullable(minSize);
-            return this;
+
+        public Builder minSize(Integer minSize) {
+            return minSize(Output.of(minSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder newGameSessionProtectionPolicy(@Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
+            $.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
-        public Builder newGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = Codegen.ofNullable(newGameSessionProtectionPolicy);
-            return this;
+
+        public Builder newGameSessionProtectionPolicy(FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
+            return newGameSessionProtectionPolicy(Output.of(newGameSessionProtectionPolicy));
         }
+
         public Builder peerVpcAwsAccountId(@Nullable Output<String> peerVpcAwsAccountId) {
-            this.peerVpcAwsAccountId = peerVpcAwsAccountId;
+            $.peerVpcAwsAccountId = peerVpcAwsAccountId;
             return this;
         }
-        public Builder peerVpcAwsAccountId(@Nullable String peerVpcAwsAccountId) {
-            this.peerVpcAwsAccountId = Codegen.ofNullable(peerVpcAwsAccountId);
-            return this;
+
+        public Builder peerVpcAwsAccountId(String peerVpcAwsAccountId) {
+            return peerVpcAwsAccountId(Output.of(peerVpcAwsAccountId));
         }
+
         public Builder peerVpcId(@Nullable Output<String> peerVpcId) {
-            this.peerVpcId = peerVpcId;
+            $.peerVpcId = peerVpcId;
             return this;
         }
-        public Builder peerVpcId(@Nullable String peerVpcId) {
-            this.peerVpcId = Codegen.ofNullable(peerVpcId);
-            return this;
+
+        public Builder peerVpcId(String peerVpcId) {
+            return peerVpcId(Output.of(peerVpcId));
         }
+
         public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
+            $.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
-        public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = Codegen.ofNullable(resourceCreationLimitPolicy);
-            return this;
+
+        public Builder resourceCreationLimitPolicy(FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
+            return resourceCreationLimitPolicy(Output.of(resourceCreationLimitPolicy));
         }
+
         public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
-            this.runtimeConfiguration = runtimeConfiguration;
+            $.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
-        public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
-            this.runtimeConfiguration = Codegen.ofNullable(runtimeConfiguration);
-            return this;
+
+        public Builder runtimeConfiguration(FleetRuntimeConfigurationArgs runtimeConfiguration) {
+            return runtimeConfiguration(Output.of(runtimeConfiguration));
         }
+
         public Builder scriptId(@Nullable Output<String> scriptId) {
-            this.scriptId = scriptId;
+            $.scriptId = scriptId;
             return this;
         }
-        public Builder scriptId(@Nullable String scriptId) {
-            this.scriptId = Codegen.ofNullable(scriptId);
-            return this;
+
+        public Builder scriptId(String scriptId) {
+            return scriptId(Output.of(scriptId));
         }
+
         public Builder serverLaunchParameters(@Nullable Output<String> serverLaunchParameters) {
-            this.serverLaunchParameters = serverLaunchParameters;
+            $.serverLaunchParameters = serverLaunchParameters;
             return this;
         }
-        public Builder serverLaunchParameters(@Nullable String serverLaunchParameters) {
-            this.serverLaunchParameters = Codegen.ofNullable(serverLaunchParameters);
-            return this;
+
+        public Builder serverLaunchParameters(String serverLaunchParameters) {
+            return serverLaunchParameters(Output.of(serverLaunchParameters));
         }
+
         public Builder serverLaunchPath(@Nullable Output<String> serverLaunchPath) {
-            this.serverLaunchPath = serverLaunchPath;
+            $.serverLaunchPath = serverLaunchPath;
             return this;
         }
-        public Builder serverLaunchPath(@Nullable String serverLaunchPath) {
-            this.serverLaunchPath = Codegen.ofNullable(serverLaunchPath);
-            return this;
-        }        public FleetArgs build() {
-            return new FleetArgs(buildId, certificateConfiguration, description, desiredEC2Instances, eC2InboundPermissions, eC2InstanceType, fleetType, instanceRoleARN, locations, logPaths, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, peerVpcAwsAccountId, peerVpcId, resourceCreationLimitPolicy, runtimeConfiguration, scriptId, serverLaunchParameters, serverLaunchPath);
+
+        public Builder serverLaunchPath(String serverLaunchPath) {
+            return serverLaunchPath(Output.of(serverLaunchPath));
+        }
+
+        public FleetArgs build() {
+            return $;
         }
     }
+
 }

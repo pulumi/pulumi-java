@@ -5,12 +5,12 @@ package com.pulumi.gcp.container.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.container.inputs.AzureNodePoolConfigRootVolumeArgs;
 import com.pulumi.gcp.container.inputs.AzureNodePoolConfigSshConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rootVolume")
-      private final @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
+    private @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
 
-    public Output<AzureNodePoolConfigRootVolumeArgs> rootVolume() {
-        return this.rootVolume == null ? Codegen.empty() : this.rootVolume;
+    public Optional<Output<AzureNodePoolConfigRootVolumeArgs>> rootVolume() {
+        return Optional.ofNullable(this.rootVolume);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sshConfig", required=true)
-      private final Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
+    private Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
 
     public Output<AzureNodePoolConfigSshConfigArgs> sshConfig() {
         return this.sshConfig;
@@ -45,10 +45,10 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -56,89 +56,79 @@ public final class AzureNodePoolConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="vmSize")
-      private final @Nullable Output<String> vmSize;
+    private @Nullable Output<String> vmSize;
 
-    public Output<String> vmSize() {
-        return this.vmSize == null ? Codegen.empty() : this.vmSize;
+    public Optional<Output<String>> vmSize() {
+        return Optional.ofNullable(this.vmSize);
     }
 
-    public AzureNodePoolConfigArgs(
-        @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume,
-        Output<AzureNodePoolConfigSshConfigArgs> sshConfig,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<String> vmSize) {
-        this.rootVolume = rootVolume;
-        this.sshConfig = Objects.requireNonNull(sshConfig, "expected parameter 'sshConfig' to be non-null");
-        this.tags = tags;
-        this.vmSize = vmSize;
-    }
+    private AzureNodePoolConfigArgs() {}
 
-    private AzureNodePoolConfigArgs() {
-        this.rootVolume = Codegen.empty();
-        this.sshConfig = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.vmSize = Codegen.empty();
+    private AzureNodePoolConfigArgs(AzureNodePoolConfigArgs $) {
+        this.rootVolume = $.rootVolume;
+        this.sshConfig = $.sshConfig;
+        this.tags = $.tags;
+        this.vmSize = $.vmSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureNodePoolConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume;
-        private Output<AzureNodePoolConfigSshConfigArgs> sshConfig;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<String> vmSize;
+        private AzureNodePoolConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureNodePoolConfigArgs();
         }
 
         public Builder(AzureNodePoolConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rootVolume = defaults.rootVolume;
-    	      this.sshConfig = defaults.sshConfig;
-    	      this.tags = defaults.tags;
-    	      this.vmSize = defaults.vmSize;
+            $ = new AzureNodePoolConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rootVolume(@Nullable Output<AzureNodePoolConfigRootVolumeArgs> rootVolume) {
-            this.rootVolume = rootVolume;
+            $.rootVolume = rootVolume;
             return this;
         }
-        public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolumeArgs rootVolume) {
-            this.rootVolume = Codegen.ofNullable(rootVolume);
-            return this;
+
+        public Builder rootVolume(AzureNodePoolConfigRootVolumeArgs rootVolume) {
+            return rootVolume(Output.of(rootVolume));
         }
+
         public Builder sshConfig(Output<AzureNodePoolConfigSshConfigArgs> sshConfig) {
-            this.sshConfig = Objects.requireNonNull(sshConfig);
+            $.sshConfig = sshConfig;
             return this;
         }
+
         public Builder sshConfig(AzureNodePoolConfigSshConfigArgs sshConfig) {
-            this.sshConfig = Output.of(Objects.requireNonNull(sshConfig));
-            return this;
+            return sshConfig(Output.of(sshConfig));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder vmSize(@Nullable Output<String> vmSize) {
-            this.vmSize = vmSize;
+            $.vmSize = vmSize;
             return this;
         }
-        public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Codegen.ofNullable(vmSize);
-            return this;
-        }        public AzureNodePoolConfigArgs build() {
-            return new AzureNodePoolConfigArgs(rootVolume, sshConfig, tags, vmSize);
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Output.of(vmSize));
+        }
+
+        public AzureNodePoolConfigArgs build() {
+            $.sshConfig = Objects.requireNonNull($.sshConfig, "expected parameter 'sshConfig' to be non-null");
+            return $;
         }
     }
+
 }

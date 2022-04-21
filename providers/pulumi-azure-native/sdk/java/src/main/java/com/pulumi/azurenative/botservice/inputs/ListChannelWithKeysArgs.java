@@ -17,7 +17,7 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="channelName", required=true)
-      private final String channelName;
+    private String channelName;
 
     public String channelName() {
         return this.channelName;
@@ -28,7 +28,7 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListChannelWithKeysArgs extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public ListChannelWithKeysArgs(
-        String channelName,
-        String resourceGroupName,
-        String resourceName) {
-        this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private ListChannelWithKeysArgs() {}
 
-    private ListChannelWithKeysArgs() {
-        this.channelName = null;
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private ListChannelWithKeysArgs(ListChannelWithKeysArgs $) {
+        this.channelName = $.channelName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListChannelWithKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelName;
-        private String resourceGroupName;
-        private String resourceName;
+        private ListChannelWithKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListChannelWithKeysArgs();
         }
 
         public Builder(ListChannelWithKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelName = defaults.channelName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new ListChannelWithKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelName(String channelName) {
-            this.channelName = Objects.requireNonNull(channelName);
+            $.channelName = channelName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public ListChannelWithKeysArgs build() {
-            return new ListChannelWithKeysArgs(channelName, resourceGroupName, resourceName);
+        }
+
+        public ListChannelWithKeysArgs build() {
+            $.channelName = Objects.requireNonNull($.channelName, "expected parameter 'channelName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

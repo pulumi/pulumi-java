@@ -13,45 +13,45 @@ public final class GetFileSystemArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFileSystemArgs Empty = new GetFileSystemArgs();
 
     @Import(name="fileSystemId", required=true)
-      private final String fileSystemId;
+    private String fileSystemId;
 
     public String fileSystemId() {
         return this.fileSystemId;
     }
 
-    public GetFileSystemArgs(String fileSystemId) {
-        this.fileSystemId = Objects.requireNonNull(fileSystemId, "expected parameter 'fileSystemId' to be non-null");
-    }
+    private GetFileSystemArgs() {}
 
-    private GetFileSystemArgs() {
-        this.fileSystemId = null;
+    private GetFileSystemArgs(GetFileSystemArgs $) {
+        this.fileSystemId = $.fileSystemId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFileSystemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fileSystemId;
+        private GetFileSystemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFileSystemArgs();
         }
 
         public Builder(GetFileSystemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileSystemId = defaults.fileSystemId;
+            $ = new GetFileSystemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileSystemId(String fileSystemId) {
-            this.fileSystemId = Objects.requireNonNull(fileSystemId);
+            $.fileSystemId = fileSystemId;
             return this;
-        }        public GetFileSystemArgs build() {
-            return new GetFileSystemArgs(fileSystemId);
+        }
+
+        public GetFileSystemArgs build() {
+            $.fileSystemId = Objects.requireNonNull($.fileSystemId, "expected parameter 'fileSystemId' to be non-null");
+            return $;
         }
     }
+
 }

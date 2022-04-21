@@ -5,9 +5,9 @@ package com.pulumi.aws.codebuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SourceCredentialState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SourceCredentialState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="authType")
-      private final @Nullable Output<String> authType;
+    private @Nullable Output<String> authType;
 
-    public Output<String> authType() {
-        return this.authType == null ? Codegen.empty() : this.authType;
+    public Optional<Output<String>> authType() {
+        return Optional.ofNullable(this.authType);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class SourceCredentialState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="serverType")
-      private final @Nullable Output<String> serverType;
+    private @Nullable Output<String> serverType;
 
-    public Output<String> serverType() {
-        return this.serverType == null ? Codegen.empty() : this.serverType;
+    public Optional<Output<String>> serverType() {
+        return Optional.ofNullable(this.serverType);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class SourceCredentialState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="token")
-      private final @Nullable Output<String> token;
+    private @Nullable Output<String> token;
 
-    public Output<String> token() {
-        return this.token == null ? Codegen.empty() : this.token;
+    public Optional<Output<String>> token() {
+        return Optional.ofNullable(this.token);
     }
 
     /**
@@ -64,102 +64,88 @@ public final class SourceCredentialState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SourceCredentialState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> authType,
-        @Nullable Output<String> serverType,
-        @Nullable Output<String> token,
-        @Nullable Output<String> userName) {
-        this.arn = arn;
-        this.authType = authType;
-        this.serverType = serverType;
-        this.token = token;
-        this.userName = userName;
-    }
+    private SourceCredentialState() {}
 
-    private SourceCredentialState() {
-        this.arn = Codegen.empty();
-        this.authType = Codegen.empty();
-        this.serverType = Codegen.empty();
-        this.token = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SourceCredentialState(SourceCredentialState $) {
+        this.arn = $.arn;
+        this.authType = $.authType;
+        this.serverType = $.serverType;
+        this.token = $.token;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceCredentialState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> authType;
-        private @Nullable Output<String> serverType;
-        private @Nullable Output<String> token;
-        private @Nullable Output<String> userName;
+        private SourceCredentialState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceCredentialState();
         }
 
         public Builder(SourceCredentialState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.authType = defaults.authType;
-    	      this.serverType = defaults.serverType;
-    	      this.token = defaults.token;
-    	      this.userName = defaults.userName;
+            $ = new SourceCredentialState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder authType(@Nullable Output<String> authType) {
-            this.authType = authType;
+            $.authType = authType;
             return this;
         }
-        public Builder authType(@Nullable String authType) {
-            this.authType = Codegen.ofNullable(authType);
-            return this;
+
+        public Builder authType(String authType) {
+            return authType(Output.of(authType));
         }
+
         public Builder serverType(@Nullable Output<String> serverType) {
-            this.serverType = serverType;
+            $.serverType = serverType;
             return this;
         }
-        public Builder serverType(@Nullable String serverType) {
-            this.serverType = Codegen.ofNullable(serverType);
-            return this;
+
+        public Builder serverType(String serverType) {
+            return serverType(Output.of(serverType));
         }
+
         public Builder token(@Nullable Output<String> token) {
-            this.token = token;
+            $.token = token;
             return this;
         }
-        public Builder token(@Nullable String token) {
-            this.token = Codegen.ofNullable(token);
-            return this;
+
+        public Builder token(String token) {
+            return token(Output.of(token));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SourceCredentialState build() {
-            return new SourceCredentialState(arn, authType, serverType, token, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SourceCredentialState build() {
+            return $;
         }
     }
+
 }

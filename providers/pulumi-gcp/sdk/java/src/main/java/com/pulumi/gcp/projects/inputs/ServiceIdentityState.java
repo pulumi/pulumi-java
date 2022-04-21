@@ -5,9 +5,9 @@ package com.pulumi.gcp.projects.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceIdentityState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ServiceIdentityState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class ServiceIdentityState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public ServiceIdentityState(
-        @Nullable Output<String> email,
-        @Nullable Output<String> project,
-        @Nullable Output<String> service) {
-        this.email = email;
-        this.project = project;
-        this.service = service;
-    }
+    private ServiceIdentityState() {}
 
-    private ServiceIdentityState() {
-        this.email = Codegen.empty();
-        this.project = Codegen.empty();
-        this.service = Codegen.empty();
+    private ServiceIdentityState(ServiceIdentityState $) {
+        this.email = $.email;
+        this.project = $.project;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceIdentityState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> service;
+        private ServiceIdentityState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceIdentityState();
         }
 
         public Builder(ServiceIdentityState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.project = defaults.project;
-    	      this.service = defaults.service;
+            $ = new ServiceIdentityState(Objects.requireNonNull(defaults));
         }
 
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public ServiceIdentityState build() {
-            return new ServiceIdentityState(email, project, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public ServiceIdentityState build() {
+            return $;
         }
     }
+
 }

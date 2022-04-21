@@ -21,7 +21,7 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -32,7 +32,7 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -43,7 +43,7 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secret", required=true)
-      private final String secret;
+    private String secret;
 
     public String secret() {
         return this.secret;
@@ -54,73 +54,66 @@ public final class SecretEnvVarResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SecretEnvVarResponse(
-        String key,
-        String project,
-        String secret,
-        String version) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SecretEnvVarResponse() {}
 
-    private SecretEnvVarResponse() {
-        this.key = null;
-        this.project = null;
-        this.secret = null;
-        this.version = null;
+    private SecretEnvVarResponse(SecretEnvVarResponse $) {
+        this.key = $.key;
+        this.project = $.project;
+        this.secret = $.secret;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretEnvVarResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private String project;
-        private String secret;
-        private String version;
+        private SecretEnvVarResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretEnvVarResponse();
         }
 
         public Builder(SecretEnvVarResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.project = defaults.project;
-    	      this.secret = defaults.secret;
-    	      this.version = defaults.version;
+            $ = new SecretEnvVarResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SecretEnvVarResponse build() {
-            return new SecretEnvVarResponse(key, project, secret, version);
+        }
+
+        public SecretEnvVarResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

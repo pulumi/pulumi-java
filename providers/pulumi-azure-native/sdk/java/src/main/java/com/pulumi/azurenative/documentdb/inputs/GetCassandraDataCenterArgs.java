@@ -17,7 +17,7 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="clusterName", required=true)
-      private final String clusterName;
+    private String clusterName;
 
     public String clusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataCenterName", required=true)
-      private final String dataCenterName;
+    private String dataCenterName;
 
     public String dataCenterName() {
         return this.dataCenterName;
@@ -39,64 +39,59 @@ public final class GetCassandraDataCenterArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetCassandraDataCenterArgs(
-        String clusterName,
-        String dataCenterName,
-        String resourceGroupName) {
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.dataCenterName = Objects.requireNonNull(dataCenterName, "expected parameter 'dataCenterName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetCassandraDataCenterArgs() {}
 
-    private GetCassandraDataCenterArgs() {
-        this.clusterName = null;
-        this.dataCenterName = null;
-        this.resourceGroupName = null;
+    private GetCassandraDataCenterArgs(GetCassandraDataCenterArgs $) {
+        this.clusterName = $.clusterName;
+        this.dataCenterName = $.dataCenterName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCassandraDataCenterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterName;
-        private String dataCenterName;
-        private String resourceGroupName;
+        private GetCassandraDataCenterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCassandraDataCenterArgs();
         }
 
         public Builder(GetCassandraDataCenterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterName = defaults.clusterName;
-    	      this.dataCenterName = defaults.dataCenterName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetCassandraDataCenterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterName(String clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder dataCenterName(String dataCenterName) {
-            this.dataCenterName = Objects.requireNonNull(dataCenterName);
+            $.dataCenterName = dataCenterName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetCassandraDataCenterArgs build() {
-            return new GetCassandraDataCenterArgs(clusterName, dataCenterName, resourceGroupName);
+        }
+
+        public GetCassandraDataCenterArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.dataCenterName = Objects.requireNonNull($.dataCenterName, "expected parameter 'dataCenterName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.awsnative.s3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="httpErrorCodeReturnedEquals")
-      private final @Nullable Output<String> httpErrorCodeReturnedEquals;
+    private @Nullable Output<String> httpErrorCodeReturnedEquals;
 
-    public Output<String> httpErrorCodeReturnedEquals() {
-        return this.httpErrorCodeReturnedEquals == null ? Codegen.empty() : this.httpErrorCodeReturnedEquals;
+    public Optional<Output<String>> httpErrorCodeReturnedEquals() {
+        return Optional.ofNullable(this.httpErrorCodeReturnedEquals);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BucketRoutingRuleConditionArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="keyPrefixEquals")
-      private final @Nullable Output<String> keyPrefixEquals;
+    private @Nullable Output<String> keyPrefixEquals;
 
-    public Output<String> keyPrefixEquals() {
-        return this.keyPrefixEquals == null ? Codegen.empty() : this.keyPrefixEquals;
+    public Optional<Output<String>> keyPrefixEquals() {
+        return Optional.ofNullable(this.keyPrefixEquals);
     }
 
-    public BucketRoutingRuleConditionArgs(
-        @Nullable Output<String> httpErrorCodeReturnedEquals,
-        @Nullable Output<String> keyPrefixEquals) {
-        this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
-        this.keyPrefixEquals = keyPrefixEquals;
-    }
+    private BucketRoutingRuleConditionArgs() {}
 
-    private BucketRoutingRuleConditionArgs() {
-        this.httpErrorCodeReturnedEquals = Codegen.empty();
-        this.keyPrefixEquals = Codegen.empty();
+    private BucketRoutingRuleConditionArgs(BucketRoutingRuleConditionArgs $) {
+        this.httpErrorCodeReturnedEquals = $.httpErrorCodeReturnedEquals;
+        this.keyPrefixEquals = $.keyPrefixEquals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketRoutingRuleConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpErrorCodeReturnedEquals;
-        private @Nullable Output<String> keyPrefixEquals;
+        private BucketRoutingRuleConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketRoutingRuleConditionArgs();
         }
 
         public Builder(BucketRoutingRuleConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpErrorCodeReturnedEquals = defaults.httpErrorCodeReturnedEquals;
-    	      this.keyPrefixEquals = defaults.keyPrefixEquals;
+            $ = new BucketRoutingRuleConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpErrorCodeReturnedEquals(@Nullable Output<String> httpErrorCodeReturnedEquals) {
-            this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
+            $.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
-        public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
-            this.httpErrorCodeReturnedEquals = Codegen.ofNullable(httpErrorCodeReturnedEquals);
-            return this;
+
+        public Builder httpErrorCodeReturnedEquals(String httpErrorCodeReturnedEquals) {
+            return httpErrorCodeReturnedEquals(Output.of(httpErrorCodeReturnedEquals));
         }
+
         public Builder keyPrefixEquals(@Nullable Output<String> keyPrefixEquals) {
-            this.keyPrefixEquals = keyPrefixEquals;
+            $.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
-        public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
-            this.keyPrefixEquals = Codegen.ofNullable(keyPrefixEquals);
-            return this;
-        }        public BucketRoutingRuleConditionArgs build() {
-            return new BucketRoutingRuleConditionArgs(httpErrorCodeReturnedEquals, keyPrefixEquals);
+
+        public Builder keyPrefixEquals(String keyPrefixEquals) {
+            return keyPrefixEquals(Output.of(keyPrefixEquals));
+        }
+
+        public BucketRoutingRuleConditionArgs build() {
+            return $;
         }
     }
+
 }

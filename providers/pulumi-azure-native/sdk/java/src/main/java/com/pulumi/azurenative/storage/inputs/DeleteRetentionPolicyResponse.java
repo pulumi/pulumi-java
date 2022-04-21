@@ -24,10 +24,10 @@ public final class DeleteRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="days")
-      private final @Nullable Integer days;
+    private @Nullable Integer days;
 
     public Optional<Integer> days() {
-        return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
+        return Optional.ofNullable(this.days);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class DeleteRetentionPolicyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Boolean enabled;
+    private @Nullable Boolean enabled;
 
     public Optional<Boolean> enabled() {
-        return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
+        return Optional.ofNullable(this.enabled);
     }
 
-    public DeleteRetentionPolicyResponse(
-        @Nullable Integer days,
-        @Nullable Boolean enabled) {
-        this.days = days;
-        this.enabled = enabled;
-    }
+    private DeleteRetentionPolicyResponse() {}
 
-    private DeleteRetentionPolicyResponse() {
-        this.days = null;
-        this.enabled = null;
+    private DeleteRetentionPolicyResponse(DeleteRetentionPolicyResponse $) {
+        this.days = $.days;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeleteRetentionPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer days;
-        private @Nullable Boolean enabled;
+        private DeleteRetentionPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeleteRetentionPolicyResponse();
         }
 
         public Builder(DeleteRetentionPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.days = defaults.days;
-    	      this.enabled = defaults.enabled;
+            $ = new DeleteRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder days(@Nullable Integer days) {
-            this.days = days;
+            $.days = days;
             return this;
         }
+
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
-        }        public DeleteRetentionPolicyResponse build() {
-            return new DeleteRetentionPolicyResponse(days, enabled);
+        }
+
+        public DeleteRetentionPolicyResponse build() {
+            return $;
         }
     }
+
 }

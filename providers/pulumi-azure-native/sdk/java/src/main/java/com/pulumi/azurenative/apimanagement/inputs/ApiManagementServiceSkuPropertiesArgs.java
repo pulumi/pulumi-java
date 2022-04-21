@@ -7,7 +7,6 @@ import com.pulumi.azurenative.apimanagement.enums.SkuType;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +25,7 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="capacity", required=true)
-      private final Output<Integer> capacity;
+    private Output<Integer> capacity;
 
     public Output<Integer> capacity() {
         return this.capacity;
@@ -37,63 +36,60 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,SkuType>> name;
+    private Output<Either<String,SkuType>> name;
 
     public Output<Either<String,SkuType>> name() {
         return this.name;
     }
 
-    public ApiManagementServiceSkuPropertiesArgs(
-        Output<Integer> capacity,
-        Output<Either<String,SkuType>> name) {
-        this.capacity = Objects.requireNonNull(capacity, "expected parameter 'capacity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ApiManagementServiceSkuPropertiesArgs() {}
 
-    private ApiManagementServiceSkuPropertiesArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
+    private ApiManagementServiceSkuPropertiesArgs(ApiManagementServiceSkuPropertiesArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiManagementServiceSkuPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> capacity;
-        private Output<Either<String,SkuType>> name;
+        private ApiManagementServiceSkuPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiManagementServiceSkuPropertiesArgs();
         }
 
         public Builder(ApiManagementServiceSkuPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
+            $ = new ApiManagementServiceSkuPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(Output<Integer> capacity) {
-            this.capacity = Objects.requireNonNull(capacity);
+            $.capacity = capacity;
             return this;
         }
+
         public Builder capacity(Integer capacity) {
-            this.capacity = Output.of(Objects.requireNonNull(capacity));
-            return this;
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(Output<Either<String,SkuType>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,SkuType> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ApiManagementServiceSkuPropertiesArgs build() {
-            return new ApiManagementServiceSkuPropertiesArgs(capacity, name);
+            return name(Output.of(name));
+        }
+
+        public ApiManagementServiceSkuPropertiesArgs build() {
+            $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

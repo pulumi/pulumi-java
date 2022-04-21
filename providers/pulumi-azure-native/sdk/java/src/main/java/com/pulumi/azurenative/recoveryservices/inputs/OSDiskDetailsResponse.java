@@ -23,10 +23,10 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="osType")
-      private final @Nullable String osType;
+    private @Nullable String osType;
 
     public Optional<String> osType() {
-        return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
+        return Optional.ofNullable(this.osType);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="osVhdId")
-      private final @Nullable String osVhdId;
+    private @Nullable String osVhdId;
 
     public Optional<String> osVhdId() {
-        return this.osVhdId == null ? Optional.empty() : Optional.ofNullable(this.osVhdId);
+        return Optional.ofNullable(this.osVhdId);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class OSDiskDetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="vhdName")
-      private final @Nullable String vhdName;
+    private @Nullable String vhdName;
 
     public Optional<String> vhdName() {
-        return this.vhdName == null ? Optional.empty() : Optional.ofNullable(this.vhdName);
+        return Optional.ofNullable(this.vhdName);
     }
 
-    public OSDiskDetailsResponse(
-        @Nullable String osType,
-        @Nullable String osVhdId,
-        @Nullable String vhdName) {
-        this.osType = osType;
-        this.osVhdId = osVhdId;
-        this.vhdName = vhdName;
-    }
+    private OSDiskDetailsResponse() {}
 
-    private OSDiskDetailsResponse() {
-        this.osType = null;
-        this.osVhdId = null;
-        this.vhdName = null;
+    private OSDiskDetailsResponse(OSDiskDetailsResponse $) {
+        this.osType = $.osType;
+        this.osVhdId = $.osVhdId;
+        this.vhdName = $.vhdName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String osType;
-        private @Nullable String osVhdId;
-        private @Nullable String vhdName;
+        private OSDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSDiskDetailsResponse();
         }
 
         public Builder(OSDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osType = defaults.osType;
-    	      this.osVhdId = defaults.osVhdId;
-    	      this.vhdName = defaults.vhdName;
+            $ = new OSDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osType(@Nullable String osType) {
-            this.osType = osType;
+            $.osType = osType;
             return this;
         }
+
         public Builder osVhdId(@Nullable String osVhdId) {
-            this.osVhdId = osVhdId;
+            $.osVhdId = osVhdId;
             return this;
         }
+
         public Builder vhdName(@Nullable String vhdName) {
-            this.vhdName = vhdName;
+            $.vhdName = vhdName;
             return this;
-        }        public OSDiskDetailsResponse build() {
-            return new OSDiskDetailsResponse(osType, osVhdId, vhdName);
+        }
+
+        public OSDiskDetailsResponse build() {
+            return $;
         }
     }
+
 }

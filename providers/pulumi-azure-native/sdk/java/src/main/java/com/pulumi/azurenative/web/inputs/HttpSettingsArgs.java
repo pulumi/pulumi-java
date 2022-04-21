@@ -7,9 +7,9 @@ import com.pulumi.azurenative.web.inputs.ForwardProxyArgs;
 import com.pulumi.azurenative.web.inputs.HttpSettingsRoutesArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="forwardProxy")
-      private final @Nullable Output<ForwardProxyArgs> forwardProxy;
+    private @Nullable Output<ForwardProxyArgs> forwardProxy;
 
-    public Output<ForwardProxyArgs> forwardProxy() {
-        return this.forwardProxy == null ? Codegen.empty() : this.forwardProxy;
+    public Optional<Output<ForwardProxyArgs>> forwardProxy() {
+        return Optional.ofNullable(this.forwardProxy);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireHttps")
-      private final @Nullable Output<Boolean> requireHttps;
+    private @Nullable Output<Boolean> requireHttps;
 
-    public Output<Boolean> requireHttps() {
-        return this.requireHttps == null ? Codegen.empty() : this.requireHttps;
+    public Optional<Output<Boolean>> requireHttps() {
+        return Optional.ofNullable(this.requireHttps);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class HttpSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routes")
-      private final @Nullable Output<HttpSettingsRoutesArgs> routes;
+    private @Nullable Output<HttpSettingsRoutesArgs> routes;
 
-    public Output<HttpSettingsRoutesArgs> routes() {
-        return this.routes == null ? Codegen.empty() : this.routes;
+    public Optional<Output<HttpSettingsRoutesArgs>> routes() {
+        return Optional.ofNullable(this.routes);
     }
 
-    public HttpSettingsArgs(
-        @Nullable Output<ForwardProxyArgs> forwardProxy,
-        @Nullable Output<Boolean> requireHttps,
-        @Nullable Output<HttpSettingsRoutesArgs> routes) {
-        this.forwardProxy = forwardProxy;
-        this.requireHttps = requireHttps;
-        this.routes = routes;
-    }
+    private HttpSettingsArgs() {}
 
-    private HttpSettingsArgs() {
-        this.forwardProxy = Codegen.empty();
-        this.requireHttps = Codegen.empty();
-        this.routes = Codegen.empty();
+    private HttpSettingsArgs(HttpSettingsArgs $) {
+        this.forwardProxy = $.forwardProxy;
+        this.requireHttps = $.requireHttps;
+        this.routes = $.routes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ForwardProxyArgs> forwardProxy;
-        private @Nullable Output<Boolean> requireHttps;
-        private @Nullable Output<HttpSettingsRoutesArgs> routes;
+        private HttpSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpSettingsArgs();
         }
 
         public Builder(HttpSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardProxy = defaults.forwardProxy;
-    	      this.requireHttps = defaults.requireHttps;
-    	      this.routes = defaults.routes;
+            $ = new HttpSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardProxy(@Nullable Output<ForwardProxyArgs> forwardProxy) {
-            this.forwardProxy = forwardProxy;
+            $.forwardProxy = forwardProxy;
             return this;
         }
-        public Builder forwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
-            this.forwardProxy = Codegen.ofNullable(forwardProxy);
-            return this;
+
+        public Builder forwardProxy(ForwardProxyArgs forwardProxy) {
+            return forwardProxy(Output.of(forwardProxy));
         }
+
         public Builder requireHttps(@Nullable Output<Boolean> requireHttps) {
-            this.requireHttps = requireHttps;
+            $.requireHttps = requireHttps;
             return this;
         }
-        public Builder requireHttps(@Nullable Boolean requireHttps) {
-            this.requireHttps = Codegen.ofNullable(requireHttps);
-            return this;
+
+        public Builder requireHttps(Boolean requireHttps) {
+            return requireHttps(Output.of(requireHttps));
         }
+
         public Builder routes(@Nullable Output<HttpSettingsRoutesArgs> routes) {
-            this.routes = routes;
+            $.routes = routes;
             return this;
         }
-        public Builder routes(@Nullable HttpSettingsRoutesArgs routes) {
-            this.routes = Codegen.ofNullable(routes);
-            return this;
-        }        public HttpSettingsArgs build() {
-            return new HttpSettingsArgs(forwardProxy, requireHttps, routes);
+
+        public Builder routes(HttpSettingsRoutesArgs routes) {
+            return routes(Output.of(routes));
+        }
+
+        public HttpSettingsArgs build() {
+            return $;
         }
     }
+
 }

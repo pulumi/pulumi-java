@@ -19,62 +19,58 @@ public final class AutoScaleSettingsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="evaluationInterval")
-      private final @Nullable String evaluationInterval;
+    private @Nullable String evaluationInterval;
 
     public Optional<String> evaluationInterval() {
-        return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
+        return Optional.ofNullable(this.evaluationInterval);
     }
 
     @Import(name="formula", required=true)
-      private final String formula;
+    private String formula;
 
     public String formula() {
         return this.formula;
     }
 
-    public AutoScaleSettingsResponse(
-        @Nullable String evaluationInterval,
-        String formula) {
-        this.evaluationInterval = evaluationInterval;
-        this.formula = Objects.requireNonNull(formula, "expected parameter 'formula' to be non-null");
-    }
+    private AutoScaleSettingsResponse() {}
 
-    private AutoScaleSettingsResponse() {
-        this.evaluationInterval = null;
-        this.formula = null;
+    private AutoScaleSettingsResponse(AutoScaleSettingsResponse $) {
+        this.evaluationInterval = $.evaluationInterval;
+        this.formula = $.formula;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String evaluationInterval;
-        private String formula;
+        private AutoScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoScaleSettingsResponse();
         }
 
         public Builder(AutoScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.evaluationInterval = defaults.evaluationInterval;
-    	      this.formula = defaults.formula;
+            $ = new AutoScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder evaluationInterval(@Nullable String evaluationInterval) {
-            this.evaluationInterval = evaluationInterval;
+            $.evaluationInterval = evaluationInterval;
             return this;
         }
+
         public Builder formula(String formula) {
-            this.formula = Objects.requireNonNull(formula);
+            $.formula = formula;
             return this;
-        }        public AutoScaleSettingsResponse build() {
-            return new AutoScaleSettingsResponse(evaluationInterval, formula);
+        }
+
+        public AutoScaleSettingsResponse build() {
+            $.formula = Objects.requireNonNull($.formula, "expected parameter 'formula' to be non-null");
+            return $;
         }
     }
+
 }

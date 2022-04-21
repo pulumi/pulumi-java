@@ -24,10 +24,10 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="backupManagementType")
-      private final @Nullable String backupManagementType;
+    private @Nullable String backupManagementType;
 
     public Optional<String> backupManagementType() {
-        return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
+        return Optional.ofNullable(this.backupManagementType);
     }
 
     /**
@@ -39,7 +39,7 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="containerType", required=true)
-      private final String containerType;
+    private String containerType;
 
     public String containerType() {
         return this.containerType;
@@ -50,10 +50,10 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="friendlyName")
-      private final @Nullable String friendlyName;
+    private @Nullable String friendlyName;
 
     public Optional<String> friendlyName() {
-        return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
+        return Optional.ofNullable(this.friendlyName);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="healthStatus")
-      private final @Nullable String healthStatus;
+    private @Nullable String healthStatus;
 
     public Optional<String> healthStatus() {
-        return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
+        return Optional.ofNullable(this.healthStatus);
     }
 
     /**
@@ -72,82 +72,69 @@ public final class AzureSqlContainerResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="registrationStatus")
-      private final @Nullable String registrationStatus;
+    private @Nullable String registrationStatus;
 
     public Optional<String> registrationStatus() {
-        return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
+        return Optional.ofNullable(this.registrationStatus);
     }
 
-    public AzureSqlContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String registrationStatus) {
-        this.backupManagementType = backupManagementType;
-        this.containerType = Codegen.stringProp("containerType").arg(containerType).require();
-        this.friendlyName = friendlyName;
-        this.healthStatus = healthStatus;
-        this.registrationStatus = registrationStatus;
-    }
+    private AzureSqlContainerResponse() {}
 
-    private AzureSqlContainerResponse() {
-        this.backupManagementType = null;
-        this.containerType = null;
-        this.friendlyName = null;
-        this.healthStatus = null;
-        this.registrationStatus = null;
+    private AzureSqlContainerResponse(AzureSqlContainerResponse $) {
+        this.backupManagementType = $.backupManagementType;
+        this.containerType = $.containerType;
+        this.friendlyName = $.friendlyName;
+        this.healthStatus = $.healthStatus;
+        this.registrationStatus = $.registrationStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSqlContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String backupManagementType;
-        private String containerType;
-        private @Nullable String friendlyName;
-        private @Nullable String healthStatus;
-        private @Nullable String registrationStatus;
+        private AzureSqlContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSqlContainerResponse();
         }
 
         public Builder(AzureSqlContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupManagementType = defaults.backupManagementType;
-    	      this.containerType = defaults.containerType;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.healthStatus = defaults.healthStatus;
-    	      this.registrationStatus = defaults.registrationStatus;
+            $ = new AzureSqlContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupManagementType(@Nullable String backupManagementType) {
-            this.backupManagementType = backupManagementType;
+            $.backupManagementType = backupManagementType;
             return this;
         }
+
         public Builder containerType(String containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = friendlyName;
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = healthStatus;
+            $.healthStatus = healthStatus;
             return this;
         }
+
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = registrationStatus;
+            $.registrationStatus = registrationStatus;
             return this;
-        }        public AzureSqlContainerResponse build() {
-            return new AzureSqlContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus);
+        }
+
+        public AzureSqlContainerResponse build() {
+            $.containerType = Codegen.stringProp("containerType").arg($.containerType).require();
+            return $;
         }
     }
+
 }

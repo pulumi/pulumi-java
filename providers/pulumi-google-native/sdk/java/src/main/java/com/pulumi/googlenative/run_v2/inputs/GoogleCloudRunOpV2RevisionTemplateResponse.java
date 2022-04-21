@@ -29,7 +29,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="annotations", required=true)
-      private final Map<String,String> annotations;
+    private Map<String,String> annotations;
 
     public Map<String,String> annotations() {
         return this.annotations;
@@ -40,7 +40,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="confidential", required=true)
-      private final Boolean confidential;
+    private Boolean confidential;
 
     public Boolean confidential() {
         return this.confidential;
@@ -51,7 +51,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="containerConcurrency", required=true)
-      private final Integer containerConcurrency;
+    private Integer containerConcurrency;
 
     public Integer containerConcurrency() {
         return this.containerConcurrency;
@@ -62,7 +62,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="containers", required=true)
-      private final List<GoogleCloudRunOpV2ContainerResponse> containers;
+    private List<GoogleCloudRunOpV2ContainerResponse> containers;
 
     public List<GoogleCloudRunOpV2ContainerResponse> containers() {
         return this.containers;
@@ -73,7 +73,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="encryptionKey", required=true)
-      private final String encryptionKey;
+    private String encryptionKey;
 
     public String encryptionKey() {
         return this.encryptionKey;
@@ -84,7 +84,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="executionEnvironment", required=true)
-      private final String executionEnvironment;
+    private String executionEnvironment;
 
     public String executionEnvironment() {
         return this.executionEnvironment;
@@ -95,7 +95,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -106,7 +106,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="revision", required=true)
-      private final String revision;
+    private String revision;
 
     public String revision() {
         return this.revision;
@@ -117,7 +117,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="scaling", required=true)
-      private final GoogleCloudRunOpV2RevisionScalingResponse scaling;
+    private GoogleCloudRunOpV2RevisionScalingResponse scaling;
 
     public GoogleCloudRunOpV2RevisionScalingResponse scaling() {
         return this.scaling;
@@ -128,7 +128,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -139,7 +139,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
@@ -150,7 +150,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="volumes", required=true)
-      private final List<GoogleCloudRunOpV2VolumeResponse> volumes;
+    private List<GoogleCloudRunOpV2VolumeResponse> volumes;
 
     public List<GoogleCloudRunOpV2VolumeResponse> volumes() {
         return this.volumes;
@@ -161,160 +161,137 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse extends com.pulumi
      * 
      */
     @Import(name="vpcAccess", required=true)
-      private final GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
+    private GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
 
     public GoogleCloudRunOpV2VpcAccessResponse vpcAccess() {
         return this.vpcAccess;
     }
 
-    public GoogleCloudRunOpV2RevisionTemplateResponse(
-        Map<String,String> annotations,
-        Boolean confidential,
-        Integer containerConcurrency,
-        List<GoogleCloudRunOpV2ContainerResponse> containers,
-        String encryptionKey,
-        String executionEnvironment,
-        Map<String,String> labels,
-        String revision,
-        GoogleCloudRunOpV2RevisionScalingResponse scaling,
-        String serviceAccount,
-        String timeout,
-        List<GoogleCloudRunOpV2VolumeResponse> volumes,
-        GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
-        this.annotations = Objects.requireNonNull(annotations, "expected parameter 'annotations' to be non-null");
-        this.confidential = Objects.requireNonNull(confidential, "expected parameter 'confidential' to be non-null");
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.encryptionKey = Objects.requireNonNull(encryptionKey, "expected parameter 'encryptionKey' to be non-null");
-        this.executionEnvironment = Objects.requireNonNull(executionEnvironment, "expected parameter 'executionEnvironment' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.scaling = Objects.requireNonNull(scaling, "expected parameter 'scaling' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-        this.vpcAccess = Objects.requireNonNull(vpcAccess, "expected parameter 'vpcAccess' to be non-null");
-    }
+    private GoogleCloudRunOpV2RevisionTemplateResponse() {}
 
-    private GoogleCloudRunOpV2RevisionTemplateResponse() {
-        this.annotations = Map.of();
-        this.confidential = null;
-        this.containerConcurrency = null;
-        this.containers = List.of();
-        this.encryptionKey = null;
-        this.executionEnvironment = null;
-        this.labels = Map.of();
-        this.revision = null;
-        this.scaling = null;
-        this.serviceAccount = null;
-        this.timeout = null;
-        this.volumes = List.of();
-        this.vpcAccess = null;
+    private GoogleCloudRunOpV2RevisionTemplateResponse(GoogleCloudRunOpV2RevisionTemplateResponse $) {
+        this.annotations = $.annotations;
+        this.confidential = $.confidential;
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.encryptionKey = $.encryptionKey;
+        this.executionEnvironment = $.executionEnvironment;
+        this.labels = $.labels;
+        this.revision = $.revision;
+        this.scaling = $.scaling;
+        this.serviceAccount = $.serviceAccount;
+        this.timeout = $.timeout;
+        this.volumes = $.volumes;
+        this.vpcAccess = $.vpcAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2RevisionTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> annotations;
-        private Boolean confidential;
-        private Integer containerConcurrency;
-        private List<GoogleCloudRunOpV2ContainerResponse> containers;
-        private String encryptionKey;
-        private String executionEnvironment;
-        private Map<String,String> labels;
-        private String revision;
-        private GoogleCloudRunOpV2RevisionScalingResponse scaling;
-        private String serviceAccount;
-        private String timeout;
-        private List<GoogleCloudRunOpV2VolumeResponse> volumes;
-        private GoogleCloudRunOpV2VpcAccessResponse vpcAccess;
+        private GoogleCloudRunOpV2RevisionTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2RevisionTemplateResponse();
         }
 
         public Builder(GoogleCloudRunOpV2RevisionTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.confidential = defaults.confidential;
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.encryptionKey = defaults.encryptionKey;
-    	      this.executionEnvironment = defaults.executionEnvironment;
-    	      this.labels = defaults.labels;
-    	      this.revision = defaults.revision;
-    	      this.scaling = defaults.scaling;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.timeout = defaults.timeout;
-    	      this.volumes = defaults.volumes;
-    	      this.vpcAccess = defaults.vpcAccess;
+            $ = new GoogleCloudRunOpV2RevisionTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(Map<String,String> annotations) {
-            this.annotations = Objects.requireNonNull(annotations);
+            $.annotations = annotations;
             return this;
         }
+
         public Builder confidential(Boolean confidential) {
-            this.confidential = Objects.requireNonNull(confidential);
+            $.confidential = confidential;
             return this;
         }
+
         public Builder containerConcurrency(Integer containerConcurrency) {
-            this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
+
         public Builder containers(List<GoogleCloudRunOpV2ContainerResponse> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(GoogleCloudRunOpV2ContainerResponse... containers) {
             return containers(List.of(containers));
         }
+
         public Builder encryptionKey(String encryptionKey) {
-            this.encryptionKey = Objects.requireNonNull(encryptionKey);
+            $.encryptionKey = encryptionKey;
             return this;
         }
+
         public Builder executionEnvironment(String executionEnvironment) {
-            this.executionEnvironment = Objects.requireNonNull(executionEnvironment);
+            $.executionEnvironment = executionEnvironment;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder revision(String revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder scaling(GoogleCloudRunOpV2RevisionScalingResponse scaling) {
-            this.scaling = Objects.requireNonNull(scaling);
+            $.scaling = scaling;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder volumes(List<GoogleCloudRunOpV2VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(GoogleCloudRunOpV2VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder vpcAccess(GoogleCloudRunOpV2VpcAccessResponse vpcAccess) {
-            this.vpcAccess = Objects.requireNonNull(vpcAccess);
+            $.vpcAccess = vpcAccess;
             return this;
-        }        public GoogleCloudRunOpV2RevisionTemplateResponse build() {
-            return new GoogleCloudRunOpV2RevisionTemplateResponse(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
+        }
+
+        public GoogleCloudRunOpV2RevisionTemplateResponse build() {
+            $.annotations = Objects.requireNonNull($.annotations, "expected parameter 'annotations' to be non-null");
+            $.confidential = Objects.requireNonNull($.confidential, "expected parameter 'confidential' to be non-null");
+            $.containerConcurrency = Objects.requireNonNull($.containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            $.encryptionKey = Objects.requireNonNull($.encryptionKey, "expected parameter 'encryptionKey' to be non-null");
+            $.executionEnvironment = Objects.requireNonNull($.executionEnvironment, "expected parameter 'executionEnvironment' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.scaling = Objects.requireNonNull($.scaling, "expected parameter 'scaling' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            $.vpcAccess = Objects.requireNonNull($.vpcAccess, "expected parameter 'vpcAccess' to be non-null");
+            return $;
         }
     }
+
 }

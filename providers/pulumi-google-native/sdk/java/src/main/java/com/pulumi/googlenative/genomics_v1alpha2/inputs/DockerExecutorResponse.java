@@ -21,7 +21,7 @@ public final class DockerExecutorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="cmd", required=true)
-      private final String cmd;
+    private String cmd;
 
     public String cmd() {
         return this.cmd;
@@ -32,55 +32,52 @@ public final class DockerExecutorResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="imageName", required=true)
-      private final String imageName;
+    private String imageName;
 
     public String imageName() {
         return this.imageName;
     }
 
-    public DockerExecutorResponse(
-        String cmd,
-        String imageName) {
-        this.cmd = Objects.requireNonNull(cmd, "expected parameter 'cmd' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-    }
+    private DockerExecutorResponse() {}
 
-    private DockerExecutorResponse() {
-        this.cmd = null;
-        this.imageName = null;
+    private DockerExecutorResponse(DockerExecutorResponse $) {
+        this.cmd = $.cmd;
+        this.imageName = $.imageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerExecutorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cmd;
-        private String imageName;
+        private DockerExecutorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerExecutorResponse();
         }
 
         public Builder(DockerExecutorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmd = defaults.cmd;
-    	      this.imageName = defaults.imageName;
+            $ = new DockerExecutorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cmd(String cmd) {
-            this.cmd = Objects.requireNonNull(cmd);
+            $.cmd = cmd;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
-        }        public DockerExecutorResponse build() {
-            return new DockerExecutorResponse(cmd, imageName);
+        }
+
+        public DockerExecutorResponse build() {
+            $.cmd = Objects.requireNonNull($.cmd, "expected parameter 'cmd' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

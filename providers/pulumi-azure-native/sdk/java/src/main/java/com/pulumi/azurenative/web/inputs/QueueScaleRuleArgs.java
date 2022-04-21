@@ -6,11 +6,11 @@ package com.pulumi.azurenative.web.inputs;
 import com.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="auth")
-      private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
+    private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
-    public Output<List<ScaleRuleAuthArgs>> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<List<ScaleRuleAuthArgs>>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queueLength")
-      private final @Nullable Output<Integer> queueLength;
+    private @Nullable Output<Integer> queueLength;
 
-    public Output<Integer> queueLength() {
-        return this.queueLength == null ? Codegen.empty() : this.queueLength;
+    public Optional<Output<Integer>> queueLength() {
+        return Optional.ofNullable(this.queueLength);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class QueueScaleRuleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="queueName")
-      private final @Nullable Output<String> queueName;
+    private @Nullable Output<String> queueName;
 
-    public Output<String> queueName() {
-        return this.queueName == null ? Codegen.empty() : this.queueName;
+    public Optional<Output<String>> queueName() {
+        return Optional.ofNullable(this.queueName);
     }
 
-    public QueueScaleRuleArgs(
-        @Nullable Output<List<ScaleRuleAuthArgs>> auth,
-        @Nullable Output<Integer> queueLength,
-        @Nullable Output<String> queueName) {
-        this.auth = auth;
-        this.queueLength = queueLength;
-        this.queueName = queueName;
-    }
+    private QueueScaleRuleArgs() {}
 
-    private QueueScaleRuleArgs() {
-        this.auth = Codegen.empty();
-        this.queueLength = Codegen.empty();
-        this.queueName = Codegen.empty();
+    private QueueScaleRuleArgs(QueueScaleRuleArgs $) {
+        this.auth = $.auth;
+        this.queueLength = $.queueLength;
+        this.queueName = $.queueName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueScaleRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
-        private @Nullable Output<Integer> queueLength;
-        private @Nullable Output<String> queueName;
+        private QueueScaleRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueScaleRuleArgs();
         }
 
         public Builder(QueueScaleRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.queueLength = defaults.queueLength;
-    	      this.queueName = defaults.queueName;
+            $ = new QueueScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(List<ScaleRuleAuthArgs> auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder auth(ScaleRuleAuthArgs... auth) {
             return auth(List.of(auth));
         }
+
         public Builder queueLength(@Nullable Output<Integer> queueLength) {
-            this.queueLength = queueLength;
+            $.queueLength = queueLength;
             return this;
         }
-        public Builder queueLength(@Nullable Integer queueLength) {
-            this.queueLength = Codegen.ofNullable(queueLength);
-            return this;
+
+        public Builder queueLength(Integer queueLength) {
+            return queueLength(Output.of(queueLength));
         }
+
         public Builder queueName(@Nullable Output<String> queueName) {
-            this.queueName = queueName;
+            $.queueName = queueName;
             return this;
         }
-        public Builder queueName(@Nullable String queueName) {
-            this.queueName = Codegen.ofNullable(queueName);
-            return this;
-        }        public QueueScaleRuleArgs build() {
-            return new QueueScaleRuleArgs(auth, queueLength, queueName);
+
+        public Builder queueName(String queueName) {
+            return queueName(Output.of(queueName));
+        }
+
+        public QueueScaleRuleArgs build() {
+            return $;
         }
     }
+
 }

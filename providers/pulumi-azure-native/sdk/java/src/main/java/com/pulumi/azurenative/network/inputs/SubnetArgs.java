@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +36,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefix")
-      private final @Nullable Output<String> addressPrefix;
+    private @Nullable Output<String> addressPrefix;
 
-    public Output<String> addressPrefix() {
-        return this.addressPrefix == null ? Codegen.empty() : this.addressPrefix;
+    public Optional<Output<String>> addressPrefix() {
+        return Optional.ofNullable(this.addressPrefix);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressPrefixes")
-      private final @Nullable Output<List<String>> addressPrefixes;
+    private @Nullable Output<List<String>> addressPrefixes;
 
-    public Output<List<String>> addressPrefixes() {
-        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
+    public Optional<Output<List<String>>> addressPrefixes() {
+        return Optional.ofNullable(this.addressPrefixes);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="applicationGatewayIpConfigurations")
-      private final @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
+    private @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
 
-    public Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations() {
-        return this.applicationGatewayIpConfigurations == null ? Codegen.empty() : this.applicationGatewayIpConfigurations;
+    public Optional<Output<List<ApplicationGatewayIPConfigurationArgs>>> applicationGatewayIpConfigurations() {
+        return Optional.ofNullable(this.applicationGatewayIpConfigurations);
     }
 
     /**
@@ -68,10 +69,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delegations")
-      private final @Nullable Output<List<DelegationArgs>> delegations;
+    private @Nullable Output<List<DelegationArgs>> delegations;
 
-    public Output<List<DelegationArgs>> delegations() {
-        return this.delegations == null ? Codegen.empty() : this.delegations;
+    public Optional<Output<List<DelegationArgs>>> delegations() {
+        return Optional.ofNullable(this.delegations);
     }
 
     /**
@@ -79,10 +80,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -90,10 +91,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAllocations")
-      private final @Nullable Output<List<SubResourceArgs>> ipAllocations;
+    private @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
-    public Output<List<SubResourceArgs>> ipAllocations() {
-        return this.ipAllocations == null ? Codegen.empty() : this.ipAllocations;
+    public Optional<Output<List<SubResourceArgs>>> ipAllocations() {
+        return Optional.ofNullable(this.ipAllocations);
     }
 
     /**
@@ -101,10 +102,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -112,10 +113,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="natGateway")
-      private final @Nullable Output<SubResourceArgs> natGateway;
+    private @Nullable Output<SubResourceArgs> natGateway;
 
-    public Output<SubResourceArgs> natGateway() {
-        return this.natGateway == null ? Codegen.empty() : this.natGateway;
+    public Optional<Output<SubResourceArgs>> natGateway() {
+        return Optional.ofNullable(this.natGateway);
     }
 
     /**
@@ -123,10 +124,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkSecurityGroup")
-      private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
+    private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
-    public Output<NetworkSecurityGroupArgs> networkSecurityGroup() {
-        return this.networkSecurityGroup == null ? Codegen.empty() : this.networkSecurityGroup;
+    public Optional<Output<NetworkSecurityGroupArgs>> networkSecurityGroup() {
+        return Optional.ofNullable(this.networkSecurityGroup);
     }
 
     /**
@@ -134,10 +135,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateEndpointNetworkPolicies")
-      private final @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
+    private @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
 
-    public Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies() {
-        return this.privateEndpointNetworkPolicies == null ? Codegen.empty() : this.privateEndpointNetworkPolicies;
+    public Optional<Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>>> privateEndpointNetworkPolicies() {
+        return Optional.ofNullable(this.privateEndpointNetworkPolicies);
     }
 
     /**
@@ -145,10 +146,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="privateLinkServiceNetworkPolicies")
-      private final @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
+    private @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
 
-    public Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies() {
-        return this.privateLinkServiceNetworkPolicies == null ? Codegen.empty() : this.privateLinkServiceNetworkPolicies;
+    public Optional<Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>>> privateLinkServiceNetworkPolicies() {
+        return Optional.ofNullable(this.privateLinkServiceNetworkPolicies);
     }
 
     /**
@@ -156,10 +157,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routeTable")
-      private final @Nullable Output<RouteTableArgs> routeTable;
+    private @Nullable Output<RouteTableArgs> routeTable;
 
-    public Output<RouteTableArgs> routeTable() {
-        return this.routeTable == null ? Codegen.empty() : this.routeTable;
+    public Optional<Output<RouteTableArgs>> routeTable() {
+        return Optional.ofNullable(this.routeTable);
     }
 
     /**
@@ -167,10 +168,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceEndpointPolicies")
-      private final @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
+    private @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
 
-    public Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies() {
-        return this.serviceEndpointPolicies == null ? Codegen.empty() : this.serviceEndpointPolicies;
+    public Optional<Output<List<ServiceEndpointPolicyArgs>>> serviceEndpointPolicies() {
+        return Optional.ofNullable(this.serviceEndpointPolicies);
     }
 
     /**
@@ -178,10 +179,10 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceEndpoints")
-      private final @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
+    private @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
 
-    public Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints() {
-        return this.serviceEndpoints == null ? Codegen.empty() : this.serviceEndpoints;
+    public Optional<Output<List<ServiceEndpointPropertiesFormatArgs>>> serviceEndpoints() {
+        return Optional.ofNullable(this.serviceEndpoints);
     }
 
     /**
@@ -189,250 +190,214 @@ public final class SubnetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SubnetArgs(
-        @Nullable Output<String> addressPrefix,
-        @Nullable Output<List<String>> addressPrefixes,
-        @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations,
-        @Nullable Output<List<DelegationArgs>> delegations,
-        @Nullable Output<String> id,
-        @Nullable Output<List<SubResourceArgs>> ipAllocations,
-        @Nullable Output<String> name,
-        @Nullable Output<SubResourceArgs> natGateway,
-        @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup,
-        @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies,
-        @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies,
-        @Nullable Output<RouteTableArgs> routeTable,
-        @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies,
-        @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints,
-        @Nullable Output<String> type) {
-        this.addressPrefix = addressPrefix;
-        this.addressPrefixes = addressPrefixes;
-        this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
-        this.delegations = delegations;
-        this.id = id;
-        this.ipAllocations = ipAllocations;
-        this.name = name;
-        this.natGateway = natGateway;
-        this.networkSecurityGroup = networkSecurityGroup;
-        this.privateEndpointNetworkPolicies = Codegen.stringProp("privateEndpointNetworkPolicies").left(VirtualNetworkPrivateEndpointNetworkPolicies.class).output().arg(privateEndpointNetworkPolicies).def("Enabled").getNullable();
-        this.privateLinkServiceNetworkPolicies = Codegen.stringProp("privateLinkServiceNetworkPolicies").left(VirtualNetworkPrivateLinkServiceNetworkPolicies.class).output().arg(privateLinkServiceNetworkPolicies).def("Enabled").getNullable();
-        this.routeTable = routeTable;
-        this.serviceEndpointPolicies = serviceEndpointPolicies;
-        this.serviceEndpoints = serviceEndpoints;
-        this.type = type;
-    }
+    private SubnetArgs() {}
 
-    private SubnetArgs() {
-        this.addressPrefix = Codegen.empty();
-        this.addressPrefixes = Codegen.empty();
-        this.applicationGatewayIpConfigurations = Codegen.empty();
-        this.delegations = Codegen.empty();
-        this.id = Codegen.empty();
-        this.ipAllocations = Codegen.empty();
-        this.name = Codegen.empty();
-        this.natGateway = Codegen.empty();
-        this.networkSecurityGroup = Codegen.empty();
-        this.privateEndpointNetworkPolicies = Codegen.empty();
-        this.privateLinkServiceNetworkPolicies = Codegen.empty();
-        this.routeTable = Codegen.empty();
-        this.serviceEndpointPolicies = Codegen.empty();
-        this.serviceEndpoints = Codegen.empty();
-        this.type = Codegen.empty();
+    private SubnetArgs(SubnetArgs $) {
+        this.addressPrefix = $.addressPrefix;
+        this.addressPrefixes = $.addressPrefixes;
+        this.applicationGatewayIpConfigurations = $.applicationGatewayIpConfigurations;
+        this.delegations = $.delegations;
+        this.id = $.id;
+        this.ipAllocations = $.ipAllocations;
+        this.name = $.name;
+        this.natGateway = $.natGateway;
+        this.networkSecurityGroup = $.networkSecurityGroup;
+        this.privateEndpointNetworkPolicies = $.privateEndpointNetworkPolicies;
+        this.privateLinkServiceNetworkPolicies = $.privateLinkServiceNetworkPolicies;
+        this.routeTable = $.routeTable;
+        this.serviceEndpointPolicies = $.serviceEndpointPolicies;
+        this.serviceEndpoints = $.serviceEndpoints;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressPrefix;
-        private @Nullable Output<List<String>> addressPrefixes;
-        private @Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations;
-        private @Nullable Output<List<DelegationArgs>> delegations;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<SubResourceArgs>> ipAllocations;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SubResourceArgs> natGateway;
-        private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
-        private @Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies;
-        private @Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies;
-        private @Nullable Output<RouteTableArgs> routeTable;
-        private @Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies;
-        private @Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints;
-        private @Nullable Output<String> type;
+        private SubnetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetArgs();
         }
 
         public Builder(SubnetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressPrefix = defaults.addressPrefix;
-    	      this.addressPrefixes = defaults.addressPrefixes;
-    	      this.applicationGatewayIpConfigurations = defaults.applicationGatewayIpConfigurations;
-    	      this.delegations = defaults.delegations;
-    	      this.id = defaults.id;
-    	      this.ipAllocations = defaults.ipAllocations;
-    	      this.name = defaults.name;
-    	      this.natGateway = defaults.natGateway;
-    	      this.networkSecurityGroup = defaults.networkSecurityGroup;
-    	      this.privateEndpointNetworkPolicies = defaults.privateEndpointNetworkPolicies;
-    	      this.privateLinkServiceNetworkPolicies = defaults.privateLinkServiceNetworkPolicies;
-    	      this.routeTable = defaults.routeTable;
-    	      this.serviceEndpointPolicies = defaults.serviceEndpointPolicies;
-    	      this.serviceEndpoints = defaults.serviceEndpoints;
-    	      this.type = defaults.type;
+            $ = new SubnetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
-            this.addressPrefix = addressPrefix;
+            $.addressPrefix = addressPrefix;
             return this;
         }
-        public Builder addressPrefix(@Nullable String addressPrefix) {
-            this.addressPrefix = Codegen.ofNullable(addressPrefix);
-            return this;
+
+        public Builder addressPrefix(String addressPrefix) {
+            return addressPrefix(Output.of(addressPrefix));
         }
+
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
-            this.addressPrefixes = addressPrefixes;
+            $.addressPrefixes = addressPrefixes;
             return this;
         }
-        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
-            return this;
+
+        public Builder addressPrefixes(List<String> addressPrefixes) {
+            return addressPrefixes(Output.of(addressPrefixes));
         }
+
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
+
         public Builder applicationGatewayIpConfigurations(@Nullable Output<List<ApplicationGatewayIPConfigurationArgs>> applicationGatewayIpConfigurations) {
-            this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
+            $.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;
             return this;
         }
-        public Builder applicationGatewayIpConfigurations(@Nullable List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
-            this.applicationGatewayIpConfigurations = Codegen.ofNullable(applicationGatewayIpConfigurations);
-            return this;
+
+        public Builder applicationGatewayIpConfigurations(List<ApplicationGatewayIPConfigurationArgs> applicationGatewayIpConfigurations) {
+            return applicationGatewayIpConfigurations(Output.of(applicationGatewayIpConfigurations));
         }
+
         public Builder applicationGatewayIpConfigurations(ApplicationGatewayIPConfigurationArgs... applicationGatewayIpConfigurations) {
             return applicationGatewayIpConfigurations(List.of(applicationGatewayIpConfigurations));
         }
+
         public Builder delegations(@Nullable Output<List<DelegationArgs>> delegations) {
-            this.delegations = delegations;
+            $.delegations = delegations;
             return this;
         }
-        public Builder delegations(@Nullable List<DelegationArgs> delegations) {
-            this.delegations = Codegen.ofNullable(delegations);
-            return this;
+
+        public Builder delegations(List<DelegationArgs> delegations) {
+            return delegations(Output.of(delegations));
         }
+
         public Builder delegations(DelegationArgs... delegations) {
             return delegations(List.of(delegations));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
-            this.ipAllocations = ipAllocations;
+            $.ipAllocations = ipAllocations;
             return this;
         }
-        public Builder ipAllocations(@Nullable List<SubResourceArgs> ipAllocations) {
-            this.ipAllocations = Codegen.ofNullable(ipAllocations);
-            return this;
+
+        public Builder ipAllocations(List<SubResourceArgs> ipAllocations) {
+            return ipAllocations(Output.of(ipAllocations));
         }
+
         public Builder ipAllocations(SubResourceArgs... ipAllocations) {
             return ipAllocations(List.of(ipAllocations));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder natGateway(@Nullable Output<SubResourceArgs> natGateway) {
-            this.natGateway = natGateway;
+            $.natGateway = natGateway;
             return this;
         }
-        public Builder natGateway(@Nullable SubResourceArgs natGateway) {
-            this.natGateway = Codegen.ofNullable(natGateway);
-            return this;
+
+        public Builder natGateway(SubResourceArgs natGateway) {
+            return natGateway(Output.of(natGateway));
         }
+
         public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
-            this.networkSecurityGroup = networkSecurityGroup;
+            $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
-        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
-            this.networkSecurityGroup = Codegen.ofNullable(networkSecurityGroup);
-            return this;
+
+        public Builder networkSecurityGroup(NetworkSecurityGroupArgs networkSecurityGroup) {
+            return networkSecurityGroup(Output.of(networkSecurityGroup));
         }
+
         public Builder privateEndpointNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateEndpointNetworkPolicies>> privateEndpointNetworkPolicies) {
-            this.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
+            $.privateEndpointNetworkPolicies = privateEndpointNetworkPolicies;
             return this;
         }
-        public Builder privateEndpointNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
-            this.privateEndpointNetworkPolicies = Codegen.ofNullable(privateEndpointNetworkPolicies);
-            return this;
+
+        public Builder privateEndpointNetworkPolicies(Either<String,VirtualNetworkPrivateEndpointNetworkPolicies> privateEndpointNetworkPolicies) {
+            return privateEndpointNetworkPolicies(Output.of(privateEndpointNetworkPolicies));
         }
+
         public Builder privateLinkServiceNetworkPolicies(@Nullable Output<Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies>> privateLinkServiceNetworkPolicies) {
-            this.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
+            $.privateLinkServiceNetworkPolicies = privateLinkServiceNetworkPolicies;
             return this;
         }
-        public Builder privateLinkServiceNetworkPolicies(@Nullable Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
-            this.privateLinkServiceNetworkPolicies = Codegen.ofNullable(privateLinkServiceNetworkPolicies);
-            return this;
+
+        public Builder privateLinkServiceNetworkPolicies(Either<String,VirtualNetworkPrivateLinkServiceNetworkPolicies> privateLinkServiceNetworkPolicies) {
+            return privateLinkServiceNetworkPolicies(Output.of(privateLinkServiceNetworkPolicies));
         }
+
         public Builder routeTable(@Nullable Output<RouteTableArgs> routeTable) {
-            this.routeTable = routeTable;
+            $.routeTable = routeTable;
             return this;
         }
-        public Builder routeTable(@Nullable RouteTableArgs routeTable) {
-            this.routeTable = Codegen.ofNullable(routeTable);
-            return this;
+
+        public Builder routeTable(RouteTableArgs routeTable) {
+            return routeTable(Output.of(routeTable));
         }
+
         public Builder serviceEndpointPolicies(@Nullable Output<List<ServiceEndpointPolicyArgs>> serviceEndpointPolicies) {
-            this.serviceEndpointPolicies = serviceEndpointPolicies;
+            $.serviceEndpointPolicies = serviceEndpointPolicies;
             return this;
         }
-        public Builder serviceEndpointPolicies(@Nullable List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
-            this.serviceEndpointPolicies = Codegen.ofNullable(serviceEndpointPolicies);
-            return this;
+
+        public Builder serviceEndpointPolicies(List<ServiceEndpointPolicyArgs> serviceEndpointPolicies) {
+            return serviceEndpointPolicies(Output.of(serviceEndpointPolicies));
         }
+
         public Builder serviceEndpointPolicies(ServiceEndpointPolicyArgs... serviceEndpointPolicies) {
             return serviceEndpointPolicies(List.of(serviceEndpointPolicies));
         }
+
         public Builder serviceEndpoints(@Nullable Output<List<ServiceEndpointPropertiesFormatArgs>> serviceEndpoints) {
-            this.serviceEndpoints = serviceEndpoints;
+            $.serviceEndpoints = serviceEndpoints;
             return this;
         }
-        public Builder serviceEndpoints(@Nullable List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
-            this.serviceEndpoints = Codegen.ofNullable(serviceEndpoints);
-            return this;
+
+        public Builder serviceEndpoints(List<ServiceEndpointPropertiesFormatArgs> serviceEndpoints) {
+            return serviceEndpoints(Output.of(serviceEndpoints));
         }
+
         public Builder serviceEndpoints(ServiceEndpointPropertiesFormatArgs... serviceEndpoints) {
             return serviceEndpoints(List.of(serviceEndpoints));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SubnetArgs build() {
-            return new SubnetArgs(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, id, ipAllocations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateLinkServiceNetworkPolicies, routeTable, serviceEndpointPolicies, serviceEndpoints, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public SubnetArgs build() {
+            $.privateEndpointNetworkPolicies = Codegen.stringProp("privateEndpointNetworkPolicies").left(VirtualNetworkPrivateEndpointNetworkPolicies.class).output().arg($.privateEndpointNetworkPolicies).def("Enabled").getNullable();
+            $.privateLinkServiceNetworkPolicies = Codegen.stringProp("privateLinkServiceNetworkPolicies").left(VirtualNetworkPrivateLinkServiceNetworkPolicies.class).output().arg($.privateLinkServiceNetworkPolicies).def("Enabled").getNullable();
+            return $;
         }
     }
+
 }

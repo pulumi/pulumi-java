@@ -17,45 +17,45 @@ public final class ListIngestionSettingConnectionStringsArgs extends com.pulumi.
      * 
      */
     @Import(name="ingestionSettingName", required=true)
-      private final String ingestionSettingName;
+    private String ingestionSettingName;
 
     public String ingestionSettingName() {
         return this.ingestionSettingName;
     }
 
-    public ListIngestionSettingConnectionStringsArgs(String ingestionSettingName) {
-        this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
-    }
+    private ListIngestionSettingConnectionStringsArgs() {}
 
-    private ListIngestionSettingConnectionStringsArgs() {
-        this.ingestionSettingName = null;
+    private ListIngestionSettingConnectionStringsArgs(ListIngestionSettingConnectionStringsArgs $) {
+        this.ingestionSettingName = $.ingestionSettingName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListIngestionSettingConnectionStringsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ingestionSettingName;
+        private ListIngestionSettingConnectionStringsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListIngestionSettingConnectionStringsArgs();
         }
 
         public Builder(ListIngestionSettingConnectionStringsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestionSettingName = defaults.ingestionSettingName;
+            $ = new ListIngestionSettingConnectionStringsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestionSettingName(String ingestionSettingName) {
-            this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
+            $.ingestionSettingName = ingestionSettingName;
             return this;
-        }        public ListIngestionSettingConnectionStringsArgs build() {
-            return new ListIngestionSettingConnectionStringsArgs(ingestionSettingName);
+        }
+
+        public ListIngestionSettingConnectionStringsArgs build() {
+            $.ingestionSettingName = Objects.requireNonNull($.ingestionSettingName, "expected parameter 'ingestionSettingName' to be non-null");
+            return $;
         }
     }
+
 }

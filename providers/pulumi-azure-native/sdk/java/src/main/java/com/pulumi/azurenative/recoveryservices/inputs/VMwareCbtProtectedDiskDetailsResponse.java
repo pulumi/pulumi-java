@@ -24,7 +24,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="capacityInBytes", required=true)
-      private final Double capacityInBytes;
+    private Double capacityInBytes;
 
     public Double capacityInBytes() {
         return this.capacityInBytes;
@@ -35,7 +35,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskId", required=true)
-      private final String diskId;
+    private String diskId;
 
     public String diskId() {
         return this.diskId;
@@ -46,7 +46,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -57,7 +57,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskPath", required=true)
-      private final String diskPath;
+    private String diskPath;
 
     public String diskPath() {
         return this.diskPath;
@@ -68,10 +68,10 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="diskType")
-      private final @Nullable String diskType;
+    private @Nullable String diskType;
 
     public Optional<String> diskType() {
-        return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="isOSDisk", required=true)
-      private final String isOSDisk;
+    private String isOSDisk;
 
     public String isOSDisk() {
         return this.isOSDisk;
@@ -90,7 +90,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="logStorageAccountId", required=true)
-      private final String logStorageAccountId;
+    private String logStorageAccountId;
 
     public String logStorageAccountId() {
         return this.logStorageAccountId;
@@ -101,7 +101,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="logStorageAccountSasSecretName", required=true)
-      private final String logStorageAccountSasSecretName;
+    private String logStorageAccountSasSecretName;
 
     public String logStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
@@ -112,7 +112,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="seedManagedDiskId", required=true)
-      private final String seedManagedDiskId;
+    private String seedManagedDiskId;
 
     public String seedManagedDiskId() {
         return this.seedManagedDiskId;
@@ -123,127 +123,107 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends com.pulumi.reso
      * 
      */
     @Import(name="targetManagedDiskId", required=true)
-      private final String targetManagedDiskId;
+    private String targetManagedDiskId;
 
     public String targetManagedDiskId() {
         return this.targetManagedDiskId;
     }
 
-    public VMwareCbtProtectedDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskId,
-        String diskName,
-        String diskPath,
-        @Nullable String diskType,
-        String isOSDisk,
-        String logStorageAccountId,
-        String logStorageAccountSasSecretName,
-        String seedManagedDiskId,
-        String targetManagedDiskId) {
-        this.capacityInBytes = Objects.requireNonNull(capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
-        this.diskId = Objects.requireNonNull(diskId, "expected parameter 'diskId' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskPath = Objects.requireNonNull(diskPath, "expected parameter 'diskPath' to be non-null");
-        this.diskType = diskType;
-        this.isOSDisk = Objects.requireNonNull(isOSDisk, "expected parameter 'isOSDisk' to be non-null");
-        this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
-        this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName, "expected parameter 'logStorageAccountSasSecretName' to be non-null");
-        this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId, "expected parameter 'seedManagedDiskId' to be non-null");
-        this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId, "expected parameter 'targetManagedDiskId' to be non-null");
-    }
+    private VMwareCbtProtectedDiskDetailsResponse() {}
 
-    private VMwareCbtProtectedDiskDetailsResponse() {
-        this.capacityInBytes = null;
-        this.diskId = null;
-        this.diskName = null;
-        this.diskPath = null;
-        this.diskType = null;
-        this.isOSDisk = null;
-        this.logStorageAccountId = null;
-        this.logStorageAccountSasSecretName = null;
-        this.seedManagedDiskId = null;
-        this.targetManagedDiskId = null;
+    private VMwareCbtProtectedDiskDetailsResponse(VMwareCbtProtectedDiskDetailsResponse $) {
+        this.capacityInBytes = $.capacityInBytes;
+        this.diskId = $.diskId;
+        this.diskName = $.diskName;
+        this.diskPath = $.diskPath;
+        this.diskType = $.diskType;
+        this.isOSDisk = $.isOSDisk;
+        this.logStorageAccountId = $.logStorageAccountId;
+        this.logStorageAccountSasSecretName = $.logStorageAccountSasSecretName;
+        this.seedManagedDiskId = $.seedManagedDiskId;
+        this.targetManagedDiskId = $.targetManagedDiskId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VMwareCbtProtectedDiskDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double capacityInBytes;
-        private String diskId;
-        private String diskName;
-        private String diskPath;
-        private @Nullable String diskType;
-        private String isOSDisk;
-        private String logStorageAccountId;
-        private String logStorageAccountSasSecretName;
-        private String seedManagedDiskId;
-        private String targetManagedDiskId;
+        private VMwareCbtProtectedDiskDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VMwareCbtProtectedDiskDetailsResponse();
         }
 
         public Builder(VMwareCbtProtectedDiskDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacityInBytes = defaults.capacityInBytes;
-    	      this.diskId = defaults.diskId;
-    	      this.diskName = defaults.diskName;
-    	      this.diskPath = defaults.diskPath;
-    	      this.diskType = defaults.diskType;
-    	      this.isOSDisk = defaults.isOSDisk;
-    	      this.logStorageAccountId = defaults.logStorageAccountId;
-    	      this.logStorageAccountSasSecretName = defaults.logStorageAccountSasSecretName;
-    	      this.seedManagedDiskId = defaults.seedManagedDiskId;
-    	      this.targetManagedDiskId = defaults.targetManagedDiskId;
+            $ = new VMwareCbtProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder capacityInBytes(Double capacityInBytes) {
-            this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
+            $.capacityInBytes = capacityInBytes;
             return this;
         }
+
         public Builder diskId(String diskId) {
-            this.diskId = Objects.requireNonNull(diskId);
+            $.diskId = diskId;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskPath(String diskPath) {
-            this.diskPath = Objects.requireNonNull(diskPath);
+            $.diskPath = diskPath;
             return this;
         }
+
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
+
         public Builder isOSDisk(String isOSDisk) {
-            this.isOSDisk = Objects.requireNonNull(isOSDisk);
+            $.isOSDisk = isOSDisk;
             return this;
         }
+
         public Builder logStorageAccountId(String logStorageAccountId) {
-            this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
+            $.logStorageAccountId = logStorageAccountId;
             return this;
         }
+
         public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
-            this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
+            $.logStorageAccountSasSecretName = logStorageAccountSasSecretName;
             return this;
         }
+
         public Builder seedManagedDiskId(String seedManagedDiskId) {
-            this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
+            $.seedManagedDiskId = seedManagedDiskId;
             return this;
         }
+
         public Builder targetManagedDiskId(String targetManagedDiskId) {
-            this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
+            $.targetManagedDiskId = targetManagedDiskId;
             return this;
-        }        public VMwareCbtProtectedDiskDetailsResponse build() {
-            return new VMwareCbtProtectedDiskDetailsResponse(capacityInBytes, diskId, diskName, diskPath, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName, seedManagedDiskId, targetManagedDiskId);
+        }
+
+        public VMwareCbtProtectedDiskDetailsResponse build() {
+            $.capacityInBytes = Objects.requireNonNull($.capacityInBytes, "expected parameter 'capacityInBytes' to be non-null");
+            $.diskId = Objects.requireNonNull($.diskId, "expected parameter 'diskId' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskPath = Objects.requireNonNull($.diskPath, "expected parameter 'diskPath' to be non-null");
+            $.isOSDisk = Objects.requireNonNull($.isOSDisk, "expected parameter 'isOSDisk' to be non-null");
+            $.logStorageAccountId = Objects.requireNonNull($.logStorageAccountId, "expected parameter 'logStorageAccountId' to be non-null");
+            $.logStorageAccountSasSecretName = Objects.requireNonNull($.logStorageAccountSasSecretName, "expected parameter 'logStorageAccountSasSecretName' to be non-null");
+            $.seedManagedDiskId = Objects.requireNonNull($.seedManagedDiskId, "expected parameter 'seedManagedDiskId' to be non-null");
+            $.targetManagedDiskId = Objects.requireNonNull($.targetManagedDiskId, "expected parameter 'targetManagedDiskId' to be non-null");
+            return $;
         }
     }
+
 }

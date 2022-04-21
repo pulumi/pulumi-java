@@ -5,11 +5,11 @@ package com.pulumi.aws.serverlessrepository;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="applicationId", required=true)
-      private final Output<String> applicationId;
+    private Output<String> applicationId;
 
     public Output<String> applicationId() {
         return this.applicationId;
@@ -33,7 +33,7 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="capabilities", required=true)
-      private final Output<List<String>> capabilities;
+    private Output<List<String>> capabilities;
 
     public Output<List<String>> capabilities() {
         return this.capabilities;
@@ -44,10 +44,10 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="semanticVersion")
-      private final @Nullable Output<String> semanticVersion;
+    private @Nullable Output<String> semanticVersion;
 
-    public Output<String> semanticVersion() {
-        return this.semanticVersion == null ? Codegen.empty() : this.semanticVersion;
+    public Optional<Output<String>> semanticVersion() {
+        return Optional.ofNullable(this.semanticVersion);
     }
 
     /**
@@ -77,118 +77,104 @@ public final class CloudFormationStackArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CloudFormationStackArgs(
-        Output<String> applicationId,
-        Output<List<String>> capabilities,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> semanticVersion,
-        @Nullable Output<Map<String,String>> tags) {
-        this.applicationId = Objects.requireNonNull(applicationId, "expected parameter 'applicationId' to be non-null");
-        this.capabilities = Objects.requireNonNull(capabilities, "expected parameter 'capabilities' to be non-null");
-        this.name = name;
-        this.parameters = parameters;
-        this.semanticVersion = semanticVersion;
-        this.tags = tags;
-    }
+    private CloudFormationStackArgs() {}
 
-    private CloudFormationStackArgs() {
-        this.applicationId = Codegen.empty();
-        this.capabilities = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.semanticVersion = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CloudFormationStackArgs(CloudFormationStackArgs $) {
+        this.applicationId = $.applicationId;
+        this.capabilities = $.capabilities;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.semanticVersion = $.semanticVersion;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudFormationStackArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> applicationId;
-        private Output<List<String>> capabilities;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> semanticVersion;
-        private @Nullable Output<Map<String,String>> tags;
+        private CloudFormationStackArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudFormationStackArgs();
         }
 
         public Builder(CloudFormationStackArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.applicationId = defaults.applicationId;
-    	      this.capabilities = defaults.capabilities;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.semanticVersion = defaults.semanticVersion;
-    	      this.tags = defaults.tags;
+            $ = new CloudFormationStackArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder applicationId(Output<String> applicationId) {
-            this.applicationId = Objects.requireNonNull(applicationId);
+            $.applicationId = applicationId;
             return this;
         }
+
         public Builder applicationId(String applicationId) {
-            this.applicationId = Output.of(Objects.requireNonNull(applicationId));
-            return this;
+            return applicationId(Output.of(applicationId));
         }
+
         public Builder capabilities(Output<List<String>> capabilities) {
-            this.capabilities = Objects.requireNonNull(capabilities);
+            $.capabilities = capabilities;
             return this;
         }
+
         public Builder capabilities(List<String> capabilities) {
-            this.capabilities = Output.of(Objects.requireNonNull(capabilities));
-            return this;
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder semanticVersion(@Nullable Output<String> semanticVersion) {
-            this.semanticVersion = semanticVersion;
+            $.semanticVersion = semanticVersion;
             return this;
         }
-        public Builder semanticVersion(@Nullable String semanticVersion) {
-            this.semanticVersion = Codegen.ofNullable(semanticVersion);
-            return this;
+
+        public Builder semanticVersion(String semanticVersion) {
+            return semanticVersion(Output.of(semanticVersion));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public CloudFormationStackArgs build() {
-            return new CloudFormationStackArgs(applicationId, capabilities, name, parameters, semanticVersion, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public CloudFormationStackArgs build() {
+            $.applicationId = Objects.requireNonNull($.applicationId, "expected parameter 'applicationId' to be non-null");
+            $.capabilities = Objects.requireNonNull($.capabilities, "expected parameter 'capabilities' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,9 +6,9 @@ package com.pulumi.azurenative.attestation.inputs;
 import com.pulumi.azurenative.attestation.inputs.JSONWebKeyArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class JSONWebKeySetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keys")
-      private final @Nullable Output<List<JSONWebKeyArgs>> keys;
+    private @Nullable Output<List<JSONWebKeyArgs>> keys;
 
-    public Output<List<JSONWebKeyArgs>> keys() {
-        return this.keys == null ? Codegen.empty() : this.keys;
+    public Optional<Output<List<JSONWebKeyArgs>>> keys() {
+        return Optional.ofNullable(this.keys);
     }
 
-    public JSONWebKeySetArgs(@Nullable Output<List<JSONWebKeyArgs>> keys) {
-        this.keys = keys;
-    }
+    private JSONWebKeySetArgs() {}
 
-    private JSONWebKeySetArgs() {
-        this.keys = Codegen.empty();
+    private JSONWebKeySetArgs(JSONWebKeySetArgs $) {
+        this.keys = $.keys;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JSONWebKeySetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<JSONWebKeyArgs>> keys;
+        private JSONWebKeySetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JSONWebKeySetArgs();
         }
 
         public Builder(JSONWebKeySetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keys = defaults.keys;
+            $ = new JSONWebKeySetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keys(@Nullable Output<List<JSONWebKeyArgs>> keys) {
-            this.keys = keys;
+            $.keys = keys;
             return this;
         }
-        public Builder keys(@Nullable List<JSONWebKeyArgs> keys) {
-            this.keys = Codegen.ofNullable(keys);
-            return this;
+
+        public Builder keys(List<JSONWebKeyArgs> keys) {
+            return keys(Output.of(keys));
         }
+
         public Builder keys(JSONWebKeyArgs... keys) {
             return keys(List.of(keys));
-        }        public JSONWebKeySetArgs build() {
-            return new JSONWebKeySetArgs(keys);
+        }
+
+        public JSONWebKeySetArgs build() {
+            return $;
         }
     }
+
 }

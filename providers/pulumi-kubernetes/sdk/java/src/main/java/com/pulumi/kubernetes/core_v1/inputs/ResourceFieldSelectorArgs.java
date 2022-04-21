@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="containerName")
-      private final @Nullable Output<String> containerName;
+    private @Nullable Output<String> containerName;
 
-    public Output<String> containerName() {
-        return this.containerName == null ? Codegen.empty() : this.containerName;
+    public Optional<Output<String>> containerName() {
+        return Optional.ofNullable(this.containerName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="divisor")
-      private final @Nullable Output<String> divisor;
+    private @Nullable Output<String> divisor;
 
-    public Output<String> divisor() {
-        return this.divisor == null ? Codegen.empty() : this.divisor;
+    public Optional<Output<String>> divisor() {
+        return Optional.ofNullable(this.divisor);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class ResourceFieldSelectorArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="resource", required=true)
-      private final Output<String> resource;
+    private Output<String> resource;
 
     public Output<String> resource() {
         return this.resource;
     }
 
-    public ResourceFieldSelectorArgs(
-        @Nullable Output<String> containerName,
-        @Nullable Output<String> divisor,
-        Output<String> resource) {
-        this.containerName = containerName;
-        this.divisor = divisor;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private ResourceFieldSelectorArgs() {}
 
-    private ResourceFieldSelectorArgs() {
-        this.containerName = Codegen.empty();
-        this.divisor = Codegen.empty();
-        this.resource = Codegen.empty();
+    private ResourceFieldSelectorArgs(ResourceFieldSelectorArgs $) {
+        this.containerName = $.containerName;
+        this.divisor = $.divisor;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceFieldSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> containerName;
-        private @Nullable Output<String> divisor;
-        private Output<String> resource;
+        private ResourceFieldSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceFieldSelectorArgs();
         }
 
         public Builder(ResourceFieldSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerName = defaults.containerName;
-    	      this.divisor = defaults.divisor;
-    	      this.resource = defaults.resource;
+            $ = new ResourceFieldSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerName(@Nullable Output<String> containerName) {
-            this.containerName = containerName;
+            $.containerName = containerName;
             return this;
         }
-        public Builder containerName(@Nullable String containerName) {
-            this.containerName = Codegen.ofNullable(containerName);
-            return this;
+
+        public Builder containerName(String containerName) {
+            return containerName(Output.of(containerName));
         }
+
         public Builder divisor(@Nullable Output<String> divisor) {
-            this.divisor = divisor;
+            $.divisor = divisor;
             return this;
         }
-        public Builder divisor(@Nullable String divisor) {
-            this.divisor = Codegen.ofNullable(divisor);
-            return this;
+
+        public Builder divisor(String divisor) {
+            return divisor(Output.of(divisor));
         }
+
         public Builder resource(Output<String> resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Output.of(Objects.requireNonNull(resource));
-            return this;
-        }        public ResourceFieldSelectorArgs build() {
-            return new ResourceFieldSelectorArgs(containerName, divisor, resource);
+            return resource(Output.of(resource));
+        }
+
+        public ResourceFieldSelectorArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

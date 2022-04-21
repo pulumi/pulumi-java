@@ -15,62 +15,58 @@ public final class GetTargetTcpProxyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTargetTcpProxyArgs Empty = new GetTargetTcpProxyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetTcpProxy", required=true)
-      private final String targetTcpProxy;
+    private String targetTcpProxy;
 
     public String targetTcpProxy() {
         return this.targetTcpProxy;
     }
 
-    public GetTargetTcpProxyArgs(
-        @Nullable String project,
-        String targetTcpProxy) {
-        this.project = project;
-        this.targetTcpProxy = Objects.requireNonNull(targetTcpProxy, "expected parameter 'targetTcpProxy' to be non-null");
-    }
+    private GetTargetTcpProxyArgs() {}
 
-    private GetTargetTcpProxyArgs() {
-        this.project = null;
-        this.targetTcpProxy = null;
+    private GetTargetTcpProxyArgs(GetTargetTcpProxyArgs $) {
+        this.project = $.project;
+        this.targetTcpProxy = $.targetTcpProxy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetTcpProxyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String targetTcpProxy;
+        private GetTargetTcpProxyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetTcpProxyArgs();
         }
 
         public Builder(GetTargetTcpProxyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.targetTcpProxy = defaults.targetTcpProxy;
+            $ = new GetTargetTcpProxyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetTcpProxy(String targetTcpProxy) {
-            this.targetTcpProxy = Objects.requireNonNull(targetTcpProxy);
+            $.targetTcpProxy = targetTcpProxy;
             return this;
-        }        public GetTargetTcpProxyArgs build() {
-            return new GetTargetTcpProxyArgs(project, targetTcpProxy);
+        }
+
+        public GetTargetTcpProxyArgs build() {
+            $.targetTcpProxy = Objects.requireNonNull($.targetTcpProxy, "expected parameter 'targetTcpProxy' to be non-null");
+            return $;
         }
     }
+
 }

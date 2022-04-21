@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GCEPersistentDiskVolumeSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="partition")
-      private final @Nullable Output<Integer> partition;
+    private @Nullable Output<Integer> partition;
 
-    public Output<Integer> partition() {
-        return this.partition == null ? Codegen.empty() : this.partition;
+    public Optional<Output<Integer>> partition() {
+        return Optional.ofNullable(this.partition);
     }
 
     /**
@@ -50,7 +50,7 @@ public final class GCEPersistentDiskVolumeSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="pdName", required=true)
-      private final Output<String> pdName;
+    private Output<String> pdName;
 
     public Output<String> pdName() {
         return this.pdName;
@@ -61,89 +61,79 @@ public final class GCEPersistentDiskVolumeSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public GCEPersistentDiskVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<Integer> partition,
-        Output<String> pdName,
-        @Nullable Output<Boolean> readOnly) {
-        this.fsType = fsType;
-        this.partition = partition;
-        this.pdName = Objects.requireNonNull(pdName, "expected parameter 'pdName' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private GCEPersistentDiskVolumeSourceArgs() {}
 
-    private GCEPersistentDiskVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.partition = Codegen.empty();
-        this.pdName = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private GCEPersistentDiskVolumeSourceArgs(GCEPersistentDiskVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.partition = $.partition;
+        this.pdName = $.pdName;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GCEPersistentDiskVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Integer> partition;
-        private Output<String> pdName;
-        private @Nullable Output<Boolean> readOnly;
+        private GCEPersistentDiskVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GCEPersistentDiskVolumeSourceArgs();
         }
 
         public Builder(GCEPersistentDiskVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.partition = defaults.partition;
-    	      this.pdName = defaults.pdName;
-    	      this.readOnly = defaults.readOnly;
+            $ = new GCEPersistentDiskVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder partition(@Nullable Output<Integer> partition) {
-            this.partition = partition;
+            $.partition = partition;
             return this;
         }
-        public Builder partition(@Nullable Integer partition) {
-            this.partition = Codegen.ofNullable(partition);
-            return this;
+
+        public Builder partition(Integer partition) {
+            return partition(Output.of(partition));
         }
+
         public Builder pdName(Output<String> pdName) {
-            this.pdName = Objects.requireNonNull(pdName);
+            $.pdName = pdName;
             return this;
         }
+
         public Builder pdName(String pdName) {
-            this.pdName = Output.of(Objects.requireNonNull(pdName));
-            return this;
+            return pdName(Output.of(pdName));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public GCEPersistentDiskVolumeSourceArgs build() {
-            return new GCEPersistentDiskVolumeSourceArgs(fsType, partition, pdName, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public GCEPersistentDiskVolumeSourceArgs build() {
+            $.pdName = Objects.requireNonNull($.pdName, "expected parameter 'pdName' to be non-null");
+            return $;
         }
     }
+
 }

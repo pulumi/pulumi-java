@@ -21,7 +21,7 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="errorCode", required=true)
-      private final String errorCode;
+    private String errorCode;
 
     public String errorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="mimeType", required=true)
-      private final String mimeType;
+    private String mimeType;
 
     public String mimeType() {
         return this.mimeType;
@@ -43,64 +43,59 @@ public final class ErrorHandlerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="staticFile", required=true)
-      private final String staticFile;
+    private String staticFile;
 
     public String staticFile() {
         return this.staticFile;
     }
 
-    public ErrorHandlerResponse(
-        String errorCode,
-        String mimeType,
-        String staticFile) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-        this.staticFile = Objects.requireNonNull(staticFile, "expected parameter 'staticFile' to be non-null");
-    }
+    private ErrorHandlerResponse() {}
 
-    private ErrorHandlerResponse() {
-        this.errorCode = null;
-        this.mimeType = null;
-        this.staticFile = null;
+    private ErrorHandlerResponse(ErrorHandlerResponse $) {
+        this.errorCode = $.errorCode;
+        this.mimeType = $.mimeType;
+        this.staticFile = $.staticFile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorHandlerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorCode;
-        private String mimeType;
-        private String staticFile;
+        private ErrorHandlerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorHandlerResponse();
         }
 
         public Builder(ErrorHandlerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.mimeType = defaults.mimeType;
-    	      this.staticFile = defaults.staticFile;
+            $ = new ErrorHandlerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(String errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
         }
+
         public Builder staticFile(String staticFile) {
-            this.staticFile = Objects.requireNonNull(staticFile);
+            $.staticFile = staticFile;
             return this;
-        }        public ErrorHandlerResponse build() {
-            return new ErrorHandlerResponse(errorCode, mimeType, staticFile);
+        }
+
+        public ErrorHandlerResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            $.staticFile = Objects.requireNonNull($.staticFile, "expected parameter 'staticFile' to be non-null");
+            return $;
         }
     }
+
 }

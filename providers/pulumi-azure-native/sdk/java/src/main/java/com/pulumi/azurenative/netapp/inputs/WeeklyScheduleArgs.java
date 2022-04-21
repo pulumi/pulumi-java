@@ -5,11 +5,11 @@ package com.pulumi.azurenative.netapp.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<String> day;
+    private @Nullable Output<String> day;
 
-    public Output<String> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<String>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="hour")
-      private final @Nullable Output<Integer> hour;
+    private @Nullable Output<Integer> hour;
 
-    public Output<Integer> hour() {
-        return this.hour == null ? Codegen.empty() : this.hour;
+    public Optional<Output<Integer>> hour() {
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="minute")
-      private final @Nullable Output<Integer> minute;
+    private @Nullable Output<Integer> minute;
 
-    public Output<Integer> minute() {
-        return this.minute == null ? Codegen.empty() : this.minute;
+    public Optional<Output<Integer>> minute() {
+        return Optional.ofNullable(this.minute);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="snapshotsToKeep")
-      private final @Nullable Output<Integer> snapshotsToKeep;
+    private @Nullable Output<Integer> snapshotsToKeep;
 
-    public Output<Integer> snapshotsToKeep() {
-        return this.snapshotsToKeep == null ? Codegen.empty() : this.snapshotsToKeep;
+    public Optional<Output<Integer>> snapshotsToKeep() {
+        return Optional.ofNullable(this.snapshotsToKeep);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class WeeklyScheduleArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="usedBytes")
-      private final @Nullable Output<Double> usedBytes;
+    private @Nullable Output<Double> usedBytes;
 
-    public Output<Double> usedBytes() {
-        return this.usedBytes == null ? Codegen.empty() : this.usedBytes;
+    public Optional<Output<Double>> usedBytes() {
+        return Optional.ofNullable(this.usedBytes);
     }
 
-    public WeeklyScheduleArgs(
-        @Nullable Output<String> day,
-        @Nullable Output<Integer> hour,
-        @Nullable Output<Integer> minute,
-        @Nullable Output<Integer> snapshotsToKeep,
-        @Nullable Output<Double> usedBytes) {
-        this.day = day;
-        this.hour = hour;
-        this.minute = minute;
-        this.snapshotsToKeep = snapshotsToKeep;
-        this.usedBytes = usedBytes;
-    }
+    private WeeklyScheduleArgs() {}
 
-    private WeeklyScheduleArgs() {
-        this.day = Codegen.empty();
-        this.hour = Codegen.empty();
-        this.minute = Codegen.empty();
-        this.snapshotsToKeep = Codegen.empty();
-        this.usedBytes = Codegen.empty();
+    private WeeklyScheduleArgs(WeeklyScheduleArgs $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.minute = $.minute;
+        this.snapshotsToKeep = $.snapshotsToKeep;
+        this.usedBytes = $.usedBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> day;
-        private @Nullable Output<Integer> hour;
-        private @Nullable Output<Integer> minute;
-        private @Nullable Output<Integer> snapshotsToKeep;
-        private @Nullable Output<Double> usedBytes;
+        private WeeklyScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyScheduleArgs();
         }
 
         public Builder(WeeklyScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.minute = defaults.minute;
-    	      this.snapshotsToKeep = defaults.snapshotsToKeep;
-    	      this.usedBytes = defaults.usedBytes;
+            $ = new WeeklyScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<String> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable String day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(String day) {
+            return day(Output.of(day));
         }
+
         public Builder hour(@Nullable Output<Integer> hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
-        public Builder hour(@Nullable Integer hour) {
-            this.hour = Codegen.ofNullable(hour);
-            return this;
+
+        public Builder hour(Integer hour) {
+            return hour(Output.of(hour));
         }
+
         public Builder minute(@Nullable Output<Integer> minute) {
-            this.minute = minute;
+            $.minute = minute;
             return this;
         }
-        public Builder minute(@Nullable Integer minute) {
-            this.minute = Codegen.ofNullable(minute);
-            return this;
+
+        public Builder minute(Integer minute) {
+            return minute(Output.of(minute));
         }
+
         public Builder snapshotsToKeep(@Nullable Output<Integer> snapshotsToKeep) {
-            this.snapshotsToKeep = snapshotsToKeep;
+            $.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
-        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
-            this.snapshotsToKeep = Codegen.ofNullable(snapshotsToKeep);
-            return this;
+
+        public Builder snapshotsToKeep(Integer snapshotsToKeep) {
+            return snapshotsToKeep(Output.of(snapshotsToKeep));
         }
+
         public Builder usedBytes(@Nullable Output<Double> usedBytes) {
-            this.usedBytes = usedBytes;
+            $.usedBytes = usedBytes;
             return this;
         }
-        public Builder usedBytes(@Nullable Double usedBytes) {
-            this.usedBytes = Codegen.ofNullable(usedBytes);
-            return this;
-        }        public WeeklyScheduleArgs build() {
-            return new WeeklyScheduleArgs(day, hour, minute, snapshotsToKeep, usedBytes);
+
+        public Builder usedBytes(Double usedBytes) {
+            return usedBytes(Output.of(usedBytes));
+        }
+
+        public WeeklyScheduleArgs build() {
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cores", required=true)
-      private final Integer cores;
+    private Integer cores;
 
     public Integer cores() {
         return this.cores;
@@ -36,10 +36,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="galleryImageResourceId")
-      private final @Nullable String galleryImageResourceId;
+    private @Nullable String galleryImageResourceId;
 
     public Optional<String> galleryImageResourceId() {
-        return this.galleryImageResourceId == null ? Optional.empty() : Optional.ofNullable(this.galleryImageResourceId);
+        return Optional.ofNullable(this.galleryImageResourceId);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -58,7 +58,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="imageName", required=true)
-      private final String imageName;
+    private String imageName;
 
     public String imageName() {
         return this.imageName;
@@ -69,7 +69,7 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="referenceVm", required=true)
-      private final ReferenceVmResponse referenceVm;
+    private ReferenceVmResponse referenceVm;
 
     public ReferenceVmResponse referenceVm() {
         return this.referenceVm;
@@ -80,91 +80,78 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="size")
-      private final @Nullable String size;
+    private @Nullable String size;
 
     public Optional<String> size() {
-        return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
+        return Optional.ofNullable(this.size);
     }
 
-    public ResourceSettingsResponse(
-        Integer cores,
-        @Nullable String galleryImageResourceId,
-        String id,
-        String imageName,
-        ReferenceVmResponse referenceVm,
-        @Nullable String size) {
-        this.cores = Objects.requireNonNull(cores, "expected parameter 'cores' to be non-null");
-        this.galleryImageResourceId = galleryImageResourceId;
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-        this.referenceVm = Objects.requireNonNull(referenceVm, "expected parameter 'referenceVm' to be non-null");
-        this.size = size;
-    }
+    private ResourceSettingsResponse() {}
 
-    private ResourceSettingsResponse() {
-        this.cores = null;
-        this.galleryImageResourceId = null;
-        this.id = null;
-        this.imageName = null;
-        this.referenceVm = null;
-        this.size = null;
+    private ResourceSettingsResponse(ResourceSettingsResponse $) {
+        this.cores = $.cores;
+        this.galleryImageResourceId = $.galleryImageResourceId;
+        this.id = $.id;
+        this.imageName = $.imageName;
+        this.referenceVm = $.referenceVm;
+        this.size = $.size;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer cores;
-        private @Nullable String galleryImageResourceId;
-        private String id;
-        private String imageName;
-        private ReferenceVmResponse referenceVm;
-        private @Nullable String size;
+        private ResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSettingsResponse();
         }
 
         public Builder(ResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cores = defaults.cores;
-    	      this.galleryImageResourceId = defaults.galleryImageResourceId;
-    	      this.id = defaults.id;
-    	      this.imageName = defaults.imageName;
-    	      this.referenceVm = defaults.referenceVm;
-    	      this.size = defaults.size;
+            $ = new ResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cores(Integer cores) {
-            this.cores = Objects.requireNonNull(cores);
+            $.cores = cores;
             return this;
         }
+
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
-            this.galleryImageResourceId = galleryImageResourceId;
+            $.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder referenceVm(ReferenceVmResponse referenceVm) {
-            this.referenceVm = Objects.requireNonNull(referenceVm);
+            $.referenceVm = referenceVm;
             return this;
         }
+
         public Builder size(@Nullable String size) {
-            this.size = size;
+            $.size = size;
             return this;
-        }        public ResourceSettingsResponse build() {
-            return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
+        }
+
+        public ResourceSettingsResponse build() {
+            $.cores = Objects.requireNonNull($.cores, "expected parameter 'cores' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            $.referenceVm = Objects.requireNonNull($.referenceVm, "expected parameter 'referenceVm' to be non-null");
+            return $;
         }
     }
+
 }

@@ -8,7 +8,6 @@ import com.pulumi.azurenative.powerbi.enums.AzureSkuTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +21,7 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<Either<String,AzureSkuName>> name;
+    private Output<Either<String,AzureSkuName>> name;
 
     public Output<Either<String,AzureSkuName>> name() {
         return this.name;
@@ -33,63 +32,60 @@ public final class AzureSkuArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<Either<String,AzureSkuTier>> tier;
+    private Output<Either<String,AzureSkuTier>> tier;
 
     public Output<Either<String,AzureSkuTier>> tier() {
         return this.tier;
     }
 
-    public AzureSkuArgs(
-        Output<Either<String,AzureSkuName>> name,
-        Output<Either<String,AzureSkuTier>> tier) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-    }
+    private AzureSkuArgs() {}
 
-    private AzureSkuArgs() {
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private AzureSkuArgs(AzureSkuArgs $) {
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureSkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Either<String,AzureSkuName>> name;
-        private Output<Either<String,AzureSkuTier>> tier;
+        private AzureSkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureSkuArgs();
         }
 
         public Builder(AzureSkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new AzureSkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<Either<String,AzureSkuName>> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(Either<String,AzureSkuName> name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder tier(Output<Either<String,AzureSkuTier>> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(Either<String,AzureSkuTier> tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
-        }        public AzureSkuArgs build() {
-            return new AzureSkuArgs(name, tier);
+            return tier(Output.of(tier));
+        }
+
+        public AzureSkuArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

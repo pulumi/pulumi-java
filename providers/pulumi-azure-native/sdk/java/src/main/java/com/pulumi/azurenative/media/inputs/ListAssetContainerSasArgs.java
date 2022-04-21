@@ -21,7 +21,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="assetName", required=true)
-      private final String assetName;
+    private String assetName;
 
     public String assetName() {
         return this.assetName;
@@ -43,10 +43,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="expiryTime")
-      private final @Nullable String expiryTime;
+    private @Nullable String expiryTime;
 
     public Optional<String> expiryTime() {
-        return this.expiryTime == null ? Optional.empty() : Optional.ofNullable(this.expiryTime);
+        return Optional.ofNullable(this.expiryTime);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="permissions")
-      private final @Nullable Either<String,AssetContainerPermission> permissions;
+    private @Nullable Either<String,AssetContainerPermission> permissions;
 
-    public Either<String,AssetContainerPermission> permissions() {
-        return this.permissions == null ? null : this.permissions;
+    public Optional<Either<String,AssetContainerPermission>> permissions() {
+        return Optional.ofNullable(this.permissions);
     }
 
     /**
@@ -65,82 +65,71 @@ public final class ListAssetContainerSasArgs extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListAssetContainerSasArgs(
-        String accountName,
-        String assetName,
-        @Nullable String expiryTime,
-        @Nullable Either<String,AssetContainerPermission> permissions,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.assetName = Objects.requireNonNull(assetName, "expected parameter 'assetName' to be non-null");
-        this.expiryTime = expiryTime;
-        this.permissions = permissions;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListAssetContainerSasArgs() {}
 
-    private ListAssetContainerSasArgs() {
-        this.accountName = null;
-        this.assetName = null;
-        this.expiryTime = null;
-        this.permissions = null;
-        this.resourceGroupName = null;
+    private ListAssetContainerSasArgs(ListAssetContainerSasArgs $) {
+        this.accountName = $.accountName;
+        this.assetName = $.assetName;
+        this.expiryTime = $.expiryTime;
+        this.permissions = $.permissions;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListAssetContainerSasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String assetName;
-        private @Nullable String expiryTime;
-        private @Nullable Either<String,AssetContainerPermission> permissions;
-        private String resourceGroupName;
+        private ListAssetContainerSasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListAssetContainerSasArgs();
         }
 
         public Builder(ListAssetContainerSasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.assetName = defaults.assetName;
-    	      this.expiryTime = defaults.expiryTime;
-    	      this.permissions = defaults.permissions;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListAssetContainerSasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder assetName(String assetName) {
-            this.assetName = Objects.requireNonNull(assetName);
+            $.assetName = assetName;
             return this;
         }
+
         public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = expiryTime;
+            $.expiryTime = expiryTime;
             return this;
         }
+
         public Builder permissions(@Nullable Either<String,AssetContainerPermission> permissions) {
-            this.permissions = permissions;
+            $.permissions = permissions;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListAssetContainerSasArgs build() {
-            return new ListAssetContainerSasArgs(accountName, assetName, expiryTime, permissions, resourceGroupName);
+        }
+
+        public ListAssetContainerSasArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.assetName = Objects.requireNonNull($.assetName, "expected parameter 'assetName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

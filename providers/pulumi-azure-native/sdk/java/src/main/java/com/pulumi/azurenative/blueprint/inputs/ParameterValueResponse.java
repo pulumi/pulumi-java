@@ -24,10 +24,10 @@ public final class ParameterValueResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="reference")
-      private final @Nullable SecretValueReferenceResponse reference;
+    private @Nullable SecretValueReferenceResponse reference;
 
     public Optional<SecretValueReferenceResponse> reference() {
-        return this.reference == null ? Optional.empty() : Optional.ofNullable(this.reference);
+        return Optional.ofNullable(this.reference);
     }
 
     /**
@@ -35,55 +35,50 @@ public final class ParameterValueResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="value")
-      private final @Nullable Object value;
+    private @Nullable Object value;
 
     public Optional<Object> value() {
-        return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
+        return Optional.ofNullable(this.value);
     }
 
-    public ParameterValueResponse(
-        @Nullable SecretValueReferenceResponse reference,
-        @Nullable Object value) {
-        this.reference = reference;
-        this.value = value;
-    }
+    private ParameterValueResponse() {}
 
-    private ParameterValueResponse() {
-        this.reference = null;
-        this.value = null;
+    private ParameterValueResponse(ParameterValueResponse $) {
+        this.reference = $.reference;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParameterValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable SecretValueReferenceResponse reference;
-        private @Nullable Object value;
+        private ParameterValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParameterValueResponse();
         }
 
         public Builder(ParameterValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reference = defaults.reference;
-    	      this.value = defaults.value;
+            $ = new ParameterValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder reference(@Nullable SecretValueReferenceResponse reference) {
-            this.reference = reference;
+            $.reference = reference;
             return this;
         }
+
         public Builder value(@Nullable Object value) {
-            this.value = value;
+            $.value = value;
             return this;
-        }        public ParameterValueResponse build() {
-            return new ParameterValueResponse(reference, value);
+        }
+
+        public ParameterValueResponse build() {
+            return $;
         }
     }
+
 }

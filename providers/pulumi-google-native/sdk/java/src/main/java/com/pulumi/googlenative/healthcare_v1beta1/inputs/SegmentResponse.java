@@ -22,7 +22,7 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fields", required=true)
-      private final Map<String,String> fields;
+    private Map<String,String> fields;
 
     public Map<String,String> fields() {
         return this.fields;
@@ -33,7 +33,7 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="segmentId", required=true)
-      private final String segmentId;
+    private String segmentId;
 
     public String segmentId() {
         return this.segmentId;
@@ -44,64 +44,59 @@ public final class SegmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="setId", required=true)
-      private final String setId;
+    private String setId;
 
     public String setId() {
         return this.setId;
     }
 
-    public SegmentResponse(
-        Map<String,String> fields,
-        String segmentId,
-        String setId) {
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.segmentId = Objects.requireNonNull(segmentId, "expected parameter 'segmentId' to be non-null");
-        this.setId = Objects.requireNonNull(setId, "expected parameter 'setId' to be non-null");
-    }
+    private SegmentResponse() {}
 
-    private SegmentResponse() {
-        this.fields = Map.of();
-        this.segmentId = null;
-        this.setId = null;
+    private SegmentResponse(SegmentResponse $) {
+        this.fields = $.fields;
+        this.segmentId = $.segmentId;
+        this.setId = $.setId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SegmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> fields;
-        private String segmentId;
-        private String setId;
+        private SegmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SegmentResponse();
         }
 
         public Builder(SegmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fields = defaults.fields;
-    	      this.segmentId = defaults.segmentId;
-    	      this.setId = defaults.setId;
+            $ = new SegmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fields(Map<String,String> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder segmentId(String segmentId) {
-            this.segmentId = Objects.requireNonNull(segmentId);
+            $.segmentId = segmentId;
             return this;
         }
+
         public Builder setId(String setId) {
-            this.setId = Objects.requireNonNull(setId);
+            $.setId = setId;
             return this;
-        }        public SegmentResponse build() {
-            return new SegmentResponse(fields, segmentId, setId);
+        }
+
+        public SegmentResponse build() {
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.segmentId = Objects.requireNonNull($.segmentId, "expected parameter 'segmentId' to be non-null");
+            $.setId = Objects.requireNonNull($.setId, "expected parameter 'setId' to be non-null");
+            return $;
         }
     }
+
 }

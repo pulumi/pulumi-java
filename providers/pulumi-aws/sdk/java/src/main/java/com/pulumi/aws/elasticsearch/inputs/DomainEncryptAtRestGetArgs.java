@@ -5,10 +5,10 @@ package com.pulumi.aws.elasticsearch.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class DomainEncryptAtRestGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="enabled", required=true)
-      private final Output<Boolean> enabled;
+    private Output<Boolean> enabled;
 
     public Output<Boolean> enabled() {
         return this.enabled;
@@ -32,63 +32,59 @@ public final class DomainEncryptAtRestGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
-    public DomainEncryptAtRestGetArgs(
-        Output<Boolean> enabled,
-        @Nullable Output<String> kmsKeyId) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-    }
+    private DomainEncryptAtRestGetArgs() {}
 
-    private DomainEncryptAtRestGetArgs() {
-        this.enabled = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
+    private DomainEncryptAtRestGetArgs(DomainEncryptAtRestGetArgs $) {
+        this.enabled = $.enabled;
+        this.kmsKeyId = $.kmsKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainEncryptAtRestGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Boolean> enabled;
-        private @Nullable Output<String> kmsKeyId;
+        private DomainEncryptAtRestGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainEncryptAtRestGetArgs();
         }
 
         public Builder(DomainEncryptAtRestGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.kmsKeyId = defaults.kmsKeyId;
+            $ = new DomainEncryptAtRestGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Output<Boolean> enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
         }
+
         public Builder enabled(Boolean enabled) {
-            this.enabled = Output.of(Objects.requireNonNull(enabled));
-            return this;
+            return enabled(Output.of(enabled));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
-        }        public DomainEncryptAtRestGetArgs build() {
-            return new DomainEncryptAtRestGetArgs(enabled, kmsKeyId);
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
+        }
+
+        public DomainEncryptAtRestGetArgs build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

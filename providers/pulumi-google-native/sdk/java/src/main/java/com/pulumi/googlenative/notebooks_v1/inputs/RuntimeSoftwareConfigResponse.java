@@ -25,7 +25,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="customGpuDriverPath", required=true)
-      private final String customGpuDriverPath;
+    private String customGpuDriverPath;
 
     public String customGpuDriverPath() {
         return this.customGpuDriverPath;
@@ -36,7 +36,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="enableHealthMonitoring", required=true)
-      private final Boolean enableHealthMonitoring;
+    private Boolean enableHealthMonitoring;
 
     public Boolean enableHealthMonitoring() {
         return this.enableHealthMonitoring;
@@ -47,7 +47,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="idleShutdown", required=true)
-      private final Boolean idleShutdown;
+    private Boolean idleShutdown;
 
     public Boolean idleShutdown() {
         return this.idleShutdown;
@@ -58,7 +58,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="idleShutdownTimeout", required=true)
-      private final Integer idleShutdownTimeout;
+    private Integer idleShutdownTimeout;
 
     public Integer idleShutdownTimeout() {
         return this.idleShutdownTimeout;
@@ -69,7 +69,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="installGpuDriver", required=true)
-      private final Boolean installGpuDriver;
+    private Boolean installGpuDriver;
 
     public Boolean installGpuDriver() {
         return this.installGpuDriver;
@@ -80,7 +80,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kernels", required=true)
-      private final List<ContainerImageResponse> kernels;
+    private List<ContainerImageResponse> kernels;
 
     public List<ContainerImageResponse> kernels() {
         return this.kernels;
@@ -91,7 +91,7 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="notebookUpgradeSchedule", required=true)
-      private final String notebookUpgradeSchedule;
+    private String notebookUpgradeSchedule;
 
     public String notebookUpgradeSchedule() {
         return this.notebookUpgradeSchedule;
@@ -102,112 +102,98 @@ public final class RuntimeSoftwareConfigResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="postStartupScript", required=true)
-      private final String postStartupScript;
+    private String postStartupScript;
 
     public String postStartupScript() {
         return this.postStartupScript;
     }
 
-    public RuntimeSoftwareConfigResponse(
-        String customGpuDriverPath,
-        Boolean enableHealthMonitoring,
-        Boolean idleShutdown,
-        Integer idleShutdownTimeout,
-        Boolean installGpuDriver,
-        List<ContainerImageResponse> kernels,
-        String notebookUpgradeSchedule,
-        String postStartupScript) {
-        this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath, "expected parameter 'customGpuDriverPath' to be non-null");
-        this.enableHealthMonitoring = Objects.requireNonNull(enableHealthMonitoring, "expected parameter 'enableHealthMonitoring' to be non-null");
-        this.idleShutdown = Objects.requireNonNull(idleShutdown, "expected parameter 'idleShutdown' to be non-null");
-        this.idleShutdownTimeout = Objects.requireNonNull(idleShutdownTimeout, "expected parameter 'idleShutdownTimeout' to be non-null");
-        this.installGpuDriver = Objects.requireNonNull(installGpuDriver, "expected parameter 'installGpuDriver' to be non-null");
-        this.kernels = Objects.requireNonNull(kernels, "expected parameter 'kernels' to be non-null");
-        this.notebookUpgradeSchedule = Objects.requireNonNull(notebookUpgradeSchedule, "expected parameter 'notebookUpgradeSchedule' to be non-null");
-        this.postStartupScript = Objects.requireNonNull(postStartupScript, "expected parameter 'postStartupScript' to be non-null");
-    }
+    private RuntimeSoftwareConfigResponse() {}
 
-    private RuntimeSoftwareConfigResponse() {
-        this.customGpuDriverPath = null;
-        this.enableHealthMonitoring = null;
-        this.idleShutdown = null;
-        this.idleShutdownTimeout = null;
-        this.installGpuDriver = null;
-        this.kernels = List.of();
-        this.notebookUpgradeSchedule = null;
-        this.postStartupScript = null;
+    private RuntimeSoftwareConfigResponse(RuntimeSoftwareConfigResponse $) {
+        this.customGpuDriverPath = $.customGpuDriverPath;
+        this.enableHealthMonitoring = $.enableHealthMonitoring;
+        this.idleShutdown = $.idleShutdown;
+        this.idleShutdownTimeout = $.idleShutdownTimeout;
+        this.installGpuDriver = $.installGpuDriver;
+        this.kernels = $.kernels;
+        this.notebookUpgradeSchedule = $.notebookUpgradeSchedule;
+        this.postStartupScript = $.postStartupScript;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeSoftwareConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customGpuDriverPath;
-        private Boolean enableHealthMonitoring;
-        private Boolean idleShutdown;
-        private Integer idleShutdownTimeout;
-        private Boolean installGpuDriver;
-        private List<ContainerImageResponse> kernels;
-        private String notebookUpgradeSchedule;
-        private String postStartupScript;
+        private RuntimeSoftwareConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeSoftwareConfigResponse();
         }
 
         public Builder(RuntimeSoftwareConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customGpuDriverPath = defaults.customGpuDriverPath;
-    	      this.enableHealthMonitoring = defaults.enableHealthMonitoring;
-    	      this.idleShutdown = defaults.idleShutdown;
-    	      this.idleShutdownTimeout = defaults.idleShutdownTimeout;
-    	      this.installGpuDriver = defaults.installGpuDriver;
-    	      this.kernels = defaults.kernels;
-    	      this.notebookUpgradeSchedule = defaults.notebookUpgradeSchedule;
-    	      this.postStartupScript = defaults.postStartupScript;
+            $ = new RuntimeSoftwareConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customGpuDriverPath(String customGpuDriverPath) {
-            this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
+            $.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
+
         public Builder enableHealthMonitoring(Boolean enableHealthMonitoring) {
-            this.enableHealthMonitoring = Objects.requireNonNull(enableHealthMonitoring);
+            $.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
+
         public Builder idleShutdown(Boolean idleShutdown) {
-            this.idleShutdown = Objects.requireNonNull(idleShutdown);
+            $.idleShutdown = idleShutdown;
             return this;
         }
+
         public Builder idleShutdownTimeout(Integer idleShutdownTimeout) {
-            this.idleShutdownTimeout = Objects.requireNonNull(idleShutdownTimeout);
+            $.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
+
         public Builder installGpuDriver(Boolean installGpuDriver) {
-            this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
+            $.installGpuDriver = installGpuDriver;
             return this;
         }
+
         public Builder kernels(List<ContainerImageResponse> kernels) {
-            this.kernels = Objects.requireNonNull(kernels);
+            $.kernels = kernels;
             return this;
         }
+
         public Builder kernels(ContainerImageResponse... kernels) {
             return kernels(List.of(kernels));
         }
+
         public Builder notebookUpgradeSchedule(String notebookUpgradeSchedule) {
-            this.notebookUpgradeSchedule = Objects.requireNonNull(notebookUpgradeSchedule);
+            $.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
+
         public Builder postStartupScript(String postStartupScript) {
-            this.postStartupScript = Objects.requireNonNull(postStartupScript);
+            $.postStartupScript = postStartupScript;
             return this;
-        }        public RuntimeSoftwareConfigResponse build() {
-            return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
+        }
+
+        public RuntimeSoftwareConfigResponse build() {
+            $.customGpuDriverPath = Objects.requireNonNull($.customGpuDriverPath, "expected parameter 'customGpuDriverPath' to be non-null");
+            $.enableHealthMonitoring = Objects.requireNonNull($.enableHealthMonitoring, "expected parameter 'enableHealthMonitoring' to be non-null");
+            $.idleShutdown = Objects.requireNonNull($.idleShutdown, "expected parameter 'idleShutdown' to be non-null");
+            $.idleShutdownTimeout = Objects.requireNonNull($.idleShutdownTimeout, "expected parameter 'idleShutdownTimeout' to be non-null");
+            $.installGpuDriver = Objects.requireNonNull($.installGpuDriver, "expected parameter 'installGpuDriver' to be non-null");
+            $.kernels = Objects.requireNonNull($.kernels, "expected parameter 'kernels' to be non-null");
+            $.notebookUpgradeSchedule = Objects.requireNonNull($.notebookUpgradeSchedule, "expected parameter 'notebookUpgradeSchedule' to be non-null");
+            $.postStartupScript = Objects.requireNonNull($.postStartupScript, "expected parameter 'postStartupScript' to be non-null");
+            return $;
         }
     }
+
 }

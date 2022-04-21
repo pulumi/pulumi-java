@@ -17,45 +17,45 @@ public final class AttestationAuthorityResponse extends com.pulumi.resources.Inv
     public static final AttestationAuthorityResponse Empty = new AttestationAuthorityResponse();
 
     @Import(name="hint", required=true)
-      private final AttestationAuthorityHintResponse hint;
+    private AttestationAuthorityHintResponse hint;
 
     public AttestationAuthorityHintResponse hint() {
         return this.hint;
     }
 
-    public AttestationAuthorityResponse(AttestationAuthorityHintResponse hint) {
-        this.hint = Objects.requireNonNull(hint, "expected parameter 'hint' to be non-null");
-    }
+    private AttestationAuthorityResponse() {}
 
-    private AttestationAuthorityResponse() {
-        this.hint = null;
+    private AttestationAuthorityResponse(AttestationAuthorityResponse $) {
+        this.hint = $.hint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationAuthorityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AttestationAuthorityHintResponse hint;
+        private AttestationAuthorityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationAuthorityResponse();
         }
 
         public Builder(AttestationAuthorityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hint = defaults.hint;
+            $ = new AttestationAuthorityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hint(AttestationAuthorityHintResponse hint) {
-            this.hint = Objects.requireNonNull(hint);
+            $.hint = hint;
             return this;
-        }        public AttestationAuthorityResponse build() {
-            return new AttestationAuthorityResponse(hint);
+        }
+
+        public AttestationAuthorityResponse build() {
+            $.hint = Objects.requireNonNull($.hint, "expected parameter 'hint' to be non-null");
+            return $;
         }
     }
+
 }

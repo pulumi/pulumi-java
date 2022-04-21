@@ -6,9 +6,9 @@ package com.pulumi.awsnative.groundstation.inputs;
 import com.pulumi.awsnative.groundstation.enums.ConfigEirpUnits;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ConfigEirpArgs extends com.pulumi.resources.ResourceArgs {
     public static final ConfigEirpArgs Empty = new ConfigEirpArgs();
 
     @Import(name="units")
-      private final @Nullable Output<ConfigEirpUnits> units;
+    private @Nullable Output<ConfigEirpUnits> units;
 
-    public Output<ConfigEirpUnits> units() {
-        return this.units == null ? Codegen.empty() : this.units;
+    public Optional<Output<ConfigEirpUnits>> units() {
+        return Optional.ofNullable(this.units);
     }
 
     @Import(name="value")
-      private final @Nullable Output<Double> value;
+    private @Nullable Output<Double> value;
 
-    public Output<Double> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<Double>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ConfigEirpArgs(
-        @Nullable Output<ConfigEirpUnits> units,
-        @Nullable Output<Double> value) {
-        this.units = units;
-        this.value = value;
-    }
+    private ConfigEirpArgs() {}
 
-    private ConfigEirpArgs() {
-        this.units = Codegen.empty();
-        this.value = Codegen.empty();
+    private ConfigEirpArgs(ConfigEirpArgs $) {
+        this.units = $.units;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigEirpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigEirpUnits> units;
-        private @Nullable Output<Double> value;
+        private ConfigEirpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigEirpArgs();
         }
 
         public Builder(ConfigEirpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.units = defaults.units;
-    	      this.value = defaults.value;
+            $ = new ConfigEirpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder units(@Nullable Output<ConfigEirpUnits> units) {
-            this.units = units;
+            $.units = units;
             return this;
         }
-        public Builder units(@Nullable ConfigEirpUnits units) {
-            this.units = Codegen.ofNullable(units);
-            return this;
+
+        public Builder units(ConfigEirpUnits units) {
+            return units(Output.of(units));
         }
+
         public Builder value(@Nullable Output<Double> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable Double value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ConfigEirpArgs build() {
-            return new ConfigEirpArgs(units, value);
+
+        public Builder value(Double value) {
+            return value(Output.of(value));
+        }
+
+        public ConfigEirpArgs build() {
+            return $;
         }
     }
+
 }

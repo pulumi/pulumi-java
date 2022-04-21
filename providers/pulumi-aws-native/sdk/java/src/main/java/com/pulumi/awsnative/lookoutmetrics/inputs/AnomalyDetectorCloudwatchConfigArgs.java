@@ -5,7 +5,6 @@ package com.pulumi.awsnative.lookoutmetrics.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class AnomalyDetectorCloudwatchConfigArgs extends com.pulumi.resour
     public static final AnomalyDetectorCloudwatchConfigArgs Empty = new AnomalyDetectorCloudwatchConfigArgs();
 
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
     }
 
-    public AnomalyDetectorCloudwatchConfigArgs(Output<String> roleArn) {
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-    }
+    private AnomalyDetectorCloudwatchConfigArgs() {}
 
-    private AnomalyDetectorCloudwatchConfigArgs() {
-        this.roleArn = Codegen.empty();
+    private AnomalyDetectorCloudwatchConfigArgs(AnomalyDetectorCloudwatchConfigArgs $) {
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnomalyDetectorCloudwatchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> roleArn;
+        private AnomalyDetectorCloudwatchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnomalyDetectorCloudwatchConfigArgs();
         }
 
         public Builder(AnomalyDetectorCloudwatchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.roleArn = defaults.roleArn;
+            $ = new AnomalyDetectorCloudwatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
-        }        public AnomalyDetectorCloudwatchConfigArgs build() {
-            return new AnomalyDetectorCloudwatchConfigArgs(roleArn);
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AnomalyDetectorCloudwatchConfigArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

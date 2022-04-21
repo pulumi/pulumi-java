@@ -5,11 +5,11 @@ package com.pulumi.googlenative.billingbudgets_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends com.
      * 
      */
     @Import(name="disableDefaultIamRecipients")
-      private final @Nullable Output<Boolean> disableDefaultIamRecipients;
+    private @Nullable Output<Boolean> disableDefaultIamRecipients;
 
-    public Output<Boolean> disableDefaultIamRecipients() {
-        return this.disableDefaultIamRecipients == null ? Codegen.empty() : this.disableDefaultIamRecipients;
+    public Optional<Output<Boolean>> disableDefaultIamRecipients() {
+        return Optional.ofNullable(this.disableDefaultIamRecipients);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends com.
      * 
      */
     @Import(name="monitoringNotificationChannels")
-      private final @Nullable Output<List<String>> monitoringNotificationChannels;
+    private @Nullable Output<List<String>> monitoringNotificationChannels;
 
-    public Output<List<String>> monitoringNotificationChannels() {
-        return this.monitoringNotificationChannels == null ? Codegen.empty() : this.monitoringNotificationChannels;
+    public Optional<Output<List<String>>> monitoringNotificationChannels() {
+        return Optional.ofNullable(this.monitoringNotificationChannels);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends com.
      * 
      */
     @Import(name="pubsubTopic")
-      private final @Nullable Output<String> pubsubTopic;
+    private @Nullable Output<String> pubsubTopic;
 
-    public Output<String> pubsubTopic() {
-        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
+    public Optional<Output<String>> pubsubTopic() {
+        return Optional.ofNullable(this.pubsubTopic);
     }
 
     /**
@@ -59,92 +59,82 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleArgs extends com.
      * 
      */
     @Import(name="schemaVersion")
-      private final @Nullable Output<String> schemaVersion;
+    private @Nullable Output<String> schemaVersion;
 
-    public Output<String> schemaVersion() {
-        return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
+    public Optional<Output<String>> schemaVersion() {
+        return Optional.ofNullable(this.schemaVersion);
     }
 
-    public GoogleCloudBillingBudgetsV1NotificationsRuleArgs(
-        @Nullable Output<Boolean> disableDefaultIamRecipients,
-        @Nullable Output<List<String>> monitoringNotificationChannels,
-        @Nullable Output<String> pubsubTopic,
-        @Nullable Output<String> schemaVersion) {
-        this.disableDefaultIamRecipients = disableDefaultIamRecipients;
-        this.monitoringNotificationChannels = monitoringNotificationChannels;
-        this.pubsubTopic = pubsubTopic;
-        this.schemaVersion = schemaVersion;
-    }
+    private GoogleCloudBillingBudgetsV1NotificationsRuleArgs() {}
 
-    private GoogleCloudBillingBudgetsV1NotificationsRuleArgs() {
-        this.disableDefaultIamRecipients = Codegen.empty();
-        this.monitoringNotificationChannels = Codegen.empty();
-        this.pubsubTopic = Codegen.empty();
-        this.schemaVersion = Codegen.empty();
+    private GoogleCloudBillingBudgetsV1NotificationsRuleArgs(GoogleCloudBillingBudgetsV1NotificationsRuleArgs $) {
+        this.disableDefaultIamRecipients = $.disableDefaultIamRecipients;
+        this.monitoringNotificationChannels = $.monitoringNotificationChannels;
+        this.pubsubTopic = $.pubsubTopic;
+        this.schemaVersion = $.schemaVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1NotificationsRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableDefaultIamRecipients;
-        private @Nullable Output<List<String>> monitoringNotificationChannels;
-        private @Nullable Output<String> pubsubTopic;
-        private @Nullable Output<String> schemaVersion;
+        private GoogleCloudBillingBudgetsV1NotificationsRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1NotificationsRuleArgs();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1NotificationsRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableDefaultIamRecipients = defaults.disableDefaultIamRecipients;
-    	      this.monitoringNotificationChannels = defaults.monitoringNotificationChannels;
-    	      this.pubsubTopic = defaults.pubsubTopic;
-    	      this.schemaVersion = defaults.schemaVersion;
+            $ = new GoogleCloudBillingBudgetsV1NotificationsRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableDefaultIamRecipients(@Nullable Output<Boolean> disableDefaultIamRecipients) {
-            this.disableDefaultIamRecipients = disableDefaultIamRecipients;
+            $.disableDefaultIamRecipients = disableDefaultIamRecipients;
             return this;
         }
-        public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
-            this.disableDefaultIamRecipients = Codegen.ofNullable(disableDefaultIamRecipients);
-            return this;
+
+        public Builder disableDefaultIamRecipients(Boolean disableDefaultIamRecipients) {
+            return disableDefaultIamRecipients(Output.of(disableDefaultIamRecipients));
         }
+
         public Builder monitoringNotificationChannels(@Nullable Output<List<String>> monitoringNotificationChannels) {
-            this.monitoringNotificationChannels = monitoringNotificationChannels;
+            $.monitoringNotificationChannels = monitoringNotificationChannels;
             return this;
         }
-        public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
-            this.monitoringNotificationChannels = Codegen.ofNullable(monitoringNotificationChannels);
-            return this;
+
+        public Builder monitoringNotificationChannels(List<String> monitoringNotificationChannels) {
+            return monitoringNotificationChannels(Output.of(monitoringNotificationChannels));
         }
+
         public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
             return monitoringNotificationChannels(List.of(monitoringNotificationChannels));
         }
+
         public Builder pubsubTopic(@Nullable Output<String> pubsubTopic) {
-            this.pubsubTopic = pubsubTopic;
+            $.pubsubTopic = pubsubTopic;
             return this;
         }
-        public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
-            return this;
+
+        public Builder pubsubTopic(String pubsubTopic) {
+            return pubsubTopic(Output.of(pubsubTopic));
         }
+
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
-            this.schemaVersion = schemaVersion;
+            $.schemaVersion = schemaVersion;
             return this;
         }
-        public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Codegen.ofNullable(schemaVersion);
-            return this;
-        }        public GoogleCloudBillingBudgetsV1NotificationsRuleArgs build() {
-            return new GoogleCloudBillingBudgetsV1NotificationsRuleArgs(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
+
+        public Builder schemaVersion(String schemaVersion) {
+            return schemaVersion(Output.of(schemaVersion));
+        }
+
+        public GoogleCloudBillingBudgetsV1NotificationsRuleArgs build() {
+            return $;
         }
     }
+
 }

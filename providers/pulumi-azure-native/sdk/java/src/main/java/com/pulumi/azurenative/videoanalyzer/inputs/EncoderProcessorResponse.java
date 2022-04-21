@@ -27,7 +27,7 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="inputs", required=true)
-      private final List<NodeInputResponse> inputs;
+    private List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> inputs() {
         return this.inputs;
@@ -38,7 +38,7 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -49,7 +49,7 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="preset", required=true)
-      private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
+    private Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
 
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset() {
         return this.preset;
@@ -61,76 +61,70 @@ public final class EncoderProcessorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public EncoderProcessorResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
-        String type) {
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.preset = Objects.requireNonNull(preset, "expected parameter 'preset' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).require();
-    }
+    private EncoderProcessorResponse() {}
 
-    private EncoderProcessorResponse() {
-        this.inputs = List.of();
-        this.name = null;
-        this.preset = null;
-        this.type = null;
+    private EncoderProcessorResponse(EncoderProcessorResponse $) {
+        this.inputs = $.inputs;
+        this.name = $.name;
+        this.preset = $.preset;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EncoderProcessorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<NodeInputResponse> inputs;
-        private String name;
-        private Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
-        private String type;
+        private EncoderProcessorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EncoderProcessorResponse();
         }
 
         public Builder(EncoderProcessorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.name = defaults.name;
-    	      this.preset = defaults.preset;
-    	      this.type = defaults.type;
+            $ = new EncoderProcessorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(List<NodeInputResponse> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(NodeInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder preset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
-            this.preset = Objects.requireNonNull(preset);
+            $.preset = preset;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public EncoderProcessorResponse build() {
-            return new EncoderProcessorResponse(inputs, name, preset, type);
+        }
+
+        public EncoderProcessorResponse build() {
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.preset = Objects.requireNonNull($.preset, "expected parameter 'preset' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

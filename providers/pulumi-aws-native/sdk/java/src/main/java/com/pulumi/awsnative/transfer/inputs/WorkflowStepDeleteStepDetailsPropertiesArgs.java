@@ -5,9 +5,9 @@ package com.pulumi.awsnative.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WorkflowStepDeleteStepDetailsPropertiesArgs extends com.pulum
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public WorkflowStepDeleteStepDetailsPropertiesArgs(@Nullable Output<String> name) {
-        this.name = name;
-    }
+    private WorkflowStepDeleteStepDetailsPropertiesArgs() {}
 
-    private WorkflowStepDeleteStepDetailsPropertiesArgs() {
-        this.name = Codegen.empty();
+    private WorkflowStepDeleteStepDetailsPropertiesArgs(WorkflowStepDeleteStepDetailsPropertiesArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowStepDeleteStepDetailsPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
+        private WorkflowStepDeleteStepDetailsPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowStepDeleteStepDetailsPropertiesArgs();
         }
 
         public Builder(WorkflowStepDeleteStepDetailsPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new WorkflowStepDeleteStepDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public WorkflowStepDeleteStepDetailsPropertiesArgs build() {
-            return new WorkflowStepDeleteStepDetailsPropertiesArgs(name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public WorkflowStepDeleteStepDetailsPropertiesArgs build() {
+            return $;
         }
     }
+
 }

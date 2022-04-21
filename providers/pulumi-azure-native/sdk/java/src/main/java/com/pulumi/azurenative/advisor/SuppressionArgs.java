@@ -5,9 +5,9 @@ package com.pulumi.azurenative.advisor;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recommendationId", required=true)
-      private final Output<String> recommendationId;
+    private Output<String> recommendationId;
 
     public Output<String> recommendationId() {
         return this.recommendationId;
@@ -42,7 +42,7 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final Output<String> resourceUri;
+    private Output<String> resourceUri;
 
     public Output<String> resourceUri() {
         return this.resourceUri;
@@ -53,10 +53,10 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suppressionId")
-      private final @Nullable Output<String> suppressionId;
+    private @Nullable Output<String> suppressionId;
 
-    public Output<String> suppressionId() {
-        return this.suppressionId == null ? Codegen.empty() : this.suppressionId;
+    public Optional<Output<String>> suppressionId() {
+        return Optional.ofNullable(this.suppressionId);
     }
 
     /**
@@ -64,102 +64,90 @@ public final class SuppressionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
-    public SuppressionArgs(
-        @Nullable Output<String> name,
-        Output<String> recommendationId,
-        Output<String> resourceUri,
-        @Nullable Output<String> suppressionId,
-        @Nullable Output<String> ttl) {
-        this.name = name;
-        this.recommendationId = Objects.requireNonNull(recommendationId, "expected parameter 'recommendationId' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-        this.suppressionId = suppressionId;
-        this.ttl = ttl;
-    }
+    private SuppressionArgs() {}
 
-    private SuppressionArgs() {
-        this.name = Codegen.empty();
-        this.recommendationId = Codegen.empty();
-        this.resourceUri = Codegen.empty();
-        this.suppressionId = Codegen.empty();
-        this.ttl = Codegen.empty();
+    private SuppressionArgs(SuppressionArgs $) {
+        this.name = $.name;
+        this.recommendationId = $.recommendationId;
+        this.resourceUri = $.resourceUri;
+        this.suppressionId = $.suppressionId;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuppressionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> recommendationId;
-        private Output<String> resourceUri;
-        private @Nullable Output<String> suppressionId;
-        private @Nullable Output<String> ttl;
+        private SuppressionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuppressionArgs();
         }
 
         public Builder(SuppressionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.recommendationId = defaults.recommendationId;
-    	      this.resourceUri = defaults.resourceUri;
-    	      this.suppressionId = defaults.suppressionId;
-    	      this.ttl = defaults.ttl;
+            $ = new SuppressionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder recommendationId(Output<String> recommendationId) {
-            this.recommendationId = Objects.requireNonNull(recommendationId);
+            $.recommendationId = recommendationId;
             return this;
         }
+
         public Builder recommendationId(String recommendationId) {
-            this.recommendationId = Output.of(Objects.requireNonNull(recommendationId));
-            return this;
+            return recommendationId(Output.of(recommendationId));
         }
+
         public Builder resourceUri(Output<String> resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Output.of(Objects.requireNonNull(resourceUri));
-            return this;
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder suppressionId(@Nullable Output<String> suppressionId) {
-            this.suppressionId = suppressionId;
+            $.suppressionId = suppressionId;
             return this;
         }
-        public Builder suppressionId(@Nullable String suppressionId) {
-            this.suppressionId = Codegen.ofNullable(suppressionId);
-            return this;
+
+        public Builder suppressionId(String suppressionId) {
+            return suppressionId(Output.of(suppressionId));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
-        }        public SuppressionArgs build() {
-            return new SuppressionArgs(name, recommendationId, resourceUri, suppressionId, ttl);
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
+        }
+
+        public SuppressionArgs build() {
+            $.recommendationId = Objects.requireNonNull($.recommendationId, "expected parameter 'recommendationId' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

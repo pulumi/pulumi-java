@@ -17,45 +17,45 @@ public final class ShareInfoElementResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="vmUri", required=true)
-      private final String vmUri;
+    private String vmUri;
 
     public String vmUri() {
         return this.vmUri;
     }
 
-    public ShareInfoElementResponse(String vmUri) {
-        this.vmUri = Objects.requireNonNull(vmUri, "expected parameter 'vmUri' to be non-null");
-    }
+    private ShareInfoElementResponse() {}
 
-    private ShareInfoElementResponse() {
-        this.vmUri = null;
+    private ShareInfoElementResponse(ShareInfoElementResponse $) {
+        this.vmUri = $.vmUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareInfoElementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vmUri;
+        private ShareInfoElementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareInfoElementResponse();
         }
 
         public Builder(ShareInfoElementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vmUri = defaults.vmUri;
+            $ = new ShareInfoElementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder vmUri(String vmUri) {
-            this.vmUri = Objects.requireNonNull(vmUri);
+            $.vmUri = vmUri;
             return this;
-        }        public ShareInfoElementResponse build() {
-            return new ShareInfoElementResponse(vmUri);
+        }
+
+        public ShareInfoElementResponse build() {
+            $.vmUri = Objects.requireNonNull($.vmUri, "expected parameter 'vmUri' to be non-null");
+            return $;
         }
     }
+
 }

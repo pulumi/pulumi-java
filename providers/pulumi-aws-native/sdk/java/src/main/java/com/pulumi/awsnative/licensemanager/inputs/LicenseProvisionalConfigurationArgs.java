@@ -5,7 +5,6 @@ package com.pulumi.awsnative.licensemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -15,49 +14,49 @@ public final class LicenseProvisionalConfigurationArgs extends com.pulumi.resour
     public static final LicenseProvisionalConfigurationArgs Empty = new LicenseProvisionalConfigurationArgs();
 
     @Import(name="maxTimeToLiveInMinutes", required=true)
-      private final Output<Integer> maxTimeToLiveInMinutes;
+    private Output<Integer> maxTimeToLiveInMinutes;
 
     public Output<Integer> maxTimeToLiveInMinutes() {
         return this.maxTimeToLiveInMinutes;
     }
 
-    public LicenseProvisionalConfigurationArgs(Output<Integer> maxTimeToLiveInMinutes) {
-        this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
-    }
+    private LicenseProvisionalConfigurationArgs() {}
 
-    private LicenseProvisionalConfigurationArgs() {
-        this.maxTimeToLiveInMinutes = Codegen.empty();
+    private LicenseProvisionalConfigurationArgs(LicenseProvisionalConfigurationArgs $) {
+        this.maxTimeToLiveInMinutes = $.maxTimeToLiveInMinutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseProvisionalConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> maxTimeToLiveInMinutes;
+        private LicenseProvisionalConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseProvisionalConfigurationArgs();
         }
 
         public Builder(LicenseProvisionalConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
+            $ = new LicenseProvisionalConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxTimeToLiveInMinutes(Output<Integer> maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
+            $.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
             return this;
         }
+
         public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
-            this.maxTimeToLiveInMinutes = Output.of(Objects.requireNonNull(maxTimeToLiveInMinutes));
-            return this;
-        }        public LicenseProvisionalConfigurationArgs build() {
-            return new LicenseProvisionalConfigurationArgs(maxTimeToLiveInMinutes);
+            return maxTimeToLiveInMinutes(Output.of(maxTimeToLiveInMinutes));
+        }
+
+        public LicenseProvisionalConfigurationArgs build() {
+            $.maxTimeToLiveInMinutes = Objects.requireNonNull($.maxTimeToLiveInMinutes, "expected parameter 'maxTimeToLiveInMinutes' to be non-null");
+            return $;
         }
     }
+
 }

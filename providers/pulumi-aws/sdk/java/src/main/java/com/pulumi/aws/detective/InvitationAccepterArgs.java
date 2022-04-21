@@ -5,7 +5,6 @@ package com.pulumi.aws.detective;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class InvitationAccepterArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="graphArn", required=true)
-      private final Output<String> graphArn;
+    private Output<String> graphArn;
 
     public Output<String> graphArn() {
         return this.graphArn;
     }
 
-    public InvitationAccepterArgs(Output<String> graphArn) {
-        this.graphArn = Objects.requireNonNull(graphArn, "expected parameter 'graphArn' to be non-null");
-    }
+    private InvitationAccepterArgs() {}
 
-    private InvitationAccepterArgs() {
-        this.graphArn = Codegen.empty();
+    private InvitationAccepterArgs(InvitationAccepterArgs $) {
+        this.graphArn = $.graphArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InvitationAccepterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> graphArn;
+        private InvitationAccepterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InvitationAccepterArgs();
         }
 
         public Builder(InvitationAccepterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.graphArn = defaults.graphArn;
+            $ = new InvitationAccepterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder graphArn(Output<String> graphArn) {
-            this.graphArn = Objects.requireNonNull(graphArn);
+            $.graphArn = graphArn;
             return this;
         }
+
         public Builder graphArn(String graphArn) {
-            this.graphArn = Output.of(Objects.requireNonNull(graphArn));
-            return this;
-        }        public InvitationAccepterArgs build() {
-            return new InvitationAccepterArgs(graphArn);
+            return graphArn(Output.of(graphArn));
+        }
+
+        public InvitationAccepterArgs build() {
+            $.graphArn = Objects.requireNonNull($.graphArn, "expected parameter 'graphArn' to be non-null");
+            return $;
         }
     }
+
 }

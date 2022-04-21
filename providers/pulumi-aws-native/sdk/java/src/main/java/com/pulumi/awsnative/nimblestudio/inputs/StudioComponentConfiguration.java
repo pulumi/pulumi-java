@@ -22,94 +22,83 @@ public final class StudioComponentConfiguration extends com.pulumi.resources.Inv
     public static final StudioComponentConfiguration Empty = new StudioComponentConfiguration();
 
     @Import(name="activeDirectoryConfiguration")
-      private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
+    private @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
 
     public Optional<StudioComponentActiveDirectoryConfiguration> activeDirectoryConfiguration() {
-        return this.activeDirectoryConfiguration == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryConfiguration);
+        return Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
     @Import(name="computeFarmConfiguration")
-      private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
+    private @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
 
     public Optional<StudioComponentComputeFarmConfiguration> computeFarmConfiguration() {
-        return this.computeFarmConfiguration == null ? Optional.empty() : Optional.ofNullable(this.computeFarmConfiguration);
+        return Optional.ofNullable(this.computeFarmConfiguration);
     }
 
     @Import(name="licenseServiceConfiguration")
-      private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
+    private @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
 
     public Optional<StudioComponentLicenseServiceConfiguration> licenseServiceConfiguration() {
-        return this.licenseServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.licenseServiceConfiguration);
+        return Optional.ofNullable(this.licenseServiceConfiguration);
     }
 
     @Import(name="sharedFileSystemConfiguration")
-      private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
+    private @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
     public Optional<StudioComponentSharedFileSystemConfiguration> sharedFileSystemConfiguration() {
-        return this.sharedFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedFileSystemConfiguration);
+        return Optional.ofNullable(this.sharedFileSystemConfiguration);
     }
 
-    public StudioComponentConfiguration(
-        @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
-        @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
-        @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
-        @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
-        this.activeDirectoryConfiguration = activeDirectoryConfiguration;
-        this.computeFarmConfiguration = computeFarmConfiguration;
-        this.licenseServiceConfiguration = licenseServiceConfiguration;
-        this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
-    }
+    private StudioComponentConfiguration() {}
 
-    private StudioComponentConfiguration() {
-        this.activeDirectoryConfiguration = null;
-        this.computeFarmConfiguration = null;
-        this.licenseServiceConfiguration = null;
-        this.sharedFileSystemConfiguration = null;
+    private StudioComponentConfiguration(StudioComponentConfiguration $) {
+        this.activeDirectoryConfiguration = $.activeDirectoryConfiguration;
+        this.computeFarmConfiguration = $.computeFarmConfiguration;
+        this.licenseServiceConfiguration = $.licenseServiceConfiguration;
+        this.sharedFileSystemConfiguration = $.sharedFileSystemConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StudioComponentConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
-        private @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
-        private @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
-        private @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
+        private StudioComponentConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new StudioComponentConfiguration();
         }
 
         public Builder(StudioComponentConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDirectoryConfiguration = defaults.activeDirectoryConfiguration;
-    	      this.computeFarmConfiguration = defaults.computeFarmConfiguration;
-    	      this.licenseServiceConfiguration = defaults.licenseServiceConfiguration;
-    	      this.sharedFileSystemConfiguration = defaults.sharedFileSystemConfiguration;
+            $ = new StudioComponentConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration) {
-            this.activeDirectoryConfiguration = activeDirectoryConfiguration;
+            $.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
+
         public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
-            this.computeFarmConfiguration = computeFarmConfiguration;
+            $.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
+
         public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
-            this.licenseServiceConfiguration = licenseServiceConfiguration;
+            $.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
+
         public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
-            this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
+            $.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
-        }        public StudioComponentConfiguration build() {
-            return new StudioComponentConfiguration(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
+        }
+
+        public StudioComponentConfiguration build() {
+            return $;
         }
     }
+
 }

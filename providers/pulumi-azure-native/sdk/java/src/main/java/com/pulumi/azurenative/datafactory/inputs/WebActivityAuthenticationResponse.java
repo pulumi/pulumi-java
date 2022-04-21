@@ -28,10 +28,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="credential")
-      private final @Nullable CredentialReferenceResponse credential;
+    private @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> credential() {
-        return this.credential == null ? Optional.empty() : Optional.ofNullable(this.credential);
+        return Optional.ofNullable(this.credential);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="password")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
-        return this.password == null ? null : this.password;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="pfx")
-      private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
+    private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
-    public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
-        return this.pfx == null ? null : this.pfx;
+    public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> pfx() {
+        return Optional.ofNullable(this.pfx);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resource")
-      private final @Nullable Object resource;
+    private @Nullable Object resource;
 
     public Optional<Object> resource() {
-        return this.resource == null ? Optional.empty() : Optional.ofNullable(this.resource);
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="userTenant")
-      private final @Nullable Object userTenant;
+    private @Nullable Object userTenant;
 
     public Optional<Object> userTenant() {
-        return this.userTenant == null ? Optional.empty() : Optional.ofNullable(this.userTenant);
+        return Optional.ofNullable(this.userTenant);
     }
 
     /**
@@ -94,100 +94,80 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="username")
-      private final @Nullable Object username;
+    private @Nullable Object username;
 
     public Optional<Object> username() {
-        return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
+        return Optional.ofNullable(this.username);
     }
 
-    public WebActivityAuthenticationResponse(
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx,
-        @Nullable Object resource,
-        @Nullable String type,
-        @Nullable Object userTenant,
-        @Nullable Object username) {
-        this.credential = credential;
-        this.password = password;
-        this.pfx = pfx;
-        this.resource = resource;
-        this.type = type;
-        this.userTenant = userTenant;
-        this.username = username;
-    }
+    private WebActivityAuthenticationResponse() {}
 
-    private WebActivityAuthenticationResponse() {
-        this.credential = null;
-        this.password = null;
-        this.pfx = null;
-        this.resource = null;
-        this.type = null;
-        this.userTenant = null;
-        this.username = null;
+    private WebActivityAuthenticationResponse(WebActivityAuthenticationResponse $) {
+        this.credential = $.credential;
+        this.password = $.password;
+        this.pfx = $.pfx;
+        this.resource = $.resource;
+        this.type = $.type;
+        this.userTenant = $.userTenant;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebActivityAuthenticationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable CredentialReferenceResponse credential;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
-        private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
-        private @Nullable Object resource;
-        private @Nullable String type;
-        private @Nullable Object userTenant;
-        private @Nullable Object username;
+        private WebActivityAuthenticationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebActivityAuthenticationResponse();
         }
 
         public Builder(WebActivityAuthenticationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.credential = defaults.credential;
-    	      this.password = defaults.password;
-    	      this.pfx = defaults.pfx;
-    	      this.resource = defaults.resource;
-    	      this.type = defaults.type;
-    	      this.userTenant = defaults.userTenant;
-    	      this.username = defaults.username;
+            $ = new WebActivityAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
-            this.credential = credential;
+            $.credential = credential;
             return this;
         }
+
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
-            this.pfx = pfx;
+            $.pfx = pfx;
             return this;
         }
+
         public Builder resource(@Nullable Object resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder userTenant(@Nullable Object userTenant) {
-            this.userTenant = userTenant;
+            $.userTenant = userTenant;
             return this;
         }
+
         public Builder username(@Nullable Object username) {
-            this.username = username;
+            $.username = username;
             return this;
-        }        public WebActivityAuthenticationResponse build() {
-            return new WebActivityAuthenticationResponse(credential, password, pfx, resource, type, userTenant, username);
+        }
+
+        public WebActivityAuthenticationResponse build() {
+            return $;
         }
     }
+
 }

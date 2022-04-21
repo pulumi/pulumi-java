@@ -9,10 +9,10 @@ import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanIncidentTemplateArgs
 import com.pulumi.awsnative.ssmincidents.inputs.ResponsePlanTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<ResponsePlanActionArgs>> actions;
+    private @Nullable Output<List<ResponsePlanActionArgs>> actions;
 
-    public Output<List<ResponsePlanActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<ResponsePlanActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     @Import(name="chatChannel")
-      private final @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
+    private @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
 
-    public Output<ResponsePlanChatChannelArgs> chatChannel() {
-        return this.chatChannel == null ? Codegen.empty() : this.chatChannel;
+    public Optional<Output<ResponsePlanChatChannelArgs>> chatChannel() {
+        return Optional.ofNullable(this.chatChannel);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -54,14 +54,14 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="engagements")
-      private final @Nullable Output<List<String>> engagements;
+    private @Nullable Output<List<String>> engagements;
 
-    public Output<List<String>> engagements() {
-        return this.engagements == null ? Codegen.empty() : this.engagements;
+    public Optional<Output<List<String>>> engagements() {
+        return Optional.ofNullable(this.engagements);
     }
 
     @Import(name="incidentTemplate", required=true)
-      private final Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
+    private Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
 
     public Output<ResponsePlanIncidentTemplateArgs> incidentTemplate() {
         return this.incidentTemplate;
@@ -72,10 +72,10 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -83,137 +83,121 @@ public final class ResponsePlanArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<ResponsePlanTagArgs>> tags;
+    private @Nullable Output<List<ResponsePlanTagArgs>> tags;
 
-    public Output<List<ResponsePlanTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ResponsePlanTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ResponsePlanArgs(
-        @Nullable Output<List<ResponsePlanActionArgs>> actions,
-        @Nullable Output<ResponsePlanChatChannelArgs> chatChannel,
-        @Nullable Output<String> displayName,
-        @Nullable Output<List<String>> engagements,
-        Output<ResponsePlanIncidentTemplateArgs> incidentTemplate,
-        @Nullable Output<String> name,
-        @Nullable Output<List<ResponsePlanTagArgs>> tags) {
-        this.actions = actions;
-        this.chatChannel = chatChannel;
-        this.displayName = displayName;
-        this.engagements = engagements;
-        this.incidentTemplate = Objects.requireNonNull(incidentTemplate, "expected parameter 'incidentTemplate' to be non-null");
-        this.name = name;
-        this.tags = tags;
-    }
+    private ResponsePlanArgs() {}
 
-    private ResponsePlanArgs() {
-        this.actions = Codegen.empty();
-        this.chatChannel = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.engagements = Codegen.empty();
-        this.incidentTemplate = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ResponsePlanArgs(ResponsePlanArgs $) {
+        this.actions = $.actions;
+        this.chatChannel = $.chatChannel;
+        this.displayName = $.displayName;
+        this.engagements = $.engagements;
+        this.incidentTemplate = $.incidentTemplate;
+        this.name = $.name;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePlanArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResponsePlanActionArgs>> actions;
-        private @Nullable Output<ResponsePlanChatChannelArgs> chatChannel;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<List<String>> engagements;
-        private Output<ResponsePlanIncidentTemplateArgs> incidentTemplate;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<ResponsePlanTagArgs>> tags;
+        private ResponsePlanArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePlanArgs();
         }
 
         public Builder(ResponsePlanArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.chatChannel = defaults.chatChannel;
-    	      this.displayName = defaults.displayName;
-    	      this.engagements = defaults.engagements;
-    	      this.incidentTemplate = defaults.incidentTemplate;
-    	      this.name = defaults.name;
-    	      this.tags = defaults.tags;
+            $ = new ResponsePlanArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<ResponsePlanActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<ResponsePlanActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<ResponsePlanActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(ResponsePlanActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder chatChannel(@Nullable Output<ResponsePlanChatChannelArgs> chatChannel) {
-            this.chatChannel = chatChannel;
+            $.chatChannel = chatChannel;
             return this;
         }
-        public Builder chatChannel(@Nullable ResponsePlanChatChannelArgs chatChannel) {
-            this.chatChannel = Codegen.ofNullable(chatChannel);
-            return this;
+
+        public Builder chatChannel(ResponsePlanChatChannelArgs chatChannel) {
+            return chatChannel(Output.of(chatChannel));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder engagements(@Nullable Output<List<String>> engagements) {
-            this.engagements = engagements;
+            $.engagements = engagements;
             return this;
         }
-        public Builder engagements(@Nullable List<String> engagements) {
-            this.engagements = Codegen.ofNullable(engagements);
-            return this;
+
+        public Builder engagements(List<String> engagements) {
+            return engagements(Output.of(engagements));
         }
+
         public Builder engagements(String... engagements) {
             return engagements(List.of(engagements));
         }
+
         public Builder incidentTemplate(Output<ResponsePlanIncidentTemplateArgs> incidentTemplate) {
-            this.incidentTemplate = Objects.requireNonNull(incidentTemplate);
+            $.incidentTemplate = incidentTemplate;
             return this;
         }
+
         public Builder incidentTemplate(ResponsePlanIncidentTemplateArgs incidentTemplate) {
-            this.incidentTemplate = Output.of(Objects.requireNonNull(incidentTemplate));
-            return this;
+            return incidentTemplate(Output.of(incidentTemplate));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder tags(@Nullable Output<List<ResponsePlanTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ResponsePlanTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ResponsePlanTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ResponsePlanTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ResponsePlanArgs build() {
-            return new ResponsePlanArgs(actions, chatChannel, displayName, engagements, incidentTemplate, name, tags);
+        }
+
+        public ResponsePlanArgs build() {
+            $.incidentTemplate = Objects.requireNonNull($.incidentTemplate, "expected parameter 'incidentTemplate' to be non-null");
+            return $;
         }
     }
+
 }

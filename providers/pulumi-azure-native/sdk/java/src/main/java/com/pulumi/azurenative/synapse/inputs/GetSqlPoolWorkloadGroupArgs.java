@@ -17,7 +17,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="sqlPoolName", required=true)
-      private final String sqlPoolName;
+    private String sqlPoolName;
 
     public String sqlPoolName() {
         return this.sqlPoolName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workloadGroupName", required=true)
-      private final String workloadGroupName;
+    private String workloadGroupName;
 
     public String workloadGroupName() {
         return this.workloadGroupName;
@@ -50,73 +50,66 @@ public final class GetSqlPoolWorkloadGroupArgs extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="workspaceName", required=true)
-      private final String workspaceName;
+    private String workspaceName;
 
     public String workspaceName() {
         return this.workspaceName;
     }
 
-    public GetSqlPoolWorkloadGroupArgs(
-        String resourceGroupName,
-        String sqlPoolName,
-        String workloadGroupName,
-        String workspaceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.sqlPoolName = Objects.requireNonNull(sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
-        this.workloadGroupName = Objects.requireNonNull(workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
-        this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
-    }
+    private GetSqlPoolWorkloadGroupArgs() {}
 
-    private GetSqlPoolWorkloadGroupArgs() {
-        this.resourceGroupName = null;
-        this.sqlPoolName = null;
-        this.workloadGroupName = null;
-        this.workspaceName = null;
+    private GetSqlPoolWorkloadGroupArgs(GetSqlPoolWorkloadGroupArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.sqlPoolName = $.sqlPoolName;
+        this.workloadGroupName = $.workloadGroupName;
+        this.workspaceName = $.workspaceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSqlPoolWorkloadGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String sqlPoolName;
-        private String workloadGroupName;
-        private String workspaceName;
+        private GetSqlPoolWorkloadGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSqlPoolWorkloadGroupArgs();
         }
 
         public Builder(GetSqlPoolWorkloadGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.sqlPoolName = defaults.sqlPoolName;
-    	      this.workloadGroupName = defaults.workloadGroupName;
-    	      this.workspaceName = defaults.workspaceName;
+            $ = new GetSqlPoolWorkloadGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder sqlPoolName(String sqlPoolName) {
-            this.sqlPoolName = Objects.requireNonNull(sqlPoolName);
+            $.sqlPoolName = sqlPoolName;
             return this;
         }
+
         public Builder workloadGroupName(String workloadGroupName) {
-            this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
+            $.workloadGroupName = workloadGroupName;
             return this;
         }
+
         public Builder workspaceName(String workspaceName) {
-            this.workspaceName = Objects.requireNonNull(workspaceName);
+            $.workspaceName = workspaceName;
             return this;
-        }        public GetSqlPoolWorkloadGroupArgs build() {
-            return new GetSqlPoolWorkloadGroupArgs(resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
+        }
+
+        public GetSqlPoolWorkloadGroupArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.sqlPoolName = Objects.requireNonNull($.sqlPoolName, "expected parameter 'sqlPoolName' to be non-null");
+            $.workloadGroupName = Objects.requireNonNull($.workloadGroupName, "expected parameter 'workloadGroupName' to be non-null");
+            $.workspaceName = Objects.requireNonNull($.workspaceName, "expected parameter 'workspaceName' to be non-null");
+            return $;
         }
     }
+
 }

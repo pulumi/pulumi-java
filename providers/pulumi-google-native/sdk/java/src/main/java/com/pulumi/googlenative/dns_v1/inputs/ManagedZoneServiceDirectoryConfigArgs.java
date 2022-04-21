@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.reso
     public static final ManagedZoneServiceDirectoryConfigArgs Empty = new ManagedZoneServiceDirectoryConfigArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+    private @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
-    public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<ManagedZoneServiceDirectoryConfigNamespaceArgs>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
-    public ManagedZoneServiceDirectoryConfigArgs(
-        @Nullable Output<String> kind,
-        @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
-        this.kind = kind;
-        this.namespace = namespace;
-    }
+    private ManagedZoneServiceDirectoryConfigArgs() {}
 
-    private ManagedZoneServiceDirectoryConfigArgs() {
-        this.kind = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private ManagedZoneServiceDirectoryConfigArgs(ManagedZoneServiceDirectoryConfigArgs $) {
+        this.kind = $.kind;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+        private ManagedZoneServiceDirectoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigArgs();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.namespace = defaults.namespace;
+            $ = new ManagedZoneServiceDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder namespace(@Nullable Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
-        }        public ManagedZoneServiceDirectoryConfigArgs build() {
-            return new ManagedZoneServiceDirectoryConfigArgs(kind, namespace);
+
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
+            return namespace(Output.of(namespace));
+        }
+
+        public ManagedZoneServiceDirectoryConfigArgs build() {
+            return $;
         }
     }
+
 }

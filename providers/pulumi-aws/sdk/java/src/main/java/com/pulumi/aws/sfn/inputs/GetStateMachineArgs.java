@@ -17,45 +17,45 @@ public final class GetStateMachineArgs extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GetStateMachineArgs(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GetStateMachineArgs() {}
 
-    private GetStateMachineArgs() {
-        this.name = null;
+    private GetStateMachineArgs(GetStateMachineArgs $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStateMachineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GetStateMachineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStateMachineArgs();
         }
 
         public Builder(GetStateMachineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GetStateMachineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GetStateMachineArgs build() {
-            return new GetStateMachineArgs(name);
+        }
+
+        public GetStateMachineArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

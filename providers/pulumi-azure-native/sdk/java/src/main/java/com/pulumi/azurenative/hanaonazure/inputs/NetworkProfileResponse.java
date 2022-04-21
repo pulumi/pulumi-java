@@ -25,7 +25,7 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="circuitId", required=true)
-      private final String circuitId;
+    private String circuitId;
 
     public String circuitId() {
         return this.circuitId;
@@ -36,58 +36,55 @@ public final class NetworkProfileResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="networkInterfaces")
-      private final @Nullable List<IpAddressResponse> networkInterfaces;
+    private @Nullable List<IpAddressResponse> networkInterfaces;
 
-    public List<IpAddressResponse> networkInterfaces() {
-        return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
+    public Optional<List<IpAddressResponse>> networkInterfaces() {
+        return Optional.ofNullable(this.networkInterfaces);
     }
 
-    public NetworkProfileResponse(
-        String circuitId,
-        @Nullable List<IpAddressResponse> networkInterfaces) {
-        this.circuitId = Objects.requireNonNull(circuitId, "expected parameter 'circuitId' to be non-null");
-        this.networkInterfaces = networkInterfaces;
-    }
+    private NetworkProfileResponse() {}
 
-    private NetworkProfileResponse() {
-        this.circuitId = null;
-        this.networkInterfaces = List.of();
+    private NetworkProfileResponse(NetworkProfileResponse $) {
+        this.circuitId = $.circuitId;
+        this.networkInterfaces = $.networkInterfaces;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkProfileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String circuitId;
-        private @Nullable List<IpAddressResponse> networkInterfaces;
+        private NetworkProfileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkProfileResponse();
         }
 
         public Builder(NetworkProfileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.circuitId = defaults.circuitId;
-    	      this.networkInterfaces = defaults.networkInterfaces;
+            $ = new NetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder circuitId(String circuitId) {
-            this.circuitId = Objects.requireNonNull(circuitId);
+            $.circuitId = circuitId;
             return this;
         }
+
         public Builder networkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
-            this.networkInterfaces = networkInterfaces;
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(IpAddressResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
-        }        public NetworkProfileResponse build() {
-            return new NetworkProfileResponse(circuitId, networkInterfaces);
+        }
+
+        public NetworkProfileResponse build() {
+            $.circuitId = Objects.requireNonNull($.circuitId, "expected parameter 'circuitId' to be non-null");
+            return $;
         }
     }
+
 }

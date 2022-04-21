@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SqlActiveDirectoryConfigArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public SqlActiveDirectoryConfigArgs(
-        @Nullable Output<String> domain,
-        @Nullable Output<String> kind) {
-        this.domain = domain;
-        this.kind = kind;
-    }
+    private SqlActiveDirectoryConfigArgs() {}
 
-    private SqlActiveDirectoryConfigArgs() {
-        this.domain = Codegen.empty();
-        this.kind = Codegen.empty();
+    private SqlActiveDirectoryConfigArgs(SqlActiveDirectoryConfigArgs $) {
+        this.domain = $.domain;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlActiveDirectoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> kind;
+        private SqlActiveDirectoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlActiveDirectoryConfigArgs();
         }
 
         public Builder(SqlActiveDirectoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.kind = defaults.kind;
+            $ = new SqlActiveDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public SqlActiveDirectoryConfigArgs build() {
-            return new SqlActiveDirectoryConfigArgs(domain, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public SqlActiveDirectoryConfigArgs build() {
+            return $;
         }
     }
+
 }

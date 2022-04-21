@@ -17,78 +17,71 @@ public final class DatasetAction extends com.pulumi.resources.InvokeArgs {
     public static final DatasetAction Empty = new DatasetAction();
 
     @Import(name="actionName", required=true)
-      private final String actionName;
+    private String actionName;
 
     public String actionName() {
         return this.actionName;
     }
 
     @Import(name="containerAction")
-      private final @Nullable DatasetContainerAction containerAction;
+    private @Nullable DatasetContainerAction containerAction;
 
     public Optional<DatasetContainerAction> containerAction() {
-        return this.containerAction == null ? Optional.empty() : Optional.ofNullable(this.containerAction);
+        return Optional.ofNullable(this.containerAction);
     }
 
     @Import(name="queryAction")
-      private final @Nullable DatasetQueryAction queryAction;
+    private @Nullable DatasetQueryAction queryAction;
 
     public Optional<DatasetQueryAction> queryAction() {
-        return this.queryAction == null ? Optional.empty() : Optional.ofNullable(this.queryAction);
+        return Optional.ofNullable(this.queryAction);
     }
 
-    public DatasetAction(
-        String actionName,
-        @Nullable DatasetContainerAction containerAction,
-        @Nullable DatasetQueryAction queryAction) {
-        this.actionName = Objects.requireNonNull(actionName, "expected parameter 'actionName' to be non-null");
-        this.containerAction = containerAction;
-        this.queryAction = queryAction;
-    }
+    private DatasetAction() {}
 
-    private DatasetAction() {
-        this.actionName = null;
-        this.containerAction = null;
-        this.queryAction = null;
+    private DatasetAction(DatasetAction $) {
+        this.actionName = $.actionName;
+        this.containerAction = $.containerAction;
+        this.queryAction = $.queryAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAction defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String actionName;
-        private @Nullable DatasetContainerAction containerAction;
-        private @Nullable DatasetQueryAction queryAction;
+        private DatasetAction $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAction();
         }
 
         public Builder(DatasetAction defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionName = defaults.actionName;
-    	      this.containerAction = defaults.containerAction;
-    	      this.queryAction = defaults.queryAction;
+            $ = new DatasetAction(Objects.requireNonNull(defaults));
         }
 
         public Builder actionName(String actionName) {
-            this.actionName = Objects.requireNonNull(actionName);
+            $.actionName = actionName;
             return this;
         }
+
         public Builder containerAction(@Nullable DatasetContainerAction containerAction) {
-            this.containerAction = containerAction;
+            $.containerAction = containerAction;
             return this;
         }
+
         public Builder queryAction(@Nullable DatasetQueryAction queryAction) {
-            this.queryAction = queryAction;
+            $.queryAction = queryAction;
             return this;
-        }        public DatasetAction build() {
-            return new DatasetAction(actionName, containerAction, queryAction);
+        }
+
+        public DatasetAction build() {
+            $.actionName = Objects.requireNonNull($.actionName, "expected parameter 'actionName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -6,10 +6,10 @@ package com.pulumi.awsnative.lightsail;
 import com.pulumi.awsnative.lightsail.inputs.CertificateTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateName")
-      private final @Nullable Output<String> certificateName;
+    private @Nullable Output<String> certificateName;
 
-    public Output<String> certificateName() {
-        return this.certificateName == null ? Codegen.empty() : this.certificateName;
+    public Optional<Output<String>> certificateName() {
+        return Optional.ofNullable(this.certificateName);
     }
 
     /**
@@ -33,7 +33,7 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -44,10 +44,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subjectAlternativeNames")
-      private final @Nullable Output<List<String>> subjectAlternativeNames;
+    private @Nullable Output<List<String>> subjectAlternativeNames;
 
-    public Output<List<String>> subjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
+    public Optional<Output<List<String>>> subjectAlternativeNames() {
+        return Optional.ofNullable(this.subjectAlternativeNames);
     }
 
     /**
@@ -55,95 +55,87 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<CertificateTagArgs>> tags;
+    private @Nullable Output<List<CertificateTagArgs>> tags;
 
-    public Output<List<CertificateTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<CertificateTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public CertificateArgs(
-        @Nullable Output<String> certificateName,
-        Output<String> domainName,
-        @Nullable Output<List<String>> subjectAlternativeNames,
-        @Nullable Output<List<CertificateTagArgs>> tags) {
-        this.certificateName = certificateName;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.subjectAlternativeNames = subjectAlternativeNames;
-        this.tags = tags;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateName = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.subjectAlternativeNames = Codegen.empty();
-        this.tags = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateName = $.certificateName;
+        this.domainName = $.domainName;
+        this.subjectAlternativeNames = $.subjectAlternativeNames;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateName;
-        private Output<String> domainName;
-        private @Nullable Output<List<String>> subjectAlternativeNames;
-        private @Nullable Output<List<CertificateTagArgs>> tags;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateName = defaults.certificateName;
-    	      this.domainName = defaults.domainName;
-    	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
-    	      this.tags = defaults.tags;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateName(@Nullable Output<String> certificateName) {
-            this.certificateName = certificateName;
+            $.certificateName = certificateName;
             return this;
         }
-        public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Codegen.ofNullable(certificateName);
-            return this;
+
+        public Builder certificateName(String certificateName) {
+            return certificateName(Output.of(certificateName));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
-            this.subjectAlternativeNames = subjectAlternativeNames;
+            $.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
-            return this;
+
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
+            return subjectAlternativeNames(Output.of(subjectAlternativeNames));
         }
+
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
             return subjectAlternativeNames(List.of(subjectAlternativeNames));
         }
+
         public Builder tags(@Nullable Output<List<CertificateTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<CertificateTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<CertificateTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(CertificateTagArgs... tags) {
             return tags(List.of(tags));
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateName, domainName, subjectAlternativeNames, tags);
+        }
+
+        public CertificateArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

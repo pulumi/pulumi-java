@@ -8,10 +8,10 @@ import com.pulumi.azurenative.network.enums.ApplicationGatewayTier;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<Integer> capacity;
+    private @Nullable Output<Integer> capacity;
 
-    public Output<Integer> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<Integer>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
+    private @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
 
-    public Output<Either<String,ApplicationGatewaySkuName>> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<Either<String,ApplicationGatewaySkuName>>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class ApplicationGatewaySkuArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
+    private @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
 
-    public Output<Either<String,ApplicationGatewayTier>> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<Either<String,ApplicationGatewayTier>>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ApplicationGatewaySkuArgs(
-        @Nullable Output<Integer> capacity,
-        @Nullable Output<Either<String,ApplicationGatewaySkuName>> name,
-        @Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
-        this.capacity = capacity;
-        this.name = name;
-        this.tier = tier;
-    }
+    private ApplicationGatewaySkuArgs() {}
 
-    private ApplicationGatewaySkuArgs() {
-        this.capacity = Codegen.empty();
-        this.name = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ApplicationGatewaySkuArgs(ApplicationGatewaySkuArgs $) {
+        this.capacity = $.capacity;
+        this.name = $.name;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySkuArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> capacity;
-        private @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
-        private @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
+        private ApplicationGatewaySkuArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySkuArgs();
         }
 
         public Builder(ApplicationGatewaySkuArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.name = defaults.name;
-    	      this.tier = defaults.tier;
+            $ = new ApplicationGatewaySkuArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<Integer> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(Integer capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder name(@Nullable Output<Either<String,ApplicationGatewaySkuName>> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable Either<String,ApplicationGatewaySkuName> name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(Either<String,ApplicationGatewaySkuName> name) {
+            return name(Output.of(name));
         }
+
         public Builder tier(@Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable Either<String,ApplicationGatewayTier> tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ApplicationGatewaySkuArgs build() {
-            return new ApplicationGatewaySkuArgs(capacity, name, tier);
+
+        public Builder tier(Either<String,ApplicationGatewayTier> tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ApplicationGatewaySkuArgs build() {
+            return $;
         }
     }
+
 }

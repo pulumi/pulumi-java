@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.NodeConfigDefaultsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodePoolDefaultsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nodeConfigDefaults")
-      private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
+    private @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
-    public Output<NodeConfigDefaultsArgs> nodeConfigDefaults() {
-        return this.nodeConfigDefaults == null ? Codegen.empty() : this.nodeConfigDefaults;
+    public Optional<Output<NodeConfigDefaultsArgs>> nodeConfigDefaults() {
+        return Optional.ofNullable(this.nodeConfigDefaults);
     }
 
-    public NodePoolDefaultsArgs(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
-        this.nodeConfigDefaults = nodeConfigDefaults;
-    }
+    private NodePoolDefaultsArgs() {}
 
-    private NodePoolDefaultsArgs() {
-        this.nodeConfigDefaults = Codegen.empty();
+    private NodePoolDefaultsArgs(NodePoolDefaultsArgs $) {
+        this.nodeConfigDefaults = $.nodeConfigDefaults;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
+        private NodePoolDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolDefaultsArgs();
         }
 
         public Builder(NodePoolDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeConfigDefaults = defaults.nodeConfigDefaults;
+            $ = new NodePoolDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeConfigDefaults(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
-            this.nodeConfigDefaults = nodeConfigDefaults;
+            $.nodeConfigDefaults = nodeConfigDefaults;
             return this;
         }
-        public Builder nodeConfigDefaults(@Nullable NodeConfigDefaultsArgs nodeConfigDefaults) {
-            this.nodeConfigDefaults = Codegen.ofNullable(nodeConfigDefaults);
-            return this;
-        }        public NodePoolDefaultsArgs build() {
-            return new NodePoolDefaultsArgs(nodeConfigDefaults);
+
+        public Builder nodeConfigDefaults(NodeConfigDefaultsArgs nodeConfigDefaults) {
+            return nodeConfigDefaults(Output.of(nodeConfigDefaults));
+        }
+
+        public NodePoolDefaultsArgs build() {
+            return $;
         }
     }
+
 }

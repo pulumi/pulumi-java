@@ -23,7 +23,7 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="container", required=true)
-      private final String container;
+    private String container;
 
     public String container() {
         return this.container;
@@ -34,7 +34,7 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -45,64 +45,58 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="rootFolderPath")
-      private final @Nullable String rootFolderPath;
+    private @Nullable String rootFolderPath;
 
     public Optional<String> rootFolderPath() {
-        return this.rootFolderPath == null ? Optional.empty() : Optional.ofNullable(this.rootFolderPath);
+        return Optional.ofNullable(this.rootFolderPath);
     }
 
-    public ReportDeliveryDestinationResponse(
-        String container,
-        String resourceId,
-        @Nullable String rootFolderPath) {
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.rootFolderPath = rootFolderPath;
-    }
+    private ReportDeliveryDestinationResponse() {}
 
-    private ReportDeliveryDestinationResponse() {
-        this.container = null;
-        this.resourceId = null;
-        this.rootFolderPath = null;
+    private ReportDeliveryDestinationResponse(ReportDeliveryDestinationResponse $) {
+        this.container = $.container;
+        this.resourceId = $.resourceId;
+        this.rootFolderPath = $.rootFolderPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReportDeliveryDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String container;
-        private String resourceId;
-        private @Nullable String rootFolderPath;
+        private ReportDeliveryDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReportDeliveryDestinationResponse();
         }
 
         public Builder(ReportDeliveryDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.resourceId = defaults.resourceId;
-    	      this.rootFolderPath = defaults.rootFolderPath;
+            $ = new ReportDeliveryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder container(String container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
-            this.rootFolderPath = rootFolderPath;
+            $.rootFolderPath = rootFolderPath;
             return this;
-        }        public ReportDeliveryDestinationResponse build() {
-            return new ReportDeliveryDestinationResponse(container, resourceId, rootFolderPath);
+        }
+
+        public ReportDeliveryDestinationResponse build() {
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            return $;
         }
     }
+
 }

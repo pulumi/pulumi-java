@@ -17,7 +17,7 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="integrationAccountName", required=true)
-      private final String integrationAccountName;
+    private String integrationAccountName;
 
     public String integrationAccountName() {
         return this.integrationAccountName;
@@ -28,7 +28,7 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetIntegrationAccountSchemaArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
     }
 
-    public GetIntegrationAccountSchemaArgs(
-        String integrationAccountName,
-        String resourceGroupName,
-        String schemaName) {
-        this.integrationAccountName = Objects.requireNonNull(integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-    }
+    private GetIntegrationAccountSchemaArgs() {}
 
-    private GetIntegrationAccountSchemaArgs() {
-        this.integrationAccountName = null;
-        this.resourceGroupName = null;
-        this.schemaName = null;
+    private GetIntegrationAccountSchemaArgs(GetIntegrationAccountSchemaArgs $) {
+        this.integrationAccountName = $.integrationAccountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.schemaName = $.schemaName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetIntegrationAccountSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String integrationAccountName;
-        private String resourceGroupName;
-        private String schemaName;
+        private GetIntegrationAccountSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetIntegrationAccountSchemaArgs();
         }
 
         public Builder(GetIntegrationAccountSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.integrationAccountName = defaults.integrationAccountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.schemaName = defaults.schemaName;
+            $ = new GetIntegrationAccountSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder integrationAccountName(String integrationAccountName) {
-            this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
+            $.integrationAccountName = integrationAccountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
-        }        public GetIntegrationAccountSchemaArgs build() {
-            return new GetIntegrationAccountSchemaArgs(integrationAccountName, resourceGroupName, schemaName);
+        }
+
+        public GetIntegrationAccountSchemaArgs build() {
+            $.integrationAccountName = Objects.requireNonNull($.integrationAccountName, "expected parameter 'integrationAccountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            return $;
         }
     }
+
 }

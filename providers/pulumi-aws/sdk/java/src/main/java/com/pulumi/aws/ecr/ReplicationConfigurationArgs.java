@@ -6,8 +6,8 @@ package com.pulumi.aws.ecr;
 import com.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class ReplicationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="replicationConfiguration")
-      private final @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
+    private @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
-    public Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration() {
-        return this.replicationConfiguration == null ? Codegen.empty() : this.replicationConfiguration;
+    public Optional<Output<ReplicationConfigurationReplicationConfigurationArgs>> replicationConfiguration() {
+        return Optional.ofNullable(this.replicationConfiguration);
     }
 
-    public ReplicationConfigurationArgs(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
-        this.replicationConfiguration = replicationConfiguration;
-    }
+    private ReplicationConfigurationArgs() {}
 
-    private ReplicationConfigurationArgs() {
-        this.replicationConfiguration = Codegen.empty();
+    private ReplicationConfigurationArgs(ReplicationConfigurationArgs $) {
+        this.replicationConfiguration = $.replicationConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
+        private ReplicationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationConfigurationArgs();
         }
 
         public Builder(ReplicationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.replicationConfiguration = defaults.replicationConfiguration;
+            $ = new ReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder replicationConfiguration(@Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration) {
-            this.replicationConfiguration = replicationConfiguration;
+            $.replicationConfiguration = replicationConfiguration;
             return this;
         }
-        public Builder replicationConfiguration(@Nullable ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
-            this.replicationConfiguration = Codegen.ofNullable(replicationConfiguration);
-            return this;
-        }        public ReplicationConfigurationArgs build() {
-            return new ReplicationConfigurationArgs(replicationConfiguration);
+
+        public Builder replicationConfiguration(ReplicationConfigurationReplicationConfigurationArgs replicationConfiguration) {
+            return replicationConfiguration(Output.of(replicationConfiguration));
+        }
+
+        public ReplicationConfigurationArgs build() {
+            return $;
         }
     }
+
 }

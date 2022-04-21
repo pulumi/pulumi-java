@@ -25,7 +25,7 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -36,7 +36,7 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -47,7 +47,7 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceState", required=true)
-      private final String resourceState;
+    private String resourceState;
 
     public String resourceState() {
         return this.resourceState;
@@ -58,10 +58,10 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rules")
-      private final @Nullable List<RulesEngineRuleResponse> rules;
+    private @Nullable List<RulesEngineRuleResponse> rules;
 
-    public List<RulesEngineRuleResponse> rules() {
-        return this.rules == null ? List.of() : this.rules;
+    public Optional<List<RulesEngineRuleResponse>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -69,85 +69,76 @@ public final class RulesEngineResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RulesEngineResponse(
-        String id,
-        String name,
-        String resourceState,
-        @Nullable List<RulesEngineRuleResponse> rules,
-        String type) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.resourceState = Objects.requireNonNull(resourceState, "expected parameter 'resourceState' to be non-null");
-        this.rules = rules;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RulesEngineResponse() {}
 
-    private RulesEngineResponse() {
-        this.id = null;
-        this.name = null;
-        this.resourceState = null;
-        this.rules = List.of();
-        this.type = null;
+    private RulesEngineResponse(RulesEngineResponse $) {
+        this.id = $.id;
+        this.name = $.name;
+        this.resourceState = $.resourceState;
+        this.rules = $.rules;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String name;
-        private String resourceState;
-        private @Nullable List<RulesEngineRuleResponse> rules;
-        private String type;
+        private RulesEngineResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineResponse();
         }
 
         public Builder(RulesEngineResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.resourceState = defaults.resourceState;
-    	      this.rules = defaults.rules;
-    	      this.type = defaults.type;
+            $ = new RulesEngineResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder resourceState(String resourceState) {
-            this.resourceState = Objects.requireNonNull(resourceState);
+            $.resourceState = resourceState;
             return this;
         }
+
         public Builder rules(@Nullable List<RulesEngineRuleResponse> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(RulesEngineRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RulesEngineResponse build() {
-            return new RulesEngineResponse(id, name, resourceState, rules, type);
+        }
+
+        public RulesEngineResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.resourceState = Objects.requireNonNull($.resourceState, "expected parameter 'resourceState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

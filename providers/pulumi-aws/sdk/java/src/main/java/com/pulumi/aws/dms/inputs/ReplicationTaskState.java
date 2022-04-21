@@ -5,10 +5,10 @@ package com.pulumi.aws.dms.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cdcStartPosition")
-      private final @Nullable Output<String> cdcStartPosition;
+    private @Nullable Output<String> cdcStartPosition;
 
-    public Output<String> cdcStartPosition() {
-        return this.cdcStartPosition == null ? Codegen.empty() : this.cdcStartPosition;
+    public Optional<Output<String>> cdcStartPosition() {
+        return Optional.ofNullable(this.cdcStartPosition);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="cdcStartTime")
-      private final @Nullable Output<String> cdcStartTime;
+    private @Nullable Output<String> cdcStartTime;
 
-    public Output<String> cdcStartTime() {
-        return this.cdcStartTime == null ? Codegen.empty() : this.cdcStartTime;
+    public Optional<Output<String>> cdcStartTime() {
+        return Optional.ofNullable(this.cdcStartTime);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="migrationType")
-      private final @Nullable Output<String> migrationType;
+    private @Nullable Output<String> migrationType;
 
-    public Output<String> migrationType() {
-        return this.migrationType == null ? Codegen.empty() : this.migrationType;
+    public Optional<Output<String>> migrationType() {
+        return Optional.ofNullable(this.migrationType);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationInstanceArn")
-      private final @Nullable Output<String> replicationInstanceArn;
+    private @Nullable Output<String> replicationInstanceArn;
 
-    public Output<String> replicationInstanceArn() {
-        return this.replicationInstanceArn == null ? Codegen.empty() : this.replicationInstanceArn;
+    public Optional<Output<String>> replicationInstanceArn() {
+        return Optional.ofNullable(this.replicationInstanceArn);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationTaskArn")
-      private final @Nullable Output<String> replicationTaskArn;
+    private @Nullable Output<String> replicationTaskArn;
 
-    public Output<String> replicationTaskArn() {
-        return this.replicationTaskArn == null ? Codegen.empty() : this.replicationTaskArn;
+    public Optional<Output<String>> replicationTaskArn() {
+        return Optional.ofNullable(this.replicationTaskArn);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationTaskId")
-      private final @Nullable Output<String> replicationTaskId;
+    private @Nullable Output<String> replicationTaskId;
 
-    public Output<String> replicationTaskId() {
-        return this.replicationTaskId == null ? Codegen.empty() : this.replicationTaskId;
+    public Optional<Output<String>> replicationTaskId() {
+        return Optional.ofNullable(this.replicationTaskId);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicationTaskSettings")
-      private final @Nullable Output<String> replicationTaskSettings;
+    private @Nullable Output<String> replicationTaskSettings;
 
-    public Output<String> replicationTaskSettings() {
-        return this.replicationTaskSettings == null ? Codegen.empty() : this.replicationTaskSettings;
+    public Optional<Output<String>> replicationTaskSettings() {
+        return Optional.ofNullable(this.replicationTaskSettings);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceEndpointArn")
-      private final @Nullable Output<String> sourceEndpointArn;
+    private @Nullable Output<String> sourceEndpointArn;
 
-    public Output<String> sourceEndpointArn() {
-        return this.sourceEndpointArn == null ? Codegen.empty() : this.sourceEndpointArn;
+    public Optional<Output<String>> sourceEndpointArn() {
+        return Optional.ofNullable(this.sourceEndpointArn);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tableMappings")
-      private final @Nullable Output<String> tableMappings;
+    private @Nullable Output<String> tableMappings;
 
-    public Output<String> tableMappings() {
-        return this.tableMappings == null ? Codegen.empty() : this.tableMappings;
+    public Optional<Output<String>> tableMappings() {
+        return Optional.ofNullable(this.tableMappings);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -142,193 +142,158 @@ public final class ReplicationTaskState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetEndpointArn")
-      private final @Nullable Output<String> targetEndpointArn;
+    private @Nullable Output<String> targetEndpointArn;
 
-    public Output<String> targetEndpointArn() {
-        return this.targetEndpointArn == null ? Codegen.empty() : this.targetEndpointArn;
+    public Optional<Output<String>> targetEndpointArn() {
+        return Optional.ofNullable(this.targetEndpointArn);
     }
 
-    public ReplicationTaskState(
-        @Nullable Output<String> cdcStartPosition,
-        @Nullable Output<String> cdcStartTime,
-        @Nullable Output<String> migrationType,
-        @Nullable Output<String> replicationInstanceArn,
-        @Nullable Output<String> replicationTaskArn,
-        @Nullable Output<String> replicationTaskId,
-        @Nullable Output<String> replicationTaskSettings,
-        @Nullable Output<String> sourceEndpointArn,
-        @Nullable Output<String> tableMappings,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> targetEndpointArn) {
-        this.cdcStartPosition = cdcStartPosition;
-        this.cdcStartTime = cdcStartTime;
-        this.migrationType = migrationType;
-        this.replicationInstanceArn = replicationInstanceArn;
-        this.replicationTaskArn = replicationTaskArn;
-        this.replicationTaskId = replicationTaskId;
-        this.replicationTaskSettings = replicationTaskSettings;
-        this.sourceEndpointArn = sourceEndpointArn;
-        this.tableMappings = tableMappings;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.targetEndpointArn = targetEndpointArn;
-    }
+    private ReplicationTaskState() {}
 
-    private ReplicationTaskState() {
-        this.cdcStartPosition = Codegen.empty();
-        this.cdcStartTime = Codegen.empty();
-        this.migrationType = Codegen.empty();
-        this.replicationInstanceArn = Codegen.empty();
-        this.replicationTaskArn = Codegen.empty();
-        this.replicationTaskId = Codegen.empty();
-        this.replicationTaskSettings = Codegen.empty();
-        this.sourceEndpointArn = Codegen.empty();
-        this.tableMappings = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.targetEndpointArn = Codegen.empty();
+    private ReplicationTaskState(ReplicationTaskState $) {
+        this.cdcStartPosition = $.cdcStartPosition;
+        this.cdcStartTime = $.cdcStartTime;
+        this.migrationType = $.migrationType;
+        this.replicationInstanceArn = $.replicationInstanceArn;
+        this.replicationTaskArn = $.replicationTaskArn;
+        this.replicationTaskId = $.replicationTaskId;
+        this.replicationTaskSettings = $.replicationTaskSettings;
+        this.sourceEndpointArn = $.sourceEndpointArn;
+        this.tableMappings = $.tableMappings;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.targetEndpointArn = $.targetEndpointArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationTaskState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cdcStartPosition;
-        private @Nullable Output<String> cdcStartTime;
-        private @Nullable Output<String> migrationType;
-        private @Nullable Output<String> replicationInstanceArn;
-        private @Nullable Output<String> replicationTaskArn;
-        private @Nullable Output<String> replicationTaskId;
-        private @Nullable Output<String> replicationTaskSettings;
-        private @Nullable Output<String> sourceEndpointArn;
-        private @Nullable Output<String> tableMappings;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> targetEndpointArn;
+        private ReplicationTaskState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationTaskState();
         }
 
         public Builder(ReplicationTaskState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cdcStartPosition = defaults.cdcStartPosition;
-    	      this.cdcStartTime = defaults.cdcStartTime;
-    	      this.migrationType = defaults.migrationType;
-    	      this.replicationInstanceArn = defaults.replicationInstanceArn;
-    	      this.replicationTaskArn = defaults.replicationTaskArn;
-    	      this.replicationTaskId = defaults.replicationTaskId;
-    	      this.replicationTaskSettings = defaults.replicationTaskSettings;
-    	      this.sourceEndpointArn = defaults.sourceEndpointArn;
-    	      this.tableMappings = defaults.tableMappings;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.targetEndpointArn = defaults.targetEndpointArn;
+            $ = new ReplicationTaskState(Objects.requireNonNull(defaults));
         }
 
         public Builder cdcStartPosition(@Nullable Output<String> cdcStartPosition) {
-            this.cdcStartPosition = cdcStartPosition;
+            $.cdcStartPosition = cdcStartPosition;
             return this;
         }
-        public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
-            this.cdcStartPosition = Codegen.ofNullable(cdcStartPosition);
-            return this;
+
+        public Builder cdcStartPosition(String cdcStartPosition) {
+            return cdcStartPosition(Output.of(cdcStartPosition));
         }
+
         public Builder cdcStartTime(@Nullable Output<String> cdcStartTime) {
-            this.cdcStartTime = cdcStartTime;
+            $.cdcStartTime = cdcStartTime;
             return this;
         }
-        public Builder cdcStartTime(@Nullable String cdcStartTime) {
-            this.cdcStartTime = Codegen.ofNullable(cdcStartTime);
-            return this;
+
+        public Builder cdcStartTime(String cdcStartTime) {
+            return cdcStartTime(Output.of(cdcStartTime));
         }
+
         public Builder migrationType(@Nullable Output<String> migrationType) {
-            this.migrationType = migrationType;
+            $.migrationType = migrationType;
             return this;
         }
-        public Builder migrationType(@Nullable String migrationType) {
-            this.migrationType = Codegen.ofNullable(migrationType);
-            return this;
+
+        public Builder migrationType(String migrationType) {
+            return migrationType(Output.of(migrationType));
         }
+
         public Builder replicationInstanceArn(@Nullable Output<String> replicationInstanceArn) {
-            this.replicationInstanceArn = replicationInstanceArn;
+            $.replicationInstanceArn = replicationInstanceArn;
             return this;
         }
-        public Builder replicationInstanceArn(@Nullable String replicationInstanceArn) {
-            this.replicationInstanceArn = Codegen.ofNullable(replicationInstanceArn);
-            return this;
+
+        public Builder replicationInstanceArn(String replicationInstanceArn) {
+            return replicationInstanceArn(Output.of(replicationInstanceArn));
         }
+
         public Builder replicationTaskArn(@Nullable Output<String> replicationTaskArn) {
-            this.replicationTaskArn = replicationTaskArn;
+            $.replicationTaskArn = replicationTaskArn;
             return this;
         }
-        public Builder replicationTaskArn(@Nullable String replicationTaskArn) {
-            this.replicationTaskArn = Codegen.ofNullable(replicationTaskArn);
-            return this;
+
+        public Builder replicationTaskArn(String replicationTaskArn) {
+            return replicationTaskArn(Output.of(replicationTaskArn));
         }
+
         public Builder replicationTaskId(@Nullable Output<String> replicationTaskId) {
-            this.replicationTaskId = replicationTaskId;
+            $.replicationTaskId = replicationTaskId;
             return this;
         }
-        public Builder replicationTaskId(@Nullable String replicationTaskId) {
-            this.replicationTaskId = Codegen.ofNullable(replicationTaskId);
-            return this;
+
+        public Builder replicationTaskId(String replicationTaskId) {
+            return replicationTaskId(Output.of(replicationTaskId));
         }
+
         public Builder replicationTaskSettings(@Nullable Output<String> replicationTaskSettings) {
-            this.replicationTaskSettings = replicationTaskSettings;
+            $.replicationTaskSettings = replicationTaskSettings;
             return this;
         }
-        public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
-            this.replicationTaskSettings = Codegen.ofNullable(replicationTaskSettings);
-            return this;
+
+        public Builder replicationTaskSettings(String replicationTaskSettings) {
+            return replicationTaskSettings(Output.of(replicationTaskSettings));
         }
+
         public Builder sourceEndpointArn(@Nullable Output<String> sourceEndpointArn) {
-            this.sourceEndpointArn = sourceEndpointArn;
+            $.sourceEndpointArn = sourceEndpointArn;
             return this;
         }
-        public Builder sourceEndpointArn(@Nullable String sourceEndpointArn) {
-            this.sourceEndpointArn = Codegen.ofNullable(sourceEndpointArn);
-            return this;
+
+        public Builder sourceEndpointArn(String sourceEndpointArn) {
+            return sourceEndpointArn(Output.of(sourceEndpointArn));
         }
+
         public Builder tableMappings(@Nullable Output<String> tableMappings) {
-            this.tableMappings = tableMappings;
+            $.tableMappings = tableMappings;
             return this;
         }
-        public Builder tableMappings(@Nullable String tableMappings) {
-            this.tableMappings = Codegen.ofNullable(tableMappings);
-            return this;
+
+        public Builder tableMappings(String tableMappings) {
+            return tableMappings(Output.of(tableMappings));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder targetEndpointArn(@Nullable Output<String> targetEndpointArn) {
-            this.targetEndpointArn = targetEndpointArn;
+            $.targetEndpointArn = targetEndpointArn;
             return this;
         }
-        public Builder targetEndpointArn(@Nullable String targetEndpointArn) {
-            this.targetEndpointArn = Codegen.ofNullable(targetEndpointArn);
-            return this;
-        }        public ReplicationTaskState build() {
-            return new ReplicationTaskState(cdcStartPosition, cdcStartTime, migrationType, replicationInstanceArn, replicationTaskArn, replicationTaskId, replicationTaskSettings, sourceEndpointArn, tableMappings, tags, tagsAll, targetEndpointArn);
+
+        public Builder targetEndpointArn(String targetEndpointArn) {
+            return targetEndpointArn(Output.of(targetEndpointArn));
+        }
+
+        public ReplicationTaskState build() {
+            return $;
         }
     }
+
 }

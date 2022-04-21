@@ -17,7 +17,7 @@ public final class GetMetricsSourceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="metricsSourceName", required=true)
-      private final String metricsSourceName;
+    private String metricsSourceName;
 
     public String metricsSourceName() {
         return this.metricsSourceName;
@@ -28,7 +28,7 @@ public final class GetMetricsSourceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="monitorName", required=true)
-      private final String monitorName;
+    private String monitorName;
 
     public String monitorName() {
         return this.monitorName;
@@ -39,64 +39,59 @@ public final class GetMetricsSourceArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public GetMetricsSourceArgs(
-        String metricsSourceName,
-        String monitorName,
-        String resourceGroupName) {
-        this.metricsSourceName = Objects.requireNonNull(metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
-        this.monitorName = Objects.requireNonNull(monitorName, "expected parameter 'monitorName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private GetMetricsSourceArgs() {}
 
-    private GetMetricsSourceArgs() {
-        this.metricsSourceName = null;
-        this.monitorName = null;
-        this.resourceGroupName = null;
+    private GetMetricsSourceArgs(GetMetricsSourceArgs $) {
+        this.metricsSourceName = $.metricsSourceName;
+        this.monitorName = $.monitorName;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMetricsSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricsSourceName;
-        private String monitorName;
-        private String resourceGroupName;
+        private GetMetricsSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMetricsSourceArgs();
         }
 
         public Builder(GetMetricsSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricsSourceName = defaults.metricsSourceName;
-    	      this.monitorName = defaults.monitorName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new GetMetricsSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricsSourceName(String metricsSourceName) {
-            this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
+            $.metricsSourceName = metricsSourceName;
             return this;
         }
+
         public Builder monitorName(String monitorName) {
-            this.monitorName = Objects.requireNonNull(monitorName);
+            $.monitorName = monitorName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public GetMetricsSourceArgs build() {
-            return new GetMetricsSourceArgs(metricsSourceName, monitorName, resourceGroupName);
+        }
+
+        public GetMetricsSourceArgs build() {
+            $.metricsSourceName = Objects.requireNonNull($.metricsSourceName, "expected parameter 'metricsSourceName' to be non-null");
+            $.monitorName = Objects.requireNonNull($.monitorName, "expected parameter 'monitorName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

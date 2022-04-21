@@ -29,10 +29,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="containers")
-      private final @Nullable List<ContainerResponse> containers;
+    private @Nullable List<ContainerResponse> containers;
 
-    public List<ContainerResponse> containers() {
-        return this.containers == null ? List.of() : this.containers;
+    public Optional<List<ContainerResponse>> containers() {
+        return Optional.ofNullable(this.containers);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dapr")
-      private final @Nullable DaprResponse dapr;
+    private @Nullable DaprResponse dapr;
 
     public Optional<DaprResponse> dapr() {
-        return this.dapr == null ? Optional.empty() : Optional.ofNullable(this.dapr);
+        return Optional.ofNullable(this.dapr);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="revisionSuffix")
-      private final @Nullable String revisionSuffix;
+    private @Nullable String revisionSuffix;
 
     public Optional<String> revisionSuffix() {
-        return this.revisionSuffix == null ? Optional.empty() : Optional.ofNullable(this.revisionSuffix);
+        return Optional.ofNullable(this.revisionSuffix);
     }
 
     /**
@@ -62,76 +62,66 @@ public final class TemplateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scale")
-      private final @Nullable ScaleResponse scale;
+    private @Nullable ScaleResponse scale;
 
     public Optional<ScaleResponse> scale() {
-        return this.scale == null ? Optional.empty() : Optional.ofNullable(this.scale);
+        return Optional.ofNullable(this.scale);
     }
 
-    public TemplateResponse(
-        @Nullable List<ContainerResponse> containers,
-        @Nullable DaprResponse dapr,
-        @Nullable String revisionSuffix,
-        @Nullable ScaleResponse scale) {
-        this.containers = containers;
-        this.dapr = dapr;
-        this.revisionSuffix = revisionSuffix;
-        this.scale = scale;
-    }
+    private TemplateResponse() {}
 
-    private TemplateResponse() {
-        this.containers = List.of();
-        this.dapr = null;
-        this.revisionSuffix = null;
-        this.scale = null;
+    private TemplateResponse(TemplateResponse $) {
+        this.containers = $.containers;
+        this.dapr = $.dapr;
+        this.revisionSuffix = $.revisionSuffix;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<ContainerResponse> containers;
-        private @Nullable DaprResponse dapr;
-        private @Nullable String revisionSuffix;
-        private @Nullable ScaleResponse scale;
+        private TemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateResponse();
         }
 
         public Builder(TemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containers = defaults.containers;
-    	      this.dapr = defaults.dapr;
-    	      this.revisionSuffix = defaults.revisionSuffix;
-    	      this.scale = defaults.scale;
+            $ = new TemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containers(@Nullable List<ContainerResponse> containers) {
-            this.containers = containers;
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
+
         public Builder dapr(@Nullable DaprResponse dapr) {
-            this.dapr = dapr;
+            $.dapr = dapr;
             return this;
         }
+
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
-            this.revisionSuffix = revisionSuffix;
+            $.revisionSuffix = revisionSuffix;
             return this;
         }
+
         public Builder scale(@Nullable ScaleResponse scale) {
-            this.scale = scale;
+            $.scale = scale;
             return this;
-        }        public TemplateResponse build() {
-            return new TemplateResponse(containers, dapr, revisionSuffix, scale);
+        }
+
+        public TemplateResponse build() {
+            return $;
         }
     }
+
 }

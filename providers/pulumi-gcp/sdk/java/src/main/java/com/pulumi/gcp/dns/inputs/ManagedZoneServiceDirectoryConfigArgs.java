@@ -5,7 +5,6 @@ package com.pulumi.gcp.dns.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.dns.inputs.ManagedZoneServiceDirectoryConfigNamespaceArgs;
 import java.util.Objects;
 
@@ -20,49 +19,49 @@ public final class ManagedZoneServiceDirectoryConfigArgs extends com.pulumi.reso
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+    private Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
 
     public Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace() {
         return this.namespace;
     }
 
-    public ManagedZoneServiceDirectoryConfigArgs(Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private ManagedZoneServiceDirectoryConfigArgs() {}
 
-    private ManagedZoneServiceDirectoryConfigArgs() {
-        this.namespace = Codegen.empty();
+    private ManagedZoneServiceDirectoryConfigArgs(ManagedZoneServiceDirectoryConfigArgs $) {
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace;
+        private ManagedZoneServiceDirectoryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigArgs();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
+            $ = new ManagedZoneServiceDirectoryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(Output<ManagedZoneServiceDirectoryConfigNamespaceArgs> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceArgs namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public ManagedZoneServiceDirectoryConfigArgs build() {
-            return new ManagedZoneServiceDirectoryConfigArgs(namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public ManagedZoneServiceDirectoryConfigArgs build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

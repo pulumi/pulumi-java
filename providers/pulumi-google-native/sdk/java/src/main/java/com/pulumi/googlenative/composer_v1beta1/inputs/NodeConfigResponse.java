@@ -25,7 +25,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
@@ -36,7 +36,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enableIpMasqAgent", required=true)
-      private final Boolean enableIpMasqAgent;
+    private Boolean enableIpMasqAgent;
 
     public Boolean enableIpMasqAgent() {
         return this.enableIpMasqAgent;
@@ -47,7 +47,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAllocationPolicy", required=true)
-      private final IPAllocationPolicyResponse ipAllocationPolicy;
+    private IPAllocationPolicyResponse ipAllocationPolicy;
 
     public IPAllocationPolicyResponse ipAllocationPolicy() {
         return this.ipAllocationPolicy;
@@ -58,7 +58,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -69,7 +69,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -80,7 +80,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxPodsPerNode", required=true)
-      private final Integer maxPodsPerNode;
+    private Integer maxPodsPerNode;
 
     public Integer maxPodsPerNode() {
         return this.maxPodsPerNode;
@@ -91,7 +91,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -102,7 +102,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oauthScopes", required=true)
-      private final List<String> oauthScopes;
+    private List<String> oauthScopes;
 
     public List<String> oauthScopes() {
         return this.oauthScopes;
@@ -113,7 +113,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -124,7 +124,7 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
@@ -135,142 +135,123 @@ public final class NodeConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
     }
 
-    public NodeConfigResponse(
-        Integer diskSizeGb,
-        Boolean enableIpMasqAgent,
-        IPAllocationPolicyResponse ipAllocationPolicy,
-        String location,
-        String machineType,
-        Integer maxPodsPerNode,
-        String network,
-        List<String> oauthScopes,
-        String serviceAccount,
-        String subnetwork,
-        List<String> tags) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.enableIpMasqAgent = Objects.requireNonNull(enableIpMasqAgent, "expected parameter 'enableIpMasqAgent' to be non-null");
-        this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy, "expected parameter 'ipAllocationPolicy' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.oauthScopes = Objects.requireNonNull(oauthScopes, "expected parameter 'oauthScopes' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private NodeConfigResponse() {}
 
-    private NodeConfigResponse() {
-        this.diskSizeGb = null;
-        this.enableIpMasqAgent = null;
-        this.ipAllocationPolicy = null;
-        this.location = null;
-        this.machineType = null;
-        this.maxPodsPerNode = null;
-        this.network = null;
-        this.oauthScopes = List.of();
-        this.serviceAccount = null;
-        this.subnetwork = null;
-        this.tags = List.of();
+    private NodeConfigResponse(NodeConfigResponse $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.enableIpMasqAgent = $.enableIpMasqAgent;
+        this.ipAllocationPolicy = $.ipAllocationPolicy;
+        this.location = $.location;
+        this.machineType = $.machineType;
+        this.maxPodsPerNode = $.maxPodsPerNode;
+        this.network = $.network;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
+        this.subnetwork = $.subnetwork;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer diskSizeGb;
-        private Boolean enableIpMasqAgent;
-        private IPAllocationPolicyResponse ipAllocationPolicy;
-        private String location;
-        private String machineType;
-        private Integer maxPodsPerNode;
-        private String network;
-        private List<String> oauthScopes;
-        private String serviceAccount;
-        private String subnetwork;
-        private List<String> tags;
+        private NodeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeConfigResponse();
         }
 
         public Builder(NodeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.enableIpMasqAgent = defaults.enableIpMasqAgent;
-    	      this.ipAllocationPolicy = defaults.ipAllocationPolicy;
-    	      this.location = defaults.location;
-    	      this.machineType = defaults.machineType;
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
-    	      this.network = defaults.network;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.tags = defaults.tags;
+            $ = new NodeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder enableIpMasqAgent(Boolean enableIpMasqAgent) {
-            this.enableIpMasqAgent = Objects.requireNonNull(enableIpMasqAgent);
+            $.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
+
         public Builder ipAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
-            this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy);
+            $.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder maxPodsPerNode(Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder oauthScopes(List<String> oauthScopes) {
-            this.oauthScopes = Objects.requireNonNull(oauthScopes);
+            $.oauthScopes = oauthScopes;
             return this;
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }        public NodeConfigResponse build() {
-            return new NodeConfigResponse(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
+        }
+
+        public NodeConfigResponse build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.enableIpMasqAgent = Objects.requireNonNull($.enableIpMasqAgent, "expected parameter 'enableIpMasqAgent' to be non-null");
+            $.ipAllocationPolicy = Objects.requireNonNull($.ipAllocationPolicy, "expected parameter 'ipAllocationPolicy' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.maxPodsPerNode = Objects.requireNonNull($.maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.oauthScopes = Objects.requireNonNull($.oauthScopes, "expected parameter 'oauthScopes' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

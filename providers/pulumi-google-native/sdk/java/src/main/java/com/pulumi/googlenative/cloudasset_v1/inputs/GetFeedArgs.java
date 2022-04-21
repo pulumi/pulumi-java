@@ -13,78 +13,73 @@ public final class GetFeedArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFeedArgs Empty = new GetFeedArgs();
 
     @Import(name="feedId", required=true)
-      private final String feedId;
+    private String feedId;
 
     public String feedId() {
         return this.feedId;
     }
 
     @Import(name="v1Id", required=true)
-      private final String v1Id;
+    private String v1Id;
 
     public String v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
-      private final String v1Id1;
+    private String v1Id1;
 
     public String v1Id1() {
         return this.v1Id1;
     }
 
-    public GetFeedArgs(
-        String feedId,
-        String v1Id,
-        String v1Id1) {
-        this.feedId = Objects.requireNonNull(feedId, "expected parameter 'feedId' to be non-null");
-        this.v1Id = Objects.requireNonNull(v1Id, "expected parameter 'v1Id' to be non-null");
-        this.v1Id1 = Objects.requireNonNull(v1Id1, "expected parameter 'v1Id1' to be non-null");
-    }
+    private GetFeedArgs() {}
 
-    private GetFeedArgs() {
-        this.feedId = null;
-        this.v1Id = null;
-        this.v1Id1 = null;
+    private GetFeedArgs(GetFeedArgs $) {
+        this.feedId = $.feedId;
+        this.v1Id = $.v1Id;
+        this.v1Id1 = $.v1Id1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFeedArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String feedId;
-        private String v1Id;
-        private String v1Id1;
+        private GetFeedArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFeedArgs();
         }
 
         public Builder(GetFeedArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.feedId = defaults.feedId;
-    	      this.v1Id = defaults.v1Id;
-    	      this.v1Id1 = defaults.v1Id1;
+            $ = new GetFeedArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder feedId(String feedId) {
-            this.feedId = Objects.requireNonNull(feedId);
+            $.feedId = feedId;
             return this;
         }
+
         public Builder v1Id(String v1Id) {
-            this.v1Id = Objects.requireNonNull(v1Id);
+            $.v1Id = v1Id;
             return this;
         }
+
         public Builder v1Id1(String v1Id1) {
-            this.v1Id1 = Objects.requireNonNull(v1Id1);
+            $.v1Id1 = v1Id1;
             return this;
-        }        public GetFeedArgs build() {
-            return new GetFeedArgs(feedId, v1Id, v1Id1);
+        }
+
+        public GetFeedArgs build() {
+            $.feedId = Objects.requireNonNull($.feedId, "expected parameter 'feedId' to be non-null");
+            $.v1Id = Objects.requireNonNull($.v1Id, "expected parameter 'v1Id' to be non-null");
+            $.v1Id1 = Objects.requireNonNull($.v1Id1, "expected parameter 'v1Id1' to be non-null");
+            return $;
         }
     }
+
 }

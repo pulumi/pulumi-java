@@ -22,7 +22,7 @@ public final class PeripheralsConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="metastoreService", required=true)
-      private final String metastoreService;
+    private String metastoreService;
 
     public String metastoreService() {
         return this.metastoreService;
@@ -33,55 +33,52 @@ public final class PeripheralsConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="sparkHistoryServerConfig", required=true)
-      private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
+    private SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
     public SparkHistoryServerConfigResponse sparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
     }
 
-    public PeripheralsConfigResponse(
-        String metastoreService,
-        SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
-        this.metastoreService = Objects.requireNonNull(metastoreService, "expected parameter 'metastoreService' to be non-null");
-        this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig, "expected parameter 'sparkHistoryServerConfig' to be non-null");
-    }
+    private PeripheralsConfigResponse() {}
 
-    private PeripheralsConfigResponse() {
-        this.metastoreService = null;
-        this.sparkHistoryServerConfig = null;
+    private PeripheralsConfigResponse(PeripheralsConfigResponse $) {
+        this.metastoreService = $.metastoreService;
+        this.sparkHistoryServerConfig = $.sparkHistoryServerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PeripheralsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metastoreService;
-        private SparkHistoryServerConfigResponse sparkHistoryServerConfig;
+        private PeripheralsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PeripheralsConfigResponse();
         }
 
         public Builder(PeripheralsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metastoreService = defaults.metastoreService;
-    	      this.sparkHistoryServerConfig = defaults.sparkHistoryServerConfig;
+            $ = new PeripheralsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metastoreService(String metastoreService) {
-            this.metastoreService = Objects.requireNonNull(metastoreService);
+            $.metastoreService = metastoreService;
             return this;
         }
+
         public Builder sparkHistoryServerConfig(SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
-            this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
+            $.sparkHistoryServerConfig = sparkHistoryServerConfig;
             return this;
-        }        public PeripheralsConfigResponse build() {
-            return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
+        }
+
+        public PeripheralsConfigResponse build() {
+            $.metastoreService = Objects.requireNonNull($.metastoreService, "expected parameter 'metastoreService' to be non-null");
+            $.sparkHistoryServerConfig = Objects.requireNonNull($.sparkHistoryServerConfig, "expected parameter 'sparkHistoryServerConfig' to be non-null");
+            return $;
         }
     }
+
 }

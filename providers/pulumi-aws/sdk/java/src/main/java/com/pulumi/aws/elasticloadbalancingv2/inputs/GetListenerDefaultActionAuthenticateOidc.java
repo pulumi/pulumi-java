@@ -15,206 +15,185 @@ public final class GetListenerDefaultActionAuthenticateOidc extends com.pulumi.r
     public static final GetListenerDefaultActionAuthenticateOidc Empty = new GetListenerDefaultActionAuthenticateOidc();
 
     @Import(name="authenticationRequestExtraParams", required=true)
-      private final Map<String,String> authenticationRequestExtraParams;
+    private Map<String,String> authenticationRequestExtraParams;
 
     public Map<String,String> authenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams;
     }
 
     @Import(name="authorizationEndpoint", required=true)
-      private final String authorizationEndpoint;
+    private String authorizationEndpoint;
 
     public String authorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @Import(name="clientId", required=true)
-      private final String clientId;
+    private String clientId;
 
     public String clientId() {
         return this.clientId;
     }
 
     @Import(name="clientSecret", required=true)
-      private final String clientSecret;
+    private String clientSecret;
 
     public String clientSecret() {
         return this.clientSecret;
     }
 
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
     }
 
     @Import(name="onUnauthenticatedRequest", required=true)
-      private final String onUnauthenticatedRequest;
+    private String onUnauthenticatedRequest;
 
     public String onUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest;
     }
 
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
     @Import(name="sessionCookieName", required=true)
-      private final String sessionCookieName;
+    private String sessionCookieName;
 
     public String sessionCookieName() {
         return this.sessionCookieName;
     }
 
     @Import(name="sessionTimeout", required=true)
-      private final Integer sessionTimeout;
+    private Integer sessionTimeout;
 
     public Integer sessionTimeout() {
         return this.sessionTimeout;
     }
 
     @Import(name="tokenEndpoint", required=true)
-      private final String tokenEndpoint;
+    private String tokenEndpoint;
 
     public String tokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @Import(name="userInfoEndpoint", required=true)
-      private final String userInfoEndpoint;
+    private String userInfoEndpoint;
 
     public String userInfoEndpoint() {
         return this.userInfoEndpoint;
     }
 
-    public GetListenerDefaultActionAuthenticateOidc(
-        Map<String,String> authenticationRequestExtraParams,
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        String onUnauthenticatedRequest,
-        String scope,
-        String sessionCookieName,
-        Integer sessionTimeout,
-        String tokenEndpoint,
-        String userInfoEndpoint) {
-        this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams, "expected parameter 'authenticationRequestExtraParams' to be non-null");
-        this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
-        this.clientId = Objects.requireNonNull(clientId, "expected parameter 'clientId' to be non-null");
-        this.clientSecret = Objects.requireNonNull(clientSecret, "expected parameter 'clientSecret' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest, "expected parameter 'onUnauthenticatedRequest' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-        this.sessionCookieName = Objects.requireNonNull(sessionCookieName, "expected parameter 'sessionCookieName' to be non-null");
-        this.sessionTimeout = Objects.requireNonNull(sessionTimeout, "expected parameter 'sessionTimeout' to be non-null");
-        this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
-        this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
-    }
+    private GetListenerDefaultActionAuthenticateOidc() {}
 
-    private GetListenerDefaultActionAuthenticateOidc() {
-        this.authenticationRequestExtraParams = Map.of();
-        this.authorizationEndpoint = null;
-        this.clientId = null;
-        this.clientSecret = null;
-        this.issuer = null;
-        this.onUnauthenticatedRequest = null;
-        this.scope = null;
-        this.sessionCookieName = null;
-        this.sessionTimeout = null;
-        this.tokenEndpoint = null;
-        this.userInfoEndpoint = null;
+    private GetListenerDefaultActionAuthenticateOidc(GetListenerDefaultActionAuthenticateOidc $) {
+        this.authenticationRequestExtraParams = $.authenticationRequestExtraParams;
+        this.authorizationEndpoint = $.authorizationEndpoint;
+        this.clientId = $.clientId;
+        this.clientSecret = $.clientSecret;
+        this.issuer = $.issuer;
+        this.onUnauthenticatedRequest = $.onUnauthenticatedRequest;
+        this.scope = $.scope;
+        this.sessionCookieName = $.sessionCookieName;
+        this.sessionTimeout = $.sessionTimeout;
+        this.tokenEndpoint = $.tokenEndpoint;
+        this.userInfoEndpoint = $.userInfoEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetListenerDefaultActionAuthenticateOidc defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> authenticationRequestExtraParams;
-        private String authorizationEndpoint;
-        private String clientId;
-        private String clientSecret;
-        private String issuer;
-        private String onUnauthenticatedRequest;
-        private String scope;
-        private String sessionCookieName;
-        private Integer sessionTimeout;
-        private String tokenEndpoint;
-        private String userInfoEndpoint;
+        private GetListenerDefaultActionAuthenticateOidc $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetListenerDefaultActionAuthenticateOidc();
         }
 
         public Builder(GetListenerDefaultActionAuthenticateOidc defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authenticationRequestExtraParams = defaults.authenticationRequestExtraParams;
-    	      this.authorizationEndpoint = defaults.authorizationEndpoint;
-    	      this.clientId = defaults.clientId;
-    	      this.clientSecret = defaults.clientSecret;
-    	      this.issuer = defaults.issuer;
-    	      this.onUnauthenticatedRequest = defaults.onUnauthenticatedRequest;
-    	      this.scope = defaults.scope;
-    	      this.sessionCookieName = defaults.sessionCookieName;
-    	      this.sessionTimeout = defaults.sessionTimeout;
-    	      this.tokenEndpoint = defaults.tokenEndpoint;
-    	      this.userInfoEndpoint = defaults.userInfoEndpoint;
+            $ = new GetListenerDefaultActionAuthenticateOidc(Objects.requireNonNull(defaults));
         }
 
         public Builder authenticationRequestExtraParams(Map<String,String> authenticationRequestExtraParams) {
-            this.authenticationRequestExtraParams = Objects.requireNonNull(authenticationRequestExtraParams);
+            $.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
+
         public Builder authorizationEndpoint(String authorizationEndpoint) {
-            this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
+            $.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
+
         public Builder clientId(String clientId) {
-            this.clientId = Objects.requireNonNull(clientId);
+            $.clientId = clientId;
             return this;
         }
+
         public Builder clientSecret(String clientSecret) {
-            this.clientSecret = Objects.requireNonNull(clientSecret);
+            $.clientSecret = clientSecret;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder onUnauthenticatedRequest(String onUnauthenticatedRequest) {
-            this.onUnauthenticatedRequest = Objects.requireNonNull(onUnauthenticatedRequest);
+            $.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
         }
+
         public Builder sessionCookieName(String sessionCookieName) {
-            this.sessionCookieName = Objects.requireNonNull(sessionCookieName);
+            $.sessionCookieName = sessionCookieName;
             return this;
         }
+
         public Builder sessionTimeout(Integer sessionTimeout) {
-            this.sessionTimeout = Objects.requireNonNull(sessionTimeout);
+            $.sessionTimeout = sessionTimeout;
             return this;
         }
+
         public Builder tokenEndpoint(String tokenEndpoint) {
-            this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
+            $.tokenEndpoint = tokenEndpoint;
             return this;
         }
+
         public Builder userInfoEndpoint(String userInfoEndpoint) {
-            this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
+            $.userInfoEndpoint = userInfoEndpoint;
             return this;
-        }        public GetListenerDefaultActionAuthenticateOidc build() {
-            return new GetListenerDefaultActionAuthenticateOidc(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
+        }
+
+        public GetListenerDefaultActionAuthenticateOidc build() {
+            $.authenticationRequestExtraParams = Objects.requireNonNull($.authenticationRequestExtraParams, "expected parameter 'authenticationRequestExtraParams' to be non-null");
+            $.authorizationEndpoint = Objects.requireNonNull($.authorizationEndpoint, "expected parameter 'authorizationEndpoint' to be non-null");
+            $.clientId = Objects.requireNonNull($.clientId, "expected parameter 'clientId' to be non-null");
+            $.clientSecret = Objects.requireNonNull($.clientSecret, "expected parameter 'clientSecret' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.onUnauthenticatedRequest = Objects.requireNonNull($.onUnauthenticatedRequest, "expected parameter 'onUnauthenticatedRequest' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            $.sessionCookieName = Objects.requireNonNull($.sessionCookieName, "expected parameter 'sessionCookieName' to be non-null");
+            $.sessionTimeout = Objects.requireNonNull($.sessionTimeout, "expected parameter 'sessionTimeout' to be non-null");
+            $.tokenEndpoint = Objects.requireNonNull($.tokenEndpoint, "expected parameter 'tokenEndpoint' to be non-null");
+            $.userInfoEndpoint = Objects.requireNonNull($.userInfoEndpoint, "expected parameter 'userInfoEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

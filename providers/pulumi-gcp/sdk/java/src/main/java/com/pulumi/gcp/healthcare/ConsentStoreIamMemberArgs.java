@@ -5,10 +5,10 @@ package com.pulumi.gcp.healthcare;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
     public static final ConsentStoreIamMemberArgs Empty = new ConsentStoreIamMemberArgs();
 
     @Import(name="condition")
-      private final @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
+    private @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
 
-    public Output<ConsentStoreIamMemberConditionArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<ConsentStoreIamMemberConditionArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -28,7 +28,7 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="consentStoreId", required=true)
-      private final Output<String> consentStoreId;
+    private Output<String> consentStoreId;
 
     public Output<String> consentStoreId() {
         return this.consentStoreId;
@@ -41,14 +41,14 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="dataset", required=true)
-      private final Output<String> dataset;
+    private Output<String> dataset;
 
     public Output<String> dataset() {
         return this.dataset;
     }
 
     @Import(name="member", required=true)
-      private final Output<String> member;
+    private Output<String> member;
 
     public Output<String> member() {
         return this.member;
@@ -61,102 +61,92 @@ public final class ConsentStoreIamMemberArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="role", required=true)
-      private final Output<String> role;
+    private Output<String> role;
 
     public Output<String> role() {
         return this.role;
     }
 
-    public ConsentStoreIamMemberArgs(
-        @Nullable Output<ConsentStoreIamMemberConditionArgs> condition,
-        Output<String> consentStoreId,
-        Output<String> dataset,
-        Output<String> member,
-        Output<String> role) {
-        this.condition = condition;
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.member = Objects.requireNonNull(member, "expected parameter 'member' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-    }
+    private ConsentStoreIamMemberArgs() {}
 
-    private ConsentStoreIamMemberArgs() {
-        this.condition = Codegen.empty();
-        this.consentStoreId = Codegen.empty();
-        this.dataset = Codegen.empty();
-        this.member = Codegen.empty();
-        this.role = Codegen.empty();
+    private ConsentStoreIamMemberArgs(ConsentStoreIamMemberArgs $) {
+        this.condition = $.condition;
+        this.consentStoreId = $.consentStoreId;
+        this.dataset = $.dataset;
+        this.member = $.member;
+        this.role = $.role;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentStoreIamMemberArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConsentStoreIamMemberConditionArgs> condition;
-        private Output<String> consentStoreId;
-        private Output<String> dataset;
-        private Output<String> member;
-        private Output<String> role;
+        private ConsentStoreIamMemberArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentStoreIamMemberArgs();
         }
 
         public Builder(ConsentStoreIamMemberArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.condition = defaults.condition;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.dataset = defaults.dataset;
-    	      this.member = defaults.member;
-    	      this.role = defaults.role;
+            $ = new ConsentStoreIamMemberArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder condition(@Nullable Output<ConsentStoreIamMemberConditionArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable ConsentStoreIamMemberConditionArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(ConsentStoreIamMemberConditionArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder consentStoreId(Output<String> consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
-            return this;
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder dataset(Output<String> dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder dataset(String dataset) {
-            this.dataset = Output.of(Objects.requireNonNull(dataset));
-            return this;
+            return dataset(Output.of(dataset));
         }
+
         public Builder member(Output<String> member) {
-            this.member = Objects.requireNonNull(member);
+            $.member = member;
             return this;
         }
+
         public Builder member(String member) {
-            this.member = Output.of(Objects.requireNonNull(member));
-            return this;
+            return member(Output.of(member));
         }
+
         public Builder role(Output<String> role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Output.of(Objects.requireNonNull(role));
-            return this;
-        }        public ConsentStoreIamMemberArgs build() {
-            return new ConsentStoreIamMemberArgs(condition, consentStoreId, dataset, member, role);
+            return role(Output.of(role));
+        }
+
+        public ConsentStoreIamMemberArgs build() {
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.member = Objects.requireNonNull($.member, "expected parameter 'member' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            return $;
         }
     }
+
 }

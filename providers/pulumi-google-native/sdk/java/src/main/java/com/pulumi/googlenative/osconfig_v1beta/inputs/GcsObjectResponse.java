@@ -21,7 +21,7 @@ public final class GcsObjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class GcsObjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="generationNumber", required=true)
-      private final String generationNumber;
+    private String generationNumber;
 
     public String generationNumber() {
         return this.generationNumber;
@@ -43,64 +43,59 @@ public final class GcsObjectResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
-    public GcsObjectResponse(
-        String bucket,
-        String generationNumber,
-        String object) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.generationNumber = Objects.requireNonNull(generationNumber, "expected parameter 'generationNumber' to be non-null");
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-    }
+    private GcsObjectResponse() {}
 
-    private GcsObjectResponse() {
-        this.bucket = null;
-        this.generationNumber = null;
-        this.object = null;
+    private GcsObjectResponse(GcsObjectResponse $) {
+        this.bucket = $.bucket;
+        this.generationNumber = $.generationNumber;
+        this.object = $.object;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsObjectResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private String generationNumber;
-        private String object;
+        private GcsObjectResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsObjectResponse();
         }
 
         public Builder(GcsObjectResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generationNumber = defaults.generationNumber;
-    	      this.object = defaults.object;
+            $ = new GcsObjectResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder generationNumber(String generationNumber) {
-            this.generationNumber = Objects.requireNonNull(generationNumber);
+            $.generationNumber = generationNumber;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
-        }        public GcsObjectResponse build() {
-            return new GcsObjectResponse(bucket, generationNumber, object);
+        }
+
+        public GcsObjectResponse build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.generationNumber = Objects.requireNonNull($.generationNumber, "expected parameter 'generationNumber' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

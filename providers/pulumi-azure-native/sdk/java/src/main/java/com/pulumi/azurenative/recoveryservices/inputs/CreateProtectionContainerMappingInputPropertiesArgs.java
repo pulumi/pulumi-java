@@ -8,9 +8,9 @@ import com.pulumi.azurenative.recoveryservices.inputs.VMwareCbtContainerMappingI
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
      * 
      */
     @Import(name="policyId")
-      private final @Nullable Output<String> policyId;
+    private @Nullable Output<String> policyId;
 
-    public Output<String> policyId() {
-        return this.policyId == null ? Codegen.empty() : this.policyId;
+    public Optional<Output<String>> policyId() {
+        return Optional.ofNullable(this.policyId);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
      * 
      */
     @Import(name="providerSpecificInput")
-      private final @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
+    private @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
-    public Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput() {
-        return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
+    public Optional<Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>>> providerSpecificInput() {
+        return Optional.ofNullable(this.providerSpecificInput);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends c
      * 
      */
     @Import(name="targetProtectionContainerId")
-      private final @Nullable Output<String> targetProtectionContainerId;
+    private @Nullable Output<String> targetProtectionContainerId;
 
-    public Output<String> targetProtectionContainerId() {
-        return this.targetProtectionContainerId == null ? Codegen.empty() : this.targetProtectionContainerId;
+    public Optional<Output<String>> targetProtectionContainerId() {
+        return Optional.ofNullable(this.targetProtectionContainerId);
     }
 
-    public CreateProtectionContainerMappingInputPropertiesArgs(
-        @Nullable Output<String> policyId,
-        @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput,
-        @Nullable Output<String> targetProtectionContainerId) {
-        this.policyId = policyId;
-        this.providerSpecificInput = providerSpecificInput;
-        this.targetProtectionContainerId = targetProtectionContainerId;
-    }
+    private CreateProtectionContainerMappingInputPropertiesArgs() {}
 
-    private CreateProtectionContainerMappingInputPropertiesArgs() {
-        this.policyId = Codegen.empty();
-        this.providerSpecificInput = Codegen.empty();
-        this.targetProtectionContainerId = Codegen.empty();
+    private CreateProtectionContainerMappingInputPropertiesArgs(CreateProtectionContainerMappingInputPropertiesArgs $) {
+        this.policyId = $.policyId;
+        this.providerSpecificInput = $.providerSpecificInput;
+        this.targetProtectionContainerId = $.targetProtectionContainerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CreateProtectionContainerMappingInputPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> policyId;
-        private @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
-        private @Nullable Output<String> targetProtectionContainerId;
+        private CreateProtectionContainerMappingInputPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CreateProtectionContainerMappingInputPropertiesArgs();
         }
 
         public Builder(CreateProtectionContainerMappingInputPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyId = defaults.policyId;
-    	      this.providerSpecificInput = defaults.providerSpecificInput;
-    	      this.targetProtectionContainerId = defaults.targetProtectionContainerId;
+            $ = new CreateProtectionContainerMappingInputPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policyId(@Nullable Output<String> policyId) {
-            this.policyId = policyId;
+            $.policyId = policyId;
             return this;
         }
-        public Builder policyId(@Nullable String policyId) {
-            this.policyId = Codegen.ofNullable(policyId);
-            return this;
+
+        public Builder policyId(String policyId) {
+            return policyId(Output.of(policyId));
         }
+
         public Builder providerSpecificInput(@Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
-            this.providerSpecificInput = providerSpecificInput;
+            $.providerSpecificInput = providerSpecificInput;
             return this;
         }
-        public Builder providerSpecificInput(@Nullable Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
-            this.providerSpecificInput = Codegen.ofNullable(providerSpecificInput);
-            return this;
+
+        public Builder providerSpecificInput(Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
+            return providerSpecificInput(Output.of(providerSpecificInput));
         }
+
         public Builder targetProtectionContainerId(@Nullable Output<String> targetProtectionContainerId) {
-            this.targetProtectionContainerId = targetProtectionContainerId;
+            $.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }
-        public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
-            this.targetProtectionContainerId = Codegen.ofNullable(targetProtectionContainerId);
-            return this;
-        }        public CreateProtectionContainerMappingInputPropertiesArgs build() {
-            return new CreateProtectionContainerMappingInputPropertiesArgs(policyId, providerSpecificInput, targetProtectionContainerId);
+
+        public Builder targetProtectionContainerId(String targetProtectionContainerId) {
+            return targetProtectionContainerId(Output.of(targetProtectionContainerId));
+        }
+
+        public CreateProtectionContainerMappingInputPropertiesArgs build() {
+            return $;
         }
     }
+
 }

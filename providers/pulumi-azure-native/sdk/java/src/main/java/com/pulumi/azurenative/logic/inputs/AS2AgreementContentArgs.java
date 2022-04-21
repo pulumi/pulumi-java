@@ -6,7 +6,6 @@ package com.pulumi.azurenative.logic.inputs;
 import com.pulumi.azurenative.logic.inputs.AS2OneWayAgreementArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -23,7 +22,7 @@ public final class AS2AgreementContentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="receiveAgreement", required=true)
-      private final Output<AS2OneWayAgreementArgs> receiveAgreement;
+    private Output<AS2OneWayAgreementArgs> receiveAgreement;
 
     public Output<AS2OneWayAgreementArgs> receiveAgreement() {
         return this.receiveAgreement;
@@ -34,63 +33,60 @@ public final class AS2AgreementContentArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sendAgreement", required=true)
-      private final Output<AS2OneWayAgreementArgs> sendAgreement;
+    private Output<AS2OneWayAgreementArgs> sendAgreement;
 
     public Output<AS2OneWayAgreementArgs> sendAgreement() {
         return this.sendAgreement;
     }
 
-    public AS2AgreementContentArgs(
-        Output<AS2OneWayAgreementArgs> receiveAgreement,
-        Output<AS2OneWayAgreementArgs> sendAgreement) {
-        this.receiveAgreement = Objects.requireNonNull(receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
-        this.sendAgreement = Objects.requireNonNull(sendAgreement, "expected parameter 'sendAgreement' to be non-null");
-    }
+    private AS2AgreementContentArgs() {}
 
-    private AS2AgreementContentArgs() {
-        this.receiveAgreement = Codegen.empty();
-        this.sendAgreement = Codegen.empty();
+    private AS2AgreementContentArgs(AS2AgreementContentArgs $) {
+        this.receiveAgreement = $.receiveAgreement;
+        this.sendAgreement = $.sendAgreement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AS2AgreementContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AS2OneWayAgreementArgs> receiveAgreement;
-        private Output<AS2OneWayAgreementArgs> sendAgreement;
+        private AS2AgreementContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AS2AgreementContentArgs();
         }
 
         public Builder(AS2AgreementContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.receiveAgreement = defaults.receiveAgreement;
-    	      this.sendAgreement = defaults.sendAgreement;
+            $ = new AS2AgreementContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder receiveAgreement(Output<AS2OneWayAgreementArgs> receiveAgreement) {
-            this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
+            $.receiveAgreement = receiveAgreement;
             return this;
         }
+
         public Builder receiveAgreement(AS2OneWayAgreementArgs receiveAgreement) {
-            this.receiveAgreement = Output.of(Objects.requireNonNull(receiveAgreement));
-            return this;
+            return receiveAgreement(Output.of(receiveAgreement));
         }
+
         public Builder sendAgreement(Output<AS2OneWayAgreementArgs> sendAgreement) {
-            this.sendAgreement = Objects.requireNonNull(sendAgreement);
+            $.sendAgreement = sendAgreement;
             return this;
         }
+
         public Builder sendAgreement(AS2OneWayAgreementArgs sendAgreement) {
-            this.sendAgreement = Output.of(Objects.requireNonNull(sendAgreement));
-            return this;
-        }        public AS2AgreementContentArgs build() {
-            return new AS2AgreementContentArgs(receiveAgreement, sendAgreement);
+            return sendAgreement(Output.of(sendAgreement));
+        }
+
+        public AS2AgreementContentArgs build() {
+            $.receiveAgreement = Objects.requireNonNull($.receiveAgreement, "expected parameter 'receiveAgreement' to be non-null");
+            $.sendAgreement = Objects.requireNonNull($.sendAgreement, "expected parameter 'sendAgreement' to be non-null");
+            return $;
         }
     }
+
 }

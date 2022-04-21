@@ -23,10 +23,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parametersArtifactSourceRelativePath")
-      private final @Nullable String parametersArtifactSourceRelativePath;
+    private @Nullable String parametersArtifactSourceRelativePath;
 
     public Optional<String> parametersArtifactSourceRelativePath() {
-        return this.parametersArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.parametersArtifactSourceRelativePath);
+        return Optional.ofNullable(this.parametersArtifactSourceRelativePath);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="parametersUri")
-      private final @Nullable String parametersUri;
+    private @Nullable String parametersUri;
 
     public Optional<String> parametersUri() {
-        return this.parametersUri == null ? Optional.empty() : Optional.ofNullable(this.parametersUri);
+        return Optional.ofNullable(this.parametersUri);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="templateArtifactSourceRelativePath")
-      private final @Nullable String templateArtifactSourceRelativePath;
+    private @Nullable String templateArtifactSourceRelativePath;
 
     public Optional<String> templateArtifactSourceRelativePath() {
-        return this.templateArtifactSourceRelativePath == null ? Optional.empty() : Optional.ofNullable(this.templateArtifactSourceRelativePath);
+        return Optional.ofNullable(this.templateArtifactSourceRelativePath);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class ServiceUnitArtifactsResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="templateUri")
-      private final @Nullable String templateUri;
+    private @Nullable String templateUri;
 
     public Optional<String> templateUri() {
-        return this.templateUri == null ? Optional.empty() : Optional.ofNullable(this.templateUri);
+        return Optional.ofNullable(this.templateUri);
     }
 
-    public ServiceUnitArtifactsResponse(
-        @Nullable String parametersArtifactSourceRelativePath,
-        @Nullable String parametersUri,
-        @Nullable String templateArtifactSourceRelativePath,
-        @Nullable String templateUri) {
-        this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
-        this.parametersUri = parametersUri;
-        this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
-        this.templateUri = templateUri;
-    }
+    private ServiceUnitArtifactsResponse() {}
 
-    private ServiceUnitArtifactsResponse() {
-        this.parametersArtifactSourceRelativePath = null;
-        this.parametersUri = null;
-        this.templateArtifactSourceRelativePath = null;
-        this.templateUri = null;
+    private ServiceUnitArtifactsResponse(ServiceUnitArtifactsResponse $) {
+        this.parametersArtifactSourceRelativePath = $.parametersArtifactSourceRelativePath;
+        this.parametersUri = $.parametersUri;
+        this.templateArtifactSourceRelativePath = $.templateArtifactSourceRelativePath;
+        this.templateUri = $.templateUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceUnitArtifactsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String parametersArtifactSourceRelativePath;
-        private @Nullable String parametersUri;
-        private @Nullable String templateArtifactSourceRelativePath;
-        private @Nullable String templateUri;
+        private ServiceUnitArtifactsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceUnitArtifactsResponse();
         }
 
         public Builder(ServiceUnitArtifactsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parametersArtifactSourceRelativePath = defaults.parametersArtifactSourceRelativePath;
-    	      this.parametersUri = defaults.parametersUri;
-    	      this.templateArtifactSourceRelativePath = defaults.templateArtifactSourceRelativePath;
-    	      this.templateUri = defaults.templateUri;
+            $ = new ServiceUnitArtifactsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parametersArtifactSourceRelativePath(@Nullable String parametersArtifactSourceRelativePath) {
-            this.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
+            $.parametersArtifactSourceRelativePath = parametersArtifactSourceRelativePath;
             return this;
         }
+
         public Builder parametersUri(@Nullable String parametersUri) {
-            this.parametersUri = parametersUri;
+            $.parametersUri = parametersUri;
             return this;
         }
+
         public Builder templateArtifactSourceRelativePath(@Nullable String templateArtifactSourceRelativePath) {
-            this.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
+            $.templateArtifactSourceRelativePath = templateArtifactSourceRelativePath;
             return this;
         }
+
         public Builder templateUri(@Nullable String templateUri) {
-            this.templateUri = templateUri;
+            $.templateUri = templateUri;
             return this;
-        }        public ServiceUnitArtifactsResponse build() {
-            return new ServiceUnitArtifactsResponse(parametersArtifactSourceRelativePath, parametersUri, templateArtifactSourceRelativePath, templateUri);
+        }
+
+        public ServiceUnitArtifactsResponse build() {
+            return $;
         }
     }
+
 }

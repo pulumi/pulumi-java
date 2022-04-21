@@ -17,7 +17,7 @@ public final class GetprivateLinkServicesForSCCPowershellArgs extends com.pulumi
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -28,55 +28,52 @@ public final class GetprivateLinkServicesForSCCPowershellArgs extends com.pulumi
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public GetprivateLinkServicesForSCCPowershellArgs(
-        String resourceGroupName,
-        String resourceName) {
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private GetprivateLinkServicesForSCCPowershellArgs() {}
 
-    private GetprivateLinkServicesForSCCPowershellArgs() {
-        this.resourceGroupName = null;
-        this.resourceName = null;
+    private GetprivateLinkServicesForSCCPowershellArgs(GetprivateLinkServicesForSCCPowershellArgs $) {
+        this.resourceGroupName = $.resourceGroupName;
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetprivateLinkServicesForSCCPowershellArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceGroupName;
-        private String resourceName;
+        private GetprivateLinkServicesForSCCPowershellArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetprivateLinkServicesForSCCPowershellArgs();
         }
 
         public Builder(GetprivateLinkServicesForSCCPowershellArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.resourceName = defaults.resourceName;
+            $ = new GetprivateLinkServicesForSCCPowershellArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public GetprivateLinkServicesForSCCPowershellArgs build() {
-            return new GetprivateLinkServicesForSCCPowershellArgs(resourceGroupName, resourceName);
+        }
+
+        public GetprivateLinkServicesForSCCPowershellArgs build() {
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

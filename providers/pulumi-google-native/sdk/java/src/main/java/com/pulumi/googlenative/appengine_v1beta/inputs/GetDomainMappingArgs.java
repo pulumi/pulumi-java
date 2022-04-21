@@ -13,62 +13,59 @@ public final class GetDomainMappingArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetDomainMappingArgs Empty = new GetDomainMappingArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="domainMappingId", required=true)
-      private final String domainMappingId;
+    private String domainMappingId;
 
     public String domainMappingId() {
         return this.domainMappingId;
     }
 
-    public GetDomainMappingArgs(
-        String appId,
-        String domainMappingId) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.domainMappingId = Objects.requireNonNull(domainMappingId, "expected parameter 'domainMappingId' to be non-null");
-    }
+    private GetDomainMappingArgs() {}
 
-    private GetDomainMappingArgs() {
-        this.appId = null;
-        this.domainMappingId = null;
+    private GetDomainMappingArgs(GetDomainMappingArgs $) {
+        this.appId = $.appId;
+        this.domainMappingId = $.domainMappingId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String domainMappingId;
+        private GetDomainMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainMappingArgs();
         }
 
         public Builder(GetDomainMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.domainMappingId = defaults.domainMappingId;
+            $ = new GetDomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder domainMappingId(String domainMappingId) {
-            this.domainMappingId = Objects.requireNonNull(domainMappingId);
+            $.domainMappingId = domainMappingId;
             return this;
-        }        public GetDomainMappingArgs build() {
-            return new GetDomainMappingArgs(appId, domainMappingId);
+        }
+
+        public GetDomainMappingArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.domainMappingId = Objects.requireNonNull($.domainMappingId, "expected parameter 'domainMappingId' to be non-null");
+            return $;
         }
     }
+
 }

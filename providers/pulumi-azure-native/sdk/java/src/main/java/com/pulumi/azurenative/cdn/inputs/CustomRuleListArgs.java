@@ -6,9 +6,9 @@ package com.pulumi.azurenative.cdn.inputs;
 import com.pulumi.azurenative.cdn.inputs.CustomRuleArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class CustomRuleListArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<CustomRuleArgs>> rules;
+    private @Nullable Output<List<CustomRuleArgs>> rules;
 
-    public Output<List<CustomRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<CustomRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public CustomRuleListArgs(@Nullable Output<List<CustomRuleArgs>> rules) {
-        this.rules = rules;
-    }
+    private CustomRuleListArgs() {}
 
-    private CustomRuleListArgs() {
-        this.rules = Codegen.empty();
+    private CustomRuleListArgs(CustomRuleListArgs $) {
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomRuleListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CustomRuleArgs>> rules;
+        private CustomRuleListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomRuleListArgs();
         }
 
         public Builder(CustomRuleListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rules = defaults.rules;
+            $ = new CustomRuleListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rules(@Nullable Output<List<CustomRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<CustomRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<CustomRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(CustomRuleArgs... rules) {
             return rules(List.of(rules));
-        }        public CustomRuleListArgs build() {
-            return new CustomRuleListArgs(rules);
+        }
+
+        public CustomRuleListArgs build() {
+            return $;
         }
     }
+
 }

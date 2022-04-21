@@ -5,12 +5,12 @@ package com.pulumi.aws.imagebuilder.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="changeDescription")
-      private final @Nullable Output<String> changeDescription;
+    private @Nullable Output<String> changeDescription;
 
-    public Output<String> changeDescription() {
-        return this.changeDescription == null ? Codegen.empty() : this.changeDescription;
+    public Optional<Output<String>> changeDescription() {
+        return Optional.ofNullable(this.changeDescription);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dateCreated")
-      private final @Nullable Output<String> dateCreated;
+    private @Nullable Output<String> dateCreated;
 
-    public Output<String> dateCreated() {
-        return this.dateCreated == null ? Codegen.empty() : this.dateCreated;
+    public Optional<Output<String>> dateCreated() {
+        return Optional.ofNullable(this.dateCreated);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encrypted")
-      private final @Nullable Output<Boolean> encrypted;
+    private @Nullable Output<Boolean> encrypted;
 
-    public Output<Boolean> encrypted() {
-        return this.encrypted == null ? Codegen.empty() : this.encrypted;
+    public Optional<Output<Boolean>> encrypted() {
+        return Optional.ofNullable(this.encrypted);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="owner")
-      private final @Nullable Output<String> owner;
+    private @Nullable Output<String> owner;
 
-    public Output<String> owner() {
-        return this.owner == null ? Codegen.empty() : this.owner;
+    public Optional<Output<String>> owner() {
+        return Optional.ofNullable(this.owner);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportedOsVersions")
-      private final @Nullable Output<List<String>> supportedOsVersions;
+    private @Nullable Output<List<String>> supportedOsVersions;
 
-    public Output<List<String>> supportedOsVersions() {
-        return this.supportedOsVersions == null ? Codegen.empty() : this.supportedOsVersions;
+    public Optional<Output<List<String>>> supportedOsVersions() {
+        return Optional.ofNullable(this.supportedOsVersions);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -166,10 +166,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -177,10 +177,10 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
     /**
@@ -188,248 +188,202 @@ public final class ComponentState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ComponentState(
-        @Nullable Output<String> arn,
-        @Nullable Output<String> changeDescription,
-        @Nullable Output<String> data,
-        @Nullable Output<String> dateCreated,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> encrypted,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> owner,
-        @Nullable Output<String> platform,
-        @Nullable Output<List<String>> supportedOsVersions,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> type,
-        @Nullable Output<String> uri,
-        @Nullable Output<String> version) {
-        this.arn = arn;
-        this.changeDescription = changeDescription;
-        this.data = data;
-        this.dateCreated = dateCreated;
-        this.description = description;
-        this.encrypted = encrypted;
-        this.kmsKeyId = kmsKeyId;
-        this.name = name;
-        this.owner = owner;
-        this.platform = platform;
-        this.supportedOsVersions = supportedOsVersions;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.type = type;
-        this.uri = uri;
-        this.version = version;
-    }
+    private ComponentState() {}
 
-    private ComponentState() {
-        this.arn = Codegen.empty();
-        this.changeDescription = Codegen.empty();
-        this.data = Codegen.empty();
-        this.dateCreated = Codegen.empty();
-        this.description = Codegen.empty();
-        this.encrypted = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.owner = Codegen.empty();
-        this.platform = Codegen.empty();
-        this.supportedOsVersions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.type = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.version = Codegen.empty();
+    private ComponentState(ComponentState $) {
+        this.arn = $.arn;
+        this.changeDescription = $.changeDescription;
+        this.data = $.data;
+        this.dateCreated = $.dateCreated;
+        this.description = $.description;
+        this.encrypted = $.encrypted;
+        this.kmsKeyId = $.kmsKeyId;
+        this.name = $.name;
+        this.owner = $.owner;
+        this.platform = $.platform;
+        this.supportedOsVersions = $.supportedOsVersions;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.type = $.type;
+        this.uri = $.uri;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<String> changeDescription;
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> dateCreated;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> encrypted;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> owner;
-        private @Nullable Output<String> platform;
-        private @Nullable Output<List<String>> supportedOsVersions;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> type;
-        private @Nullable Output<String> uri;
-        private @Nullable Output<String> version;
+        private ComponentState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentState();
         }
 
         public Builder(ComponentState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.changeDescription = defaults.changeDescription;
-    	      this.data = defaults.data;
-    	      this.dateCreated = defaults.dateCreated;
-    	      this.description = defaults.description;
-    	      this.encrypted = defaults.encrypted;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.name = defaults.name;
-    	      this.owner = defaults.owner;
-    	      this.platform = defaults.platform;
-    	      this.supportedOsVersions = defaults.supportedOsVersions;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
-    	      this.version = defaults.version;
+            $ = new ComponentState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder changeDescription(@Nullable Output<String> changeDescription) {
-            this.changeDescription = changeDescription;
+            $.changeDescription = changeDescription;
             return this;
         }
-        public Builder changeDescription(@Nullable String changeDescription) {
-            this.changeDescription = Codegen.ofNullable(changeDescription);
-            return this;
+
+        public Builder changeDescription(String changeDescription) {
+            return changeDescription(Output.of(changeDescription));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder dateCreated(@Nullable Output<String> dateCreated) {
-            this.dateCreated = dateCreated;
+            $.dateCreated = dateCreated;
             return this;
         }
-        public Builder dateCreated(@Nullable String dateCreated) {
-            this.dateCreated = Codegen.ofNullable(dateCreated);
-            return this;
+
+        public Builder dateCreated(String dateCreated) {
+            return dateCreated(Output.of(dateCreated));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
-            this.encrypted = encrypted;
+            $.encrypted = encrypted;
             return this;
         }
-        public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Codegen.ofNullable(encrypted);
-            return this;
+
+        public Builder encrypted(Boolean encrypted) {
+            return encrypted(Output.of(encrypted));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder owner(@Nullable Output<String> owner) {
-            this.owner = owner;
+            $.owner = owner;
             return this;
         }
-        public Builder owner(@Nullable String owner) {
-            this.owner = Codegen.ofNullable(owner);
-            return this;
+
+        public Builder owner(String owner) {
+            return owner(Output.of(owner));
         }
+
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder supportedOsVersions(@Nullable Output<List<String>> supportedOsVersions) {
-            this.supportedOsVersions = supportedOsVersions;
+            $.supportedOsVersions = supportedOsVersions;
             return this;
         }
-        public Builder supportedOsVersions(@Nullable List<String> supportedOsVersions) {
-            this.supportedOsVersions = Codegen.ofNullable(supportedOsVersions);
-            return this;
+
+        public Builder supportedOsVersions(List<String> supportedOsVersions) {
+            return supportedOsVersions(Output.of(supportedOsVersions));
         }
+
         public Builder supportedOsVersions(String... supportedOsVersions) {
             return supportedOsVersions(List.of(supportedOsVersions));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(String type) {
+            return type(Output.of(type));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ComponentState build() {
-            return new ComponentState(arn, changeDescription, data, dateCreated, description, encrypted, kmsKeyId, name, owner, platform, supportedOsVersions, tags, tagsAll, type, uri, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ComponentState build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.aws.iot.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ThingGroupMetadataRootToParentGroupGetArgs extends com.pulumi
     public static final ThingGroupMetadataRootToParentGroupGetArgs Empty = new ThingGroupMetadataRootToParentGroupGetArgs();
 
     @Import(name="groupArn")
-      private final @Nullable Output<String> groupArn;
+    private @Nullable Output<String> groupArn;
 
-    public Output<String> groupArn() {
-        return this.groupArn == null ? Codegen.empty() : this.groupArn;
+    public Optional<Output<String>> groupArn() {
+        return Optional.ofNullable(this.groupArn);
     }
 
     @Import(name="groupName")
-      private final @Nullable Output<String> groupName;
+    private @Nullable Output<String> groupName;
 
-    public Output<String> groupName() {
-        return this.groupName == null ? Codegen.empty() : this.groupName;
+    public Optional<Output<String>> groupName() {
+        return Optional.ofNullable(this.groupName);
     }
 
-    public ThingGroupMetadataRootToParentGroupGetArgs(
-        @Nullable Output<String> groupArn,
-        @Nullable Output<String> groupName) {
-        this.groupArn = groupArn;
-        this.groupName = groupName;
-    }
+    private ThingGroupMetadataRootToParentGroupGetArgs() {}
 
-    private ThingGroupMetadataRootToParentGroupGetArgs() {
-        this.groupArn = Codegen.empty();
-        this.groupName = Codegen.empty();
+    private ThingGroupMetadataRootToParentGroupGetArgs(ThingGroupMetadataRootToParentGroupGetArgs $) {
+        this.groupArn = $.groupArn;
+        this.groupName = $.groupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThingGroupMetadataRootToParentGroupGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> groupArn;
-        private @Nullable Output<String> groupName;
+        private ThingGroupMetadataRootToParentGroupGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThingGroupMetadataRootToParentGroupGetArgs();
         }
 
         public Builder(ThingGroupMetadataRootToParentGroupGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupArn = defaults.groupArn;
-    	      this.groupName = defaults.groupName;
+            $ = new ThingGroupMetadataRootToParentGroupGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupArn(@Nullable Output<String> groupArn) {
-            this.groupArn = groupArn;
+            $.groupArn = groupArn;
             return this;
         }
-        public Builder groupArn(@Nullable String groupArn) {
-            this.groupArn = Codegen.ofNullable(groupArn);
-            return this;
+
+        public Builder groupArn(String groupArn) {
+            return groupArn(Output.of(groupArn));
         }
+
         public Builder groupName(@Nullable Output<String> groupName) {
-            this.groupName = groupName;
+            $.groupName = groupName;
             return this;
         }
-        public Builder groupName(@Nullable String groupName) {
-            this.groupName = Codegen.ofNullable(groupName);
-            return this;
-        }        public ThingGroupMetadataRootToParentGroupGetArgs build() {
-            return new ThingGroupMetadataRootToParentGroupGetArgs(groupArn, groupName);
+
+        public Builder groupName(String groupName) {
+            return groupName(Output.of(groupName));
+        }
+
+        public ThingGroupMetadataRootToParentGroupGetArgs build() {
+            return $;
         }
     }
+
 }

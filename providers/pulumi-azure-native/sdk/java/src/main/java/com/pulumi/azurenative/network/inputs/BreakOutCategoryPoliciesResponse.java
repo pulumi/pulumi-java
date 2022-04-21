@@ -23,10 +23,10 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="allow")
-      private final @Nullable Boolean allow;
+    private @Nullable Boolean allow;
 
     public Optional<Boolean> allow() {
-        return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
+        return Optional.ofNullable(this.allow);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="default")
-      private final @Nullable Boolean default_;
+    private @Nullable Boolean default_;
 
     public Optional<Boolean> default_() {
-        return this.default_ == null ? Optional.empty() : Optional.ofNullable(this.default_);
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -45,64 +45,56 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="optimize")
-      private final @Nullable Boolean optimize;
+    private @Nullable Boolean optimize;
 
     public Optional<Boolean> optimize() {
-        return this.optimize == null ? Optional.empty() : Optional.ofNullable(this.optimize);
+        return Optional.ofNullable(this.optimize);
     }
 
-    public BreakOutCategoryPoliciesResponse(
-        @Nullable Boolean allow,
-        @Nullable Boolean default_,
-        @Nullable Boolean optimize) {
-        this.allow = allow;
-        this.default_ = default_;
-        this.optimize = optimize;
-    }
+    private BreakOutCategoryPoliciesResponse() {}
 
-    private BreakOutCategoryPoliciesResponse() {
-        this.allow = null;
-        this.default_ = null;
-        this.optimize = null;
+    private BreakOutCategoryPoliciesResponse(BreakOutCategoryPoliciesResponse $) {
+        this.allow = $.allow;
+        this.default_ = $.default_;
+        this.optimize = $.optimize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BreakOutCategoryPoliciesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean allow;
-        private @Nullable Boolean default_;
-        private @Nullable Boolean optimize;
+        private BreakOutCategoryPoliciesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BreakOutCategoryPoliciesResponse();
         }
 
         public Builder(BreakOutCategoryPoliciesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allow = defaults.allow;
-    	      this.default_ = defaults.default_;
-    	      this.optimize = defaults.optimize;
+            $ = new BreakOutCategoryPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allow(@Nullable Boolean allow) {
-            this.allow = allow;
+            $.allow = allow;
             return this;
         }
+
         public Builder default_(@Nullable Boolean default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
+
         public Builder optimize(@Nullable Boolean optimize) {
-            this.optimize = optimize;
+            $.optimize = optimize;
             return this;
-        }        public BreakOutCategoryPoliciesResponse build() {
-            return new BreakOutCategoryPoliciesResponse(allow, default_, optimize);
+        }
+
+        public BreakOutCategoryPoliciesResponse build() {
+            return $;
         }
     }
+
 }

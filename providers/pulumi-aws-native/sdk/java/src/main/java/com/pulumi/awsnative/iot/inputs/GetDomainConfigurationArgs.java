@@ -13,45 +13,45 @@ public final class GetDomainConfigurationArgs extends com.pulumi.resources.Invok
     public static final GetDomainConfigurationArgs Empty = new GetDomainConfigurationArgs();
 
     @Import(name="domainConfigurationName", required=true)
-      private final String domainConfigurationName;
+    private String domainConfigurationName;
 
     public String domainConfigurationName() {
         return this.domainConfigurationName;
     }
 
-    public GetDomainConfigurationArgs(String domainConfigurationName) {
-        this.domainConfigurationName = Objects.requireNonNull(domainConfigurationName, "expected parameter 'domainConfigurationName' to be non-null");
-    }
+    private GetDomainConfigurationArgs() {}
 
-    private GetDomainConfigurationArgs() {
-        this.domainConfigurationName = null;
+    private GetDomainConfigurationArgs(GetDomainConfigurationArgs $) {
+        this.domainConfigurationName = $.domainConfigurationName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDomainConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainConfigurationName;
+        private GetDomainConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDomainConfigurationArgs();
         }
 
         public Builder(GetDomainConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainConfigurationName = defaults.domainConfigurationName;
+            $ = new GetDomainConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainConfigurationName(String domainConfigurationName) {
-            this.domainConfigurationName = Objects.requireNonNull(domainConfigurationName);
+            $.domainConfigurationName = domainConfigurationName;
             return this;
-        }        public GetDomainConfigurationArgs build() {
-            return new GetDomainConfigurationArgs(domainConfigurationName);
+        }
+
+        public GetDomainConfigurationArgs build() {
+            $.domainConfigurationName = Objects.requireNonNull($.domainConfigurationName, "expected parameter 'domainConfigurationName' to be non-null");
+            return $;
         }
     }
+
 }

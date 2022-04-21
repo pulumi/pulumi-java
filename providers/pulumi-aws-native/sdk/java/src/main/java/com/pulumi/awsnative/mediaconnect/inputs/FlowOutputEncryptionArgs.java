@@ -7,9 +7,9 @@ import com.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import com.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="algorithm")
-      private final @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
+    private @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
 
-    public Output<FlowOutputEncryptionAlgorithm> algorithm() {
-        return this.algorithm == null ? Codegen.empty() : this.algorithm;
+    public Optional<Output<FlowOutputEncryptionAlgorithm>> algorithm() {
+        return Optional.ofNullable(this.algorithm);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="keyType")
-      private final @Nullable Output<FlowOutputEncryptionKeyType> keyType;
+    private @Nullable Output<FlowOutputEncryptionKeyType> keyType;
 
-    public Output<FlowOutputEncryptionKeyType> keyType() {
-        return this.keyType == null ? Codegen.empty() : this.keyType;
+    public Optional<Output<FlowOutputEncryptionKeyType>> keyType() {
+        return Optional.ofNullable(this.keyType);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -59,89 +59,80 @@ public final class FlowOutputEncryptionArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="secretArn", required=true)
-      private final Output<String> secretArn;
+    private Output<String> secretArn;
 
     public Output<String> secretArn() {
         return this.secretArn;
     }
 
-    public FlowOutputEncryptionArgs(
-        @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm,
-        @Nullable Output<FlowOutputEncryptionKeyType> keyType,
-        Output<String> roleArn,
-        Output<String> secretArn) {
-        this.algorithm = algorithm;
-        this.keyType = keyType;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.secretArn = Objects.requireNonNull(secretArn, "expected parameter 'secretArn' to be non-null");
-    }
+    private FlowOutputEncryptionArgs() {}
 
-    private FlowOutputEncryptionArgs() {
-        this.algorithm = Codegen.empty();
-        this.keyType = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.secretArn = Codegen.empty();
+    private FlowOutputEncryptionArgs(FlowOutputEncryptionArgs $) {
+        this.algorithm = $.algorithm;
+        this.keyType = $.keyType;
+        this.roleArn = $.roleArn;
+        this.secretArn = $.secretArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FlowOutputEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FlowOutputEncryptionAlgorithm> algorithm;
-        private @Nullable Output<FlowOutputEncryptionKeyType> keyType;
-        private Output<String> roleArn;
-        private Output<String> secretArn;
+        private FlowOutputEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FlowOutputEncryptionArgs();
         }
 
         public Builder(FlowOutputEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.keyType = defaults.keyType;
-    	      this.roleArn = defaults.roleArn;
-    	      this.secretArn = defaults.secretArn;
+            $ = new FlowOutputEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(@Nullable Output<FlowOutputEncryptionAlgorithm> algorithm) {
-            this.algorithm = algorithm;
+            $.algorithm = algorithm;
             return this;
         }
-        public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
-            this.algorithm = Codegen.ofNullable(algorithm);
-            return this;
+
+        public Builder algorithm(FlowOutputEncryptionAlgorithm algorithm) {
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder keyType(@Nullable Output<FlowOutputEncryptionKeyType> keyType) {
-            this.keyType = keyType;
+            $.keyType = keyType;
             return this;
         }
-        public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
-            this.keyType = Codegen.ofNullable(keyType);
-            return this;
+
+        public Builder keyType(FlowOutputEncryptionKeyType keyType) {
+            return keyType(Output.of(keyType));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder secretArn(Output<String> secretArn) {
-            this.secretArn = Objects.requireNonNull(secretArn);
+            $.secretArn = secretArn;
             return this;
         }
+
         public Builder secretArn(String secretArn) {
-            this.secretArn = Output.of(Objects.requireNonNull(secretArn));
-            return this;
-        }        public FlowOutputEncryptionArgs build() {
-            return new FlowOutputEncryptionArgs(algorithm, keyType, roleArn, secretArn);
+            return secretArn(Output.of(secretArn));
+        }
+
+        public FlowOutputEncryptionArgs build() {
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            $.secretArn = Objects.requireNonNull($.secretArn, "expected parameter 'secretArn' to be non-null");
+            return $;
         }
     }
+
 }

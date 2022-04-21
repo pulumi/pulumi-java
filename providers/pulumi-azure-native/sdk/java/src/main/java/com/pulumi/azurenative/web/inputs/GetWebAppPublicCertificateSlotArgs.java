@@ -17,7 +17,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="publicCertificateName", required=true)
-      private final String publicCertificateName;
+    private String publicCertificateName;
 
     public String publicCertificateName() {
         return this.publicCertificateName;
@@ -39,7 +39,7 @@ public final class GetWebAppPublicCertificateSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -50,73 +50,66 @@ public final class GetWebAppPublicCertificateSlotArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="slot", required=true)
-      private final String slot;
+    private String slot;
 
     public String slot() {
         return this.slot;
     }
 
-    public GetWebAppPublicCertificateSlotArgs(
-        String name,
-        String publicCertificateName,
-        String resourceGroupName,
-        String slot) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.publicCertificateName = Objects.requireNonNull(publicCertificateName, "expected parameter 'publicCertificateName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.slot = Objects.requireNonNull(slot, "expected parameter 'slot' to be non-null");
-    }
+    private GetWebAppPublicCertificateSlotArgs() {}
 
-    private GetWebAppPublicCertificateSlotArgs() {
-        this.name = null;
-        this.publicCertificateName = null;
-        this.resourceGroupName = null;
-        this.slot = null;
+    private GetWebAppPublicCertificateSlotArgs(GetWebAppPublicCertificateSlotArgs $) {
+        this.name = $.name;
+        this.publicCertificateName = $.publicCertificateName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.slot = $.slot;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetWebAppPublicCertificateSlotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String publicCertificateName;
-        private String resourceGroupName;
-        private String slot;
+        private GetWebAppPublicCertificateSlotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetWebAppPublicCertificateSlotArgs();
         }
 
         public Builder(GetWebAppPublicCertificateSlotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.publicCertificateName = defaults.publicCertificateName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.slot = defaults.slot;
+            $ = new GetWebAppPublicCertificateSlotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder publicCertificateName(String publicCertificateName) {
-            this.publicCertificateName = Objects.requireNonNull(publicCertificateName);
+            $.publicCertificateName = publicCertificateName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder slot(String slot) {
-            this.slot = Objects.requireNonNull(slot);
+            $.slot = slot;
             return this;
-        }        public GetWebAppPublicCertificateSlotArgs build() {
-            return new GetWebAppPublicCertificateSlotArgs(name, publicCertificateName, resourceGroupName, slot);
+        }
+
+        public GetWebAppPublicCertificateSlotArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.publicCertificateName = Objects.requireNonNull($.publicCertificateName, "expected parameter 'publicCertificateName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.slot = Objects.requireNonNull($.slot, "expected parameter 'slot' to be non-null");
+            return $;
         }
     }
+
 }

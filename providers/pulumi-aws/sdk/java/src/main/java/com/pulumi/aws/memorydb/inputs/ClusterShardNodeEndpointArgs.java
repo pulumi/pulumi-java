@@ -5,10 +5,10 @@ package com.pulumi.aws.memorydb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ClusterShardNodeEndpointArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="address")
-      private final @Nullable Output<String> address;
+    private @Nullable Output<String> address;
 
-    public Output<String> address() {
-        return this.address == null ? Codegen.empty() : this.address;
+    public Optional<Output<String>> address() {
+        return Optional.ofNullable(this.address);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ClusterShardNodeEndpointArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public ClusterShardNodeEndpointArgs(
-        @Nullable Output<String> address,
-        @Nullable Output<Integer> port) {
-        this.address = address;
-        this.port = port;
-    }
+    private ClusterShardNodeEndpointArgs() {}
 
-    private ClusterShardNodeEndpointArgs() {
-        this.address = Codegen.empty();
-        this.port = Codegen.empty();
+    private ClusterShardNodeEndpointArgs(ClusterShardNodeEndpointArgs $) {
+        this.address = $.address;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterShardNodeEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> address;
-        private @Nullable Output<Integer> port;
+        private ClusterShardNodeEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterShardNodeEndpointArgs();
         }
 
         public Builder(ClusterShardNodeEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.port = defaults.port;
+            $ = new ClusterShardNodeEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(@Nullable Output<String> address) {
-            this.address = address;
+            $.address = address;
             return this;
         }
-        public Builder address(@Nullable String address) {
-            this.address = Codegen.ofNullable(address);
-            return this;
+
+        public Builder address(String address) {
+            return address(Output.of(address));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public ClusterShardNodeEndpointArgs build() {
-            return new ClusterShardNodeEndpointArgs(address, port);
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
+        }
+
+        public ClusterShardNodeEndpointArgs build() {
+            return $;
         }
     }
+
 }

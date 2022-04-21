@@ -21,10 +21,10 @@ public final class ServiceCodeRepository extends com.pulumi.resources.InvokeArgs
     public static final ServiceCodeRepository Empty = new ServiceCodeRepository();
 
     @Import(name="codeConfiguration")
-      private final @Nullable ServiceCodeConfiguration codeConfiguration;
+    private @Nullable ServiceCodeConfiguration codeConfiguration;
 
     public Optional<ServiceCodeConfiguration> codeConfiguration() {
-        return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
+        return Optional.ofNullable(this.codeConfiguration);
     }
 
     /**
@@ -32,71 +32,65 @@ public final class ServiceCodeRepository extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repositoryUrl", required=true)
-      private final String repositoryUrl;
+    private String repositoryUrl;
 
     public String repositoryUrl() {
         return this.repositoryUrl;
     }
 
     @Import(name="sourceCodeVersion", required=true)
-      private final ServiceSourceCodeVersion sourceCodeVersion;
+    private ServiceSourceCodeVersion sourceCodeVersion;
 
     public ServiceSourceCodeVersion sourceCodeVersion() {
         return this.sourceCodeVersion;
     }
 
-    public ServiceCodeRepository(
-        @Nullable ServiceCodeConfiguration codeConfiguration,
-        String repositoryUrl,
-        ServiceSourceCodeVersion sourceCodeVersion) {
-        this.codeConfiguration = codeConfiguration;
-        this.repositoryUrl = Objects.requireNonNull(repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
-        this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion, "expected parameter 'sourceCodeVersion' to be non-null");
-    }
+    private ServiceCodeRepository() {}
 
-    private ServiceCodeRepository() {
-        this.codeConfiguration = null;
-        this.repositoryUrl = null;
-        this.sourceCodeVersion = null;
+    private ServiceCodeRepository(ServiceCodeRepository $) {
+        this.codeConfiguration = $.codeConfiguration;
+        this.repositoryUrl = $.repositoryUrl;
+        this.sourceCodeVersion = $.sourceCodeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceCodeRepository defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ServiceCodeConfiguration codeConfiguration;
-        private String repositoryUrl;
-        private ServiceSourceCodeVersion sourceCodeVersion;
+        private ServiceCodeRepository $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceCodeRepository();
         }
 
         public Builder(ServiceCodeRepository defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.codeConfiguration = defaults.codeConfiguration;
-    	      this.repositoryUrl = defaults.repositoryUrl;
-    	      this.sourceCodeVersion = defaults.sourceCodeVersion;
+            $ = new ServiceCodeRepository(Objects.requireNonNull(defaults));
         }
 
         public Builder codeConfiguration(@Nullable ServiceCodeConfiguration codeConfiguration) {
-            this.codeConfiguration = codeConfiguration;
+            $.codeConfiguration = codeConfiguration;
             return this;
         }
+
         public Builder repositoryUrl(String repositoryUrl) {
-            this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
+            $.repositoryUrl = repositoryUrl;
             return this;
         }
+
         public Builder sourceCodeVersion(ServiceSourceCodeVersion sourceCodeVersion) {
-            this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
+            $.sourceCodeVersion = sourceCodeVersion;
             return this;
-        }        public ServiceCodeRepository build() {
-            return new ServiceCodeRepository(codeConfiguration, repositoryUrl, sourceCodeVersion);
+        }
+
+        public ServiceCodeRepository build() {
+            $.repositoryUrl = Objects.requireNonNull($.repositoryUrl, "expected parameter 'repositoryUrl' to be non-null");
+            $.sourceCodeVersion = Objects.requireNonNull($.sourceCodeVersion, "expected parameter 'sourceCodeVersion' to be non-null");
+            return $;
         }
     }
+
 }

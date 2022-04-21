@@ -24,7 +24,7 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceCount", required=true)
-      private final Integer instanceCount;
+    private Integer instanceCount;
 
     public Integer instanceCount() {
         return this.instanceCount;
@@ -35,7 +35,7 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceType", required=true)
-      private final String instanceType;
+    private String instanceType;
 
     public String instanceType() {
         return this.instanceType;
@@ -46,10 +46,10 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="volumeKmsKeyId")
-      private final @Nullable String volumeKmsKeyId;
+    private @Nullable String volumeKmsKeyId;
 
     public Optional<String> volumeKmsKeyId() {
-        return this.volumeKmsKeyId == null ? Optional.empty() : Optional.ofNullable(this.volumeKmsKeyId);
+        return Optional.ofNullable(this.volumeKmsKeyId);
     }
 
     /**
@@ -57,73 +57,65 @@ public final class MonitoringScheduleClusterConfig extends com.pulumi.resources.
      * 
      */
     @Import(name="volumeSizeInGB", required=true)
-      private final Integer volumeSizeInGB;
+    private Integer volumeSizeInGB;
 
     public Integer volumeSizeInGB() {
         return this.volumeSizeInGB;
     }
 
-    public MonitoringScheduleClusterConfig(
-        Integer instanceCount,
-        String instanceType,
-        @Nullable String volumeKmsKeyId,
-        Integer volumeSizeInGB) {
-        this.instanceCount = Objects.requireNonNull(instanceCount, "expected parameter 'instanceCount' to be non-null");
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.volumeKmsKeyId = volumeKmsKeyId;
-        this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
-    }
+    private MonitoringScheduleClusterConfig() {}
 
-    private MonitoringScheduleClusterConfig() {
-        this.instanceCount = null;
-        this.instanceType = null;
-        this.volumeKmsKeyId = null;
-        this.volumeSizeInGB = null;
+    private MonitoringScheduleClusterConfig(MonitoringScheduleClusterConfig $) {
+        this.instanceCount = $.instanceCount;
+        this.instanceType = $.instanceType;
+        this.volumeKmsKeyId = $.volumeKmsKeyId;
+        this.volumeSizeInGB = $.volumeSizeInGB;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringScheduleClusterConfig defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer instanceCount;
-        private String instanceType;
-        private @Nullable String volumeKmsKeyId;
-        private Integer volumeSizeInGB;
+        private MonitoringScheduleClusterConfig $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringScheduleClusterConfig();
         }
 
         public Builder(MonitoringScheduleClusterConfig defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.instanceType = defaults.instanceType;
-    	      this.volumeKmsKeyId = defaults.volumeKmsKeyId;
-    	      this.volumeSizeInGB = defaults.volumeSizeInGB;
+            $ = new MonitoringScheduleClusterConfig(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(Integer instanceCount) {
-            this.instanceCount = Objects.requireNonNull(instanceCount);
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder volumeKmsKeyId(@Nullable String volumeKmsKeyId) {
-            this.volumeKmsKeyId = volumeKmsKeyId;
+            $.volumeKmsKeyId = volumeKmsKeyId;
             return this;
         }
+
         public Builder volumeSizeInGB(Integer volumeSizeInGB) {
-            this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
+            $.volumeSizeInGB = volumeSizeInGB;
             return this;
-        }        public MonitoringScheduleClusterConfig build() {
-            return new MonitoringScheduleClusterConfig(instanceCount, instanceType, volumeKmsKeyId, volumeSizeInGB);
+        }
+
+        public MonitoringScheduleClusterConfig build() {
+            $.instanceCount = Objects.requireNonNull($.instanceCount, "expected parameter 'instanceCount' to be non-null");
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.volumeSizeInGB = Objects.requireNonNull($.volumeSizeInGB, "expected parameter 'volumeSizeInGB' to be non-null");
+            return $;
         }
     }
+
 }

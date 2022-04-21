@@ -24,7 +24,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expectedOutputUrl", required=true)
-      private final String expectedOutputUrl;
+    private String expectedOutputUrl;
 
     public String expectedOutputUrl() {
         return this.expectedOutputUrl;
@@ -46,7 +46,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expectedRedirectResponseCode", required=true)
-      private final Integer expectedRedirectResponseCode;
+    private Integer expectedRedirectResponseCode;
 
     public Integer expectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode;
@@ -57,7 +57,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers", required=true)
-      private final List<UrlMapTestHeaderResponse> headers;
+    private List<UrlMapTestHeaderResponse> headers;
 
     public List<UrlMapTestHeaderResponse> headers() {
         return this.headers;
@@ -68,7 +68,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -79,7 +79,7 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -90,103 +90,91 @@ public final class UrlMapTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public UrlMapTestResponse(
-        String description,
-        String expectedOutputUrl,
-        Integer expectedRedirectResponseCode,
-        List<UrlMapTestHeaderResponse> headers,
-        String host,
-        String path,
-        String service) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.expectedOutputUrl = Objects.requireNonNull(expectedOutputUrl, "expected parameter 'expectedOutputUrl' to be non-null");
-        this.expectedRedirectResponseCode = Objects.requireNonNull(expectedRedirectResponseCode, "expected parameter 'expectedRedirectResponseCode' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private UrlMapTestResponse() {}
 
-    private UrlMapTestResponse() {
-        this.description = null;
-        this.expectedOutputUrl = null;
-        this.expectedRedirectResponseCode = null;
-        this.headers = List.of();
-        this.host = null;
-        this.path = null;
-        this.service = null;
+    private UrlMapTestResponse(UrlMapTestResponse $) {
+        this.description = $.description;
+        this.expectedOutputUrl = $.expectedOutputUrl;
+        this.expectedRedirectResponseCode = $.expectedRedirectResponseCode;
+        this.headers = $.headers;
+        this.host = $.host;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlMapTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String expectedOutputUrl;
-        private Integer expectedRedirectResponseCode;
-        private List<UrlMapTestHeaderResponse> headers;
-        private String host;
-        private String path;
-        private String service;
+        private UrlMapTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlMapTestResponse();
         }
 
         public Builder(UrlMapTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expectedOutputUrl = defaults.expectedOutputUrl;
-    	      this.expectedRedirectResponseCode = defaults.expectedRedirectResponseCode;
-    	      this.headers = defaults.headers;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new UrlMapTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder expectedOutputUrl(String expectedOutputUrl) {
-            this.expectedOutputUrl = Objects.requireNonNull(expectedOutputUrl);
+            $.expectedOutputUrl = expectedOutputUrl;
             return this;
         }
+
         public Builder expectedRedirectResponseCode(Integer expectedRedirectResponseCode) {
-            this.expectedRedirectResponseCode = Objects.requireNonNull(expectedRedirectResponseCode);
+            $.expectedRedirectResponseCode = expectedRedirectResponseCode;
             return this;
         }
+
         public Builder headers(List<UrlMapTestHeaderResponse> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder headers(UrlMapTestHeaderResponse... headers) {
             return headers(List.of(headers));
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public UrlMapTestResponse build() {
-            return new UrlMapTestResponse(description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
+        }
+
+        public UrlMapTestResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.expectedOutputUrl = Objects.requireNonNull($.expectedOutputUrl, "expected parameter 'expectedOutputUrl' to be non-null");
+            $.expectedRedirectResponseCode = Objects.requireNonNull($.expectedRedirectResponseCode, "expected parameter 'expectedRedirectResponseCode' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.gcp.accesscontextmanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionDevicePolicyOsConstraintArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="allowedDeviceManagementLevels")
-      private final @Nullable Output<List<String>> allowedDeviceManagementLevels;
+    private @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
-    public Output<List<String>> allowedDeviceManagementLevels() {
-        return this.allowedDeviceManagementLevels == null ? Codegen.empty() : this.allowedDeviceManagementLevels;
+    public Optional<Output<List<String>>> allowedDeviceManagementLevels() {
+        return Optional.ofNullable(this.allowedDeviceManagementLevels);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="allowedEncryptionStatuses")
-      private final @Nullable Output<List<String>> allowedEncryptionStatuses;
+    private @Nullable Output<List<String>> allowedEncryptionStatuses;
 
-    public Output<List<String>> allowedEncryptionStatuses() {
-        return this.allowedEncryptionStatuses == null ? Codegen.empty() : this.allowedEncryptionStatuses;
+    public Optional<Output<List<String>>> allowedEncryptionStatuses() {
+        return Optional.ofNullable(this.allowedEncryptionStatuses);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="osConstraints")
-      private final @Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints;
+    private @Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints;
 
-    public Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints() {
-        return this.osConstraints == null ? Codegen.empty() : this.osConstraints;
+    public Optional<Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>>> osConstraints() {
+        return Optional.ofNullable(this.osConstraints);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="requireAdminApproval")
-      private final @Nullable Output<Boolean> requireAdminApproval;
+    private @Nullable Output<Boolean> requireAdminApproval;
 
-    public Output<Boolean> requireAdminApproval() {
-        return this.requireAdminApproval == null ? Codegen.empty() : this.requireAdminApproval;
+    public Optional<Output<Boolean>> requireAdminApproval() {
+        return Optional.ofNullable(this.requireAdminApproval);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="requireCorpOwned")
-      private final @Nullable Output<Boolean> requireCorpOwned;
+    private @Nullable Output<Boolean> requireCorpOwned;
 
-    public Output<Boolean> requireCorpOwned() {
-        return this.requireCorpOwned == null ? Codegen.empty() : this.requireCorpOwned;
+    public Optional<Output<Boolean>> requireCorpOwned() {
+        return Optional.ofNullable(this.requireCorpOwned);
     }
 
     /**
@@ -85,124 +85,110 @@ public final class AccessLevelConditionDevicePolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="requireScreenLock")
-      private final @Nullable Output<Boolean> requireScreenLock;
+    private @Nullable Output<Boolean> requireScreenLock;
 
-    public Output<Boolean> requireScreenLock() {
-        return this.requireScreenLock == null ? Codegen.empty() : this.requireScreenLock;
+    public Optional<Output<Boolean>> requireScreenLock() {
+        return Optional.ofNullable(this.requireScreenLock);
     }
 
-    public AccessLevelConditionDevicePolicyArgs(
-        @Nullable Output<List<String>> allowedDeviceManagementLevels,
-        @Nullable Output<List<String>> allowedEncryptionStatuses,
-        @Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints,
-        @Nullable Output<Boolean> requireAdminApproval,
-        @Nullable Output<Boolean> requireCorpOwned,
-        @Nullable Output<Boolean> requireScreenLock) {
-        this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
-        this.allowedEncryptionStatuses = allowedEncryptionStatuses;
-        this.osConstraints = osConstraints;
-        this.requireAdminApproval = requireAdminApproval;
-        this.requireCorpOwned = requireCorpOwned;
-        this.requireScreenLock = requireScreenLock;
-    }
+    private AccessLevelConditionDevicePolicyArgs() {}
 
-    private AccessLevelConditionDevicePolicyArgs() {
-        this.allowedDeviceManagementLevels = Codegen.empty();
-        this.allowedEncryptionStatuses = Codegen.empty();
-        this.osConstraints = Codegen.empty();
-        this.requireAdminApproval = Codegen.empty();
-        this.requireCorpOwned = Codegen.empty();
-        this.requireScreenLock = Codegen.empty();
+    private AccessLevelConditionDevicePolicyArgs(AccessLevelConditionDevicePolicyArgs $) {
+        this.allowedDeviceManagementLevels = $.allowedDeviceManagementLevels;
+        this.allowedEncryptionStatuses = $.allowedEncryptionStatuses;
+        this.osConstraints = $.osConstraints;
+        this.requireAdminApproval = $.requireAdminApproval;
+        this.requireCorpOwned = $.requireCorpOwned;
+        this.requireScreenLock = $.requireScreenLock;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessLevelConditionDevicePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedDeviceManagementLevels;
-        private @Nullable Output<List<String>> allowedEncryptionStatuses;
-        private @Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints;
-        private @Nullable Output<Boolean> requireAdminApproval;
-        private @Nullable Output<Boolean> requireCorpOwned;
-        private @Nullable Output<Boolean> requireScreenLock;
+        private AccessLevelConditionDevicePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessLevelConditionDevicePolicyArgs();
         }
 
         public Builder(AccessLevelConditionDevicePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedDeviceManagementLevels = defaults.allowedDeviceManagementLevels;
-    	      this.allowedEncryptionStatuses = defaults.allowedEncryptionStatuses;
-    	      this.osConstraints = defaults.osConstraints;
-    	      this.requireAdminApproval = defaults.requireAdminApproval;
-    	      this.requireCorpOwned = defaults.requireCorpOwned;
-    	      this.requireScreenLock = defaults.requireScreenLock;
+            $ = new AccessLevelConditionDevicePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedDeviceManagementLevels(@Nullable Output<List<String>> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
+            $.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
-        public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = Codegen.ofNullable(allowedDeviceManagementLevels);
-            return this;
+
+        public Builder allowedDeviceManagementLevels(List<String> allowedDeviceManagementLevels) {
+            return allowedDeviceManagementLevels(Output.of(allowedDeviceManagementLevels));
         }
+
         public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
             return allowedDeviceManagementLevels(List.of(allowedDeviceManagementLevels));
         }
+
         public Builder allowedEncryptionStatuses(@Nullable Output<List<String>> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = allowedEncryptionStatuses;
+            $.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
-        public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = Codegen.ofNullable(allowedEncryptionStatuses);
-            return this;
+
+        public Builder allowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
+            return allowedEncryptionStatuses(Output.of(allowedEncryptionStatuses));
         }
+
         public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
             return allowedEncryptionStatuses(List.of(allowedEncryptionStatuses));
         }
+
         public Builder osConstraints(@Nullable Output<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints) {
-            this.osConstraints = osConstraints;
+            $.osConstraints = osConstraints;
             return this;
         }
-        public Builder osConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraintArgs> osConstraints) {
-            this.osConstraints = Codegen.ofNullable(osConstraints);
-            return this;
+
+        public Builder osConstraints(List<AccessLevelConditionDevicePolicyOsConstraintArgs> osConstraints) {
+            return osConstraints(Output.of(osConstraints));
         }
+
         public Builder osConstraints(AccessLevelConditionDevicePolicyOsConstraintArgs... osConstraints) {
             return osConstraints(List.of(osConstraints));
         }
+
         public Builder requireAdminApproval(@Nullable Output<Boolean> requireAdminApproval) {
-            this.requireAdminApproval = requireAdminApproval;
+            $.requireAdminApproval = requireAdminApproval;
             return this;
         }
-        public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
-            this.requireAdminApproval = Codegen.ofNullable(requireAdminApproval);
-            return this;
+
+        public Builder requireAdminApproval(Boolean requireAdminApproval) {
+            return requireAdminApproval(Output.of(requireAdminApproval));
         }
+
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
-            this.requireCorpOwned = requireCorpOwned;
+            $.requireCorpOwned = requireCorpOwned;
             return this;
         }
-        public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
-            this.requireCorpOwned = Codegen.ofNullable(requireCorpOwned);
-            return this;
+
+        public Builder requireCorpOwned(Boolean requireCorpOwned) {
+            return requireCorpOwned(Output.of(requireCorpOwned));
         }
+
         public Builder requireScreenLock(@Nullable Output<Boolean> requireScreenLock) {
-            this.requireScreenLock = requireScreenLock;
+            $.requireScreenLock = requireScreenLock;
             return this;
         }
-        public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
-            this.requireScreenLock = Codegen.ofNullable(requireScreenLock);
-            return this;
-        }        public AccessLevelConditionDevicePolicyArgs build() {
-            return new AccessLevelConditionDevicePolicyArgs(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
+
+        public Builder requireScreenLock(Boolean requireScreenLock) {
+            return requireScreenLock(Output.of(requireScreenLock));
+        }
+
+        public AccessLevelConditionDevicePolicyArgs build() {
+            return $;
         }
     }
+
 }

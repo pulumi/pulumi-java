@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cpeUri")
-      private final @Nullable Output<String> cpeUri;
+    private @Nullable Output<String> cpeUri;
 
-    public Output<String> cpeUri() {
-        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
+    public Optional<Output<String>> cpeUri() {
+        return Optional.ofNullable(this.cpeUri);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ComplianceVersionArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ComplianceVersionArgs(
-        @Nullable Output<String> cpeUri,
-        @Nullable Output<String> version) {
-        this.cpeUri = cpeUri;
-        this.version = version;
-    }
+    private ComplianceVersionArgs() {}
 
-    private ComplianceVersionArgs() {
-        this.cpeUri = Codegen.empty();
-        this.version = Codegen.empty();
+    private ComplianceVersionArgs(ComplianceVersionArgs $) {
+        this.cpeUri = $.cpeUri;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComplianceVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cpeUri;
-        private @Nullable Output<String> version;
+        private ComplianceVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComplianceVersionArgs();
         }
 
         public Builder(ComplianceVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.version = defaults.version;
+            $ = new ComplianceVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
-            this.cpeUri = cpeUri;
+            $.cpeUri = cpeUri;
             return this;
         }
-        public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Codegen.ofNullable(cpeUri);
-            return this;
+
+        public Builder cpeUri(String cpeUri) {
+            return cpeUri(Output.of(cpeUri));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ComplianceVersionArgs build() {
-            return new ComplianceVersionArgs(cpeUri, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ComplianceVersionArgs build() {
+            return $;
         }
     }
+
 }

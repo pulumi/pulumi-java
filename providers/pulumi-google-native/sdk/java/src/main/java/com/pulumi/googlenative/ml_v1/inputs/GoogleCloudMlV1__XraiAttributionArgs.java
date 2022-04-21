@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1__XraiAttributionArgs extends com.pulumi.resou
      * 
      */
     @Import(name="numIntegralSteps")
-      private final @Nullable Output<Integer> numIntegralSteps;
+    private @Nullable Output<Integer> numIntegralSteps;
 
-    public Output<Integer> numIntegralSteps() {
-        return this.numIntegralSteps == null ? Codegen.empty() : this.numIntegralSteps;
+    public Optional<Output<Integer>> numIntegralSteps() {
+        return Optional.ofNullable(this.numIntegralSteps);
     }
 
-    public GoogleCloudMlV1__XraiAttributionArgs(@Nullable Output<Integer> numIntegralSteps) {
-        this.numIntegralSteps = numIntegralSteps;
-    }
+    private GoogleCloudMlV1__XraiAttributionArgs() {}
 
-    private GoogleCloudMlV1__XraiAttributionArgs() {
-        this.numIntegralSteps = Codegen.empty();
+    private GoogleCloudMlV1__XraiAttributionArgs(GoogleCloudMlV1__XraiAttributionArgs $) {
+        this.numIntegralSteps = $.numIntegralSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__XraiAttributionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numIntegralSteps;
+        private GoogleCloudMlV1__XraiAttributionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__XraiAttributionArgs();
         }
 
         public Builder(GoogleCloudMlV1__XraiAttributionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numIntegralSteps = defaults.numIntegralSteps;
+            $ = new GoogleCloudMlV1__XraiAttributionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numIntegralSteps(@Nullable Output<Integer> numIntegralSteps) {
-            this.numIntegralSteps = numIntegralSteps;
+            $.numIntegralSteps = numIntegralSteps;
             return this;
         }
-        public Builder numIntegralSteps(@Nullable Integer numIntegralSteps) {
-            this.numIntegralSteps = Codegen.ofNullable(numIntegralSteps);
-            return this;
-        }        public GoogleCloudMlV1__XraiAttributionArgs build() {
-            return new GoogleCloudMlV1__XraiAttributionArgs(numIntegralSteps);
+
+        public Builder numIntegralSteps(Integer numIntegralSteps) {
+            return numIntegralSteps(Output.of(numIntegralSteps));
+        }
+
+        public GoogleCloudMlV1__XraiAttributionArgs build() {
+            return $;
         }
     }
+
 }

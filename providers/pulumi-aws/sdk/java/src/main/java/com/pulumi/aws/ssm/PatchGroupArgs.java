@@ -5,7 +5,6 @@ package com.pulumi.aws.ssm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +18,7 @@ public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="baselineId", required=true)
-      private final Output<String> baselineId;
+    private Output<String> baselineId;
 
     public Output<String> baselineId() {
         return this.baselineId;
@@ -30,63 +29,60 @@ public final class PatchGroupArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="patchGroup", required=true)
-      private final Output<String> patchGroup;
+    private Output<String> patchGroup;
 
     public Output<String> patchGroup() {
         return this.patchGroup;
     }
 
-    public PatchGroupArgs(
-        Output<String> baselineId,
-        Output<String> patchGroup) {
-        this.baselineId = Objects.requireNonNull(baselineId, "expected parameter 'baselineId' to be non-null");
-        this.patchGroup = Objects.requireNonNull(patchGroup, "expected parameter 'patchGroup' to be non-null");
-    }
+    private PatchGroupArgs() {}
 
-    private PatchGroupArgs() {
-        this.baselineId = Codegen.empty();
-        this.patchGroup = Codegen.empty();
+    private PatchGroupArgs(PatchGroupArgs $) {
+        this.baselineId = $.baselineId;
+        this.patchGroup = $.patchGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PatchGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> baselineId;
-        private Output<String> patchGroup;
+        private PatchGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PatchGroupArgs();
         }
 
         public Builder(PatchGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baselineId = defaults.baselineId;
-    	      this.patchGroup = defaults.patchGroup;
+            $ = new PatchGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baselineId(Output<String> baselineId) {
-            this.baselineId = Objects.requireNonNull(baselineId);
+            $.baselineId = baselineId;
             return this;
         }
+
         public Builder baselineId(String baselineId) {
-            this.baselineId = Output.of(Objects.requireNonNull(baselineId));
-            return this;
+            return baselineId(Output.of(baselineId));
         }
+
         public Builder patchGroup(Output<String> patchGroup) {
-            this.patchGroup = Objects.requireNonNull(patchGroup);
+            $.patchGroup = patchGroup;
             return this;
         }
+
         public Builder patchGroup(String patchGroup) {
-            this.patchGroup = Output.of(Objects.requireNonNull(patchGroup));
-            return this;
-        }        public PatchGroupArgs build() {
-            return new PatchGroupArgs(baselineId, patchGroup);
+            return patchGroup(Output.of(patchGroup));
+        }
+
+        public PatchGroupArgs build() {
+            $.baselineId = Objects.requireNonNull($.baselineId, "expected parameter 'baselineId' to be non-null");
+            $.patchGroup = Objects.requireNonNull($.patchGroup, "expected parameter 'patchGroup' to be non-null");
+            return $;
         }
     }
+
 }

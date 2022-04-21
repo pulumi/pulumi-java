@@ -23,7 +23,7 @@ public final class BasicLevelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="combiningFunction", required=true)
-      private final String combiningFunction;
+    private String combiningFunction;
 
     public String combiningFunction() {
         return this.combiningFunction;
@@ -34,58 +34,56 @@ public final class BasicLevelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<ConditionResponse> conditions;
+    private List<ConditionResponse> conditions;
 
     public List<ConditionResponse> conditions() {
         return this.conditions;
     }
 
-    public BasicLevelResponse(
-        String combiningFunction,
-        List<ConditionResponse> conditions) {
-        this.combiningFunction = Objects.requireNonNull(combiningFunction, "expected parameter 'combiningFunction' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-    }
+    private BasicLevelResponse() {}
 
-    private BasicLevelResponse() {
-        this.combiningFunction = null;
-        this.conditions = List.of();
+    private BasicLevelResponse(BasicLevelResponse $) {
+        this.combiningFunction = $.combiningFunction;
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicLevelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String combiningFunction;
-        private List<ConditionResponse> conditions;
+        private BasicLevelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicLevelResponse();
         }
 
         public Builder(BasicLevelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.combiningFunction = defaults.combiningFunction;
-    	      this.conditions = defaults.conditions;
+            $ = new BasicLevelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder combiningFunction(String combiningFunction) {
-            this.combiningFunction = Objects.requireNonNull(combiningFunction);
+            $.combiningFunction = combiningFunction;
             return this;
         }
+
         public Builder conditions(List<ConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(ConditionResponse... conditions) {
             return conditions(List.of(conditions));
-        }        public BasicLevelResponse build() {
-            return new BasicLevelResponse(combiningFunction, conditions);
+        }
+
+        public BasicLevelResponse build() {
+            $.combiningFunction = Objects.requireNonNull($.combiningFunction, "expected parameter 'combiningFunction' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -9,11 +9,11 @@ import com.pulumi.azurenative.network.inputs.RulesEngineMatchConditionArgs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,7 +30,7 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="action", required=true)
-      private final Output<RulesEngineActionArgs> action;
+    private Output<RulesEngineActionArgs> action;
 
     public Output<RulesEngineActionArgs> action() {
         return this.action;
@@ -41,10 +41,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="matchConditions")
-      private final @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
+    private @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
 
-    public Output<List<RulesEngineMatchConditionArgs>> matchConditions() {
-        return this.matchConditions == null ? Codegen.empty() : this.matchConditions;
+    public Optional<Output<List<RulesEngineMatchConditionArgs>>> matchConditions() {
+        return Optional.ofNullable(this.matchConditions);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="matchProcessingBehavior")
-      private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
+    private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
-    public Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior() {
-        return this.matchProcessingBehavior == null ? Codegen.empty() : this.matchProcessingBehavior;
+    public Optional<Output<Either<String,MatchProcessingBehavior>>> matchProcessingBehavior() {
+        return Optional.ofNullable(this.matchProcessingBehavior);
     }
 
     /**
@@ -63,7 +63,7 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -74,105 +74,95 @@ public final class RulesEngineRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="priority", required=true)
-      private final Output<Integer> priority;
+    private Output<Integer> priority;
 
     public Output<Integer> priority() {
         return this.priority;
     }
 
-    public RulesEngineRuleArgs(
-        Output<RulesEngineActionArgs> action,
-        @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions,
-        @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior,
-        Output<String> name,
-        Output<Integer> priority) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.matchConditions = matchConditions;
-        this.matchProcessingBehavior = matchProcessingBehavior;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-    }
+    private RulesEngineRuleArgs() {}
 
-    private RulesEngineRuleArgs() {
-        this.action = Codegen.empty();
-        this.matchConditions = Codegen.empty();
-        this.matchProcessingBehavior = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
+    private RulesEngineRuleArgs(RulesEngineRuleArgs $) {
+        this.action = $.action;
+        this.matchConditions = $.matchConditions;
+        this.matchProcessingBehavior = $.matchProcessingBehavior;
+        this.name = $.name;
+        this.priority = $.priority;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesEngineRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<RulesEngineActionArgs> action;
-        private @Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions;
-        private @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
-        private Output<String> name;
-        private Output<Integer> priority;
+        private RulesEngineRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesEngineRuleArgs();
         }
 
         public Builder(RulesEngineRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.matchConditions = defaults.matchConditions;
-    	      this.matchProcessingBehavior = defaults.matchProcessingBehavior;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
+            $ = new RulesEngineRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<RulesEngineActionArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(RulesEngineActionArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder matchConditions(@Nullable Output<List<RulesEngineMatchConditionArgs>> matchConditions) {
-            this.matchConditions = matchConditions;
+            $.matchConditions = matchConditions;
             return this;
         }
-        public Builder matchConditions(@Nullable List<RulesEngineMatchConditionArgs> matchConditions) {
-            this.matchConditions = Codegen.ofNullable(matchConditions);
-            return this;
+
+        public Builder matchConditions(List<RulesEngineMatchConditionArgs> matchConditions) {
+            return matchConditions(Output.of(matchConditions));
         }
+
         public Builder matchConditions(RulesEngineMatchConditionArgs... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
+
         public Builder matchProcessingBehavior(@Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior) {
-            this.matchProcessingBehavior = matchProcessingBehavior;
+            $.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
-        public Builder matchProcessingBehavior(@Nullable Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
-            this.matchProcessingBehavior = Codegen.ofNullable(matchProcessingBehavior);
-            return this;
+
+        public Builder matchProcessingBehavior(Either<String,MatchProcessingBehavior> matchProcessingBehavior) {
+            return matchProcessingBehavior(Output.of(matchProcessingBehavior));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder priority(Output<Integer> priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Output.of(Objects.requireNonNull(priority));
-            return this;
-        }        public RulesEngineRuleArgs build() {
-            return new RulesEngineRuleArgs(action, matchConditions, matchProcessingBehavior, name, priority);
+            return priority(Output.of(priority));
+        }
+
+        public RulesEngineRuleArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            return $;
         }
     }
+
 }

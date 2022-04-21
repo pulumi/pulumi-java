@@ -23,94 +23,83 @@ public final class ThemeConfiguration extends com.pulumi.resources.InvokeArgs {
     public static final ThemeConfiguration Empty = new ThemeConfiguration();
 
     @Import(name="dataColorPalette")
-      private final @Nullable ThemeDataColorPalette dataColorPalette;
+    private @Nullable ThemeDataColorPalette dataColorPalette;
 
     public Optional<ThemeDataColorPalette> dataColorPalette() {
-        return this.dataColorPalette == null ? Optional.empty() : Optional.ofNullable(this.dataColorPalette);
+        return Optional.ofNullable(this.dataColorPalette);
     }
 
     @Import(name="sheet")
-      private final @Nullable ThemeSheetStyle sheet;
+    private @Nullable ThemeSheetStyle sheet;
 
     public Optional<ThemeSheetStyle> sheet() {
-        return this.sheet == null ? Optional.empty() : Optional.ofNullable(this.sheet);
+        return Optional.ofNullable(this.sheet);
     }
 
     @Import(name="typography")
-      private final @Nullable ThemeTypography typography;
+    private @Nullable ThemeTypography typography;
 
     public Optional<ThemeTypography> typography() {
-        return this.typography == null ? Optional.empty() : Optional.ofNullable(this.typography);
+        return Optional.ofNullable(this.typography);
     }
 
     @Import(name="uIColorPalette")
-      private final @Nullable ThemeUIColorPalette uIColorPalette;
+    private @Nullable ThemeUIColorPalette uIColorPalette;
 
     public Optional<ThemeUIColorPalette> uIColorPalette() {
-        return this.uIColorPalette == null ? Optional.empty() : Optional.ofNullable(this.uIColorPalette);
+        return Optional.ofNullable(this.uIColorPalette);
     }
 
-    public ThemeConfiguration(
-        @Nullable ThemeDataColorPalette dataColorPalette,
-        @Nullable ThemeSheetStyle sheet,
-        @Nullable ThemeTypography typography,
-        @Nullable ThemeUIColorPalette uIColorPalette) {
-        this.dataColorPalette = dataColorPalette;
-        this.sheet = sheet;
-        this.typography = typography;
-        this.uIColorPalette = uIColorPalette;
-    }
+    private ThemeConfiguration() {}
 
-    private ThemeConfiguration() {
-        this.dataColorPalette = null;
-        this.sheet = null;
-        this.typography = null;
-        this.uIColorPalette = null;
+    private ThemeConfiguration(ThemeConfiguration $) {
+        this.dataColorPalette = $.dataColorPalette;
+        this.sheet = $.sheet;
+        this.typography = $.typography;
+        this.uIColorPalette = $.uIColorPalette;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThemeConfiguration defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable ThemeDataColorPalette dataColorPalette;
-        private @Nullable ThemeSheetStyle sheet;
-        private @Nullable ThemeTypography typography;
-        private @Nullable ThemeUIColorPalette uIColorPalette;
+        private ThemeConfiguration $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThemeConfiguration();
         }
 
         public Builder(ThemeConfiguration defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataColorPalette = defaults.dataColorPalette;
-    	      this.sheet = defaults.sheet;
-    	      this.typography = defaults.typography;
-    	      this.uIColorPalette = defaults.uIColorPalette;
+            $ = new ThemeConfiguration(Objects.requireNonNull(defaults));
         }
 
         public Builder dataColorPalette(@Nullable ThemeDataColorPalette dataColorPalette) {
-            this.dataColorPalette = dataColorPalette;
+            $.dataColorPalette = dataColorPalette;
             return this;
         }
+
         public Builder sheet(@Nullable ThemeSheetStyle sheet) {
-            this.sheet = sheet;
+            $.sheet = sheet;
             return this;
         }
+
         public Builder typography(@Nullable ThemeTypography typography) {
-            this.typography = typography;
+            $.typography = typography;
             return this;
         }
+
         public Builder uIColorPalette(@Nullable ThemeUIColorPalette uIColorPalette) {
-            this.uIColorPalette = uIColorPalette;
+            $.uIColorPalette = uIColorPalette;
             return this;
-        }        public ThemeConfiguration build() {
-            return new ThemeConfiguration(dataColorPalette, sheet, typography, uIColorPalette);
+        }
+
+        public ThemeConfiguration build() {
+            return $;
         }
     }
+
 }

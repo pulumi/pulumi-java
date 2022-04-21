@@ -5,9 +5,9 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VpnNatRuleMappingArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="addressSpace")
-      private final @Nullable Output<String> addressSpace;
+    private @Nullable Output<String> addressSpace;
 
-    public Output<String> addressSpace() {
-        return this.addressSpace == null ? Codegen.empty() : this.addressSpace;
+    public Optional<Output<String>> addressSpace() {
+        return Optional.ofNullable(this.addressSpace);
     }
 
-    public VpnNatRuleMappingArgs(@Nullable Output<String> addressSpace) {
-        this.addressSpace = addressSpace;
-    }
+    private VpnNatRuleMappingArgs() {}
 
-    private VpnNatRuleMappingArgs() {
-        this.addressSpace = Codegen.empty();
+    private VpnNatRuleMappingArgs(VpnNatRuleMappingArgs $) {
+        this.addressSpace = $.addressSpace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnNatRuleMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> addressSpace;
+        private VpnNatRuleMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnNatRuleMappingArgs();
         }
 
         public Builder(VpnNatRuleMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressSpace = defaults.addressSpace;
+            $ = new VpnNatRuleMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressSpace(@Nullable Output<String> addressSpace) {
-            this.addressSpace = addressSpace;
+            $.addressSpace = addressSpace;
             return this;
         }
-        public Builder addressSpace(@Nullable String addressSpace) {
-            this.addressSpace = Codegen.ofNullable(addressSpace);
-            return this;
-        }        public VpnNatRuleMappingArgs build() {
-            return new VpnNatRuleMappingArgs(addressSpace);
+
+        public Builder addressSpace(String addressSpace) {
+            return addressSpace(Output.of(addressSpace));
+        }
+
+        public VpnNatRuleMappingArgs build() {
+            return $;
         }
     }
+
 }

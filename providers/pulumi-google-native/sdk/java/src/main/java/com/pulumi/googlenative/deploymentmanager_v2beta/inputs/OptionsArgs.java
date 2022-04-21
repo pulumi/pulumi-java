@@ -5,13 +5,13 @@ package com.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.AsyncOptionsArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.InputMappingArgs;
 import com.pulumi.googlenative.deploymentmanager_v2beta.inputs.ValidationOptionsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="asyncOptions")
-      private final @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
+    private @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
 
-    public Output<List<AsyncOptionsArgs>> asyncOptions() {
-        return this.asyncOptions == null ? Codegen.empty() : this.asyncOptions;
+    public Optional<Output<List<AsyncOptionsArgs>>> asyncOptions() {
+        return Optional.ofNullable(this.asyncOptions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputMappings")
-      private final @Nullable Output<List<InputMappingArgs>> inputMappings;
+    private @Nullable Output<List<InputMappingArgs>> inputMappings;
 
-    public Output<List<InputMappingArgs>> inputMappings() {
-        return this.inputMappings == null ? Codegen.empty() : this.inputMappings;
+    public Optional<Output<List<InputMappingArgs>>> inputMappings() {
+        return Optional.ofNullable(this.inputMappings);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validationOptions")
-      private final @Nullable Output<ValidationOptionsArgs> validationOptions;
+    private @Nullable Output<ValidationOptionsArgs> validationOptions;
 
-    public Output<ValidationOptionsArgs> validationOptions() {
-        return this.validationOptions == null ? Codegen.empty() : this.validationOptions;
+    public Optional<Output<ValidationOptionsArgs>> validationOptions() {
+        return Optional.ofNullable(this.validationOptions);
     }
 
     /**
@@ -61,95 +61,86 @@ public final class OptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="virtualProperties")
-      private final @Nullable Output<String> virtualProperties;
+    private @Nullable Output<String> virtualProperties;
 
-    public Output<String> virtualProperties() {
-        return this.virtualProperties == null ? Codegen.empty() : this.virtualProperties;
+    public Optional<Output<String>> virtualProperties() {
+        return Optional.ofNullable(this.virtualProperties);
     }
 
-    public OptionsArgs(
-        @Nullable Output<List<AsyncOptionsArgs>> asyncOptions,
-        @Nullable Output<List<InputMappingArgs>> inputMappings,
-        @Nullable Output<ValidationOptionsArgs> validationOptions,
-        @Nullable Output<String> virtualProperties) {
-        this.asyncOptions = asyncOptions;
-        this.inputMappings = inputMappings;
-        this.validationOptions = validationOptions;
-        this.virtualProperties = virtualProperties;
-    }
+    private OptionsArgs() {}
 
-    private OptionsArgs() {
-        this.asyncOptions = Codegen.empty();
-        this.inputMappings = Codegen.empty();
-        this.validationOptions = Codegen.empty();
-        this.virtualProperties = Codegen.empty();
+    private OptionsArgs(OptionsArgs $) {
+        this.asyncOptions = $.asyncOptions;
+        this.inputMappings = $.inputMappings;
+        this.validationOptions = $.validationOptions;
+        this.virtualProperties = $.virtualProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AsyncOptionsArgs>> asyncOptions;
-        private @Nullable Output<List<InputMappingArgs>> inputMappings;
-        private @Nullable Output<ValidationOptionsArgs> validationOptions;
-        private @Nullable Output<String> virtualProperties;
+        private OptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OptionsArgs();
         }
 
         public Builder(OptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asyncOptions = defaults.asyncOptions;
-    	      this.inputMappings = defaults.inputMappings;
-    	      this.validationOptions = defaults.validationOptions;
-    	      this.virtualProperties = defaults.virtualProperties;
+            $ = new OptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder asyncOptions(@Nullable Output<List<AsyncOptionsArgs>> asyncOptions) {
-            this.asyncOptions = asyncOptions;
+            $.asyncOptions = asyncOptions;
             return this;
         }
-        public Builder asyncOptions(@Nullable List<AsyncOptionsArgs> asyncOptions) {
-            this.asyncOptions = Codegen.ofNullable(asyncOptions);
-            return this;
+
+        public Builder asyncOptions(List<AsyncOptionsArgs> asyncOptions) {
+            return asyncOptions(Output.of(asyncOptions));
         }
+
         public Builder asyncOptions(AsyncOptionsArgs... asyncOptions) {
             return asyncOptions(List.of(asyncOptions));
         }
+
         public Builder inputMappings(@Nullable Output<List<InputMappingArgs>> inputMappings) {
-            this.inputMappings = inputMappings;
+            $.inputMappings = inputMappings;
             return this;
         }
-        public Builder inputMappings(@Nullable List<InputMappingArgs> inputMappings) {
-            this.inputMappings = Codegen.ofNullable(inputMappings);
-            return this;
+
+        public Builder inputMappings(List<InputMappingArgs> inputMappings) {
+            return inputMappings(Output.of(inputMappings));
         }
+
         public Builder inputMappings(InputMappingArgs... inputMappings) {
             return inputMappings(List.of(inputMappings));
         }
+
         public Builder validationOptions(@Nullable Output<ValidationOptionsArgs> validationOptions) {
-            this.validationOptions = validationOptions;
+            $.validationOptions = validationOptions;
             return this;
         }
-        public Builder validationOptions(@Nullable ValidationOptionsArgs validationOptions) {
-            this.validationOptions = Codegen.ofNullable(validationOptions);
-            return this;
+
+        public Builder validationOptions(ValidationOptionsArgs validationOptions) {
+            return validationOptions(Output.of(validationOptions));
         }
+
         public Builder virtualProperties(@Nullable Output<String> virtualProperties) {
-            this.virtualProperties = virtualProperties;
+            $.virtualProperties = virtualProperties;
             return this;
         }
-        public Builder virtualProperties(@Nullable String virtualProperties) {
-            this.virtualProperties = Codegen.ofNullable(virtualProperties);
-            return this;
-        }        public OptionsArgs build() {
-            return new OptionsArgs(asyncOptions, inputMappings, validationOptions, virtualProperties);
+
+        public Builder virtualProperties(String virtualProperties) {
+            return virtualProperties(Output.of(virtualProperties));
+        }
+
+        public OptionsArgs build() {
+            return $;
         }
     }
+
 }

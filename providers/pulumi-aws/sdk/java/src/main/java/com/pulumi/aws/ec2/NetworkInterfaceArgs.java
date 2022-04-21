@@ -6,13 +6,13 @@ package com.pulumi.aws.ec2;
 import com.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="attachments")
-      private final @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
+    private @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
 
-    public Output<List<NetworkInterfaceAttachmentArgs>> attachments() {
-        return this.attachments == null ? Codegen.empty() : this.attachments;
+    public Optional<Output<List<NetworkInterfaceAttachmentArgs>>> attachments() {
+        return Optional.ofNullable(this.attachments);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="interfaceType")
-      private final @Nullable Output<String> interfaceType;
+    private @Nullable Output<String> interfaceType;
 
-    public Output<String> interfaceType() {
-        return this.interfaceType == null ? Codegen.empty() : this.interfaceType;
+    public Optional<Output<String>> interfaceType() {
+        return Optional.ofNullable(this.interfaceType);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv4PrefixCount")
-      private final @Nullable Output<Integer> ipv4PrefixCount;
+    private @Nullable Output<Integer> ipv4PrefixCount;
 
-    public Output<Integer> ipv4PrefixCount() {
-        return this.ipv4PrefixCount == null ? Codegen.empty() : this.ipv4PrefixCount;
+    public Optional<Output<Integer>> ipv4PrefixCount() {
+        return Optional.ofNullable(this.ipv4PrefixCount);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv4Prefixes")
-      private final @Nullable Output<List<String>> ipv4Prefixes;
+    private @Nullable Output<List<String>> ipv4Prefixes;
 
-    public Output<List<String>> ipv4Prefixes() {
-        return this.ipv4Prefixes == null ? Codegen.empty() : this.ipv4Prefixes;
+    public Optional<Output<List<String>>> ipv4Prefixes() {
+        return Optional.ofNullable(this.ipv4Prefixes);
     }
 
     /**
@@ -80,17 +80,17 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6AddressCount")
-      private final @Nullable Output<Integer> ipv6AddressCount;
+    private @Nullable Output<Integer> ipv6AddressCount;
 
-    public Output<Integer> ipv6AddressCount() {
-        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
+    public Optional<Output<Integer>> ipv6AddressCount() {
+        return Optional.ofNullable(this.ipv6AddressCount);
     }
 
     @Import(name="ipv6AddressListEnabled")
-      private final @Nullable Output<Boolean> ipv6AddressListEnabled;
+    private @Nullable Output<Boolean> ipv6AddressListEnabled;
 
-    public Output<Boolean> ipv6AddressListEnabled() {
-        return this.ipv6AddressListEnabled == null ? Codegen.empty() : this.ipv6AddressListEnabled;
+    public Optional<Output<Boolean>> ipv6AddressListEnabled() {
+        return Optional.ofNullable(this.ipv6AddressListEnabled);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6AddressLists")
-      private final @Nullable Output<List<String>> ipv6AddressLists;
+    private @Nullable Output<List<String>> ipv6AddressLists;
 
-    public Output<List<String>> ipv6AddressLists() {
-        return this.ipv6AddressLists == null ? Codegen.empty() : this.ipv6AddressLists;
+    public Optional<Output<List<String>>> ipv6AddressLists() {
+        return Optional.ofNullable(this.ipv6AddressLists);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6Addresses")
-      private final @Nullable Output<List<String>> ipv6Addresses;
+    private @Nullable Output<List<String>> ipv6Addresses;
 
-    public Output<List<String>> ipv6Addresses() {
-        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
+    public Optional<Output<List<String>>> ipv6Addresses() {
+        return Optional.ofNullable(this.ipv6Addresses);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6PrefixCount")
-      private final @Nullable Output<Integer> ipv6PrefixCount;
+    private @Nullable Output<Integer> ipv6PrefixCount;
 
-    public Output<Integer> ipv6PrefixCount() {
-        return this.ipv6PrefixCount == null ? Codegen.empty() : this.ipv6PrefixCount;
+    public Optional<Output<Integer>> ipv6PrefixCount() {
+        return Optional.ofNullable(this.ipv6PrefixCount);
     }
 
     /**
@@ -131,24 +131,24 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="ipv6Prefixes")
-      private final @Nullable Output<List<String>> ipv6Prefixes;
+    private @Nullable Output<List<String>> ipv6Prefixes;
 
-    public Output<List<String>> ipv6Prefixes() {
-        return this.ipv6Prefixes == null ? Codegen.empty() : this.ipv6Prefixes;
+    public Optional<Output<List<String>>> ipv6Prefixes() {
+        return Optional.ofNullable(this.ipv6Prefixes);
     }
 
     @Import(name="privateIp")
-      private final @Nullable Output<String> privateIp;
+    private @Nullable Output<String> privateIp;
 
-    public Output<String> privateIp() {
-        return this.privateIp == null ? Codegen.empty() : this.privateIp;
+    public Optional<Output<String>> privateIp() {
+        return Optional.ofNullable(this.privateIp);
     }
 
     @Import(name="privateIpListEnabled")
-      private final @Nullable Output<Boolean> privateIpListEnabled;
+    private @Nullable Output<Boolean> privateIpListEnabled;
 
-    public Output<Boolean> privateIpListEnabled() {
-        return this.privateIpListEnabled == null ? Codegen.empty() : this.privateIpListEnabled;
+    public Optional<Output<Boolean>> privateIpListEnabled() {
+        return Optional.ofNullable(this.privateIpListEnabled);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="privateIpLists")
-      private final @Nullable Output<List<String>> privateIpLists;
+    private @Nullable Output<List<String>> privateIpLists;
 
-    public Output<List<String>> privateIpLists() {
-        return this.privateIpLists == null ? Codegen.empty() : this.privateIpLists;
+    public Optional<Output<List<String>>> privateIpLists() {
+        return Optional.ofNullable(this.privateIpLists);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="privateIps")
-      private final @Nullable Output<List<String>> privateIps;
+    private @Nullable Output<List<String>> privateIps;
 
-    public Output<List<String>> privateIps() {
-        return this.privateIps == null ? Codegen.empty() : this.privateIps;
+    public Optional<Output<List<String>>> privateIps() {
+        return Optional.ofNullable(this.privateIps);
     }
 
     /**
@@ -178,10 +178,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="privateIpsCount")
-      private final @Nullable Output<Integer> privateIpsCount;
+    private @Nullable Output<Integer> privateIpsCount;
 
-    public Output<Integer> privateIpsCount() {
-        return this.privateIpsCount == null ? Codegen.empty() : this.privateIpsCount;
+    public Optional<Output<Integer>> privateIpsCount() {
+        return Optional.ofNullable(this.privateIpsCount);
     }
 
     /**
@@ -189,10 +189,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -200,10 +200,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="sourceDestCheck")
-      private final @Nullable Output<Boolean> sourceDestCheck;
+    private @Nullable Output<Boolean> sourceDestCheck;
 
-    public Output<Boolean> sourceDestCheck() {
-        return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
+    public Optional<Output<Boolean>> sourceDestCheck() {
+        return Optional.ofNullable(this.sourceDestCheck);
     }
 
     /**
@@ -211,7 +211,7 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetId", required=true)
-      private final Output<String> subnetId;
+    private Output<String> subnetId;
 
     public Output<String> subnetId() {
         return this.subnetId;
@@ -222,321 +222,271 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public NetworkInterfaceArgs(
-        @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments,
-        @Nullable Output<String> description,
-        @Nullable Output<String> interfaceType,
-        @Nullable Output<Integer> ipv4PrefixCount,
-        @Nullable Output<List<String>> ipv4Prefixes,
-        @Nullable Output<Integer> ipv6AddressCount,
-        @Nullable Output<Boolean> ipv6AddressListEnabled,
-        @Nullable Output<List<String>> ipv6AddressLists,
-        @Nullable Output<List<String>> ipv6Addresses,
-        @Nullable Output<Integer> ipv6PrefixCount,
-        @Nullable Output<List<String>> ipv6Prefixes,
-        @Nullable Output<String> privateIp,
-        @Nullable Output<Boolean> privateIpListEnabled,
-        @Nullable Output<List<String>> privateIpLists,
-        @Nullable Output<List<String>> privateIps,
-        @Nullable Output<Integer> privateIpsCount,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<Boolean> sourceDestCheck,
-        Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags) {
-        this.attachments = attachments;
-        this.description = description;
-        this.interfaceType = interfaceType;
-        this.ipv4PrefixCount = ipv4PrefixCount;
-        this.ipv4Prefixes = ipv4Prefixes;
-        this.ipv6AddressCount = ipv6AddressCount;
-        this.ipv6AddressListEnabled = ipv6AddressListEnabled;
-        this.ipv6AddressLists = ipv6AddressLists;
-        this.ipv6Addresses = ipv6Addresses;
-        this.ipv6PrefixCount = ipv6PrefixCount;
-        this.ipv6Prefixes = ipv6Prefixes;
-        this.privateIp = privateIp;
-        this.privateIpListEnabled = privateIpListEnabled;
-        this.privateIpLists = privateIpLists;
-        this.privateIps = privateIps;
-        this.privateIpsCount = privateIpsCount;
-        this.securityGroups = securityGroups;
-        this.sourceDestCheck = sourceDestCheck;
-        this.subnetId = Objects.requireNonNull(subnetId, "expected parameter 'subnetId' to be non-null");
-        this.tags = tags;
-    }
+    private NetworkInterfaceArgs() {}
 
-    private NetworkInterfaceArgs() {
-        this.attachments = Codegen.empty();
-        this.description = Codegen.empty();
-        this.interfaceType = Codegen.empty();
-        this.ipv4PrefixCount = Codegen.empty();
-        this.ipv4Prefixes = Codegen.empty();
-        this.ipv6AddressCount = Codegen.empty();
-        this.ipv6AddressListEnabled = Codegen.empty();
-        this.ipv6AddressLists = Codegen.empty();
-        this.ipv6Addresses = Codegen.empty();
-        this.ipv6PrefixCount = Codegen.empty();
-        this.ipv6Prefixes = Codegen.empty();
-        this.privateIp = Codegen.empty();
-        this.privateIpListEnabled = Codegen.empty();
-        this.privateIpLists = Codegen.empty();
-        this.privateIps = Codegen.empty();
-        this.privateIpsCount = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.sourceDestCheck = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
+    private NetworkInterfaceArgs(NetworkInterfaceArgs $) {
+        this.attachments = $.attachments;
+        this.description = $.description;
+        this.interfaceType = $.interfaceType;
+        this.ipv4PrefixCount = $.ipv4PrefixCount;
+        this.ipv4Prefixes = $.ipv4Prefixes;
+        this.ipv6AddressCount = $.ipv6AddressCount;
+        this.ipv6AddressListEnabled = $.ipv6AddressListEnabled;
+        this.ipv6AddressLists = $.ipv6AddressLists;
+        this.ipv6Addresses = $.ipv6Addresses;
+        this.ipv6PrefixCount = $.ipv6PrefixCount;
+        this.ipv6Prefixes = $.ipv6Prefixes;
+        this.privateIp = $.privateIp;
+        this.privateIpListEnabled = $.privateIpListEnabled;
+        this.privateIpLists = $.privateIpLists;
+        this.privateIps = $.privateIps;
+        this.privateIpsCount = $.privateIpsCount;
+        this.securityGroups = $.securityGroups;
+        this.sourceDestCheck = $.sourceDestCheck;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkInterfaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> interfaceType;
-        private @Nullable Output<Integer> ipv4PrefixCount;
-        private @Nullable Output<List<String>> ipv4Prefixes;
-        private @Nullable Output<Integer> ipv6AddressCount;
-        private @Nullable Output<Boolean> ipv6AddressListEnabled;
-        private @Nullable Output<List<String>> ipv6AddressLists;
-        private @Nullable Output<List<String>> ipv6Addresses;
-        private @Nullable Output<Integer> ipv6PrefixCount;
-        private @Nullable Output<List<String>> ipv6Prefixes;
-        private @Nullable Output<String> privateIp;
-        private @Nullable Output<Boolean> privateIpListEnabled;
-        private @Nullable Output<List<String>> privateIpLists;
-        private @Nullable Output<List<String>> privateIps;
-        private @Nullable Output<Integer> privateIpsCount;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<Boolean> sourceDestCheck;
-        private Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
+        private NetworkInterfaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkInterfaceArgs();
         }
 
         public Builder(NetworkInterfaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachments = defaults.attachments;
-    	      this.description = defaults.description;
-    	      this.interfaceType = defaults.interfaceType;
-    	      this.ipv4PrefixCount = defaults.ipv4PrefixCount;
-    	      this.ipv4Prefixes = defaults.ipv4Prefixes;
-    	      this.ipv6AddressCount = defaults.ipv6AddressCount;
-    	      this.ipv6AddressListEnabled = defaults.ipv6AddressListEnabled;
-    	      this.ipv6AddressLists = defaults.ipv6AddressLists;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
-    	      this.ipv6PrefixCount = defaults.ipv6PrefixCount;
-    	      this.ipv6Prefixes = defaults.ipv6Prefixes;
-    	      this.privateIp = defaults.privateIp;
-    	      this.privateIpListEnabled = defaults.privateIpListEnabled;
-    	      this.privateIpLists = defaults.privateIpLists;
-    	      this.privateIps = defaults.privateIps;
-    	      this.privateIpsCount = defaults.privateIpsCount;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.sourceDestCheck = defaults.sourceDestCheck;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
+            $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachments(@Nullable Output<List<NetworkInterfaceAttachmentArgs>> attachments) {
-            this.attachments = attachments;
+            $.attachments = attachments;
             return this;
         }
-        public Builder attachments(@Nullable List<NetworkInterfaceAttachmentArgs> attachments) {
-            this.attachments = Codegen.ofNullable(attachments);
-            return this;
+
+        public Builder attachments(List<NetworkInterfaceAttachmentArgs> attachments) {
+            return attachments(Output.of(attachments));
         }
+
         public Builder attachments(NetworkInterfaceAttachmentArgs... attachments) {
             return attachments(List.of(attachments));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder interfaceType(@Nullable Output<String> interfaceType) {
-            this.interfaceType = interfaceType;
+            $.interfaceType = interfaceType;
             return this;
         }
-        public Builder interfaceType(@Nullable String interfaceType) {
-            this.interfaceType = Codegen.ofNullable(interfaceType);
-            return this;
+
+        public Builder interfaceType(String interfaceType) {
+            return interfaceType(Output.of(interfaceType));
         }
+
         public Builder ipv4PrefixCount(@Nullable Output<Integer> ipv4PrefixCount) {
-            this.ipv4PrefixCount = ipv4PrefixCount;
+            $.ipv4PrefixCount = ipv4PrefixCount;
             return this;
         }
-        public Builder ipv4PrefixCount(@Nullable Integer ipv4PrefixCount) {
-            this.ipv4PrefixCount = Codegen.ofNullable(ipv4PrefixCount);
-            return this;
+
+        public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
+            return ipv4PrefixCount(Output.of(ipv4PrefixCount));
         }
+
         public Builder ipv4Prefixes(@Nullable Output<List<String>> ipv4Prefixes) {
-            this.ipv4Prefixes = ipv4Prefixes;
+            $.ipv4Prefixes = ipv4Prefixes;
             return this;
         }
-        public Builder ipv4Prefixes(@Nullable List<String> ipv4Prefixes) {
-            this.ipv4Prefixes = Codegen.ofNullable(ipv4Prefixes);
-            return this;
+
+        public Builder ipv4Prefixes(List<String> ipv4Prefixes) {
+            return ipv4Prefixes(Output.of(ipv4Prefixes));
         }
+
         public Builder ipv4Prefixes(String... ipv4Prefixes) {
             return ipv4Prefixes(List.of(ipv4Prefixes));
         }
+
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
-            this.ipv6AddressCount = ipv6AddressCount;
+            $.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
-        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
-            return this;
+
+        public Builder ipv6AddressCount(Integer ipv6AddressCount) {
+            return ipv6AddressCount(Output.of(ipv6AddressCount));
         }
+
         public Builder ipv6AddressListEnabled(@Nullable Output<Boolean> ipv6AddressListEnabled) {
-            this.ipv6AddressListEnabled = ipv6AddressListEnabled;
+            $.ipv6AddressListEnabled = ipv6AddressListEnabled;
             return this;
         }
-        public Builder ipv6AddressListEnabled(@Nullable Boolean ipv6AddressListEnabled) {
-            this.ipv6AddressListEnabled = Codegen.ofNullable(ipv6AddressListEnabled);
-            return this;
+
+        public Builder ipv6AddressListEnabled(Boolean ipv6AddressListEnabled) {
+            return ipv6AddressListEnabled(Output.of(ipv6AddressListEnabled));
         }
+
         public Builder ipv6AddressLists(@Nullable Output<List<String>> ipv6AddressLists) {
-            this.ipv6AddressLists = ipv6AddressLists;
+            $.ipv6AddressLists = ipv6AddressLists;
             return this;
         }
-        public Builder ipv6AddressLists(@Nullable List<String> ipv6AddressLists) {
-            this.ipv6AddressLists = Codegen.ofNullable(ipv6AddressLists);
-            return this;
+
+        public Builder ipv6AddressLists(List<String> ipv6AddressLists) {
+            return ipv6AddressLists(Output.of(ipv6AddressLists));
         }
+
         public Builder ipv6AddressLists(String... ipv6AddressLists) {
             return ipv6AddressLists(List.of(ipv6AddressLists));
         }
+
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
-            this.ipv6Addresses = ipv6Addresses;
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
-        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
-            return this;
+
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
+            return ipv6Addresses(Output.of(ipv6Addresses));
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
         }
+
         public Builder ipv6PrefixCount(@Nullable Output<Integer> ipv6PrefixCount) {
-            this.ipv6PrefixCount = ipv6PrefixCount;
+            $.ipv6PrefixCount = ipv6PrefixCount;
             return this;
         }
-        public Builder ipv6PrefixCount(@Nullable Integer ipv6PrefixCount) {
-            this.ipv6PrefixCount = Codegen.ofNullable(ipv6PrefixCount);
-            return this;
+
+        public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
+            return ipv6PrefixCount(Output.of(ipv6PrefixCount));
         }
+
         public Builder ipv6Prefixes(@Nullable Output<List<String>> ipv6Prefixes) {
-            this.ipv6Prefixes = ipv6Prefixes;
+            $.ipv6Prefixes = ipv6Prefixes;
             return this;
         }
-        public Builder ipv6Prefixes(@Nullable List<String> ipv6Prefixes) {
-            this.ipv6Prefixes = Codegen.ofNullable(ipv6Prefixes);
-            return this;
+
+        public Builder ipv6Prefixes(List<String> ipv6Prefixes) {
+            return ipv6Prefixes(Output.of(ipv6Prefixes));
         }
+
         public Builder ipv6Prefixes(String... ipv6Prefixes) {
             return ipv6Prefixes(List.of(ipv6Prefixes));
         }
+
         public Builder privateIp(@Nullable Output<String> privateIp) {
-            this.privateIp = privateIp;
+            $.privateIp = privateIp;
             return this;
         }
-        public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Codegen.ofNullable(privateIp);
-            return this;
+
+        public Builder privateIp(String privateIp) {
+            return privateIp(Output.of(privateIp));
         }
+
         public Builder privateIpListEnabled(@Nullable Output<Boolean> privateIpListEnabled) {
-            this.privateIpListEnabled = privateIpListEnabled;
+            $.privateIpListEnabled = privateIpListEnabled;
             return this;
         }
-        public Builder privateIpListEnabled(@Nullable Boolean privateIpListEnabled) {
-            this.privateIpListEnabled = Codegen.ofNullable(privateIpListEnabled);
-            return this;
+
+        public Builder privateIpListEnabled(Boolean privateIpListEnabled) {
+            return privateIpListEnabled(Output.of(privateIpListEnabled));
         }
+
         public Builder privateIpLists(@Nullable Output<List<String>> privateIpLists) {
-            this.privateIpLists = privateIpLists;
+            $.privateIpLists = privateIpLists;
             return this;
         }
-        public Builder privateIpLists(@Nullable List<String> privateIpLists) {
-            this.privateIpLists = Codegen.ofNullable(privateIpLists);
-            return this;
+
+        public Builder privateIpLists(List<String> privateIpLists) {
+            return privateIpLists(Output.of(privateIpLists));
         }
+
         public Builder privateIpLists(String... privateIpLists) {
             return privateIpLists(List.of(privateIpLists));
         }
+
         public Builder privateIps(@Nullable Output<List<String>> privateIps) {
-            this.privateIps = privateIps;
+            $.privateIps = privateIps;
             return this;
         }
-        public Builder privateIps(@Nullable List<String> privateIps) {
-            this.privateIps = Codegen.ofNullable(privateIps);
-            return this;
+
+        public Builder privateIps(List<String> privateIps) {
+            return privateIps(Output.of(privateIps));
         }
+
         public Builder privateIps(String... privateIps) {
             return privateIps(List.of(privateIps));
         }
+
         public Builder privateIpsCount(@Nullable Output<Integer> privateIpsCount) {
-            this.privateIpsCount = privateIpsCount;
+            $.privateIpsCount = privateIpsCount;
             return this;
         }
-        public Builder privateIpsCount(@Nullable Integer privateIpsCount) {
-            this.privateIpsCount = Codegen.ofNullable(privateIpsCount);
-            return this;
+
+        public Builder privateIpsCount(Integer privateIpsCount) {
+            return privateIpsCount(Output.of(privateIpsCount));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder sourceDestCheck(@Nullable Output<Boolean> sourceDestCheck) {
-            this.sourceDestCheck = sourceDestCheck;
+            $.sourceDestCheck = sourceDestCheck;
             return this;
         }
-        public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
-            this.sourceDestCheck = Codegen.ofNullable(sourceDestCheck);
-            return this;
+
+        public Builder sourceDestCheck(Boolean sourceDestCheck) {
+            return sourceDestCheck(Output.of(sourceDestCheck));
         }
+
         public Builder subnetId(Output<String> subnetId) {
-            this.subnetId = Objects.requireNonNull(subnetId);
+            $.subnetId = subnetId;
             return this;
         }
+
         public Builder subnetId(String subnetId) {
-            this.subnetId = Output.of(Objects.requireNonNull(subnetId));
-            return this;
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
-        }        public NetworkInterfaceArgs build() {
-            return new NetworkInterfaceArgs(attachments, description, interfaceType, ipv4PrefixCount, ipv4Prefixes, ipv6AddressCount, ipv6AddressListEnabled, ipv6AddressLists, ipv6Addresses, ipv6PrefixCount, ipv6Prefixes, privateIp, privateIpListEnabled, privateIpLists, privateIps, privateIpsCount, securityGroups, sourceDestCheck, subnetId, tags);
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
+        }
+
+        public NetworkInterfaceArgs build() {
+            $.subnetId = Objects.requireNonNull($.subnetId, "expected parameter 'subnetId' to be non-null");
+            return $;
         }
     }
+
 }

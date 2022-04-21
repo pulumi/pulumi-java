@@ -5,12 +5,12 @@ package com.pulumi.aws.sagemaker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="additionalCodeRepositories")
-      private final @Nullable Output<List<String>> additionalCodeRepositories;
+    private @Nullable Output<List<String>> additionalCodeRepositories;
 
-    public Output<List<String>> additionalCodeRepositories() {
-        return this.additionalCodeRepositories == null ? Codegen.empty() : this.additionalCodeRepositories;
+    public Optional<Output<List<String>>> additionalCodeRepositories() {
+        return Optional.ofNullable(this.additionalCodeRepositories);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="defaultCodeRepository")
-      private final @Nullable Output<String> defaultCodeRepository;
+    private @Nullable Output<String> defaultCodeRepository;
 
-    public Output<String> defaultCodeRepository() {
-        return this.defaultCodeRepository == null ? Codegen.empty() : this.defaultCodeRepository;
+    public Optional<Output<String>> defaultCodeRepository() {
+        return Optional.ofNullable(this.defaultCodeRepository);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="directInternetAccess")
-      private final @Nullable Output<String> directInternetAccess;
+    private @Nullable Output<String> directInternetAccess;
 
-    public Output<String> directInternetAccess() {
-        return this.directInternetAccess == null ? Codegen.empty() : this.directInternetAccess;
+    public Optional<Output<String>> directInternetAccess() {
+        return Optional.ofNullable(this.directInternetAccess);
     }
 
     /**
@@ -57,7 +57,7 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="instanceType", required=true)
-      private final Output<String> instanceType;
+    private Output<String> instanceType;
 
     public Output<String> instanceType() {
         return this.instanceType;
@@ -68,10 +68,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="kmsKeyId")
-      private final @Nullable Output<String> kmsKeyId;
+    private @Nullable Output<String> kmsKeyId;
 
-    public Output<String> kmsKeyId() {
-        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
+    public Optional<Output<String>> kmsKeyId() {
+        return Optional.ofNullable(this.kmsKeyId);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="lifecycleConfigName")
-      private final @Nullable Output<String> lifecycleConfigName;
+    private @Nullable Output<String> lifecycleConfigName;
 
-    public Output<String> lifecycleConfigName() {
-        return this.lifecycleConfigName == null ? Codegen.empty() : this.lifecycleConfigName;
+    public Optional<Output<String>> lifecycleConfigName() {
+        return Optional.ofNullable(this.lifecycleConfigName);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="platformIdentifier")
-      private final @Nullable Output<String> platformIdentifier;
+    private @Nullable Output<String> platformIdentifier;
 
-    public Output<String> platformIdentifier() {
-        return this.platformIdentifier == null ? Codegen.empty() : this.platformIdentifier;
+    public Optional<Output<String>> platformIdentifier() {
+        return Optional.ofNullable(this.platformIdentifier);
     }
 
     /**
@@ -112,7 +112,7 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleArn", required=true)
-      private final Output<String> roleArn;
+    private Output<String> roleArn;
 
     public Output<String> roleArn() {
         return this.roleArn;
@@ -123,10 +123,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="rootAccess")
-      private final @Nullable Output<String> rootAccess;
+    private @Nullable Output<String> rootAccess;
 
-    public Output<String> rootAccess() {
-        return this.rootAccess == null ? Codegen.empty() : this.rootAccess;
+    public Optional<Output<String>> rootAccess() {
+        return Optional.ofNullable(this.rootAccess);
     }
 
     /**
@@ -134,10 +134,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="securityGroups")
-      private final @Nullable Output<List<String>> securityGroups;
+    private @Nullable Output<List<String>> securityGroups;
 
-    public Output<List<String>> securityGroups() {
-        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
+    public Optional<Output<List<String>>> securityGroups() {
+        return Optional.ofNullable(this.securityGroups);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetId")
-      private final @Nullable Output<String> subnetId;
+    private @Nullable Output<String> subnetId;
 
-    public Output<String> subnetId() {
-        return this.subnetId == null ? Codegen.empty() : this.subnetId;
+    public Optional<Output<String>> subnetId() {
+        return Optional.ofNullable(this.subnetId);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -167,225 +167,188 @@ public final class NotebookInstanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="volumeSize")
-      private final @Nullable Output<Integer> volumeSize;
+    private @Nullable Output<Integer> volumeSize;
 
-    public Output<Integer> volumeSize() {
-        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
+    public Optional<Output<Integer>> volumeSize() {
+        return Optional.ofNullable(this.volumeSize);
     }
 
-    public NotebookInstanceArgs(
-        @Nullable Output<List<String>> additionalCodeRepositories,
-        @Nullable Output<String> defaultCodeRepository,
-        @Nullable Output<String> directInternetAccess,
-        Output<String> instanceType,
-        @Nullable Output<String> kmsKeyId,
-        @Nullable Output<String> lifecycleConfigName,
-        @Nullable Output<String> name,
-        @Nullable Output<String> platformIdentifier,
-        Output<String> roleArn,
-        @Nullable Output<String> rootAccess,
-        @Nullable Output<List<String>> securityGroups,
-        @Nullable Output<String> subnetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Integer> volumeSize) {
-        this.additionalCodeRepositories = additionalCodeRepositories;
-        this.defaultCodeRepository = defaultCodeRepository;
-        this.directInternetAccess = directInternetAccess;
-        this.instanceType = Objects.requireNonNull(instanceType, "expected parameter 'instanceType' to be non-null");
-        this.kmsKeyId = kmsKeyId;
-        this.lifecycleConfigName = lifecycleConfigName;
-        this.name = name;
-        this.platformIdentifier = platformIdentifier;
-        this.roleArn = Objects.requireNonNull(roleArn, "expected parameter 'roleArn' to be non-null");
-        this.rootAccess = rootAccess;
-        this.securityGroups = securityGroups;
-        this.subnetId = subnetId;
-        this.tags = tags;
-        this.volumeSize = volumeSize;
-    }
+    private NotebookInstanceArgs() {}
 
-    private NotebookInstanceArgs() {
-        this.additionalCodeRepositories = Codegen.empty();
-        this.defaultCodeRepository = Codegen.empty();
-        this.directInternetAccess = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.kmsKeyId = Codegen.empty();
-        this.lifecycleConfigName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.platformIdentifier = Codegen.empty();
-        this.roleArn = Codegen.empty();
-        this.rootAccess = Codegen.empty();
-        this.securityGroups = Codegen.empty();
-        this.subnetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.volumeSize = Codegen.empty();
+    private NotebookInstanceArgs(NotebookInstanceArgs $) {
+        this.additionalCodeRepositories = $.additionalCodeRepositories;
+        this.defaultCodeRepository = $.defaultCodeRepository;
+        this.directInternetAccess = $.directInternetAccess;
+        this.instanceType = $.instanceType;
+        this.kmsKeyId = $.kmsKeyId;
+        this.lifecycleConfigName = $.lifecycleConfigName;
+        this.name = $.name;
+        this.platformIdentifier = $.platformIdentifier;
+        this.roleArn = $.roleArn;
+        this.rootAccess = $.rootAccess;
+        this.securityGroups = $.securityGroups;
+        this.subnetId = $.subnetId;
+        this.tags = $.tags;
+        this.volumeSize = $.volumeSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotebookInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalCodeRepositories;
-        private @Nullable Output<String> defaultCodeRepository;
-        private @Nullable Output<String> directInternetAccess;
-        private Output<String> instanceType;
-        private @Nullable Output<String> kmsKeyId;
-        private @Nullable Output<String> lifecycleConfigName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> platformIdentifier;
-        private Output<String> roleArn;
-        private @Nullable Output<String> rootAccess;
-        private @Nullable Output<List<String>> securityGroups;
-        private @Nullable Output<String> subnetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Integer> volumeSize;
+        private NotebookInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotebookInstanceArgs();
         }
 
         public Builder(NotebookInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCodeRepositories = defaults.additionalCodeRepositories;
-    	      this.defaultCodeRepository = defaults.defaultCodeRepository;
-    	      this.directInternetAccess = defaults.directInternetAccess;
-    	      this.instanceType = defaults.instanceType;
-    	      this.kmsKeyId = defaults.kmsKeyId;
-    	      this.lifecycleConfigName = defaults.lifecycleConfigName;
-    	      this.name = defaults.name;
-    	      this.platformIdentifier = defaults.platformIdentifier;
-    	      this.roleArn = defaults.roleArn;
-    	      this.rootAccess = defaults.rootAccess;
-    	      this.securityGroups = defaults.securityGroups;
-    	      this.subnetId = defaults.subnetId;
-    	      this.tags = defaults.tags;
-    	      this.volumeSize = defaults.volumeSize;
+            $ = new NotebookInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCodeRepositories(@Nullable Output<List<String>> additionalCodeRepositories) {
-            this.additionalCodeRepositories = additionalCodeRepositories;
+            $.additionalCodeRepositories = additionalCodeRepositories;
             return this;
         }
-        public Builder additionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
-            this.additionalCodeRepositories = Codegen.ofNullable(additionalCodeRepositories);
-            return this;
+
+        public Builder additionalCodeRepositories(List<String> additionalCodeRepositories) {
+            return additionalCodeRepositories(Output.of(additionalCodeRepositories));
         }
+
         public Builder additionalCodeRepositories(String... additionalCodeRepositories) {
             return additionalCodeRepositories(List.of(additionalCodeRepositories));
         }
+
         public Builder defaultCodeRepository(@Nullable Output<String> defaultCodeRepository) {
-            this.defaultCodeRepository = defaultCodeRepository;
+            $.defaultCodeRepository = defaultCodeRepository;
             return this;
         }
-        public Builder defaultCodeRepository(@Nullable String defaultCodeRepository) {
-            this.defaultCodeRepository = Codegen.ofNullable(defaultCodeRepository);
-            return this;
+
+        public Builder defaultCodeRepository(String defaultCodeRepository) {
+            return defaultCodeRepository(Output.of(defaultCodeRepository));
         }
+
         public Builder directInternetAccess(@Nullable Output<String> directInternetAccess) {
-            this.directInternetAccess = directInternetAccess;
+            $.directInternetAccess = directInternetAccess;
             return this;
         }
-        public Builder directInternetAccess(@Nullable String directInternetAccess) {
-            this.directInternetAccess = Codegen.ofNullable(directInternetAccess);
-            return this;
+
+        public Builder directInternetAccess(String directInternetAccess) {
+            return directInternetAccess(Output.of(directInternetAccess));
         }
+
         public Builder instanceType(Output<String> instanceType) {
-            this.instanceType = Objects.requireNonNull(instanceType);
+            $.instanceType = instanceType;
             return this;
         }
+
         public Builder instanceType(String instanceType) {
-            this.instanceType = Output.of(Objects.requireNonNull(instanceType));
-            return this;
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
-            this.kmsKeyId = kmsKeyId;
+            $.kmsKeyId = kmsKeyId;
             return this;
         }
-        public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
-            return this;
+
+        public Builder kmsKeyId(String kmsKeyId) {
+            return kmsKeyId(Output.of(kmsKeyId));
         }
+
         public Builder lifecycleConfigName(@Nullable Output<String> lifecycleConfigName) {
-            this.lifecycleConfigName = lifecycleConfigName;
+            $.lifecycleConfigName = lifecycleConfigName;
             return this;
         }
-        public Builder lifecycleConfigName(@Nullable String lifecycleConfigName) {
-            this.lifecycleConfigName = Codegen.ofNullable(lifecycleConfigName);
-            return this;
+
+        public Builder lifecycleConfigName(String lifecycleConfigName) {
+            return lifecycleConfigName(Output.of(lifecycleConfigName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder platformIdentifier(@Nullable Output<String> platformIdentifier) {
-            this.platformIdentifier = platformIdentifier;
+            $.platformIdentifier = platformIdentifier;
             return this;
         }
-        public Builder platformIdentifier(@Nullable String platformIdentifier) {
-            this.platformIdentifier = Codegen.ofNullable(platformIdentifier);
-            return this;
+
+        public Builder platformIdentifier(String platformIdentifier) {
+            return platformIdentifier(Output.of(platformIdentifier));
         }
+
         public Builder roleArn(Output<String> roleArn) {
-            this.roleArn = Objects.requireNonNull(roleArn);
+            $.roleArn = roleArn;
             return this;
         }
+
         public Builder roleArn(String roleArn) {
-            this.roleArn = Output.of(Objects.requireNonNull(roleArn));
-            return this;
+            return roleArn(Output.of(roleArn));
         }
+
         public Builder rootAccess(@Nullable Output<String> rootAccess) {
-            this.rootAccess = rootAccess;
+            $.rootAccess = rootAccess;
             return this;
         }
-        public Builder rootAccess(@Nullable String rootAccess) {
-            this.rootAccess = Codegen.ofNullable(rootAccess);
-            return this;
+
+        public Builder rootAccess(String rootAccess) {
+            return rootAccess(Output.of(rootAccess));
         }
+
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
-            this.securityGroups = securityGroups;
+            $.securityGroups = securityGroups;
             return this;
         }
-        public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Codegen.ofNullable(securityGroups);
-            return this;
+
+        public Builder securityGroups(List<String> securityGroups) {
+            return securityGroups(Output.of(securityGroups));
         }
+
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
+
         public Builder subnetId(@Nullable Output<String> subnetId) {
-            this.subnetId = subnetId;
+            $.subnetId = subnetId;
             return this;
         }
-        public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Codegen.ofNullable(subnetId);
-            return this;
+
+        public Builder subnetId(String subnetId) {
+            return subnetId(Output.of(subnetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
-            this.volumeSize = volumeSize;
+            $.volumeSize = volumeSize;
             return this;
         }
-        public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Codegen.ofNullable(volumeSize);
-            return this;
-        }        public NotebookInstanceArgs build() {
-            return new NotebookInstanceArgs(additionalCodeRepositories, defaultCodeRepository, directInternetAccess, instanceType, kmsKeyId, lifecycleConfigName, name, platformIdentifier, roleArn, rootAccess, securityGroups, subnetId, tags, volumeSize);
+
+        public Builder volumeSize(Integer volumeSize) {
+            return volumeSize(Output.of(volumeSize));
+        }
+
+        public NotebookInstanceArgs build() {
+            $.instanceType = Objects.requireNonNull($.instanceType, "expected parameter 'instanceType' to be non-null");
+            $.roleArn = Objects.requireNonNull($.roleArn, "expected parameter 'roleArn' to be non-null");
+            return $;
         }
     }
+
 }

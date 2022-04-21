@@ -12,13 +12,13 @@ import com.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionGetArgs;
 import com.pulumi.aws.dynamodb.inputs.TableTtlGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<TableAttributeGetArgs>> attributes;
+    private @Nullable Output<List<TableAttributeGetArgs>> attributes;
 
-    public Output<List<TableAttributeGetArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<TableAttributeGetArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingMode")
-      private final @Nullable Output<String> billingMode;
+    private @Nullable Output<String> billingMode;
 
-    public Output<String> billingMode() {
-        return this.billingMode == null ? Codegen.empty() : this.billingMode;
+    public Optional<Output<String>> billingMode() {
+        return Optional.ofNullable(this.billingMode);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="globalSecondaryIndexes")
-      private final @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
+    private @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
 
-    public Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes == null ? Codegen.empty() : this.globalSecondaryIndexes;
+    public Optional<Output<List<TableGlobalSecondaryIndexGetArgs>>> globalSecondaryIndexes() {
+        return Optional.ofNullable(this.globalSecondaryIndexes);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hashKey")
-      private final @Nullable Output<String> hashKey;
+    private @Nullable Output<String> hashKey;
 
-    public Output<String> hashKey() {
-        return this.hashKey == null ? Codegen.empty() : this.hashKey;
+    public Optional<Output<String>> hashKey() {
+        return Optional.ofNullable(this.hashKey);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="localSecondaryIndexes")
-      private final @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
+    private @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
 
-    public Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes() {
-        return this.localSecondaryIndexes == null ? Codegen.empty() : this.localSecondaryIndexes;
+    public Optional<Output<List<TableLocalSecondaryIndexGetArgs>>> localSecondaryIndexes() {
+        return Optional.ofNullable(this.localSecondaryIndexes);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pointInTimeRecovery")
-      private final @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
+    private @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
 
-    public Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery() {
-        return this.pointInTimeRecovery == null ? Codegen.empty() : this.pointInTimeRecovery;
+    public Optional<Output<TablePointInTimeRecoveryGetArgs>> pointInTimeRecovery() {
+        return Optional.ofNullable(this.pointInTimeRecovery);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rangeKey")
-      private final @Nullable Output<String> rangeKey;
+    private @Nullable Output<String> rangeKey;
 
-    public Output<String> rangeKey() {
-        return this.rangeKey == null ? Codegen.empty() : this.rangeKey;
+    public Optional<Output<String>> rangeKey() {
+        return Optional.ofNullable(this.rangeKey);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readCapacity")
-      private final @Nullable Output<Integer> readCapacity;
+    private @Nullable Output<Integer> readCapacity;
 
-    public Output<Integer> readCapacity() {
-        return this.readCapacity == null ? Codegen.empty() : this.readCapacity;
+    public Optional<Output<Integer>> readCapacity() {
+        return Optional.ofNullable(this.readCapacity);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<List<TableReplicaGetArgs>> replicas;
+    private @Nullable Output<List<TableReplicaGetArgs>> replicas;
 
-    public Output<List<TableReplicaGetArgs>> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<List<TableReplicaGetArgs>>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreDateTime")
-      private final @Nullable Output<String> restoreDateTime;
+    private @Nullable Output<String> restoreDateTime;
 
-    public Output<String> restoreDateTime() {
-        return this.restoreDateTime == null ? Codegen.empty() : this.restoreDateTime;
+    public Optional<Output<String>> restoreDateTime() {
+        return Optional.ofNullable(this.restoreDateTime);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreSourceName")
-      private final @Nullable Output<String> restoreSourceName;
+    private @Nullable Output<String> restoreSourceName;
 
-    public Output<String> restoreSourceName() {
-        return this.restoreSourceName == null ? Codegen.empty() : this.restoreSourceName;
+    public Optional<Output<String>> restoreSourceName() {
+        return Optional.ofNullable(this.restoreSourceName);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="restoreToLatestTime")
-      private final @Nullable Output<Boolean> restoreToLatestTime;
+    private @Nullable Output<Boolean> restoreToLatestTime;
 
-    public Output<Boolean> restoreToLatestTime() {
-        return this.restoreToLatestTime == null ? Codegen.empty() : this.restoreToLatestTime;
+    public Optional<Output<Boolean>> restoreToLatestTime() {
+        return Optional.ofNullable(this.restoreToLatestTime);
     }
 
     /**
@@ -190,10 +190,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverSideEncryption")
-      private final @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
+    private @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
 
-    public Output<TableServerSideEncryptionGetArgs> serverSideEncryption() {
-        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
+    public Optional<Output<TableServerSideEncryptionGetArgs>> serverSideEncryption() {
+        return Optional.ofNullable(this.serverSideEncryption);
     }
 
     /**
@@ -201,10 +201,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamArn")
-      private final @Nullable Output<String> streamArn;
+    private @Nullable Output<String> streamArn;
 
-    public Output<String> streamArn() {
-        return this.streamArn == null ? Codegen.empty() : this.streamArn;
+    public Optional<Output<String>> streamArn() {
+        return Optional.ofNullable(this.streamArn);
     }
 
     /**
@@ -212,10 +212,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamEnabled")
-      private final @Nullable Output<Boolean> streamEnabled;
+    private @Nullable Output<Boolean> streamEnabled;
 
-    public Output<Boolean> streamEnabled() {
-        return this.streamEnabled == null ? Codegen.empty() : this.streamEnabled;
+    public Optional<Output<Boolean>> streamEnabled() {
+        return Optional.ofNullable(this.streamEnabled);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamLabel")
-      private final @Nullable Output<String> streamLabel;
+    private @Nullable Output<String> streamLabel;
 
-    public Output<String> streamLabel() {
-        return this.streamLabel == null ? Codegen.empty() : this.streamLabel;
+    public Optional<Output<String>> streamLabel() {
+        return Optional.ofNullable(this.streamLabel);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="streamViewType")
-      private final @Nullable Output<String> streamViewType;
+    private @Nullable Output<String> streamViewType;
 
-    public Output<String> streamViewType() {
-        return this.streamViewType == null ? Codegen.empty() : this.streamViewType;
+    public Optional<Output<String>> streamViewType() {
+        return Optional.ofNullable(this.streamViewType);
     }
 
     /**
@@ -248,10 +248,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableClass")
-      private final @Nullable Output<String> tableClass;
+    private @Nullable Output<String> tableClass;
 
-    public Output<String> tableClass() {
-        return this.tableClass == null ? Codegen.empty() : this.tableClass;
+    public Optional<Output<String>> tableClass() {
+        return Optional.ofNullable(this.tableClass);
     }
 
     /**
@@ -259,10 +259,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -270,10 +270,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -281,10 +281,10 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<TableTtlGetArgs> ttl;
+    private @Nullable Output<TableTtlGetArgs> ttl;
 
-    public Output<TableTtlGetArgs> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<TableTtlGetArgs>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -292,361 +292,294 @@ public final class TableState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="writeCapacity")
-      private final @Nullable Output<Integer> writeCapacity;
+    private @Nullable Output<Integer> writeCapacity;
 
-    public Output<Integer> writeCapacity() {
-        return this.writeCapacity == null ? Codegen.empty() : this.writeCapacity;
+    public Optional<Output<Integer>> writeCapacity() {
+        return Optional.ofNullable(this.writeCapacity);
     }
 
-    public TableState(
-        @Nullable Output<String> arn,
-        @Nullable Output<List<TableAttributeGetArgs>> attributes,
-        @Nullable Output<String> billingMode,
-        @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes,
-        @Nullable Output<String> hashKey,
-        @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes,
-        @Nullable Output<String> name,
-        @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery,
-        @Nullable Output<String> rangeKey,
-        @Nullable Output<Integer> readCapacity,
-        @Nullable Output<List<TableReplicaGetArgs>> replicas,
-        @Nullable Output<String> restoreDateTime,
-        @Nullable Output<String> restoreSourceName,
-        @Nullable Output<Boolean> restoreToLatestTime,
-        @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption,
-        @Nullable Output<String> streamArn,
-        @Nullable Output<Boolean> streamEnabled,
-        @Nullable Output<String> streamLabel,
-        @Nullable Output<String> streamViewType,
-        @Nullable Output<String> tableClass,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<TableTtlGetArgs> ttl,
-        @Nullable Output<Integer> writeCapacity) {
-        this.arn = arn;
-        this.attributes = attributes;
-        this.billingMode = billingMode;
-        this.globalSecondaryIndexes = globalSecondaryIndexes;
-        this.hashKey = hashKey;
-        this.localSecondaryIndexes = localSecondaryIndexes;
-        this.name = name;
-        this.pointInTimeRecovery = pointInTimeRecovery;
-        this.rangeKey = rangeKey;
-        this.readCapacity = readCapacity;
-        this.replicas = replicas;
-        this.restoreDateTime = restoreDateTime;
-        this.restoreSourceName = restoreSourceName;
-        this.restoreToLatestTime = restoreToLatestTime;
-        this.serverSideEncryption = serverSideEncryption;
-        this.streamArn = streamArn;
-        this.streamEnabled = streamEnabled;
-        this.streamLabel = streamLabel;
-        this.streamViewType = streamViewType;
-        this.tableClass = tableClass;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.ttl = ttl;
-        this.writeCapacity = writeCapacity;
-    }
+    private TableState() {}
 
-    private TableState() {
-        this.arn = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.billingMode = Codegen.empty();
-        this.globalSecondaryIndexes = Codegen.empty();
-        this.hashKey = Codegen.empty();
-        this.localSecondaryIndexes = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pointInTimeRecovery = Codegen.empty();
-        this.rangeKey = Codegen.empty();
-        this.readCapacity = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.restoreDateTime = Codegen.empty();
-        this.restoreSourceName = Codegen.empty();
-        this.restoreToLatestTime = Codegen.empty();
-        this.serverSideEncryption = Codegen.empty();
-        this.streamArn = Codegen.empty();
-        this.streamEnabled = Codegen.empty();
-        this.streamLabel = Codegen.empty();
-        this.streamViewType = Codegen.empty();
-        this.tableClass = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.writeCapacity = Codegen.empty();
+    private TableState(TableState $) {
+        this.arn = $.arn;
+        this.attributes = $.attributes;
+        this.billingMode = $.billingMode;
+        this.globalSecondaryIndexes = $.globalSecondaryIndexes;
+        this.hashKey = $.hashKey;
+        this.localSecondaryIndexes = $.localSecondaryIndexes;
+        this.name = $.name;
+        this.pointInTimeRecovery = $.pointInTimeRecovery;
+        this.rangeKey = $.rangeKey;
+        this.readCapacity = $.readCapacity;
+        this.replicas = $.replicas;
+        this.restoreDateTime = $.restoreDateTime;
+        this.restoreSourceName = $.restoreSourceName;
+        this.restoreToLatestTime = $.restoreToLatestTime;
+        this.serverSideEncryption = $.serverSideEncryption;
+        this.streamArn = $.streamArn;
+        this.streamEnabled = $.streamEnabled;
+        this.streamLabel = $.streamLabel;
+        this.streamViewType = $.streamViewType;
+        this.tableClass = $.tableClass;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.ttl = $.ttl;
+        this.writeCapacity = $.writeCapacity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<List<TableAttributeGetArgs>> attributes;
-        private @Nullable Output<String> billingMode;
-        private @Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes;
-        private @Nullable Output<String> hashKey;
-        private @Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes;
-        private @Nullable Output<String> name;
-        private @Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery;
-        private @Nullable Output<String> rangeKey;
-        private @Nullable Output<Integer> readCapacity;
-        private @Nullable Output<List<TableReplicaGetArgs>> replicas;
-        private @Nullable Output<String> restoreDateTime;
-        private @Nullable Output<String> restoreSourceName;
-        private @Nullable Output<Boolean> restoreToLatestTime;
-        private @Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption;
-        private @Nullable Output<String> streamArn;
-        private @Nullable Output<Boolean> streamEnabled;
-        private @Nullable Output<String> streamLabel;
-        private @Nullable Output<String> streamViewType;
-        private @Nullable Output<String> tableClass;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<TableTtlGetArgs> ttl;
-        private @Nullable Output<Integer> writeCapacity;
+        private TableState $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableState();
         }
 
         public Builder(TableState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.attributes = defaults.attributes;
-    	      this.billingMode = defaults.billingMode;
-    	      this.globalSecondaryIndexes = defaults.globalSecondaryIndexes;
-    	      this.hashKey = defaults.hashKey;
-    	      this.localSecondaryIndexes = defaults.localSecondaryIndexes;
-    	      this.name = defaults.name;
-    	      this.pointInTimeRecovery = defaults.pointInTimeRecovery;
-    	      this.rangeKey = defaults.rangeKey;
-    	      this.readCapacity = defaults.readCapacity;
-    	      this.replicas = defaults.replicas;
-    	      this.restoreDateTime = defaults.restoreDateTime;
-    	      this.restoreSourceName = defaults.restoreSourceName;
-    	      this.restoreToLatestTime = defaults.restoreToLatestTime;
-    	      this.serverSideEncryption = defaults.serverSideEncryption;
-    	      this.streamArn = defaults.streamArn;
-    	      this.streamEnabled = defaults.streamEnabled;
-    	      this.streamLabel = defaults.streamLabel;
-    	      this.streamViewType = defaults.streamViewType;
-    	      this.tableClass = defaults.tableClass;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.ttl = defaults.ttl;
-    	      this.writeCapacity = defaults.writeCapacity;
+            $ = new TableState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder attributes(@Nullable Output<List<TableAttributeGetArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<TableAttributeGetArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<TableAttributeGetArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(TableAttributeGetArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder billingMode(@Nullable Output<String> billingMode) {
-            this.billingMode = billingMode;
+            $.billingMode = billingMode;
             return this;
         }
-        public Builder billingMode(@Nullable String billingMode) {
-            this.billingMode = Codegen.ofNullable(billingMode);
-            return this;
+
+        public Builder billingMode(String billingMode) {
+            return billingMode(Output.of(billingMode));
         }
+
         public Builder globalSecondaryIndexes(@Nullable Output<List<TableGlobalSecondaryIndexGetArgs>> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = globalSecondaryIndexes;
+            $.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
-        public Builder globalSecondaryIndexes(@Nullable List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
-            this.globalSecondaryIndexes = Codegen.ofNullable(globalSecondaryIndexes);
-            return this;
+
+        public Builder globalSecondaryIndexes(List<TableGlobalSecondaryIndexGetArgs> globalSecondaryIndexes) {
+            return globalSecondaryIndexes(Output.of(globalSecondaryIndexes));
         }
+
         public Builder globalSecondaryIndexes(TableGlobalSecondaryIndexGetArgs... globalSecondaryIndexes) {
             return globalSecondaryIndexes(List.of(globalSecondaryIndexes));
         }
+
         public Builder hashKey(@Nullable Output<String> hashKey) {
-            this.hashKey = hashKey;
+            $.hashKey = hashKey;
             return this;
         }
-        public Builder hashKey(@Nullable String hashKey) {
-            this.hashKey = Codegen.ofNullable(hashKey);
-            return this;
+
+        public Builder hashKey(String hashKey) {
+            return hashKey(Output.of(hashKey));
         }
+
         public Builder localSecondaryIndexes(@Nullable Output<List<TableLocalSecondaryIndexGetArgs>> localSecondaryIndexes) {
-            this.localSecondaryIndexes = localSecondaryIndexes;
+            $.localSecondaryIndexes = localSecondaryIndexes;
             return this;
         }
-        public Builder localSecondaryIndexes(@Nullable List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
-            this.localSecondaryIndexes = Codegen.ofNullable(localSecondaryIndexes);
-            return this;
+
+        public Builder localSecondaryIndexes(List<TableLocalSecondaryIndexGetArgs> localSecondaryIndexes) {
+            return localSecondaryIndexes(Output.of(localSecondaryIndexes));
         }
+
         public Builder localSecondaryIndexes(TableLocalSecondaryIndexGetArgs... localSecondaryIndexes) {
             return localSecondaryIndexes(List.of(localSecondaryIndexes));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pointInTimeRecovery(@Nullable Output<TablePointInTimeRecoveryGetArgs> pointInTimeRecovery) {
-            this.pointInTimeRecovery = pointInTimeRecovery;
+            $.pointInTimeRecovery = pointInTimeRecovery;
             return this;
         }
-        public Builder pointInTimeRecovery(@Nullable TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
-            this.pointInTimeRecovery = Codegen.ofNullable(pointInTimeRecovery);
-            return this;
+
+        public Builder pointInTimeRecovery(TablePointInTimeRecoveryGetArgs pointInTimeRecovery) {
+            return pointInTimeRecovery(Output.of(pointInTimeRecovery));
         }
+
         public Builder rangeKey(@Nullable Output<String> rangeKey) {
-            this.rangeKey = rangeKey;
+            $.rangeKey = rangeKey;
             return this;
         }
-        public Builder rangeKey(@Nullable String rangeKey) {
-            this.rangeKey = Codegen.ofNullable(rangeKey);
-            return this;
+
+        public Builder rangeKey(String rangeKey) {
+            return rangeKey(Output.of(rangeKey));
         }
+
         public Builder readCapacity(@Nullable Output<Integer> readCapacity) {
-            this.readCapacity = readCapacity;
+            $.readCapacity = readCapacity;
             return this;
         }
-        public Builder readCapacity(@Nullable Integer readCapacity) {
-            this.readCapacity = Codegen.ofNullable(readCapacity);
-            return this;
+
+        public Builder readCapacity(Integer readCapacity) {
+            return readCapacity(Output.of(readCapacity));
         }
+
         public Builder replicas(@Nullable Output<List<TableReplicaGetArgs>> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable List<TableReplicaGetArgs> replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(List<TableReplicaGetArgs> replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder replicas(TableReplicaGetArgs... replicas) {
             return replicas(List.of(replicas));
         }
+
         public Builder restoreDateTime(@Nullable Output<String> restoreDateTime) {
-            this.restoreDateTime = restoreDateTime;
+            $.restoreDateTime = restoreDateTime;
             return this;
         }
-        public Builder restoreDateTime(@Nullable String restoreDateTime) {
-            this.restoreDateTime = Codegen.ofNullable(restoreDateTime);
-            return this;
+
+        public Builder restoreDateTime(String restoreDateTime) {
+            return restoreDateTime(Output.of(restoreDateTime));
         }
+
         public Builder restoreSourceName(@Nullable Output<String> restoreSourceName) {
-            this.restoreSourceName = restoreSourceName;
+            $.restoreSourceName = restoreSourceName;
             return this;
         }
-        public Builder restoreSourceName(@Nullable String restoreSourceName) {
-            this.restoreSourceName = Codegen.ofNullable(restoreSourceName);
-            return this;
+
+        public Builder restoreSourceName(String restoreSourceName) {
+            return restoreSourceName(Output.of(restoreSourceName));
         }
+
         public Builder restoreToLatestTime(@Nullable Output<Boolean> restoreToLatestTime) {
-            this.restoreToLatestTime = restoreToLatestTime;
+            $.restoreToLatestTime = restoreToLatestTime;
             return this;
         }
-        public Builder restoreToLatestTime(@Nullable Boolean restoreToLatestTime) {
-            this.restoreToLatestTime = Codegen.ofNullable(restoreToLatestTime);
-            return this;
+
+        public Builder restoreToLatestTime(Boolean restoreToLatestTime) {
+            return restoreToLatestTime(Output.of(restoreToLatestTime));
         }
+
         public Builder serverSideEncryption(@Nullable Output<TableServerSideEncryptionGetArgs> serverSideEncryption) {
-            this.serverSideEncryption = serverSideEncryption;
+            $.serverSideEncryption = serverSideEncryption;
             return this;
         }
-        public Builder serverSideEncryption(@Nullable TableServerSideEncryptionGetArgs serverSideEncryption) {
-            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
-            return this;
+
+        public Builder serverSideEncryption(TableServerSideEncryptionGetArgs serverSideEncryption) {
+            return serverSideEncryption(Output.of(serverSideEncryption));
         }
+
         public Builder streamArn(@Nullable Output<String> streamArn) {
-            this.streamArn = streamArn;
+            $.streamArn = streamArn;
             return this;
         }
-        public Builder streamArn(@Nullable String streamArn) {
-            this.streamArn = Codegen.ofNullable(streamArn);
-            return this;
+
+        public Builder streamArn(String streamArn) {
+            return streamArn(Output.of(streamArn));
         }
+
         public Builder streamEnabled(@Nullable Output<Boolean> streamEnabled) {
-            this.streamEnabled = streamEnabled;
+            $.streamEnabled = streamEnabled;
             return this;
         }
-        public Builder streamEnabled(@Nullable Boolean streamEnabled) {
-            this.streamEnabled = Codegen.ofNullable(streamEnabled);
-            return this;
+
+        public Builder streamEnabled(Boolean streamEnabled) {
+            return streamEnabled(Output.of(streamEnabled));
         }
+
         public Builder streamLabel(@Nullable Output<String> streamLabel) {
-            this.streamLabel = streamLabel;
+            $.streamLabel = streamLabel;
             return this;
         }
-        public Builder streamLabel(@Nullable String streamLabel) {
-            this.streamLabel = Codegen.ofNullable(streamLabel);
-            return this;
+
+        public Builder streamLabel(String streamLabel) {
+            return streamLabel(Output.of(streamLabel));
         }
+
         public Builder streamViewType(@Nullable Output<String> streamViewType) {
-            this.streamViewType = streamViewType;
+            $.streamViewType = streamViewType;
             return this;
         }
-        public Builder streamViewType(@Nullable String streamViewType) {
-            this.streamViewType = Codegen.ofNullable(streamViewType);
-            return this;
+
+        public Builder streamViewType(String streamViewType) {
+            return streamViewType(Output.of(streamViewType));
         }
+
         public Builder tableClass(@Nullable Output<String> tableClass) {
-            this.tableClass = tableClass;
+            $.tableClass = tableClass;
             return this;
         }
-        public Builder tableClass(@Nullable String tableClass) {
-            this.tableClass = Codegen.ofNullable(tableClass);
-            return this;
+
+        public Builder tableClass(String tableClass) {
+            return tableClass(Output.of(tableClass));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder ttl(@Nullable Output<TableTtlGetArgs> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable TableTtlGetArgs ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(TableTtlGetArgs ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder writeCapacity(@Nullable Output<Integer> writeCapacity) {
-            this.writeCapacity = writeCapacity;
+            $.writeCapacity = writeCapacity;
             return this;
         }
-        public Builder writeCapacity(@Nullable Integer writeCapacity) {
-            this.writeCapacity = Codegen.ofNullable(writeCapacity);
-            return this;
-        }        public TableState build() {
-            return new TableState(arn, attributes, billingMode, globalSecondaryIndexes, hashKey, localSecondaryIndexes, name, pointInTimeRecovery, rangeKey, readCapacity, replicas, restoreDateTime, restoreSourceName, restoreToLatestTime, serverSideEncryption, streamArn, streamEnabled, streamLabel, streamViewType, tableClass, tags, tagsAll, ttl, writeCapacity);
+
+        public Builder writeCapacity(Integer writeCapacity) {
+            return writeCapacity(Output.of(writeCapacity));
+        }
+
+        public TableState build() {
+            return $;
         }
     }
+
 }

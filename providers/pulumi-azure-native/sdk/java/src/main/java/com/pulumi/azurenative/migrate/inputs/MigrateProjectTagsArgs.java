@@ -5,9 +5,9 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class MigrateProjectTagsArgs extends com.pulumi.resources.ResourceA
     public static final MigrateProjectTagsArgs Empty = new MigrateProjectTagsArgs();
 
     @Import(name="additionalProperties")
-      private final @Nullable Output<String> additionalProperties;
+    private @Nullable Output<String> additionalProperties;
 
-    public Output<String> additionalProperties() {
-        return this.additionalProperties == null ? Codegen.empty() : this.additionalProperties;
+    public Optional<Output<String>> additionalProperties() {
+        return Optional.ofNullable(this.additionalProperties);
     }
 
-    public MigrateProjectTagsArgs(@Nullable Output<String> additionalProperties) {
-        this.additionalProperties = additionalProperties;
-    }
+    private MigrateProjectTagsArgs() {}
 
-    private MigrateProjectTagsArgs() {
-        this.additionalProperties = Codegen.empty();
+    private MigrateProjectTagsArgs(MigrateProjectTagsArgs $) {
+        this.additionalProperties = $.additionalProperties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MigrateProjectTagsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> additionalProperties;
+        private MigrateProjectTagsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MigrateProjectTagsArgs();
         }
 
         public Builder(MigrateProjectTagsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalProperties = defaults.additionalProperties;
+            $ = new MigrateProjectTagsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalProperties(@Nullable Output<String> additionalProperties) {
-            this.additionalProperties = additionalProperties;
+            $.additionalProperties = additionalProperties;
             return this;
         }
-        public Builder additionalProperties(@Nullable String additionalProperties) {
-            this.additionalProperties = Codegen.ofNullable(additionalProperties);
-            return this;
-        }        public MigrateProjectTagsArgs build() {
-            return new MigrateProjectTagsArgs(additionalProperties);
+
+        public Builder additionalProperties(String additionalProperties) {
+            return additionalProperties(Output.of(additionalProperties));
+        }
+
+        public MigrateProjectTagsArgs build() {
+            return $;
         }
     }
+
 }

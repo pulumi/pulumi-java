@@ -5,9 +5,9 @@ package com.pulumi.aws.apigateway.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DocumentationPartLocationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<String> method;
+    private @Nullable Output<String> method;
 
-    public Output<String> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<String>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class DocumentationPartLocationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class DocumentationPartLocationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class DocumentationPartLocationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="statusCode")
-      private final @Nullable Output<String> statusCode;
+    private @Nullable Output<String> statusCode;
 
-    public Output<String> statusCode() {
-        return this.statusCode == null ? Codegen.empty() : this.statusCode;
+    public Optional<Output<String>> statusCode() {
+        return Optional.ofNullable(this.statusCode);
     }
 
     /**
@@ -64,102 +64,89 @@ public final class DocumentationPartLocationGetArgs extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public DocumentationPartLocationGetArgs(
-        @Nullable Output<String> method,
-        @Nullable Output<String> name,
-        @Nullable Output<String> path,
-        @Nullable Output<String> statusCode,
-        Output<String> type) {
-        this.method = method;
-        this.name = name;
-        this.path = path;
-        this.statusCode = statusCode;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DocumentationPartLocationGetArgs() {}
 
-    private DocumentationPartLocationGetArgs() {
-        this.method = Codegen.empty();
-        this.name = Codegen.empty();
-        this.path = Codegen.empty();
-        this.statusCode = Codegen.empty();
-        this.type = Codegen.empty();
+    private DocumentationPartLocationGetArgs(DocumentationPartLocationGetArgs $) {
+        this.method = $.method;
+        this.name = $.name;
+        this.path = $.path;
+        this.statusCode = $.statusCode;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationPartLocationGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> method;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> statusCode;
-        private Output<String> type;
+        private DocumentationPartLocationGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationPartLocationGetArgs();
         }
 
         public Builder(DocumentationPartLocationGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.method = defaults.method;
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
-    	      this.statusCode = defaults.statusCode;
-    	      this.type = defaults.type;
+            $ = new DocumentationPartLocationGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder method(@Nullable Output<String> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable String method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(String method) {
+            return method(Output.of(method));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder statusCode(@Nullable Output<String> statusCode) {
-            this.statusCode = statusCode;
+            $.statusCode = statusCode;
             return this;
         }
-        public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Codegen.ofNullable(statusCode);
-            return this;
+
+        public Builder statusCode(String statusCode) {
+            return statusCode(Output.of(statusCode));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DocumentationPartLocationGetArgs build() {
-            return new DocumentationPartLocationGetArgs(method, name, path, statusCode, type);
+            return type(Output.of(type));
+        }
+
+        public DocumentationPartLocationGetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

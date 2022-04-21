@@ -5,7 +5,6 @@ package com.pulumi.gcp.certificateauthority.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,52 +19,53 @@ public final class CertificateTemplatePassthroughExtensionsAdditionalExtensionAr
      * 
      */
     @Import(name="objectIdPaths", required=true)
-      private final Output<List<Integer>> objectIdPaths;
+    private Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> objectIdPaths() {
         return this.objectIdPaths;
     }
 
-    public CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(Output<List<Integer>> objectIdPaths) {
-        this.objectIdPaths = Objects.requireNonNull(objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
-    }
+    private CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs() {}
 
-    private CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs() {
-        this.objectIdPaths = Codegen.empty();
+    private CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs $) {
+        this.objectIdPaths = $.objectIdPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<Integer>> objectIdPaths;
+        private CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs();
         }
 
         public Builder(CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.objectIdPaths = defaults.objectIdPaths;
+            $ = new CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder objectIdPaths(Output<List<Integer>> objectIdPaths) {
-            this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
+            $.objectIdPaths = objectIdPaths;
             return this;
         }
+
         public Builder objectIdPaths(List<Integer> objectIdPaths) {
-            this.objectIdPaths = Output.of(Objects.requireNonNull(objectIdPaths));
-            return this;
+            return objectIdPaths(Output.of(objectIdPaths));
         }
+
         public Builder objectIdPaths(Integer... objectIdPaths) {
             return objectIdPaths(List.of(objectIdPaths));
-        }        public CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs build() {
-            return new CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs(objectIdPaths);
+        }
+
+        public CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs build() {
+            $.objectIdPaths = Objects.requireNonNull($.objectIdPaths, "expected parameter 'objectIdPaths' to be non-null");
+            return $;
         }
     }
+
 }

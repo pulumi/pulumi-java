@@ -24,45 +24,45 @@ public final class ServiceTypeHealthPolicyResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="maxPercentUnhealthyServices")
-      private final @Nullable Integer maxPercentUnhealthyServices;
+    private @Nullable Integer maxPercentUnhealthyServices;
 
     public Optional<Integer> maxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyServices);
+        return Optional.ofNullable(this.maxPercentUnhealthyServices);
     }
 
-    public ServiceTypeHealthPolicyResponse(@Nullable Integer maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg(maxPercentUnhealthyServices).def(0).getNullable();
-    }
+    private ServiceTypeHealthPolicyResponse() {}
 
-    private ServiceTypeHealthPolicyResponse() {
-        this.maxPercentUnhealthyServices = null;
+    private ServiceTypeHealthPolicyResponse(ServiceTypeHealthPolicyResponse $) {
+        this.maxPercentUnhealthyServices = $.maxPercentUnhealthyServices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTypeHealthPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer maxPercentUnhealthyServices;
+        private ServiceTypeHealthPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTypeHealthPolicyResponse();
         }
 
         public Builder(ServiceTypeHealthPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
+            $ = new ServiceTypeHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
+            $.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
-        }        public ServiceTypeHealthPolicyResponse build() {
-            return new ServiceTypeHealthPolicyResponse(maxPercentUnhealthyServices);
+        }
+
+        public ServiceTypeHealthPolicyResponse build() {
+            $.maxPercentUnhealthyServices = Codegen.integerProp("maxPercentUnhealthyServices").arg($.maxPercentUnhealthyServices).def(0).getNullable();
+            return $;
         }
     }
+
 }

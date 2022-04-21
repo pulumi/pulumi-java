@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs exte
 
     public static final GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs Empty = new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs();
 
-    public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs();
         }
         public GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs build() {
-            return new GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecArgs();
+            return $;
         }
     }
+
 }

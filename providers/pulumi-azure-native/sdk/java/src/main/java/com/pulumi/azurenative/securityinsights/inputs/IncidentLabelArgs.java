@@ -5,7 +5,6 @@ package com.pulumi.azurenative.securityinsights.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class IncidentLabelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labelName", required=true)
-      private final Output<String> labelName;
+    private Output<String> labelName;
 
     public Output<String> labelName() {
         return this.labelName;
     }
 
-    public IncidentLabelArgs(Output<String> labelName) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-    }
+    private IncidentLabelArgs() {}
 
-    private IncidentLabelArgs() {
-        this.labelName = Codegen.empty();
+    private IncidentLabelArgs(IncidentLabelArgs $) {
+        this.labelName = $.labelName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentLabelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> labelName;
+        private IncidentLabelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentLabelArgs();
         }
 
         public Builder(IncidentLabelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
+            $ = new IncidentLabelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(Output<String> labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelName(String labelName) {
-            this.labelName = Output.of(Objects.requireNonNull(labelName));
-            return this;
-        }        public IncidentLabelArgs build() {
-            return new IncidentLabelArgs(labelName);
+            return labelName(Output.of(labelName));
+        }
+
+        public IncidentLabelArgs build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            return $;
         }
     }
+
 }

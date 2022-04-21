@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlSslConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname", required=true)
-      private final Output<String> hostname;
+    private Output<String> hostname;
 
     public Output<String> hostname() {
         return this.hostname;
@@ -37,7 +37,7 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -48,10 +48,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslConfig")
-      private final @Nullable Output<MysqlSslConfigArgs> sslConfig;
+    private @Nullable Output<MysqlSslConfigArgs> sslConfig;
 
-    public Output<MysqlSslConfigArgs> sslConfig() {
-        return this.sslConfig == null ? Codegen.empty() : this.sslConfig;
+    public Optional<Output<MysqlSslConfigArgs>> sslConfig() {
+        return Optional.ofNullable(this.sslConfig);
     }
 
     /**
@@ -70,102 +70,91 @@ public final class MysqlProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public MysqlProfileArgs(
-        Output<String> hostname,
-        Output<String> password,
-        @Nullable Output<Integer> port,
-        @Nullable Output<MysqlSslConfigArgs> sslConfig,
-        Output<String> username) {
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = port;
-        this.sslConfig = sslConfig;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MysqlProfileArgs() {}
 
-    private MysqlProfileArgs() {
-        this.hostname = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.sslConfig = Codegen.empty();
-        this.username = Codegen.empty();
+    private MysqlProfileArgs(MysqlProfileArgs $) {
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.sslConfig = $.sslConfig;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> hostname;
-        private Output<String> password;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<MysqlSslConfigArgs> sslConfig;
-        private Output<String> username;
+        private MysqlProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlProfileArgs();
         }
 
         public Builder(MysqlProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.sslConfig = defaults.sslConfig;
-    	      this.username = defaults.username;
+            $ = new MysqlProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(Output<String> hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Output.of(Objects.requireNonNull(hostname));
-            return this;
+            return hostname(Output.of(hostname));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder sslConfig(@Nullable Output<MysqlSslConfigArgs> sslConfig) {
-            this.sslConfig = sslConfig;
+            $.sslConfig = sslConfig;
             return this;
         }
-        public Builder sslConfig(@Nullable MysqlSslConfigArgs sslConfig) {
-            this.sslConfig = Codegen.ofNullable(sslConfig);
-            return this;
+
+        public Builder sslConfig(MysqlSslConfigArgs sslConfig) {
+            return sslConfig(Output.of(sslConfig));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public MysqlProfileArgs build() {
-            return new MysqlProfileArgs(hostname, password, port, sslConfig, username);
+            return username(Output.of(username));
+        }
+
+        public MysqlProfileArgs build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

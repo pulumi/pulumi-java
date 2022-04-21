@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cpuCfsQuota")
-      private final @Nullable Output<Boolean> cpuCfsQuota;
+    private @Nullable Output<Boolean> cpuCfsQuota;
 
-    public Output<Boolean> cpuCfsQuota() {
-        return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
+    public Optional<Output<Boolean>> cpuCfsQuota() {
+        return Optional.ofNullable(this.cpuCfsQuota);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cpuCfsQuotaPeriod")
-      private final @Nullable Output<String> cpuCfsQuotaPeriod;
+    private @Nullable Output<String> cpuCfsQuotaPeriod;
 
-    public Output<String> cpuCfsQuotaPeriod() {
-        return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
+    public Optional<Output<String>> cpuCfsQuotaPeriod() {
+        return Optional.ofNullable(this.cpuCfsQuotaPeriod);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class NodeKubeletConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="cpuManagerPolicy")
-      private final @Nullable Output<String> cpuManagerPolicy;
+    private @Nullable Output<String> cpuManagerPolicy;
 
-    public Output<String> cpuManagerPolicy() {
-        return this.cpuManagerPolicy == null ? Codegen.empty() : this.cpuManagerPolicy;
+    public Optional<Output<String>> cpuManagerPolicy() {
+        return Optional.ofNullable(this.cpuManagerPolicy);
     }
 
-    public NodeKubeletConfigArgs(
-        @Nullable Output<Boolean> cpuCfsQuota,
-        @Nullable Output<String> cpuCfsQuotaPeriod,
-        @Nullable Output<String> cpuManagerPolicy) {
-        this.cpuCfsQuota = cpuCfsQuota;
-        this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
-        this.cpuManagerPolicy = cpuManagerPolicy;
-    }
+    private NodeKubeletConfigArgs() {}
 
-    private NodeKubeletConfigArgs() {
-        this.cpuCfsQuota = Codegen.empty();
-        this.cpuCfsQuotaPeriod = Codegen.empty();
-        this.cpuManagerPolicy = Codegen.empty();
+    private NodeKubeletConfigArgs(NodeKubeletConfigArgs $) {
+        this.cpuCfsQuota = $.cpuCfsQuota;
+        this.cpuCfsQuotaPeriod = $.cpuCfsQuotaPeriod;
+        this.cpuManagerPolicy = $.cpuManagerPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeKubeletConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> cpuCfsQuota;
-        private @Nullable Output<String> cpuCfsQuotaPeriod;
-        private @Nullable Output<String> cpuManagerPolicy;
+        private NodeKubeletConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeKubeletConfigArgs();
         }
 
         public Builder(NodeKubeletConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuCfsQuota = defaults.cpuCfsQuota;
-    	      this.cpuCfsQuotaPeriod = defaults.cpuCfsQuotaPeriod;
-    	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
+            $ = new NodeKubeletConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
-            this.cpuCfsQuota = cpuCfsQuota;
+            $.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
-        public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = Codegen.ofNullable(cpuCfsQuota);
-            return this;
+
+        public Builder cpuCfsQuota(Boolean cpuCfsQuota) {
+            return cpuCfsQuota(Output.of(cpuCfsQuota));
         }
+
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
+            $.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
-        public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = Codegen.ofNullable(cpuCfsQuotaPeriod);
-            return this;
+
+        public Builder cpuCfsQuotaPeriod(String cpuCfsQuotaPeriod) {
+            return cpuCfsQuotaPeriod(Output.of(cpuCfsQuotaPeriod));
         }
+
         public Builder cpuManagerPolicy(@Nullable Output<String> cpuManagerPolicy) {
-            this.cpuManagerPolicy = cpuManagerPolicy;
+            $.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
-        public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
-            this.cpuManagerPolicy = Codegen.ofNullable(cpuManagerPolicy);
-            return this;
-        }        public NodeKubeletConfigArgs build() {
-            return new NodeKubeletConfigArgs(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
+
+        public Builder cpuManagerPolicy(String cpuManagerPolicy) {
+            return cpuManagerPolicy(Output.of(cpuManagerPolicy));
+        }
+
+        public NodeKubeletConfigArgs build() {
+            return $;
         }
     }
+
 }

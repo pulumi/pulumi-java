@@ -21,7 +21,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="oauthClientIdName", required=true)
-      private final String oauthClientIdName;
+    private String oauthClientIdName;
 
     public String oauthClientIdName() {
         return this.oauthClientIdName;
@@ -32,7 +32,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="oauthClientIdVersionName", required=true)
-      private final String oauthClientIdVersionName;
+    private String oauthClientIdVersionName;
 
     public String oauthClientIdVersionName() {
         return this.oauthClientIdVersionName;
@@ -43,7 +43,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="oauthSecretName", required=true)
-      private final String oauthSecretName;
+    private String oauthSecretName;
 
     public String oauthSecretName() {
         return this.oauthSecretName;
@@ -54,7 +54,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="oauthSecretVersionName", required=true)
-      private final String oauthSecretVersionName;
+    private String oauthSecretVersionName;
 
     public String oauthSecretVersionName() {
         return this.oauthSecretVersionName;
@@ -65,7 +65,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateKeyName", required=true)
-      private final String privateKeyName;
+    private String privateKeyName;
 
     public String privateKeyName() {
         return this.privateKeyName;
@@ -76,7 +76,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="privateKeyVersionName", required=true)
-      private final String privateKeyVersionName;
+    private String privateKeyVersionName;
 
     public String privateKeyVersionName() {
         return this.privateKeyVersionName;
@@ -87,7 +87,7 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="webhookSecretName", required=true)
-      private final String webhookSecretName;
+    private String webhookSecretName;
 
     public String webhookSecretName() {
         return this.webhookSecretName;
@@ -98,109 +98,94 @@ public final class GitHubEnterpriseSecretsResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="webhookSecretVersionName", required=true)
-      private final String webhookSecretVersionName;
+    private String webhookSecretVersionName;
 
     public String webhookSecretVersionName() {
         return this.webhookSecretVersionName;
     }
 
-    public GitHubEnterpriseSecretsResponse(
-        String oauthClientIdName,
-        String oauthClientIdVersionName,
-        String oauthSecretName,
-        String oauthSecretVersionName,
-        String privateKeyName,
-        String privateKeyVersionName,
-        String webhookSecretName,
-        String webhookSecretVersionName) {
-        this.oauthClientIdName = Objects.requireNonNull(oauthClientIdName, "expected parameter 'oauthClientIdName' to be non-null");
-        this.oauthClientIdVersionName = Objects.requireNonNull(oauthClientIdVersionName, "expected parameter 'oauthClientIdVersionName' to be non-null");
-        this.oauthSecretName = Objects.requireNonNull(oauthSecretName, "expected parameter 'oauthSecretName' to be non-null");
-        this.oauthSecretVersionName = Objects.requireNonNull(oauthSecretVersionName, "expected parameter 'oauthSecretVersionName' to be non-null");
-        this.privateKeyName = Objects.requireNonNull(privateKeyName, "expected parameter 'privateKeyName' to be non-null");
-        this.privateKeyVersionName = Objects.requireNonNull(privateKeyVersionName, "expected parameter 'privateKeyVersionName' to be non-null");
-        this.webhookSecretName = Objects.requireNonNull(webhookSecretName, "expected parameter 'webhookSecretName' to be non-null");
-        this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName, "expected parameter 'webhookSecretVersionName' to be non-null");
-    }
+    private GitHubEnterpriseSecretsResponse() {}
 
-    private GitHubEnterpriseSecretsResponse() {
-        this.oauthClientIdName = null;
-        this.oauthClientIdVersionName = null;
-        this.oauthSecretName = null;
-        this.oauthSecretVersionName = null;
-        this.privateKeyName = null;
-        this.privateKeyVersionName = null;
-        this.webhookSecretName = null;
-        this.webhookSecretVersionName = null;
+    private GitHubEnterpriseSecretsResponse(GitHubEnterpriseSecretsResponse $) {
+        this.oauthClientIdName = $.oauthClientIdName;
+        this.oauthClientIdVersionName = $.oauthClientIdVersionName;
+        this.oauthSecretName = $.oauthSecretName;
+        this.oauthSecretVersionName = $.oauthSecretVersionName;
+        this.privateKeyName = $.privateKeyName;
+        this.privateKeyVersionName = $.privateKeyVersionName;
+        this.webhookSecretName = $.webhookSecretName;
+        this.webhookSecretVersionName = $.webhookSecretVersionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitHubEnterpriseSecretsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String oauthClientIdName;
-        private String oauthClientIdVersionName;
-        private String oauthSecretName;
-        private String oauthSecretVersionName;
-        private String privateKeyName;
-        private String privateKeyVersionName;
-        private String webhookSecretName;
-        private String webhookSecretVersionName;
+        private GitHubEnterpriseSecretsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitHubEnterpriseSecretsResponse();
         }
 
         public Builder(GitHubEnterpriseSecretsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oauthClientIdName = defaults.oauthClientIdName;
-    	      this.oauthClientIdVersionName = defaults.oauthClientIdVersionName;
-    	      this.oauthSecretName = defaults.oauthSecretName;
-    	      this.oauthSecretVersionName = defaults.oauthSecretVersionName;
-    	      this.privateKeyName = defaults.privateKeyName;
-    	      this.privateKeyVersionName = defaults.privateKeyVersionName;
-    	      this.webhookSecretName = defaults.webhookSecretName;
-    	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
+            $ = new GitHubEnterpriseSecretsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oauthClientIdName(String oauthClientIdName) {
-            this.oauthClientIdName = Objects.requireNonNull(oauthClientIdName);
+            $.oauthClientIdName = oauthClientIdName;
             return this;
         }
+
         public Builder oauthClientIdVersionName(String oauthClientIdVersionName) {
-            this.oauthClientIdVersionName = Objects.requireNonNull(oauthClientIdVersionName);
+            $.oauthClientIdVersionName = oauthClientIdVersionName;
             return this;
         }
+
         public Builder oauthSecretName(String oauthSecretName) {
-            this.oauthSecretName = Objects.requireNonNull(oauthSecretName);
+            $.oauthSecretName = oauthSecretName;
             return this;
         }
+
         public Builder oauthSecretVersionName(String oauthSecretVersionName) {
-            this.oauthSecretVersionName = Objects.requireNonNull(oauthSecretVersionName);
+            $.oauthSecretVersionName = oauthSecretVersionName;
             return this;
         }
+
         public Builder privateKeyName(String privateKeyName) {
-            this.privateKeyName = Objects.requireNonNull(privateKeyName);
+            $.privateKeyName = privateKeyName;
             return this;
         }
+
         public Builder privateKeyVersionName(String privateKeyVersionName) {
-            this.privateKeyVersionName = Objects.requireNonNull(privateKeyVersionName);
+            $.privateKeyVersionName = privateKeyVersionName;
             return this;
         }
+
         public Builder webhookSecretName(String webhookSecretName) {
-            this.webhookSecretName = Objects.requireNonNull(webhookSecretName);
+            $.webhookSecretName = webhookSecretName;
             return this;
         }
+
         public Builder webhookSecretVersionName(String webhookSecretVersionName) {
-            this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
+            $.webhookSecretVersionName = webhookSecretVersionName;
             return this;
-        }        public GitHubEnterpriseSecretsResponse build() {
-            return new GitHubEnterpriseSecretsResponse(oauthClientIdName, oauthClientIdVersionName, oauthSecretName, oauthSecretVersionName, privateKeyName, privateKeyVersionName, webhookSecretName, webhookSecretVersionName);
+        }
+
+        public GitHubEnterpriseSecretsResponse build() {
+            $.oauthClientIdName = Objects.requireNonNull($.oauthClientIdName, "expected parameter 'oauthClientIdName' to be non-null");
+            $.oauthClientIdVersionName = Objects.requireNonNull($.oauthClientIdVersionName, "expected parameter 'oauthClientIdVersionName' to be non-null");
+            $.oauthSecretName = Objects.requireNonNull($.oauthSecretName, "expected parameter 'oauthSecretName' to be non-null");
+            $.oauthSecretVersionName = Objects.requireNonNull($.oauthSecretVersionName, "expected parameter 'oauthSecretVersionName' to be non-null");
+            $.privateKeyName = Objects.requireNonNull($.privateKeyName, "expected parameter 'privateKeyName' to be non-null");
+            $.privateKeyVersionName = Objects.requireNonNull($.privateKeyVersionName, "expected parameter 'privateKeyVersionName' to be non-null");
+            $.webhookSecretName = Objects.requireNonNull($.webhookSecretName, "expected parameter 'webhookSecretName' to be non-null");
+            $.webhookSecretVersionName = Objects.requireNonNull($.webhookSecretVersionName, "expected parameter 'webhookSecretVersionName' to be non-null");
+            return $;
         }
     }
+
 }

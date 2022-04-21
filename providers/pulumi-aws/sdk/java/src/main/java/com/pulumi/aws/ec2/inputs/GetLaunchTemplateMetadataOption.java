@@ -18,7 +18,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
      * 
      */
     @Import(name="httpEndpoint", required=true)
-      private final String httpEndpoint;
+    private String httpEndpoint;
 
     public String httpEndpoint() {
         return this.httpEndpoint;
@@ -29,7 +29,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
      * 
      */
     @Import(name="httpProtocolIpv6", required=true)
-      private final String httpProtocolIpv6;
+    private String httpProtocolIpv6;
 
     public String httpProtocolIpv6() {
         return this.httpProtocolIpv6;
@@ -40,7 +40,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
      * 
      */
     @Import(name="httpPutResponseHopLimit", required=true)
-      private final Integer httpPutResponseHopLimit;
+    private Integer httpPutResponseHopLimit;
 
     public Integer httpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
@@ -51,7 +51,7 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
      * 
      */
     @Import(name="httpTokens", required=true)
-      private final String httpTokens;
+    private String httpTokens;
 
     public String httpTokens() {
         return this.httpTokens;
@@ -62,82 +62,73 @@ public final class GetLaunchTemplateMetadataOption extends com.pulumi.resources.
      * 
      */
     @Import(name="instanceMetadataTags", required=true)
-      private final String instanceMetadataTags;
+    private String instanceMetadataTags;
 
     public String instanceMetadataTags() {
         return this.instanceMetadataTags;
     }
 
-    public GetLaunchTemplateMetadataOption(
-        String httpEndpoint,
-        String httpProtocolIpv6,
-        Integer httpPutResponseHopLimit,
-        String httpTokens,
-        String instanceMetadataTags) {
-        this.httpEndpoint = Objects.requireNonNull(httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
-        this.httpProtocolIpv6 = Objects.requireNonNull(httpProtocolIpv6, "expected parameter 'httpProtocolIpv6' to be non-null");
-        this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
-        this.httpTokens = Objects.requireNonNull(httpTokens, "expected parameter 'httpTokens' to be non-null");
-        this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags, "expected parameter 'instanceMetadataTags' to be non-null");
-    }
+    private GetLaunchTemplateMetadataOption() {}
 
-    private GetLaunchTemplateMetadataOption() {
-        this.httpEndpoint = null;
-        this.httpProtocolIpv6 = null;
-        this.httpPutResponseHopLimit = null;
-        this.httpTokens = null;
-        this.instanceMetadataTags = null;
+    private GetLaunchTemplateMetadataOption(GetLaunchTemplateMetadataOption $) {
+        this.httpEndpoint = $.httpEndpoint;
+        this.httpProtocolIpv6 = $.httpProtocolIpv6;
+        this.httpPutResponseHopLimit = $.httpPutResponseHopLimit;
+        this.httpTokens = $.httpTokens;
+        this.instanceMetadataTags = $.instanceMetadataTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLaunchTemplateMetadataOption defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpEndpoint;
-        private String httpProtocolIpv6;
-        private Integer httpPutResponseHopLimit;
-        private String httpTokens;
-        private String instanceMetadataTags;
+        private GetLaunchTemplateMetadataOption $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLaunchTemplateMetadataOption();
         }
 
         public Builder(GetLaunchTemplateMetadataOption defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpEndpoint = defaults.httpEndpoint;
-    	      this.httpProtocolIpv6 = defaults.httpProtocolIpv6;
-    	      this.httpPutResponseHopLimit = defaults.httpPutResponseHopLimit;
-    	      this.httpTokens = defaults.httpTokens;
-    	      this.instanceMetadataTags = defaults.instanceMetadataTags;
+            $ = new GetLaunchTemplateMetadataOption(Objects.requireNonNull(defaults));
         }
 
         public Builder httpEndpoint(String httpEndpoint) {
-            this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
+            $.httpEndpoint = httpEndpoint;
             return this;
         }
+
         public Builder httpProtocolIpv6(String httpProtocolIpv6) {
-            this.httpProtocolIpv6 = Objects.requireNonNull(httpProtocolIpv6);
+            $.httpProtocolIpv6 = httpProtocolIpv6;
             return this;
         }
+
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
-            this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
+            $.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
+
         public Builder httpTokens(String httpTokens) {
-            this.httpTokens = Objects.requireNonNull(httpTokens);
+            $.httpTokens = httpTokens;
             return this;
         }
+
         public Builder instanceMetadataTags(String instanceMetadataTags) {
-            this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
+            $.instanceMetadataTags = instanceMetadataTags;
             return this;
-        }        public GetLaunchTemplateMetadataOption build() {
-            return new GetLaunchTemplateMetadataOption(httpEndpoint, httpProtocolIpv6, httpPutResponseHopLimit, httpTokens, instanceMetadataTags);
+        }
+
+        public GetLaunchTemplateMetadataOption build() {
+            $.httpEndpoint = Objects.requireNonNull($.httpEndpoint, "expected parameter 'httpEndpoint' to be non-null");
+            $.httpProtocolIpv6 = Objects.requireNonNull($.httpProtocolIpv6, "expected parameter 'httpProtocolIpv6' to be non-null");
+            $.httpPutResponseHopLimit = Objects.requireNonNull($.httpPutResponseHopLimit, "expected parameter 'httpPutResponseHopLimit' to be non-null");
+            $.httpTokens = Objects.requireNonNull($.httpTokens, "expected parameter 'httpTokens' to be non-null");
+            $.instanceMetadataTags = Objects.requireNonNull($.instanceMetadataTags, "expected parameter 'instanceMetadataTags' to be non-null");
+            return $;
         }
     }
+
 }

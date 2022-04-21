@@ -23,28 +23,28 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createColumn")
-      private final @Nullable Boolean createColumn;
+    private @Nullable Boolean createColumn;
 
     public Optional<Boolean> createColumn() {
-        return this.createColumn == null ? Optional.empty() : Optional.ofNullable(this.createColumn);
+        return Optional.ofNullable(this.createColumn);
     }
 
     @Import(name="datetimeOptions")
-      private final @Nullable DatasetDatetimeOptions datetimeOptions;
+    private @Nullable DatasetDatetimeOptions datetimeOptions;
 
     public Optional<DatasetDatetimeOptions> datetimeOptions() {
-        return this.datetimeOptions == null ? Optional.empty() : Optional.ofNullable(this.datetimeOptions);
+        return Optional.ofNullable(this.datetimeOptions);
     }
 
     @Import(name="filter")
-      private final @Nullable DatasetFilterExpression filter;
+    private @Nullable DatasetFilterExpression filter;
 
     public Optional<DatasetFilterExpression> filter() {
-        return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
+        return Optional.ofNullable(this.filter);
     }
 
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -55,82 +55,70 @@ public final class DatasetParameter extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final DatasetParameterType type;
+    private DatasetParameterType type;
 
     public DatasetParameterType type() {
         return this.type;
     }
 
-    public DatasetParameter(
-        @Nullable Boolean createColumn,
-        @Nullable DatasetDatetimeOptions datetimeOptions,
-        @Nullable DatasetFilterExpression filter,
-        String name,
-        DatasetParameterType type) {
-        this.createColumn = createColumn;
-        this.datetimeOptions = datetimeOptions;
-        this.filter = filter;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatasetParameter() {}
 
-    private DatasetParameter() {
-        this.createColumn = null;
-        this.datetimeOptions = null;
-        this.filter = null;
-        this.name = null;
-        this.type = null;
+    private DatasetParameter(DatasetParameter $) {
+        this.createColumn = $.createColumn;
+        this.datetimeOptions = $.datetimeOptions;
+        this.filter = $.filter;
+        this.name = $.name;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetParameter defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean createColumn;
-        private @Nullable DatasetDatetimeOptions datetimeOptions;
-        private @Nullable DatasetFilterExpression filter;
-        private String name;
-        private DatasetParameterType type;
+        private DatasetParameter $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetParameter();
         }
 
         public Builder(DatasetParameter defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createColumn = defaults.createColumn;
-    	      this.datetimeOptions = defaults.datetimeOptions;
-    	      this.filter = defaults.filter;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
+            $ = new DatasetParameter(Objects.requireNonNull(defaults));
         }
 
         public Builder createColumn(@Nullable Boolean createColumn) {
-            this.createColumn = createColumn;
+            $.createColumn = createColumn;
             return this;
         }
+
         public Builder datetimeOptions(@Nullable DatasetDatetimeOptions datetimeOptions) {
-            this.datetimeOptions = datetimeOptions;
+            $.datetimeOptions = datetimeOptions;
             return this;
         }
+
         public Builder filter(@Nullable DatasetFilterExpression filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(DatasetParameterType type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DatasetParameter build() {
-            return new DatasetParameter(createColumn, datetimeOptions, filter, name, type);
+        }
+
+        public DatasetParameter build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

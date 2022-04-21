@@ -5,9 +5,9 @@ package com.pulumi.awsnative.certificatemanager.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class AccountExpiryEventsConfigurationArgs extends com.pulumi.resou
     public static final AccountExpiryEventsConfigurationArgs Empty = new AccountExpiryEventsConfigurationArgs();
 
     @Import(name="daysBeforeExpiry")
-      private final @Nullable Output<Integer> daysBeforeExpiry;
+    private @Nullable Output<Integer> daysBeforeExpiry;
 
-    public Output<Integer> daysBeforeExpiry() {
-        return this.daysBeforeExpiry == null ? Codegen.empty() : this.daysBeforeExpiry;
+    public Optional<Output<Integer>> daysBeforeExpiry() {
+        return Optional.ofNullable(this.daysBeforeExpiry);
     }
 
-    public AccountExpiryEventsConfigurationArgs(@Nullable Output<Integer> daysBeforeExpiry) {
-        this.daysBeforeExpiry = daysBeforeExpiry;
-    }
+    private AccountExpiryEventsConfigurationArgs() {}
 
-    private AccountExpiryEventsConfigurationArgs() {
-        this.daysBeforeExpiry = Codegen.empty();
+    private AccountExpiryEventsConfigurationArgs(AccountExpiryEventsConfigurationArgs $) {
+        this.daysBeforeExpiry = $.daysBeforeExpiry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccountExpiryEventsConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> daysBeforeExpiry;
+        private AccountExpiryEventsConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccountExpiryEventsConfigurationArgs();
         }
 
         public Builder(AccountExpiryEventsConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.daysBeforeExpiry = defaults.daysBeforeExpiry;
+            $ = new AccountExpiryEventsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder daysBeforeExpiry(@Nullable Output<Integer> daysBeforeExpiry) {
-            this.daysBeforeExpiry = daysBeforeExpiry;
+            $.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }
-        public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
-            this.daysBeforeExpiry = Codegen.ofNullable(daysBeforeExpiry);
-            return this;
-        }        public AccountExpiryEventsConfigurationArgs build() {
-            return new AccountExpiryEventsConfigurationArgs(daysBeforeExpiry);
+
+        public Builder daysBeforeExpiry(Integer daysBeforeExpiry) {
+            return daysBeforeExpiry(Output.of(daysBeforeExpiry));
+        }
+
+        public AccountExpiryEventsConfigurationArgs build() {
+            return $;
         }
     }
+
 }

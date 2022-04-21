@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsublite_v1.inputs.CapacityArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="capacity")
-      private final @Nullable Output<CapacityArgs> capacity;
+    private @Nullable Output<CapacityArgs> capacity;
 
-    public Output<CapacityArgs> capacity() {
-        return this.capacity == null ? Codegen.empty() : this.capacity;
+    public Optional<Output<CapacityArgs>> capacity() {
+        return Optional.ofNullable(this.capacity);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PartitionConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<String> count;
+    private @Nullable Output<String> count;
 
-    public Output<String> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<String>> count() {
+        return Optional.ofNullable(this.count);
     }
 
-    public PartitionConfigArgs(
-        @Nullable Output<CapacityArgs> capacity,
-        @Nullable Output<String> count) {
-        this.capacity = capacity;
-        this.count = count;
-    }
+    private PartitionConfigArgs() {}
 
-    private PartitionConfigArgs() {
-        this.capacity = Codegen.empty();
-        this.count = Codegen.empty();
+    private PartitionConfigArgs(PartitionConfigArgs $) {
+        this.capacity = $.capacity;
+        this.count = $.count;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PartitionConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CapacityArgs> capacity;
-        private @Nullable Output<String> count;
+        private PartitionConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PartitionConfigArgs();
         }
 
         public Builder(PartitionConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.capacity = defaults.capacity;
-    	      this.count = defaults.count;
+            $ = new PartitionConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder capacity(@Nullable Output<CapacityArgs> capacity) {
-            this.capacity = capacity;
+            $.capacity = capacity;
             return this;
         }
-        public Builder capacity(@Nullable CapacityArgs capacity) {
-            this.capacity = Codegen.ofNullable(capacity);
-            return this;
+
+        public Builder capacity(CapacityArgs capacity) {
+            return capacity(Output.of(capacity));
         }
+
         public Builder count(@Nullable Output<String> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable String count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
-        }        public PartitionConfigArgs build() {
-            return new PartitionConfigArgs(capacity, count);
+
+        public Builder count(String count) {
+            return count(Output.of(count));
+        }
+
+        public PartitionConfigArgs build() {
+            return $;
         }
     }
+
 }

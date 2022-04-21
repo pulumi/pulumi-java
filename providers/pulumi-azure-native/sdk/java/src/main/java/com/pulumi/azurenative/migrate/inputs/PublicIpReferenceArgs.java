@@ -5,7 +5,6 @@ package com.pulumi.azurenative.migrate.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class PublicIpReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceArmResourceId", required=true)
-      private final Output<String> sourceArmResourceId;
+    private Output<String> sourceArmResourceId;
 
     public Output<String> sourceArmResourceId() {
         return this.sourceArmResourceId;
     }
 
-    public PublicIpReferenceArgs(Output<String> sourceArmResourceId) {
-        this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
-    }
+    private PublicIpReferenceArgs() {}
 
-    private PublicIpReferenceArgs() {
-        this.sourceArmResourceId = Codegen.empty();
+    private PublicIpReferenceArgs(PublicIpReferenceArgs $) {
+        this.sourceArmResourceId = $.sourceArmResourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicIpReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> sourceArmResourceId;
+        private PublicIpReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicIpReferenceArgs();
         }
 
         public Builder(PublicIpReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceArmResourceId = defaults.sourceArmResourceId;
+            $ = new PublicIpReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceArmResourceId(Output<String> sourceArmResourceId) {
-            this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
+            $.sourceArmResourceId = sourceArmResourceId;
             return this;
         }
+
         public Builder sourceArmResourceId(String sourceArmResourceId) {
-            this.sourceArmResourceId = Output.of(Objects.requireNonNull(sourceArmResourceId));
-            return this;
-        }        public PublicIpReferenceArgs build() {
-            return new PublicIpReferenceArgs(sourceArmResourceId);
+            return sourceArmResourceId(Output.of(sourceArmResourceId));
+        }
+
+        public PublicIpReferenceArgs build() {
+            $.sourceArmResourceId = Objects.requireNonNull($.sourceArmResourceId, "expected parameter 'sourceArmResourceId' to be non-null");
+            return $;
         }
     }
+
 }

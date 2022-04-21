@@ -19,10 +19,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="datastoreId")
-      private final @Nullable String datastoreId;
+    private @Nullable String datastoreId;
 
     public Optional<String> datastoreId() {
-        return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
+        return Optional.ofNullable(this.datastoreId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="mode")
-      private final @Nullable String mode;
+    private @Nullable String mode;
 
     public Optional<String> mode() {
-        return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pathOnCompute")
-      private final @Nullable String pathOnCompute;
+    private @Nullable String pathOnCompute;
 
     public Optional<String> pathOnCompute() {
-        return this.pathOnCompute == null ? Optional.empty() : Optional.ofNullable(this.pathOnCompute);
+        return Optional.ofNullable(this.pathOnCompute);
     }
 
     /**
@@ -52,73 +52,62 @@ public final class OutputDataBindingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pathOnDatastore")
-      private final @Nullable String pathOnDatastore;
+    private @Nullable String pathOnDatastore;
 
     public Optional<String> pathOnDatastore() {
-        return this.pathOnDatastore == null ? Optional.empty() : Optional.ofNullable(this.pathOnDatastore);
+        return Optional.ofNullable(this.pathOnDatastore);
     }
 
-    public OutputDataBindingResponse(
-        @Nullable String datastoreId,
-        @Nullable String mode,
-        @Nullable String pathOnCompute,
-        @Nullable String pathOnDatastore) {
-        this.datastoreId = datastoreId;
-        this.mode = mode;
-        this.pathOnCompute = pathOnCompute;
-        this.pathOnDatastore = pathOnDatastore;
-    }
+    private OutputDataBindingResponse() {}
 
-    private OutputDataBindingResponse() {
-        this.datastoreId = null;
-        this.mode = null;
-        this.pathOnCompute = null;
-        this.pathOnDatastore = null;
+    private OutputDataBindingResponse(OutputDataBindingResponse $) {
+        this.datastoreId = $.datastoreId;
+        this.mode = $.mode;
+        this.pathOnCompute = $.pathOnCompute;
+        this.pathOnDatastore = $.pathOnDatastore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OutputDataBindingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String datastoreId;
-        private @Nullable String mode;
-        private @Nullable String pathOnCompute;
-        private @Nullable String pathOnDatastore;
+        private OutputDataBindingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OutputDataBindingResponse();
         }
 
         public Builder(OutputDataBindingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datastoreId = defaults.datastoreId;
-    	      this.mode = defaults.mode;
-    	      this.pathOnCompute = defaults.pathOnCompute;
-    	      this.pathOnDatastore = defaults.pathOnDatastore;
+            $ = new OutputDataBindingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = datastoreId;
+            $.datastoreId = datastoreId;
             return this;
         }
+
         public Builder mode(@Nullable String mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
+
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = pathOnCompute;
+            $.pathOnCompute = pathOnCompute;
             return this;
         }
+
         public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
-            this.pathOnDatastore = pathOnDatastore;
+            $.pathOnDatastore = pathOnDatastore;
             return this;
-        }        public OutputDataBindingResponse build() {
-            return new OutputDataBindingResponse(datastoreId, mode, pathOnCompute, pathOnDatastore);
+        }
+
+        public OutputDataBindingResponse build() {
+            return $;
         }
     }
+
 }

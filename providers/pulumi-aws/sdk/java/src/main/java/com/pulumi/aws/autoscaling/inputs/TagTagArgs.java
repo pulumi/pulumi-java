@@ -5,7 +5,6 @@ package com.pulumi.aws.autoscaling.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final Output<String> key;
+    private Output<String> key;
 
     public Output<String> key() {
         return this.key;
@@ -31,7 +30,7 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="propagateAtLaunch", required=true)
-      private final Output<Boolean> propagateAtLaunch;
+    private Output<Boolean> propagateAtLaunch;
 
     public Output<Boolean> propagateAtLaunch() {
         return this.propagateAtLaunch;
@@ -42,76 +41,71 @@ public final class TagTagArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Output<String> value;
+    private Output<String> value;
 
     public Output<String> value() {
         return this.value;
     }
 
-    public TagTagArgs(
-        Output<String> key,
-        Output<Boolean> propagateAtLaunch,
-        Output<String> value) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch, "expected parameter 'propagateAtLaunch' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TagTagArgs() {}
 
-    private TagTagArgs() {
-        this.key = Codegen.empty();
-        this.propagateAtLaunch = Codegen.empty();
-        this.value = Codegen.empty();
+    private TagTagArgs(TagTagArgs $) {
+        this.key = $.key;
+        this.propagateAtLaunch = $.propagateAtLaunch;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagTagArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> key;
-        private Output<Boolean> propagateAtLaunch;
-        private Output<String> value;
+        private TagTagArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagTagArgs();
         }
 
         public Builder(TagTagArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.propagateAtLaunch = defaults.propagateAtLaunch;
-    	      this.value = defaults.value;
+            $ = new TagTagArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(Output<String> key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Output.of(Objects.requireNonNull(key));
-            return this;
+            return key(Output.of(key));
         }
+
         public Builder propagateAtLaunch(Output<Boolean> propagateAtLaunch) {
-            this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
+            $.propagateAtLaunch = propagateAtLaunch;
             return this;
         }
+
         public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
-            this.propagateAtLaunch = Output.of(Objects.requireNonNull(propagateAtLaunch));
-            return this;
+            return propagateAtLaunch(Output.of(propagateAtLaunch));
         }
+
         public Builder value(Output<String> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Output.of(Objects.requireNonNull(value));
-            return this;
-        }        public TagTagArgs build() {
-            return new TagTagArgs(key, propagateAtLaunch, value);
+            return value(Output.of(value));
+        }
+
+        public TagTagArgs build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.propagateAtLaunch = Objects.requireNonNull($.propagateAtLaunch, "expected parameter 'propagateAtLaunch' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

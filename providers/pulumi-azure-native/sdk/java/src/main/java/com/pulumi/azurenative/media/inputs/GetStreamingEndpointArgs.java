@@ -17,7 +17,7 @@ public final class GetStreamingEndpointArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetStreamingEndpointArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class GetStreamingEndpointArgs extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="streamingEndpointName", required=true)
-      private final String streamingEndpointName;
+    private String streamingEndpointName;
 
     public String streamingEndpointName() {
         return this.streamingEndpointName;
     }
 
-    public GetStreamingEndpointArgs(
-        String accountName,
-        String resourceGroupName,
-        String streamingEndpointName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.streamingEndpointName = Objects.requireNonNull(streamingEndpointName, "expected parameter 'streamingEndpointName' to be non-null");
-    }
+    private GetStreamingEndpointArgs() {}
 
-    private GetStreamingEndpointArgs() {
-        this.accountName = null;
-        this.resourceGroupName = null;
-        this.streamingEndpointName = null;
+    private GetStreamingEndpointArgs(GetStreamingEndpointArgs $) {
+        this.accountName = $.accountName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.streamingEndpointName = $.streamingEndpointName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamingEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private String resourceGroupName;
-        private String streamingEndpointName;
+        private GetStreamingEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamingEndpointArgs();
         }
 
         public Builder(GetStreamingEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.streamingEndpointName = defaults.streamingEndpointName;
+            $ = new GetStreamingEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder streamingEndpointName(String streamingEndpointName) {
-            this.streamingEndpointName = Objects.requireNonNull(streamingEndpointName);
+            $.streamingEndpointName = streamingEndpointName;
             return this;
-        }        public GetStreamingEndpointArgs build() {
-            return new GetStreamingEndpointArgs(accountName, resourceGroupName, streamingEndpointName);
+        }
+
+        public GetStreamingEndpointArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.streamingEndpointName = Objects.requireNonNull($.streamingEndpointName, "expected parameter 'streamingEndpointName' to be non-null");
+            return $;
         }
     }
+
 }

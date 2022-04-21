@@ -21,45 +21,45 @@ public final class GrafeasV1beta1PackageDetailsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="installation", required=true)
-      private final InstallationResponse installation;
+    private InstallationResponse installation;
 
     public InstallationResponse installation() {
         return this.installation;
     }
 
-    public GrafeasV1beta1PackageDetailsResponse(InstallationResponse installation) {
-        this.installation = Objects.requireNonNull(installation, "expected parameter 'installation' to be non-null");
-    }
+    private GrafeasV1beta1PackageDetailsResponse() {}
 
-    private GrafeasV1beta1PackageDetailsResponse() {
-        this.installation = null;
+    private GrafeasV1beta1PackageDetailsResponse(GrafeasV1beta1PackageDetailsResponse $) {
+        this.installation = $.installation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1PackageDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstallationResponse installation;
+        private GrafeasV1beta1PackageDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1PackageDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1PackageDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.installation = defaults.installation;
+            $ = new GrafeasV1beta1PackageDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder installation(InstallationResponse installation) {
-            this.installation = Objects.requireNonNull(installation);
+            $.installation = installation;
             return this;
-        }        public GrafeasV1beta1PackageDetailsResponse build() {
-            return new GrafeasV1beta1PackageDetailsResponse(installation);
+        }
+
+        public GrafeasV1beta1PackageDetailsResponse build() {
+            $.installation = Objects.requireNonNull($.installation, "expected parameter 'installation' to be non-null");
+            return $;
         }
     }
+
 }

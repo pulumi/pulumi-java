@@ -22,7 +22,7 @@ public final class CallCredentialsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="callCredentialType", required=true)
-      private final String callCredentialType;
+    private String callCredentialType;
 
     public String callCredentialType() {
         return this.callCredentialType;
@@ -33,55 +33,52 @@ public final class CallCredentialsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="fromPlugin", required=true)
-      private final MetadataCredentialsFromPluginResponse fromPlugin;
+    private MetadataCredentialsFromPluginResponse fromPlugin;
 
     public MetadataCredentialsFromPluginResponse fromPlugin() {
         return this.fromPlugin;
     }
 
-    public CallCredentialsResponse(
-        String callCredentialType,
-        MetadataCredentialsFromPluginResponse fromPlugin) {
-        this.callCredentialType = Objects.requireNonNull(callCredentialType, "expected parameter 'callCredentialType' to be non-null");
-        this.fromPlugin = Objects.requireNonNull(fromPlugin, "expected parameter 'fromPlugin' to be non-null");
-    }
+    private CallCredentialsResponse() {}
 
-    private CallCredentialsResponse() {
-        this.callCredentialType = null;
-        this.fromPlugin = null;
+    private CallCredentialsResponse(CallCredentialsResponse $) {
+        this.callCredentialType = $.callCredentialType;
+        this.fromPlugin = $.fromPlugin;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CallCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String callCredentialType;
-        private MetadataCredentialsFromPluginResponse fromPlugin;
+        private CallCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CallCredentialsResponse();
         }
 
         public Builder(CallCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.callCredentialType = defaults.callCredentialType;
-    	      this.fromPlugin = defaults.fromPlugin;
+            $ = new CallCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder callCredentialType(String callCredentialType) {
-            this.callCredentialType = Objects.requireNonNull(callCredentialType);
+            $.callCredentialType = callCredentialType;
             return this;
         }
+
         public Builder fromPlugin(MetadataCredentialsFromPluginResponse fromPlugin) {
-            this.fromPlugin = Objects.requireNonNull(fromPlugin);
+            $.fromPlugin = fromPlugin;
             return this;
-        }        public CallCredentialsResponse build() {
-            return new CallCredentialsResponse(callCredentialType, fromPlugin);
+        }
+
+        public CallCredentialsResponse build() {
+            $.callCredentialType = Objects.requireNonNull($.callCredentialType, "expected parameter 'callCredentialType' to be non-null");
+            $.fromPlugin = Objects.requireNonNull($.fromPlugin, "expected parameter 'fromPlugin' to be non-null");
+            return $;
         }
     }
+
 }

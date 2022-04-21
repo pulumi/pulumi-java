@@ -23,7 +23,7 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -34,7 +34,7 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="publicSigningKey", required=true)
-      private final String publicSigningKey;
+    private String publicSigningKey;
 
     public String publicSigningKey() {
         return this.publicSigningKey;
@@ -45,64 +45,58 @@ public final class OnPremisePropertyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="signingCertificateThumbprint")
-      private final @Nullable String signingCertificateThumbprint;
+    private @Nullable String signingCertificateThumbprint;
 
     public Optional<String> signingCertificateThumbprint() {
-        return this.signingCertificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.signingCertificateThumbprint);
+        return Optional.ofNullable(this.signingCertificateThumbprint);
     }
 
-    public OnPremisePropertyResponse(
-        String id,
-        String publicSigningKey,
-        @Nullable String signingCertificateThumbprint) {
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.publicSigningKey = Objects.requireNonNull(publicSigningKey, "expected parameter 'publicSigningKey' to be non-null");
-        this.signingCertificateThumbprint = signingCertificateThumbprint;
-    }
+    private OnPremisePropertyResponse() {}
 
-    private OnPremisePropertyResponse() {
-        this.id = null;
-        this.publicSigningKey = null;
-        this.signingCertificateThumbprint = null;
+    private OnPremisePropertyResponse(OnPremisePropertyResponse $) {
+        this.id = $.id;
+        this.publicSigningKey = $.publicSigningKey;
+        this.signingCertificateThumbprint = $.signingCertificateThumbprint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremisePropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String id;
-        private String publicSigningKey;
-        private @Nullable String signingCertificateThumbprint;
+        private OnPremisePropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremisePropertyResponse();
         }
 
         public Builder(OnPremisePropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
-    	      this.publicSigningKey = defaults.publicSigningKey;
-    	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
+            $ = new OnPremisePropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder publicSigningKey(String publicSigningKey) {
-            this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
+            $.publicSigningKey = publicSigningKey;
             return this;
         }
+
         public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
-            this.signingCertificateThumbprint = signingCertificateThumbprint;
+            $.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
-        }        public OnPremisePropertyResponse build() {
-            return new OnPremisePropertyResponse(id, publicSigningKey, signingCertificateThumbprint);
+        }
+
+        public OnPremisePropertyResponse build() {
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.publicSigningKey = Objects.requireNonNull($.publicSigningKey, "expected parameter 'publicSigningKey' to be non-null");
+            return $;
         }
     }
+
 }

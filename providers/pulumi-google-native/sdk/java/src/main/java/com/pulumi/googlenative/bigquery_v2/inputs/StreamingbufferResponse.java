@@ -17,7 +17,7 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="estimatedBytes", required=true)
-      private final String estimatedBytes;
+    private String estimatedBytes;
 
     public String estimatedBytes() {
         return this.estimatedBytes;
@@ -28,7 +28,7 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="estimatedRows", required=true)
-      private final String estimatedRows;
+    private String estimatedRows;
 
     public String estimatedRows() {
         return this.estimatedRows;
@@ -39,64 +39,59 @@ public final class StreamingbufferResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="oldestEntryTime", required=true)
-      private final String oldestEntryTime;
+    private String oldestEntryTime;
 
     public String oldestEntryTime() {
         return this.oldestEntryTime;
     }
 
-    public StreamingbufferResponse(
-        String estimatedBytes,
-        String estimatedRows,
-        String oldestEntryTime) {
-        this.estimatedBytes = Objects.requireNonNull(estimatedBytes, "expected parameter 'estimatedBytes' to be non-null");
-        this.estimatedRows = Objects.requireNonNull(estimatedRows, "expected parameter 'estimatedRows' to be non-null");
-        this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime, "expected parameter 'oldestEntryTime' to be non-null");
-    }
+    private StreamingbufferResponse() {}
 
-    private StreamingbufferResponse() {
-        this.estimatedBytes = null;
-        this.estimatedRows = null;
-        this.oldestEntryTime = null;
+    private StreamingbufferResponse(StreamingbufferResponse $) {
+        this.estimatedBytes = $.estimatedBytes;
+        this.estimatedRows = $.estimatedRows;
+        this.oldestEntryTime = $.oldestEntryTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamingbufferResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String estimatedBytes;
-        private String estimatedRows;
-        private String oldestEntryTime;
+        private StreamingbufferResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamingbufferResponse();
         }
 
         public Builder(StreamingbufferResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.estimatedBytes = defaults.estimatedBytes;
-    	      this.estimatedRows = defaults.estimatedRows;
-    	      this.oldestEntryTime = defaults.oldestEntryTime;
+            $ = new StreamingbufferResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder estimatedBytes(String estimatedBytes) {
-            this.estimatedBytes = Objects.requireNonNull(estimatedBytes);
+            $.estimatedBytes = estimatedBytes;
             return this;
         }
+
         public Builder estimatedRows(String estimatedRows) {
-            this.estimatedRows = Objects.requireNonNull(estimatedRows);
+            $.estimatedRows = estimatedRows;
             return this;
         }
+
         public Builder oldestEntryTime(String oldestEntryTime) {
-            this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
+            $.oldestEntryTime = oldestEntryTime;
             return this;
-        }        public StreamingbufferResponse build() {
-            return new StreamingbufferResponse(estimatedBytes, estimatedRows, oldestEntryTime);
+        }
+
+        public StreamingbufferResponse build() {
+            $.estimatedBytes = Objects.requireNonNull($.estimatedBytes, "expected parameter 'estimatedBytes' to be non-null");
+            $.estimatedRows = Objects.requireNonNull($.estimatedRows, "expected parameter 'estimatedRows' to be non-null");
+            $.oldestEntryTime = Objects.requireNonNull($.oldestEntryTime, "expected parameter 'oldestEntryTime' to be non-null");
+            return $;
         }
     }
+
 }

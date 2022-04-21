@@ -22,7 +22,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
      * 
      */
     @Import(name="errorCode", required=true)
-      private final Integer errorCode;
+    private Integer errorCode;
 
     public Integer errorCode() {
         return this.errorCode;
@@ -33,7 +33,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
      * 
      */
     @Import(name="persistentCount", required=true)
-      private final Double persistentCount;
+    private Double persistentCount;
 
     public Double persistentCount() {
         return this.persistentCount;
@@ -44,64 +44,59 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends com.pulumi
      * 
      */
     @Import(name="transientCount", required=true)
-      private final Double transientCount;
+    private Double transientCount;
 
     public Double transientCount() {
         return this.transientCount;
     }
 
-    public ServerEndpointFilesNotSyncingErrorResponse(
-        Integer errorCode,
-        Double persistentCount,
-        Double transientCount) {
-        this.errorCode = Objects.requireNonNull(errorCode, "expected parameter 'errorCode' to be non-null");
-        this.persistentCount = Objects.requireNonNull(persistentCount, "expected parameter 'persistentCount' to be non-null");
-        this.transientCount = Objects.requireNonNull(transientCount, "expected parameter 'transientCount' to be non-null");
-    }
+    private ServerEndpointFilesNotSyncingErrorResponse() {}
 
-    private ServerEndpointFilesNotSyncingErrorResponse() {
-        this.errorCode = null;
-        this.persistentCount = null;
-        this.transientCount = null;
+    private ServerEndpointFilesNotSyncingErrorResponse(ServerEndpointFilesNotSyncingErrorResponse $) {
+        this.errorCode = $.errorCode;
+        this.persistentCount = $.persistentCount;
+        this.transientCount = $.transientCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerEndpointFilesNotSyncingErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer errorCode;
-        private Double persistentCount;
-        private Double transientCount;
+        private ServerEndpointFilesNotSyncingErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerEndpointFilesNotSyncingErrorResponse();
         }
 
         public Builder(ServerEndpointFilesNotSyncingErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorCode = defaults.errorCode;
-    	      this.persistentCount = defaults.persistentCount;
-    	      this.transientCount = defaults.transientCount;
+            $ = new ServerEndpointFilesNotSyncingErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorCode(Integer errorCode) {
-            this.errorCode = Objects.requireNonNull(errorCode);
+            $.errorCode = errorCode;
             return this;
         }
+
         public Builder persistentCount(Double persistentCount) {
-            this.persistentCount = Objects.requireNonNull(persistentCount);
+            $.persistentCount = persistentCount;
             return this;
         }
+
         public Builder transientCount(Double transientCount) {
-            this.transientCount = Objects.requireNonNull(transientCount);
+            $.transientCount = transientCount;
             return this;
-        }        public ServerEndpointFilesNotSyncingErrorResponse build() {
-            return new ServerEndpointFilesNotSyncingErrorResponse(errorCode, persistentCount, transientCount);
+        }
+
+        public ServerEndpointFilesNotSyncingErrorResponse build() {
+            $.errorCode = Objects.requireNonNull($.errorCode, "expected parameter 'errorCode' to be non-null");
+            $.persistentCount = Objects.requireNonNull($.persistentCount, "expected parameter 'persistentCount' to be non-null");
+            $.transientCount = Objects.requireNonNull($.transientCount, "expected parameter 'transientCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CertificateRawDataArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateKey")
-      private final @Nullable Output<String> privateKey;
+    private @Nullable Output<String> privateKey;
 
-    public Output<String> privateKey() {
-        return this.privateKey == null ? Codegen.empty() : this.privateKey;
+    public Optional<Output<String>> privateKey() {
+        return Optional.ofNullable(this.privateKey);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CertificateRawDataArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="publicCertificate")
-      private final @Nullable Output<String> publicCertificate;
+    private @Nullable Output<String> publicCertificate;
 
-    public Output<String> publicCertificate() {
-        return this.publicCertificate == null ? Codegen.empty() : this.publicCertificate;
+    public Optional<Output<String>> publicCertificate() {
+        return Optional.ofNullable(this.publicCertificate);
     }
 
-    public CertificateRawDataArgs(
-        @Nullable Output<String> privateKey,
-        @Nullable Output<String> publicCertificate) {
-        this.privateKey = privateKey;
-        this.publicCertificate = publicCertificate;
-    }
+    private CertificateRawDataArgs() {}
 
-    private CertificateRawDataArgs() {
-        this.privateKey = Codegen.empty();
-        this.publicCertificate = Codegen.empty();
+    private CertificateRawDataArgs(CertificateRawDataArgs $) {
+        this.privateKey = $.privateKey;
+        this.publicCertificate = $.publicCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateRawDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> privateKey;
-        private @Nullable Output<String> publicCertificate;
+        private CertificateRawDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateRawDataArgs();
         }
 
         public Builder(CertificateRawDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateKey = defaults.privateKey;
-    	      this.publicCertificate = defaults.publicCertificate;
+            $ = new CertificateRawDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateKey(@Nullable Output<String> privateKey) {
-            this.privateKey = privateKey;
+            $.privateKey = privateKey;
             return this;
         }
-        public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Codegen.ofNullable(privateKey);
-            return this;
+
+        public Builder privateKey(String privateKey) {
+            return privateKey(Output.of(privateKey));
         }
+
         public Builder publicCertificate(@Nullable Output<String> publicCertificate) {
-            this.publicCertificate = publicCertificate;
+            $.publicCertificate = publicCertificate;
             return this;
         }
-        public Builder publicCertificate(@Nullable String publicCertificate) {
-            this.publicCertificate = Codegen.ofNullable(publicCertificate);
-            return this;
-        }        public CertificateRawDataArgs build() {
-            return new CertificateRawDataArgs(privateKey, publicCertificate);
+
+        public Builder publicCertificate(String publicCertificate) {
+            return publicCertificate(Output.of(publicCertificate));
+        }
+
+        public CertificateRawDataArgs build() {
+            return $;
         }
     }
+
 }

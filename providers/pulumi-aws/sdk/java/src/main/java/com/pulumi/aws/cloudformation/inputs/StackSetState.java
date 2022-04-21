@@ -6,11 +6,11 @@ package com.pulumi.aws.cloudformation.inputs;
 import com.pulumi.aws.cloudformation.inputs.StackSetAutoDeploymentGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="administrationRoleArn")
-      private final @Nullable Output<String> administrationRoleArn;
+    private @Nullable Output<String> administrationRoleArn;
 
-    public Output<String> administrationRoleArn() {
-        return this.administrationRoleArn == null ? Codegen.empty() : this.administrationRoleArn;
+    public Optional<Output<String>> administrationRoleArn() {
+        return Optional.ofNullable(this.administrationRoleArn);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoDeployment")
-      private final @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment;
+    private @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment;
 
-    public Output<StackSetAutoDeploymentGetArgs> autoDeployment() {
-        return this.autoDeployment == null ? Codegen.empty() : this.autoDeployment;
+    public Optional<Output<StackSetAutoDeploymentGetArgs>> autoDeployment() {
+        return Optional.ofNullable(this.autoDeployment);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="capabilities")
-      private final @Nullable Output<List<String>> capabilities;
+    private @Nullable Output<List<String>> capabilities;
 
-    public Output<List<String>> capabilities() {
-        return this.capabilities == null ? Codegen.empty() : this.capabilities;
+    public Optional<Output<List<String>>> capabilities() {
+        return Optional.ofNullable(this.capabilities);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="executionRoleName")
-      private final @Nullable Output<String> executionRoleName;
+    private @Nullable Output<String> executionRoleName;
 
-    public Output<String> executionRoleName() {
-        return this.executionRoleName == null ? Codegen.empty() : this.executionRoleName;
+    public Optional<Output<String>> executionRoleName() {
+        return Optional.ofNullable(this.executionRoleName);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="permissionModel")
-      private final @Nullable Output<String> permissionModel;
+    private @Nullable Output<String> permissionModel;
 
-    public Output<String> permissionModel() {
-        return this.permissionModel == null ? Codegen.empty() : this.permissionModel;
+    public Optional<Output<String>> permissionModel() {
+        return Optional.ofNullable(this.permissionModel);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stackSetId")
-      private final @Nullable Output<String> stackSetId;
+    private @Nullable Output<String> stackSetId;
 
-    public Output<String> stackSetId() {
-        return this.stackSetId == null ? Codegen.empty() : this.stackSetId;
+    public Optional<Output<String>> stackSetId() {
+        return Optional.ofNullable(this.stackSetId);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tagsAll")
-      private final @Nullable Output<Map<String,String>> tagsAll;
+    private @Nullable Output<Map<String,String>> tagsAll;
 
-    public Output<Map<String,String>> tagsAll() {
-        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
+    public Optional<Output<Map<String,String>>> tagsAll() {
+        return Optional.ofNullable(this.tagsAll);
     }
 
     /**
@@ -155,10 +155,10 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateBody")
-      private final @Nullable Output<String> templateBody;
+    private @Nullable Output<String> templateBody;
 
-    public Output<String> templateBody() {
-        return this.templateBody == null ? Codegen.empty() : this.templateBody;
+    public Optional<Output<String>> templateBody() {
+        return Optional.ofNullable(this.templateBody);
     }
 
     /**
@@ -166,222 +166,182 @@ public final class StackSetState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="templateUrl")
-      private final @Nullable Output<String> templateUrl;
+    private @Nullable Output<String> templateUrl;
 
-    public Output<String> templateUrl() {
-        return this.templateUrl == null ? Codegen.empty() : this.templateUrl;
+    public Optional<Output<String>> templateUrl() {
+        return Optional.ofNullable(this.templateUrl);
     }
 
-    public StackSetState(
-        @Nullable Output<String> administrationRoleArn,
-        @Nullable Output<String> arn,
-        @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment,
-        @Nullable Output<List<String>> capabilities,
-        @Nullable Output<String> description,
-        @Nullable Output<String> executionRoleName,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> parameters,
-        @Nullable Output<String> permissionModel,
-        @Nullable Output<String> stackSetId,
-        @Nullable Output<Map<String,String>> tags,
-        @Nullable Output<Map<String,String>> tagsAll,
-        @Nullable Output<String> templateBody,
-        @Nullable Output<String> templateUrl) {
-        this.administrationRoleArn = administrationRoleArn;
-        this.arn = arn;
-        this.autoDeployment = autoDeployment;
-        this.capabilities = capabilities;
-        this.description = description;
-        this.executionRoleName = executionRoleName;
-        this.name = name;
-        this.parameters = parameters;
-        this.permissionModel = permissionModel;
-        this.stackSetId = stackSetId;
-        this.tags = tags;
-        this.tagsAll = tagsAll;
-        this.templateBody = templateBody;
-        this.templateUrl = templateUrl;
-    }
+    private StackSetState() {}
 
-    private StackSetState() {
-        this.administrationRoleArn = Codegen.empty();
-        this.arn = Codegen.empty();
-        this.autoDeployment = Codegen.empty();
-        this.capabilities = Codegen.empty();
-        this.description = Codegen.empty();
-        this.executionRoleName = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.permissionModel = Codegen.empty();
-        this.stackSetId = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.tagsAll = Codegen.empty();
-        this.templateBody = Codegen.empty();
-        this.templateUrl = Codegen.empty();
+    private StackSetState(StackSetState $) {
+        this.administrationRoleArn = $.administrationRoleArn;
+        this.arn = $.arn;
+        this.autoDeployment = $.autoDeployment;
+        this.capabilities = $.capabilities;
+        this.description = $.description;
+        this.executionRoleName = $.executionRoleName;
+        this.name = $.name;
+        this.parameters = $.parameters;
+        this.permissionModel = $.permissionModel;
+        this.stackSetId = $.stackSetId;
+        this.tags = $.tags;
+        this.tagsAll = $.tagsAll;
+        this.templateBody = $.templateBody;
+        this.templateUrl = $.templateUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StackSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> administrationRoleArn;
-        private @Nullable Output<String> arn;
-        private @Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment;
-        private @Nullable Output<List<String>> capabilities;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> executionRoleName;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
-        private @Nullable Output<String> permissionModel;
-        private @Nullable Output<String> stackSetId;
-        private @Nullable Output<Map<String,String>> tags;
-        private @Nullable Output<Map<String,String>> tagsAll;
-        private @Nullable Output<String> templateBody;
-        private @Nullable Output<String> templateUrl;
+        private StackSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new StackSetState();
         }
 
         public Builder(StackSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.administrationRoleArn = defaults.administrationRoleArn;
-    	      this.arn = defaults.arn;
-    	      this.autoDeployment = defaults.autoDeployment;
-    	      this.capabilities = defaults.capabilities;
-    	      this.description = defaults.description;
-    	      this.executionRoleName = defaults.executionRoleName;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
-    	      this.permissionModel = defaults.permissionModel;
-    	      this.stackSetId = defaults.stackSetId;
-    	      this.tags = defaults.tags;
-    	      this.tagsAll = defaults.tagsAll;
-    	      this.templateBody = defaults.templateBody;
-    	      this.templateUrl = defaults.templateUrl;
+            $ = new StackSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder administrationRoleArn(@Nullable Output<String> administrationRoleArn) {
-            this.administrationRoleArn = administrationRoleArn;
+            $.administrationRoleArn = administrationRoleArn;
             return this;
         }
-        public Builder administrationRoleArn(@Nullable String administrationRoleArn) {
-            this.administrationRoleArn = Codegen.ofNullable(administrationRoleArn);
-            return this;
+
+        public Builder administrationRoleArn(String administrationRoleArn) {
+            return administrationRoleArn(Output.of(administrationRoleArn));
         }
+
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentGetArgs> autoDeployment) {
-            this.autoDeployment = autoDeployment;
+            $.autoDeployment = autoDeployment;
             return this;
         }
-        public Builder autoDeployment(@Nullable StackSetAutoDeploymentGetArgs autoDeployment) {
-            this.autoDeployment = Codegen.ofNullable(autoDeployment);
-            return this;
+
+        public Builder autoDeployment(StackSetAutoDeploymentGetArgs autoDeployment) {
+            return autoDeployment(Output.of(autoDeployment));
         }
+
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
-            this.capabilities = capabilities;
+            $.capabilities = capabilities;
             return this;
         }
-        public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Codegen.ofNullable(capabilities);
-            return this;
+
+        public Builder capabilities(List<String> capabilities) {
+            return capabilities(Output.of(capabilities));
         }
+
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
-            this.executionRoleName = executionRoleName;
+            $.executionRoleName = executionRoleName;
             return this;
         }
-        public Builder executionRoleName(@Nullable String executionRoleName) {
-            this.executionRoleName = Codegen.ofNullable(executionRoleName);
-            return this;
+
+        public Builder executionRoleName(String executionRoleName) {
+            return executionRoleName(Output.of(executionRoleName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder permissionModel(@Nullable Output<String> permissionModel) {
-            this.permissionModel = permissionModel;
+            $.permissionModel = permissionModel;
             return this;
         }
-        public Builder permissionModel(@Nullable String permissionModel) {
-            this.permissionModel = Codegen.ofNullable(permissionModel);
-            return this;
+
+        public Builder permissionModel(String permissionModel) {
+            return permissionModel(Output.of(permissionModel));
         }
+
         public Builder stackSetId(@Nullable Output<String> stackSetId) {
-            this.stackSetId = stackSetId;
+            $.stackSetId = stackSetId;
             return this;
         }
-        public Builder stackSetId(@Nullable String stackSetId) {
-            this.stackSetId = Codegen.ofNullable(stackSetId);
-            return this;
+
+        public Builder stackSetId(String stackSetId) {
+            return stackSetId(Output.of(stackSetId));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
-            this.tagsAll = tagsAll;
+            $.tagsAll = tagsAll;
             return this;
         }
-        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Codegen.ofNullable(tagsAll);
-            return this;
+
+        public Builder tagsAll(Map<String,String> tagsAll) {
+            return tagsAll(Output.of(tagsAll));
         }
+
         public Builder templateBody(@Nullable Output<String> templateBody) {
-            this.templateBody = templateBody;
+            $.templateBody = templateBody;
             return this;
         }
-        public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Codegen.ofNullable(templateBody);
-            return this;
+
+        public Builder templateBody(String templateBody) {
+            return templateBody(Output.of(templateBody));
         }
+
         public Builder templateUrl(@Nullable Output<String> templateUrl) {
-            this.templateUrl = templateUrl;
+            $.templateUrl = templateUrl;
             return this;
         }
-        public Builder templateUrl(@Nullable String templateUrl) {
-            this.templateUrl = Codegen.ofNullable(templateUrl);
-            return this;
-        }        public StackSetState build() {
-            return new StackSetState(administrationRoleArn, arn, autoDeployment, capabilities, description, executionRoleName, name, parameters, permissionModel, stackSetId, tags, tagsAll, templateBody, templateUrl);
+
+        public Builder templateUrl(String templateUrl) {
+            return templateUrl(Output.of(templateUrl));
+        }
+
+        public StackSetState build() {
+            return $;
         }
     }
+
 }

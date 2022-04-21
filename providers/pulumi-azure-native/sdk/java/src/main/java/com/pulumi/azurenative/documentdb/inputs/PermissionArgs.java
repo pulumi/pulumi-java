@@ -5,10 +5,10 @@ package com.pulumi.azurenative.documentdb.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataActions")
-      private final @Nullable Output<List<String>> dataActions;
+    private @Nullable Output<List<String>> dataActions;
 
-    public Output<List<String>> dataActions() {
-        return this.dataActions == null ? Codegen.empty() : this.dataActions;
+    public Optional<Output<List<String>>> dataActions() {
+        return Optional.ofNullable(this.dataActions);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class PermissionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notDataActions")
-      private final @Nullable Output<List<String>> notDataActions;
+    private @Nullable Output<List<String>> notDataActions;
 
-    public Output<List<String>> notDataActions() {
-        return this.notDataActions == null ? Codegen.empty() : this.notDataActions;
+    public Optional<Output<List<String>>> notDataActions() {
+        return Optional.ofNullable(this.notDataActions);
     }
 
-    public PermissionArgs(
-        @Nullable Output<List<String>> dataActions,
-        @Nullable Output<List<String>> notDataActions) {
-        this.dataActions = dataActions;
-        this.notDataActions = notDataActions;
-    }
+    private PermissionArgs() {}
 
-    private PermissionArgs() {
-        this.dataActions = Codegen.empty();
-        this.notDataActions = Codegen.empty();
+    private PermissionArgs(PermissionArgs $) {
+        this.dataActions = $.dataActions;
+        this.notDataActions = $.notDataActions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PermissionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dataActions;
-        private @Nullable Output<List<String>> notDataActions;
+        private PermissionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PermissionArgs();
         }
 
         public Builder(PermissionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataActions = defaults.dataActions;
-    	      this.notDataActions = defaults.notDataActions;
+            $ = new PermissionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataActions(@Nullable Output<List<String>> dataActions) {
-            this.dataActions = dataActions;
+            $.dataActions = dataActions;
             return this;
         }
-        public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = Codegen.ofNullable(dataActions);
-            return this;
+
+        public Builder dataActions(List<String> dataActions) {
+            return dataActions(Output.of(dataActions));
         }
+
         public Builder dataActions(String... dataActions) {
             return dataActions(List.of(dataActions));
         }
+
         public Builder notDataActions(@Nullable Output<List<String>> notDataActions) {
-            this.notDataActions = notDataActions;
+            $.notDataActions = notDataActions;
             return this;
         }
-        public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = Codegen.ofNullable(notDataActions);
-            return this;
+
+        public Builder notDataActions(List<String> notDataActions) {
+            return notDataActions(Output.of(notDataActions));
         }
+
         public Builder notDataActions(String... notDataActions) {
             return notDataActions(List.of(notDataActions));
-        }        public PermissionArgs build() {
-            return new PermissionArgs(dataActions, notDataActions);
+        }
+
+        public PermissionArgs build() {
+            return $;
         }
     }
+
 }

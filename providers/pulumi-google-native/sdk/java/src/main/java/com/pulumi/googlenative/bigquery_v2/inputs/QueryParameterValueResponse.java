@@ -19,7 +19,7 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="arrayValues", required=true)
-      private final List<QueryParameterValueResponse> arrayValues;
+    private List<QueryParameterValueResponse> arrayValues;
 
     public List<QueryParameterValueResponse> arrayValues() {
         return this.arrayValues;
@@ -30,7 +30,7 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="structValues", required=true)
-      private final Map<String,String> structValues;
+    private Map<String,String> structValues;
 
     public Map<String,String> structValues() {
         return this.structValues;
@@ -41,67 +41,63 @@ public final class QueryParameterValueResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public QueryParameterValueResponse(
-        List<QueryParameterValueResponse> arrayValues,
-        Map<String,String> structValues,
-        String value) {
-        this.arrayValues = Objects.requireNonNull(arrayValues, "expected parameter 'arrayValues' to be non-null");
-        this.structValues = Objects.requireNonNull(structValues, "expected parameter 'structValues' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private QueryParameterValueResponse() {}
 
-    private QueryParameterValueResponse() {
-        this.arrayValues = List.of();
-        this.structValues = Map.of();
-        this.value = null;
+    private QueryParameterValueResponse(QueryParameterValueResponse $) {
+        this.arrayValues = $.arrayValues;
+        this.structValues = $.structValues;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterValueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<QueryParameterValueResponse> arrayValues;
-        private Map<String,String> structValues;
-        private String value;
+        private QueryParameterValueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterValueResponse();
         }
 
         public Builder(QueryParameterValueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayValues = defaults.arrayValues;
-    	      this.structValues = defaults.structValues;
-    	      this.value = defaults.value;
+            $ = new QueryParameterValueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayValues(List<QueryParameterValueResponse> arrayValues) {
-            this.arrayValues = Objects.requireNonNull(arrayValues);
+            $.arrayValues = arrayValues;
             return this;
         }
+
         public Builder arrayValues(QueryParameterValueResponse... arrayValues) {
             return arrayValues(List.of(arrayValues));
         }
+
         public Builder structValues(Map<String,String> structValues) {
-            this.structValues = Objects.requireNonNull(structValues);
+            $.structValues = structValues;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public QueryParameterValueResponse build() {
-            return new QueryParameterValueResponse(arrayValues, structValues, value);
+        }
+
+        public QueryParameterValueResponse build() {
+            $.arrayValues = Objects.requireNonNull($.arrayValues, "expected parameter 'arrayValues' to be non-null");
+            $.structValues = Objects.requireNonNull($.structValues, "expected parameter 'structValues' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

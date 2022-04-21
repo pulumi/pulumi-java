@@ -17,45 +17,45 @@ public final class GetReadinessCheckArgs extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="readinessCheckName", required=true)
-      private final String readinessCheckName;
+    private String readinessCheckName;
 
     public String readinessCheckName() {
         return this.readinessCheckName;
     }
 
-    public GetReadinessCheckArgs(String readinessCheckName) {
-        this.readinessCheckName = Objects.requireNonNull(readinessCheckName, "expected parameter 'readinessCheckName' to be non-null");
-    }
+    private GetReadinessCheckArgs() {}
 
-    private GetReadinessCheckArgs() {
-        this.readinessCheckName = null;
+    private GetReadinessCheckArgs(GetReadinessCheckArgs $) {
+        this.readinessCheckName = $.readinessCheckName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReadinessCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String readinessCheckName;
+        private GetReadinessCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReadinessCheckArgs();
         }
 
         public Builder(GetReadinessCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readinessCheckName = defaults.readinessCheckName;
+            $ = new GetReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readinessCheckName(String readinessCheckName) {
-            this.readinessCheckName = Objects.requireNonNull(readinessCheckName);
+            $.readinessCheckName = readinessCheckName;
             return this;
-        }        public GetReadinessCheckArgs build() {
-            return new GetReadinessCheckArgs(readinessCheckName);
+        }
+
+        public GetReadinessCheckArgs build() {
+            $.readinessCheckName = Objects.requireNonNull($.readinessCheckName, "expected parameter 'readinessCheckName' to be non-null");
+            return $;
         }
     }
+
 }

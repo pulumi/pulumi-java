@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.DeploymentArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GrafeasV1beta1DeploymentDetailsArgs extends com.pulumi.resour
      * 
      */
     @Import(name="deployment", required=true)
-      private final Output<DeploymentArgs> deployment;
+    private Output<DeploymentArgs> deployment;
 
     public Output<DeploymentArgs> deployment() {
         return this.deployment;
     }
 
-    public GrafeasV1beta1DeploymentDetailsArgs(Output<DeploymentArgs> deployment) {
-        this.deployment = Objects.requireNonNull(deployment, "expected parameter 'deployment' to be non-null");
-    }
+    private GrafeasV1beta1DeploymentDetailsArgs() {}
 
-    private GrafeasV1beta1DeploymentDetailsArgs() {
-        this.deployment = Codegen.empty();
+    private GrafeasV1beta1DeploymentDetailsArgs(GrafeasV1beta1DeploymentDetailsArgs $) {
+        this.deployment = $.deployment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1DeploymentDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DeploymentArgs> deployment;
+        private GrafeasV1beta1DeploymentDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1DeploymentDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1DeploymentDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployment = defaults.deployment;
+            $ = new GrafeasV1beta1DeploymentDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deployment(Output<DeploymentArgs> deployment) {
-            this.deployment = Objects.requireNonNull(deployment);
+            $.deployment = deployment;
             return this;
         }
+
         public Builder deployment(DeploymentArgs deployment) {
-            this.deployment = Output.of(Objects.requireNonNull(deployment));
-            return this;
-        }        public GrafeasV1beta1DeploymentDetailsArgs build() {
-            return new GrafeasV1beta1DeploymentDetailsArgs(deployment);
+            return deployment(Output.of(deployment));
+        }
+
+        public GrafeasV1beta1DeploymentDetailsArgs build() {
+            $.deployment = Objects.requireNonNull($.deployment, "expected parameter 'deployment' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,65 +17,61 @@ public final class ExperimentOnlineAbConfigObject extends com.pulumi.resources.I
     public static final ExperimentOnlineAbConfigObject Empty = new ExperimentOnlineAbConfigObject();
 
     @Import(name="controlTreatmentName")
-      private final @Nullable String controlTreatmentName;
+    private @Nullable String controlTreatmentName;
 
     public Optional<String> controlTreatmentName() {
-        return this.controlTreatmentName == null ? Optional.empty() : Optional.ofNullable(this.controlTreatmentName);
+        return Optional.ofNullable(this.controlTreatmentName);
     }
 
     @Import(name="treatmentWeights")
-      private final @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
+    private @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
 
-    public List<ExperimentTreatmentToWeight> treatmentWeights() {
-        return this.treatmentWeights == null ? List.of() : this.treatmentWeights;
+    public Optional<List<ExperimentTreatmentToWeight>> treatmentWeights() {
+        return Optional.ofNullable(this.treatmentWeights);
     }
 
-    public ExperimentOnlineAbConfigObject(
-        @Nullable String controlTreatmentName,
-        @Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
-        this.controlTreatmentName = controlTreatmentName;
-        this.treatmentWeights = treatmentWeights;
-    }
+    private ExperimentOnlineAbConfigObject() {}
 
-    private ExperimentOnlineAbConfigObject() {
-        this.controlTreatmentName = null;
-        this.treatmentWeights = List.of();
+    private ExperimentOnlineAbConfigObject(ExperimentOnlineAbConfigObject $) {
+        this.controlTreatmentName = $.controlTreatmentName;
+        this.treatmentWeights = $.treatmentWeights;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentOnlineAbConfigObject defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String controlTreatmentName;
-        private @Nullable List<ExperimentTreatmentToWeight> treatmentWeights;
+        private ExperimentOnlineAbConfigObject $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentOnlineAbConfigObject();
         }
 
         public Builder(ExperimentOnlineAbConfigObject defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.controlTreatmentName = defaults.controlTreatmentName;
-    	      this.treatmentWeights = defaults.treatmentWeights;
+            $ = new ExperimentOnlineAbConfigObject(Objects.requireNonNull(defaults));
         }
 
         public Builder controlTreatmentName(@Nullable String controlTreatmentName) {
-            this.controlTreatmentName = controlTreatmentName;
+            $.controlTreatmentName = controlTreatmentName;
             return this;
         }
+
         public Builder treatmentWeights(@Nullable List<ExperimentTreatmentToWeight> treatmentWeights) {
-            this.treatmentWeights = treatmentWeights;
+            $.treatmentWeights = treatmentWeights;
             return this;
         }
+
         public Builder treatmentWeights(ExperimentTreatmentToWeight... treatmentWeights) {
             return treatmentWeights(List.of(treatmentWeights));
-        }        public ExperimentOnlineAbConfigObject build() {
-            return new ExperimentOnlineAbConfigObject(controlTreatmentName, treatmentWeights);
+        }
+
+        public ExperimentOnlineAbConfigObject build() {
+            return $;
         }
     }
+
 }

@@ -23,10 +23,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="data")
-      private final @Nullable String data;
+    private @Nullable String data;
 
     public Optional<String> data() {
-        return this.data == null ? Optional.empty() : Optional.ofNullable(this.data);
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -34,7 +34,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -45,10 +45,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="keyVaultSecretId")
-      private final @Nullable String keyVaultSecretId;
+    private @Nullable String keyVaultSecretId;
 
     public Optional<String> keyVaultSecretId() {
-        return this.keyVaultSecretId == null ? Optional.empty() : Optional.ofNullable(this.keyVaultSecretId);
+        return Optional.ofNullable(this.keyVaultSecretId);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="password")
-      private final @Nullable String password;
+    private @Nullable String password;
 
     public Optional<String> password() {
-        return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -89,7 +89,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -100,7 +100,7 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="publicCertData", required=true)
-      private final String publicCertData;
+    private String publicCertData;
 
     public String publicCertData() {
         return this.publicCertData;
@@ -111,118 +111,96 @@ public final class ApplicationGatewaySslCertificateResponse extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public ApplicationGatewaySslCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String keyVaultSecretId,
-        @Nullable String name,
-        @Nullable String password,
-        String provisioningState,
-        String publicCertData,
-        String type) {
-        this.data = data;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.id = id;
-        this.keyVaultSecretId = keyVaultSecretId;
-        this.name = name;
-        this.password = password;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.publicCertData = Objects.requireNonNull(publicCertData, "expected parameter 'publicCertData' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ApplicationGatewaySslCertificateResponse() {}
 
-    private ApplicationGatewaySslCertificateResponse() {
-        this.data = null;
-        this.etag = null;
-        this.id = null;
-        this.keyVaultSecretId = null;
-        this.name = null;
-        this.password = null;
-        this.provisioningState = null;
-        this.publicCertData = null;
-        this.type = null;
+    private ApplicationGatewaySslCertificateResponse(ApplicationGatewaySslCertificateResponse $) {
+        this.data = $.data;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.keyVaultSecretId = $.keyVaultSecretId;
+        this.name = $.name;
+        this.password = $.password;
+        this.provisioningState = $.provisioningState;
+        this.publicCertData = $.publicCertData;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApplicationGatewaySslCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String data;
-        private String etag;
-        private @Nullable String id;
-        private @Nullable String keyVaultSecretId;
-        private @Nullable String name;
-        private @Nullable String password;
-        private String provisioningState;
-        private String publicCertData;
-        private String type;
+        private ApplicationGatewaySslCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApplicationGatewaySslCertificateResponse();
         }
 
         public Builder(ApplicationGatewaySslCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.keyVaultSecretId = defaults.keyVaultSecretId;
-    	      this.name = defaults.name;
-    	      this.password = defaults.password;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.publicCertData = defaults.publicCertData;
-    	      this.type = defaults.type;
+            $ = new ApplicationGatewaySslCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable String data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
-            this.keyVaultSecretId = keyVaultSecretId;
+            $.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder password(@Nullable String password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder publicCertData(String publicCertData) {
-            this.publicCertData = Objects.requireNonNull(publicCertData);
+            $.publicCertData = publicCertData;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public ApplicationGatewaySslCertificateResponse build() {
-            return new ApplicationGatewaySslCertificateResponse(data, etag, id, keyVaultSecretId, name, password, provisioningState, publicCertData, type);
+        }
+
+        public ApplicationGatewaySslCertificateResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.publicCertData = Objects.requireNonNull($.publicCertData, "expected parameter 'publicCertData' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

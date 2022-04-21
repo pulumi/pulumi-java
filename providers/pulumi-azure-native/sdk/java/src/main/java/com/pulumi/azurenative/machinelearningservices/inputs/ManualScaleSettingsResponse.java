@@ -21,10 +21,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="instanceCount")
-      private final @Nullable Integer instanceCount;
+    private @Nullable Integer instanceCount;
 
     public Optional<Integer> instanceCount() {
-        return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
+        return Optional.ofNullable(this.instanceCount);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Integer maxInstances;
+    private @Nullable Integer maxInstances;
 
     public Optional<Integer> maxInstances() {
-        return this.maxInstances == null ? Optional.empty() : Optional.ofNullable(this.maxInstances);
+        return Optional.ofNullable(this.maxInstances);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Integer minInstances;
+    private @Nullable Integer minInstances;
 
     public Optional<Integer> minInstances() {
-        return this.minInstances == null ? Optional.empty() : Optional.ofNullable(this.minInstances);
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -54,73 +54,63 @@ public final class ManualScaleSettingsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="scaleType", required=true)
-      private final String scaleType;
+    private String scaleType;
 
     public String scaleType() {
         return this.scaleType;
     }
 
-    public ManualScaleSettingsResponse(
-        @Nullable Integer instanceCount,
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        String scaleType) {
-        this.instanceCount = instanceCount;
-        this.maxInstances = maxInstances;
-        this.minInstances = minInstances;
-        this.scaleType = Codegen.stringProp("scaleType").arg(scaleType).require();
-    }
+    private ManualScaleSettingsResponse() {}
 
-    private ManualScaleSettingsResponse() {
-        this.instanceCount = null;
-        this.maxInstances = null;
-        this.minInstances = null;
-        this.scaleType = null;
+    private ManualScaleSettingsResponse(ManualScaleSettingsResponse $) {
+        this.instanceCount = $.instanceCount;
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.scaleType = $.scaleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManualScaleSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer instanceCount;
-        private @Nullable Integer maxInstances;
-        private @Nullable Integer minInstances;
-        private String scaleType;
+        private ManualScaleSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManualScaleSettingsResponse();
         }
 
         public Builder(ManualScaleSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceCount = defaults.instanceCount;
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.scaleType = defaults.scaleType;
+            $ = new ManualScaleSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = instanceCount;
+            $.instanceCount = instanceCount;
             return this;
         }
+
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
+
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
+
         public Builder scaleType(String scaleType) {
-            this.scaleType = Objects.requireNonNull(scaleType);
+            $.scaleType = scaleType;
             return this;
-        }        public ManualScaleSettingsResponse build() {
-            return new ManualScaleSettingsResponse(instanceCount, maxInstances, minInstances, scaleType);
+        }
+
+        public ManualScaleSettingsResponse build() {
+            $.scaleType = Codegen.stringProp("scaleType").arg($.scaleType).require();
+            return $;
         }
     }
+
 }

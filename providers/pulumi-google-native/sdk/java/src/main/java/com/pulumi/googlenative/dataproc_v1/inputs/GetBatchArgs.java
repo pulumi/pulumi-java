@@ -15,78 +15,72 @@ public final class GetBatchArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBatchArgs Empty = new GetBatchArgs();
 
     @Import(name="batchId", required=true)
-      private final String batchId;
+    private String batchId;
 
     public String batchId() {
         return this.batchId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBatchArgs(
-        String batchId,
-        String location,
-        @Nullable String project) {
-        this.batchId = Objects.requireNonNull(batchId, "expected parameter 'batchId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetBatchArgs() {}
 
-    private GetBatchArgs() {
-        this.batchId = null;
-        this.location = null;
-        this.project = null;
+    private GetBatchArgs(GetBatchArgs $) {
+        this.batchId = $.batchId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String batchId;
-        private String location;
-        private @Nullable String project;
+        private GetBatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBatchArgs();
         }
 
         public Builder(GetBatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.batchId = defaults.batchId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetBatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder batchId(String batchId) {
-            this.batchId = Objects.requireNonNull(batchId);
+            $.batchId = batchId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBatchArgs build() {
-            return new GetBatchArgs(batchId, location, project);
+        }
+
+        public GetBatchArgs build() {
+            $.batchId = Objects.requireNonNull($.batchId, "expected parameter 'batchId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,10 +25,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="allowedGroups")
-      private final @Nullable Object allowedGroups;
+    private @Nullable Object allowedGroups;
 
     public Optional<Object> allowedGroups() {
-        return this.allowedGroups == null ? Optional.empty() : Optional.ofNullable(this.allowedGroups);
+        return Optional.ofNullable(this.allowedGroups);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="dateFilterColumn")
-      private final @Nullable Object dateFilterColumn;
+    private @Nullable Object dateFilterColumn;
 
     public Optional<Object> dateFilterColumn() {
-        return this.dateFilterColumn == null ? Optional.empty() : Optional.ofNullable(this.dateFilterColumn);
+        return Optional.ofNullable(this.dateFilterColumn);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="disableMetricsCollection")
-      private final @Nullable Object disableMetricsCollection;
+    private @Nullable Object disableMetricsCollection;
 
     public Optional<Object> disableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
+        return Optional.ofNullable(this.disableMetricsCollection);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Object endTime;
+    private @Nullable Object endTime;
 
     public Optional<Object> endTime() {
-        return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxConcurrentConnections")
-      private final @Nullable Object maxConcurrentConnections;
+    private @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> maxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
+        return Optional.ofNullable(this.maxConcurrentConnections);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="outputColumns")
-      private final @Nullable Object outputColumns;
+    private @Nullable Object outputColumns;
 
     public Optional<Object> outputColumns() {
-        return this.outputColumns == null ? Optional.empty() : Optional.ofNullable(this.outputColumns);
+        return Optional.ofNullable(this.outputColumns);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceRetryCount")
-      private final @Nullable Object sourceRetryCount;
+    private @Nullable Object sourceRetryCount;
 
     public Optional<Object> sourceRetryCount() {
-        return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
+        return Optional.ofNullable(this.sourceRetryCount);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceRetryWait")
-      private final @Nullable Object sourceRetryWait;
+    private @Nullable Object sourceRetryWait;
 
     public Optional<Object> sourceRetryWait() {
-        return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
+        return Optional.ofNullable(this.sourceRetryWait);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Object startTime;
+    private @Nullable Object startTime;
 
     public Optional<Object> startTime() {
-        return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -125,7 +125,7 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -136,136 +136,105 @@ public final class Office365SourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="userScopeFilterUri")
-      private final @Nullable Object userScopeFilterUri;
+    private @Nullable Object userScopeFilterUri;
 
     public Optional<Object> userScopeFilterUri() {
-        return this.userScopeFilterUri == null ? Optional.empty() : Optional.ofNullable(this.userScopeFilterUri);
+        return Optional.ofNullable(this.userScopeFilterUri);
     }
 
-    public Office365SourceResponse(
-        @Nullable Object allowedGroups,
-        @Nullable Object dateFilterColumn,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object endTime,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object outputColumns,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        @Nullable Object startTime,
-        String type,
-        @Nullable Object userScopeFilterUri) {
-        this.allowedGroups = allowedGroups;
-        this.dateFilterColumn = dateFilterColumn;
-        this.disableMetricsCollection = disableMetricsCollection;
-        this.endTime = endTime;
-        this.maxConcurrentConnections = maxConcurrentConnections;
-        this.outputColumns = outputColumns;
-        this.sourceRetryCount = sourceRetryCount;
-        this.sourceRetryWait = sourceRetryWait;
-        this.startTime = startTime;
-        this.type = Codegen.stringProp("type").arg(type).require();
-        this.userScopeFilterUri = userScopeFilterUri;
-    }
+    private Office365SourceResponse() {}
 
-    private Office365SourceResponse() {
-        this.allowedGroups = null;
-        this.dateFilterColumn = null;
-        this.disableMetricsCollection = null;
-        this.endTime = null;
-        this.maxConcurrentConnections = null;
-        this.outputColumns = null;
-        this.sourceRetryCount = null;
-        this.sourceRetryWait = null;
-        this.startTime = null;
-        this.type = null;
-        this.userScopeFilterUri = null;
+    private Office365SourceResponse(Office365SourceResponse $) {
+        this.allowedGroups = $.allowedGroups;
+        this.dateFilterColumn = $.dateFilterColumn;
+        this.disableMetricsCollection = $.disableMetricsCollection;
+        this.endTime = $.endTime;
+        this.maxConcurrentConnections = $.maxConcurrentConnections;
+        this.outputColumns = $.outputColumns;
+        this.sourceRetryCount = $.sourceRetryCount;
+        this.sourceRetryWait = $.sourceRetryWait;
+        this.startTime = $.startTime;
+        this.type = $.type;
+        this.userScopeFilterUri = $.userScopeFilterUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Office365SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Object allowedGroups;
-        private @Nullable Object dateFilterColumn;
-        private @Nullable Object disableMetricsCollection;
-        private @Nullable Object endTime;
-        private @Nullable Object maxConcurrentConnections;
-        private @Nullable Object outputColumns;
-        private @Nullable Object sourceRetryCount;
-        private @Nullable Object sourceRetryWait;
-        private @Nullable Object startTime;
-        private String type;
-        private @Nullable Object userScopeFilterUri;
+        private Office365SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Office365SourceResponse();
         }
 
         public Builder(Office365SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedGroups = defaults.allowedGroups;
-    	      this.dateFilterColumn = defaults.dateFilterColumn;
-    	      this.disableMetricsCollection = defaults.disableMetricsCollection;
-    	      this.endTime = defaults.endTime;
-    	      this.maxConcurrentConnections = defaults.maxConcurrentConnections;
-    	      this.outputColumns = defaults.outputColumns;
-    	      this.sourceRetryCount = defaults.sourceRetryCount;
-    	      this.sourceRetryWait = defaults.sourceRetryWait;
-    	      this.startTime = defaults.startTime;
-    	      this.type = defaults.type;
-    	      this.userScopeFilterUri = defaults.userScopeFilterUri;
+            $ = new Office365SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedGroups(@Nullable Object allowedGroups) {
-            this.allowedGroups = allowedGroups;
+            $.allowedGroups = allowedGroups;
             return this;
         }
+
         public Builder dateFilterColumn(@Nullable Object dateFilterColumn) {
-            this.dateFilterColumn = dateFilterColumn;
+            $.dateFilterColumn = dateFilterColumn;
             return this;
         }
+
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = disableMetricsCollection;
+            $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
+
         public Builder endTime(@Nullable Object endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
+
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = maxConcurrentConnections;
+            $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
+
         public Builder outputColumns(@Nullable Object outputColumns) {
-            this.outputColumns = outputColumns;
+            $.outputColumns = outputColumns;
             return this;
         }
+
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = sourceRetryCount;
+            $.sourceRetryCount = sourceRetryCount;
             return this;
         }
+
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = sourceRetryWait;
+            $.sourceRetryWait = sourceRetryWait;
             return this;
         }
+
         public Builder startTime(@Nullable Object startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder userScopeFilterUri(@Nullable Object userScopeFilterUri) {
-            this.userScopeFilterUri = userScopeFilterUri;
+            $.userScopeFilterUri = userScopeFilterUri;
             return this;
-        }        public Office365SourceResponse build() {
-            return new Office365SourceResponse(allowedGroups, dateFilterColumn, disableMetricsCollection, endTime, maxConcurrentConnections, outputColumns, sourceRetryCount, sourceRetryWait, startTime, type, userScopeFilterUri);
+        }
+
+        public Office365SourceResponse build() {
+            $.type = Codegen.stringProp("type").arg($.type).require();
+            return $;
         }
     }
+
 }

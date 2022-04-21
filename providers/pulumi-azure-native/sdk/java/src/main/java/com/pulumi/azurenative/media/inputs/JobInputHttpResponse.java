@@ -32,10 +32,10 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="baseUri")
-      private final @Nullable String baseUri;
+    private @Nullable String baseUri;
 
     public Optional<String> baseUri() {
-        return this.baseUri == null ? Optional.empty() : Optional.ofNullable(this.baseUri);
+        return Optional.ofNullable(this.baseUri);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="end")
-      private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
+    private @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
 
-    public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end() {
-        return this.end == null ? null : this.end;
+    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="files")
-      private final @Nullable List<String> files;
+    private @Nullable List<String> files;
 
-    public List<String> files() {
-        return this.files == null ? List.of() : this.files;
+    public Optional<List<String>> files() {
+        return Optional.ofNullable(this.files);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="inputDefinitions")
-      private final @Nullable List<Object> inputDefinitions;
+    private @Nullable List<Object> inputDefinitions;
 
-    public List<Object> inputDefinitions() {
-        return this.inputDefinitions == null ? List.of() : this.inputDefinitions;
+    public Optional<List<Object>> inputDefinitions() {
+        return Optional.ofNullable(this.inputDefinitions);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -99,106 +99,89 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="start")
-      private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
+    private @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    public Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start() {
-        return this.start == null ? null : this.start;
+    public Optional<Either<AbsoluteClipTimeResponse,UtcClipTimeResponse>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public JobInputHttpResponse(
-        @Nullable String baseUri,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @Nullable List<String> files,
-        @Nullable List<Object> inputDefinitions,
-        @Nullable String label,
-        String odataType,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
-        this.baseUri = baseUri;
-        this.end = end;
-        this.files = files;
-        this.inputDefinitions = inputDefinitions;
-        this.label = label;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.start = start;
-    }
+    private JobInputHttpResponse() {}
 
-    private JobInputHttpResponse() {
-        this.baseUri = null;
-        this.end = null;
-        this.files = List.of();
-        this.inputDefinitions = List.of();
-        this.label = null;
-        this.odataType = null;
-        this.start = null;
+    private JobInputHttpResponse(JobInputHttpResponse $) {
+        this.baseUri = $.baseUri;
+        this.end = $.end;
+        this.files = $.files;
+        this.inputDefinitions = $.inputDefinitions;
+        this.label = $.label;
+        this.odataType = $.odataType;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobInputHttpResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String baseUri;
-        private @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end;
-        private @Nullable List<String> files;
-        private @Nullable List<Object> inputDefinitions;
-        private @Nullable String label;
-        private String odataType;
-        private @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
+        private JobInputHttpResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobInputHttpResponse();
         }
 
         public Builder(JobInputHttpResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseUri = defaults.baseUri;
-    	      this.end = defaults.end;
-    	      this.files = defaults.files;
-    	      this.inputDefinitions = defaults.inputDefinitions;
-    	      this.label = defaults.label;
-    	      this.odataType = defaults.odataType;
-    	      this.start = defaults.start;
+            $ = new JobInputHttpResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseUri(@Nullable String baseUri) {
-            this.baseUri = baseUri;
+            $.baseUri = baseUri;
             return this;
         }
+
         public Builder end(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
+
         public Builder files(@Nullable List<String> files) {
-            this.files = files;
+            $.files = files;
             return this;
         }
+
         public Builder files(String... files) {
             return files(List.of(files));
         }
+
         public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
-            this.inputDefinitions = inputDefinitions;
+            $.inputDefinitions = inputDefinitions;
             return this;
         }
+
         public Builder inputDefinitions(Object... inputDefinitions) {
             return inputDefinitions(List.of(inputDefinitions));
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
-            this.start = start;
+            $.start = start;
             return this;
-        }        public JobInputHttpResponse build() {
-            return new JobInputHttpResponse(baseUri, end, files, inputDefinitions, label, odataType, start);
+        }
+
+        public JobInputHttpResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CardinalityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CardinalityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public CardinalityArgs(
-        @Nullable Output<Integer> number,
-        @Nullable Output<String> path) {
-        this.number = number;
-        this.path = path;
-    }
+    private CardinalityArgs() {}
 
-    private CardinalityArgs() {
-        this.number = Codegen.empty();
-        this.path = Codegen.empty();
+    private CardinalityArgs(CardinalityArgs $) {
+        this.number = $.number;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CardinalityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> number;
-        private @Nullable Output<String> path;
+        private CardinalityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CardinalityArgs();
         }
 
         public Builder(CardinalityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.number = defaults.number;
-    	      this.path = defaults.path;
+            $ = new CardinalityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public CardinalityArgs build() {
-            return new CardinalityArgs(number, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public CardinalityArgs build() {
+            return $;
         }
     }
+
 }

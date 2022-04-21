@@ -24,7 +24,7 @@ public final class ImportPipelineSourcePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="keyVaultUri", required=true)
-      private final String keyVaultUri;
+    private String keyVaultUri;
 
     public String keyVaultUri() {
         return this.keyVaultUri;
@@ -35,10 +35,10 @@ public final class ImportPipelineSourcePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="type")
-      private final @Nullable String type;
+    private @Nullable String type;
 
     public Optional<String> type() {
-        return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -48,64 +48,58 @@ public final class ImportPipelineSourcePropertiesResponse extends com.pulumi.res
      * 
      */
     @Import(name="uri")
-      private final @Nullable String uri;
+    private @Nullable String uri;
 
     public Optional<String> uri() {
-        return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
+        return Optional.ofNullable(this.uri);
     }
 
-    public ImportPipelineSourcePropertiesResponse(
-        String keyVaultUri,
-        @Nullable String type,
-        @Nullable String uri) {
-        this.keyVaultUri = Objects.requireNonNull(keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
-        this.type = Codegen.stringProp("type").arg(type).def("AzureStorageBlobContainer").getNullable();
-        this.uri = uri;
-    }
+    private ImportPipelineSourcePropertiesResponse() {}
 
-    private ImportPipelineSourcePropertiesResponse() {
-        this.keyVaultUri = null;
-        this.type = null;
-        this.uri = null;
+    private ImportPipelineSourcePropertiesResponse(ImportPipelineSourcePropertiesResponse $) {
+        this.keyVaultUri = $.keyVaultUri;
+        this.type = $.type;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImportPipelineSourcePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyVaultUri;
-        private @Nullable String type;
-        private @Nullable String uri;
+        private ImportPipelineSourcePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImportPipelineSourcePropertiesResponse();
         }
 
         public Builder(ImportPipelineSourcePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyVaultUri = defaults.keyVaultUri;
-    	      this.type = defaults.type;
-    	      this.uri = defaults.uri;
+            $ = new ImportPipelineSourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyVaultUri(String keyVaultUri) {
-            this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
+            $.keyVaultUri = keyVaultUri;
             return this;
         }
+
         public Builder type(@Nullable String type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
+
         public Builder uri(@Nullable String uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
-        }        public ImportPipelineSourcePropertiesResponse build() {
-            return new ImportPipelineSourcePropertiesResponse(keyVaultUri, type, uri);
+        }
+
+        public ImportPipelineSourcePropertiesResponse build() {
+            $.keyVaultUri = Objects.requireNonNull($.keyVaultUri, "expected parameter 'keyVaultUri' to be non-null");
+            $.type = Codegen.stringProp("type").arg($.type).def("AzureStorageBlobContainer").getNullable();
+            return $;
         }
     }
+
 }

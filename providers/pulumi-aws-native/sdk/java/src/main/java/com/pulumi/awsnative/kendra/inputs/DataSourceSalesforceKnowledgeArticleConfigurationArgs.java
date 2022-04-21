@@ -8,9 +8,9 @@ import com.pulumi.awsnative.kendra.inputs.DataSourceSalesforceCustomKnowledgeArt
 import com.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,96 +19,91 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
     public static final DataSourceSalesforceKnowledgeArticleConfigurationArgs Empty = new DataSourceSalesforceKnowledgeArticleConfigurationArgs();
 
     @Import(name="customKnowledgeArticleTypeConfigurations")
-      private final @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
+    private @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
 
-    public Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations() {
-        return this.customKnowledgeArticleTypeConfigurations == null ? Codegen.empty() : this.customKnowledgeArticleTypeConfigurations;
+    public Optional<Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>>> customKnowledgeArticleTypeConfigurations() {
+        return Optional.ofNullable(this.customKnowledgeArticleTypeConfigurations);
     }
 
     @Import(name="includedStates", required=true)
-      private final Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates;
+    private Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates;
 
     public Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates() {
         return this.includedStates;
     }
 
     @Import(name="standardKnowledgeArticleTypeConfiguration")
-      private final @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
+    private @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
 
-    public Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration() {
-        return this.standardKnowledgeArticleTypeConfiguration == null ? Codegen.empty() : this.standardKnowledgeArticleTypeConfiguration;
+    public Optional<Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs>> standardKnowledgeArticleTypeConfiguration() {
+        return Optional.ofNullable(this.standardKnowledgeArticleTypeConfiguration);
     }
 
-    public DataSourceSalesforceKnowledgeArticleConfigurationArgs(
-        @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations,
-        Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates,
-        @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration) {
-        this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
-        this.includedStates = Objects.requireNonNull(includedStates, "expected parameter 'includedStates' to be non-null");
-        this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
-    }
+    private DataSourceSalesforceKnowledgeArticleConfigurationArgs() {}
 
-    private DataSourceSalesforceKnowledgeArticleConfigurationArgs() {
-        this.customKnowledgeArticleTypeConfigurations = Codegen.empty();
-        this.includedStates = Codegen.empty();
-        this.standardKnowledgeArticleTypeConfiguration = Codegen.empty();
+    private DataSourceSalesforceKnowledgeArticleConfigurationArgs(DataSourceSalesforceKnowledgeArticleConfigurationArgs $) {
+        this.customKnowledgeArticleTypeConfigurations = $.customKnowledgeArticleTypeConfigurations;
+        this.includedStates = $.includedStates;
+        this.standardKnowledgeArticleTypeConfiguration = $.standardKnowledgeArticleTypeConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataSourceSalesforceKnowledgeArticleConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
-        private Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates;
-        private @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
+        private DataSourceSalesforceKnowledgeArticleConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataSourceSalesforceKnowledgeArticleConfigurationArgs();
         }
 
         public Builder(DataSourceSalesforceKnowledgeArticleConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customKnowledgeArticleTypeConfigurations = defaults.customKnowledgeArticleTypeConfigurations;
-    	      this.includedStates = defaults.includedStates;
-    	      this.standardKnowledgeArticleTypeConfiguration = defaults.standardKnowledgeArticleTypeConfiguration;
+            $ = new DataSourceSalesforceKnowledgeArticleConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customKnowledgeArticleTypeConfigurations(@Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations) {
-            this.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
+            $.customKnowledgeArticleTypeConfigurations = customKnowledgeArticleTypeConfigurations;
             return this;
         }
-        public Builder customKnowledgeArticleTypeConfigurations(@Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs> customKnowledgeArticleTypeConfigurations) {
-            this.customKnowledgeArticleTypeConfigurations = Codegen.ofNullable(customKnowledgeArticleTypeConfigurations);
-            return this;
+
+        public Builder customKnowledgeArticleTypeConfigurations(List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs> customKnowledgeArticleTypeConfigurations) {
+            return customKnowledgeArticleTypeConfigurations(Output.of(customKnowledgeArticleTypeConfigurations));
         }
+
         public Builder customKnowledgeArticleTypeConfigurations(DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs... customKnowledgeArticleTypeConfigurations) {
             return customKnowledgeArticleTypeConfigurations(List.of(customKnowledgeArticleTypeConfigurations));
         }
+
         public Builder includedStates(Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates) {
-            this.includedStates = Objects.requireNonNull(includedStates);
+            $.includedStates = includedStates;
             return this;
         }
+
         public Builder includedStates(List<DataSourceSalesforceKnowledgeArticleState> includedStates) {
-            this.includedStates = Output.of(Objects.requireNonNull(includedStates));
-            return this;
+            return includedStates(Output.of(includedStates));
         }
+
         public Builder includedStates(DataSourceSalesforceKnowledgeArticleState... includedStates) {
             return includedStates(List.of(includedStates));
         }
+
         public Builder standardKnowledgeArticleTypeConfiguration(@Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration) {
-            this.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
+            $.standardKnowledgeArticleTypeConfiguration = standardKnowledgeArticleTypeConfiguration;
             return this;
         }
-        public Builder standardKnowledgeArticleTypeConfiguration(@Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs standardKnowledgeArticleTypeConfiguration) {
-            this.standardKnowledgeArticleTypeConfiguration = Codegen.ofNullable(standardKnowledgeArticleTypeConfiguration);
-            return this;
-        }        public DataSourceSalesforceKnowledgeArticleConfigurationArgs build() {
-            return new DataSourceSalesforceKnowledgeArticleConfigurationArgs(customKnowledgeArticleTypeConfigurations, includedStates, standardKnowledgeArticleTypeConfiguration);
+
+        public Builder standardKnowledgeArticleTypeConfiguration(DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs standardKnowledgeArticleTypeConfiguration) {
+            return standardKnowledgeArticleTypeConfiguration(Output.of(standardKnowledgeArticleTypeConfiguration));
+        }
+
+        public DataSourceSalesforceKnowledgeArticleConfigurationArgs build() {
+            $.includedStates = Objects.requireNonNull($.includedStates, "expected parameter 'includedStates' to be non-null");
+            return $;
         }
     }
+
 }

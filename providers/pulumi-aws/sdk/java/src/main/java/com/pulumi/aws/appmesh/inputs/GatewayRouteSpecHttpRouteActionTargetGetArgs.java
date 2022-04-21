@@ -6,7 +6,6 @@ package com.pulumi.aws.appmesh.inputs;
 import com.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -19,49 +18,49 @@ public final class GatewayRouteSpecHttpRouteActionTargetGetArgs extends com.pulu
      * 
      */
     @Import(name="virtualService", required=true)
-      private final Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
+    private Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
 
     public Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService() {
         return this.virtualService;
     }
 
-    public GatewayRouteSpecHttpRouteActionTargetGetArgs(Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
-        this.virtualService = Objects.requireNonNull(virtualService, "expected parameter 'virtualService' to be non-null");
-    }
+    private GatewayRouteSpecHttpRouteActionTargetGetArgs() {}
 
-    private GatewayRouteSpecHttpRouteActionTargetGetArgs() {
-        this.virtualService = Codegen.empty();
+    private GatewayRouteSpecHttpRouteActionTargetGetArgs(GatewayRouteSpecHttpRouteActionTargetGetArgs $) {
+        this.virtualService = $.virtualService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayRouteSpecHttpRouteActionTargetGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService;
+        private GatewayRouteSpecHttpRouteActionTargetGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayRouteSpecHttpRouteActionTargetGetArgs();
         }
 
         public Builder(GatewayRouteSpecHttpRouteActionTargetGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.virtualService = defaults.virtualService;
+            $ = new GatewayRouteSpecHttpRouteActionTargetGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder virtualService(Output<GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs> virtualService) {
-            this.virtualService = Objects.requireNonNull(virtualService);
+            $.virtualService = virtualService;
             return this;
         }
+
         public Builder virtualService(GatewayRouteSpecHttpRouteActionTargetVirtualServiceGetArgs virtualService) {
-            this.virtualService = Output.of(Objects.requireNonNull(virtualService));
-            return this;
-        }        public GatewayRouteSpecHttpRouteActionTargetGetArgs build() {
-            return new GatewayRouteSpecHttpRouteActionTargetGetArgs(virtualService);
+            return virtualService(Output.of(virtualService));
+        }
+
+        public GatewayRouteSpecHttpRouteActionTargetGetArgs build() {
+            $.virtualService = Objects.requireNonNull($.virtualService, "expected parameter 'virtualService' to be non-null");
+            return $;
         }
     }
+
 }

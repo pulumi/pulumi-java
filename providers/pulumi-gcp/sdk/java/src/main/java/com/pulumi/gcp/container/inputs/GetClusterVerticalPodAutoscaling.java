@@ -13,45 +13,45 @@ public final class GetClusterVerticalPodAutoscaling extends com.pulumi.resources
     public static final GetClusterVerticalPodAutoscaling Empty = new GetClusterVerticalPodAutoscaling();
 
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public GetClusterVerticalPodAutoscaling(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private GetClusterVerticalPodAutoscaling() {}
 
-    private GetClusterVerticalPodAutoscaling() {
-        this.enabled = null;
+    private GetClusterVerticalPodAutoscaling(GetClusterVerticalPodAutoscaling $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetClusterVerticalPodAutoscaling defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private GetClusterVerticalPodAutoscaling $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetClusterVerticalPodAutoscaling();
         }
 
         public Builder(GetClusterVerticalPodAutoscaling defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new GetClusterVerticalPodAutoscaling(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public GetClusterVerticalPodAutoscaling build() {
-            return new GetClusterVerticalPodAutoscaling(enabled);
+        }
+
+        public GetClusterVerticalPodAutoscaling build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

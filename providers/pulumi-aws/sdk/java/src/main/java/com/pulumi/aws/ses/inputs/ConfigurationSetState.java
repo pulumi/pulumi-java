@@ -6,10 +6,10 @@ package com.pulumi.aws.ses.inputs;
 import com.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="arn")
-      private final @Nullable Output<String> arn;
+    private @Nullable Output<String> arn;
 
-    public Output<String> arn() {
-        return this.arn == null ? Codegen.empty() : this.arn;
+    public Optional<Output<String>> arn() {
+        return Optional.ofNullable(this.arn);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deliveryOptions")
-      private final @Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions;
+    private @Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions;
 
-    public Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions() {
-        return this.deliveryOptions == null ? Codegen.empty() : this.deliveryOptions;
+    public Optional<Output<ConfigurationSetDeliveryOptionsGetArgs>> deliveryOptions() {
+        return Optional.ofNullable(this.deliveryOptions);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="lastFreshStart")
-      private final @Nullable Output<String> lastFreshStart;
+    private @Nullable Output<String> lastFreshStart;
 
-    public Output<String> lastFreshStart() {
-        return this.lastFreshStart == null ? Codegen.empty() : this.lastFreshStart;
+    public Optional<Output<String>> lastFreshStart() {
+        return Optional.ofNullable(this.lastFreshStart);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="reputationMetricsEnabled")
-      private final @Nullable Output<Boolean> reputationMetricsEnabled;
+    private @Nullable Output<Boolean> reputationMetricsEnabled;
 
-    public Output<Boolean> reputationMetricsEnabled() {
-        return this.reputationMetricsEnabled == null ? Codegen.empty() : this.reputationMetricsEnabled;
+    public Optional<Output<Boolean>> reputationMetricsEnabled() {
+        return Optional.ofNullable(this.reputationMetricsEnabled);
     }
 
     /**
@@ -77,115 +77,98 @@ public final class ConfigurationSetState extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sendingEnabled")
-      private final @Nullable Output<Boolean> sendingEnabled;
+    private @Nullable Output<Boolean> sendingEnabled;
 
-    public Output<Boolean> sendingEnabled() {
-        return this.sendingEnabled == null ? Codegen.empty() : this.sendingEnabled;
+    public Optional<Output<Boolean>> sendingEnabled() {
+        return Optional.ofNullable(this.sendingEnabled);
     }
 
-    public ConfigurationSetState(
-        @Nullable Output<String> arn,
-        @Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions,
-        @Nullable Output<String> lastFreshStart,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> reputationMetricsEnabled,
-        @Nullable Output<Boolean> sendingEnabled) {
-        this.arn = arn;
-        this.deliveryOptions = deliveryOptions;
-        this.lastFreshStart = lastFreshStart;
-        this.name = name;
-        this.reputationMetricsEnabled = reputationMetricsEnabled;
-        this.sendingEnabled = sendingEnabled;
-    }
+    private ConfigurationSetState() {}
 
-    private ConfigurationSetState() {
-        this.arn = Codegen.empty();
-        this.deliveryOptions = Codegen.empty();
-        this.lastFreshStart = Codegen.empty();
-        this.name = Codegen.empty();
-        this.reputationMetricsEnabled = Codegen.empty();
-        this.sendingEnabled = Codegen.empty();
+    private ConfigurationSetState(ConfigurationSetState $) {
+        this.arn = $.arn;
+        this.deliveryOptions = $.deliveryOptions;
+        this.lastFreshStart = $.lastFreshStart;
+        this.name = $.name;
+        this.reputationMetricsEnabled = $.reputationMetricsEnabled;
+        this.sendingEnabled = $.sendingEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigurationSetState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> arn;
-        private @Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions;
-        private @Nullable Output<String> lastFreshStart;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> reputationMetricsEnabled;
-        private @Nullable Output<Boolean> sendingEnabled;
+        private ConfigurationSetState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigurationSetState();
         }
 
         public Builder(ConfigurationSetState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arn = defaults.arn;
-    	      this.deliveryOptions = defaults.deliveryOptions;
-    	      this.lastFreshStart = defaults.lastFreshStart;
-    	      this.name = defaults.name;
-    	      this.reputationMetricsEnabled = defaults.reputationMetricsEnabled;
-    	      this.sendingEnabled = defaults.sendingEnabled;
+            $ = new ConfigurationSetState(Objects.requireNonNull(defaults));
         }
 
         public Builder arn(@Nullable Output<String> arn) {
-            this.arn = arn;
+            $.arn = arn;
             return this;
         }
-        public Builder arn(@Nullable String arn) {
-            this.arn = Codegen.ofNullable(arn);
-            return this;
+
+        public Builder arn(String arn) {
+            return arn(Output.of(arn));
         }
+
         public Builder deliveryOptions(@Nullable Output<ConfigurationSetDeliveryOptionsGetArgs> deliveryOptions) {
-            this.deliveryOptions = deliveryOptions;
+            $.deliveryOptions = deliveryOptions;
             return this;
         }
-        public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsGetArgs deliveryOptions) {
-            this.deliveryOptions = Codegen.ofNullable(deliveryOptions);
-            return this;
+
+        public Builder deliveryOptions(ConfigurationSetDeliveryOptionsGetArgs deliveryOptions) {
+            return deliveryOptions(Output.of(deliveryOptions));
         }
+
         public Builder lastFreshStart(@Nullable Output<String> lastFreshStart) {
-            this.lastFreshStart = lastFreshStart;
+            $.lastFreshStart = lastFreshStart;
             return this;
         }
-        public Builder lastFreshStart(@Nullable String lastFreshStart) {
-            this.lastFreshStart = Codegen.ofNullable(lastFreshStart);
-            return this;
+
+        public Builder lastFreshStart(String lastFreshStart) {
+            return lastFreshStart(Output.of(lastFreshStart));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = reputationMetricsEnabled;
+            $.reputationMetricsEnabled = reputationMetricsEnabled;
             return this;
         }
-        public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = Codegen.ofNullable(reputationMetricsEnabled);
-            return this;
+
+        public Builder reputationMetricsEnabled(Boolean reputationMetricsEnabled) {
+            return reputationMetricsEnabled(Output.of(reputationMetricsEnabled));
         }
+
         public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
-            this.sendingEnabled = sendingEnabled;
+            $.sendingEnabled = sendingEnabled;
             return this;
         }
-        public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
-            this.sendingEnabled = Codegen.ofNullable(sendingEnabled);
-            return this;
-        }        public ConfigurationSetState build() {
-            return new ConfigurationSetState(arn, deliveryOptions, lastFreshStart, name, reputationMetricsEnabled, sendingEnabled);
+
+        public Builder sendingEnabled(Boolean sendingEnabled) {
+            return sendingEnabled(Output.of(sendingEnabled));
+        }
+
+        public ConfigurationSetState build() {
+            return $;
         }
     }
+
 }

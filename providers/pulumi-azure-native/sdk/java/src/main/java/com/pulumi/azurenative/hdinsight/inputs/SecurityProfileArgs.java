@@ -6,10 +6,10 @@ package com.pulumi.azurenative.hdinsight.inputs;
 import com.pulumi.azurenative.hdinsight.enums.DirectoryType;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="aaddsResourceId")
-      private final @Nullable Output<String> aaddsResourceId;
+    private @Nullable Output<String> aaddsResourceId;
 
-    public Output<String> aaddsResourceId() {
-        return this.aaddsResourceId == null ? Codegen.empty() : this.aaddsResourceId;
+    public Optional<Output<String>> aaddsResourceId() {
+        return Optional.ofNullable(this.aaddsResourceId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterUsersGroupDNs")
-      private final @Nullable Output<List<String>> clusterUsersGroupDNs;
+    private @Nullable Output<List<String>> clusterUsersGroupDNs;
 
-    public Output<List<String>> clusterUsersGroupDNs() {
-        return this.clusterUsersGroupDNs == null ? Codegen.empty() : this.clusterUsersGroupDNs;
+    public Optional<Output<List<String>>> clusterUsersGroupDNs() {
+        return Optional.ofNullable(this.clusterUsersGroupDNs);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="directoryType")
-      private final @Nullable Output<DirectoryType> directoryType;
+    private @Nullable Output<DirectoryType> directoryType;
 
-    public Output<DirectoryType> directoryType() {
-        return this.directoryType == null ? Codegen.empty() : this.directoryType;
+    public Optional<Output<DirectoryType>> directoryType() {
+        return Optional.ofNullable(this.directoryType);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domainUserPassword")
-      private final @Nullable Output<String> domainUserPassword;
+    private @Nullable Output<String> domainUserPassword;
 
-    public Output<String> domainUserPassword() {
-        return this.domainUserPassword == null ? Codegen.empty() : this.domainUserPassword;
+    public Optional<Output<String>> domainUserPassword() {
+        return Optional.ofNullable(this.domainUserPassword);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="domainUsername")
-      private final @Nullable Output<String> domainUsername;
+    private @Nullable Output<String> domainUsername;
 
-    public Output<String> domainUsername() {
-        return this.domainUsername == null ? Codegen.empty() : this.domainUsername;
+    public Optional<Output<String>> domainUsername() {
+        return Optional.ofNullable(this.domainUsername);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ldapsUrls")
-      private final @Nullable Output<List<String>> ldapsUrls;
+    private @Nullable Output<List<String>> ldapsUrls;
 
-    public Output<List<String>> ldapsUrls() {
-        return this.ldapsUrls == null ? Codegen.empty() : this.ldapsUrls;
+    public Optional<Output<List<String>>> ldapsUrls() {
+        return Optional.ofNullable(this.ldapsUrls);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="msiResourceId")
-      private final @Nullable Output<String> msiResourceId;
+    private @Nullable Output<String> msiResourceId;
 
-    public Output<String> msiResourceId() {
-        return this.msiResourceId == null ? Codegen.empty() : this.msiResourceId;
+    public Optional<Output<String>> msiResourceId() {
+        return Optional.ofNullable(this.msiResourceId);
     }
 
     /**
@@ -114,160 +114,136 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="organizationalUnitDN")
-      private final @Nullable Output<String> organizationalUnitDN;
+    private @Nullable Output<String> organizationalUnitDN;
 
-    public Output<String> organizationalUnitDN() {
-        return this.organizationalUnitDN == null ? Codegen.empty() : this.organizationalUnitDN;
+    public Optional<Output<String>> organizationalUnitDN() {
+        return Optional.ofNullable(this.organizationalUnitDN);
     }
 
-    public SecurityProfileArgs(
-        @Nullable Output<String> aaddsResourceId,
-        @Nullable Output<List<String>> clusterUsersGroupDNs,
-        @Nullable Output<DirectoryType> directoryType,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> domainUserPassword,
-        @Nullable Output<String> domainUsername,
-        @Nullable Output<List<String>> ldapsUrls,
-        @Nullable Output<String> msiResourceId,
-        @Nullable Output<String> organizationalUnitDN) {
-        this.aaddsResourceId = aaddsResourceId;
-        this.clusterUsersGroupDNs = clusterUsersGroupDNs;
-        this.directoryType = directoryType;
-        this.domain = domain;
-        this.domainUserPassword = domainUserPassword;
-        this.domainUsername = domainUsername;
-        this.ldapsUrls = ldapsUrls;
-        this.msiResourceId = msiResourceId;
-        this.organizationalUnitDN = organizationalUnitDN;
-    }
+    private SecurityProfileArgs() {}
 
-    private SecurityProfileArgs() {
-        this.aaddsResourceId = Codegen.empty();
-        this.clusterUsersGroupDNs = Codegen.empty();
-        this.directoryType = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.domainUserPassword = Codegen.empty();
-        this.domainUsername = Codegen.empty();
-        this.ldapsUrls = Codegen.empty();
-        this.msiResourceId = Codegen.empty();
-        this.organizationalUnitDN = Codegen.empty();
+    private SecurityProfileArgs(SecurityProfileArgs $) {
+        this.aaddsResourceId = $.aaddsResourceId;
+        this.clusterUsersGroupDNs = $.clusterUsersGroupDNs;
+        this.directoryType = $.directoryType;
+        this.domain = $.domain;
+        this.domainUserPassword = $.domainUserPassword;
+        this.domainUsername = $.domainUsername;
+        this.ldapsUrls = $.ldapsUrls;
+        this.msiResourceId = $.msiResourceId;
+        this.organizationalUnitDN = $.organizationalUnitDN;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aaddsResourceId;
-        private @Nullable Output<List<String>> clusterUsersGroupDNs;
-        private @Nullable Output<DirectoryType> directoryType;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> domainUserPassword;
-        private @Nullable Output<String> domainUsername;
-        private @Nullable Output<List<String>> ldapsUrls;
-        private @Nullable Output<String> msiResourceId;
-        private @Nullable Output<String> organizationalUnitDN;
+        private SecurityProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityProfileArgs();
         }
 
         public Builder(SecurityProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aaddsResourceId = defaults.aaddsResourceId;
-    	      this.clusterUsersGroupDNs = defaults.clusterUsersGroupDNs;
-    	      this.directoryType = defaults.directoryType;
-    	      this.domain = defaults.domain;
-    	      this.domainUserPassword = defaults.domainUserPassword;
-    	      this.domainUsername = defaults.domainUsername;
-    	      this.ldapsUrls = defaults.ldapsUrls;
-    	      this.msiResourceId = defaults.msiResourceId;
-    	      this.organizationalUnitDN = defaults.organizationalUnitDN;
+            $ = new SecurityProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aaddsResourceId(@Nullable Output<String> aaddsResourceId) {
-            this.aaddsResourceId = aaddsResourceId;
+            $.aaddsResourceId = aaddsResourceId;
             return this;
         }
-        public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
-            this.aaddsResourceId = Codegen.ofNullable(aaddsResourceId);
-            return this;
+
+        public Builder aaddsResourceId(String aaddsResourceId) {
+            return aaddsResourceId(Output.of(aaddsResourceId));
         }
+
         public Builder clusterUsersGroupDNs(@Nullable Output<List<String>> clusterUsersGroupDNs) {
-            this.clusterUsersGroupDNs = clusterUsersGroupDNs;
+            $.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
-        public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
-            this.clusterUsersGroupDNs = Codegen.ofNullable(clusterUsersGroupDNs);
-            return this;
+
+        public Builder clusterUsersGroupDNs(List<String> clusterUsersGroupDNs) {
+            return clusterUsersGroupDNs(Output.of(clusterUsersGroupDNs));
         }
+
         public Builder clusterUsersGroupDNs(String... clusterUsersGroupDNs) {
             return clusterUsersGroupDNs(List.of(clusterUsersGroupDNs));
         }
+
         public Builder directoryType(@Nullable Output<DirectoryType> directoryType) {
-            this.directoryType = directoryType;
+            $.directoryType = directoryType;
             return this;
         }
-        public Builder directoryType(@Nullable DirectoryType directoryType) {
-            this.directoryType = Codegen.ofNullable(directoryType);
-            return this;
+
+        public Builder directoryType(DirectoryType directoryType) {
+            return directoryType(Output.of(directoryType));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder domainUserPassword(@Nullable Output<String> domainUserPassword) {
-            this.domainUserPassword = domainUserPassword;
+            $.domainUserPassword = domainUserPassword;
             return this;
         }
-        public Builder domainUserPassword(@Nullable String domainUserPassword) {
-            this.domainUserPassword = Codegen.ofNullable(domainUserPassword);
-            return this;
+
+        public Builder domainUserPassword(String domainUserPassword) {
+            return domainUserPassword(Output.of(domainUserPassword));
         }
+
         public Builder domainUsername(@Nullable Output<String> domainUsername) {
-            this.domainUsername = domainUsername;
+            $.domainUsername = domainUsername;
             return this;
         }
-        public Builder domainUsername(@Nullable String domainUsername) {
-            this.domainUsername = Codegen.ofNullable(domainUsername);
-            return this;
+
+        public Builder domainUsername(String domainUsername) {
+            return domainUsername(Output.of(domainUsername));
         }
+
         public Builder ldapsUrls(@Nullable Output<List<String>> ldapsUrls) {
-            this.ldapsUrls = ldapsUrls;
+            $.ldapsUrls = ldapsUrls;
             return this;
         }
-        public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
-            this.ldapsUrls = Codegen.ofNullable(ldapsUrls);
-            return this;
+
+        public Builder ldapsUrls(List<String> ldapsUrls) {
+            return ldapsUrls(Output.of(ldapsUrls));
         }
+
         public Builder ldapsUrls(String... ldapsUrls) {
             return ldapsUrls(List.of(ldapsUrls));
         }
+
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
-            this.msiResourceId = msiResourceId;
+            $.msiResourceId = msiResourceId;
             return this;
         }
-        public Builder msiResourceId(@Nullable String msiResourceId) {
-            this.msiResourceId = Codegen.ofNullable(msiResourceId);
-            return this;
+
+        public Builder msiResourceId(String msiResourceId) {
+            return msiResourceId(Output.of(msiResourceId));
         }
+
         public Builder organizationalUnitDN(@Nullable Output<String> organizationalUnitDN) {
-            this.organizationalUnitDN = organizationalUnitDN;
+            $.organizationalUnitDN = organizationalUnitDN;
             return this;
         }
-        public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
-            this.organizationalUnitDN = Codegen.ofNullable(organizationalUnitDN);
-            return this;
-        }        public SecurityProfileArgs build() {
-            return new SecurityProfileArgs(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
+
+        public Builder organizationalUnitDN(String organizationalUnitDN) {
+            return organizationalUnitDN(Output.of(organizationalUnitDN));
+        }
+
+        public SecurityProfileArgs build() {
+            return $;
         }
     }
+
 }

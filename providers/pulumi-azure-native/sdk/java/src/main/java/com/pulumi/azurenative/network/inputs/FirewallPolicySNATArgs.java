@@ -5,10 +5,10 @@ package com.pulumi.azurenative.network.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class FirewallPolicySNATArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="privateRanges")
-      private final @Nullable Output<List<String>> privateRanges;
+    private @Nullable Output<List<String>> privateRanges;
 
-    public Output<List<String>> privateRanges() {
-        return this.privateRanges == null ? Codegen.empty() : this.privateRanges;
+    public Optional<Output<List<String>>> privateRanges() {
+        return Optional.ofNullable(this.privateRanges);
     }
 
-    public FirewallPolicySNATArgs(@Nullable Output<List<String>> privateRanges) {
-        this.privateRanges = privateRanges;
-    }
+    private FirewallPolicySNATArgs() {}
 
-    private FirewallPolicySNATArgs() {
-        this.privateRanges = Codegen.empty();
+    private FirewallPolicySNATArgs(FirewallPolicySNATArgs $) {
+        this.privateRanges = $.privateRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicySNATArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> privateRanges;
+        private FirewallPolicySNATArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicySNATArgs();
         }
 
         public Builder(FirewallPolicySNATArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateRanges = defaults.privateRanges;
+            $ = new FirewallPolicySNATArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateRanges(@Nullable Output<List<String>> privateRanges) {
-            this.privateRanges = privateRanges;
+            $.privateRanges = privateRanges;
             return this;
         }
-        public Builder privateRanges(@Nullable List<String> privateRanges) {
-            this.privateRanges = Codegen.ofNullable(privateRanges);
-            return this;
+
+        public Builder privateRanges(List<String> privateRanges) {
+            return privateRanges(Output.of(privateRanges));
         }
+
         public Builder privateRanges(String... privateRanges) {
             return privateRanges(List.of(privateRanges));
-        }        public FirewallPolicySNATArgs build() {
-            return new FirewallPolicySNATArgs(privateRanges);
+        }
+
+        public FirewallPolicySNATArgs build() {
+            return $;
         }
     }
+
 }

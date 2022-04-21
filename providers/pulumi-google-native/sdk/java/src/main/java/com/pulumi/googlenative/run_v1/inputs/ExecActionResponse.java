@@ -22,48 +22,49 @@ public final class ExecActionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="command", required=true)
-      private final List<String> command;
+    private List<String> command;
 
     public List<String> command() {
         return this.command;
     }
 
-    public ExecActionResponse(List<String> command) {
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-    }
+    private ExecActionResponse() {}
 
-    private ExecActionResponse() {
-        this.command = List.of();
+    private ExecActionResponse(ExecActionResponse $) {
+        this.command = $.command;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> command;
+        private ExecActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecActionResponse();
         }
 
         public Builder(ExecActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.command = defaults.command;
+            $ = new ExecActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder command(List<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
-        }        public ExecActionResponse build() {
-            return new ExecActionResponse(command);
+        }
+
+        public ExecActionResponse build() {
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            return $;
         }
     }
+
 }

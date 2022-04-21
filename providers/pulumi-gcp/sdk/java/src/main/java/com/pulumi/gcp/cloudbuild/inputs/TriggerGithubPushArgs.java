@@ -5,10 +5,10 @@ package com.pulumi.gcp.cloudbuild.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="branch")
-      private final @Nullable Output<String> branch;
+    private @Nullable Output<String> branch;
 
-    public Output<String> branch() {
-        return this.branch == null ? Codegen.empty() : this.branch;
+    public Optional<Output<String>> branch() {
+        return Optional.ofNullable(this.branch);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="invertRegex")
-      private final @Nullable Output<Boolean> invertRegex;
+    private @Nullable Output<Boolean> invertRegex;
 
-    public Output<Boolean> invertRegex() {
-        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
+    public Optional<Output<Boolean>> invertRegex() {
+        return Optional.ofNullable(this.invertRegex);
     }
 
     /**
@@ -43,76 +43,68 @@ public final class TriggerGithubPushArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public TriggerGithubPushArgs(
-        @Nullable Output<String> branch,
-        @Nullable Output<Boolean> invertRegex,
-        @Nullable Output<String> tag) {
-        this.branch = branch;
-        this.invertRegex = invertRegex;
-        this.tag = tag;
-    }
+    private TriggerGithubPushArgs() {}
 
-    private TriggerGithubPushArgs() {
-        this.branch = Codegen.empty();
-        this.invertRegex = Codegen.empty();
-        this.tag = Codegen.empty();
+    private TriggerGithubPushArgs(TriggerGithubPushArgs $) {
+        this.branch = $.branch;
+        this.invertRegex = $.invertRegex;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerGithubPushArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> branch;
-        private @Nullable Output<Boolean> invertRegex;
-        private @Nullable Output<String> tag;
+        private TriggerGithubPushArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerGithubPushArgs();
         }
 
         public Builder(TriggerGithubPushArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.invertRegex = defaults.invertRegex;
-    	      this.tag = defaults.tag;
+            $ = new TriggerGithubPushArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(@Nullable Output<String> branch) {
-            this.branch = branch;
+            $.branch = branch;
             return this;
         }
-        public Builder branch(@Nullable String branch) {
-            this.branch = Codegen.ofNullable(branch);
-            return this;
+
+        public Builder branch(String branch) {
+            return branch(Output.of(branch));
         }
+
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
-            this.invertRegex = invertRegex;
+            $.invertRegex = invertRegex;
             return this;
         }
-        public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Codegen.ofNullable(invertRegex);
-            return this;
+
+        public Builder invertRegex(Boolean invertRegex) {
+            return invertRegex(Output.of(invertRegex));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public TriggerGithubPushArgs build() {
-            return new TriggerGithubPushArgs(branch, invertRegex, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public TriggerGithubPushArgs build() {
+            return $;
         }
     }
+
 }

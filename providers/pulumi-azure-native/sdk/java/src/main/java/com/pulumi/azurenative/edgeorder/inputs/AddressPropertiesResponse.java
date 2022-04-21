@@ -25,7 +25,7 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="addressValidationStatus", required=true)
-      private final String addressValidationStatus;
+    private String addressValidationStatus;
 
     public String addressValidationStatus() {
         return this.addressValidationStatus;
@@ -36,7 +36,7 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="contactDetails", required=true)
-      private final ContactDetailsResponse contactDetails;
+    private ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
@@ -47,64 +47,58 @@ public final class AddressPropertiesResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="shippingAddress")
-      private final @Nullable ShippingAddressResponse shippingAddress;
+    private @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> shippingAddress() {
-        return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    public AddressPropertiesResponse(
-        String addressValidationStatus,
-        ContactDetailsResponse contactDetails,
-        @Nullable ShippingAddressResponse shippingAddress) {
-        this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus, "expected parameter 'addressValidationStatus' to be non-null");
-        this.contactDetails = Objects.requireNonNull(contactDetails, "expected parameter 'contactDetails' to be non-null");
-        this.shippingAddress = shippingAddress;
-    }
+    private AddressPropertiesResponse() {}
 
-    private AddressPropertiesResponse() {
-        this.addressValidationStatus = null;
-        this.contactDetails = null;
-        this.shippingAddress = null;
+    private AddressPropertiesResponse(AddressPropertiesResponse $) {
+        this.addressValidationStatus = $.addressValidationStatus;
+        this.contactDetails = $.contactDetails;
+        this.shippingAddress = $.shippingAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String addressValidationStatus;
-        private ContactDetailsResponse contactDetails;
-        private @Nullable ShippingAddressResponse shippingAddress;
+        private AddressPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressPropertiesResponse();
         }
 
         public Builder(AddressPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressValidationStatus = defaults.addressValidationStatus;
-    	      this.contactDetails = defaults.contactDetails;
-    	      this.shippingAddress = defaults.shippingAddress;
+            $ = new AddressPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder addressValidationStatus(String addressValidationStatus) {
-            this.addressValidationStatus = Objects.requireNonNull(addressValidationStatus);
+            $.addressValidationStatus = addressValidationStatus;
             return this;
         }
+
         public Builder contactDetails(ContactDetailsResponse contactDetails) {
-            this.contactDetails = Objects.requireNonNull(contactDetails);
+            $.contactDetails = contactDetails;
             return this;
         }
+
         public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
-            this.shippingAddress = shippingAddress;
+            $.shippingAddress = shippingAddress;
             return this;
-        }        public AddressPropertiesResponse build() {
-            return new AddressPropertiesResponse(addressValidationStatus, contactDetails, shippingAddress);
+        }
+
+        public AddressPropertiesResponse build() {
+            $.addressValidationStatus = Objects.requireNonNull($.addressValidationStatus, "expected parameter 'addressValidationStatus' to be non-null");
+            $.contactDetails = Objects.requireNonNull($.contactDetails, "expected parameter 'contactDetails' to be non-null");
+            return $;
         }
     }
+
 }

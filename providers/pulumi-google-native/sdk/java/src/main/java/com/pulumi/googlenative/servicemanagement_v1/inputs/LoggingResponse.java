@@ -22,7 +22,7 @@ public final class LoggingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="consumerDestinations", required=true)
-      private final List<LoggingDestinationResponse> consumerDestinations;
+    private List<LoggingDestinationResponse> consumerDestinations;
 
     public List<LoggingDestinationResponse> consumerDestinations() {
         return this.consumerDestinations;
@@ -33,61 +33,60 @@ public final class LoggingResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="producerDestinations", required=true)
-      private final List<LoggingDestinationResponse> producerDestinations;
+    private List<LoggingDestinationResponse> producerDestinations;
 
     public List<LoggingDestinationResponse> producerDestinations() {
         return this.producerDestinations;
     }
 
-    public LoggingResponse(
-        List<LoggingDestinationResponse> consumerDestinations,
-        List<LoggingDestinationResponse> producerDestinations) {
-        this.consumerDestinations = Objects.requireNonNull(consumerDestinations, "expected parameter 'consumerDestinations' to be non-null");
-        this.producerDestinations = Objects.requireNonNull(producerDestinations, "expected parameter 'producerDestinations' to be non-null");
-    }
+    private LoggingResponse() {}
 
-    private LoggingResponse() {
-        this.consumerDestinations = List.of();
-        this.producerDestinations = List.of();
+    private LoggingResponse(LoggingResponse $) {
+        this.consumerDestinations = $.consumerDestinations;
+        this.producerDestinations = $.producerDestinations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<LoggingDestinationResponse> consumerDestinations;
-        private List<LoggingDestinationResponse> producerDestinations;
+        private LoggingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingResponse();
         }
 
         public Builder(LoggingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerDestinations = defaults.consumerDestinations;
-    	      this.producerDestinations = defaults.producerDestinations;
+            $ = new LoggingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerDestinations(List<LoggingDestinationResponse> consumerDestinations) {
-            this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
+            $.consumerDestinations = consumerDestinations;
             return this;
         }
+
         public Builder consumerDestinations(LoggingDestinationResponse... consumerDestinations) {
             return consumerDestinations(List.of(consumerDestinations));
         }
+
         public Builder producerDestinations(List<LoggingDestinationResponse> producerDestinations) {
-            this.producerDestinations = Objects.requireNonNull(producerDestinations);
+            $.producerDestinations = producerDestinations;
             return this;
         }
+
         public Builder producerDestinations(LoggingDestinationResponse... producerDestinations) {
             return producerDestinations(List.of(producerDestinations));
-        }        public LoggingResponse build() {
-            return new LoggingResponse(consumerDestinations, producerDestinations);
+        }
+
+        public LoggingResponse build() {
+            $.consumerDestinations = Objects.requireNonNull($.consumerDestinations, "expected parameter 'consumerDestinations' to be non-null");
+            $.producerDestinations = Objects.requireNonNull($.producerDestinations, "expected parameter 'producerDestinations' to be non-null");
+            return $;
         }
     }
+
 }

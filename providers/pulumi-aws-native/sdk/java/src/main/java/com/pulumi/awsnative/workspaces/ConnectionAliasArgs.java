@@ -6,10 +6,10 @@ package com.pulumi.awsnative.workspaces;
 import com.pulumi.awsnative.workspaces.inputs.ConnectionAliasTagArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,70 @@ public final class ConnectionAliasArgs extends com.pulumi.resources.ResourceArgs
     public static final ConnectionAliasArgs Empty = new ConnectionAliasArgs();
 
     @Import(name="connectionString", required=true)
-      private final Output<String> connectionString;
+    private Output<String> connectionString;
 
     public Output<String> connectionString() {
         return this.connectionString;
     }
 
     @Import(name="tags")
-      private final @Nullable Output<List<ConnectionAliasTagArgs>> tags;
+    private @Nullable Output<List<ConnectionAliasTagArgs>> tags;
 
-    public Output<List<ConnectionAliasTagArgs>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<ConnectionAliasTagArgs>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
-    public ConnectionAliasArgs(
-        Output<String> connectionString,
-        @Nullable Output<List<ConnectionAliasTagArgs>> tags) {
-        this.connectionString = Objects.requireNonNull(connectionString, "expected parameter 'connectionString' to be non-null");
-        this.tags = tags;
-    }
+    private ConnectionAliasArgs() {}
 
-    private ConnectionAliasArgs() {
-        this.connectionString = Codegen.empty();
-        this.tags = Codegen.empty();
+    private ConnectionAliasArgs(ConnectionAliasArgs $) {
+        this.connectionString = $.connectionString;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionAliasArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> connectionString;
-        private @Nullable Output<List<ConnectionAliasTagArgs>> tags;
+        private ConnectionAliasArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionAliasArgs();
         }
 
         public Builder(ConnectionAliasArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionString = defaults.connectionString;
-    	      this.tags = defaults.tags;
+            $ = new ConnectionAliasArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionString(Output<String> connectionString) {
-            this.connectionString = Objects.requireNonNull(connectionString);
+            $.connectionString = connectionString;
             return this;
         }
+
         public Builder connectionString(String connectionString) {
-            this.connectionString = Output.of(Objects.requireNonNull(connectionString));
-            return this;
+            return connectionString(Output.of(connectionString));
         }
+
         public Builder tags(@Nullable Output<List<ConnectionAliasTagArgs>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<ConnectionAliasTagArgs> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<ConnectionAliasTagArgs> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(ConnectionAliasTagArgs... tags) {
             return tags(List.of(tags));
-        }        public ConnectionAliasArgs build() {
-            return new ConnectionAliasArgs(connectionString, tags);
+        }
+
+        public ConnectionAliasArgs build() {
+            $.connectionString = Objects.requireNonNull($.connectionString, "expected parameter 'connectionString' to be non-null");
+            return $;
         }
     }
+
 }

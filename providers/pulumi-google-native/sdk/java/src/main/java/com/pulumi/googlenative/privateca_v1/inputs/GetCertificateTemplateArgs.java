@@ -15,78 +15,72 @@ public final class GetCertificateTemplateArgs extends com.pulumi.resources.Invok
     public static final GetCertificateTemplateArgs Empty = new GetCertificateTemplateArgs();
 
     @Import(name="certificateTemplateId", required=true)
-      private final String certificateTemplateId;
+    private String certificateTemplateId;
 
     public String certificateTemplateId() {
         return this.certificateTemplateId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCertificateTemplateArgs(
-        String certificateTemplateId,
-        String location,
-        @Nullable String project) {
-        this.certificateTemplateId = Objects.requireNonNull(certificateTemplateId, "expected parameter 'certificateTemplateId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetCertificateTemplateArgs() {}
 
-    private GetCertificateTemplateArgs() {
-        this.certificateTemplateId = null;
-        this.location = null;
-        this.project = null;
+    private GetCertificateTemplateArgs(GetCertificateTemplateArgs $) {
+        this.certificateTemplateId = $.certificateTemplateId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCertificateTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateTemplateId;
-        private String location;
-        private @Nullable String project;
+        private GetCertificateTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCertificateTemplateArgs();
         }
 
         public Builder(GetCertificateTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateTemplateId = defaults.certificateTemplateId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetCertificateTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateTemplateId(String certificateTemplateId) {
-            this.certificateTemplateId = Objects.requireNonNull(certificateTemplateId);
+            $.certificateTemplateId = certificateTemplateId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCertificateTemplateArgs build() {
-            return new GetCertificateTemplateArgs(certificateTemplateId, location, project);
+        }
+
+        public GetCertificateTemplateArgs build() {
+            $.certificateTemplateId = Objects.requireNonNull($.certificateTemplateId, "expected parameter 'certificateTemplateId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

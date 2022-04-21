@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CpuUtilizationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="aggregationWindowLength")
-      private final @Nullable Output<String> aggregationWindowLength;
+    private @Nullable Output<String> aggregationWindowLength;
 
-    public Output<String> aggregationWindowLength() {
-        return this.aggregationWindowLength == null ? Codegen.empty() : this.aggregationWindowLength;
+    public Optional<Output<String>> aggregationWindowLength() {
+        return Optional.ofNullable(this.aggregationWindowLength);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class CpuUtilizationArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetUtilization")
-      private final @Nullable Output<Double> targetUtilization;
+    private @Nullable Output<Double> targetUtilization;
 
-    public Output<Double> targetUtilization() {
-        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
+    public Optional<Output<Double>> targetUtilization() {
+        return Optional.ofNullable(this.targetUtilization);
     }
 
-    public CpuUtilizationArgs(
-        @Nullable Output<String> aggregationWindowLength,
-        @Nullable Output<Double> targetUtilization) {
-        this.aggregationWindowLength = aggregationWindowLength;
-        this.targetUtilization = targetUtilization;
-    }
+    private CpuUtilizationArgs() {}
 
-    private CpuUtilizationArgs() {
-        this.aggregationWindowLength = Codegen.empty();
-        this.targetUtilization = Codegen.empty();
+    private CpuUtilizationArgs(CpuUtilizationArgs $) {
+        this.aggregationWindowLength = $.aggregationWindowLength;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CpuUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> aggregationWindowLength;
-        private @Nullable Output<Double> targetUtilization;
+        private CpuUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CpuUtilizationArgs();
         }
 
         public Builder(CpuUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregationWindowLength = defaults.aggregationWindowLength;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new CpuUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregationWindowLength(@Nullable Output<String> aggregationWindowLength) {
-            this.aggregationWindowLength = aggregationWindowLength;
+            $.aggregationWindowLength = aggregationWindowLength;
             return this;
         }
-        public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
-            this.aggregationWindowLength = Codegen.ofNullable(aggregationWindowLength);
-            return this;
+
+        public Builder aggregationWindowLength(String aggregationWindowLength) {
+            return aggregationWindowLength(Output.of(aggregationWindowLength));
         }
+
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
-            this.targetUtilization = targetUtilization;
+            $.targetUtilization = targetUtilization;
             return this;
         }
-        public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Codegen.ofNullable(targetUtilization);
-            return this;
-        }        public CpuUtilizationArgs build() {
-            return new CpuUtilizationArgs(aggregationWindowLength, targetUtilization);
+
+        public Builder targetUtilization(Double targetUtilization) {
+            return targetUtilization(Output.of(targetUtilization));
+        }
+
+        public CpuUtilizationArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,78 +15,70 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     public static final ResourceTypeRegistrationPropertiesResponseResourceMovePolicy Empty = new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy();
 
     @Import(name="crossResourceGroupMoveEnabled")
-      private final @Nullable Boolean crossResourceGroupMoveEnabled;
+    private @Nullable Boolean crossResourceGroupMoveEnabled;
 
     public Optional<Boolean> crossResourceGroupMoveEnabled() {
-        return this.crossResourceGroupMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossResourceGroupMoveEnabled);
+        return Optional.ofNullable(this.crossResourceGroupMoveEnabled);
     }
 
     @Import(name="crossSubscriptionMoveEnabled")
-      private final @Nullable Boolean crossSubscriptionMoveEnabled;
+    private @Nullable Boolean crossSubscriptionMoveEnabled;
 
     public Optional<Boolean> crossSubscriptionMoveEnabled() {
-        return this.crossSubscriptionMoveEnabled == null ? Optional.empty() : Optional.ofNullable(this.crossSubscriptionMoveEnabled);
+        return Optional.ofNullable(this.crossSubscriptionMoveEnabled);
     }
 
     @Import(name="validationRequired")
-      private final @Nullable Boolean validationRequired;
+    private @Nullable Boolean validationRequired;
 
     public Optional<Boolean> validationRequired() {
-        return this.validationRequired == null ? Optional.empty() : Optional.ofNullable(this.validationRequired);
+        return Optional.ofNullable(this.validationRequired);
     }
 
-    public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(
-        @Nullable Boolean crossResourceGroupMoveEnabled,
-        @Nullable Boolean crossSubscriptionMoveEnabled,
-        @Nullable Boolean validationRequired) {
-        this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
-        this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
-        this.validationRequired = validationRequired;
-    }
+    private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy() {}
 
-    private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy() {
-        this.crossResourceGroupMoveEnabled = null;
-        this.crossSubscriptionMoveEnabled = null;
-        this.validationRequired = null;
+    private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(ResourceTypeRegistrationPropertiesResponseResourceMovePolicy $) {
+        this.crossResourceGroupMoveEnabled = $.crossResourceGroupMoveEnabled;
+        this.crossSubscriptionMoveEnabled = $.crossSubscriptionMoveEnabled;
+        this.validationRequired = $.validationRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceTypeRegistrationPropertiesResponseResourceMovePolicy defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Boolean crossResourceGroupMoveEnabled;
-        private @Nullable Boolean crossSubscriptionMoveEnabled;
-        private @Nullable Boolean validationRequired;
+        private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy();
         }
 
         public Builder(ResourceTypeRegistrationPropertiesResponseResourceMovePolicy defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crossResourceGroupMoveEnabled = defaults.crossResourceGroupMoveEnabled;
-    	      this.crossSubscriptionMoveEnabled = defaults.crossSubscriptionMoveEnabled;
-    	      this.validationRequired = defaults.validationRequired;
+            $ = new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(Objects.requireNonNull(defaults));
         }
 
         public Builder crossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
-            this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
+            $.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
             return this;
         }
+
         public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
-            this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
+            $.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
             return this;
         }
+
         public Builder validationRequired(@Nullable Boolean validationRequired) {
-            this.validationRequired = validationRequired;
+            $.validationRequired = validationRequired;
             return this;
-        }        public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
-            return new ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);
+        }
+
+        public ResourceTypeRegistrationPropertiesResponseResourceMovePolicy build() {
+            return $;
         }
     }
+
 }

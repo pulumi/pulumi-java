@@ -24,10 +24,10 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="familySequenceNumber")
-      private final @Nullable Integer familySequenceNumber;
+    private @Nullable Integer familySequenceNumber;
 
     public Optional<Integer> familySequenceNumber() {
-        return this.familySequenceNumber == null ? Optional.empty() : Optional.ofNullable(this.familySequenceNumber);
+        return Optional.ofNullable(this.familySequenceNumber);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fileLocation")
-      private final @Nullable String fileLocation;
+    private @Nullable String fileLocation;
 
     public Optional<String> fileLocation() {
-        return this.fileLocation == null ? Optional.empty() : Optional.ofNullable(this.fileLocation);
+        return Optional.ofNullable(this.fileLocation);
     }
 
     /**
@@ -46,64 +46,56 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="status")
-      private final @Nullable String status;
+    private @Nullable String status;
 
     public Optional<String> status() {
-        return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
+        return Optional.ofNullable(this.status);
     }
 
-    public BackupFileInfoResponse(
-        @Nullable Integer familySequenceNumber,
-        @Nullable String fileLocation,
-        @Nullable String status) {
-        this.familySequenceNumber = familySequenceNumber;
-        this.fileLocation = fileLocation;
-        this.status = status;
-    }
+    private BackupFileInfoResponse() {}
 
-    private BackupFileInfoResponse() {
-        this.familySequenceNumber = null;
-        this.fileLocation = null;
-        this.status = null;
+    private BackupFileInfoResponse(BackupFileInfoResponse $) {
+        this.familySequenceNumber = $.familySequenceNumber;
+        this.fileLocation = $.fileLocation;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupFileInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Integer familySequenceNumber;
-        private @Nullable String fileLocation;
-        private @Nullable String status;
+        private BackupFileInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupFileInfoResponse();
         }
 
         public Builder(BackupFileInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.familySequenceNumber = defaults.familySequenceNumber;
-    	      this.fileLocation = defaults.fileLocation;
-    	      this.status = defaults.status;
+            $ = new BackupFileInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder familySequenceNumber(@Nullable Integer familySequenceNumber) {
-            this.familySequenceNumber = familySequenceNumber;
+            $.familySequenceNumber = familySequenceNumber;
             return this;
         }
+
         public Builder fileLocation(@Nullable String fileLocation) {
-            this.fileLocation = fileLocation;
+            $.fileLocation = fileLocation;
             return this;
         }
+
         public Builder status(@Nullable String status) {
-            this.status = status;
+            $.status = status;
             return this;
-        }        public BackupFileInfoResponse build() {
-            return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
+        }
+
+        public BackupFileInfoResponse build() {
+            return $;
         }
     }
+
 }

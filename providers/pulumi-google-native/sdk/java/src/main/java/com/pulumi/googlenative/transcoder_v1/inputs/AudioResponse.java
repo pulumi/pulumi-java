@@ -22,7 +22,7 @@ public final class AudioResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="highBoost", required=true)
-      private final Boolean highBoost;
+    private Boolean highBoost;
 
     public Boolean highBoost() {
         return this.highBoost;
@@ -33,7 +33,7 @@ public final class AudioResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lowBoost", required=true)
-      private final Boolean lowBoost;
+    private Boolean lowBoost;
 
     public Boolean lowBoost() {
         return this.lowBoost;
@@ -44,64 +44,59 @@ public final class AudioResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lufs", required=true)
-      private final Double lufs;
+    private Double lufs;
 
     public Double lufs() {
         return this.lufs;
     }
 
-    public AudioResponse(
-        Boolean highBoost,
-        Boolean lowBoost,
-        Double lufs) {
-        this.highBoost = Objects.requireNonNull(highBoost, "expected parameter 'highBoost' to be non-null");
-        this.lowBoost = Objects.requireNonNull(lowBoost, "expected parameter 'lowBoost' to be non-null");
-        this.lufs = Objects.requireNonNull(lufs, "expected parameter 'lufs' to be non-null");
-    }
+    private AudioResponse() {}
 
-    private AudioResponse() {
-        this.highBoost = null;
-        this.lowBoost = null;
-        this.lufs = null;
+    private AudioResponse(AudioResponse $) {
+        this.highBoost = $.highBoost;
+        this.lowBoost = $.lowBoost;
+        this.lufs = $.lufs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean highBoost;
-        private Boolean lowBoost;
-        private Double lufs;
+        private AudioResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioResponse();
         }
 
         public Builder(AudioResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.highBoost = defaults.highBoost;
-    	      this.lowBoost = defaults.lowBoost;
-    	      this.lufs = defaults.lufs;
+            $ = new AudioResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder highBoost(Boolean highBoost) {
-            this.highBoost = Objects.requireNonNull(highBoost);
+            $.highBoost = highBoost;
             return this;
         }
+
         public Builder lowBoost(Boolean lowBoost) {
-            this.lowBoost = Objects.requireNonNull(lowBoost);
+            $.lowBoost = lowBoost;
             return this;
         }
+
         public Builder lufs(Double lufs) {
-            this.lufs = Objects.requireNonNull(lufs);
+            $.lufs = lufs;
             return this;
-        }        public AudioResponse build() {
-            return new AudioResponse(highBoost, lowBoost, lufs);
+        }
+
+        public AudioResponse build() {
+            $.highBoost = Objects.requireNonNull($.highBoost, "expected parameter 'highBoost' to be non-null");
+            $.lowBoost = Objects.requireNonNull($.lowBoost, "expected parameter 'lowBoost' to be non-null");
+            $.lufs = Objects.requireNonNull($.lufs, "expected parameter 'lufs' to be non-null");
+            return $;
         }
     }
+
 }

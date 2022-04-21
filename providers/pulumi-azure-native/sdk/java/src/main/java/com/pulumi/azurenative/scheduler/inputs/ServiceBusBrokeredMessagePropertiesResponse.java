@@ -20,10 +20,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="contentType")
-      private final @Nullable String contentType;
+    private @Nullable String contentType;
 
     public Optional<String> contentType() {
-        return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="correlationId")
-      private final @Nullable String correlationId;
+    private @Nullable String correlationId;
 
     public Optional<String> correlationId() {
-        return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
+        return Optional.ofNullable(this.correlationId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="forcePersistence")
-      private final @Nullable Boolean forcePersistence;
+    private @Nullable Boolean forcePersistence;
 
     public Optional<Boolean> forcePersistence() {
-        return this.forcePersistence == null ? Optional.empty() : Optional.ofNullable(this.forcePersistence);
+        return Optional.ofNullable(this.forcePersistence);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="messageId")
-      private final @Nullable String messageId;
+    private @Nullable String messageId;
 
     public Optional<String> messageId() {
-        return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
+        return Optional.ofNullable(this.messageId);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="partitionKey")
-      private final @Nullable String partitionKey;
+    private @Nullable String partitionKey;
 
     public Optional<String> partitionKey() {
-        return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
+        return Optional.ofNullable(this.partitionKey);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="replyTo")
-      private final @Nullable String replyTo;
+    private @Nullable String replyTo;
 
     public Optional<String> replyTo() {
-        return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
+        return Optional.ofNullable(this.replyTo);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="replyToSessionId")
-      private final @Nullable String replyToSessionId;
+    private @Nullable String replyToSessionId;
 
     public Optional<String> replyToSessionId() {
-        return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
+        return Optional.ofNullable(this.replyToSessionId);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="scheduledEnqueueTimeUtc")
-      private final @Nullable String scheduledEnqueueTimeUtc;
+    private @Nullable String scheduledEnqueueTimeUtc;
 
     public Optional<String> scheduledEnqueueTimeUtc() {
-        return this.scheduledEnqueueTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.scheduledEnqueueTimeUtc);
+        return Optional.ofNullable(this.scheduledEnqueueTimeUtc);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="sessionId")
-      private final @Nullable String sessionId;
+    private @Nullable String sessionId;
 
     public Optional<String> sessionId() {
-        return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
+        return Optional.ofNullable(this.sessionId);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="timeToLive")
-      private final @Nullable String timeToLive;
+    private @Nullable String timeToLive;
 
     public Optional<String> timeToLive() {
-        return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
+        return Optional.ofNullable(this.timeToLive);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="to")
-      private final @Nullable String to;
+    private @Nullable String to;
 
     public Optional<String> to() {
-        return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
+        return Optional.ofNullable(this.to);
     }
 
     /**
@@ -152,154 +152,116 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends com.pulum
      * 
      */
     @Import(name="viaPartitionKey")
-      private final @Nullable String viaPartitionKey;
+    private @Nullable String viaPartitionKey;
 
     public Optional<String> viaPartitionKey() {
-        return this.viaPartitionKey == null ? Optional.empty() : Optional.ofNullable(this.viaPartitionKey);
+        return Optional.ofNullable(this.viaPartitionKey);
     }
 
-    public ServiceBusBrokeredMessagePropertiesResponse(
-        @Nullable String contentType,
-        @Nullable String correlationId,
-        @Nullable Boolean forcePersistence,
-        @Nullable String label,
-        @Nullable String messageId,
-        @Nullable String partitionKey,
-        @Nullable String replyTo,
-        @Nullable String replyToSessionId,
-        @Nullable String scheduledEnqueueTimeUtc,
-        @Nullable String sessionId,
-        @Nullable String timeToLive,
-        @Nullable String to,
-        @Nullable String viaPartitionKey) {
-        this.contentType = contentType;
-        this.correlationId = correlationId;
-        this.forcePersistence = forcePersistence;
-        this.label = label;
-        this.messageId = messageId;
-        this.partitionKey = partitionKey;
-        this.replyTo = replyTo;
-        this.replyToSessionId = replyToSessionId;
-        this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
-        this.sessionId = sessionId;
-        this.timeToLive = timeToLive;
-        this.to = to;
-        this.viaPartitionKey = viaPartitionKey;
-    }
+    private ServiceBusBrokeredMessagePropertiesResponse() {}
 
-    private ServiceBusBrokeredMessagePropertiesResponse() {
-        this.contentType = null;
-        this.correlationId = null;
-        this.forcePersistence = null;
-        this.label = null;
-        this.messageId = null;
-        this.partitionKey = null;
-        this.replyTo = null;
-        this.replyToSessionId = null;
-        this.scheduledEnqueueTimeUtc = null;
-        this.sessionId = null;
-        this.timeToLive = null;
-        this.to = null;
-        this.viaPartitionKey = null;
+    private ServiceBusBrokeredMessagePropertiesResponse(ServiceBusBrokeredMessagePropertiesResponse $) {
+        this.contentType = $.contentType;
+        this.correlationId = $.correlationId;
+        this.forcePersistence = $.forcePersistence;
+        this.label = $.label;
+        this.messageId = $.messageId;
+        this.partitionKey = $.partitionKey;
+        this.replyTo = $.replyTo;
+        this.replyToSessionId = $.replyToSessionId;
+        this.scheduledEnqueueTimeUtc = $.scheduledEnqueueTimeUtc;
+        this.sessionId = $.sessionId;
+        this.timeToLive = $.timeToLive;
+        this.to = $.to;
+        this.viaPartitionKey = $.viaPartitionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBusBrokeredMessagePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String contentType;
-        private @Nullable String correlationId;
-        private @Nullable Boolean forcePersistence;
-        private @Nullable String label;
-        private @Nullable String messageId;
-        private @Nullable String partitionKey;
-        private @Nullable String replyTo;
-        private @Nullable String replyToSessionId;
-        private @Nullable String scheduledEnqueueTimeUtc;
-        private @Nullable String sessionId;
-        private @Nullable String timeToLive;
-        private @Nullable String to;
-        private @Nullable String viaPartitionKey;
+        private ServiceBusBrokeredMessagePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBusBrokeredMessagePropertiesResponse();
         }
 
         public Builder(ServiceBusBrokeredMessagePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentType = defaults.contentType;
-    	      this.correlationId = defaults.correlationId;
-    	      this.forcePersistence = defaults.forcePersistence;
-    	      this.label = defaults.label;
-    	      this.messageId = defaults.messageId;
-    	      this.partitionKey = defaults.partitionKey;
-    	      this.replyTo = defaults.replyTo;
-    	      this.replyToSessionId = defaults.replyToSessionId;
-    	      this.scheduledEnqueueTimeUtc = defaults.scheduledEnqueueTimeUtc;
-    	      this.sessionId = defaults.sessionId;
-    	      this.timeToLive = defaults.timeToLive;
-    	      this.to = defaults.to;
-    	      this.viaPartitionKey = defaults.viaPartitionKey;
+            $ = new ServiceBusBrokeredMessagePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
+
         public Builder correlationId(@Nullable String correlationId) {
-            this.correlationId = correlationId;
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder forcePersistence(@Nullable Boolean forcePersistence) {
-            this.forcePersistence = forcePersistence;
+            $.forcePersistence = forcePersistence;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder messageId(@Nullable String messageId) {
-            this.messageId = messageId;
+            $.messageId = messageId;
             return this;
         }
+
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = partitionKey;
+            $.partitionKey = partitionKey;
             return this;
         }
+
         public Builder replyTo(@Nullable String replyTo) {
-            this.replyTo = replyTo;
+            $.replyTo = replyTo;
             return this;
         }
+
         public Builder replyToSessionId(@Nullable String replyToSessionId) {
-            this.replyToSessionId = replyToSessionId;
+            $.replyToSessionId = replyToSessionId;
             return this;
         }
+
         public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
-            this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
+            $.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
             return this;
         }
+
         public Builder sessionId(@Nullable String sessionId) {
-            this.sessionId = sessionId;
+            $.sessionId = sessionId;
             return this;
         }
+
         public Builder timeToLive(@Nullable String timeToLive) {
-            this.timeToLive = timeToLive;
+            $.timeToLive = timeToLive;
             return this;
         }
+
         public Builder to(@Nullable String to) {
-            this.to = to;
+            $.to = to;
             return this;
         }
+
         public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
-            this.viaPartitionKey = viaPartitionKey;
+            $.viaPartitionKey = viaPartitionKey;
             return this;
-        }        public ServiceBusBrokeredMessagePropertiesResponse build() {
-            return new ServiceBusBrokeredMessagePropertiesResponse(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
+        }
+
+        public ServiceBusBrokeredMessagePropertiesResponse build() {
+            return $;
         }
     }
+
 }

@@ -17,7 +17,7 @@ public final class ListRunLogSasUrlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="registryName", required=true)
-      private final String registryName;
+    private String registryName;
 
     public String registryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class ListRunLogSasUrlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
@@ -39,64 +39,59 @@ public final class ListRunLogSasUrlArgs extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="runId", required=true)
-      private final String runId;
+    private String runId;
 
     public String runId() {
         return this.runId;
     }
 
-    public ListRunLogSasUrlArgs(
-        String registryName,
-        String resourceGroupName,
-        String runId) {
-        this.registryName = Objects.requireNonNull(registryName, "expected parameter 'registryName' to be non-null");
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.runId = Objects.requireNonNull(runId, "expected parameter 'runId' to be non-null");
-    }
+    private ListRunLogSasUrlArgs() {}
 
-    private ListRunLogSasUrlArgs() {
-        this.registryName = null;
-        this.resourceGroupName = null;
-        this.runId = null;
+    private ListRunLogSasUrlArgs(ListRunLogSasUrlArgs $) {
+        this.registryName = $.registryName;
+        this.resourceGroupName = $.resourceGroupName;
+        this.runId = $.runId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListRunLogSasUrlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String registryName;
-        private String resourceGroupName;
-        private String runId;
+        private ListRunLogSasUrlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListRunLogSasUrlArgs();
         }
 
         public Builder(ListRunLogSasUrlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.registryName = defaults.registryName;
-    	      this.resourceGroupName = defaults.resourceGroupName;
-    	      this.runId = defaults.runId;
+            $ = new ListRunLogSasUrlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder registryName(String registryName) {
-            this.registryName = Objects.requireNonNull(registryName);
+            $.registryName = registryName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder runId(String runId) {
-            this.runId = Objects.requireNonNull(runId);
+            $.runId = runId;
             return this;
-        }        public ListRunLogSasUrlArgs build() {
-            return new ListRunLogSasUrlArgs(registryName, resourceGroupName, runId);
+        }
+
+        public ListRunLogSasUrlArgs build() {
+            $.registryName = Objects.requireNonNull($.registryName, "expected parameter 'registryName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            $.runId = Objects.requireNonNull($.runId, "expected parameter 'runId' to be non-null");
+            return $;
         }
     }
+
 }

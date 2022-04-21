@@ -21,10 +21,10 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aliases")
-      private final @Nullable List<String> aliases;
+    private @Nullable List<String> aliases;
 
-    public List<String> aliases() {
-        return this.aliases == null ? List.of() : this.aliases;
+    public Optional<List<String>> aliases() {
+        return Optional.ofNullable(this.aliases);
     }
 
     /**
@@ -32,17 +32,17 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apps")
-      private final @Nullable List<String> apps;
+    private @Nullable List<String> apps;
 
-    public List<String> apps() {
-        return this.apps == null ? List.of() : this.apps;
+    public Optional<List<String>> apps() {
+        return Optional.ofNullable(this.apps);
     }
 
     @Import(name="meta")
-      private final @Nullable DatadogHostMetadataResponse meta;
+    private @Nullable DatadogHostMetadataResponse meta;
 
     public Optional<DatadogHostMetadataResponse> meta() {
-        return this.meta == null ? Optional.empty() : Optional.ofNullable(this.meta);
+        return Optional.ofNullable(this.meta);
     }
 
     /**
@@ -50,79 +50,70 @@ public final class DatadogHostResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
-    public DatadogHostResponse(
-        @Nullable List<String> aliases,
-        @Nullable List<String> apps,
-        @Nullable DatadogHostMetadataResponse meta,
-        @Nullable String name) {
-        this.aliases = aliases;
-        this.apps = apps;
-        this.meta = meta;
-        this.name = name;
-    }
+    private DatadogHostResponse() {}
 
-    private DatadogHostResponse() {
-        this.aliases = List.of();
-        this.apps = List.of();
-        this.meta = null;
-        this.name = null;
+    private DatadogHostResponse(DatadogHostResponse $) {
+        this.aliases = $.aliases;
+        this.apps = $.apps;
+        this.meta = $.meta;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatadogHostResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable List<String> aliases;
-        private @Nullable List<String> apps;
-        private @Nullable DatadogHostMetadataResponse meta;
-        private @Nullable String name;
+        private DatadogHostResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatadogHostResponse();
         }
 
         public Builder(DatadogHostResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliases = defaults.aliases;
-    	      this.apps = defaults.apps;
-    	      this.meta = defaults.meta;
-    	      this.name = defaults.name;
+            $ = new DatadogHostResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aliases(@Nullable List<String> aliases) {
-            this.aliases = aliases;
+            $.aliases = aliases;
             return this;
         }
+
         public Builder aliases(String... aliases) {
             return aliases(List.of(aliases));
         }
+
         public Builder apps(@Nullable List<String> apps) {
-            this.apps = apps;
+            $.apps = apps;
             return this;
         }
+
         public Builder apps(String... apps) {
             return apps(List.of(apps));
         }
+
         public Builder meta(@Nullable DatadogHostMetadataResponse meta) {
-            this.meta = meta;
+            $.meta = meta;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
-        }        public DatadogHostResponse build() {
-            return new DatadogHostResponse(aliases, apps, meta, name);
+        }
+
+        public DatadogHostResponse build() {
+            return $;
         }
     }
+
 }

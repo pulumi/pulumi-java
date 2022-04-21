@@ -7,12 +7,12 @@ import com.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsArgs;
 import com.pulumi.aws.cfg.inputs.RemediationConfigurationParameterArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="automatic")
-      private final @Nullable Output<Boolean> automatic;
+    private @Nullable Output<Boolean> automatic;
 
-    public Output<Boolean> automatic() {
-        return this.automatic == null ? Codegen.empty() : this.automatic;
+    public Optional<Output<Boolean>> automatic() {
+        return Optional.ofNullable(this.automatic);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="configRuleName", required=true)
-      private final Output<String> configRuleName;
+    private Output<String> configRuleName;
 
     public Output<String> configRuleName() {
         return this.configRuleName;
@@ -47,10 +47,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="executionControls")
-      private final @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
+    private @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
 
-    public Output<RemediationConfigurationExecutionControlsArgs> executionControls() {
-        return this.executionControls == null ? Codegen.empty() : this.executionControls;
+    public Optional<Output<RemediationConfigurationExecutionControlsArgs>> executionControls() {
+        return Optional.ofNullable(this.executionControls);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="maximumAutomaticAttempts")
-      private final @Nullable Output<Integer> maximumAutomaticAttempts;
+    private @Nullable Output<Integer> maximumAutomaticAttempts;
 
-    public Output<Integer> maximumAutomaticAttempts() {
-        return this.maximumAutomaticAttempts == null ? Codegen.empty() : this.maximumAutomaticAttempts;
+    public Optional<Output<Integer>> maximumAutomaticAttempts() {
+        return Optional.ofNullable(this.maximumAutomaticAttempts);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
+    private @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
 
-    public Output<List<RemediationConfigurationParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<RemediationConfigurationParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="retryAttemptSeconds")
-      private final @Nullable Output<Integer> retryAttemptSeconds;
+    private @Nullable Output<Integer> retryAttemptSeconds;
 
-    public Output<Integer> retryAttemptSeconds() {
-        return this.retryAttemptSeconds == null ? Codegen.empty() : this.retryAttemptSeconds;
+    public Optional<Output<Integer>> retryAttemptSeconds() {
+        return Optional.ofNullable(this.retryAttemptSeconds);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetId", required=true)
-      private final Output<String> targetId;
+    private Output<String> targetId;
 
     public Output<String> targetId() {
         return this.targetId;
@@ -113,7 +113,7 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetType", required=true)
-      private final Output<String> targetType;
+    private Output<String> targetType;
 
     public Output<String> targetType() {
         return this.targetType;
@@ -124,170 +124,145 @@ public final class RemediationConfigurationArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="targetVersion")
-      private final @Nullable Output<String> targetVersion;
+    private @Nullable Output<String> targetVersion;
 
-    public Output<String> targetVersion() {
-        return this.targetVersion == null ? Codegen.empty() : this.targetVersion;
+    public Optional<Output<String>> targetVersion() {
+        return Optional.ofNullable(this.targetVersion);
     }
 
-    public RemediationConfigurationArgs(
-        @Nullable Output<Boolean> automatic,
-        Output<String> configRuleName,
-        @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls,
-        @Nullable Output<Integer> maximumAutomaticAttempts,
-        @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters,
-        @Nullable Output<String> resourceType,
-        @Nullable Output<Integer> retryAttemptSeconds,
-        Output<String> targetId,
-        Output<String> targetType,
-        @Nullable Output<String> targetVersion) {
-        this.automatic = automatic;
-        this.configRuleName = Objects.requireNonNull(configRuleName, "expected parameter 'configRuleName' to be non-null");
-        this.executionControls = executionControls;
-        this.maximumAutomaticAttempts = maximumAutomaticAttempts;
-        this.parameters = parameters;
-        this.resourceType = resourceType;
-        this.retryAttemptSeconds = retryAttemptSeconds;
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-        this.targetType = Objects.requireNonNull(targetType, "expected parameter 'targetType' to be non-null");
-        this.targetVersion = targetVersion;
-    }
+    private RemediationConfigurationArgs() {}
 
-    private RemediationConfigurationArgs() {
-        this.automatic = Codegen.empty();
-        this.configRuleName = Codegen.empty();
-        this.executionControls = Codegen.empty();
-        this.maximumAutomaticAttempts = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.resourceType = Codegen.empty();
-        this.retryAttemptSeconds = Codegen.empty();
-        this.targetId = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.targetVersion = Codegen.empty();
+    private RemediationConfigurationArgs(RemediationConfigurationArgs $) {
+        this.automatic = $.automatic;
+        this.configRuleName = $.configRuleName;
+        this.executionControls = $.executionControls;
+        this.maximumAutomaticAttempts = $.maximumAutomaticAttempts;
+        this.parameters = $.parameters;
+        this.resourceType = $.resourceType;
+        this.retryAttemptSeconds = $.retryAttemptSeconds;
+        this.targetId = $.targetId;
+        this.targetType = $.targetType;
+        this.targetVersion = $.targetVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RemediationConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> automatic;
-        private Output<String> configRuleName;
-        private @Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls;
-        private @Nullable Output<Integer> maximumAutomaticAttempts;
-        private @Nullable Output<List<RemediationConfigurationParameterArgs>> parameters;
-        private @Nullable Output<String> resourceType;
-        private @Nullable Output<Integer> retryAttemptSeconds;
-        private Output<String> targetId;
-        private Output<String> targetType;
-        private @Nullable Output<String> targetVersion;
+        private RemediationConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RemediationConfigurationArgs();
         }
 
         public Builder(RemediationConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.configRuleName = defaults.configRuleName;
-    	      this.executionControls = defaults.executionControls;
-    	      this.maximumAutomaticAttempts = defaults.maximumAutomaticAttempts;
-    	      this.parameters = defaults.parameters;
-    	      this.resourceType = defaults.resourceType;
-    	      this.retryAttemptSeconds = defaults.retryAttemptSeconds;
-    	      this.targetId = defaults.targetId;
-    	      this.targetType = defaults.targetType;
-    	      this.targetVersion = defaults.targetVersion;
+            $ = new RemediationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(@Nullable Output<Boolean> automatic) {
-            this.automatic = automatic;
+            $.automatic = automatic;
             return this;
         }
-        public Builder automatic(@Nullable Boolean automatic) {
-            this.automatic = Codegen.ofNullable(automatic);
-            return this;
+
+        public Builder automatic(Boolean automatic) {
+            return automatic(Output.of(automatic));
         }
+
         public Builder configRuleName(Output<String> configRuleName) {
-            this.configRuleName = Objects.requireNonNull(configRuleName);
+            $.configRuleName = configRuleName;
             return this;
         }
+
         public Builder configRuleName(String configRuleName) {
-            this.configRuleName = Output.of(Objects.requireNonNull(configRuleName));
-            return this;
+            return configRuleName(Output.of(configRuleName));
         }
+
         public Builder executionControls(@Nullable Output<RemediationConfigurationExecutionControlsArgs> executionControls) {
-            this.executionControls = executionControls;
+            $.executionControls = executionControls;
             return this;
         }
-        public Builder executionControls(@Nullable RemediationConfigurationExecutionControlsArgs executionControls) {
-            this.executionControls = Codegen.ofNullable(executionControls);
-            return this;
+
+        public Builder executionControls(RemediationConfigurationExecutionControlsArgs executionControls) {
+            return executionControls(Output.of(executionControls));
         }
+
         public Builder maximumAutomaticAttempts(@Nullable Output<Integer> maximumAutomaticAttempts) {
-            this.maximumAutomaticAttempts = maximumAutomaticAttempts;
+            $.maximumAutomaticAttempts = maximumAutomaticAttempts;
             return this;
         }
-        public Builder maximumAutomaticAttempts(@Nullable Integer maximumAutomaticAttempts) {
-            this.maximumAutomaticAttempts = Codegen.ofNullable(maximumAutomaticAttempts);
-            return this;
+
+        public Builder maximumAutomaticAttempts(Integer maximumAutomaticAttempts) {
+            return maximumAutomaticAttempts(Output.of(maximumAutomaticAttempts));
         }
+
         public Builder parameters(@Nullable Output<List<RemediationConfigurationParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<RemediationConfigurationParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<RemediationConfigurationParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(RemediationConfigurationParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
         }
+
         public Builder retryAttemptSeconds(@Nullable Output<Integer> retryAttemptSeconds) {
-            this.retryAttemptSeconds = retryAttemptSeconds;
+            $.retryAttemptSeconds = retryAttemptSeconds;
             return this;
         }
-        public Builder retryAttemptSeconds(@Nullable Integer retryAttemptSeconds) {
-            this.retryAttemptSeconds = Codegen.ofNullable(retryAttemptSeconds);
-            return this;
+
+        public Builder retryAttemptSeconds(Integer retryAttemptSeconds) {
+            return retryAttemptSeconds(Output.of(retryAttemptSeconds));
         }
+
         public Builder targetId(Output<String> targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Output.of(Objects.requireNonNull(targetId));
-            return this;
+            return targetId(Output.of(targetId));
         }
+
         public Builder targetType(Output<String> targetType) {
-            this.targetType = Objects.requireNonNull(targetType);
+            $.targetType = targetType;
             return this;
         }
+
         public Builder targetType(String targetType) {
-            this.targetType = Output.of(Objects.requireNonNull(targetType));
-            return this;
+            return targetType(Output.of(targetType));
         }
+
         public Builder targetVersion(@Nullable Output<String> targetVersion) {
-            this.targetVersion = targetVersion;
+            $.targetVersion = targetVersion;
             return this;
         }
-        public Builder targetVersion(@Nullable String targetVersion) {
-            this.targetVersion = Codegen.ofNullable(targetVersion);
-            return this;
-        }        public RemediationConfigurationArgs build() {
-            return new RemediationConfigurationArgs(automatic, configRuleName, executionControls, maximumAutomaticAttempts, parameters, resourceType, retryAttemptSeconds, targetId, targetType, targetVersion);
+
+        public Builder targetVersion(String targetVersion) {
+            return targetVersion(Output.of(targetVersion));
+        }
+
+        public RemediationConfigurationArgs build() {
+            $.configRuleName = Objects.requireNonNull($.configRuleName, "expected parameter 'configRuleName' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            $.targetType = Objects.requireNonNull($.targetType, "expected parameter 'targetType' to be non-null");
+            return $;
         }
     }
+
 }

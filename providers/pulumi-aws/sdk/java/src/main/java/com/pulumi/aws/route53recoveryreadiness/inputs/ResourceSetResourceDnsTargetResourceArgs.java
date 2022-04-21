@@ -6,9 +6,9 @@ package com.pulumi.aws.route53recoveryreadiness.inputs;
 import com.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -32,10 +32,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="hostedZoneArn")
-      private final @Nullable Output<String> hostedZoneArn;
+    private @Nullable Output<String> hostedZoneArn;
 
-    public Output<String> hostedZoneArn() {
-        return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
+    public Optional<Output<String>> hostedZoneArn() {
+        return Optional.ofNullable(this.hostedZoneArn);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="recordSetId")
-      private final @Nullable Output<String> recordSetId;
+    private @Nullable Output<String> recordSetId;
 
-    public Output<String> recordSetId() {
-        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
+    public Optional<Output<String>> recordSetId() {
+        return Optional.ofNullable(this.recordSetId);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="recordType")
-      private final @Nullable Output<String> recordType;
+    private @Nullable Output<String> recordType;
 
-    public Output<String> recordType() {
-        return this.recordType == null ? Codegen.empty() : this.recordType;
+    public Optional<Output<String>> recordType() {
+        return Optional.ofNullable(this.recordType);
     }
 
     /**
@@ -65,102 +65,89 @@ public final class ResourceSetResourceDnsTargetResourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="targetResource")
-      private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
+    private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
 
-    public Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource() {
-        return this.targetResource == null ? Codegen.empty() : this.targetResource;
+    public Optional<Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs>> targetResource() {
+        return Optional.ofNullable(this.targetResource);
     }
 
-    public ResourceSetResourceDnsTargetResourceArgs(
-        Output<String> domainName,
-        @Nullable Output<String> hostedZoneArn,
-        @Nullable Output<String> recordSetId,
-        @Nullable Output<String> recordType,
-        @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.hostedZoneArn = hostedZoneArn;
-        this.recordSetId = recordSetId;
-        this.recordType = recordType;
-        this.targetResource = targetResource;
-    }
+    private ResourceSetResourceDnsTargetResourceArgs() {}
 
-    private ResourceSetResourceDnsTargetResourceArgs() {
-        this.domainName = Codegen.empty();
-        this.hostedZoneArn = Codegen.empty();
-        this.recordSetId = Codegen.empty();
-        this.recordType = Codegen.empty();
-        this.targetResource = Codegen.empty();
+    private ResourceSetResourceDnsTargetResourceArgs(ResourceSetResourceDnsTargetResourceArgs $) {
+        this.domainName = $.domainName;
+        this.hostedZoneArn = $.hostedZoneArn;
+        this.recordSetId = $.recordSetId;
+        this.recordType = $.recordType;
+        this.targetResource = $.targetResource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSetResourceDnsTargetResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private @Nullable Output<String> hostedZoneArn;
-        private @Nullable Output<String> recordSetId;
-        private @Nullable Output<String> recordType;
-        private @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource;
+        private ResourceSetResourceDnsTargetResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSetResourceDnsTargetResourceArgs();
         }
 
         public Builder(ResourceSetResourceDnsTargetResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.hostedZoneArn = defaults.hostedZoneArn;
-    	      this.recordSetId = defaults.recordSetId;
-    	      this.recordType = defaults.recordType;
-    	      this.targetResource = defaults.targetResource;
+            $ = new ResourceSetResourceDnsTargetResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder hostedZoneArn(@Nullable Output<String> hostedZoneArn) {
-            this.hostedZoneArn = hostedZoneArn;
+            $.hostedZoneArn = hostedZoneArn;
             return this;
         }
-        public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Codegen.ofNullable(hostedZoneArn);
-            return this;
+
+        public Builder hostedZoneArn(String hostedZoneArn) {
+            return hostedZoneArn(Output.of(hostedZoneArn));
         }
+
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
-            this.recordSetId = recordSetId;
+            $.recordSetId = recordSetId;
             return this;
         }
-        public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Codegen.ofNullable(recordSetId);
-            return this;
+
+        public Builder recordSetId(String recordSetId) {
+            return recordSetId(Output.of(recordSetId));
         }
+
         public Builder recordType(@Nullable Output<String> recordType) {
-            this.recordType = recordType;
+            $.recordType = recordType;
             return this;
         }
-        public Builder recordType(@Nullable String recordType) {
-            this.recordType = Codegen.ofNullable(recordType);
-            return this;
+
+        public Builder recordType(String recordType) {
+            return recordType(Output.of(recordType));
         }
+
         public Builder targetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceArgs> targetResource) {
-            this.targetResource = targetResource;
+            $.targetResource = targetResource;
             return this;
         }
-        public Builder targetResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceArgs targetResource) {
-            this.targetResource = Codegen.ofNullable(targetResource);
-            return this;
-        }        public ResourceSetResourceDnsTargetResourceArgs build() {
-            return new ResourceSetResourceDnsTargetResourceArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);
+
+        public Builder targetResource(ResourceSetResourceDnsTargetResourceTargetResourceArgs targetResource) {
+            return targetResource(Output.of(targetResource));
+        }
+
+        public ResourceSetResourceDnsTargetResourceArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            return $;
         }
     }
+
 }

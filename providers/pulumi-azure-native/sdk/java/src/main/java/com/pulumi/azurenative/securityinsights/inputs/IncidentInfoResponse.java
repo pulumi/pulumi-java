@@ -23,10 +23,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="incidentId")
-      private final @Nullable String incidentId;
+    private @Nullable String incidentId;
 
     public Optional<String> incidentId() {
-        return this.incidentId == null ? Optional.empty() : Optional.ofNullable(this.incidentId);
+        return Optional.ofNullable(this.incidentId);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="relationName")
-      private final @Nullable String relationName;
+    private @Nullable String relationName;
 
     public Optional<String> relationName() {
-        return this.relationName == null ? Optional.empty() : Optional.ofNullable(this.relationName);
+        return Optional.ofNullable(this.relationName);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="severity")
-      private final @Nullable String severity;
+    private @Nullable String severity;
 
     public Optional<String> severity() {
-        return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -56,73 +56,62 @@ public final class IncidentInfoResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="title")
-      private final @Nullable String title;
+    private @Nullable String title;
 
     public Optional<String> title() {
-        return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
+        return Optional.ofNullable(this.title);
     }
 
-    public IncidentInfoResponse(
-        @Nullable String incidentId,
-        @Nullable String relationName,
-        @Nullable String severity,
-        @Nullable String title) {
-        this.incidentId = incidentId;
-        this.relationName = relationName;
-        this.severity = severity;
-        this.title = title;
-    }
+    private IncidentInfoResponse() {}
 
-    private IncidentInfoResponse() {
-        this.incidentId = null;
-        this.relationName = null;
-        this.severity = null;
-        this.title = null;
+    private IncidentInfoResponse(IncidentInfoResponse $) {
+        this.incidentId = $.incidentId;
+        this.relationName = $.relationName;
+        this.severity = $.severity;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IncidentInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String incidentId;
-        private @Nullable String relationName;
-        private @Nullable String severity;
-        private @Nullable String title;
+        private IncidentInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IncidentInfoResponse();
         }
 
         public Builder(IncidentInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incidentId = defaults.incidentId;
-    	      this.relationName = defaults.relationName;
-    	      this.severity = defaults.severity;
-    	      this.title = defaults.title;
+            $ = new IncidentInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder incidentId(@Nullable String incidentId) {
-            this.incidentId = incidentId;
+            $.incidentId = incidentId;
             return this;
         }
+
         public Builder relationName(@Nullable String relationName) {
-            this.relationName = relationName;
+            $.relationName = relationName;
             return this;
         }
+
         public Builder severity(@Nullable String severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
+
         public Builder title(@Nullable String title) {
-            this.title = title;
+            $.title = title;
             return this;
-        }        public IncidentInfoResponse build() {
-            return new IncidentInfoResponse(incidentId, relationName, severity, title);
+        }
+
+        public IncidentInfoResponse build() {
+            return $;
         }
     }
+
 }

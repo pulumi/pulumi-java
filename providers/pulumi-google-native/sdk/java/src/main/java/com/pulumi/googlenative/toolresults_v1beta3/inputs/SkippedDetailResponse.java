@@ -21,7 +21,7 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="incompatibleAppVersion", required=true)
-      private final Boolean incompatibleAppVersion;
+    private Boolean incompatibleAppVersion;
 
     public Boolean incompatibleAppVersion() {
         return this.incompatibleAppVersion;
@@ -32,7 +32,7 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="incompatibleArchitecture", required=true)
-      private final Boolean incompatibleArchitecture;
+    private Boolean incompatibleArchitecture;
 
     public Boolean incompatibleArchitecture() {
         return this.incompatibleArchitecture;
@@ -43,64 +43,59 @@ public final class SkippedDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="incompatibleDevice", required=true)
-      private final Boolean incompatibleDevice;
+    private Boolean incompatibleDevice;
 
     public Boolean incompatibleDevice() {
         return this.incompatibleDevice;
     }
 
-    public SkippedDetailResponse(
-        Boolean incompatibleAppVersion,
-        Boolean incompatibleArchitecture,
-        Boolean incompatibleDevice) {
-        this.incompatibleAppVersion = Objects.requireNonNull(incompatibleAppVersion, "expected parameter 'incompatibleAppVersion' to be non-null");
-        this.incompatibleArchitecture = Objects.requireNonNull(incompatibleArchitecture, "expected parameter 'incompatibleArchitecture' to be non-null");
-        this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice, "expected parameter 'incompatibleDevice' to be non-null");
-    }
+    private SkippedDetailResponse() {}
 
-    private SkippedDetailResponse() {
-        this.incompatibleAppVersion = null;
-        this.incompatibleArchitecture = null;
-        this.incompatibleDevice = null;
+    private SkippedDetailResponse(SkippedDetailResponse $) {
+        this.incompatibleAppVersion = $.incompatibleAppVersion;
+        this.incompatibleArchitecture = $.incompatibleArchitecture;
+        this.incompatibleDevice = $.incompatibleDevice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkippedDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean incompatibleAppVersion;
-        private Boolean incompatibleArchitecture;
-        private Boolean incompatibleDevice;
+        private SkippedDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkippedDetailResponse();
         }
 
         public Builder(SkippedDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incompatibleAppVersion = defaults.incompatibleAppVersion;
-    	      this.incompatibleArchitecture = defaults.incompatibleArchitecture;
-    	      this.incompatibleDevice = defaults.incompatibleDevice;
+            $ = new SkippedDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder incompatibleAppVersion(Boolean incompatibleAppVersion) {
-            this.incompatibleAppVersion = Objects.requireNonNull(incompatibleAppVersion);
+            $.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
+
         public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
-            this.incompatibleArchitecture = Objects.requireNonNull(incompatibleArchitecture);
+            $.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
+
         public Builder incompatibleDevice(Boolean incompatibleDevice) {
-            this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
+            $.incompatibleDevice = incompatibleDevice;
             return this;
-        }        public SkippedDetailResponse build() {
-            return new SkippedDetailResponse(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
+        }
+
+        public SkippedDetailResponse build() {
+            $.incompatibleAppVersion = Objects.requireNonNull($.incompatibleAppVersion, "expected parameter 'incompatibleAppVersion' to be non-null");
+            $.incompatibleArchitecture = Objects.requireNonNull($.incompatibleArchitecture, "expected parameter 'incompatibleArchitecture' to be non-null");
+            $.incompatibleDevice = Objects.requireNonNull($.incompatibleDevice, "expected parameter 'incompatibleDevice' to be non-null");
+            return $;
         }
     }
+
 }

@@ -7,7 +7,6 @@ import com.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchArgs;
 import com.pulumi.awsnative.wafv2.inputs.WebACLTextTransformationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,73 +20,71 @@ public final class WebACLXssMatchStatementArgs extends com.pulumi.resources.Reso
     public static final WebACLXssMatchStatementArgs Empty = new WebACLXssMatchStatementArgs();
 
     @Import(name="fieldToMatch", required=true)
-      private final Output<WebACLFieldToMatchArgs> fieldToMatch;
+    private Output<WebACLFieldToMatchArgs> fieldToMatch;
 
     public Output<WebACLFieldToMatchArgs> fieldToMatch() {
         return this.fieldToMatch;
     }
 
     @Import(name="textTransformations", required=true)
-      private final Output<List<WebACLTextTransformationArgs>> textTransformations;
+    private Output<List<WebACLTextTransformationArgs>> textTransformations;
 
     public Output<List<WebACLTextTransformationArgs>> textTransformations() {
         return this.textTransformations;
     }
 
-    public WebACLXssMatchStatementArgs(
-        Output<WebACLFieldToMatchArgs> fieldToMatch,
-        Output<List<WebACLTextTransformationArgs>> textTransformations) {
-        this.fieldToMatch = Objects.requireNonNull(fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
-        this.textTransformations = Objects.requireNonNull(textTransformations, "expected parameter 'textTransformations' to be non-null");
-    }
+    private WebACLXssMatchStatementArgs() {}
 
-    private WebACLXssMatchStatementArgs() {
-        this.fieldToMatch = Codegen.empty();
-        this.textTransformations = Codegen.empty();
+    private WebACLXssMatchStatementArgs(WebACLXssMatchStatementArgs $) {
+        this.fieldToMatch = $.fieldToMatch;
+        this.textTransformations = $.textTransformations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebACLXssMatchStatementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<WebACLFieldToMatchArgs> fieldToMatch;
-        private Output<List<WebACLTextTransformationArgs>> textTransformations;
+        private WebACLXssMatchStatementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebACLXssMatchStatementArgs();
         }
 
         public Builder(WebACLXssMatchStatementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldToMatch = defaults.fieldToMatch;
-    	      this.textTransformations = defaults.textTransformations;
+            $ = new WebACLXssMatchStatementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldToMatch(Output<WebACLFieldToMatchArgs> fieldToMatch) {
-            this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
+            $.fieldToMatch = fieldToMatch;
             return this;
         }
+
         public Builder fieldToMatch(WebACLFieldToMatchArgs fieldToMatch) {
-            this.fieldToMatch = Output.of(Objects.requireNonNull(fieldToMatch));
-            return this;
+            return fieldToMatch(Output.of(fieldToMatch));
         }
+
         public Builder textTransformations(Output<List<WebACLTextTransformationArgs>> textTransformations) {
-            this.textTransformations = Objects.requireNonNull(textTransformations);
+            $.textTransformations = textTransformations;
             return this;
         }
+
         public Builder textTransformations(List<WebACLTextTransformationArgs> textTransformations) {
-            this.textTransformations = Output.of(Objects.requireNonNull(textTransformations));
-            return this;
+            return textTransformations(Output.of(textTransformations));
         }
+
         public Builder textTransformations(WebACLTextTransformationArgs... textTransformations) {
             return textTransformations(List.of(textTransformations));
-        }        public WebACLXssMatchStatementArgs build() {
-            return new WebACLXssMatchStatementArgs(fieldToMatch, textTransformations);
+        }
+
+        public WebACLXssMatchStatementArgs build() {
+            $.fieldToMatch = Objects.requireNonNull($.fieldToMatch, "expected parameter 'fieldToMatch' to be non-null");
+            $.textTransformations = Objects.requireNonNull($.textTransformations, "expected parameter 'textTransformations' to be non-null");
+            return $;
         }
     }
+
 }

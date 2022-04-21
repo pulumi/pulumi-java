@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentTrainingPhraseType;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseArgs extends com.p
      * 
      */
     @Import(name="parts", required=true)
-      private final Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts;
+    private Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts;
 
     public Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts() {
         return this.parts;
@@ -38,10 +38,10 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseArgs extends com.p
      * 
      */
     @Import(name="timesAddedCount")
-      private final @Nullable Output<Integer> timesAddedCount;
+    private @Nullable Output<Integer> timesAddedCount;
 
-    public Output<Integer> timesAddedCount() {
-        return this.timesAddedCount == null ? Codegen.empty() : this.timesAddedCount;
+    public Optional<Output<Integer>> timesAddedCount() {
+        return Optional.ofNullable(this.timesAddedCount);
     }
 
     /**
@@ -49,79 +49,74 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseArgs extends com.p
      * 
      */
     @Import(name="type", required=true)
-      private final Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type;
+    private Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type;
 
     public Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowV2IntentTrainingPhraseArgs(
-        Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts,
-        @Nullable Output<Integer> timesAddedCount,
-        Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type) {
-        this.parts = Objects.requireNonNull(parts, "expected parameter 'parts' to be non-null");
-        this.timesAddedCount = timesAddedCount;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentTrainingPhraseArgs() {}
 
-    private GoogleCloudDialogflowV2IntentTrainingPhraseArgs() {
-        this.parts = Codegen.empty();
-        this.timesAddedCount = Codegen.empty();
-        this.type = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentTrainingPhraseArgs(GoogleCloudDialogflowV2IntentTrainingPhraseArgs $) {
+        this.parts = $.parts;
+        this.timesAddedCount = $.timesAddedCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentTrainingPhraseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts;
-        private @Nullable Output<Integer> timesAddedCount;
-        private Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type;
+        private GoogleCloudDialogflowV2IntentTrainingPhraseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentTrainingPhraseArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentTrainingPhraseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parts = defaults.parts;
-    	      this.timesAddedCount = defaults.timesAddedCount;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2IntentTrainingPhraseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parts(Output<List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs>> parts) {
-            this.parts = Objects.requireNonNull(parts);
+            $.parts = parts;
             return this;
         }
+
         public Builder parts(List<GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs> parts) {
-            this.parts = Output.of(Objects.requireNonNull(parts));
-            return this;
+            return parts(Output.of(parts));
         }
+
         public Builder parts(GoogleCloudDialogflowV2IntentTrainingPhrasePartArgs... parts) {
             return parts(List.of(parts));
         }
+
         public Builder timesAddedCount(@Nullable Output<Integer> timesAddedCount) {
-            this.timesAddedCount = timesAddedCount;
+            $.timesAddedCount = timesAddedCount;
             return this;
         }
-        public Builder timesAddedCount(@Nullable Integer timesAddedCount) {
-            this.timesAddedCount = Codegen.ofNullable(timesAddedCount);
-            return this;
+
+        public Builder timesAddedCount(Integer timesAddedCount) {
+            return timesAddedCount(Output.of(timesAddedCount));
         }
+
         public Builder type(Output<GoogleCloudDialogflowV2IntentTrainingPhraseType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(GoogleCloudDialogflowV2IntentTrainingPhraseType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentTrainingPhraseArgs build() {
-            return new GoogleCloudDialogflowV2IntentTrainingPhraseArgs(parts, timesAddedCount, type);
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudDialogflowV2IntentTrainingPhraseArgs build() {
+            $.parts = Objects.requireNonNull($.parts, "expected parameter 'parts' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

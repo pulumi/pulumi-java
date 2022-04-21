@@ -5,9 +5,9 @@ package com.pulumi.aws.transfer.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="body")
-      private final @Nullable Output<String> body;
+    private @Nullable Output<String> body;
 
-    public Output<String> body() {
-        return this.body == null ? Codegen.empty() : this.body;
+    public Optional<Output<String>> body() {
+        return Optional.ofNullable(this.body);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverId")
-      private final @Nullable Output<String> serverId;
+    private @Nullable Output<String> serverId;
 
-    public Output<String> serverId() {
-        return this.serverId == null ? Codegen.empty() : this.serverId;
+    public Optional<Output<String>> serverId() {
+        return Optional.ofNullable(this.serverId);
     }
 
     /**
@@ -42,76 +42,68 @@ public final class SshKeyState extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public SshKeyState(
-        @Nullable Output<String> body,
-        @Nullable Output<String> serverId,
-        @Nullable Output<String> userName) {
-        this.body = body;
-        this.serverId = serverId;
-        this.userName = userName;
-    }
+    private SshKeyState() {}
 
-    private SshKeyState() {
-        this.body = Codegen.empty();
-        this.serverId = Codegen.empty();
-        this.userName = Codegen.empty();
+    private SshKeyState(SshKeyState $) {
+        this.body = $.body;
+        this.serverId = $.serverId;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SshKeyState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> body;
-        private @Nullable Output<String> serverId;
-        private @Nullable Output<String> userName;
+        private SshKeyState $;
 
         public Builder() {
-    	      // Empty
+            $ = new SshKeyState();
         }
 
         public Builder(SshKeyState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.serverId = defaults.serverId;
-    	      this.userName = defaults.userName;
+            $ = new SshKeyState(Objects.requireNonNull(defaults));
         }
 
         public Builder body(@Nullable Output<String> body) {
-            this.body = body;
+            $.body = body;
             return this;
         }
-        public Builder body(@Nullable String body) {
-            this.body = Codegen.ofNullable(body);
-            return this;
+
+        public Builder body(String body) {
+            return body(Output.of(body));
         }
+
         public Builder serverId(@Nullable Output<String> serverId) {
-            this.serverId = serverId;
+            $.serverId = serverId;
             return this;
         }
-        public Builder serverId(@Nullable String serverId) {
-            this.serverId = Codegen.ofNullable(serverId);
-            return this;
+
+        public Builder serverId(String serverId) {
+            return serverId(Output.of(serverId));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public SshKeyState build() {
-            return new SshKeyState(body, serverId, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public SshKeyState build() {
+            return $;
         }
     }
+
 }

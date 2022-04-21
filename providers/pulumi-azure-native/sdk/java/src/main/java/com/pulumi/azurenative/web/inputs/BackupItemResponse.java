@@ -28,7 +28,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupId", required=true)
-      private final Integer backupId;
+    private Integer backupId;
 
     public Integer backupId() {
         return this.backupId;
@@ -39,7 +39,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="blobName", required=true)
-      private final String blobName;
+    private String blobName;
 
     public String blobName() {
         return this.blobName;
@@ -50,7 +50,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="correlationId", required=true)
-      private final String correlationId;
+    private String correlationId;
 
     public String correlationId() {
         return this.correlationId;
@@ -61,7 +61,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="created", required=true)
-      private final String created;
+    private String created;
 
     public String created() {
         return this.created;
@@ -72,7 +72,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databases", required=true)
-      private final List<DatabaseBackupSettingResponse> databases;
+    private List<DatabaseBackupSettingResponse> databases;
 
     public List<DatabaseBackupSettingResponse> databases() {
         return this.databases;
@@ -83,7 +83,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="finishedTimeStamp", required=true)
-      private final String finishedTimeStamp;
+    private String finishedTimeStamp;
 
     public String finishedTimeStamp() {
         return this.finishedTimeStamp;
@@ -94,7 +94,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id", required=true)
-      private final String id;
+    private String id;
 
     public String id() {
         return this.id;
@@ -105,10 +105,10 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable String kind;
+    private @Nullable String kind;
 
     public Optional<String> kind() {
-        return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -116,7 +116,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastRestoreTimeStamp", required=true)
-      private final String lastRestoreTimeStamp;
+    private String lastRestoreTimeStamp;
 
     public String lastRestoreTimeStamp() {
         return this.lastRestoreTimeStamp;
@@ -127,7 +127,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="log", required=true)
-      private final String log;
+    private String log;
 
     public String log() {
         return this.log;
@@ -138,7 +138,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -149,7 +149,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduled", required=true)
-      private final Boolean scheduled;
+    private Boolean scheduled;
 
     public Boolean scheduled() {
         return this.scheduled;
@@ -160,7 +160,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sizeInBytes", required=true)
-      private final Double sizeInBytes;
+    private Double sizeInBytes;
 
     public Double sizeInBytes() {
         return this.sizeInBytes;
@@ -171,7 +171,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -182,7 +182,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAccountUrl", required=true)
-      private final String storageAccountUrl;
+    private String storageAccountUrl;
 
     public String storageAccountUrl() {
         return this.storageAccountUrl;
@@ -193,7 +193,7 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -204,193 +204,160 @@ public final class BackupItemResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="websiteSizeInBytes", required=true)
-      private final Double websiteSizeInBytes;
+    private Double websiteSizeInBytes;
 
     public Double websiteSizeInBytes() {
         return this.websiteSizeInBytes;
     }
 
-    public BackupItemResponse(
-        Integer backupId,
-        String blobName,
-        String correlationId,
-        String created,
-        List<DatabaseBackupSettingResponse> databases,
-        String finishedTimeStamp,
-        String id,
-        @Nullable String kind,
-        String lastRestoreTimeStamp,
-        String log,
-        String name,
-        Boolean scheduled,
-        Double sizeInBytes,
-        String status,
-        String storageAccountUrl,
-        String type,
-        Double websiteSizeInBytes) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.blobName = Objects.requireNonNull(blobName, "expected parameter 'blobName' to be non-null");
-        this.correlationId = Objects.requireNonNull(correlationId, "expected parameter 'correlationId' to be non-null");
-        this.created = Objects.requireNonNull(created, "expected parameter 'created' to be non-null");
-        this.databases = Objects.requireNonNull(databases, "expected parameter 'databases' to be non-null");
-        this.finishedTimeStamp = Objects.requireNonNull(finishedTimeStamp, "expected parameter 'finishedTimeStamp' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.kind = kind;
-        this.lastRestoreTimeStamp = Objects.requireNonNull(lastRestoreTimeStamp, "expected parameter 'lastRestoreTimeStamp' to be non-null");
-        this.log = Objects.requireNonNull(log, "expected parameter 'log' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.scheduled = Objects.requireNonNull(scheduled, "expected parameter 'scheduled' to be non-null");
-        this.sizeInBytes = Objects.requireNonNull(sizeInBytes, "expected parameter 'sizeInBytes' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes, "expected parameter 'websiteSizeInBytes' to be non-null");
-    }
+    private BackupItemResponse() {}
 
-    private BackupItemResponse() {
-        this.backupId = null;
-        this.blobName = null;
-        this.correlationId = null;
-        this.created = null;
-        this.databases = List.of();
-        this.finishedTimeStamp = null;
-        this.id = null;
-        this.kind = null;
-        this.lastRestoreTimeStamp = null;
-        this.log = null;
-        this.name = null;
-        this.scheduled = null;
-        this.sizeInBytes = null;
-        this.status = null;
-        this.storageAccountUrl = null;
-        this.type = null;
-        this.websiteSizeInBytes = null;
+    private BackupItemResponse(BackupItemResponse $) {
+        this.backupId = $.backupId;
+        this.blobName = $.blobName;
+        this.correlationId = $.correlationId;
+        this.created = $.created;
+        this.databases = $.databases;
+        this.finishedTimeStamp = $.finishedTimeStamp;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.lastRestoreTimeStamp = $.lastRestoreTimeStamp;
+        this.log = $.log;
+        this.name = $.name;
+        this.scheduled = $.scheduled;
+        this.sizeInBytes = $.sizeInBytes;
+        this.status = $.status;
+        this.storageAccountUrl = $.storageAccountUrl;
+        this.type = $.type;
+        this.websiteSizeInBytes = $.websiteSizeInBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer backupId;
-        private String blobName;
-        private String correlationId;
-        private String created;
-        private List<DatabaseBackupSettingResponse> databases;
-        private String finishedTimeStamp;
-        private String id;
-        private @Nullable String kind;
-        private String lastRestoreTimeStamp;
-        private String log;
-        private String name;
-        private Boolean scheduled;
-        private Double sizeInBytes;
-        private String status;
-        private String storageAccountUrl;
-        private String type;
-        private Double websiteSizeInBytes;
+        private BackupItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupItemResponse();
         }
 
         public Builder(BackupItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.blobName = defaults.blobName;
-    	      this.correlationId = defaults.correlationId;
-    	      this.created = defaults.created;
-    	      this.databases = defaults.databases;
-    	      this.finishedTimeStamp = defaults.finishedTimeStamp;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.lastRestoreTimeStamp = defaults.lastRestoreTimeStamp;
-    	      this.log = defaults.log;
-    	      this.name = defaults.name;
-    	      this.scheduled = defaults.scheduled;
-    	      this.sizeInBytes = defaults.sizeInBytes;
-    	      this.status = defaults.status;
-    	      this.storageAccountUrl = defaults.storageAccountUrl;
-    	      this.type = defaults.type;
-    	      this.websiteSizeInBytes = defaults.websiteSizeInBytes;
+            $ = new BackupItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(Integer backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder blobName(String blobName) {
-            this.blobName = Objects.requireNonNull(blobName);
+            $.blobName = blobName;
             return this;
         }
+
         public Builder correlationId(String correlationId) {
-            this.correlationId = Objects.requireNonNull(correlationId);
+            $.correlationId = correlationId;
             return this;
         }
+
         public Builder created(String created) {
-            this.created = Objects.requireNonNull(created);
+            $.created = created;
             return this;
         }
+
         public Builder databases(List<DatabaseBackupSettingResponse> databases) {
-            this.databases = Objects.requireNonNull(databases);
+            $.databases = databases;
             return this;
         }
+
         public Builder databases(DatabaseBackupSettingResponse... databases) {
             return databases(List.of(databases));
         }
+
         public Builder finishedTimeStamp(String finishedTimeStamp) {
-            this.finishedTimeStamp = Objects.requireNonNull(finishedTimeStamp);
+            $.finishedTimeStamp = finishedTimeStamp;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder kind(@Nullable String kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
+
         public Builder lastRestoreTimeStamp(String lastRestoreTimeStamp) {
-            this.lastRestoreTimeStamp = Objects.requireNonNull(lastRestoreTimeStamp);
+            $.lastRestoreTimeStamp = lastRestoreTimeStamp;
             return this;
         }
+
         public Builder log(String log) {
-            this.log = Objects.requireNonNull(log);
+            $.log = log;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder scheduled(Boolean scheduled) {
-            this.scheduled = Objects.requireNonNull(scheduled);
+            $.scheduled = scheduled;
             return this;
         }
+
         public Builder sizeInBytes(Double sizeInBytes) {
-            this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
+            $.sizeInBytes = sizeInBytes;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder storageAccountUrl(String storageAccountUrl) {
-            this.storageAccountUrl = Objects.requireNonNull(storageAccountUrl);
+            $.storageAccountUrl = storageAccountUrl;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder websiteSizeInBytes(Double websiteSizeInBytes) {
-            this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
+            $.websiteSizeInBytes = websiteSizeInBytes;
             return this;
-        }        public BackupItemResponse build() {
-            return new BackupItemResponse(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
+        }
+
+        public BackupItemResponse build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.blobName = Objects.requireNonNull($.blobName, "expected parameter 'blobName' to be non-null");
+            $.correlationId = Objects.requireNonNull($.correlationId, "expected parameter 'correlationId' to be non-null");
+            $.created = Objects.requireNonNull($.created, "expected parameter 'created' to be non-null");
+            $.databases = Objects.requireNonNull($.databases, "expected parameter 'databases' to be non-null");
+            $.finishedTimeStamp = Objects.requireNonNull($.finishedTimeStamp, "expected parameter 'finishedTimeStamp' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            $.lastRestoreTimeStamp = Objects.requireNonNull($.lastRestoreTimeStamp, "expected parameter 'lastRestoreTimeStamp' to be non-null");
+            $.log = Objects.requireNonNull($.log, "expected parameter 'log' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.scheduled = Objects.requireNonNull($.scheduled, "expected parameter 'scheduled' to be non-null");
+            $.sizeInBytes = Objects.requireNonNull($.sizeInBytes, "expected parameter 'sizeInBytes' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.storageAccountUrl = Objects.requireNonNull($.storageAccountUrl, "expected parameter 'storageAccountUrl' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.websiteSizeInBytes = Objects.requireNonNull($.websiteSizeInBytes, "expected parameter 'websiteSizeInBytes' to be non-null");
+            return $;
         }
     }
+
 }

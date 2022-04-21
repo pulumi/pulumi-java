@@ -26,10 +26,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="keyFrameInterval")
-      private final @Nullable String keyFrameInterval;
+    private @Nullable String keyFrameInterval;
 
     public Optional<String> keyFrameInterval() {
-        return this.keyFrameInterval == null ? Optional.empty() : Optional.ofNullable(this.keyFrameInterval);
+        return Optional.ofNullable(this.keyFrameInterval);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable String label;
+    private @Nullable String label;
 
     public Optional<String> label() {
-        return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="layers")
-      private final @Nullable List<PngLayerResponse> layers;
+    private @Nullable List<PngLayerResponse> layers;
 
-    public List<PngLayerResponse> layers() {
-        return this.layers == null ? List.of() : this.layers;
+    public Optional<List<PngLayerResponse>> layers() {
+        return Optional.ofNullable(this.layers);
     }
 
     /**
@@ -60,7 +60,7 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="odataType", required=true)
-      private final String odataType;
+    private String odataType;
 
     public String odataType() {
         return this.odataType;
@@ -71,10 +71,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="range")
-      private final @Nullable String range;
+    private @Nullable String range;
 
     public Optional<String> range() {
-        return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -82,7 +82,7 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="start", required=true)
-      private final String start;
+    private String start;
 
     public String start() {
         return this.start;
@@ -93,10 +93,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="step")
-      private final @Nullable String step;
+    private @Nullable String step;
 
     public Optional<String> step() {
-        return this.step == null ? Optional.empty() : Optional.ofNullable(this.step);
+        return Optional.ofNullable(this.step);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stretchMode")
-      private final @Nullable String stretchMode;
+    private @Nullable String stretchMode;
 
     public Optional<String> stretchMode() {
-        return this.stretchMode == null ? Optional.empty() : Optional.ofNullable(this.stretchMode);
+        return Optional.ofNullable(this.stretchMode);
     }
 
     /**
@@ -115,121 +115,98 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="syncMode")
-      private final @Nullable String syncMode;
+    private @Nullable String syncMode;
 
     public Optional<String> syncMode() {
-        return this.syncMode == null ? Optional.empty() : Optional.ofNullable(this.syncMode);
+        return Optional.ofNullable(this.syncMode);
     }
 
-    public PngImageResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<PngLayerResponse> layers,
-        String odataType,
-        @Nullable String range,
-        String start,
-        @Nullable String step,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
-        this.keyFrameInterval = keyFrameInterval;
-        this.label = label;
-        this.layers = layers;
-        this.odataType = Codegen.stringProp("odataType").arg(odataType).require();
-        this.range = range;
-        this.start = Objects.requireNonNull(start, "expected parameter 'start' to be non-null");
-        this.step = step;
-        this.stretchMode = stretchMode;
-        this.syncMode = syncMode;
-    }
+    private PngImageResponse() {}
 
-    private PngImageResponse() {
-        this.keyFrameInterval = null;
-        this.label = null;
-        this.layers = List.of();
-        this.odataType = null;
-        this.range = null;
-        this.start = null;
-        this.step = null;
-        this.stretchMode = null;
-        this.syncMode = null;
+    private PngImageResponse(PngImageResponse $) {
+        this.keyFrameInterval = $.keyFrameInterval;
+        this.label = $.label;
+        this.layers = $.layers;
+        this.odataType = $.odataType;
+        this.range = $.range;
+        this.start = $.start;
+        this.step = $.step;
+        this.stretchMode = $.stretchMode;
+        this.syncMode = $.syncMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PngImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String keyFrameInterval;
-        private @Nullable String label;
-        private @Nullable List<PngLayerResponse> layers;
-        private String odataType;
-        private @Nullable String range;
-        private String start;
-        private @Nullable String step;
-        private @Nullable String stretchMode;
-        private @Nullable String syncMode;
+        private PngImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PngImageResponse();
         }
 
         public Builder(PngImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyFrameInterval = defaults.keyFrameInterval;
-    	      this.label = defaults.label;
-    	      this.layers = defaults.layers;
-    	      this.odataType = defaults.odataType;
-    	      this.range = defaults.range;
-    	      this.start = defaults.start;
-    	      this.step = defaults.step;
-    	      this.stretchMode = defaults.stretchMode;
-    	      this.syncMode = defaults.syncMode;
+            $ = new PngImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = keyFrameInterval;
+            $.keyFrameInterval = keyFrameInterval;
             return this;
         }
+
         public Builder label(@Nullable String label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
+
         public Builder layers(@Nullable List<PngLayerResponse> layers) {
-            this.layers = layers;
+            $.layers = layers;
             return this;
         }
+
         public Builder layers(PngLayerResponse... layers) {
             return layers(List.of(layers));
         }
+
         public Builder odataType(String odataType) {
-            this.odataType = Objects.requireNonNull(odataType);
+            $.odataType = odataType;
             return this;
         }
+
         public Builder range(@Nullable String range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
+
         public Builder start(String start) {
-            this.start = Objects.requireNonNull(start);
+            $.start = start;
             return this;
         }
+
         public Builder step(@Nullable String step) {
-            this.step = step;
+            $.step = step;
             return this;
         }
+
         public Builder stretchMode(@Nullable String stretchMode) {
-            this.stretchMode = stretchMode;
+            $.stretchMode = stretchMode;
             return this;
         }
+
         public Builder syncMode(@Nullable String syncMode) {
-            this.syncMode = syncMode;
+            $.syncMode = syncMode;
             return this;
-        }        public PngImageResponse build() {
-            return new PngImageResponse(keyFrameInterval, label, layers, odataType, range, start, step, stretchMode, syncMode);
+        }
+
+        public PngImageResponse build() {
+            $.odataType = Codegen.stringProp("odataType").arg($.odataType).require();
+            $.start = Objects.requireNonNull($.start, "expected parameter 'start' to be non-null");
+            return $;
         }
     }
+
 }

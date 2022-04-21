@@ -6,7 +6,6 @@ package com.pulumi.azurenative.servicefabricmesh.inputs;
 import com.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +24,7 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destination", required=true)
-      private final Output<GatewayDestinationArgs> destination;
+    private Output<GatewayDestinationArgs> destination;
 
     public Output<GatewayDestinationArgs> destination() {
         return this.destination;
@@ -36,7 +35,7 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,76 +46,71 @@ public final class TcpConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
     }
 
-    public TcpConfigArgs(
-        Output<GatewayDestinationArgs> destination,
-        Output<String> name,
-        Output<Integer> port) {
-        this.destination = Objects.requireNonNull(destination, "expected parameter 'destination' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private TcpConfigArgs() {}
 
-    private TcpConfigArgs() {
-        this.destination = Codegen.empty();
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
+    private TcpConfigArgs(TcpConfigArgs $) {
+        this.destination = $.destination;
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TcpConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GatewayDestinationArgs> destination;
-        private Output<String> name;
-        private Output<Integer> port;
+        private TcpConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TcpConfigArgs();
         }
 
         public Builder(TcpConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destination = defaults.destination;
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new TcpConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destination(Output<GatewayDestinationArgs> destination) {
-            this.destination = Objects.requireNonNull(destination);
+            $.destination = destination;
             return this;
         }
+
         public Builder destination(GatewayDestinationArgs destination) {
-            this.destination = Output.of(Objects.requireNonNull(destination));
-            return this;
+            return destination(Output.of(destination));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
-        }        public TcpConfigArgs build() {
-            return new TcpConfigArgs(destination, name, port);
+            return port(Output.of(port));
+        }
+
+        public TcpConfigArgs build() {
+            $.destination = Objects.requireNonNull($.destination, "expected parameter 'destination' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

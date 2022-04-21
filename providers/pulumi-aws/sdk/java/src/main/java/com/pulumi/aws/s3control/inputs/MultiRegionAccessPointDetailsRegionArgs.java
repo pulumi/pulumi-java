@@ -5,7 +5,6 @@ package com.pulumi.aws.s3control.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,49 +18,49 @@ public final class MultiRegionAccessPointDetailsRegionArgs extends com.pulumi.re
      * 
      */
     @Import(name="bucket", required=true)
-      private final Output<String> bucket;
+    private Output<String> bucket;
 
     public Output<String> bucket() {
         return this.bucket;
     }
 
-    public MultiRegionAccessPointDetailsRegionArgs(Output<String> bucket) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-    }
+    private MultiRegionAccessPointDetailsRegionArgs() {}
 
-    private MultiRegionAccessPointDetailsRegionArgs() {
-        this.bucket = Codegen.empty();
+    private MultiRegionAccessPointDetailsRegionArgs(MultiRegionAccessPointDetailsRegionArgs $) {
+        this.bucket = $.bucket;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiRegionAccessPointDetailsRegionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> bucket;
+        private MultiRegionAccessPointDetailsRegionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiRegionAccessPointDetailsRegionArgs();
         }
 
         public Builder(MultiRegionAccessPointDetailsRegionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
+            $ = new MultiRegionAccessPointDetailsRegionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(Output<String> bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder bucket(String bucket) {
-            this.bucket = Output.of(Objects.requireNonNull(bucket));
-            return this;
-        }        public MultiRegionAccessPointDetailsRegionArgs build() {
-            return new MultiRegionAccessPointDetailsRegionArgs(bucket);
+            return bucket(Output.of(bucket));
+        }
+
+        public MultiRegionAccessPointDetailsRegionArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            return $;
         }
     }
+
 }

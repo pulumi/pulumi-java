@@ -25,10 +25,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bgpProperties")
-      private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
+    private @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
     public Optional<VpnLinkBgpSettingsResponse> bgpProperties() {
-        return this.bgpProperties == null ? Optional.empty() : Optional.ofNullable(this.bgpProperties);
+        return Optional.ofNullable(this.bgpProperties);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="etag", required=true)
-      private final String etag;
+    private String etag;
 
     public String etag() {
         return this.etag;
@@ -47,10 +47,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable String fqdn;
+    private @Nullable String fqdn;
 
     public Optional<String> fqdn() {
-        return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable String ipAddress;
+    private @Nullable String ipAddress;
 
     public Optional<String> ipAddress() {
-        return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="linkProperties")
-      private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
+    private @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
     public Optional<VpnLinkProviderPropertiesResponse> linkProperties() {
-        return this.linkProperties == null ? Optional.empty() : Optional.ofNullable(this.linkProperties);
+        return Optional.ofNullable(this.linkProperties);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -102,7 +102,7 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provisioningState", required=true)
-      private final String provisioningState;
+    private String provisioningState;
 
     public String provisioningState() {
         return this.provisioningState;
@@ -113,118 +113,95 @@ public final class VpnSiteLinkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public VpnSiteLinkResponse(
-        @Nullable VpnLinkBgpSettingsResponse bgpProperties,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable VpnLinkProviderPropertiesResponse linkProperties,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
-        this.bgpProperties = bgpProperties;
-        this.etag = Objects.requireNonNull(etag, "expected parameter 'etag' to be non-null");
-        this.fqdn = fqdn;
-        this.id = id;
-        this.ipAddress = ipAddress;
-        this.linkProperties = linkProperties;
-        this.name = name;
-        this.provisioningState = Objects.requireNonNull(provisioningState, "expected parameter 'provisioningState' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private VpnSiteLinkResponse() {}
 
-    private VpnSiteLinkResponse() {
-        this.bgpProperties = null;
-        this.etag = null;
-        this.fqdn = null;
-        this.id = null;
-        this.ipAddress = null;
-        this.linkProperties = null;
-        this.name = null;
-        this.provisioningState = null;
-        this.type = null;
+    private VpnSiteLinkResponse(VpnSiteLinkResponse $) {
+        this.bgpProperties = $.bgpProperties;
+        this.etag = $.etag;
+        this.fqdn = $.fqdn;
+        this.id = $.id;
+        this.ipAddress = $.ipAddress;
+        this.linkProperties = $.linkProperties;
+        this.name = $.name;
+        this.provisioningState = $.provisioningState;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnSiteLinkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable VpnLinkBgpSettingsResponse bgpProperties;
-        private String etag;
-        private @Nullable String fqdn;
-        private @Nullable String id;
-        private @Nullable String ipAddress;
-        private @Nullable VpnLinkProviderPropertiesResponse linkProperties;
-        private @Nullable String name;
-        private String provisioningState;
-        private String type;
+        private VpnSiteLinkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnSiteLinkResponse();
         }
 
         public Builder(VpnSiteLinkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bgpProperties = defaults.bgpProperties;
-    	      this.etag = defaults.etag;
-    	      this.fqdn = defaults.fqdn;
-    	      this.id = defaults.id;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.linkProperties = defaults.linkProperties;
-    	      this.name = defaults.name;
-    	      this.provisioningState = defaults.provisioningState;
-    	      this.type = defaults.type;
+            $ = new VpnSiteLinkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bgpProperties(@Nullable VpnLinkBgpSettingsResponse bgpProperties) {
-            this.bgpProperties = bgpProperties;
+            $.bgpProperties = bgpProperties;
             return this;
         }
+
         public Builder etag(String etag) {
-            this.etag = Objects.requireNonNull(etag);
+            $.etag = etag;
             return this;
         }
+
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
+
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder linkProperties(@Nullable VpnLinkProviderPropertiesResponse linkProperties) {
-            this.linkProperties = linkProperties;
+            $.linkProperties = linkProperties;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder provisioningState(String provisioningState) {
-            this.provisioningState = Objects.requireNonNull(provisioningState);
+            $.provisioningState = provisioningState;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public VpnSiteLinkResponse build() {
-            return new VpnSiteLinkResponse(bgpProperties, etag, fqdn, id, ipAddress, linkProperties, name, provisioningState, type);
+        }
+
+        public VpnSiteLinkResponse build() {
+            $.etag = Objects.requireNonNull($.etag, "expected parameter 'etag' to be non-null");
+            $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

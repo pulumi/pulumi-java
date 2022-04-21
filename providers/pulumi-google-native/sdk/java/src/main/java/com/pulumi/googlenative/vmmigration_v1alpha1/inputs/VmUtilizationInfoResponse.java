@@ -23,7 +23,7 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="utilization", required=true)
-      private final VmUtilizationMetricsResponse utilization;
+    private VmUtilizationMetricsResponse utilization;
 
     public VmUtilizationMetricsResponse utilization() {
         return this.utilization;
@@ -34,7 +34,7 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vmId", required=true)
-      private final String vmId;
+    private String vmId;
 
     public String vmId() {
         return this.vmId;
@@ -45,64 +45,59 @@ public final class VmUtilizationInfoResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="vmwareVmDetails", required=true)
-      private final VmwareVmDetailsResponse vmwareVmDetails;
+    private VmwareVmDetailsResponse vmwareVmDetails;
 
     public VmwareVmDetailsResponse vmwareVmDetails() {
         return this.vmwareVmDetails;
     }
 
-    public VmUtilizationInfoResponse(
-        VmUtilizationMetricsResponse utilization,
-        String vmId,
-        VmwareVmDetailsResponse vmwareVmDetails) {
-        this.utilization = Objects.requireNonNull(utilization, "expected parameter 'utilization' to be non-null");
-        this.vmId = Objects.requireNonNull(vmId, "expected parameter 'vmId' to be non-null");
-        this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails, "expected parameter 'vmwareVmDetails' to be non-null");
-    }
+    private VmUtilizationInfoResponse() {}
 
-    private VmUtilizationInfoResponse() {
-        this.utilization = null;
-        this.vmId = null;
-        this.vmwareVmDetails = null;
+    private VmUtilizationInfoResponse(VmUtilizationInfoResponse $) {
+        this.utilization = $.utilization;
+        this.vmId = $.vmId;
+        this.vmwareVmDetails = $.vmwareVmDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUtilizationInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private VmUtilizationMetricsResponse utilization;
-        private String vmId;
-        private VmwareVmDetailsResponse vmwareVmDetails;
+        private VmUtilizationInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUtilizationInfoResponse();
         }
 
         public Builder(VmUtilizationInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.utilization = defaults.utilization;
-    	      this.vmId = defaults.vmId;
-    	      this.vmwareVmDetails = defaults.vmwareVmDetails;
+            $ = new VmUtilizationInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder utilization(VmUtilizationMetricsResponse utilization) {
-            this.utilization = Objects.requireNonNull(utilization);
+            $.utilization = utilization;
             return this;
         }
+
         public Builder vmId(String vmId) {
-            this.vmId = Objects.requireNonNull(vmId);
+            $.vmId = vmId;
             return this;
         }
+
         public Builder vmwareVmDetails(VmwareVmDetailsResponse vmwareVmDetails) {
-            this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
+            $.vmwareVmDetails = vmwareVmDetails;
             return this;
-        }        public VmUtilizationInfoResponse build() {
-            return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
+        }
+
+        public VmUtilizationInfoResponse build() {
+            $.utilization = Objects.requireNonNull($.utilization, "expected parameter 'utilization' to be non-null");
+            $.vmId = Objects.requireNonNull($.vmId, "expected parameter 'vmId' to be non-null");
+            $.vmwareVmDetails = Objects.requireNonNull($.vmwareVmDetails, "expected parameter 'vmwareVmDetails' to be non-null");
+            return $;
         }
     }
+
 }

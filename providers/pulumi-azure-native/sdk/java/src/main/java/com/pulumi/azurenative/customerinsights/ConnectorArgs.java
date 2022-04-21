@@ -7,12 +7,12 @@ import com.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorName")
-      private final @Nullable Output<String> connectorName;
+    private @Nullable Output<String> connectorName;
 
-    public Output<String> connectorName() {
-        return this.connectorName == null ? Codegen.empty() : this.connectorName;
+    public Optional<Output<String>> connectorName() {
+        return Optional.ofNullable(this.connectorName);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorProperties", required=true)
-      private final Output<Map<String,Object>> connectorProperties;
+    private Output<Map<String,Object>> connectorProperties;
 
     public Output<Map<String,Object>> connectorProperties() {
         return this.connectorProperties;
@@ -47,7 +47,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectorType", required=true)
-      private final Output<Either<String,ConnectorTypes>> connectorType;
+    private Output<Either<String,ConnectorTypes>> connectorType;
 
     public Output<Either<String,ConnectorTypes>> connectorType() {
         return this.connectorType;
@@ -58,10 +58,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -80,7 +80,7 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hubName", required=true)
-      private final Output<String> hubName;
+    private Output<String> hubName;
 
     public Output<String> hubName() {
         return this.hubName;
@@ -91,10 +91,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isInternal")
-      private final @Nullable Output<Boolean> isInternal;
+    private @Nullable Output<Boolean> isInternal;
 
-    public Output<Boolean> isInternal() {
-        return this.isInternal == null ? Codegen.empty() : this.isInternal;
+    public Optional<Output<Boolean>> isInternal() {
+        return Optional.ofNullable(this.isInternal);
     }
 
     /**
@@ -102,141 +102,122 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final Output<String> resourceGroupName;
+    private Output<String> resourceGroupName;
 
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ConnectorArgs(
-        @Nullable Output<String> connectorName,
-        Output<Map<String,Object>> connectorProperties,
-        Output<Either<String,ConnectorTypes>> connectorType,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> hubName,
-        @Nullable Output<Boolean> isInternal,
-        Output<String> resourceGroupName) {
-        this.connectorName = connectorName;
-        this.connectorProperties = Objects.requireNonNull(connectorProperties, "expected parameter 'connectorProperties' to be non-null");
-        this.connectorType = Objects.requireNonNull(connectorType, "expected parameter 'connectorType' to be non-null");
-        this.description = description;
-        this.displayName = displayName;
-        this.hubName = Objects.requireNonNull(hubName, "expected parameter 'hubName' to be non-null");
-        this.isInternal = isInternal;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ConnectorArgs() {}
 
-    private ConnectorArgs() {
-        this.connectorName = Codegen.empty();
-        this.connectorProperties = Codegen.empty();
-        this.connectorType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.hubName = Codegen.empty();
-        this.isInternal = Codegen.empty();
-        this.resourceGroupName = Codegen.empty();
+    private ConnectorArgs(ConnectorArgs $) {
+        this.connectorName = $.connectorName;
+        this.connectorProperties = $.connectorProperties;
+        this.connectorType = $.connectorType;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.hubName = $.hubName;
+        this.isInternal = $.isInternal;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> connectorName;
-        private Output<Map<String,Object>> connectorProperties;
-        private Output<Either<String,ConnectorTypes>> connectorType;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> hubName;
-        private @Nullable Output<Boolean> isInternal;
-        private Output<String> resourceGroupName;
+        private ConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectorArgs();
         }
 
         public Builder(ConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectorName = defaults.connectorName;
-    	      this.connectorProperties = defaults.connectorProperties;
-    	      this.connectorType = defaults.connectorType;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.hubName = defaults.hubName;
-    	      this.isInternal = defaults.isInternal;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectorName(@Nullable Output<String> connectorName) {
-            this.connectorName = connectorName;
+            $.connectorName = connectorName;
             return this;
         }
-        public Builder connectorName(@Nullable String connectorName) {
-            this.connectorName = Codegen.ofNullable(connectorName);
-            return this;
+
+        public Builder connectorName(String connectorName) {
+            return connectorName(Output.of(connectorName));
         }
+
         public Builder connectorProperties(Output<Map<String,Object>> connectorProperties) {
-            this.connectorProperties = Objects.requireNonNull(connectorProperties);
+            $.connectorProperties = connectorProperties;
             return this;
         }
+
         public Builder connectorProperties(Map<String,Object> connectorProperties) {
-            this.connectorProperties = Output.of(Objects.requireNonNull(connectorProperties));
-            return this;
+            return connectorProperties(Output.of(connectorProperties));
         }
+
         public Builder connectorType(Output<Either<String,ConnectorTypes>> connectorType) {
-            this.connectorType = Objects.requireNonNull(connectorType);
+            $.connectorType = connectorType;
             return this;
         }
+
         public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
-            this.connectorType = Output.of(Objects.requireNonNull(connectorType));
-            return this;
+            return connectorType(Output.of(connectorType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder hubName(Output<String> hubName) {
-            this.hubName = Objects.requireNonNull(hubName);
+            $.hubName = hubName;
             return this;
         }
+
         public Builder hubName(String hubName) {
-            this.hubName = Output.of(Objects.requireNonNull(hubName));
-            return this;
+            return hubName(Output.of(hubName));
         }
+
         public Builder isInternal(@Nullable Output<Boolean> isInternal) {
-            this.isInternal = isInternal;
+            $.isInternal = isInternal;
             return this;
         }
-        public Builder isInternal(@Nullable Boolean isInternal) {
-            this.isInternal = Codegen.ofNullable(isInternal);
-            return this;
+
+        public Builder isInternal(Boolean isInternal) {
+            return isInternal(Output.of(isInternal));
         }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Output.of(Objects.requireNonNull(resourceGroupName));
-            return this;
-        }        public ConnectorArgs build() {
-            return new ConnectorArgs(connectorName, connectorProperties, connectorType, description, displayName, hubName, isInternal, resourceGroupName);
+            return resourceGroupName(Output.of(resourceGroupName));
+        }
+
+        public ConnectorArgs build() {
+            $.connectorProperties = Objects.requireNonNull($.connectorProperties, "expected parameter 'connectorProperties' to be non-null");
+            $.connectorType = Objects.requireNonNull($.connectorType, "expected parameter 'connectorType' to be non-null");
+            $.hubName = Objects.requireNonNull($.hubName, "expected parameter 'hubName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

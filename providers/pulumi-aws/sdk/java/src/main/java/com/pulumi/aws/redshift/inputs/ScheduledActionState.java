@@ -6,10 +6,10 @@ package com.pulumi.aws.redshift.inputs;
 import com.pulumi.aws.redshift.inputs.ScheduledActionTargetActionGetArgs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enable")
-      private final @Nullable Output<Boolean> enable;
+    private @Nullable Output<Boolean> enable;
 
-    public Output<Boolean> enable() {
-        return this.enable == null ? Codegen.empty() : this.enable;
+    public Optional<Output<Boolean>> enable() {
+        return Optional.ofNullable(this.enable);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="iamRole")
-      private final @Nullable Output<String> iamRole;
+    private @Nullable Output<String> iamRole;
 
-    public Output<String> iamRole() {
-        return this.iamRole == null ? Codegen.empty() : this.iamRole;
+    public Optional<Output<String>> iamRole() {
+        return Optional.ofNullable(this.iamRole);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<String> schedule;
+    private @Nullable Output<String> schedule;
 
-    public Output<String> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -99,141 +99,118 @@ public final class ScheduledActionState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="targetAction")
-      private final @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
+    private @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
 
-    public Output<ScheduledActionTargetActionGetArgs> targetAction() {
-        return this.targetAction == null ? Codegen.empty() : this.targetAction;
+    public Optional<Output<ScheduledActionTargetActionGetArgs>> targetAction() {
+        return Optional.ofNullable(this.targetAction);
     }
 
-    public ScheduledActionState(
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enable,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> iamRole,
-        @Nullable Output<String> name,
-        @Nullable Output<String> schedule,
-        @Nullable Output<String> startTime,
-        @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
-        this.description = description;
-        this.enable = enable;
-        this.endTime = endTime;
-        this.iamRole = iamRole;
-        this.name = name;
-        this.schedule = schedule;
-        this.startTime = startTime;
-        this.targetAction = targetAction;
-    }
+    private ScheduledActionState() {}
 
-    private ScheduledActionState() {
-        this.description = Codegen.empty();
-        this.enable = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.iamRole = Codegen.empty();
-        this.name = Codegen.empty();
-        this.schedule = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.targetAction = Codegen.empty();
+    private ScheduledActionState(ScheduledActionState $) {
+        this.description = $.description;
+        this.enable = $.enable;
+        this.endTime = $.endTime;
+        this.iamRole = $.iamRole;
+        this.name = $.name;
+        this.schedule = $.schedule;
+        this.startTime = $.startTime;
+        this.targetAction = $.targetAction;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduledActionState defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enable;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> iamRole;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> schedule;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<ScheduledActionTargetActionGetArgs> targetAction;
+        private ScheduledActionState $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduledActionState();
         }
 
         public Builder(ScheduledActionState defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.enable = defaults.enable;
-    	      this.endTime = defaults.endTime;
-    	      this.iamRole = defaults.iamRole;
-    	      this.name = defaults.name;
-    	      this.schedule = defaults.schedule;
-    	      this.startTime = defaults.startTime;
-    	      this.targetAction = defaults.targetAction;
+            $ = new ScheduledActionState(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enable(@Nullable Output<Boolean> enable) {
-            this.enable = enable;
+            $.enable = enable;
             return this;
         }
-        public Builder enable(@Nullable Boolean enable) {
-            this.enable = Codegen.ofNullable(enable);
-            return this;
+
+        public Builder enable(Boolean enable) {
+            return enable(Output.of(enable));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder iamRole(@Nullable Output<String> iamRole) {
-            this.iamRole = iamRole;
+            $.iamRole = iamRole;
             return this;
         }
-        public Builder iamRole(@Nullable String iamRole) {
-            this.iamRole = Codegen.ofNullable(iamRole);
-            return this;
+
+        public Builder iamRole(String iamRole) {
+            return iamRole(Output.of(iamRole));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder schedule(@Nullable Output<String> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable String schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
+
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder targetAction(@Nullable Output<ScheduledActionTargetActionGetArgs> targetAction) {
-            this.targetAction = targetAction;
+            $.targetAction = targetAction;
             return this;
         }
-        public Builder targetAction(@Nullable ScheduledActionTargetActionGetArgs targetAction) {
-            this.targetAction = Codegen.ofNullable(targetAction);
-            return this;
-        }        public ScheduledActionState build() {
-            return new ScheduledActionState(description, enable, endTime, iamRole, name, schedule, startTime, targetAction);
+
+        public Builder targetAction(ScheduledActionTargetActionGetArgs targetAction) {
+            return targetAction(Output.of(targetAction));
+        }
+
+        public ScheduledActionState build() {
+            return $;
         }
     }
+
 }

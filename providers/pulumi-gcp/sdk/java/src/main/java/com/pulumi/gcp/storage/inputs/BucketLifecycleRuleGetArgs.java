@@ -5,7 +5,6 @@ package com.pulumi.gcp.storage.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionGetArgs;
 import com.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionGetArgs;
 import java.util.Objects;
@@ -20,7 +19,7 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="action", required=true)
-      private final Output<BucketLifecycleRuleActionGetArgs> action;
+    private Output<BucketLifecycleRuleActionGetArgs> action;
 
     public Output<BucketLifecycleRuleActionGetArgs> action() {
         return this.action;
@@ -31,63 +30,60 @@ public final class BucketLifecycleRuleGetArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="condition", required=true)
-      private final Output<BucketLifecycleRuleConditionGetArgs> condition;
+    private Output<BucketLifecycleRuleConditionGetArgs> condition;
 
     public Output<BucketLifecycleRuleConditionGetArgs> condition() {
         return this.condition;
     }
 
-    public BucketLifecycleRuleGetArgs(
-        Output<BucketLifecycleRuleActionGetArgs> action,
-        Output<BucketLifecycleRuleConditionGetArgs> condition) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-    }
+    private BucketLifecycleRuleGetArgs() {}
 
-    private BucketLifecycleRuleGetArgs() {
-        this.action = Codegen.empty();
-        this.condition = Codegen.empty();
+    private BucketLifecycleRuleGetArgs(BucketLifecycleRuleGetArgs $) {
+        this.action = $.action;
+        this.condition = $.condition;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleRuleGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<BucketLifecycleRuleActionGetArgs> action;
-        private Output<BucketLifecycleRuleConditionGetArgs> condition;
+        private BucketLifecycleRuleGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleRuleGetArgs();
         }
 
         public Builder(BucketLifecycleRuleGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.condition = defaults.condition;
+            $ = new BucketLifecycleRuleGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<BucketLifecycleRuleActionGetArgs> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(BucketLifecycleRuleActionGetArgs action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder condition(Output<BucketLifecycleRuleConditionGetArgs> condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder condition(BucketLifecycleRuleConditionGetArgs condition) {
-            this.condition = Output.of(Objects.requireNonNull(condition));
-            return this;
-        }        public BucketLifecycleRuleGetArgs build() {
-            return new BucketLifecycleRuleGetArgs(action, condition);
+            return condition(Output.of(condition));
+        }
+
+        public BucketLifecycleRuleGetArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            return $;
         }
     }
+
 }

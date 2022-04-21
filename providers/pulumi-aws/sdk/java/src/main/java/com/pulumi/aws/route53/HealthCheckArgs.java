@@ -5,13 +5,13 @@ package com.pulumi.aws.route53;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="childHealthThreshold")
-      private final @Nullable Output<Integer> childHealthThreshold;
+    private @Nullable Output<Integer> childHealthThreshold;
 
-    public Output<Integer> childHealthThreshold() {
-        return this.childHealthThreshold == null ? Codegen.empty() : this.childHealthThreshold;
+    public Optional<Output<Integer>> childHealthThreshold() {
+        return Optional.ofNullable(this.childHealthThreshold);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="childHealthchecks")
-      private final @Nullable Output<List<String>> childHealthchecks;
+    private @Nullable Output<List<String>> childHealthchecks;
 
-    public Output<List<String>> childHealthchecks() {
-        return this.childHealthchecks == null ? Codegen.empty() : this.childHealthchecks;
+    public Optional<Output<List<String>>> childHealthchecks() {
+        return Optional.ofNullable(this.childHealthchecks);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchAlarmName")
-      private final @Nullable Output<String> cloudwatchAlarmName;
+    private @Nullable Output<String> cloudwatchAlarmName;
 
-    public Output<String> cloudwatchAlarmName() {
-        return this.cloudwatchAlarmName == null ? Codegen.empty() : this.cloudwatchAlarmName;
+    public Optional<Output<String>> cloudwatchAlarmName() {
+        return Optional.ofNullable(this.cloudwatchAlarmName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudwatchAlarmRegion")
-      private final @Nullable Output<String> cloudwatchAlarmRegion;
+    private @Nullable Output<String> cloudwatchAlarmRegion;
 
-    public Output<String> cloudwatchAlarmRegion() {
-        return this.cloudwatchAlarmRegion == null ? Codegen.empty() : this.cloudwatchAlarmRegion;
+    public Optional<Output<String>> cloudwatchAlarmRegion() {
+        return Optional.ofNullable(this.cloudwatchAlarmRegion);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSni")
-      private final @Nullable Output<Boolean> enableSni;
+    private @Nullable Output<Boolean> enableSni;
 
-    public Output<Boolean> enableSni() {
-        return this.enableSni == null ? Codegen.empty() : this.enableSni;
+    public Optional<Output<Boolean>> enableSni() {
+        return Optional.ofNullable(this.enableSni);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failureThreshold")
-      private final @Nullable Output<Integer> failureThreshold;
+    private @Nullable Output<Integer> failureThreshold;
 
-    public Output<Integer> failureThreshold() {
-        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
+    public Optional<Output<Integer>> failureThreshold() {
+        return Optional.ofNullable(this.failureThreshold);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fqdn")
-      private final @Nullable Output<String> fqdn;
+    private @Nullable Output<String> fqdn;
 
-    public Output<String> fqdn() {
-        return this.fqdn == null ? Codegen.empty() : this.fqdn;
+    public Optional<Output<String>> fqdn() {
+        return Optional.ofNullable(this.fqdn);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="insufficientDataHealthStatus")
-      private final @Nullable Output<String> insufficientDataHealthStatus;
+    private @Nullable Output<String> insufficientDataHealthStatus;
 
-    public Output<String> insufficientDataHealthStatus() {
-        return this.insufficientDataHealthStatus == null ? Codegen.empty() : this.insufficientDataHealthStatus;
+    public Optional<Output<String>> insufficientDataHealthStatus() {
+        return Optional.ofNullable(this.insufficientDataHealthStatus);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="invertHealthcheck")
-      private final @Nullable Output<Boolean> invertHealthcheck;
+    private @Nullable Output<Boolean> invertHealthcheck;
 
-    public Output<Boolean> invertHealthcheck() {
-        return this.invertHealthcheck == null ? Codegen.empty() : this.invertHealthcheck;
+    public Optional<Output<Boolean>> invertHealthcheck() {
+        return Optional.ofNullable(this.invertHealthcheck);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="measureLatency")
-      private final @Nullable Output<Boolean> measureLatency;
+    private @Nullable Output<Boolean> measureLatency;
 
-    public Output<Boolean> measureLatency() {
-        return this.measureLatency == null ? Codegen.empty() : this.measureLatency;
+    public Optional<Output<Boolean>> measureLatency() {
+        return Optional.ofNullable(this.measureLatency);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -171,10 +171,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="referenceName")
-      private final @Nullable Output<String> referenceName;
+    private @Nullable Output<String> referenceName;
 
-    public Output<String> referenceName() {
-        return this.referenceName == null ? Codegen.empty() : this.referenceName;
+    public Optional<Output<String>> referenceName() {
+        return Optional.ofNullable(this.referenceName);
     }
 
     /**
@@ -182,10 +182,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regions")
-      private final @Nullable Output<List<String>> regions;
+    private @Nullable Output<List<String>> regions;
 
-    public Output<List<String>> regions() {
-        return this.regions == null ? Codegen.empty() : this.regions;
+    public Optional<Output<List<String>>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     /**
@@ -193,10 +193,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestInterval")
-      private final @Nullable Output<Integer> requestInterval;
+    private @Nullable Output<Integer> requestInterval;
 
-    public Output<Integer> requestInterval() {
-        return this.requestInterval == null ? Codegen.empty() : this.requestInterval;
+    public Optional<Output<Integer>> requestInterval() {
+        return Optional.ofNullable(this.requestInterval);
     }
 
     /**
@@ -204,10 +204,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourcePath")
-      private final @Nullable Output<String> resourcePath;
+    private @Nullable Output<String> resourcePath;
 
-    public Output<String> resourcePath() {
-        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
+    public Optional<Output<String>> resourcePath() {
+        return Optional.ofNullable(this.resourcePath);
     }
 
     /**
@@ -215,10 +215,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingControlArn")
-      private final @Nullable Output<String> routingControlArn;
+    private @Nullable Output<String> routingControlArn;
 
-    public Output<String> routingControlArn() {
-        return this.routingControlArn == null ? Codegen.empty() : this.routingControlArn;
+    public Optional<Output<String>> routingControlArn() {
+        return Optional.ofNullable(this.routingControlArn);
     }
 
     /**
@@ -226,10 +226,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="searchString")
-      private final @Nullable Output<String> searchString;
+    private @Nullable Output<String> searchString;
 
-    public Output<String> searchString() {
-        return this.searchString == null ? Codegen.empty() : this.searchString;
+    public Optional<Output<String>> searchString() {
+        return Optional.ofNullable(this.searchString);
     }
 
     /**
@@ -237,10 +237,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<Map<String,String>> tags;
+    private @Nullable Output<Map<String,String>> tags;
 
-    public Output<Map<String,String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<Map<String,String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -248,316 +248,257 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public HealthCheckArgs(
-        @Nullable Output<Integer> childHealthThreshold,
-        @Nullable Output<List<String>> childHealthchecks,
-        @Nullable Output<String> cloudwatchAlarmName,
-        @Nullable Output<String> cloudwatchAlarmRegion,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<Boolean> enableSni,
-        @Nullable Output<Integer> failureThreshold,
-        @Nullable Output<String> fqdn,
-        @Nullable Output<String> insufficientDataHealthStatus,
-        @Nullable Output<Boolean> invertHealthcheck,
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<Boolean> measureLatency,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> referenceName,
-        @Nullable Output<List<String>> regions,
-        @Nullable Output<Integer> requestInterval,
-        @Nullable Output<String> resourcePath,
-        @Nullable Output<String> routingControlArn,
-        @Nullable Output<String> searchString,
-        @Nullable Output<Map<String,String>> tags,
-        Output<String> type) {
-        this.childHealthThreshold = childHealthThreshold;
-        this.childHealthchecks = childHealthchecks;
-        this.cloudwatchAlarmName = cloudwatchAlarmName;
-        this.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
-        this.disabled = disabled;
-        this.enableSni = enableSni;
-        this.failureThreshold = failureThreshold;
-        this.fqdn = fqdn;
-        this.insufficientDataHealthStatus = insufficientDataHealthStatus;
-        this.invertHealthcheck = invertHealthcheck;
-        this.ipAddress = ipAddress;
-        this.measureLatency = measureLatency;
-        this.port = port;
-        this.referenceName = referenceName;
-        this.regions = regions;
-        this.requestInterval = requestInterval;
-        this.resourcePath = resourcePath;
-        this.routingControlArn = routingControlArn;
-        this.searchString = searchString;
-        this.tags = tags;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private HealthCheckArgs() {}
 
-    private HealthCheckArgs() {
-        this.childHealthThreshold = Codegen.empty();
-        this.childHealthchecks = Codegen.empty();
-        this.cloudwatchAlarmName = Codegen.empty();
-        this.cloudwatchAlarmRegion = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.enableSni = Codegen.empty();
-        this.failureThreshold = Codegen.empty();
-        this.fqdn = Codegen.empty();
-        this.insufficientDataHealthStatus = Codegen.empty();
-        this.invertHealthcheck = Codegen.empty();
-        this.ipAddress = Codegen.empty();
-        this.measureLatency = Codegen.empty();
-        this.port = Codegen.empty();
-        this.referenceName = Codegen.empty();
-        this.regions = Codegen.empty();
-        this.requestInterval = Codegen.empty();
-        this.resourcePath = Codegen.empty();
-        this.routingControlArn = Codegen.empty();
-        this.searchString = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.type = Codegen.empty();
+    private HealthCheckArgs(HealthCheckArgs $) {
+        this.childHealthThreshold = $.childHealthThreshold;
+        this.childHealthchecks = $.childHealthchecks;
+        this.cloudwatchAlarmName = $.cloudwatchAlarmName;
+        this.cloudwatchAlarmRegion = $.cloudwatchAlarmRegion;
+        this.disabled = $.disabled;
+        this.enableSni = $.enableSni;
+        this.failureThreshold = $.failureThreshold;
+        this.fqdn = $.fqdn;
+        this.insufficientDataHealthStatus = $.insufficientDataHealthStatus;
+        this.invertHealthcheck = $.invertHealthcheck;
+        this.ipAddress = $.ipAddress;
+        this.measureLatency = $.measureLatency;
+        this.port = $.port;
+        this.referenceName = $.referenceName;
+        this.regions = $.regions;
+        this.requestInterval = $.requestInterval;
+        this.resourcePath = $.resourcePath;
+        this.routingControlArn = $.routingControlArn;
+        this.searchString = $.searchString;
+        this.tags = $.tags;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> childHealthThreshold;
-        private @Nullable Output<List<String>> childHealthchecks;
-        private @Nullable Output<String> cloudwatchAlarmName;
-        private @Nullable Output<String> cloudwatchAlarmRegion;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<Boolean> enableSni;
-        private @Nullable Output<Integer> failureThreshold;
-        private @Nullable Output<String> fqdn;
-        private @Nullable Output<String> insufficientDataHealthStatus;
-        private @Nullable Output<Boolean> invertHealthcheck;
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<Boolean> measureLatency;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> referenceName;
-        private @Nullable Output<List<String>> regions;
-        private @Nullable Output<Integer> requestInterval;
-        private @Nullable Output<String> resourcePath;
-        private @Nullable Output<String> routingControlArn;
-        private @Nullable Output<String> searchString;
-        private @Nullable Output<Map<String,String>> tags;
-        private Output<String> type;
+        private HealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HealthCheckArgs();
         }
 
         public Builder(HealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.childHealthThreshold = defaults.childHealthThreshold;
-    	      this.childHealthchecks = defaults.childHealthchecks;
-    	      this.cloudwatchAlarmName = defaults.cloudwatchAlarmName;
-    	      this.cloudwatchAlarmRegion = defaults.cloudwatchAlarmRegion;
-    	      this.disabled = defaults.disabled;
-    	      this.enableSni = defaults.enableSni;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.fqdn = defaults.fqdn;
-    	      this.insufficientDataHealthStatus = defaults.insufficientDataHealthStatus;
-    	      this.invertHealthcheck = defaults.invertHealthcheck;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.measureLatency = defaults.measureLatency;
-    	      this.port = defaults.port;
-    	      this.referenceName = defaults.referenceName;
-    	      this.regions = defaults.regions;
-    	      this.requestInterval = defaults.requestInterval;
-    	      this.resourcePath = defaults.resourcePath;
-    	      this.routingControlArn = defaults.routingControlArn;
-    	      this.searchString = defaults.searchString;
-    	      this.tags = defaults.tags;
-    	      this.type = defaults.type;
+            $ = new HealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder childHealthThreshold(@Nullable Output<Integer> childHealthThreshold) {
-            this.childHealthThreshold = childHealthThreshold;
+            $.childHealthThreshold = childHealthThreshold;
             return this;
         }
-        public Builder childHealthThreshold(@Nullable Integer childHealthThreshold) {
-            this.childHealthThreshold = Codegen.ofNullable(childHealthThreshold);
-            return this;
+
+        public Builder childHealthThreshold(Integer childHealthThreshold) {
+            return childHealthThreshold(Output.of(childHealthThreshold));
         }
+
         public Builder childHealthchecks(@Nullable Output<List<String>> childHealthchecks) {
-            this.childHealthchecks = childHealthchecks;
+            $.childHealthchecks = childHealthchecks;
             return this;
         }
-        public Builder childHealthchecks(@Nullable List<String> childHealthchecks) {
-            this.childHealthchecks = Codegen.ofNullable(childHealthchecks);
-            return this;
+
+        public Builder childHealthchecks(List<String> childHealthchecks) {
+            return childHealthchecks(Output.of(childHealthchecks));
         }
+
         public Builder childHealthchecks(String... childHealthchecks) {
             return childHealthchecks(List.of(childHealthchecks));
         }
+
         public Builder cloudwatchAlarmName(@Nullable Output<String> cloudwatchAlarmName) {
-            this.cloudwatchAlarmName = cloudwatchAlarmName;
+            $.cloudwatchAlarmName = cloudwatchAlarmName;
             return this;
         }
-        public Builder cloudwatchAlarmName(@Nullable String cloudwatchAlarmName) {
-            this.cloudwatchAlarmName = Codegen.ofNullable(cloudwatchAlarmName);
-            return this;
+
+        public Builder cloudwatchAlarmName(String cloudwatchAlarmName) {
+            return cloudwatchAlarmName(Output.of(cloudwatchAlarmName));
         }
+
         public Builder cloudwatchAlarmRegion(@Nullable Output<String> cloudwatchAlarmRegion) {
-            this.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
+            $.cloudwatchAlarmRegion = cloudwatchAlarmRegion;
             return this;
         }
-        public Builder cloudwatchAlarmRegion(@Nullable String cloudwatchAlarmRegion) {
-            this.cloudwatchAlarmRegion = Codegen.ofNullable(cloudwatchAlarmRegion);
-            return this;
+
+        public Builder cloudwatchAlarmRegion(String cloudwatchAlarmRegion) {
+            return cloudwatchAlarmRegion(Output.of(cloudwatchAlarmRegion));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder enableSni(@Nullable Output<Boolean> enableSni) {
-            this.enableSni = enableSni;
+            $.enableSni = enableSni;
             return this;
         }
-        public Builder enableSni(@Nullable Boolean enableSni) {
-            this.enableSni = Codegen.ofNullable(enableSni);
-            return this;
+
+        public Builder enableSni(Boolean enableSni) {
+            return enableSni(Output.of(enableSni));
         }
+
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
-            this.failureThreshold = failureThreshold;
+            $.failureThreshold = failureThreshold;
             return this;
         }
-        public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Codegen.ofNullable(failureThreshold);
-            return this;
+
+        public Builder failureThreshold(Integer failureThreshold) {
+            return failureThreshold(Output.of(failureThreshold));
         }
+
         public Builder fqdn(@Nullable Output<String> fqdn) {
-            this.fqdn = fqdn;
+            $.fqdn = fqdn;
             return this;
         }
-        public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Codegen.ofNullable(fqdn);
-            return this;
+
+        public Builder fqdn(String fqdn) {
+            return fqdn(Output.of(fqdn));
         }
+
         public Builder insufficientDataHealthStatus(@Nullable Output<String> insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = insufficientDataHealthStatus;
+            $.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
-        public Builder insufficientDataHealthStatus(@Nullable String insufficientDataHealthStatus) {
-            this.insufficientDataHealthStatus = Codegen.ofNullable(insufficientDataHealthStatus);
-            return this;
+
+        public Builder insufficientDataHealthStatus(String insufficientDataHealthStatus) {
+            return insufficientDataHealthStatus(Output.of(insufficientDataHealthStatus));
         }
+
         public Builder invertHealthcheck(@Nullable Output<Boolean> invertHealthcheck) {
-            this.invertHealthcheck = invertHealthcheck;
+            $.invertHealthcheck = invertHealthcheck;
             return this;
         }
-        public Builder invertHealthcheck(@Nullable Boolean invertHealthcheck) {
-            this.invertHealthcheck = Codegen.ofNullable(invertHealthcheck);
-            return this;
+
+        public Builder invertHealthcheck(Boolean invertHealthcheck) {
+            return invertHealthcheck(Output.of(invertHealthcheck));
         }
+
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder measureLatency(@Nullable Output<Boolean> measureLatency) {
-            this.measureLatency = measureLatency;
+            $.measureLatency = measureLatency;
             return this;
         }
-        public Builder measureLatency(@Nullable Boolean measureLatency) {
-            this.measureLatency = Codegen.ofNullable(measureLatency);
-            return this;
+
+        public Builder measureLatency(Boolean measureLatency) {
+            return measureLatency(Output.of(measureLatency));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder referenceName(@Nullable Output<String> referenceName) {
-            this.referenceName = referenceName;
+            $.referenceName = referenceName;
             return this;
         }
-        public Builder referenceName(@Nullable String referenceName) {
-            this.referenceName = Codegen.ofNullable(referenceName);
-            return this;
+
+        public Builder referenceName(String referenceName) {
+            return referenceName(Output.of(referenceName));
         }
+
         public Builder regions(@Nullable Output<List<String>> regions) {
-            this.regions = regions;
+            $.regions = regions;
             return this;
         }
-        public Builder regions(@Nullable List<String> regions) {
-            this.regions = Codegen.ofNullable(regions);
-            return this;
+
+        public Builder regions(List<String> regions) {
+            return regions(Output.of(regions));
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder requestInterval(@Nullable Output<Integer> requestInterval) {
-            this.requestInterval = requestInterval;
+            $.requestInterval = requestInterval;
             return this;
         }
-        public Builder requestInterval(@Nullable Integer requestInterval) {
-            this.requestInterval = Codegen.ofNullable(requestInterval);
-            return this;
+
+        public Builder requestInterval(Integer requestInterval) {
+            return requestInterval(Output.of(requestInterval));
         }
+
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
-            this.resourcePath = resourcePath;
+            $.resourcePath = resourcePath;
             return this;
         }
-        public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Codegen.ofNullable(resourcePath);
-            return this;
+
+        public Builder resourcePath(String resourcePath) {
+            return resourcePath(Output.of(resourcePath));
         }
+
         public Builder routingControlArn(@Nullable Output<String> routingControlArn) {
-            this.routingControlArn = routingControlArn;
+            $.routingControlArn = routingControlArn;
             return this;
         }
-        public Builder routingControlArn(@Nullable String routingControlArn) {
-            this.routingControlArn = Codegen.ofNullable(routingControlArn);
-            return this;
+
+        public Builder routingControlArn(String routingControlArn) {
+            return routingControlArn(Output.of(routingControlArn));
         }
+
         public Builder searchString(@Nullable Output<String> searchString) {
-            this.searchString = searchString;
+            $.searchString = searchString;
             return this;
         }
-        public Builder searchString(@Nullable String searchString) {
-            this.searchString = Codegen.ofNullable(searchString);
-            return this;
+
+        public Builder searchString(String searchString) {
+            return searchString(Output.of(searchString));
         }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(Map<String,String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public HealthCheckArgs build() {
-            return new HealthCheckArgs(childHealthThreshold, childHealthchecks, cloudwatchAlarmName, cloudwatchAlarmRegion, disabled, enableSni, failureThreshold, fqdn, insufficientDataHealthStatus, invertHealthcheck, ipAddress, measureLatency, port, referenceName, regions, requestInterval, resourcePath, routingControlArn, searchString, tags, type);
+            return type(Output.of(type));
+        }
+
+        public HealthCheckArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.enums.SchemaConfigSchemaType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recursiveStructureDepth")
-      private final @Nullable Output<String> recursiveStructureDepth;
+    private @Nullable Output<String> recursiveStructureDepth;
 
-    public Output<String> recursiveStructureDepth() {
-        return this.recursiveStructureDepth == null ? Codegen.empty() : this.recursiveStructureDepth;
+    public Optional<Output<String>> recursiveStructureDepth() {
+        return Optional.ofNullable(this.recursiveStructureDepth);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SchemaConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaType")
-      private final @Nullable Output<SchemaConfigSchemaType> schemaType;
+    private @Nullable Output<SchemaConfigSchemaType> schemaType;
 
-    public Output<SchemaConfigSchemaType> schemaType() {
-        return this.schemaType == null ? Codegen.empty() : this.schemaType;
+    public Optional<Output<SchemaConfigSchemaType>> schemaType() {
+        return Optional.ofNullable(this.schemaType);
     }
 
-    public SchemaConfigArgs(
-        @Nullable Output<String> recursiveStructureDepth,
-        @Nullable Output<SchemaConfigSchemaType> schemaType) {
-        this.recursiveStructureDepth = recursiveStructureDepth;
-        this.schemaType = schemaType;
-    }
+    private SchemaConfigArgs() {}
 
-    private SchemaConfigArgs() {
-        this.recursiveStructureDepth = Codegen.empty();
-        this.schemaType = Codegen.empty();
+    private SchemaConfigArgs(SchemaConfigArgs $) {
+        this.recursiveStructureDepth = $.recursiveStructureDepth;
+        this.schemaType = $.schemaType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> recursiveStructureDepth;
-        private @Nullable Output<SchemaConfigSchemaType> schemaType;
+        private SchemaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaConfigArgs();
         }
 
         public Builder(SchemaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.recursiveStructureDepth = defaults.recursiveStructureDepth;
-    	      this.schemaType = defaults.schemaType;
+            $ = new SchemaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder recursiveStructureDepth(@Nullable Output<String> recursiveStructureDepth) {
-            this.recursiveStructureDepth = recursiveStructureDepth;
+            $.recursiveStructureDepth = recursiveStructureDepth;
             return this;
         }
-        public Builder recursiveStructureDepth(@Nullable String recursiveStructureDepth) {
-            this.recursiveStructureDepth = Codegen.ofNullable(recursiveStructureDepth);
-            return this;
+
+        public Builder recursiveStructureDepth(String recursiveStructureDepth) {
+            return recursiveStructureDepth(Output.of(recursiveStructureDepth));
         }
+
         public Builder schemaType(@Nullable Output<SchemaConfigSchemaType> schemaType) {
-            this.schemaType = schemaType;
+            $.schemaType = schemaType;
             return this;
         }
-        public Builder schemaType(@Nullable SchemaConfigSchemaType schemaType) {
-            this.schemaType = Codegen.ofNullable(schemaType);
-            return this;
-        }        public SchemaConfigArgs build() {
-            return new SchemaConfigArgs(recursiveStructureDepth, schemaType);
+
+        public Builder schemaType(SchemaConfigSchemaType schemaType) {
+            return schemaType(Output.of(schemaType));
+        }
+
+        public SchemaConfigArgs build() {
+            return $;
         }
     }
+
 }

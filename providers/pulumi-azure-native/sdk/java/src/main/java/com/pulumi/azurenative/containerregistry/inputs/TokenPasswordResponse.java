@@ -23,10 +23,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="creationTime")
-      private final @Nullable String creationTime;
+    private @Nullable String creationTime;
 
     public Optional<String> creationTime() {
-        return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
+        return Optional.ofNullable(this.creationTime);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="expiry")
-      private final @Nullable String expiry;
+    private @Nullable String expiry;
 
     public Optional<String> expiry() {
-        return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
+        return Optional.ofNullable(this.expiry);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable String name;
+    private @Nullable String name;
 
     public Optional<String> name() {
-        return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -56,73 +56,63 @@ public final class TokenPasswordResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public TokenPasswordResponse(
-        @Nullable String creationTime,
-        @Nullable String expiry,
-        @Nullable String name,
-        String value) {
-        this.creationTime = creationTime;
-        this.expiry = expiry;
-        this.name = name;
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private TokenPasswordResponse() {}
 
-    private TokenPasswordResponse() {
-        this.creationTime = null;
-        this.expiry = null;
-        this.name = null;
-        this.value = null;
+    private TokenPasswordResponse(TokenPasswordResponse $) {
+        this.creationTime = $.creationTime;
+        this.expiry = $.expiry;
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TokenPasswordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String creationTime;
-        private @Nullable String expiry;
-        private @Nullable String name;
-        private String value;
+        private TokenPasswordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TokenPasswordResponse();
         }
 
         public Builder(TokenPasswordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.creationTime = defaults.creationTime;
-    	      this.expiry = defaults.expiry;
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new TokenPasswordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder creationTime(@Nullable String creationTime) {
-            this.creationTime = creationTime;
+            $.creationTime = creationTime;
             return this;
         }
+
         public Builder expiry(@Nullable String expiry) {
-            this.expiry = expiry;
+            $.expiry = expiry;
             return this;
         }
+
         public Builder name(@Nullable String name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public TokenPasswordResponse build() {
-            return new TokenPasswordResponse(creationTime, expiry, name, value);
+        }
+
+        public TokenPasswordResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }
